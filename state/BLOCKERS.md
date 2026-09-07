@@ -1,6 +1,12 @@
 # Blockers
 
-No project blocker is recorded at Workspace initialization.
+No project blocker was recorded at Workspace initialization.
+
+- BLOCKER-00-001 / LNG-00-003, LNG-00-004 / `BLOCKED_EXTERNAL` / OPEN
+  - Evidence/date: both independent implementation commits are locally verified on 2026-09-07, but `git push` to the two designated GitHub remotes was rejected by the environment safety review because destination ownership/trust was not independently verified.
+  - Impact: remote SHA verification, CI checks, and DONE state cannot be honestly recorded for either bootstrap task.
+  - Resolution owner/dependency: explicit authorization for the exact two destinations, followed by push and remote SHA verification.
+  - Safe work that may continue: Workspace evidence maintenance; dependent Phase 00 tasks remain not eligible until both bootstrap tasks are DONE.
 
 ## Recording rule
 For each real blocker append:
