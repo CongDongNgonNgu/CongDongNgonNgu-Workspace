@@ -59,7 +59,7 @@ Define independent CongDongNgonNgu variables for database, JWT/session, OAuth, A
 Add/verify CI for install, build, type/lint where supported and tests; keep lockfiles deterministic; exclude local logs/artifacts; document branch/deploy assumptions without deploying production.
 
 ## LNG-00-007 — Foundation Reconciliation
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** LNG-00-001..006
 
 Search both new repos for `EduAI`, old domains, course-specific identifiers and unsafe default endpoints; classify intentional historical references vs leaks. Run full baseline gates, push all commits, update Phase handoff and mark Phase 00 complete only with reproducible evidence.

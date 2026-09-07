@@ -1,7 +1,7 @@
 # Phase 00 Handoff
 
-**Phase status:** READY  
-**Last updated:** 2026-09-07 - CI baseline verified
+**Phase status:** DONE
+**Last updated:** 2026-09-07 - Phase 00 acceptance passed
 
 ## Evidence log
 Populate after each task:
@@ -63,8 +63,19 @@ Populate after each task:
   - Repository hygiene: both `.gitignore` files exclude `node_modules`, `dist`, coverage, `.env` variants, and local logs; clean `npm ci` passed in both repositories.
   - Deployment boundary: no deployment workflow or production configuration was added; README files document that deployment requires a separate approved task.
 
+- LNG-00-007 / DONE
+  - Reconciliation scope: full tracked-file search in both implementation repositories for EduAI/old domains, LMS identifiers, provider leakage, unsafe endpoints, credential-shaped values, generated artifacts, and deploy configuration.
+  - Backend classification: external-product markers appear only in `src/config/env.validation.ts` denylist controls and negative tests; LMS terms in README explicitly describe absent routes, and `/api/v1/courses` is a negative e2e assertion. Runtime imports only configuration and health modules.
+  - Frontend classification: external-product markers appear only in `src/services/api-client.ts` denylist controls and its negative test; Firebase is mentioned only as deferred work in README, and `/courses` is a negative not-found assertion. Runtime exposes only `/` and catch-all not-found.
+  - Environment/secret result: `.env.example` files contain local placeholders only; `.env` variants, dependencies, build/coverage artifacts, and logs are ignored; no credentials, Firebase project IDs, payment-provider keys, or production endpoints were found.
+  - Final verification: clean `npm ci` passed in both repositories; backend lint/typecheck, 2 unit suites / 10 tests, 1 e2e suite / 2 tests, build, and high-severity audit passed; frontend lint/typecheck, 2 test files / 9 tests, build, and high-severity audit passed; prior browser/Lighthouse evidence remains green (100 accessibility, best practices, SEO, and agentic browsing).
+  - Remote/CI: backend current `origin/main` is `d27fc4fc88053ee00cb56c2390ac6fcf5bdcf860` with successful CI run `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34099112719`; frontend current `origin/main` is `0f6d7f844e3782471ac7cdef4f9d9aaeaca99501` with successful CI run `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/34099243677`.
+  - Acceptance result: all Phase 00 checklist items pass; no open blocker remains, no EduAI repository was modified or pushed, and no CongDongNgonNgu production deployment was performed.
+
 ## Blockers
 - BLOCKER-00-001 is resolved in `state/BLOCKERS.md`; both authorized bootstrap remotes and exact SHAs are verified.
 
 ## Completion record
-Do not mark this section COMPLETE until `ACCEPTANCE.md` passes. On completion update `state/PROJECT-STATE.md`: Phase 00 DONE, Phase 01 READY.
+COMPLETE — `ACCEPTANCE.md` passes.
+- Phase 00 is DONE; Phase 01 is READY but has not been started.
+- Final implementation heads and CI evidence are recorded above; Workspace state is updated separately in `state/PROJECT-STATE.md`.
