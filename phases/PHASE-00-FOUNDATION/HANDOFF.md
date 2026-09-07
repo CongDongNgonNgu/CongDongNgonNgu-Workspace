@@ -1,7 +1,7 @@
 # Phase 00 Handoff
 
 **Phase status:** READY  
-**Last updated:** 2026-09-07 - environment separation verified
+**Last updated:** 2026-09-07 - CI baseline verified
 
 ## Evidence log
 Populate after each task:
@@ -54,6 +54,14 @@ Populate after each task:
   - Verification: backend `npm run typecheck`, `npm run lint`, unit (2 suites / 10 tests), e2e (1 suite / 2 tests), build, and `npm audit --audit-level=high` passed; frontend `npm run typecheck`, `npm run lint`, unit (2 files / 9 tests), build, and high-severity audit passed.
   - CI: GitHub Actions API returned `total_count: 0` for both exact implementation SHAs; no workflow run was available to inspect. CI baseline is next in LNG-00-006.
   - Security evidence: no credentials, provider keys, Firebase project IDs, payment-provider keys, or external-product production URLs were committed; denylist references are intentional regression-test/validator controls.
+
+- LNG-00-006 / DONE
+  - Backend CI commit: `d27fc4fc88053ee00cb56c2390ac6fcf5bdcf860`; pushed to `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End.git`; exact `origin/main` SHA verified.
+  - Frontend CI commit: `0f6d7f844e3782471ac7cdef4f9d9aaeaca99501`; pushed to `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web.git`; exact `origin/main` SHA verified.
+  - Backend CI: run `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34099112719` completed with `success`; install, lint, typecheck, unit tests, e2e tests, build, and high-severity audit steps all passed.
+  - Frontend CI: run `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/34099243677` completed with `success`; install, lint, typecheck, unit tests, build, and high-severity audit steps all passed.
+  - Repository hygiene: both `.gitignore` files exclude `node_modules`, `dist`, coverage, `.env` variants, and local logs; clean `npm ci` passed in both repositories.
+  - Deployment boundary: no deployment workflow or production configuration was added; README files document that deployment requires a separate approved task.
 
 ## Blockers
 - BLOCKER-00-001 is resolved in `state/BLOCKERS.md`; both authorized bootstrap remotes and exact SHAs are verified.

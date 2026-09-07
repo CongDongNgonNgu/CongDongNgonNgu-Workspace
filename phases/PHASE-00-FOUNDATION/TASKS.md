@@ -53,7 +53,7 @@ Requirements:
 Define independent CongDongNgonNgu variables for database, JWT/session, OAuth, AI, payment, email/storage/realtime and frontend API origins. Add fail-closed validation for missing sensitive provider config where appropriate. Confirm no copied credentials, Firebase project IDs, PayOS keys or EduAI production URLs are committed.
 
 ## LNG-00-006 — Initial CI & Repository Hygiene
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** LNG-00-003, LNG-00-004
 
 Add/verify CI for install, build, type/lint where supported and tests; keep lockfiles deterministic; exclude local logs/artifacts; document branch/deploy assumptions without deploying production.
