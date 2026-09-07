@@ -14,14 +14,14 @@ Requirements:
 Acceptance/evidence: committed audit matrix in Workspace; no runtime changes in EduAI.
 
 ## LNG-00-002 — Audit EduAI Frontend
-**Status:** READY
+**Status:** DONE
 **Depends on:** LNG-00-001 only for shared terminology, not execution.  
 **Repositories:** EduAI Front-End (reference), Workspace
 
 Inspect routes, auth providers/guards, API client, error boundaries, forms, notification/PWA infrastructure, responsive utilities, tests/Playwright/visual config and design-system coupling. Classify reuse with paths/rationale. Identify all EduAI branding/course UI that must not define the new design.
 
 ## LNG-00-003 — Bootstrap CongDongNgonNgu Backend
-**Status:** PLANNED  
+**Status:** READY
 **Depends on:** LNG-00-001  
 **Repositories:** CongDongNgonNgu-Back-End
 
@@ -35,7 +35,7 @@ Requirements:
 - Build and tests pass.
 
 ## LNG-00-004 — Bootstrap CongDongNgonNgu Frontend
-**Status:** PLANNED  
+**Status:** READY
 **Depends on:** LNG-00-002  
 **Repositories:** CongDongNgonNgu-Front-End-Web
 

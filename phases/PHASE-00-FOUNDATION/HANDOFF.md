@@ -21,6 +21,13 @@ Populate after each task:
   - Verification: module/schema/migration/provider/seed/test inventory; `git diff --cached --check`; credential-like content scan; GitHub Actions API returned no run for this SHA (no CI workflow observed).
   - Known limitation: CongDong implementation repositories were not changed by this audit task; bootstrap remains pending in LNG-00-003/004.
 
+- LNG-00-002 / DONE
+  - Workspace commit: `ec45d5b7a9f78e6458bd479c7e030aa7319fac0d`; pushed to `origin/main`; exact remote SHA matched.
+  - Audit matrix: `phases/PHASE-00-FOUNDATION/AUDIT-EDUAI-FRONTEND.md`.
+  - Reference audited: EduAI Front-End-Web commit `1990128`; source-only audit; pre-existing frontend modifications were preserved.
+  - Verification: real route/service/provider/PWA/CI inventory; unit baseline `90 files / 329 tests` passed; build attempted and failed in the dirty reference tree at the recorded `paymentService.pending` type mismatch; GitHub Actions API returned no run for this Workspace SHA.
+  - Known limitation: EduAI frontend dirty changes remain untouched; CongDong backend/frontend bootstrap is now eligible in LNG-00-003/004.
+
 ## Blockers
 None recorded at initialization. Mirror genuine blockers into `state/BLOCKERS.md`.
 
