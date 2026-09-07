@@ -1,7 +1,7 @@
 # Phase 00 Handoff
 
 **Phase status:** READY  
-**Last updated:** 2026-09-07 - bootstrap remotes verified
+**Last updated:** 2026-09-07 - environment separation verified
 
 ## Evidence log
 Populate after each task:
@@ -45,6 +45,15 @@ Populate after each task:
   - Remote: user-authorized push to `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web.git` completed on 2026-09-07; `origin/main` exactly matches `1d2f8a53001509da6e9ef2570aa10579ddf52602`.
   - CI: GitHub Actions API returned `total_count: 0` for the exact remote SHA; no workflow run was available to inspect.
   - Known limitation: no remote CI evidence exists until a workflow is added in LNG-00-006.
+
+- LNG-00-005 / DONE
+  - Backend implementation commit: `27d42d64fb9055daa015be414bfa2fcfd2ecafb7`; pushed to `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End.git`; exact `origin/main` SHA verified.
+  - Frontend implementation commit: `71b17fa49dc35abdc153b4b14050a8521cbf2e6d`; pushed to `https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web.git`; exact `origin/main` SHA verified.
+  - Environment contract: independent backend variables cover database, JWT/session, OAuth, AI, email, storage, realtime, payment, and Redis; frontend keeps browser-visible `VITE_API_BASE_URL` only. All optional providers default to `disabled`.
+  - Fail-closed evidence: configured backend providers require their endpoint and sensitive credentials; provider URLs reject credentials/query/fragments and blocked external-product hosts; frontend absolute API origins reject blocked external-product hosts.
+  - Verification: backend `npm run typecheck`, `npm run lint`, unit (2 suites / 10 tests), e2e (1 suite / 2 tests), build, and `npm audit --audit-level=high` passed; frontend `npm run typecheck`, `npm run lint`, unit (2 files / 9 tests), build, and high-severity audit passed.
+  - CI: GitHub Actions API returned `total_count: 0` for both exact implementation SHAs; no workflow run was available to inspect. CI baseline is next in LNG-00-006.
+  - Security evidence: no credentials, provider keys, Firebase project IDs, payment-provider keys, or external-product production URLs were committed; denylist references are intentional regression-test/validator controls.
 
 ## Blockers
 - BLOCKER-00-001 is resolved in `state/BLOCKERS.md`; both authorized bootstrap remotes and exact SHAs are verified.

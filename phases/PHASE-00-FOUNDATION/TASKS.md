@@ -47,7 +47,7 @@ Requirements:
 - Build/unit baseline passes.
 
 ## LNG-00-005 — Environment & Secret Separation
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** LNG-00-003, LNG-00-004
 
 Define independent CongDongNgonNgu variables for database, JWT/session, OAuth, AI, payment, email/storage/realtime and frontend API origins. Add fail-closed validation for missing sensitive provider config where appropriate. Confirm no copied credentials, Firebase project IDs, PayOS keys or EduAI production URLs are committed.
