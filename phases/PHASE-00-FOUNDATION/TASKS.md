@@ -1,7 +1,7 @@
 # Phase 00 Tasks
 
 ## LNG-00-001 — Audit EduAI Backend
-**Status:** READY  
+**Status:** DONE
 **Repositories:** EduAI Back-End (read/reference), Workspace  
 **Goal:** inspect real source and classify modules/files as `KEEP`, `ADAPT`, `REMOVE`, `BUILD_NEW`, `DEFER`.
 
@@ -14,7 +14,7 @@ Requirements:
 Acceptance/evidence: committed audit matrix in Workspace; no runtime changes in EduAI.
 
 ## LNG-00-002 — Audit EduAI Frontend
-**Status:** PLANNED  
+**Status:** READY
 **Depends on:** LNG-00-001 only for shared terminology, not execution.  
 **Repositories:** EduAI Front-End (reference), Workspace
 
