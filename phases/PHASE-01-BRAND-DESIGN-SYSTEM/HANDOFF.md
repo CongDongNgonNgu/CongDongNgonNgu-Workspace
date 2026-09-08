@@ -46,5 +46,5 @@ When Acceptance passes, mark Phase 01 DONE and Phase 02 READY in `state/PROJECT-
 ## Final verification record
 
 - Required viewport runtime matrix, horizontal-overflow checks, no-dead-link scan, no-gradient scan, mobile target sizing, keyboard interactions, focus restoration, Lighthouse results, console, network, and screenshot-capture classification are recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
-- Final local frontend verification head is a94a338 on phase-01-shell; authorized frontend origin/main is ea0fc67. Workspace local reconciliation branch includes 0abbc2b and final metadata commit fe10f00; authorized Workspace origin/main is 864e3e0. The final pushes remain pending because the environment safety reviewer rejected the frontend outbound push.
+- Final local frontend verification head is a94a338 on phase-01-shell; authorized frontend origin/main is ea0fc67. Workspace local reconciliation history includes 0abbc2b and subsequent metadata-only commits; authorized Workspace origin/main is 864e3e0. The final pushes remain pending because the environment safety reviewer rejected the frontend outbound push.
 - Workspace state remains CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=VERIFYING, and PHASE_02=BLOCKED_BY_PHASE_01. Phase 02 was not started.
