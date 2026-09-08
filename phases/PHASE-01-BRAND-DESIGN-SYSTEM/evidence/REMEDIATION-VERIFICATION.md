@@ -137,7 +137,7 @@ responsive, accessibility, remote SHA, and CI checks recorded above.
 
 ## LNG-01-014 final Homepage body reconciliation
 
-**Status:** VERIFYING
+**Status:** DONE
 
 The first final Home body was revised after owner feedback: a fixed
 Vietnamese-English exchange and a Vietnamese-specific world banner were too
@@ -165,6 +165,15 @@ Footer references remain canonical and unchanged.
 - The world section now uses Ngôn ngữ của bạn thuộc về thế giới. and the
   general topics Âm thanh & phát âm, Cách nói đời thường, Văn hóa & bối
   cảnh, and Câu chuyện từ cộng đồng.
+- The hero now uses the exact local Stitch reference asset
+  `src/assets/language-community-hero-v2.jpg`; the mobile CTA pair uses a
+  bright accessible orange pill and navy outline pill, with a rounded
+  full-width 4:3 image treatment and the existing caption.
+- The mobile shell keeps the menu-left/search-right composition, uses the
+  supplied logo mark with the “Cộng đồng ngôn ngữ” wordmark, and provides a
+  left-anchored Vietnamese Menu drawer, 320px wide at 390px, rounded, and
+  animated from -320px with 280ms panel/scrim motion. All drawer items target
+  existing same-page anchors.
 - The body keeps the human-first editorial hierarchy, real local hero
   image, bundled Be Vietnam Pro, canonical shell, Lucide SVG icons, and
   same-page actions. No fake stats, testimonials, pricing, dead routes,
@@ -184,6 +193,10 @@ The Workspace-level evidence index contains:
 - ../../../evidence/phase-01/LNG-01-014-RUNTIME-MOBILE-390.png
 - ../../../evidence/phase-01/LNG-01-014-COMPARISON-DESKTOP-1440.png
 - ../../../evidence/phase-01/LNG-01-014-COMPARISON-MOBILE-390.png
+- ../../../evidence/phase-01/LNG-01-014-RUNTIME-REVISION-DESKTOP-1440.png
+- ../../../evidence/phase-01/LNG-01-014-RUNTIME-REVISION-MOBILE-390.png
+- ../../../evidence/phase-01/LNG-01-014-COMPARISON-REVISION-DESKTOP-1440.png
+- ../../../evidence/phase-01/LNG-01-014-COMPARISON-REVISION-MOBILE-390.png
 
 The direct Stitch desktop raster is 2560 by 10930. The direct mobile screen
 preview is 45 by 512 because the CDN returned a scaled full-page preview;
@@ -195,13 +208,13 @@ render, not a runtime capture.
 
 | Width | Client | Scroll | Page height | Main section width | Header | Mobile nav |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 320 | 320 | 320 | 8461 | 288 | 57px | 69px |
-| 375 | 375 | 375 | 7896 | 343 | 57px | 69px |
-| 390 | 390 | 390 | 7797 | 358 | 57px | 69px |
-| 412 | 412 | 412 | 7713 | 380 | 57px | 69px |
-| 768 | 768 | 768 | 5133 | 720 | 73px | hidden |
-| 1024 | 1024 | 1024 | 4890 | 976 | 73px | hidden |
-| 1440 | 1440 | 1440 | 5377 | 1200 | 73px | hidden |
+| 320 | 320 | 320 | 7887 | 288 | 57px | 69px |
+| 375 | 375 | 375 | 7324 | 343 | 57px | 69px |
+| 390 | 390 | 390 | 7237 | 358 | 57px | 69px |
+| 412 | 412 | 412 | 7166 | 380 | 57px | 69px |
+| 768 | 768 | 768 | 4671 | 720 | 73px | hidden |
+| 1024 | 1024 | 1024 | 4393 | 976 | 73px | hidden |
+| 1440 | 1440 | 1440 | 4891 | 1200 | 73px | hidden |
 
 Every required width has no horizontal overflow, no dead hash link, no
 gradient, and complete local images. The mobile visible interactive controls
@@ -214,10 +227,13 @@ headings and topics and no old Vietnamese-English framing.
   build, and high-severity audit passed with 0 vulnerabilities.
 - Lighthouse navigation at 390px mobile and 1440px desktop: Accessibility,
   Best Practices, SEO, and Agentic Browsing all 100; 57 passed and 0 failed.
-- Chrome console: no error or warning messages. Network: 70 local app,
+ dependency, font, and brand-asset requests observed; no failed request.
+- Chrome console: no error or warning messages. Network: 69 local app,
   dependency, font, and brand-asset requests observed; no failed request.
-- Frontend origin/main: 047597497153f05e2383361b7382c81dc600b2fd.
-  CI run 34214539105 passed quality, install, lint, typecheck, unit tests,
+- Frontend origin/main: 47862c119e3af122c063332c1f4ee73beebea998.
+  CI run 34227951930 passed quality, install, lint, typecheck, unit tests,
   build, and security audit.
-- Workspace reconciliation is ready for its authorized commit and push.
+- Workspace's earlier reconciliation commit 01a4a64ec3e35217357d668d176f91feef7def1a
+  remains verified in origin/main; the final documentation reconciliation is
+  pushed to origin/main after this update. Phase 01 acceptance is complete;
   Phase 02 remains blocked and was not started.

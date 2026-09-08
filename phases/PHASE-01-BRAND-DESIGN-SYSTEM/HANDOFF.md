@@ -4,7 +4,7 @@
 
 ## Resolved external blocker
 
-Stitch authentication was restored on 2026-09-08. The original BLOCKED_EXTERNAL entry remains in state/BLOCKERS.md as historical evidence. Phase 01 implementation, verification, remote reconciliation, and CI acceptance are complete. Phase 00 remains accepted and unchanged; Phase 02 is READY but was not started.
+Stitch authentication was restored on 2026-09-08. The original BLOCKED_EXTERNAL entry remains in state/BLOCKERS.md as historical evidence. Phase 01 implementation, verification, remote reconciliation, and CI acceptance are complete. Phase 00 remains accepted and unchanged; Phase 02 remains BLOCKED and was not started.
 
 ## Design evidence
 - Stitch project: `projects/3718538619973058970` (`CongDongNgonNgu.vn - Phase 01 Global Shell`, private).
@@ -41,13 +41,13 @@ Implementation paths and verification are recorded below.
 - Stitch raster screenshot inspection was unavailable in the Windows session; generated HTML/metadata and local browser/runtime evidence are used instead.
 
 ## Completion transition
-Acceptance passed. Phase 01 is DONE, Phase 02 is READY, and Phase 02 was not started in this run.
+Historical acceptance transition: Phase 01 was DONE and Phase 02 was not started. The current reconciliation explicitly keeps Phase 02 BLOCKED.
 
 ## Final verification record
 
 - Required viewport runtime matrix, horizontal-overflow checks, no-dead-link scan, no-gradient scan, mobile target sizing, keyboard interactions, focus restoration, Lighthouse results, console, network, and screenshot-capture classification are recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
-- Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e; Workspace origin/main includes acceptance commit a30e9c2, and the final Workspace remote head was verified after the completion push.
-- Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=READY. Phase 02 was not started.
+- Historical remote reconciliation snapshot: Frontend origin/main was a94a338f4d1096c4da7a14136988879629d81d9e and Workspace included acceptance commit a30e9c2. The current final remote heads are recorded below.
+- Current Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=BLOCKED. Phase 02 was not started.
 
 ## Owner remediation reconciliation
 
@@ -103,13 +103,13 @@ references, then verified through local runtime and accessibility checks.
 - Frontend CI run 34196014232 completed successfully for that remote commit.
 - Workspace remediation records are committed and Workspace origin/main was verified after push.
 - Local frontend gates passed: tests (5 files, 18 tests), typecheck, lint, build, and high-severity audit (0 vulnerabilities).
-- Phase 02 was kept blocked throughout remediation, was not started, and is READY only after Phase 01 acceptance completed.
+- Phase 02 was kept blocked throughout remediation, was not started, and remains BLOCKED in this run.
 
 The historical completion record above remains unchanged.
 
 ## LNG-01-014 — Final Homepage Body Design & Stitch Consolidation
 
-**Status:** VERIFYING
+**Status:** DONE
 
 The first LNG-01-014 body was revised after owner feedback that a
 Vietnamese-English exchange and a Vietnamese-specific world banner did not
@@ -140,6 +140,15 @@ canonical references are unchanged.
   bối cảnh, and Câu chuyện từ cộng đồng.
 - The exchange direction remains future-gated until community principles and
   user-safety mechanisms are ready.
+- The hero uses the exact local Stitch reference image
+  `src/assets/language-community-hero-v2.jpg`; the accepted Home body copy
+  remains intact while the requested CTA pair uses two pill buttons, a rounded
+  4:3 full-width image treatment, and the existing caption.
+- The mobile shell keeps the menu-left/search-right layout and uses the supplied
+  logo mark with the “Cộng đồng ngôn ngữ” wordmark. Its left-anchored Vietnamese
+  Menu drawer has a rounded panel, bright active pill, real same-page anchors,
+  and 280ms transform/scrim motion. The canonical desktop Header and Footer
+  remain unchanged.
 - No fake statistics, matches, testimonials, pricing, dead routes, gradients,
   dashboard treatment, placeholder glyphs, or internal project language was
   added to the public Home.
@@ -155,6 +164,10 @@ Permanent final-body captures are in the Workspace evidence index:
 - ../../evidence/phase-01/LNG-01-014-RUNTIME-MOBILE-390.png
 - ../../evidence/phase-01/LNG-01-014-COMPARISON-DESKTOP-1440.png
 - ../../evidence/phase-01/LNG-01-014-COMPARISON-MOBILE-390.png
+- ../../evidence/phase-01/LNG-01-014-RUNTIME-REVISION-DESKTOP-1440.png
+- ../../evidence/phase-01/LNG-01-014-RUNTIME-REVISION-MOBILE-390.png
+- ../../evidence/phase-01/LNG-01-014-COMPARISON-REVISION-DESKTOP-1440.png
+- ../../evidence/phase-01/LNG-01-014-COMPARISON-REVISION-MOBILE-390.png
 
 The Stitch desktop export is 2560 by 10930. The Stitch mobile export is
 780 by 8828; its direct CDN preview is preserved as the exact screen raster,
@@ -173,8 +186,14 @@ language rows in the frontend.
   local images. Mobile visible controls passed the 44px target check.
 - Lighthouse navigation audits passed Accessibility, Best Practices, SEO,
   and Agentic Browsing at 100 on both 390px mobile and 1440px desktop.
-- Frontend origin/main is 047597497153f05e2383361b7382c81dc600b2fd.
-  Frontend CI run 34214539105 passed every quality step.
-- Workspace final remote SHA is recorded in the final transition below after
-  the reconciliation commit and push. Phase 02 remains blocked and was not
-  started.
+- Frontend origin/main is 47862c119e3af122c063332c1f4ee73beebea998.
+  Frontend CI run 34227951930 passed every quality step.
+- Final Chrome DevTools spot checks verified the mobile full-width 4:3 image,
+  bundled asset completion, logo/menu/search states, and the 1440px desktop
+  layout with no console errors or failed image requests. Lighthouse returned
+  100 for Accessibility, Best Practices, SEO, and Agentic Browsing on mobile
+  and desktop.
+- Workspace's earlier reconciliation commit 01a4a64ec3e35217357d668d176f91feef7def1a
+  remains verified in origin/main; the final documentation reconciliation is
+  pushed to origin/main after this record update. Phase 01 acceptance is
+  complete; Phase 02 remains BLOCKED and was not started.

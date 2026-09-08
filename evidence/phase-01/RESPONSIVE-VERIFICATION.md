@@ -6,12 +6,12 @@ Scope: CongDongNgonNgu Frontend local Vite runtime at http://127.0.0.1:5173/; no
 
 ## Automated gates
 
-- npm.cmd test -- --run: 4 test files, 17 tests passed.
+- npm.cmd test -- --run: 6 test files, 19 tests passed.
 - npm.cmd run lint: TypeScript noEmit passed.
 - npm.cmd run build: TypeScript check and Vite production build passed.
-- git diff --check: passed before the final frontend follow-up commit.
+- git diff --check: passed before the final frontend commit.
 - npm.cmd audit --audit-level=high: found 0 vulnerabilities.
-- Frontend CI run 34184805897 for origin/main SHA a94a338f4d1096c4da7a14136988879629d81d9e completed successfully; its CI workflow covers npm ci, lint, typecheck, unit tests, build, and high-severity npm audit. Workspace has no .github/workflows directory, so no Workspace CI run applies.
+- Frontend CI run 34227951930 for origin/main SHA 47862c119e3af122c063332c1f4ee73beebea998 completed successfully; its CI workflow covers npm ci, lint, typecheck, unit tests, build, and high-severity npm audit. Workspace has no .github/workflows directory, so no Workspace CI run applies.
 
 ## Browser runtime matrix
 
@@ -32,14 +32,14 @@ Mobile header controls have 44px minimum hit areas. Bottom navigation items are 
 ## Interaction checks
 
 - Desktop Thêm opens an ARIA menu with future items disabled and labelled Sắp có; Escape closes it.
-- Search opens a named search region, submits an announced Sắp có status, closes on Escape, and restores focus to its trigger.
-- Mobile Mở menu opens a modal drawer, focuses Đóng menu, and Escape closes it while restoring focus to Mở menu.
+- Search opens a named search region with a compact pill form, announces its submitted status, closes on Escape, and restores focus to its trigger.
+- Mobile Mở menu opens the Vietnamese Menu drawer, focuses Đóng menu, and Escape closes it while restoring focus to Mở menu.
 - Only Trang chủ has an active route. Future destinations are disabled or plain gated content.
 - Loading, empty, error/retry, and future-feature states are present in the shell.
 
 ## Lighthouse
 
-- Mobile navigation audit at 412px: Accessibility 100, Best Practices 100, SEO 100, Agentic Browsing 100; 57 passed, 0 failed.
+- Mobile navigation audit at 390px: Accessibility 100, Best Practices 100, SEO 100, Agentic Browsing 100; 57 passed, 0 failed.
 - Desktop navigation audit at 1440px: Accessibility 100, Best Practices 100, SEO 100, Agentic Browsing 100; 57 passed, 0 failed.
 
 ## Runtime hygiene
@@ -52,7 +52,7 @@ Mobile header controls have 44px minimum hit areas. Bottom navigation items are 
 
 ## Remote reconciliation boundary
 
-Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e. Workspace origin/main includes acceptance commit a30e9c2; the final Workspace remote head was verified after the completion push. No production deployment was performed.
+Frontend origin/main is 47862c119e3af122c063332c1f4ee73beebea998. Workspace origin/main includes the earlier reconciliation commit 01a4a64ec3e35217357d668d176f91feef7def1a; both remote SHAs were verified after the authorized pushes. No production deployment was performed.
 
 ## LNG-01-014 Workspace evidence index
 
@@ -82,6 +82,10 @@ Final artifacts:
 - LNG-01-014-RUNTIME-MOBILE-390.png
 - LNG-01-014-COMPARISON-DESKTOP-1440.png
 - LNG-01-014-COMPARISON-MOBILE-390.png
+- LNG-01-014-RUNTIME-REVISION-DESKTOP-1440.png
+- LNG-01-014-RUNTIME-REVISION-MOBILE-390.png
+- LNG-01-014-COMPARISON-REVISION-DESKTOP-1440.png
+- LNG-01-014-COMPARISON-REVISION-MOBILE-390.png
 
 Final revision verification:
 
@@ -93,7 +97,18 @@ Final revision verification:
 - Lighthouse at 390px mobile and 1440px desktop returned 100 for
   Accessibility, Best Practices, SEO, and Agentic Browsing, with 57 passed
   and 0 failed.
-- Frontend commit 047597497153f05e2383361b7382c81dc600b2fd is on origin/main;
-  CI run 34214539105 passed every configured quality step.
-- Phase-specific evidence is currently being reconciled into the authorized
-  Workspace commit. Phase 02 remains blocked and was not started.
+- Latest runtime checks document the bundled local Stitch hero asset, two pill
+  CTAs, a full-width rounded 4:3 image, the original body copy, the supplied
+  mobile logo mark plus “Cộng đồng ngôn ngữ”, the compact search form, and the
+  left animated Vietnamese Menu drawer.
+- Latest runtime matrix at 320/375/390/412/768/1024/1440 matched client and
+  scroll widths; no overflow, dead hashes, or gradients were observed.
+- The drawer computed at 320px wide on a 390px viewport; its opening transform
+  started at -320px before the 280ms panel/scrim animation, and its live anchors
+  are #languages, #community, and #how-it-works.
+- Frontend commit 47862c119e3af122c063332c1f4ee73beebea998 is on origin/main;
+  CI run 34227951930 passed every configured quality step.
+- Workspace's earlier reconciliation commit 01a4a64ec3e35217357d668d176f91feef7def1a
+  remains verified in origin/main; the final documentation reconciliation is
+  pushed to origin/main after this update. Phase 01 acceptance is complete;
+  Phase 02 remains blocked and was not started.

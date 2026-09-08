@@ -144,7 +144,7 @@ Verification:
 - Phase 02 remained blocked until this acceptance and was not started.
 
 ## LNG-01-014 — Final Homepage Body Design & Stitch Consolidation
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-01-013
 
 Replace the early four-section Home body with the final human-first product narrative. Create new canonical Stitch desktop and mobile screens, implement the body in the existing frontend architecture, reconcile the final visual evidence, and keep Phase 02 blocked until the final acceptance is complete.
@@ -163,3 +163,8 @@ Verification:
 - Owner content correction reconciled: the exchange and world sections are now language-agnostic; Vietnamese remains in the language ecosystem without being used as the public Home banner's sole frame.
 - Runtime, Stitch raster, comparison, Lighthouse, and CI evidence are recorded in `evidence/phase-01/RESPONSIVE-VERIFICATION.md` and the Phase 01 remediation evidence record.
 - Frontend commit `047597497153f05e2383361b7382c81dc600b2fd` is pushed to origin/main; CI run `34214539105` passed.
+- Hero uses the exact local Stitch reference asset `src/assets/language-community-hero-v2.jpg`; the requested CTA pair, full-width 4:3 frame, original body copy, logo treatment, Vietnamese mobile Menu, and search panel were reconciled to the revised reference.
+- Frontend revision commit `6cd4af6e78b583e1dde03ec1b530e01836d99b0d` is pushed to origin/main; CI run `34219497670` passed every quality step.
+- Final scoped frontend correction commit `47862c119e3af122c063332c1f4ee73beebea998` is pushed to origin/main; CI run `34227951930` passed every quality step.
+- Workspace reconciliation commit `01a4a64ec3e35217357d668d176f91feef7def1a` remains verified in origin/main; the final documentation reconciliation is pushed to origin/main after this update. Phase 01 acceptance is complete.
+- Phase 02 remains blocked and was not started.
