@@ -106,3 +106,75 @@ references, then verified through local runtime and accessibility checks.
 - Phase 02 was kept blocked throughout remediation, was not started, and is READY only after Phase 01 acceptance completed.
 
 The historical completion record above remains unchanged.
+
+## LNG-01-014 — Final Homepage Body Design & Stitch Consolidation
+
+**Status:** VERIFYING
+
+The first LNG-01-014 body was revised after owner feedback that a
+Vietnamese-English exchange and a Vietnamese-specific world banner did not
+represent a global language community. The revised body keeps Vietnamese in
+the eight-language ecosystem, but presents the public narrative as
+language-agnostic.
+
+### FINAL HOMEPAGE DESIGN SOURCE OF TRUTH
+
+FINAL HOMEPAGE DESIGN SOURCE OF TRUTH
+Desktop: fb7f5dbb2459493d970c7da39d44a73a
+Mobile: eb2aa177b91541b19877a428f23ffc8c
+Core/App Shell: ARCHITECTURE REFERENCE ONLY
+
+The earlier LNG-01-014 screens 848b421b4b664e6f91a84cbe3caf8cb0 and
+8c33c51d5ca5449e802c357bf0057313 are superseded/reference only. The older
+Home screens 607f7aa26af44e8da71ae0e559e4a4f2 and
+de0617b58b324d0e9df9de0607139d0a remain historical. Header and Footer
+canonical references are unchanged.
+
+### Content reconciliation
+
+- Language Exchange is now titled Gặp nhau qua ngôn ngữ. and uses the
+  conceptual roles Người học ngôn ngữ mới and Người chia sẻ kinh nghiệm.
+  It does not imply an existing match, profile, or language pair.
+- The world section is now titled Ngôn ngữ của bạn thuộc về thế giới. with
+  the universal topics Âm thanh & phát âm, Cách nói đời thường, Văn hóa &
+  bối cảnh, and Câu chuyện từ cộng đồng.
+- The exchange direction remains future-gated until community principles and
+  user-safety mechanisms are ready.
+- No fake statistics, matches, testimonials, pricing, dead routes, gradients,
+  dashboard treatment, placeholder glyphs, or internal project language was
+  added to the public Home.
+
+### Evidence
+
+Permanent final-body captures are in the Workspace evidence index:
+
+- ../../evidence/phase-01/LNG-01-014-STITCH-FINAL-DESKTOP-1440.png
+- ../../evidence/phase-01/LNG-01-014-STITCH-FINAL-MOBILE-390.png
+- ../../evidence/phase-01/LNG-01-014-STITCH-HTML-RENDER-MOBILE-390.png
+- ../../evidence/phase-01/LNG-01-014-RUNTIME-DESKTOP-1440.png
+- ../../evidence/phase-01/LNG-01-014-RUNTIME-MOBILE-390.png
+- ../../evidence/phase-01/LNG-01-014-COMPARISON-DESKTOP-1440.png
+- ../../evidence/phase-01/LNG-01-014-COMPARISON-MOBILE-390.png
+
+The Stitch desktop export is 2560 by 10930. The Stitch mobile export is
+780 by 8828; its direct CDN preview is preserved as the exact screen raster,
+and its HTML export was rendered at 390 CSS pixels for a readable comparison.
+Stitch HTML placeholder icons and conceptual links are intentionally mapped
+to the canonical Lucide icon wrapper and real same-page anchors or static
+language rows in the frontend.
+
+### Verification snapshot
+
+- Frontend local gates after the content revision: 6 test files and 19 tests
+  passed; typecheck, lint, build, and high-severity audit passed with
+  0 vulnerabilities.
+- Chrome DevTools verified 320, 375, 390, 412, 768, 1024, and 1440px with
+  no horizontal overflow, no dead hash links, no gradients, and complete
+  local images. Mobile visible controls passed the 44px target check.
+- Lighthouse navigation audits passed Accessibility, Best Practices, SEO,
+  and Agentic Browsing at 100 on both 390px mobile and 1440px desktop.
+- Frontend origin/main is 047597497153f05e2383361b7382c81dc600b2fd.
+  Frontend CI run 34214539105 passed every quality step.
+- Workspace final remote SHA is recorded in the final transition below after
+  the reconciliation commit and push. Phase 02 remains blocked and was not
+  started.

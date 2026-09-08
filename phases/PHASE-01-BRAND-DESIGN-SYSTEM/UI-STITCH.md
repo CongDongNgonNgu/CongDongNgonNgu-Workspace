@@ -32,3 +32,36 @@ Design the reusable content shell for public and authenticated CongDongNgonNgu p
 
 ## Review checklist
 Reject/refine if: visual hierarchy resembles EduAI; excessive pill/card usage; all headings bold/oversized; desktop three-column layout simply stacks endlessly on mobile; nav becomes unreadable; future routes appear as broken actions; contrast/focus insufficient.
+
+## Final Homepage Design Source of Truth — LNG-01-014
+
+FINAL HOMEPAGE DESIGN SOURCE OF TRUTH
+Desktop: fb7f5dbb2459493d970c7da39d44a73a
+Mobile: eb2aa177b91541b19877a428f23ffc8c
+Core/App Shell: ARCHITECTURE REFERENCE ONLY
+
+These revised screens are the canonical Home body references after owner
+feedback. The Home narrative is global and language-agnostic: Language
+Exchange is a future concept for any language pair, and the world section
+celebrates the value of every language instead of centering a single
+Vietnamese-English pairing. Vietnamese remains a first-class language in
+the product vision and the initial language catalog.
+
+The previous LNG-01-014 screens 848b421b4b664e6f91a84cbe3caf8cb0 and
+8c33c51d5ca5449e802c357bf0057313 are superseded/reference only. Preserve
+them for history; do not use them as the implementation target.
+
+Required revised copy:
+
+- Exchange kicker: Khi cộng đồng sẵn sàng
+- Exchange heading: Gặp nhau qua ngôn ngữ.
+- Exchange roles: Người học ngôn ngữ mới; Người chia sẻ kinh nghiệm
+- World kicker: MỞ RA THẾ GIỚI QUA NGÔN NGỮ
+- World heading: Ngôn ngữ của bạn thuộc về thế giới.
+- World topics: Âm thanh & phát âm; Cách nói đời thường; Văn hóa & bối
+  cảnh; Câu chuyện từ cộng đồng
+
+Keep the canonical Header, Footer, Lucide icon family, bundled Be Vietnam
+Pro, restrained navy/orange/green/cyan tokens, open editorial spacing,
+truthful future gating, and no gradients, fake stats, pricing, dashboards,
+or dead links.

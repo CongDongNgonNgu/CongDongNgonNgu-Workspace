@@ -134,3 +134,90 @@ responsive, accessibility, remote SHA, and CI checks recorded above.
 - Frontend CI run 34196014232 completed successfully for that remote commit.
 - Workspace origin/main was verified after the reconciliation records were committed and pushed.
 - Phase 02 remained blocked until this acceptance and was not started.
+
+## LNG-01-014 final Homepage body reconciliation
+
+**Status:** VERIFYING
+
+The first final Home body was revised after owner feedback: a fixed
+Vietnamese-English exchange and a Vietnamese-specific world banner were too
+narrow for the global language community. The revised public narrative is
+language-agnostic while Vietnamese remains in the initial language catalog
+and product vision.
+
+### Final source of truth
+
+FINAL HOMEPAGE DESIGN SOURCE OF TRUTH
+Desktop: fb7f5dbb2459493d970c7da39d44a73a
+Mobile: eb2aa177b91541b19877a428f23ffc8c
+Core/App Shell: ARCHITECTURE REFERENCE ONLY
+
+The earlier final screens 848b421b4b664e6f91a84cbe3caf8cb0 and
+8c33c51d5ca5449e802c357bf0057313 are superseded/reference only. Header and
+Footer references remain canonical and unchanged.
+
+### Content and visual reconciliation
+
+- Exchange now uses Gặp nhau qua ngôn ngữ., the roles Người học ngôn ngữ
+  mới and Người chia sẻ kinh nghiệm, and the caption Mỗi người vừa học,
+  vừa góp một điều hữu ích. It remains a clearly gated future direction
+  with no implied match, profile, or active language pair.
+- The world section now uses Ngôn ngữ của bạn thuộc về thế giới. and the
+  general topics Âm thanh & phát âm, Cách nói đời thường, Văn hóa & bối
+  cảnh, and Câu chuyện từ cộng đồng.
+- The body keeps the human-first editorial hierarchy, real local hero
+  image, bundled Be Vietnam Pro, canonical shell, Lucide SVG icons, and
+  same-page actions. No fake stats, testimonials, pricing, dead routes,
+  gradients, dashboards, or placeholder glyphs are present.
+- Stitch's conceptual Material icon glyphs and placeholder links are
+  intentionally implemented with the project icon wrapper and real anchors
+  or static language rows.
+
+### Permanent evidence
+
+The Workspace-level evidence index contains:
+
+- ../../../evidence/phase-01/LNG-01-014-STITCH-FINAL-DESKTOP-1440.png
+- ../../../evidence/phase-01/LNG-01-014-STITCH-FINAL-MOBILE-390.png
+- ../../../evidence/phase-01/LNG-01-014-STITCH-HTML-RENDER-MOBILE-390.png
+- ../../../evidence/phase-01/LNG-01-014-RUNTIME-DESKTOP-1440.png
+- ../../../evidence/phase-01/LNG-01-014-RUNTIME-MOBILE-390.png
+- ../../../evidence/phase-01/LNG-01-014-COMPARISON-DESKTOP-1440.png
+- ../../../evidence/phase-01/LNG-01-014-COMPARISON-MOBILE-390.png
+
+The direct Stitch desktop raster is 2560 by 10930. The direct mobile screen
+preview is 45 by 512 because the CDN returned a scaled full-page preview;
+the source metadata is 780 by 8828. The HTML export render is preserved at
+390 by 4414 for a readable mobile comparison and is clearly named as a
+render, not a runtime capture.
+
+### Final runtime matrix
+
+| Width | Client | Scroll | Page height | Main section width | Header | Mobile nav |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 320 | 320 | 320 | 8461 | 288 | 57px | 69px |
+| 375 | 375 | 375 | 7896 | 343 | 57px | 69px |
+| 390 | 390 | 390 | 7797 | 358 | 57px | 69px |
+| 412 | 412 | 412 | 7713 | 380 | 57px | 69px |
+| 768 | 768 | 768 | 5133 | 720 | 73px | hidden |
+| 1024 | 1024 | 1024 | 4890 | 976 | 73px | hidden |
+| 1440 | 1440 | 1440 | 5377 | 1200 | 73px | hidden |
+
+Every required width has no horizontal overflow, no dead hash link, no
+gradient, and complete local images. The mobile visible interactive controls
+all meet the 44px target check. The final 390px DOM contains the revised
+headings and topics and no old Vietnamese-English framing.
+
+### Final gates
+
+- Frontend local gates: 6 test files and 19 tests passed; typecheck, lint,
+  build, and high-severity audit passed with 0 vulnerabilities.
+- Lighthouse navigation at 390px mobile and 1440px desktop: Accessibility,
+  Best Practices, SEO, and Agentic Browsing all 100; 57 passed and 0 failed.
+- Chrome console: no error or warning messages. Network: 70 local app,
+  dependency, font, and brand-asset requests observed; no failed request.
+- Frontend origin/main: 047597497153f05e2383361b7382c81dc600b2fd.
+  CI run 34214539105 passed quality, install, lint, typecheck, unit tests,
+  build, and security audit.
+- Workspace reconciliation is ready for its authorized commit and push.
+  Phase 02 remains blocked and was not started.

@@ -142,3 +142,24 @@ Verification:
 - Frontend origin/main is 1c741cac3cfdb98b09f1360ce5936f9caaa95745; CI run 34196014232 completed successfully.
 - Workspace reconciliation records are committed and its origin/main head is verified after push.
 - Phase 02 remained blocked until this acceptance and was not started.
+
+## LNG-01-014 — Final Homepage Body Design & Stitch Consolidation
+**Status:** VERIFYING
+**Depends on:** LNG-01-013
+
+Replace the early four-section Home body with the final human-first product narrative. Create new canonical Stitch desktop and mobile screens, implement the body in the existing frontend architecture, reconcile the final visual evidence, and keep Phase 02 blocked until the final acceptance is complete.
+
+Acceptance:
+- Final Stitch desktop and mobile screens visibly cover language discovery, the community loop, truthful Language Exchange direction, supporting AI Practice, the Open Language Library taxonomy, a universal world-through-language perspective, contribution value, and the free-community-first membership teaser.
+- Home uses real same-page actions only, preserves the canonical Header/Footer, uses the approved local human-centered asset, and has no fake stats, matches, testimonials, pricing, dead routes, gradients, dashboards, or placeholder glyphs.
+- Responsive behavior is verified at 320, 375, 390, 412, 768, 1024, and 1440px with no horizontal overflow and accessible touch/focus targets.
+- Final Stitch IDs, runtime comparison evidence, verification results, remote SHAs, and CI status are recorded without deleting historical evidence.
+
+Verification:
+- Stitch final desktop: `848b421b4b664e6f91a84cbe3caf8cb0`.
+- Stitch final mobile: `8c33c51d5ca5449e802c357bf0057313`.
+- Revised Stitch final desktop: `fb7f5dbb2459493d970c7da39d44a73a`.
+- Revised Stitch final mobile: `eb2aa177b91541b19877a428f23ffc8c`.
+- Owner content correction reconciled: the exchange and world sections are now language-agnostic; Vietnamese remains in the language ecosystem without being used as the public Home banner's sole frame.
+- Runtime, Stitch raster, comparison, Lighthouse, and CI evidence are recorded in `evidence/phase-01/RESPONSIVE-VERIFICATION.md` and the Phase 01 remediation evidence record.
+- Frontend commit `047597497153f05e2383361b7382c81dc600b2fd` is pushed to origin/main; CI run `34214539105` passed.

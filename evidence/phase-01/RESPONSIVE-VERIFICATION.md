@@ -53,3 +53,47 @@ Mobile header controls have 44px minimum hit areas. Bottom navigation items are 
 ## Remote reconciliation boundary
 
 Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e. Workspace origin/main includes acceptance commit a30e9c2; the final Workspace remote head was verified after the completion push. No production deployment was performed.
+
+## LNG-01-014 Workspace evidence index
+
+This top-level evidence directory is the durable Phase 01 verification index:
+it collects the exact final Stitch captures, runtime captures, and comparison
+sheets so reviewers can find the release evidence without opening the
+phase-specific narrative first. The detailed interpretation remains in
+phases/PHASE-01-BRAND-DESIGN-SYSTEM/evidence/REMEDIATION-VERIFICATION.md.
+
+FINAL HOMEPAGE DESIGN SOURCE OF TRUTH
+Desktop: fb7f5dbb2459493d970c7da39d44a73a
+Mobile: eb2aa177b91541b19877a428f23ffc8c
+Core/App Shell: ARCHITECTURE REFERENCE ONLY
+
+The revised Home body is global and language-agnostic. The exchange concept
+uses community roles rather than a Vietnamese-English pair, and the world
+section speaks about the value of every language rather than a
+Vietnamese-specific banner. The earlier Home references remain preserved as
+historical/superseded records.
+
+Final artifacts:
+
+- LNG-01-014-STITCH-FINAL-DESKTOP-1440.png
+- LNG-01-014-STITCH-FINAL-MOBILE-390.png
+- LNG-01-014-STITCH-HTML-RENDER-MOBILE-390.png
+- LNG-01-014-RUNTIME-DESKTOP-1440.png
+- LNG-01-014-RUNTIME-MOBILE-390.png
+- LNG-01-014-COMPARISON-DESKTOP-1440.png
+- LNG-01-014-COMPARISON-MOBILE-390.png
+
+Final revision verification:
+
+- Required widths 320, 375, 390, 412, 768, 1024, and 1440 have matching
+  client and scroll widths; no horizontal overflow, dead hash links, or
+  gradients were observed.
+- Mobile visible controls passed the 44px target check. Local images and
+  bundled Vietnamese font faces completed successfully.
+- Lighthouse at 390px mobile and 1440px desktop returned 100 for
+  Accessibility, Best Practices, SEO, and Agentic Browsing, with 57 passed
+  and 0 failed.
+- Frontend commit 047597497153f05e2383361b7382c81dc600b2fd is on origin/main;
+  CI run 34214539105 passed every configured quality step.
+- Phase-specific evidence is currently being reconciled into the authorized
+  Workspace commit. Phase 02 remains blocked and was not started.
