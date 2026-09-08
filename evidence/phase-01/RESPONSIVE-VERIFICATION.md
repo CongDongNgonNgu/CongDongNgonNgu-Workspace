@@ -50,4 +50,4 @@ Mobile header controls have 44px minimum hit areas. Bottom navigation items are 
 
 ## Remote reconciliation boundary
 
-Frontend local final branch is phase-01-shell at a94a338. Authorized frontend origin/main remains ea0fc67 because the environment safety reviewer rejected the follow-up push as an untrusted outbound remote. Workspace evidence/state edits are being prepared locally; no further push retry was issued.
+Frontend local final branch is phase-01-shell at a94a338. Authorized frontend origin/main remains ea0fc67. Workspace local reconciliation branch is phase-01-reconciliation at 0abbc2b; authorized Workspace origin/main remains 864e3e0. The environment safety reviewer rejected the frontend follow-up outbound push and no further remote push retry was issued.
