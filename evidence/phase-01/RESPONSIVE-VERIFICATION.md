@@ -52,4 +52,4 @@ Mobile header controls have 44px minimum hit areas. Bottom navigation items are 
 
 ## Remote reconciliation boundary
 
-Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e. Workspace origin/main is e3f6ecd990b237f81bcfbbdc2183c1f6945f7867. Both authorized remote SHAs were verified after push; no production deployment was performed.
+Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e. Workspace origin/main includes acceptance commit a30e9c2; the final Workspace remote head was verified after the completion push. No production deployment was performed.

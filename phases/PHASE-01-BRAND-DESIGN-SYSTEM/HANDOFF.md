@@ -46,5 +46,5 @@ Acceptance passed. Phase 01 is DONE, Phase 02 is READY, and Phase 02 was not sta
 ## Final verification record
 
 - Required viewport runtime matrix, horizontal-overflow checks, no-dead-link scan, no-gradient scan, mobile target sizing, keyboard interactions, focus restoration, Lighthouse results, console, network, and screenshot-capture classification are recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
-- Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e; Workspace origin/main is e3f6ecd990b237f81bcfbbdc2183c1f6945f7867. Both authorized remote SHAs were verified after push.
+- Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e; Workspace origin/main includes acceptance commit a30e9c2, and the final Workspace remote head was verified after the completion push.
 - Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=READY. Phase 02 was not started.
