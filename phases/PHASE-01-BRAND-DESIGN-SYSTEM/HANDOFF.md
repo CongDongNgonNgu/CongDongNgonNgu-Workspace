@@ -1,10 +1,10 @@
 # Phase 01 Handoff
 
-**Phase status:** VERIFYING
+**Phase status:** DONE
 
 ## Resolved external blocker
 
-Stitch authentication was restored on 2026-09-08. The original BLOCKED_EXTERNAL entry remains in state/BLOCKERS.md as historical evidence. Phase 01 implementation and verification are complete locally; final remote reconciliation is VERIFYING because the environment safety reviewer rejected the follow-up push. Phase 00 remains accepted and unchanged; Phase 02 and all later dependency states remain unchanged.
+Stitch authentication was restored on 2026-09-08. The original BLOCKED_EXTERNAL entry remains in state/BLOCKERS.md as historical evidence. Phase 01 implementation, verification, remote reconciliation, and CI acceptance are complete. Phase 00 remains accepted and unchanged; Phase 02 is READY but was not started.
 
 ## Design evidence
 - Stitch project: `projects/3718538619973058970` (`CongDongNgonNgu.vn - Phase 01 Global Shell`, private).
@@ -24,9 +24,9 @@ Implementation paths and verification are recorded below.
 - LNG-01-004 / DONE: fixed mobile navigation with five required labels, only `/` active, disabled future items, readable status text, and safe-area padding implemented in `src/components/layout/MobileBottomNav.tsx`.
 - LNG-01-005 / DONE: project-native Button, form controls, combobox, checkbox/radio/switch, tabs, dialog, drawer, dropdown, tooltip, toast, avatar, badge, chip, language indicator, card/list row, skeleton, empty/error, pagination, and search primitives implemented in `src/components/ui/`.
 - LNG-01-006 / DONE: `AppShell` composes landmarks, skip link, main content, footer, and mobile navigation; Home foundation includes open editorial content plus loading, empty, error/retry, and future-feature states.
-- LNG-01-007 / VERIFYING: responsive browser, keyboard, accessibility, runtime, and visual-direction reconciliation passed locally; reproducible evidence is in evidence/phase-01/RESPONSIVE-VERIFICATION.md. Remote follow-up push remains blocked by the environment safety reviewer.
-- Frontend implementation commit ea0fc67 (feat(shell): add Phase 01 global shell) is on authorized origin/main. Verified local follow-up commits are 5b4ce9e (fix(shell): refine header and state tokens) and a94a338 (fix(shell): close menus accessibly) on local branch phase-01-shell; the environment safety reviewer rejected their outbound push, so origin/main remains ea0fc67.
-- Current automated verification: npm.cmd test -- --run passes 4 files / 17 tests; npm.cmd run lint and the build TypeScript check pass; npm.cmd run build passes; npm.cmd audit --audit-level=high reports 0 vulnerabilities. Frontend CI run 34181754074 for origin/main SHA ea0fc67136039a3739fc0b4d662575187d8507d9 completed successfully; Workspace has no CI workflow. Browser and Lighthouse evidence is recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
+- LNG-01-007 / DONE: responsive browser, keyboard, accessibility, runtime, visual-direction, remote-SHA, and CI reconciliation passed; reproducible evidence is in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
+- Frontend implementation commits ea0fc67, 5b4ce9e, and a94a338 are pushed to authorized origin/main; remote SHA verified as a94a338f4d1096c4da7a14136988879629d81d9e. Frontend CI run 34184805897 completed successfully.
+- Current automated verification: npm.cmd test -- --run passes 4 files / 17 tests; npm.cmd run lint and the build TypeScript check pass; npm.cmd run build passes; npm.cmd audit --audit-level=high reports 0 vulnerabilities. Frontend CI run 34184805897 for origin/main SHA a94a338f4d1096c4da7a14136988879629d81d9e completed successfully; Workspace has no CI workflow. Browser and Lighthouse evidence is recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
 
 ### Responsive and accessibility evidence
 
@@ -41,10 +41,10 @@ Implementation paths and verification are recorded below.
 - Stitch raster screenshot inspection was unavailable in the Windows session; generated HTML/metadata and local browser/runtime evidence are used instead.
 
 ## Completion transition
-When Acceptance passes, mark Phase 01 DONE and Phase 02 READY in `state/PROJECT-STATE.md`.
+Acceptance passed. Phase 01 is DONE, Phase 02 is READY, and Phase 02 was not started in this run.
 
 ## Final verification record
 
 - Required viewport runtime matrix, horizontal-overflow checks, no-dead-link scan, no-gradient scan, mobile target sizing, keyboard interactions, focus restoration, Lighthouse results, console, network, and screenshot-capture classification are recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
-- Final local frontend verification head is a94a338 on phase-01-shell; authorized frontend origin/main is ea0fc67. Workspace local reconciliation history includes 0abbc2b and subsequent metadata-only commits; authorized Workspace origin/main is 864e3e0. The final pushes remain pending because the environment safety reviewer rejected the frontend outbound push.
-- Workspace state remains CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=VERIFYING, and PHASE_02=BLOCKED_BY_PHASE_01. Phase 02 was not started.
+- Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e; Workspace origin/main is e3f6ecd990b237f81bcfbbdc2183c1f6945f7867. Both authorized remote SHAs were verified after push.
+- Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=READY. Phase 02 was not started.

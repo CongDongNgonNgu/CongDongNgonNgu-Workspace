@@ -45,7 +45,7 @@ Implement project-native Button, link, input/textarea, select/combobox, checkbox
 Create shell/layout composition for public and authenticated pages, including content width, rails, sticky behavior, mobile safe areas and focus restoration. Verify 320/375/390/412/768/1024/1440.
 
 ## LNG-01-007 — Visual/A11y Reconciliation
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-01-001..006
 
 Run visual regression and accessibility checks, inspect for excessive cards/bold text/gradients, compare against EduAI to ensure distinct hierarchy and composition, fix overflows/touch/focus issues, push evidence and update handoff.

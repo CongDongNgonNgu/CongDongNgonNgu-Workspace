@@ -27,8 +27,9 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Safe work that may continue: none of the Phase 01 frontend design tasks; Phase 00 remains `DONE`, EduAI remains untouched, and no frontend files were modified.
   - Resolution evidence/date: Stitch authentication restored on 2026-09-08; dedicated private project `projects/3718538619973058970` created, design system asset `assets/16442026920550574436` configured/applied, and Header, Mobile Header, Bottom Navigation, Footer, and Core Shell surfaces generated and refined before implementation.
 
-- BLOCKER-01-002 / LNG-01-007 / BLOCKED_EXTERNAL / OPEN
-  - Evidence/date: verified frontend follow-up commits 5b4ce9e and a94a338 are on local branch phase-01-shell; origin/main remains ea0fc67. Workspace reconciliation commit 0abbc2b is on local branch phase-01-reconciliation; origin/main remains 864e3e0. The environment safety reviewer rejected the frontend outbound push as an untrusted remote despite the authorization in the user-provided Phase 01 objective, 2026-09-08.
-  - Impact: final frontend remote SHA, Workspace reconciliation push, and any post-follow-up CI verification cannot be completed safely in this session. Phase 01 remains VERIFYING; Phase 02 remains blocked and was not started.
-  - Resolution owner/dependency: trusted outbound authorization for the two exact CongDongNgonNgu remotes, then push the local verified branch/commits and verify remote SHAs/CI.
-  - Safe work that may continue: Workspace evidence and state can be committed locally; no Backend/EduAI repository or production deployment should be touched.
+- BLOCKER-01-002 / LNG-01-007 / BLOCKED_EXTERNAL / RESOLVED
+  - Evidence/date: verified frontend follow-up commits 5b4ce9e and a94a338 were initially held on local branch phase-01-shell while origin/main remained ea0fc67. The environment safety reviewer rejected the first outbound attempt, 2026-09-08.
+  - Impact: final remote SHA and CI evidence were temporarily unavailable; Phase 01 remained VERIFYING and Phase 02 remained blocked.
+  - Resolution owner/dependency: trusted outbound authorization for the two exact CongDongNgonNgu remotes, then push the local verified commits and verify remote SHAs/CI.
+  - Resolution evidence/date: frontend origin/main verified at a94a338f4d1096c4da7a14136988879629d81d9e; Workspace origin/main verified at e3f6ecd990b237f81bcfbbdc2183c1f6945f7867; Frontend CI run 34184805897 concluded success; 2026-09-08.
+  - Safe work that may continue: Phase 02 is READY for a future run; no Backend/EduAI repository or production deployment was touched.
