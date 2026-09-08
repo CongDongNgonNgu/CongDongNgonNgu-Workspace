@@ -5,6 +5,8 @@
   ↓
 01 Brand & Design System
   ↓
+01 remediation LNG-01-008..013
+  ↓
 02 Auth & Identity
   ↓
 03 Language Profile

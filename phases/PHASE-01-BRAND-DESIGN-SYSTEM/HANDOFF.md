@@ -48,3 +48,61 @@ Acceptance passed. Phase 01 is DONE, Phase 02 is READY, and Phase 02 was not sta
 - Required viewport runtime matrix, horizontal-overflow checks, no-dead-link scan, no-gradient scan, mobile target sizing, keyboard interactions, focus restoration, Lighthouse results, console, network, and screenshot-capture classification are recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
 - Frontend origin/main is a94a338f4d1096c4da7a14136988879629d81d9e; Workspace origin/main includes acceptance commit a30e9c2, and the final Workspace remote head was verified after the completion push.
 - Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=READY. Phase 02 was not started.
+
+## Owner remediation reconciliation
+
+**Opened:** 2026-09-08
+**Phase status:** VERIFYING
+
+Owner visual acceptance is reopened after direct raster inspection of the accepted Stitch screens. The original completion record above is preserved as historical evidence; it is not deleted or rewritten. Phase 02 is blocked by LNG-01-008 through LNG-01-013 until the owner accepts the reconciled implementation.
+
+### Owner feedback carried into remediation
+
+- Remove Unicode/ASCII/emoji placeholder icons and use one professional SVG icon family with consistent 16/18/20/24px sizing.
+- Remove public-shell `Sắp có` badges and unavailable destinations from primary navigation; retain only intentional, clearly accessible disabled states.
+- Bundle and verify the Vietnamese-capable font rather than relying on an unverified fallback; reduce oversized headings and heavy weights.
+- Keep exactly one canonical Header and Footer public API, with private responsive renderers only.
+- Split broad global CSS into tokens/reset/base/utilities and colocated component modules; avoid catch-all UI files.
+- Remove Phase 01, GLOBAL SHELL, internal demo/status, and fake future-state language from user-facing UI.
+- Reconcile Home toward a modern, friendly, human, multicultural editorial direction with real public content and a restrained visual system.
+
+### Stitch references used for reconciliation
+
+The historical accepted references remain intact. The following owner-directed canonical refinements were generated in the same Stitch project and are the new visual references for implementation:
+
+- Header baseline: logged-out `96ceae90e4e745df818ecff334c26f8b`; original refined session `6309401753494504160`.
+- Canonical Footer desktop: `f665beca30584a2483d8c6266686996e`, edit session `5839737325126515507`.
+- Canonical Footer mobile: `db89bcbfcd094af29ae2170d421e9bda`, edit session `1678448671423868622`.
+- Canonical mobile action bar: `dbc78d828923456ca5786b4f16a58df5`, edit session `10599887524425087011`.
+- Canonical Home desktop: `607f7aa26af44e8da71ae0e559e4a4f2`, supporting image `778401c30e6a4834b5c23667ac6cb502`, edit session `10369816228356213833`.
+- Canonical Home mobile: `de0617b58b324d0e9df9de0607139d0a`, edit session `13978029276059726651`.
+
+Implementation, matched runtime screenshots, and owner re-acceptance are complete under LNG-01-008..013.
+
+## Remediation verification update
+
+The local visual and runtime reconciliation is complete for LNG-01-008 through
+LNG-01-012. The permanent comparison record, exact viewport captures, Stitch
+reference captures, concrete differences, accessibility audit, and automated
+gate results are in
+`evidence/REMEDIATION-VERIFICATION.md` and its `evidence/remediation/`
+directory. LNG-01-013 is DONE after the independent commits were pushed,
+remote heads and CI were verified, and the final acceptance transition was
+recorded without rewriting the historical completion record above.
+
+## Final remediation acceptance
+
+**Accepted:** 2026-09-08
+**Phase status:** DONE
+
+LNG-01-008 through LNG-01-013 are complete. The implementation and the
+permanent evidence record were reconciled against the owner-directed Stitch
+references, then verified through local runtime and accessibility checks.
+
+- Frontend origin/main: 1c741cac3cfdb98b09f1360ce5936f9caaa95745.
+- Frontend CI run 34196014232 completed successfully for that remote commit.
+- Workspace remediation records are committed and Workspace origin/main was verified after push.
+- Local frontend gates passed: tests (5 files, 18 tests), typecheck, lint, build, and high-severity audit (0 vulnerabilities).
+- Phase 02 was kept blocked throughout remediation, was not started, and is READY only after Phase 01 acceptance completed.
+
+The historical completion record above remains unchanged.
