@@ -10,6 +10,7 @@ Scope: CongDongNgonNgu Frontend local Vite runtime at http://127.0.0.1:5173/; no
 - npm.cmd run lint: TypeScript noEmit passed.
 - npm.cmd run build: TypeScript check and Vite production build passed.
 - git diff --check: passed before the final frontend follow-up commit.
+- Frontend CI run 34181754074 for origin/main SHA ea0fc67136039a3739fc0b4d662575187d8507d9 completed successfully; its CI workflow covers npm ci, lint, typecheck, unit tests, build, and high-severity npm audit. Workspace has no .github/workflows directory, so no Workspace CI run applies.
 
 ## Browser runtime matrix
 
