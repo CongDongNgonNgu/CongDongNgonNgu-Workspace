@@ -20,4 +20,12 @@ Append durable decisions; do not silently rewrite history.
 ## DEC-006 — Contribution economy
 **Status:** Accepted. Learning XP and Community Reputation are separate; contribution may earn membership credit through auditable ledger/entitlements.
 
+## DEC-007 — Phase 02 identity and session architecture
+**Status:** Accepted for local implementation on 2026-09-09. CongDongNgonNgu-owned
+identity, PostgreSQL schema, verification/recovery tokens, server-tracked
+refresh rotation, CSRF protection, provider abstraction, and explicit
+account-linking rules are recorded in
+`docs/DEC-007-PHASE-02-AUTH-IDENTITY.md`. Live Google verification and remote
+publication remain external gates.
+
 Template: `DEC-NNN — Title | Date | Status | Context | Decision | Consequences | Supersedes`.
