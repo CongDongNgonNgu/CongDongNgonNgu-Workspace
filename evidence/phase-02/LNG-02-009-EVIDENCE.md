@@ -63,8 +63,9 @@ reference; the runtime side is the concrete route/state realization.
   `scrollWidth <= viewport width` held for Login and Register at every width.
 - Login and flow surfaces use the measured Stitch palette
   `#F8FAF6/#002B4D/#9C4500`; Login Mobile uses the accepted bright CTA
-  `#FD8A42`; Register Mobile preserves the accepted mobile variant
-  `#F4F6F2/#1E4165/#D96E28`.
+  `#FD8A42`; Register Mobile preserves the accepted mobile body/accent
+  variant `#F4F6F2/#D96E28` while its compact Footer now uses the
+  owner-requested shared `#F2F4F0` surface.
 - Provider availability remains capability-driven and disabled providers do
   not fabricate OAuth completion.
 - Verification destinations are masked; collision and session errors remain
@@ -72,12 +73,15 @@ reference; the runtime side is the concrete route/state realization.
 
 ## Intentional deviations
 
-Only the permitted/product-required deviations are retained: one canonical
-Phase 01 Header API and Footer API are reused; dynamic security-safe error
-copy can differ from static Stitch copy; Google remains disabled without real
+The owner-requested mobile compact Footer surface is intentionally unified to
+`#F2F4F0` across Auth routes. The Register Mobile Stitch raster remains
+canonical and documents the original `#1E4165` footer, so this is a visible
+color-only deviation approved by the owner request. One canonical Phase 01
+Header API and Footer API are reused; dynamic security-safe error copy can
+differ from static Stitch copy; Google remains disabled without real
 credentials; and the Register Mobile Stitch metadata typo is documented.
-No intentional layout, section-order, control-sizing, or mobile-composition
-deviation is accepted without owner approval.
+No other intentional layout, section-order, control-sizing, or
+mobile-composition deviation is accepted without owner approval.
 
 ## Verification performed
 
@@ -88,6 +92,9 @@ deviation is accepted without owner approval.
 - `npm.cmd audit --audit-level=high`: 0 vulnerabilities.
 - Lighthouse snapshot at 390px and 1440px: Accessibility 100, Best
   Practices 100, SEO 100, Agentic Browsing 100; 0 failed audits.
+- Follow-up browser check: Login and Register at 390px computed the compact
+  Footer background as `rgb(242, 244, 240)` (`#F2F4F0`) with no horizontal
+  overflow; Register at 1440px retained the navy Footer background.
 - Focused Auth tests cover Login/Register hierarchy, provider-disabled
   capability, recovery request/sent, expired reset, masked verification, and
   collision-safe messaging.

@@ -35,7 +35,7 @@ silently corrected in the source design.
 | Login 1440 | Main content about 1176px; 32px desktop outer padding | About 5:6 editorial/form split with a divider | 44px inputs/buttons; 16px field rhythm; editorial title about 48px | `#F8FAF6` body, `#002B4D` navy, `#9C4500` accent, navy footer |
 | Login 390 | 16px mobile gutters; form fills available width | Single column; editorial context is replaced by compact reassurance | 48px controls; provider and CTA remain full width | `#F8FAF6` body, `#F2F4F0` footer, bright `#FD8A42` CTA |
 | Register 1440 | Main content about 1176px; 32px desktop outer padding | About 5:7 editorial/form split with a divider | 44px controls; grouped password guidance and consent | `#F8FAF6` body, `#002B4D` navy, `#9C4500` accent, navy footer |
-| Register 390 | 16px mobile gutters; form fills available width | Dedicated single-column composition | 48px controls; password requirements card and consent remain visible | `#F4F6F2` body, `#1E4165` footer, `#D96E28` accent |
+| Register 390 | 16px mobile gutters; form fills available width | Dedicated single-column composition | 48px controls; password requirements card and consent remain visible | `#F4F6F2` body, owner-requested `#F2F4F0` compact footer, `#D96E28` accent |
 | Recovery and state flows | 16px mobile gutters; desktop auth body remains focused | Editorial/form split on desktop; mobile status rail above the form | 48px mobile controls; state rail scrolls horizontally without overflow | Recovery palette follows `#F8FAF6/#002B4D/#9C4500` |
 
 ### Required visual comparison evidence
@@ -70,6 +70,11 @@ for future Auth work.
 - Google remains disabled when capability data or credentials are unavailable;
   the UI never fabricates provider completion.
 - The Register mobile Stitch record has the documented device metadata typo.
+- Owner-requested follow-up unifies the mobile compact Auth Footer surface to
+  `#F2F4F0` across Login, Register, Recovery, and Auth recovery states. The
+  Register Mobile Stitch raster remains the canonical source and still shows
+  its original `#1E4165` footer; this explicit color change is documented
+  rather than replacing the Stitch source.
 
 No other visible layout, ordering, control sizing, or composition deviation is
 accepted without owner approval.

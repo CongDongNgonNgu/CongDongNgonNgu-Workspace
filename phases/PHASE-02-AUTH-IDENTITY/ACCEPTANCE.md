@@ -26,6 +26,8 @@
   Register, Recovery, and Auth Recovery States.
 - [x] Login and Register have 1440px and 390px runtime rasters with
   side-by-side, overlay, and pixel-difference evidence.
+- [x] Owner-requested mobile compact Footer surface is unified to
+  `#F2F4F0`; desktop Footer treatment remains unchanged.
 - [x] Recovery, verification, provider-disabled, session-expired, and OAuth
   collision/linking states have runtime rasters and side-by-side evidence.
 - [x] Responsive checks cover 320, 375, 390, 412, 768, 1024, and 1440px;
@@ -42,11 +44,11 @@ migrations.
 - [ ] Live Google callback verification — BLOCKED_EXTERNAL: no
   CongDongNgonNgu-owned Google credentials are present.
 - [x] Phase 02 remote SHA verification — Backend remains at
-  `25ad79cfa5740271fd925dfc4140a3d828ee98cc`; Frontend remediation commit
-  `49a7cbcb049f6c1bc3d0d69c353d16d913cd9e82` matches origin/main and its
-  Frontend CI run `34340961369` passed; Workspace evidence commit
-  `2698f14fdec18e5390fd0329224e39ba2df6b985` matches origin/main before this
-  handoff reconciliation follow-up.
+  `25ad79cfa5740271fd925dfc4140a3d828ee98cc`; Frontend Footer follow-up
+  commit `b53ddda17823edcfeff3cd912640a94a413ca0ab` matches origin/main and the existing Frontend CI run
+  `34346910662` passed; Workspace evidence commit
+  `3353e852a8d55eec04189156f78230a59f556344` matches origin/main before this
+  documentation follow-up.
 
 Phase 03 is not started. Do not mark Phase 02 DONE until the two external
 gates above are resolved and the remote evidence is recorded. LNG-02-009 does

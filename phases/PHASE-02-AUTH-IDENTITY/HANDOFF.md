@@ -29,20 +29,21 @@ remains open. No task is falsely marked DONE.
 | Repository | Last local commit | Remote origin/main | Phase 02 working tree |
 | --- | --- | --- | --- |
 | Backend | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | Clean; Phase 02 pushed |
-| Frontend | 49a7cbcb049f6c1bc3d0d69c353d16d913cd9e82 | 49a7cbcb049f6c1bc3d0d69c353d16d913cd9e82 | Clean; LNG-02-009 pushed; CI run 34340961369 passed |
-| Workspace | 2698f14fdec18e5390fd0329224e39ba2df6b985 | 2698f14fdec18e5390fd0329224e39ba2df6b985 | Clean; LNG-02-009 evidence pushed; this handoff reconciliation is the follow-up |
+| Frontend | b53ddda17823edcfeff3cd912640a94a413ca0ab | b53ddda17823edcfeff3cd912640a94a413ca0ab | Clean; mobile Auth Footer surface follow-up pushed; CI run 34346910662 passed |
+| Workspace | 3353e852a8d55eec04189156f78230a59f556344 | 3353e852a8d55eec04189156f78230a59f556344 | Clean before this Footer evidence follow-up |
 
 The Phase 02 implementation, evidence, and user-provided implementation
 prompt are committed and published to the three authorized origin/main
-destinations.
+destinations. The owner-requested mobile Footer surface follow-up is also
+committed in Frontend; this Workspace documentation update records it.
 
 Backend CI: not independently verified in this session.
-Frontend CI: GitHub Actions run 34340961369 completed successfully for
-49a7cbcb049f6c1bc3d0d69c353d16d913cd9e82. The `quality` job passed install,
+Frontend CI: GitHub Actions run 34346910662 completed successfully for
+b53ddda17823edcfeff3cd912640a94a413ca0ab. The `quality` job passed install,
 lint, typecheck, unit tests, build, and security audit steps.
-Remote SHA verification: completed after the remediation push; Frontend and
-Workspace local HEADs matched origin/main at the evidence commit. The final
-SHA of this handoff reconciliation is verified after its follow-up push.
+Remote SHA verification: completed after the remediation and Footer follow-up
+pushes; Frontend local HEAD matches origin/main at b53ddda17823edcfeff3cd912640a94a413ca0ab. Workspace's final
+documentation follow-up SHA is verified after its push.
 
 ## Local verification
 
@@ -62,6 +63,9 @@ SHA of this handoff reconciliation is verified after its follow-up push.
   record is in `evidence/phase-02/LNG-02-009-EVIDENCE.md`.
 - Lighthouse snapshots at 390px and 1440px: Accessibility 100, Best
   Practices 100, SEO 100, Agentic Browsing 100; 0 audits failed.
+- Footer follow-up: Login and Register at 390px computed the compact Footer
+  background as `rgb(242, 244, 240)` (`#F2F4F0`) with no horizontal
+  overflow; Register at 1440px retained the navy Footer background.
 - No production database, deployment, or EduAI repository was accessed for
   mutation.
 
