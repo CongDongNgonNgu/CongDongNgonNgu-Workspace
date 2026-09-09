@@ -22,9 +22,9 @@
 
 - [ ] Live Google callback verification — BLOCKED_EXTERNAL: no
   CongDongNgonNgu-owned Google credentials are present.
-- [ ] Phase 02 remote SHA and CI verification — BLOCKED_EXTERNAL: the
-  environment reviewer rejected repository-history mutation; local changes
-  remain staged/uncommitted.
+- [x] Phase 02 remote SHA verification — Backend, Frontend, and Workspace
+  origin/main match their local Phase 02 HEADs. CI was not independently
+  verified in this session.
 
 Phase 03 is not started. Do not mark Phase 02 DONE until the two external
 gates above are resolved and the remote evidence is recorded.

@@ -20,27 +20,24 @@ authoritative implementation specification.
 | LNG-02-007 | VERIFYING | Explicit session-bound linking and collision protection | Commit and remote evidence |
 | LNG-02-008 | BLOCKED_EXTERNAL | Stitch reconciliation, route states, browser/a11y/security review complete locally | Commit, remote SHA, CI, and live-provider evidence |
 
-VERIFYING means local implementation and tests pass but the required
-repository-history publication gate was rejected by the environment reviewer.
-No task is falsely marked DONE.
+VERIFYING means local implementation and tests pass while an external gate
+remains open. No task is falsely marked DONE.
 
 ## Repository evidence
 
 | Repository | Last local commit | Remote origin/main | Phase 02 working tree |
 | --- | --- | --- | --- |
-| Backend | c5a5614f9db1a95b545f0a197e6b04fd1d3eb2b5 | d27fc4fc88053ee00cb56c2390ac6fcf5bdcf860 | Final hardening, migrations, and tests staged/uncommitted |
-| Frontend | 47862c119e3af122c063332c1f4ee73beebea998 | 47862c119e3af122c063332c1f4ee73beebea998 | Phase 02 UI and tests staged/uncommitted |
-| Workspace | 6598f2c40ba73fb7457a51a798475a19b9c87cb6 | 6598f2c40ba73fb7457a51a798475a19b9c87cb6 | Phase 02 state/evidence uncommitted in the working tree |
+| Backend | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | Clean; Phase 02 pushed |
+| Frontend | b333707c2ca8a55a80dea945450dd0b3a6b69e9d | b333707c2ca8a55a80dea945450dd0b3a6b69e9d | Clean; Phase 02 pushed |
+| Workspace | 5e35273ede61981fbeafeb3b29c94513d89cdf8f | 5e35273ede61981fbeafeb3b29c94513d89cdf8f | Clean; Phase 02 pushed |
 
-The backend core commit c5a5614 is local and ahead of the backend remote.
-The final backend hardening and frontend changes have no commit SHA yet
-because the environment reviewer rejected the commit operation. The
-The user-provided phases/PHASE-02-AUTH-IDENTITY/PROMPT.md was included in the
-Workspace handoff as the authoritative implementation specification.
+The Phase 02 implementation, evidence, and user-provided implementation
+prompt are committed and published to the three authorized origin/main
+destinations.
 
-Backend CI: NOT RUN for the uncommitted Phase 02 state.
-Frontend CI: NOT RUN for the uncommitted Phase 02 state.
-Remote SHA verification: NOT AVAILABLE for the Phase 02 changes.
+Backend CI: not independently verified in this session.
+Frontend CI: not independently verified in this session.
+Remote SHA verification: completed; each local HEAD matches origin/main.
 
 ## Local verification
 
@@ -142,10 +139,8 @@ network failures do not become unhandled browser promise errors.
 1. BLOCKER-02-001: supply approved CongDongNgonNgu Google credentials and run
    the real authorization-code callback/browser verification. Do not reuse
    EduAI credentials.
-2. BLOCKER-02-002: direct user authorization is required by the environment
-   reviewer for local commit and exact origin/main publication. After that,
-   verify remote SHAs and available GitHub Actions runs for Backend, Frontend,
-   and Workspace.
+2. BLOCKER-02-002 is resolved: the authorized commits are published and all
+   three origin/main SHAs match local HEAD.
 
 Only after those gates are resolved may the phase transition to DONE and
 Phase 03 become READY.
