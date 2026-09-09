@@ -35,8 +35,8 @@ No task is falsely marked DONE.
 The backend core commit c5a5614 is local and ahead of the backend remote.
 The final backend hardening and frontend changes have no commit SHA yet
 because the environment reviewer rejected the commit operation. The
-pre-existing untracked phases/PHASE-02-AUTH-IDENTITY/PROMPT.md was preserved
-and was not staged.
+The user-provided phases/PHASE-02-AUTH-IDENTITY/PROMPT.md was included in the
+Workspace handoff as the authoritative implementation specification.
 
 Backend CI: NOT RUN for the uncommitted Phase 02 state.
 Frontend CI: NOT RUN for the uncommitted Phase 02 state.
