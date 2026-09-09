@@ -4,7 +4,7 @@
 
 ## Resolved external blocker
 
-Stitch authentication was restored on 2026-09-08. The original BLOCKED_EXTERNAL entry remains in state/BLOCKERS.md as historical evidence. Phase 01 implementation, verification, remote reconciliation, and CI acceptance are complete. Phase 00 remains accepted and unchanged; Phase 02 remains BLOCKED and was not started.
+Stitch authentication was restored on 2026-09-08. The original BLOCKED_EXTERNAL entry remains in state/BLOCKERS.md as historical evidence. Phase 01 implementation, verification, remote reconciliation, and CI acceptance are complete. Phase 00 remains accepted and unchanged; Phase 02 is READY after owner acceptance and was not started.
 
 ## Design evidence
 - Stitch project: `projects/3718538619973058970` (`CongDongNgonNgu.vn - Phase 01 Global Shell`, private).
@@ -41,20 +41,20 @@ Implementation paths and verification are recorded below.
 - Stitch raster screenshot inspection was unavailable in the Windows session; generated HTML/metadata and local browser/runtime evidence are used instead.
 
 ## Completion transition
-Historical acceptance transition: Phase 01 was DONE and Phase 02 was not started. The current reconciliation explicitly keeps Phase 02 BLOCKED.
+Historical acceptance transition: Phase 01 was DONE and Phase 02 was not started. The current reconciliation records Phase 02 as READY after owner acceptance.
 
 ## Final verification record
 
 - Required viewport runtime matrix, horizontal-overflow checks, no-dead-link scan, no-gradient scan, mobile target sizing, keyboard interactions, focus restoration, Lighthouse results, console, network, and screenshot-capture classification are recorded in evidence/phase-01/RESPONSIVE-VERIFICATION.md.
 - Historical remote reconciliation snapshot: Frontend origin/main was a94a338f4d1096c4da7a14136988879629d81d9e and Workspace included acceptance commit a30e9c2. The current final remote heads are recorded below.
-- Current Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=BLOCKED. Phase 02 was not started.
+- Current Workspace state is CURRENT_PHASE=01, PHASE_00=DONE, PHASE_01=DONE, and PHASE_02=READY. Phase 02 was not started.
 
 ## Owner remediation reconciliation
 
 **Opened:** 2026-09-08
 **Phase status:** VERIFYING
 
-Owner visual acceptance is reopened after direct raster inspection of the accepted Stitch screens. The original completion record above is preserved as historical evidence; it is not deleted or rewritten. Phase 02 is blocked by LNG-01-008 through LNG-01-013 until the owner accepts the reconciled implementation.
+Owner visual acceptance was reopened after direct raster inspection of the accepted Stitch screens. The original completion record above is preserved as historical evidence; it is not deleted or rewritten. At that point, Phase 02 was blocked by LNG-01-008 through LNG-01-013; owner acceptance is now complete, so Phase 02 is READY and remains unstarted.
 
 ### Owner feedback carried into remediation
 
@@ -103,7 +103,7 @@ references, then verified through local runtime and accessibility checks.
 - Frontend CI run 34196014232 completed successfully for that remote commit.
 - Workspace remediation records are committed and Workspace origin/main was verified after push.
 - Local frontend gates passed: tests (5 files, 18 tests), typecheck, lint, build, and high-severity audit (0 vulnerabilities).
-- Phase 02 was kept blocked throughout remediation, was not started, and remains BLOCKED in this run.
+- Phase 02 was kept blocked throughout remediation, was not started, and is now READY after owner acceptance.
 
 The historical completion record above remains unchanged.
 
@@ -196,4 +196,4 @@ language rows in the frontend.
 - Workspace's earlier reconciliation commit 01a4a64ec3e35217357d668d176f91feef7def1a
   remains verified in origin/main; the final documentation reconciliation is
   pushed to origin/main after this record update. Phase 01 acceptance is
-  complete; Phase 02 remains BLOCKED and was not started.
+  complete; Phase 02 is READY and was not started.
