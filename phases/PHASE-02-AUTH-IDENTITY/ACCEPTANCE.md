@@ -18,6 +18,25 @@
 - [x] Backend and frontend local tests, typecheck, lint, build, and high-level
   dependency audit pass.
 
+## LNG-02-009 visual remediation
+
+- [x] Canonical Auth inventory and source-of-truth IDs are recorded in
+  `UI-STITCH.md` and `evidence/phase-02/LNG-02-009-EVIDENCE.md`.
+- [x] Actual Stitch raster exports were retrieved and inspected for Login,
+  Register, Recovery, and Auth Recovery States.
+- [x] Login and Register have 1440px and 390px runtime rasters with
+  side-by-side, overlay, and pixel-difference evidence.
+- [x] Recovery, verification, provider-disabled, session-expired, and OAuth
+  collision/linking states have runtime rasters and side-by-side evidence.
+- [x] Responsive checks cover 320, 375, 390, 412, 768, 1024, and 1440px;
+  no horizontal overflow was observed.
+- [x] Final owner acceptance is intentionally pending. LNG-02-009 is
+  `VERIFYING`, not `DONE`.
+
+The remediation is limited to Frontend-Web and Workspace. It does not alter
+Backend auth/security, database schema, sessions, OAuth credentials, or
+migrations.
+
 ## External gates
 
 - [ ] Live Google callback verification — BLOCKED_EXTERNAL: no
@@ -27,4 +46,6 @@
   verified in this session.
 
 Phase 03 is not started. Do not mark Phase 02 DONE until the two external
-gates above are resolved and the remote evidence is recorded.
+gates above are resolved and the remote evidence is recorded. LNG-02-009 does
+not resolve the Google credential blocker; `PHASE_02=BLOCKED_EXTERNAL` remains
+accurate.

@@ -49,11 +49,23 @@ Require an authenticated, recent/verified ownership flow before linking another 
 
 Use UI-STITCH.md; verify login/register/verify/reset/provider-recovery states across required viewports, keyboard and screen readers. Run auth security regression, commit/push and update handoff.
 
+## LNG-02-009 — Auth UI Stitch Fidelity Remediation
+**Status:** VERIFYING
+**Depends on:** LNG-02-008
+
+Owner-requested visual remediation of the Auth UI against the canonical
+Stitch rasters. Covers only Frontend-Web and Workspace evidence: Login,
+Register, recovery, verification, provider/session error, and collision /
+linking recovery surfaces. The implementation and raster evidence are
+complete locally; owner visual acceptance remains pending. The Google
+credential blocker is unchanged, so this task does not change the broader
+Phase 02 state.
+
 ## Execution reconciliation
 
-Local implementation, tests, browser checks, and security review are complete.
-VERIFYING means the implementation is locally complete but the required
-commit/remote-SHA/CI evidence is unavailable because repository-history
-mutation was rejected by the environment reviewer. LNG-02-005 is also
-BLOCKED_EXTERNAL for the real CongDongNgonNgu Google credential and callback
-verification. No task is falsely marked DONE; Phase 03 remains untouched.
+Local implementation, tests, browser checks, visual comparison evidence, and
+security review are complete for the tasks marked VERIFYING. LNG-02-009 is
+VERIFYING because owner visual acceptance is not delegated in the remediation
+request. LNG-02-005 and the broader Phase 02 gate remain BLOCKED_EXTERNAL for
+the real CongDongNgonNgu Google credential and callback verification. No task
+is falsely marked DONE; Phase 03 remains untouched.

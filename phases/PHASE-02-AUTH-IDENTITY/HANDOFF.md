@@ -19,6 +19,7 @@ authoritative implementation specification.
 | LNG-02-006 | VERIFYING | Facebook/Zalo/Apple contracts and independently disabled configuration | Commit and remote evidence |
 | LNG-02-007 | VERIFYING | Explicit session-bound linking and collision protection | Commit and remote evidence |
 | LNG-02-008 | BLOCKED_EXTERNAL | Stitch reconciliation, route states, browser/a11y/security review complete locally | Commit, remote SHA, CI, and live-provider evidence |
+| LNG-02-009 | VERIFYING | Owner-requested Stitch raster fidelity remediation across Auth surfaces; evidence captured locally | Owner visual acceptance; remote SHA and Frontend CI evidence |
 
 VERIFYING means local implementation and tests pass while an external gate
 remains open. No task is falsely marked DONE.
@@ -44,19 +45,19 @@ Remote SHA verification: completed; each local HEAD matches origin/main.
 - Backend: 7 unit suites / 33 tests passed; 2 E2E suites / 8 tests passed.
   Typecheck, lint, build, and npm audit --audit-level=high passed; audit
   reported 0 vulnerabilities.
-- Frontend: 8 test files / 31 tests passed. Typecheck, lint, build, and npm
+- Frontend: 8 test files / 37 tests passed. Typecheck, lint, build, and npm
   audit --audit-level=high passed; audit reported 0 vulnerabilities.
-- Browser: login form checked at exact 320, 375, 390, 412, 768, 1024, and
-  1440px with no horizontal overflow and visible primary controls. Auth
-  route/state checks passed at 390px. Keyboard traversal, invalid-field focus,
-  role=alert announcements, mobile menu dialog, Escape close, and focus
-  restoration were inspected.
-- Final Chrome DevTools smoke on 2026-09-09 loaded `/login` against isolated
-  local API/web ports, confirmed the responsive mobile layout and accessible
-  labels/disabled-provider state, measured no horizontal overflow, and found
-  no console messages.
-- Lighthouse mobile snapshot: Accessibility 100, Best Practices 100, SEO
-  100, Agentic Browsing 100; 40 checks passed and 0 failed.
+- Browser: login and register forms were checked at exact 320, 375, 390,
+  412, 768, 1024, and 1440px with no horizontal overflow and visible primary
+  controls. Recovery, verification, provider-disabled, session-expired, and
+  collision route/state checks passed at 390px. Keyboard traversal,
+  invalid-field focus, role=alert announcements, mobile menu dialog, Escape
+  close, and focus restoration were inspected.
+- Chrome DevTools captured final Stitch/runtime rasters and measured the Auth
+  body at the canonical 1440px and 390px viewports. The complete comparison
+  record is in `evidence/phase-02/LNG-02-009-EVIDENCE.md`.
+- Lighthouse snapshots at 390px and 1440px: Accessibility 100, Best
+  Practices 100, SEO 100, Agentic Browsing 100; 0 audits failed.
 - No production database, deployment, or EduAI repository was accessed for
   mutation.
 
@@ -118,6 +119,15 @@ record and exact reconciliation are preserved in UI-STITCH.md. The UI keeps
 the accepted Be Vietnam Pro/navy/orange/green system, real labels,
 form-first mobile behavior, restrained motion, safe generic recovery
 messages, and backend-driven provider availability.
+
+LNG-02-009 adds final runtime rasters and generated side-by-side, overlay, and
+pixel-difference evidence for Login/Register at 1440px and 390px, plus
+side-by-side evidence for Recovery, Verification, Provider Disabled, Session
+Expired, and Collision/Linking. Canonical IDs, measurements, and
+SUPERSEDED / REFERENCE ONLY rules are recorded in the
+`AUTH_VISUAL_SOURCE_OF_TRUTH` section of `UI-STITCH.md` and the
+`evidence/phase-02/LNG-02-009-EVIDENCE.md` report. Owner visual sign-off is
+pending; the task remains `VERIFYING`.
 
 ## Security review
 
