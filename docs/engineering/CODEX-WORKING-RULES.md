@@ -8,7 +8,7 @@ Before editing code, Codex MUST:
 2. Read `state/PROJECT-STATE.md` and `state/DEPENDENCY-GRAPH.md`.
 3. Identify the current phase and the next eligible task from that phase's `TASKS.md`.
 4. Read that phase's `README.md`, `ACCEPTANCE.md`, `TEST-PLAN.md`, and `UI-STITCH.md` when applicable.
-5. Read the target repository's `AGENTS.md`.
+5. Read the target repository's `AGENTS.md` when present. If it is absent, confirm that and continue under the Workspace baseline.
 6. Read the domain architecture document required by the task. Frontend tasks MUST read `docs/engineering/FRONTEND-ARCHITECTURE.md`.
 7. Inspect real source, tests, configuration, git status, recent relevant changes, and current implementation before deciding what to change.
 
