@@ -127,3 +127,16 @@ Runtime checks covered exact widths 320, 375, 390, 412, 768, 1024, and
 1440px. Browser output was inspected inline through Chrome DevTools because
 the browser file exporter could not write into this workspace path; the
 preserved Stitch rasters remain in evidence/phase-02.
+
+## Owner acceptance reconciliation — 2026-09-10
+
+Owner visual acceptance for `LNG-02-009` is granted against the canonical
+screen inventory and preserved raster/comparison evidence. The accepted
+Frontend-Web `main` commit is
+`c5fba7b18fe1865c460e8b4d8aac72249558f0bd`.
+
+The owner-rejection history, remediation workflow, canonical IDs, measurements,
+raster links, and `SUPERSEDED / REFERENCE ONLY` records above are preserved.
+This sign-off does not resolve `PHASE_02=BLOCKED_EXTERNAL`; the remaining
+external dependency is live Google provider/callback verification tracked by
+`BLOCKER-02-001`.

@@ -1,10 +1,11 @@
 # LNG-02-009 — Auth UI Stitch Fidelity Remediation
 
-Status: `VERIFYING`
+Status: `DONE`
 
 Phase 02 status: `BLOCKED_EXTERNAL` (the Google credential blocker is
-unchanged). Final owner visual acceptance was not delegated in the request,
-so this task is not marked `DONE`.
+unchanged). Owner visual acceptance was granted on 2026-09-10 for the
+accepted Frontend-Web `main` commit
+`c5fba7b18fe1865c460e8b4d8aac72249558f0bd`, so this task is marked `DONE`.
 
 Scope: `CongDongNgonNgu-Front-End-Web` and this Workspace repository only.
 Backend auth/security, schema, sessions, OAuth credentials, migrations,
@@ -99,6 +100,22 @@ mobile-composition deviation is accepted without owner approval.
   capability, recovery request/sent, expired reset, masked verification, and
   collision-safe messaging.
 
-Owner visual sign-off remains the final gate for this remediation. Until that
-sign-off is provided, retain `LNG-02-009=VERIFYING` and
-`PHASE_02=BLOCKED_EXTERNAL`.
+## Historical pre-acceptance gate
+
+Before owner acceptance, the following gate was intentionally applicable and
+is preserved here as history:
+
+> Owner visual sign-off remains the final gate for this remediation. Until that
+> sign-off is provided, retain `LNG-02-009=VERIFYING` and
+> `PHASE_02=BLOCKED_EXTERNAL`.
+
+## Owner acceptance reconciliation — 2026-09-10
+
+Owner visual acceptance is granted for the canonical Stitch inventory and all
+preserved raster/comparison evidence. The accepted Frontend-Web `main` SHA is
+`c5fba7b18fe1865c460e8b4d8aac72249558f0bd`.
+
+The owner-rejection history, remediation workflow, canonical IDs, rasters,
+comparison artifacts, and `SUPERSEDED / REFERENCE ONLY` records above remain
+unchanged. This acceptance closes LNG-02-009 only; the live Google
+provider/callback verification remains the external blocker for Phase 02.

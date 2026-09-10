@@ -1,6 +1,6 @@
 # Phase 02 Handoff
 
-Date: 2026-09-09
+Date: 2026-09-10
 
 Phase status: BLOCKED_EXTERNAL
 
@@ -18,32 +18,49 @@ authoritative implementation specification.
 | LNG-02-005 | BLOCKED_EXTERNAL | Backend-owned Google code flow, state/nonce, collision handling, disabled fail-closed path | CongDongNgonNgu Google credentials and live callback |
 | LNG-02-006 | VERIFYING | Facebook/Zalo/Apple contracts and independently disabled configuration | Commit and remote evidence |
 | LNG-02-007 | VERIFYING | Explicit session-bound linking and collision protection | Commit and remote evidence |
-| LNG-02-008 | BLOCKED_EXTERNAL | Stitch reconciliation, route states, browser/a11y/security review complete locally | Commit, remote SHA, CI, and live-provider evidence |
-| LNG-02-009 | VERIFYING | Owner-requested Stitch raster fidelity remediation across Auth surfaces; evidence captured locally | Owner visual acceptance; remote SHA and Frontend CI evidence |
+| LNG-02-008 | BLOCKED_EXTERNAL | Stitch reconciliation, route states, browser/a11y/security review, implementation, and visual UX complete locally | `BLOCKER-02-001`: live Google provider/callback verification |
+| LNG-02-009 | DONE | Owner-requested Stitch raster fidelity remediation accepted across Auth surfaces; evidence preserved | None; accepted Frontend SHA `c5fba7b18fe1865c460e8b4d8aac72249558f0bd` |
 
-VERIFYING means local implementation and tests pass while an external gate
-remains open. No task is falsely marked DONE.
+VERIFYING means local implementation and tests pass while that task's external
+gate remains open. LNG-02-009 is DONE because the owner granted visual
+acceptance on 2026-09-10. The owner-rejection history and pre-acceptance
+remediation record remain preserved in the existing evidence and prior
+Workspace commits.
+
+## Acceptance reconciliation — 2026-09-10
+
+Owner visual acceptance for LNG-02-009 is granted against the canonical Stitch
+screen inventory and preserved raster/comparison evidence. The accepted
+Frontend-Web `main` commit is
+`c5fba7b18fe1865c460e8b4d8aac72249558f0bd`.
+
+LNG-02-008 implementation and visual UX are complete. Its only remaining
+external dependency is live Google provider/callback verification under
+`BLOCKER-02-001`; the earlier publication/remote/CI gate is resolved and is
+not duplicated as a second open blocker. `PHASE_02` remains
+`BLOCKED_EXTERNAL`, and Phase 03 was not started.
 
 ## Repository evidence
 
 | Repository | Last local commit | Remote origin/main | Phase 02 working tree |
 | --- | --- | --- | --- |
 | Backend | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | Clean; Phase 02 pushed |
-| Frontend | b53ddda17823edcfeff3cd912640a94a413ca0ab | b53ddda17823edcfeff3cd912640a94a413ca0ab | Clean; mobile Auth Footer surface follow-up pushed; CI run 34346910662 passed |
-| Workspace | 3353e852a8d55eec04189156f78230a59f556344 | 3353e852a8d55eec04189156f78230a59f556344 | Clean before this Footer evidence follow-up |
+| Frontend | c5fba7b18fe1865c460e8b4d8aac72249558f0bd | c5fba7b18fe1865c460e8b4d8aac72249558f0bd | Owner-accepted Auth UI visual-remediation commit; supplied SHA verified |
+| Workspace | 3353e852a8d55eec04189156f78230a59f556344 | 3353e852a8d55eec04189156f78230a59f556344 | Prior published evidence baseline; this acceptance reconciliation is the next Workspace commit |
 
-The Phase 02 implementation, evidence, and user-provided implementation
-prompt are committed and published to the three authorized origin/main
-destinations. The owner-requested mobile Footer surface follow-up is also
-committed in Frontend; this Workspace documentation update records it.
+The Phase 02 implementation, evidence, and owner-accepted Frontend visual
+remediation commit are published to their authorized origin/main destinations.
+This Workspace-only documentation update records the owner acceptance and
+reconciles the remaining Google-provider dependency. Backend and Frontend
+files are not modified by this update.
 
 Backend CI: not independently verified in this session.
 Frontend CI: GitHub Actions run 34346910662 completed successfully for
 b53ddda17823edcfeff3cd912640a94a413ca0ab. The `quality` job passed install,
 lint, typecheck, unit tests, build, and security audit steps.
-Remote SHA verification: completed after the remediation and Footer follow-up
-pushes; Frontend local HEAD matches origin/main at b53ddda17823edcfeff3cd912640a94a413ca0ab. Workspace's final
-documentation follow-up SHA is verified after its push.
+Remote SHA verification: the owner-accepted Frontend SHA is
+c5fba7b18fe1865c460e8b4d8aac72249558f0bd. The Workspace SHA for this
+acceptance reconciliation is verified after the Workspace-only push.
 
 ## Local verification
 
@@ -134,8 +151,9 @@ side-by-side evidence for Recovery, Verification, Provider Disabled, Session
 Expired, and Collision/Linking. Canonical IDs, measurements, and
 SUPERSEDED / REFERENCE ONLY rules are recorded in the
 `AUTH_VISUAL_SOURCE_OF_TRUTH` section of `UI-STITCH.md` and the
-`evidence/phase-02/LNG-02-009-EVIDENCE.md` report. Owner visual sign-off is
-pending; the task remains `VERIFYING`.
+`evidence/phase-02/LNG-02-009-EVIDENCE.md` report. Owner visual acceptance was
+granted on 2026-09-10; the task is `DONE` against accepted Frontend SHA
+`c5fba7b18fe1865c460e8b4d8aac72249558f0bd`.
 
 ## Security review
 
@@ -157,8 +175,9 @@ network failures do not become unhandled browser promise errors.
 1. BLOCKER-02-001: supply approved CongDongNgonNgu Google credentials and run
    the real authorization-code callback/browser verification. Do not reuse
    EduAI credentials.
-2. BLOCKER-02-002 is resolved: the authorized commits are published and all
-   three origin/main SHAs match local HEAD.
+2. BLOCKER-02-002 remains resolved. Its prior publication SHA evidence is
+   preserved in the historical handoff; this update adds the current
+   Workspace-only reconciliation commit.
 
-Only after those gates are resolved may the phase transition to DONE and
+Only after BLOCKER-02-001 is resolved may the phase transition to DONE and
 Phase 03 become READY.

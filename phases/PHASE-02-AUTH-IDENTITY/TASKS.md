@@ -49,23 +49,34 @@ Require an authenticated, recent/verified ownership flow before linking another 
 
 Use UI-STITCH.md; verify login/register/verify/reset/provider-recovery states across required viewports, keyboard and screen readers. Run auth security regression, commit/push and update handoff.
 
+Implementation and visual UX reconciliation are complete. The only remaining
+external dependency is live Google provider/callback verification tracked by
+`BLOCKER-02-001`; publication, remote SHA, and CI evidence are no longer open
+gates for this task.
+
 ## LNG-02-009 — Auth UI Stitch Fidelity Remediation
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-02-008
 
 Owner-requested visual remediation of the Auth UI against the canonical
 Stitch rasters. Covers only Frontend-Web and Workspace evidence: Login,
 Register, recovery, verification, provider/session error, and collision /
 linking recovery surfaces. The implementation and raster evidence are
-complete locally; owner visual acceptance remains pending. The Google
-credential blocker is unchanged, so this task does not change the broader
-Phase 02 state.
+complete locally. Owner visual acceptance was granted on 2026-09-10 for the
+accepted Frontend-Web `main` commit
+`c5fba7b18fe1865c460e8b4d8aac72249558f0bd`. The Google credential blocker is
+unchanged, so this task does not change the broader Phase 02 state.
+
+The owner-rejection history, remediation workflow, and pre-acceptance
+`VERIFYING` record remain preserved in the existing evidence and prior
+Workspace commits.
 
 ## Execution reconciliation
 
 Local implementation, tests, browser checks, visual comparison evidence, and
 security review are complete for the tasks marked VERIFYING. LNG-02-009 is
-VERIFYING because owner visual acceptance is not delegated in the remediation
-request. LNG-02-005 and the broader Phase 02 gate remain BLOCKED_EXTERNAL for
-the real CongDongNgonNgu Google credential and callback verification. No task
-is falsely marked DONE; Phase 03 remains untouched.
+DONE after the owner granted visual acceptance for the canonical Stitch
+comparisons. LNG-02-008 remains BLOCKED_EXTERNAL only for the live Google
+provider/callback verification tracked by `BLOCKER-02-001`; LNG-02-005 and the
+broader Phase 02 gate remain BLOCKED_EXTERNAL for the same unresolved external
+verification. Phase 03 remains untouched.
