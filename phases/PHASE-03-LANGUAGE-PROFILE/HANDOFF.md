@@ -55,3 +55,49 @@ origin/main; local and remote main both resolve to
 ddc348465cc0026d9703a26138bcbef27d6a489f. Backend CI run
 3 (https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34433350293)
 completed successfully for that SHA.
+
+Phase 03B onboarding checkpoint:
+
+- LNG-03-004: VERIFYING. The owner has not delegated visual acceptance, so
+  automation must not mark this task DONE.
+- Frontend local commit:
+  350c25dc9549cd80801a6eb5ce143e4e341797e6
+  (feat(onboarding): add profile setup flow). Remote publication and CI
+  verification remain pending.
+- Canonical Stitch project:
+  3718538619973058970
+- Canonical Desktop screen:
+  5e5e5c47b7984678ae1ee6bc68c2d554
+  title: Thiết lập ngôn ngữ - CongDongNgonNgu.vn (1440px)
+- Canonical Mobile screen:
+  50a329a48dc8402a822009afe318b7a1
+  title: Thiết lập ngôn ngữ - CongDongNgonNgu.vn (Mobile 390px)
+
+Visual evidence:
+
+- Stitch Desktop: evidence/onboarding-stitch-desktop-1440-canonical.png
+- Runtime Desktop (1440 viewport):
+  evidence/onboarding-runtime-desktop-1440.jpg
+- Desktop side-by-side:
+  evidence/onboarding-side-by-side-desktop-1440.png
+- Stitch Mobile: evidence/onboarding-stitch-mobile-390-canonical.png
+- Runtime Mobile (390 viewport):
+  evidence/onboarding-runtime-mobile-390.jpg
+- Mobile side-by-side:
+  evidence/onboarding-side-by-side-mobile-390.png
+
+Frontend verification:
+
+- Vitest: 10 files, 51 tests passed.
+- Typecheck and lint passed.
+- Production build passed.
+- npm audit --omit=dev: 0 vulnerabilities.
+- Chrome runtime flow covered authenticated catalog/profile loading, native
+  and known language multi-select, CJK search, learning target selection,
+  level validation, goals/skills, optional skip, completion navigation and
+  browser Back restoration.
+- Responsive runtime widths 320, 375, 390, 412, 768, 1024 and 1440 had no
+  horizontal overflow.
+- Lighthouse snapshot: Desktop 100/100/100/100 (41/41); Mobile
+  100/100/100/100 (38/38). Console contained no messages in the final
+  desktop run.

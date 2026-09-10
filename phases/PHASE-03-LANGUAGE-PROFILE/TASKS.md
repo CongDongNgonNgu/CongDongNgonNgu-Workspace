@@ -19,6 +19,7 @@ Represent native/known/learning relationships, proficiency, primary learning tar
 Capture learning goals and preferred skills (speaking/listening/reading/writing/grammar/vocabulary), optional interests for matching, timezone and opt-in availability windows. Use normalized/configurable values where matching/filtering requires structure. Privacy defaults must not expose schedule details more broadly than needed.
 
 ## LNG-03-004 — Onboarding UX
+**Status:** VERIFYING (implementation and evidence complete; owner acceptance pending)
 **Depends on:** LNG-03-001..003
 
 Use Stitch before implementation. Ask only information needed for immediate personalization: what the user speaks, what they want to learn, current level, goals/skills and optional interests/timezone/availability. Support skip/defer for nonessential questions. Persist progress safely so refresh/back does not corrupt profile. Avoid a long bureaucratic wizard.
