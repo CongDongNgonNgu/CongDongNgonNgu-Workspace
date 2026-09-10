@@ -53,4 +53,13 @@ silently convert saved local windows. Declared proficiency and future
 assessed proficiency are separate fields, and profile edits preserve a future
 assessed value rather than fabricating or clearing it.
 
+## DEC-010 — Repository-enforced Codex and frontend architecture conventions
+**Status:** Accepted on 2026-09-10.
+
+**Context:** Phase work may run in fresh Codex sessions. Session memory is not a reliable architecture control, and recent frontend refactors established clearer responsibility boundaries for Auth, Onboarding, and Header.
+
+**Decision:** Workspace is the canonical cross-repository source for Codex execution and frontend architecture rules. Every phase task inherits a mandatory preflight from root `AGENTS.md` and `docs/engineering/CODEX-WORKING-RULES.md`. Frontend work additionally inherits `docs/engineering/FRONTEND-ARCHITECTURE.md`, while the Frontend repository keeps a self-contained root `AGENTS.md` with executable local rules. New phase tasks use `templates/PHASE-TASK-TEMPLATE.md`.
+
+**Consequences:** Architecture conformance becomes an acceptance gate alongside tests and CI. Component-specific CSS stays with its owning component; pages remain composition/orchestration boundaries; independent complex behavior moves to focused hooks/services/domain modules; files are split by responsibility rather than arbitrary line count. Target-repository rules may be stricter but cannot silently weaken the Workspace baseline. Future Codex sessions must reconstruct these rules from the repositories instead of relying on remembered instructions.
+
 Template: `DEC-NNN — Title | Date | Status | Context | Decision | Consequences | Supersedes`.
