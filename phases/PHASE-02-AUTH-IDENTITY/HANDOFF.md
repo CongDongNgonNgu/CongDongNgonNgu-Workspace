@@ -42,11 +42,11 @@ not duplicated as a second open blocker. `PHASE_02` remains
 
 ## Repository evidence
 
-| Repository | Last local commit | Remote origin/main | Phase 02 working tree |
+| Repository | Phase 02 evidence commit | Remote SHA verified for evidence | Phase 02 working tree |
 | --- | --- | --- | --- |
 | Backend | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | Clean; Phase 02 pushed |
 | Frontend | c5fba7b18fe1865c460e8b4d8aac72249558f0bd | c5fba7b18fe1865c460e8b4d8aac72249558f0bd | Owner-accepted Auth UI visual-remediation commit; supplied SHA verified |
-| Workspace | 3353e852a8d55eec04189156f78230a59f556344 | 3353e852a8d55eec04189156f78230a59f556344 | Prior published evidence baseline; this acceptance reconciliation is the next Workspace commit |
+| Workspace | 5294bca0974c1920d983f2d80c0be8c6d9586147 | 5294bca0974c1920d983f2d80c0be8c6d9586147 | Clean; acceptance reconciliation published |
 
 The Phase 02 implementation, evidence, and owner-accepted Frontend visual
 remediation commit are published to their authorized origin/main destinations.
@@ -59,8 +59,10 @@ Frontend CI: GitHub Actions run 34346910662 completed successfully for
 b53ddda17823edcfeff3cd912640a94a413ca0ab. The `quality` job passed install,
 lint, typecheck, unit tests, build, and security audit steps.
 Remote SHA verification: the owner-accepted Frontend SHA is
-c5fba7b18fe1865c460e8b4d8aac72249558f0bd. The Workspace SHA for this
-acceptance reconciliation is verified after the Workspace-only push.
+c5fba7b18fe1865c460e8b4d8aac72249558f0bd. Workspace acceptance
+reconciliation commit `5294bca0974c1920d983f2d80c0be8c6d9586147` was verified
+on `origin/main`; the final documentation follow-up SHA is verified after its
+push.
 
 ## Local verification
 
