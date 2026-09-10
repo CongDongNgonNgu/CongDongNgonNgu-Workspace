@@ -101,3 +101,66 @@ Frontend verification:
 - Lighthouse snapshot: Desktop 100/100/100/100 (41/41); Mobile
   100/100/100/100 (38/38). Console contained no messages in the final
   desktop run.
+
+Phase 03C Language Passport checkpoint (2026-09-10):
+
+- LNG-03-005: VERIFYING. Own and public Passport projections, owner-only
+  editing, language visibility controls, multilingual/CJK rendering and
+  responsive layouts are implemented. Owner visual acceptance is still
+  required before marking the task DONE.
+- LNG-03-006: VERIFYING. Frontend `GET /profile`, `PATCH /profile`, catalog
+  loading and `GET /profiles/:userId` integration are complete. The PATCH
+  payload is Phase 03 data only and never accepts a body `userId`; backend
+  ownership, invalid-data and public-privacy enforcement remain covered by
+  the profile e2e suite.
+- LNG-03-007: VERIFYING. Reconciliation evidence and privacy checks are
+  complete. No analytics events were added because this repository has no
+  approved analytics foundation; this is explicitly deferred and does not
+  block the UI.
+
+Passport Stitch references:
+
+- Own Desktop: `5cc9fb0178c74faab11579982bcbc0e6`
+- Own Mobile: `1858b4c2fecf43ec88c4e7a0cab5cad3`
+- Public Desktop: `8b0e963342a74a3ba2a7190480a58c60`
+- Public Mobile: `e081f1164d7641f08b237c3a21b8dfce`
+
+Passport visual evidence is preserved in `evidence/` as four canonical Stitch
+rasters, four Chrome runtime rasters and four Stitch/runtime side-by-side
+comparisons. Runtime screenshots were captured at 1440 and 390 using a
+deterministic local browser API harness; backend privacy and authorization
+behavior was verified separately through the profile e2e suite.
+
+Frontend Passport implementation:
+
+- Routes: `/profile` (own) and `/profiles/:userId` (public).
+- Own view exposes the real native/known/learning language relationships,
+  declared/assessed proficiency, primary target, goals, skills, interests,
+  timezone and availability summary.
+- Public view renders only the public DTO projection and has no edit controls,
+  private language markers, account email, timezone or schedule details.
+- Editor is limited to Phase 03 language, goal, skill, interest, timezone,
+  availability and privacy fields; it validates roles, native proficiency,
+  primary-target uniqueness and availability ordering.
+- A real-browser API-client issue discovered during verification was fixed:
+  the default native `fetch` is now bound to `globalThis`, with a regression
+  test for the Chrome-only Illegal Invocation failure.
+
+Verification:
+
+- Frontend: 11 Vitest files, 55 tests passed; typecheck, lint, production
+  build and `npm audit --omit=dev --audit-level=high` passed with 0 findings.
+- Backend: profile unit tests 10/10, profile e2e tests 3/3, typecheck, build
+  and high-severity audit passed with 0 findings.
+- Browser: public own/public projections inspected at 1440 and 390; no
+  horizontal overflow at 320, 375, 390, 412, 768, 1024 or 1440; public DOM
+  contained no private-field markers; owner PATCH capture contained no
+  `userId`; final console had no errors or warnings.
+- Lighthouse snapshot: desktop and mobile both scored 100 accessibility,
+  100 best practices, 100 SEO and 100 agentic browsing, with 38/38 audits
+  passing after correcting fallback-state heading order.
+
+Phase remains `IN_PROGRESS` / VERIFYING until owner visual acceptance and the
+authorized frontend/workspace publication and CI evidence are recorded. Phase
+02 remains `BLOCKED_EXTERNAL` for missing CongDong-owned Google OAuth
+credentials/live verification; this work did not attempt to resolve it.

@@ -25,17 +25,19 @@ Capture learning goals and preferred skills (speaking/listening/reading/writing/
 Use Stitch before implementation. Ask only information needed for immediate personalization: what the user speaks, what they want to learn, current level, goals/skills and optional interests/timezone/availability. Support skip/defer for nonessential questions. Persist progress safely so refresh/back does not corrupt profile. Avoid a long bureaucratic wizard.
 
 ## LNG-03-005 — Language Passport Profile
+**Status:** VERIFYING (implementation and evidence complete; owner acceptance pending)
 **Depends on:** LNG-03-002..004
 
 Use Stitch. Show native/learning languages and levels, goals, later-ready slots for Learning XP/Reputation/Achievements without fake values. Provide own-profile editing and privacy controls; public view exposes only permitted fields. Design supports multilingual users and long language names.
 
 ## LNG-03-006 — Profile API & Authorization
-**Status:** VERIFYING (backend portion complete; Frontend integration remains)
+**Status:** VERIFYING (backend and Frontend integration complete; owner acceptance and remote evidence remain)
 **Depends on:** LNG-03-002..005
 
 Create read/update endpoints with ownership checks, input validation, safe public/private projections and stable error responses. Prevent editing another user's language data by ID manipulation.
 
 ## LNG-03-007 — Reconciliation & Analytics Events
+**Status:** VERIFYING (reconciliation and privacy evidence complete; analytics deferred without an approved foundation)
 **Depends on:** LNG-03-001..006
 
 Test onboarding completion, edit flows, catalog extension and privacy. Add minimal privacy-safe product analytics events if an approved analytics foundation exists; do not block the phase on analytics provider setup. Update handoff with seeded catalog and journey evidence.
