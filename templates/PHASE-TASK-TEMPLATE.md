@@ -16,7 +16,7 @@ Before implementation:
 2. Read `/state/PROJECT-STATE.md` and `/state/DEPENDENCY-GRAPH.md`.
 3. Read `/docs/engineering/CODEX-WORKING-RULES.md`.
 4. Read this phase's `README.md`, `TASKS.md`, `ACCEPTANCE.md`, `TEST-PLAN.md`, and `UI-STITCH.md` when applicable.
-5. Read the target repository's `AGENTS.md`.
+5. If the target repository contains `AGENTS.md`, read it. If it is absent, continue under Workspace policy after confirming the file is absent.
 6. For frontend work, read `/docs/engineering/FRONTEND-ARCHITECTURE.md`.
 7. Inspect the real source, tests, config, neighbouring code, and git state before editing.
 

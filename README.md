@@ -17,7 +17,7 @@ Mục tiêu sản phẩm: xây dựng một nền tảng cộng đồng học v�
 1. Đọc `AGENTS.md` trước khi làm bất kỳ task nào.
 2. Đọc `docs/engineering/CODEX-WORKING-RULES.md`; mọi phase/task đều kế thừa preflight này dù task không lặp lại nội dung.
 3. Xác định phase hiện tại từ `state/PROJECT-STATE.md` và dependency từ `state/DEPENDENCY-GRAPH.md`.
-4. Đọc `AGENTS.md` của repository đích trước khi sửa code repository đó.
+4. Nếu repository đích có `AGENTS.md`, đọc file đó trước khi sửa code; nếu không có, xác nhận file vắng mặt rồi tiếp tục theo Workspace baseline.
 5. Với Frontend, bắt buộc đọc `docs/engineering/FRONTEND-ARCHITECTURE.md`; architecture conformance là acceptance gate chứ không chỉ là cleanup tùy chọn.
 6. Với UI mới hoặc redesign đáng kể, bắt buộc dùng Stitch qua MCP trước khi code.
 7. Không clone mù EduAI; luôn phân loại `KEEP / ADAPT / REMOVE / BUILD_NEW / DEFER`.
@@ -42,7 +42,7 @@ Read AGENTS.md and the CongDongNgonNgu-Workspace repository.
 Read state/PROJECT-STATE.md, state/DEPENDENCY-GRAPH.md, and docs/engineering/CODEX-WORKING-RULES.md.
 Resume the current project state and determine the next eligible task without redoing completed work.
 Read the current Phase README/TASKS/ACCEPTANCE/TEST-PLAN/UI-STITCH files as applicable.
-Before editing a target repository, read that repository's AGENTS.md and inspect the real source/tests/config/git state.
+Before editing a target repository, read that repository's AGENTS.md if present; if absent, confirm that and continue under the Workspace baseline. Inspect the real source/tests/config/git state.
 For frontend work, read docs/engineering/FRONTEND-ARCHITECTURE.md and treat architecture conformance as part of acceptance.
 Follow the Stitch MCP UI policy for any substantial new UI or redesign.
 Implement the smallest maintainable change, verify all applicable gates, review the diff, commit, push, verify remote SHA and CI, update Workspace evidence, then continue within the current Phase until its completion gate is satisfied or a genuine blocker occurs.

@@ -10,7 +10,7 @@ Before editing any repository:
 2. Read `state/PROJECT-STATE.md` and `state/DEPENDENCY-GRAPH.md`; inspect `state/BLOCKERS.md` when the task can be affected by an unresolved dependency.
 3. Read `docs/engineering/CODEX-WORKING-RULES.md`.
 4. Read the current phase `README.md`, `TASKS.md`, `ACCEPTANCE.md`, `TEST-PLAN.md`, and `UI-STITCH.md` when those files exist and are relevant.
-5. Read the target repository's `AGENTS.md` before changing target-repository code.
+5. If the target repository contains an `AGENTS.md`, read it before changing target-repository code. If it does not, continue under the Workspace baseline after confirming the file is absent.
 6. For frontend work, read `docs/engineering/FRONTEND-ARCHITECTURE.md` before implementation.
 7. Inspect the real source, tests, configuration, neighbouring components/modules, and current git state before proposing a change.
 
