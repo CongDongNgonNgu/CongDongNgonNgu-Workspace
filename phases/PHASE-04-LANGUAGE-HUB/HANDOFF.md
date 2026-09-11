@@ -56,6 +56,7 @@ Backend local commits:
 - Slice 1 baseline: c7c23fd6700337b9c0ec02accc80b74dd8d20d0a
 - Slice 2 overview: 5c95655
 - Slice 3 filters: c8455a2
+- Backend remote HEAD before these local slices: 3f0144b8270ad314e4e9553201d4ca03bdad589b
 
 At the completed Slice 3 checkpoint:
 
@@ -70,8 +71,9 @@ At the completed Slice 3 checkpoint:
 - Google OAuth changed: NO.
 
 Remote publication was not performed in this continuation. The backend
-remote remains at the published Slice 1 baseline until the owner pushes the
-two local Phase 04A commits. The Workspace evidence update is also local.
+remote remains at 3f0144b, which contains the published Slice 1 commit plus a
+pre-existing deploy-entrypoint fix, until the owner pushes the two local
+Phase 04A commits. The Workspace evidence update is also local.
 
 Phase 04 is not accepted or DONE because frontend integration, responsive and
 accessibility verification remain.
