@@ -5,13 +5,17 @@
 ## Phase 04A status
 
 - LNG-04-001: VERIFYING. Backend catalog discovery and canonical slug
-  resolution are complete; frontend explorer/routing integration remains.
+  resolution are complete; frontend explorer/routing integration is
+  implemented and locally verified.
 - LNG-04-002: DONE for the backend contract. Every active language uses the
   same overview response.
 - LNG-04-006: VERIFYING. Backend query semantics are complete; frontend
-  filter controls and URL integration remain.
-- LNG-04-003, LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED.
-- Phase 04B has not started.
+  filter controls and URL integration are implemented and locally verified.
+- LNG-04-003: VERIFYING. The reusable Hub header, section shell, filters and
+  truthful future-section states are implemented and locally verified.
+- LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED.
+- Phase 04B local implementation and verification are complete; owner visual
+  acceptance remains outstanding.
 
 ## Backend contracts
 
@@ -70,10 +74,11 @@ At the completed Slice 3 checkpoint:
 - Deployment: NO.
 - Google OAuth changed: NO.
 
-Remote publication was not performed in this continuation. The backend
-remote remains at 3f0144b, which contains the published Slice 1 commit plus a
-pre-existing deploy-entrypoint fix, until the owner pushes the two local
-Phase 04A commits. The Workspace evidence update is also local.
+Phase 04A backend Slice 1–3 commits and the prior Workspace evidence update
+are already published at their recorded remote checkpoints. This Phase 04B
+frontend and evidence work remains local in its source repositories until its
+separate local commits are handed off; no push or deployment was performed in
+this task.
 
-Phase 04 is not accepted or DONE because frontend integration, responsive and
-accessibility verification remain.
+Phase 04 remains IN_PROGRESS and is not accepted or DONE because owner visual
+acceptance has not occurred. Phase 04C/05 was not started.
