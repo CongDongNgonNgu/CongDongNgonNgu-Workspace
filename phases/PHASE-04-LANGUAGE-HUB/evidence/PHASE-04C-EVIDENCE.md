@@ -1,8 +1,8 @@
 # Phase 04C Evidence — Truthful Preview and Gated Hub Entrypoints
 
 **Scope:** LNG-04-004, LNG-04-005 and LNG-04-007.
-**Status:** VERIFYING pending owner visual acceptance.
-**Phase:** `PHASE_04=IN_PROGRESS`.
+**Status:** DONE after owner visual acceptance.
+**Phase:** `PHASE_04=DONE`.
 
 ## Frontend implementation
 
@@ -18,7 +18,7 @@
   routes, fake production content, storage tables or Backend code were added.
 - Frontend commits: resource preview `3de9134`; future entrypoints and final
   reconciliation regressions `2b7992a`.
-- These are clean local commits; no remote publication or deployment was
+- Frontend commits are published on Frontend `main`; no deployment was
   performed.
 
 ## Focused Stitch deltas
@@ -49,8 +49,8 @@ download currently returns an HTML payload despite the confirmed screen ID and
   disabled future sections and absence of fabricated zero counts.
 - CSS keeps the new grids at one column below the accepted tablet breakpoint and
   uses `min-width: 0` / `overflow-wrap:anywhere` for long labels. Required
-  viewport behavior remains covered by the existing responsive contract and is
-  pending owner visual acceptance for the new surfaces.
+  viewport behavior remains covered by the existing responsive contract and
+  was confirmed by the owner-accepted runtime matrix.
 
 ## Runtime and release boundary
 
@@ -105,6 +105,9 @@ Console and network boundary:
 - The browser recorded 34 expected network log entries for unauthenticated
   `POST /api/v1/auth/refresh` responses with status `403`; these are the
   existing auth-bootstrap baseline and were not caused by Phase 04C.
+- This is a NON-BLOCKING observation only. There were no application console
+  errors, uncaught exceptions, failed page loads or retry loop. Authentication
+  implementation was not modified during Phase 04 reconciliation.
 
 Visual evidence:
 
@@ -116,9 +119,13 @@ Visual evidence:
   remained within the viewport with no material mismatch observed.
 - The focused mobile resource Stitch download remains unavailable as recorded
   above; no fabricated comparison image was created for it.
-- Owner visual acceptance remains `PENDING`; task states remain
-  `LNG-04-004=VERIFYING`, `LNG-04-005=VERIFYING`,
-  `LNG-04-007=VERIFYING`, and `PHASE_04=IN_PROGRESS`.
+- Owner visual acceptance is complete. The owner accepted
+  `RUNTIME_BROWSER=PASS`, `CONSOLE_ERRORS=0` application errors,
+  `DEAD_LINKS=0`, `FAKE_PRODUCTION_CONTENT=NO`, all responsive widths
+  `320/375/390/412/768/1024/1440`, and `VISUAL_1440=PASS` /
+  `VISUAL_390=PASS`.
+- Final states are `LNG-04-004=DONE`, `LNG-04-005=DONE`,
+  `LNG-04-007=DONE`, and `PHASE_04=DONE`.
 
 Runtime artifacts include `runtime-phase04c-browser-report.json`,
 `runtime-phase04c-filter-verification.json`, desktop/mobile Hub captures,
@@ -130,4 +137,4 @@ were not overwritten.
 - Phase 08 storage/content started: `NO`.
 - Fake production content: `NO`.
 - Deployment: `NO`.
-- Owner visual acceptance: `PENDING`.
+- Owner visual acceptance: `COMPLETE`.

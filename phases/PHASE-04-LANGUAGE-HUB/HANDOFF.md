@@ -1,6 +1,6 @@
 # Phase 04 Handoff
 
-**Phase status:** IN_PROGRESS
+**Phase status:** DONE
 
 ## Phase 04A status
 
@@ -12,9 +12,10 @@
   with URL integration are complete and verified.
 - LNG-04-003: DONE. The reusable Hub header, section shell, filters and
   truthful future-section states are complete and verified.
-- LNG-04-004, LNG-04-005 and LNG-04-007 are VERIFYING pending owner visual acceptance.
-- Phase 04B owner visual acceptance was recorded for the four canonical
-  Stitch screens; Phase 04 remains IN_PROGRESS.
+- LNG-04-004, LNG-04-005 and LNG-04-007 are DONE after owner visual
+  acceptance of the completed runtime and visual evidence.
+- Phase 04B and Phase 04C owner visual acceptance is recorded; Phase 04 is
+  DONE.
 
 ## Backend contracts
 
@@ -75,28 +76,33 @@ At the completed Slice 3 checkpoint:
 
 Phase 04A backend Slice 1–3 commits and the prior Workspace evidence update
 are already published at their recorded remote checkpoints. The owner-accepted
-Phase 04B frontend baseline is `f6a25e3`; the current Workspace evidence/state
-baseline is `28d98e9`. Earlier wording that named Workspace `af35970` as the
-accepted reconciliation checkpoint is stale and is superseded by `28d98e9`.
-Backend remains unchanged; no deployment or Phase 05/08 work is included.
+Phase 04B frontend baseline was `f6a25e3`; Phase 04C frontend commits
+`3de9134` and `2b7992a` are published on Frontend `main`. The prior Workspace
+evidence commit was `ee8759f5f6e43a938820960f8017195f4137eff9`; the
+documentation-only Phase 04 completion reconciliation is published on
+Workspace `main`. Backend remains unchanged; no deployment or Phase 05/08
+work is included.
 
 ## Phase 04C status
 
-- LNG-04-004: VERIFYING. The reusable resource preview is capability-driven,
+- LNG-04-004: DONE. The reusable resource preview is capability-driven,
   renders an honest empty state by default, and accepts a future resource
   adapter shape without adding production fixtures.
-- LNG-04-005: VERIFYING. Community, Questions, Practice and Exchange are
+- LNG-04-005: DONE. Community, Questions, Practice and Exchange are
   visible future entrypoints; only an AVAILABLE, navigable capability with a
   safe internal href can become a link.
-- LNG-04-007: VERIFYING. The same Hub component is covered for all eight launch
+- LNG-04-007: DONE. The same Hub component is covered for all eight launch
   languages, long/non-Latin identity, URL filters, empty/error states and
   unavailable section transitions.
 - Frontend commits: resource preview `3de9134`; future entrypoints and final
   reconciliation regressions `2b7992a`.
-- These are clean local commits; no remote publication or deployment was
-  performed.
+- Frontend commits `3de9134` and `2b7992a` are published on Frontend `main`.
+- No deployment was performed.
 - Focused Stitch delta IDs and runtime-tool limitations are recorded in
   `evidence/PHASE-04C-EVIDENCE.md`.
 
-Phase 04 remains IN_PROGRESS. Owner visual acceptance for Phase 04B is recorded;
-Phase 04C remains VERIFYING. Phase 05 was not started.
+Phase 04 is DONE. Owner visual acceptance for Phase 04B and Phase 04C is
+recorded. The 34 expected unauthenticated `/auth/refresh` HTTP 403 responses
+are a non-blocking runtime observation; no application console errors,
+exceptions, failed page loads or retry loop were observed. Phase 05 is READY
+for a future implementation task and was not started.
