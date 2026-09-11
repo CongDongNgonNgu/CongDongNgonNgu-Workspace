@@ -1,6 +1,6 @@
 # Phase 04 Handoff
 
-**Phase status:** BLOCKED_BY_PHASE_03
+**Phase status:** READY
 
 Record task status, route/data contracts, frontend/backend/workspace SHAs, launch-language parameterized test evidence, Stitch references, responsive/a11y results and CI.
 

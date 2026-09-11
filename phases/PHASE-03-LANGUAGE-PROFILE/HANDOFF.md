@@ -1,6 +1,6 @@
 # Phase 03 Handoff
 
-**Phase status:** IN_PROGRESS
+**Phase status:** DONE
 
 Record task status, schema/migration references, seed command/evidence, frontend/backend/workspace SHAs, API/E2E/visual/a11y results and CI.
 
@@ -23,8 +23,8 @@ Backend Phase 03A checkpoint:
   target constraint).
 - LNG-03-003: DONE (backend foundation: structured goals, skills, interests,
   IANA timezone and bounded non-overlapping local availability).
-- LNG-03-006: VERIFYING (versioned catalog/profile APIs and authorization
-  implemented; final Frontend integration and Phase 03 acceptance remain).
+- LNG-03-006: DONE (versioned catalog/profile APIs, authorization and final
+  Frontend integration are complete; final acceptance is recorded below).
 
 Backend schema and seed references:
 database/migrations/0002_language_profile.sql
@@ -56,14 +56,15 @@ ddc348465cc0026d9703a26138bcbef27d6a489f. Backend CI run
 3 (https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34433350293)
 completed successfully for that SHA.
 
-Phase 03B onboarding checkpoint:
+Phase 03B onboarding checkpoint (reconciled 2026-09-11):
 
-- LNG-03-004: VERIFYING. The owner has not delegated visual acceptance, so
-  automation must not mark this task DONE.
-- Frontend local commit:
+- LNG-03-004: DONE. The owner manually reviewed and accepted the Onboarding UX.
+- Frontend onboarding commit:
   350c25dc9549cd80801a6eb5ce143e4e341797e6
-  (feat(onboarding): add profile setup flow). Remote publication and CI
-  verification remain pending.
+  (`test(onboarding): cover long labels`) was already pushed to `origin/main`.
+  Frontend CI run 14
+  (https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/34446948744)
+  completed successfully for that SHA.
 - Canonical Stitch project:
   3718538619973058970
 - Canonical Desktop screen:
@@ -102,18 +103,18 @@ Frontend verification:
   100/100/100/100 (38/38). Console contained no messages in the final
   desktop run.
 
-Phase 03C Language Passport checkpoint (2026-09-10):
+Phase 03C Language Passport checkpoint (reconciled 2026-09-11):
 
-- LNG-03-005: VERIFYING. Own and public Passport projections, owner-only
+- LNG-03-005: DONE. The owner manually reviewed and accepted the own/public
+  Passport UI. Own and public Passport projections, owner-only
   editing, language visibility controls, multilingual/CJK rendering and
-  responsive layouts are implemented. Owner visual acceptance is still
-  required before marking the task DONE.
-- LNG-03-006: VERIFYING. Frontend `GET /profile`, `PATCH /profile`, catalog
+  responsive layouts are implemented.
+- LNG-03-006: DONE. Frontend `GET /profile`, `PATCH /profile`, catalog
   loading and `GET /profiles/:userId` integration are complete. The PATCH
   payload is Phase 03 data only and never accepts a body `userId`; backend
   ownership, invalid-data and public-privacy enforcement remain covered by
   the profile e2e suite.
-- LNG-03-007: VERIFYING. Reconciliation evidence and privacy checks are
+- LNG-03-007: DONE. Reconciliation evidence and privacy checks are
   complete. No analytics events were added because this repository has no
   approved analytics foundation; this is explicitly deferred and does not
   block the UI.
@@ -160,7 +161,25 @@ Verification:
   100 best practices, 100 SEO and 100 agentic browsing, with 38/38 audits
   passing after correcting fallback-state heading order.
 
-Phase remains `IN_PROGRESS` / VERIFYING until owner visual acceptance and the
-authorized frontend/workspace publication and CI evidence are recorded. Phase
-02 remains `BLOCKED_EXTERNAL` for missing CongDong-owned Google OAuth
-credentials/live verification; this work did not attempt to resolve it.
+Final Phase 03 reconciliation (2026-09-11):
+
+- Owner acceptance is recorded for LNG-03-004 Onboarding UX and LNG-03-005
+  Language Passport own/public UI.
+- Final task state: LNG-03-001=DONE, LNG-03-002=DONE, LNG-03-003=DONE,
+  LNG-03-004=DONE, LNG-03-005=DONE, LNG-03-006=DONE, LNG-03-007=DONE.
+- Frontend published SHA: `e56aa914fc0d7356ef3301d5148cc01331df159f`.
+- Backend published SHA: `e001f5902a91db50b074d61d877f6a95efa9d6e9`.
+- Workspace published Phase 03 evidence SHA: `5f94532918b9da61633b9236908c1b3866aa9c13`.
+  The final state-only reconciliation is the subsequent Workspace commit.
+- Frontend CI run 32
+  (https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/34479110525)
+  completed successfully for the published Frontend SHA.
+- Backend CI run 4
+  (https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34434362573)
+  completed successfully for the published Backend SHA.
+- All canonical Stitch screen IDs and Phase 03 visual evidence remain
+  preserved in `UI-STITCH.md` and `evidence/`.
+- `PHASE_03=DONE` and `PHASE_04=READY`. Phase 04 was not started.
+- `PHASE_02=BLOCKED_EXTERNAL` remains unchanged because CongDong-owned Google
+  OAuth credentials and live verification are still unresolved. No Google
+  OAuth work was performed in this reconciliation.
