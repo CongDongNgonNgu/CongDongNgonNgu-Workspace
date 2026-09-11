@@ -1,7 +1,77 @@
 # Phase 04 Handoff
 
-**Phase status:** READY
+**Phase status:** IN_PROGRESS
 
-Record task status, route/data contracts, frontend/backend/workspace SHAs, launch-language parameterized test evidence, Stitch references, responsive/a11y results and CI.
+## Phase 04A status
 
-On Acceptance: Phase 04 DONE; Phase 05 READY.
+- LNG-04-001: VERIFYING. Backend catalog discovery and canonical slug
+  resolution are complete; frontend explorer/routing integration remains.
+- LNG-04-002: DONE for the backend contract. Every active language uses the
+  same overview response.
+- LNG-04-006: VERIFYING. Backend query semantics are complete; frontend
+  filter controls and URL integration remain.
+- LNG-04-003, LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED.
+- Phase 04B has not started.
+
+## Backend contracts
+
+Published Slice 1 baseline:
+
+- GET /api/v1/languages
+- GET /api/v1/languages/:slug
+- Active-language discovery/search is bounded, Unicode-normalized,
+  case-insensitive and deterministic.
+- Valid active slugs resolve to canonical catalog data. Unknown, inactive and
+  malformed slugs return LANGUAGE_NOT_FOUND, LANGUAGE_INACTIVE and
+  LANGUAGE_INVALID_SLUG respectively.
+
+Slice 2 overview:
+
+- GET /api/v1/languages/:slug/overview
+- The response contains active language identity, SEO metadata, typed metric
+  states, section capability/status metadata and filter metadata.
+- learnerCount, contributorCount and resourceCount are
+  NOT_AVAILABLE_YET with null values until real data exists. No invented
+  counts, resource records or Phase 05/08 tables were added.
+- Overview is AVAILABLE and navigable. Vocabulary, Grammar, Sentences,
+  Pronunciation, Resources, Community, Questions, Practice and Exchange are
+  NOT_IMPLEMENTED, non-navigable and have null href values.
+
+Slice 3 filter semantics:
+
+- Optional level query values accept repeated or comma-separated A1, A2, B1,
+  B2, C1 and C2 values. Values are normalized, deduplicated and returned in
+  stable A1-to-C2 order.
+- Blank level selection is not required. Blank topics are treated as absent.
+- Topics are Unicode-normalized, trimmed, lowercased and converted to stable
+  hyphenated values. Unknown but syntactically valid topics are echoed with
+  NOT_AVAILABLE_YET because no resource data exists.
+- Invalid levels and malformed topics return HTTP 400 with
+  LANGUAGE_INVALID_LEVEL and LANGUAGE_INVALID_TOPIC.
+
+## Verification evidence
+
+Backend local commits:
+
+- Slice 1 baseline: c7c23fd6700337b9c0ec02accc80b74dd8d20d0a
+- Slice 2 overview: 5c95655
+- Slice 3 filters: c8455a2
+
+At the completed Slice 3 checkpoint:
+
+- Unit: 9 suites, 51 tests passed.
+- E2E: 4 suites, 17 tests passed.
+- Typecheck passed.
+- Lint passed.
+- Build passed.
+- npm audit --audit-level=high: 0 vulnerabilities.
+- Frontend changed: NO.
+- Deployment: NO.
+- Google OAuth changed: NO.
+
+Remote publication was not performed in this continuation. The backend
+remote remains at the published Slice 1 baseline until the owner pushes the
+two local Phase 04A commits. The Workspace evidence update is also local.
+
+Phase 04 is not accepted or DONE because frontend integration, responsive and
+accessibility verification remain.

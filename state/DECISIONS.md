@@ -63,3 +63,23 @@ assessed value rather than fabricating or clearing it.
 **Consequences:** Architecture conformance becomes an acceptance gate alongside tests and CI. Component-specific CSS stays with its owning component; pages remain composition/orchestration boundaries; independent complex behavior moves to focused hooks/services/domain modules; files are split by responsibility rather than arbitrary line count. Target-repository rules may be stricter but cannot silently weaken the Workspace baseline. Future Codex sessions must reconstruct these rules from the repositories instead of relying on remembered instructions.
 
 Template: `DEC-NNN — Title | Date | Status | Context | Decision | Consequences | Supersedes`.
+
+## DEC-011 - Phase 04A language hub contracts
+**Status:** Accepted for local Phase 04A backend implementation on 2026-09-11.
+
+**Context:** Phase 04 needs one reusable language hub contract without
+pretending that later resource, community or learner data already exists.
+Filters must be shareable and deterministic before frontend URL integration.
+
+**Decision:** Reuse the Phase 03 active language catalog and add one
+parameterized overview route for every active language. Represent metrics with
+explicit discriminated states so unavailable data is distinct from a real
+zero. Mark future sections NOT_IMPLEMENTED and non-navigable until their
+backing feature exists. Normalize optional CEFR levels to deduplicated
+A1-to-C2 order and normalize opaque topics to stable hyphenated query values;
+valid topics without backing data remain NOT_AVAILABLE_YET.
+
+**Consequences:** Phase 04A adds no Phase 05/08 tables or fake educational
+content. Backend contracts can be consumed by future frontend URL/filter
+work, while LNG-04-001 and LNG-04-006 remain VERIFYING until that integration
+is complete.
