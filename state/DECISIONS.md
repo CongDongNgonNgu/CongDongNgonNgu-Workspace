@@ -83,3 +83,17 @@ valid topics without backing data remain NOT_AVAILABLE_YET.
 content. Backend contracts can be consumed by future frontend URL/filter
 work, while LNG-04-001 and LNG-04-006 remain VERIFYING until that integration
 is complete.
+
+## DEC-012 - Phase 05A community backend foundation
+Status: Accepted for local Phase 05A implementation on 2026-09-11.
+
+Phase 05A uses one normalized moderation-ready post schema for the eight
+launch post types, active language metadata, optional CEFR/topic data, plain
+text content, bounded depth-0/1 comments, explicit idempotent reactions,
+viewer-private saves, public-only canonical share links and generic reports.
+The first feed primitive is deterministic (created_at DESC, id DESC) cursor
+pagination with optional active-language filtering; it is not opaque
+personalized ranking. Rate controls are process-local until shared
+infrastructure is approved for horizontally scaled production. Full context
+and the local verification boundary are recorded in
+docs/DEC-012-PHASE-05-COMMUNITY-BACKEND.md.
