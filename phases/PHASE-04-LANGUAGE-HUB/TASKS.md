@@ -1,7 +1,7 @@
 # Phase 04 Tasks
 
 ## LNG-04-001 — Language Explorer & Hub Routing
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** Phase 03
 
 Implement discovery/list/search for active languages and stable `/languages/:slug` routing. Resolve unknown/inactive slugs safely. Do not encode eight language routes manually. Provide canonical language metadata to the frontend.
@@ -13,7 +13,7 @@ Implement discovery/list/search for active languages and stable `/languages/:slu
 Define an overview contract for language identity, learner/contributor counts when real data exists, featured resources/community summaries and available sections. Never display invented “live” counts. Empty statistics should have honest states.
 
 ## LNG-04-003 — Hub Navigation & Section Shell
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-04-001, LNG-04-002
 
 Use Stitch before implementation. Create language header/identity, level filters, section navigation and reusable body shell. Desktop and mobile may use different navigation patterns; preserve current language context when moving between sections.
@@ -31,7 +31,7 @@ Create generic preview/list components for vocabulary, grammar, sentence, pronun
 Define gated entry surfaces for later phases. Only enable links when implemented; otherwise expose an intentional disabled/coming-soon state if product decides it adds value. Avoid dead routes.
 
 ## LNG-04-006 — Level & Topic Filtering Contract
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-04-002..004
 
 Support CEFR/filter metadata without making CEFR mandatory for every item. Define URL/query behavior so filters are shareable where useful and accessible on mobile.

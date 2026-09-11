@@ -1,7 +1,10 @@
 # Phase 04B Evidence — Language Explorer and Reusable Language Hub
 
 **Scope:** LNG-04-001, LNG-04-003 and LNG-04-006 frontend integration only.
-**Status:** Local implementation and verification complete; owner visual acceptance is not claimed.
+**Status:** Owner visual acceptance recorded on 2026-09-11; the four canonical Stitch screens are accepted.
+
+**Accepted local commits:** Frontend `f6a25e3`; Workspace `af35970`.
+**Accepted Stitch screens:** Explorer desktop `16eed279b09344c88df139ccd06a030c`, Explorer mobile `09d3292facec40b2b5335a1c7b73b95d`, Hub desktop `f802e197c3324641bf883db02b78f7a3`, Hub mobile `755f76f3dac040f191c3d6c9e98ac304`.
 
 ## Design references
 
@@ -22,6 +25,20 @@ Persisted Stitch PNGs:
 - `phases/PHASE-04-LANGUAGE-HUB/evidence/stitch-explorer-mobile-390.png`
 - `phases/PHASE-04-LANGUAGE-HUB/evidence/stitch-hub-desktop-1440.png`
 - `phases/PHASE-04-LANGUAGE-HUB/evidence/stitch-hub-mobile-390.png`
+
+Persisted runtime rasters:
+
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/runtime-explorer-desktop-1440.png`
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/runtime-explorer-mobile-390.png`
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/runtime-hub-desktop-1440.png`
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/runtime-hub-mobile-390.png`
+
+Persisted side-by-side comparisons:
+
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/comparison-explorer-desktop-1440-side-by-side.png`
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/comparison-explorer-mobile-390-side-by-side.png`
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/comparison-hub-desktop-1440-side-by-side.png`
+- `phases/PHASE-04-LANGUAGE-HUB/evidence/comparison-hub-mobile-390-side-by-side.png`
 
 ## Implemented frontend behavior
 
@@ -62,7 +79,7 @@ Exact runtime viewport checks passed without page-level horizontal overflow:
 
 The Hub section navigation remains horizontally contained and intentionally scrollable on narrow screens; it does not widen the document viewport. Exact 1440 desktop and 390 mobile runtime renders were inspected against the canonical Stitch screens. The implementation preserves the existing project light footer and global shell, uses compact backend-driven language rows/cards instead of giant course cards, keeps future Hub sections visibly disabled, and stacks the Hub side rail on mobile.
 
-Runtime screenshots were inspected inline through Chrome DevTools. Chrome MCP denied saving runtime PNGs outside its configured workspace roots, so only the four canonical Stitch PNGs above are persisted; no runtime screenshot path is claimed here.
+Runtime screenshots were inspected inline through Chrome DevTools and the exact 1440/390 captures plus labeled Stitch-vs-runtime comparisons are persisted above.
 
 ## Automated verification
 
@@ -76,13 +93,13 @@ Runtime screenshots were inspected inline through Chrome DevTools. Chrome MCP de
 
 ## Phase boundary
 
-- LNG-04-001: VERIFYING
+- LNG-04-001: DONE
 - LNG-04-002: DONE
-- LNG-04-003: VERIFYING
+- LNG-04-003: DONE
 - LNG-04-004: PLANNED
 - LNG-04-005: PLANNED
-- LNG-04-006: VERIFYING
+- LNG-04-006: DONE
 - LNG-04-007: PLANNED
 - `PHASE_04=IN_PROGRESS`
 - Phase 04C/05 was not started.
-- Deployment, push and owner visual acceptance were not performed.
+- Owner visual acceptance was recorded; deployment was not performed. The accepted commits are authorized for normal fast-forward publication. Phase 04C/05 was not started.

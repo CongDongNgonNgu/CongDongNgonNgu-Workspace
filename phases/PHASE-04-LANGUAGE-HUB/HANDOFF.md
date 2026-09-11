@@ -4,18 +4,17 @@
 
 ## Phase 04A status
 
-- LNG-04-001: VERIFYING. Backend catalog discovery and canonical slug
-  resolution are complete; frontend explorer/routing integration is
-  implemented and locally verified.
+- LNG-04-001: DONE. Backend catalog discovery, canonical slug resolution
+  and frontend explorer/routing integration are complete and verified.
 - LNG-04-002: DONE for the backend contract. Every active language uses the
   same overview response.
-- LNG-04-006: VERIFYING. Backend query semantics are complete; frontend
-  filter controls and URL integration are implemented and locally verified.
-- LNG-04-003: VERIFYING. The reusable Hub header, section shell, filters and
-  truthful future-section states are implemented and locally verified.
+- LNG-04-006: DONE. Backend query semantics and frontend filter controls
+  with URL integration are complete and verified.
+- LNG-04-003: DONE. The reusable Hub header, section shell, filters and
+  truthful future-section states are complete and verified.
 - LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED.
-- Phase 04B local implementation and verification are complete; owner visual
-  acceptance remains outstanding.
+- Phase 04B owner visual acceptance was recorded for the four canonical
+  Stitch screens; Phase 04 remains IN_PROGRESS.
 
 ## Backend contracts
 
@@ -75,10 +74,10 @@ At the completed Slice 3 checkpoint:
 - Google OAuth changed: NO.
 
 Phase 04A backend Slice 1–3 commits and the prior Workspace evidence update
-are already published at their recorded remote checkpoints. This Phase 04B
-frontend and evidence work remains local in its source repositories until its
-separate local commits are handed off; no push or deployment was performed in
-this task.
+are already published at their recorded remote checkpoints. Owner-accepted
+Phase 04B commits are Frontend `f6a25e3` and Workspace `af35970`; the
+Workspace reconciliation/evidence commit is local and contains no application
+code. Backend remains unchanged; no deployment or Phase 04C/05 work is included.
 
-Phase 04 remains IN_PROGRESS and is not accepted or DONE because owner visual
-acceptance has not occurred. Phase 04C/05 was not started.
+Phase 04 remains IN_PROGRESS. Owner visual acceptance for Phase 04B is recorded;
+LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED. Phase 04C/05 was not started.
