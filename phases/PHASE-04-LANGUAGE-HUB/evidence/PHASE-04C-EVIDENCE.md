@@ -54,10 +54,77 @@ download currently returns an HTML payload despite the confirmed screen ID and
 
 ## Runtime and release boundary
 
-- Chrome DevTools MCP could not attach because its shared Chrome profile was
-  already locked; the CUA browser helper also failed at the Windows sandbox
-  ACL layer. No browser screenshot, Lighthouse score or runtime a11y pass is
-  claimed for Phase 04C.
+- The previous shared-profile lock was isolated by launching a disposable
+  Chrome profile with a unique user-data directory and a direct CDP session.
+  No personal Chrome profile was reused and no unrelated browser process was
+  terminated.
+- Runtime browser verification completed against the local Frontend and
+  Backend processes. No application code was changed.
+
+## Phase 04C runtime verification
+
+Runtime result: `RUNTIME_BROWSER=PASS`.
+
+- `/languages` rendered all 8 launch-language links; all 8 canonical language
+  routes rendered and refreshed successfully. `/languages/chinese` was used as
+  the representative non-Latin route.
+- The CEFR/topic interaction was verified through the UI. The final state was
+  `?level=B2&topic=travel`, the `B2` control remained pressed, the topic value
+  was `travel`, and the filter URL reflected both values.
+- The resource surface rendered its truthful empty state with zero resource
+  links. No resource fixture or fabricated count was present.
+- Community, Questions, Practice and Exchange rendered as four disabled,
+  not-ready surfaces with zero links. Clicking a disabled entrypoint did not
+  change the URL. The Hub section navigation retained one Overview link and
+  nine disabled future-section controls.
+- Hub metrics remained `Chua kha dung` after Unicode normalization, with no
+  zero-count placeholders. No known development-fixture strings were found.
+- Twelve same-origin application routes were checked for HTTP failures:
+  `DEAD_LINKS=0`.
+- Smoke navigation and refresh passed for `/`, `/login`, `/register`,
+  `/onboarding`, `/profile`, `/languages` and `/languages/english`. The
+  protected `/onboarding` and `/profile` routes correctly resolved to the
+  unauthenticated `/login` gate.
+
+Responsive runtime matrix:
+
+| Width | Result | Horizontal overflow | Resource empty | Future disabled |
+| ---: | :--- | :--- | :--- | ---: |
+| 320 | PASS | No | Yes | 4 |
+| 375 | PASS | No | Yes | 4 |
+| 390 | PASS | No | Yes | 4 |
+| 412 | PASS | No | Yes | 4 |
+| 768 | PASS | No | Yes | 4 |
+| 1024 | PASS | No | Yes | 4 |
+| 1440 | PASS | No | Yes | 4 |
+
+Console and network boundary:
+
+- `CONSOLE_ERRORS=0` application console errors, `0` uncaught exceptions and
+  `0` failed loads.
+- The browser recorded 34 expected network log entries for unauthenticated
+  `POST /api/v1/auth/refresh` responses with status `403`; these are the
+  existing auth-bootstrap baseline and were not caused by Phase 04C.
+
+Visual evidence:
+
+- `VISUAL_1440=PASS`: no material runtime mismatch was observed in the Hub,
+  resource empty state or future-entrypoint surfaces against the accepted
+  Stitch references. The runtime captures and side-by-side comparisons are
+  persisted in this evidence directory.
+- `VISUAL_390=PASS`: the mobile Hub shell and stacked disabled future cards
+  remained within the viewport with no material mismatch observed.
+- The focused mobile resource Stitch download remains unavailable as recorded
+  above; no fabricated comparison image was created for it.
+- Owner visual acceptance remains `PENDING`; task states remain
+  `LNG-04-004=VERIFYING`, `LNG-04-005=VERIFYING`,
+  `LNG-04-007=VERIFYING`, and `PHASE_04=IN_PROGRESS`.
+
+Runtime artifacts include `runtime-phase04c-browser-report.json`,
+`runtime-phase04c-filter-verification.json`, desktop/mobile Hub captures,
+resource and future-entrypoint captures, the verified filter capture, and
+Phase 04C side-by-side comparisons. The accepted Phase 04B evidence files
+were not overwritten.
 - Backend changed: `NO`.
 - Phase 05 started: `NO`.
 - Phase 08 storage/content started: `NO`.

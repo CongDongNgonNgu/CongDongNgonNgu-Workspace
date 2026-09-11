@@ -1,0 +1,1196 @@
+{
+  "target": {
+    "id": "BBC56C347398E9440711FF15C6A2C97A",
+    "url": "http://127.0.0.1:5173/languages/english?level=B2&topic=travel"
+  },
+  "startedAt": "2026-09-11T10:37:55.465Z",
+  "smoke": [
+    {
+      "route": "/",
+      "first": {
+        "requested": "/",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/",
+        "h1": "Học ngôn ngữ cùng nhau."
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Học ngôn ngữ cùng nhau.",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuCộng đồng ngôn ngữHọc ngôn ngữ cùng nhau.Một cộng đồng mở để học cùng con người, thực hành với AI và xây dựng tri thức ngôn ngữ.Xem cách bắt đầuKhám phá cộng đồngTừ người mới bắt đầu đến người muốn chia sẻ điều mình biết.Cộng đồng học tập thực tế từ những con người thực tế.Bắt đầu từ ngôn ngữ bạn muốn sống cùng.Những cộng đồng đầu tiên để bạn học, thực hành và chia sẻ. Danh sách này sẽ mở rộng theo nhu cầu thật của cộng đồng.Một cộng đồng mở luôn bắt đầu bằng việc gọi tên những ngôn ngữ đang hiện diện.Tiếng ViệtEnglish中文日本語한국어FrançaisDeutschEspañolVòng lặp học tập cộng đồngKiến thức không dừng ở việc nhận câu trả lời. Nó trở nên hữu ích hơn khi được thực hành, kiểm chứng và trao lại.LearnBắt đầu từ một điều bạn muốn hiểu.AskĐặt câu hỏi khi từ ngữ chưa "
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Học ngôn ngữ cùng nhau.",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuCộng đồng ngôn ngữHọc ngôn ngữ cùng nhau.Một cộng đồng mở để học cùng con người, thực hành với AI và xây dựng tri thức ngôn ngữ.Xem cách bắt đầuKhám phá cộng đồngTừ người mới bắt đầu đến người muốn chia sẻ điều mình biết.Cộng đồng học tập thực tế từ những con người thực tế.Bắt đầu từ ngôn ngữ bạn muốn sống cùng.Những cộng đồng đầu tiên để bạn học, thực hành và chia sẻ. Danh sách này sẽ mở rộng theo nhu cầu thật của cộng đồng.Một cộng đồng mở luôn bắt đầu bằng việc gọi tên những ngôn ngữ đang hiện diện.Tiếng ViệtEnglish中文日本語한국어FrançaisDeutschEspañolVòng lặp học tập cộng đồngKiến thức không dừng ở việc nhận câu trả lời. Nó trở nên hữu ích hơn khi được thực hành, kiểm chứng và trao lại.LearnBắt đầu từ một điều bạn muốn hiểu.AskĐặt câu hỏi khi từ ngữ chưa "
+      }
+    },
+    {
+      "route": "/login",
+      "first": {
+        "requested": "/login",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/login",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ"
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/login",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữChào mừng trở lạiTiếp tục hành trình kết nối ngôn ngữĐăng nhập để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và đóng góp vào thư viện ngôn ngữ mở cùng các thành viên khắp nơi trên thế giới.Học tập cùng con người thựcKhông gian an toàn để đặt câu hỏi, nhận sửa lỗi tỉ mỉ từ người bản xứ và người học giàu kinh nghiệm.Tài nguyên mở, vì cộng đồngMọi đóng góp về từ vựng, ngữ cảnh và câu thoại đều được lưu trữ minh bạch để hỗ trợ người đi sau.Tôn trọng và đồng cảmMỗi ngôn ngữ là một nhịp điệu riêng, kết nối dựa trên sự tò mò và thấu hiểu văn hóa.Chưa có tài khoản? Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →Chào mừng trở lạiĐăng nhậpNhập thông tin tài khoản của bạn để truy cập không gian học tập.Địa chỉ email *Email đã đăng ký tại CongDongNgonNgu.vnMật khẩu *HiệnQu"
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/login",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữChào mừng trở lạiTiếp tục hành trình kết nối ngôn ngữĐăng nhập để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và đóng góp vào thư viện ngôn ngữ mở cùng các thành viên khắp nơi trên thế giới.Học tập cùng con người thựcKhông gian an toàn để đặt câu hỏi, nhận sửa lỗi tỉ mỉ từ người bản xứ và người học giàu kinh nghiệm.Tài nguyên mở, vì cộng đồngMọi đóng góp về từ vựng, ngữ cảnh và câu thoại đều được lưu trữ minh bạch để hỗ trợ người đi sau.Tôn trọng và đồng cảmMỗi ngôn ngữ là một nhịp điệu riêng, kết nối dựa trên sự tò mò và thấu hiểu văn hóa.Chưa có tài khoản? Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →Chào mừng trở lạiĐăng nhậpNhập thông tin tài khoản của bạn để truy cập không gian học tập.Địa chỉ email *Email đã đăng ký tại CongDongNgonNgu.vnMật khẩu *HiệnQu"
+      }
+    },
+    {
+      "route": "/register",
+      "first": {
+        "requested": "/register",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/register",
+        "h1": "Cùng nhau học hỏi, lưu giữ và lan tỏa ngôn ngữ"
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/register",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Cùng nhau học hỏi, lưu giữ và lan tỏa ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTham gia cùng chúng tôiCùng nhau học hỏi, lưu giữ và lan tỏa ngôn ngữTạo tài khoản miễn phí để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và chung tay xây dựng thư viện ngôn ngữ mở cùng cộng đồng người học khắp thế giới.Học tập nhân văn & thực chấtKhông gian cởi mở kết nối người học và người chia sẻ kinh nghiệm ngôn ngữ từ nhiều nền văn hóa.Đóng góp tri thức chungMọi từ vựng, ngữ cảnh ví dụ và ghi chú sửa lỗi đều được xây dựng minh bạch vì lợi ích cộng đồng.Tôn trọng & bình đẳngCam kết bảo vệ một môi trường giao tiếp an toàn, thấu hiểu và tôn trọng sự đa dạng ngôn ngữ.Đã có tài khoản? Đăng nhập ngay →Tham gia cùng chúng tôiĐăng ký tài khoảnGia nhập cộng đồng người học và chia sẻ ngôn ngữ mở hoàn toàn miễn phí.Lưu ý xác thực hòm thưSau khi hoàn tất, hệ thống sẽ g"
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/register",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Cùng nhau học hỏi, lưu giữ và lan tỏa ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTham gia cùng chúng tôiCùng nhau học hỏi, lưu giữ và lan tỏa ngôn ngữTạo tài khoản miễn phí để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và chung tay xây dựng thư viện ngôn ngữ mở cùng cộng đồng người học khắp thế giới.Học tập nhân văn & thực chấtKhông gian cởi mở kết nối người học và người chia sẻ kinh nghiệm ngôn ngữ từ nhiều nền văn hóa.Đóng góp tri thức chungMọi từ vựng, ngữ cảnh ví dụ và ghi chú sửa lỗi đều được xây dựng minh bạch vì lợi ích cộng đồng.Tôn trọng & bình đẳngCam kết bảo vệ một môi trường giao tiếp an toàn, thấu hiểu và tôn trọng sự đa dạng ngôn ngữ.Đã có tài khoản? Đăng nhập ngay →Tham gia cùng chúng tôiĐăng ký tài khoảnGia nhập cộng đồng người học và chia sẻ ngôn ngữ mở hoàn toàn miễn phí.Lưu ý xác thực hòm thưSau khi hoàn tất, hệ thống sẽ g"
+      }
+    },
+    {
+      "route": "/onboarding",
+      "first": {
+        "requested": "/onboarding",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/login",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ"
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/login",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữChào mừng trở lạiTiếp tục hành trình kết nối ngôn ngữĐăng nhập để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và đóng góp vào thư viện ngôn ngữ mở cùng các thành viên khắp nơi trên thế giới.Học tập cùng con người thựcKhông gian an toàn để đặt câu hỏi, nhận sửa lỗi tỉ mỉ từ người bản xứ và người học giàu kinh nghiệm.Tài nguyên mở, vì cộng đồngMọi đóng góp về từ vựng, ngữ cảnh và câu thoại đều được lưu trữ minh bạch để hỗ trợ người đi sau.Tôn trọng và đồng cảmMỗi ngôn ngữ là một nhịp điệu riêng, kết nối dựa trên sự tò mò và thấu hiểu văn hóa.Chưa có tài khoản? Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →Chào mừng trở lạiĐăng nhậpNhập thông tin tài khoản của bạn để truy cập không gian học tập.Địa chỉ email *Email đã đăng ký tại CongDongNgonNgu.vnMật khẩu *HiệnQu"
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/login",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữChào mừng trở lạiTiếp tục hành trình kết nối ngôn ngữĐăng nhập để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và đóng góp vào thư viện ngôn ngữ mở cùng các thành viên khắp nơi trên thế giới.Học tập cùng con người thựcKhông gian an toàn để đặt câu hỏi, nhận sửa lỗi tỉ mỉ từ người bản xứ và người học giàu kinh nghiệm.Tài nguyên mở, vì cộng đồngMọi đóng góp về từ vựng, ngữ cảnh và câu thoại đều được lưu trữ minh bạch để hỗ trợ người đi sau.Tôn trọng và đồng cảmMỗi ngôn ngữ là một nhịp điệu riêng, kết nối dựa trên sự tò mò và thấu hiểu văn hóa.Chưa có tài khoản? Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →Chào mừng trở lạiĐăng nhậpNhập thông tin tài khoản của bạn để truy cập không gian học tập.Địa chỉ email *Email đã đăng ký tại CongDongNgonNgu.vnMật khẩu *HiệnQu"
+      }
+    },
+    {
+      "route": "/profile",
+      "first": {
+        "requested": "/profile",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/login",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ"
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/login",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữChào mừng trở lạiTiếp tục hành trình kết nối ngôn ngữĐăng nhập để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và đóng góp vào thư viện ngôn ngữ mở cùng các thành viên khắp nơi trên thế giới.Học tập cùng con người thựcKhông gian an toàn để đặt câu hỏi, nhận sửa lỗi tỉ mỉ từ người bản xứ và người học giàu kinh nghiệm.Tài nguyên mở, vì cộng đồngMọi đóng góp về từ vựng, ngữ cảnh và câu thoại đều được lưu trữ minh bạch để hỗ trợ người đi sau.Tôn trọng và đồng cảmMỗi ngôn ngữ là một nhịp điệu riêng, kết nối dựa trên sự tò mò và thấu hiểu văn hóa.Chưa có tài khoản? Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →Chào mừng trở lạiĐăng nhậpNhập thông tin tài khoản của bạn để truy cập không gian học tập.Địa chỉ email *Email đã đăng ký tại CongDongNgonNgu.vnMật khẩu *HiệnQu"
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/login",
+        "title": "Cộng đồng ngôn ngữ | Học hỏi và chia sẻ cùng nhau",
+        "h1": "Tiếp tục hành trình kết nối ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữChào mừng trở lạiTiếp tục hành trình kết nối ngôn ngữĐăng nhập để tham gia trao đổi kiến thức, luyện tập giao tiếp thực tế và đóng góp vào thư viện ngôn ngữ mở cùng các thành viên khắp nơi trên thế giới.Học tập cùng con người thựcKhông gian an toàn để đặt câu hỏi, nhận sửa lỗi tỉ mỉ từ người bản xứ và người học giàu kinh nghiệm.Tài nguyên mở, vì cộng đồngMọi đóng góp về từ vựng, ngữ cảnh và câu thoại đều được lưu trữ minh bạch để hỗ trợ người đi sau.Tôn trọng và đồng cảmMỗi ngôn ngữ là một nhịp điệu riêng, kết nối dựa trên sự tò mò và thấu hiểu văn hóa.Chưa có tài khoản? Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →Chào mừng trở lạiĐăng nhậpNhập thông tin tài khoản của bạn để truy cập không gian học tập.Địa chỉ email *Email đã đăng ký tại CongDongNgonNgu.vnMật khẩu *HiệnQu"
+      }
+    },
+    {
+      "route": "/languages",
+      "first": {
+        "requested": "/languages",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/languages",
+        "h1": "Khám phá ngôn ngữ"
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/languages",
+        "title": "Khám phá ngôn ngữ | CongDongNgonNgu.vn",
+        "h1": "Khám phá ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuTrang chủ/Ngôn ngữKHÔNG GIAN NGÔN NGỮKhám phá ngôn ngữTìm một ngôn ngữ để bắt đầu hành trình học tập, đóng góp và kết nối cùng cộng đồng.Tìm ngôn ngữTìmDANH MỤC HIỆN CÓChọn ngôn ngữ của bạn8 ngôn ngữVITiếng ViệtVietnamese · Tiếng ViệtMã VI · viết từ trái sang phảiĐang mởXem hub →ENEnglishEnglish · Tiếng AnhMã EN · viết từ trái sang phảiĐang mởXem hub →ZH中文Chinese · Tiếng TrungMã ZH · viết từ trái sang phảiĐang mởXem hub →JA日本語Japanese · Tiếng NhậtMã JA · viết từ trái sang phảiĐang mởXem hub →KO한국어Korean · Tiếng HànMã KO · viết từ trái sang phảiĐang mởXem hub →FRFrançaisFrench · Tiếng PhápMã FR · viết từ trái sang phảiĐang mởXem hub →DEDeutschGerman · Tiếng ĐứcMã DE · viết từ trái sang phảiĐang mởXem hub →ESEspañolSpanish · Tiếng Tây Ban NhaMã ES · viết"
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/languages",
+        "title": "Khám phá ngôn ngữ | CongDongNgonNgu.vn",
+        "h1": "Khám phá ngôn ngữ",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuTrang chủ/Ngôn ngữKHÔNG GIAN NGÔN NGỮKhám phá ngôn ngữTìm một ngôn ngữ để bắt đầu hành trình học tập, đóng góp và kết nối cùng cộng đồng.Tìm ngôn ngữTìmDANH MỤC HIỆN CÓChọn ngôn ngữ của bạn8 ngôn ngữVITiếng ViệtVietnamese · Tiếng ViệtMã VI · viết từ trái sang phảiĐang mởXem hub →ENEnglishEnglish · Tiếng AnhMã EN · viết từ trái sang phảiĐang mởXem hub →ZH中文Chinese · Tiếng TrungMã ZH · viết từ trái sang phảiĐang mởXem hub →JA日本語Japanese · Tiếng NhậtMã JA · viết từ trái sang phảiĐang mởXem hub →KO한국어Korean · Tiếng HànMã KO · viết từ trái sang phảiĐang mởXem hub →FRFrançaisFrench · Tiếng PhápMã FR · viết từ trái sang phảiĐang mởXem hub →DEDeutschGerman · Tiếng ĐứcMã DE · viết từ trái sang phảiĐang mởXem hub →ESEspañolSpanish · Tiếng Tây Ban NhaMã ES · viết"
+      }
+    },
+    {
+      "route": "/languages/english",
+      "first": {
+        "requested": "/languages/english",
+        "ready": true,
+        "url": "http://127.0.0.1:5173/languages/english",
+        "h1": "English"
+      },
+      "firstSnapshot": {
+        "url": "http://127.0.0.1:5173/languages/english",
+        "title": "English Language Hub",
+        "h1": "English",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuNgôn ngữ/English← Quay lại khám pháENLANGUAGE HUBEnglishEnglish · Tiếng AnhMã EN · viết từ trái sang phảiTổng quanTừ vựngSắp cóNgữ phápSắp cóMẫu câuSắp cóPhát âmSắp cóTài nguyênSắp cóCộng đồngSắp cóHỏi đápSắp cóLuyện tậpSắp cóTrao đổiSắp cóBỘ LỌCĐiều chỉnh không gian họcTùy chọn, không bắt buộcTrình độA1A2B1B2C1C2Chủ đềÁp dụngChủ đề sẽ được chuẩn hóa theo hợp đồng dữ liệu.? OVERVIEWTổng quan EnglishĐang mởKhông gian nền tảng cho nội dung học tập và đóng góp cộng đồng của English.Người họcChưa khả dụngNgười đóng gópChưa khả dụngTài nguyênChưa khả dụngNội dung tổng quan đang được chuẩn bịCác tài nguyên học tập sẽ được mở dần theo dữ liệu và đóng góp thực tế của cộng đồng.Đây là không gian mởChỉ những phần đã có dữ liệu mới được bật. Các mục còn lại sẽ xu"
+      },
+      "refreshedReady": true,
+      "refreshedSnapshot": {
+        "url": "http://127.0.0.1:5173/languages/english",
+        "title": "English Language Hub",
+        "h1": "English",
+        "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuNgôn ngữ/English← Quay lại khám pháENLANGUAGE HUBEnglishEnglish · Tiếng AnhMã EN · viết từ trái sang phảiTổng quanTừ vựngSắp cóNgữ phápSắp cóMẫu câuSắp cóPhát âmSắp cóTài nguyênSắp cóCộng đồngSắp cóHỏi đápSắp cóLuyện tậpSắp cóTrao đổiSắp cóBỘ LỌCĐiều chỉnh không gian họcTùy chọn, không bắt buộcTrình độA1A2B1B2C1C2Chủ đềÁp dụngChủ đề sẽ được chuẩn hóa theo hợp đồng dữ liệu.? OVERVIEWTổng quan EnglishĐang mởKhông gian nền tảng cho nội dung học tập và đóng góp cộng đồng của English.Người họcChưa khả dụngNgười đóng gópChưa khả dụngTài nguyênChưa khả dụngNội dung tổng quan đang được chuẩn bịCác tài nguyên học tập sẽ được mở dần theo dữ liệu và đóng góp thực tế của cộng đồng.Đây là không gian mởChỉ những phần đã có dữ liệu mới được bật. Các mục còn lại sẽ xu"
+      }
+    }
+  ],
+  "languages": {
+    "url": "http://127.0.0.1:5173/languages",
+    "h1": "Khám phá ngôn ngữ",
+    "anchorCount": 28,
+    "languageLinks": [
+      {
+        "href": "/languages/vietnamese",
+        "text": "VITiếng ViệtVietnamese · Tiếng ViệtMã VI · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/english",
+        "text": "ENEnglishEnglish · Tiếng AnhMã EN · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/chinese",
+        "text": "ZH中文Chinese · Tiếng TrungMã ZH · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/japanese",
+        "text": "JA日本語Japanese · Tiếng NhậtMã JA · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/korean",
+        "text": "KO한국어Korean · Tiếng HànMã KO · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/french",
+        "text": "FRFrançaisFrench · Tiếng PhápMã FR · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/german",
+        "text": "DEDeutschGerman · Tiếng ĐứcMã DE · viết từ trái sang phảiĐang mởXem hub →"
+      },
+      {
+        "href": "/languages/spanish",
+        "text": "ESEspañolSpanish · Tiếng Tây Ban NhaMã ES · viết từ trái sang phảiĐang mởXem hub →"
+      }
+    ],
+    "bodyText": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuTrang chủ/Ngôn ngữKHÔNG GIAN NGÔN NGỮKhám phá ngôn ngữTìm một ngôn ngữ để bắt đầu hành trình học tập, đóng góp và kết nối cùng cộng đồng.Tìm ngôn ngữTìmDANH MỤC HIỆN CÓChọn ngôn ngữ của bạn8 ngôn ngữVITiếng ViệtVietnamese · Tiếng ViệtMã VI · viết từ trái sang phảiĐang mởXem hub →ENEnglishEnglish · Tiếng AnhMã EN · viết từ trái sang phảiĐang mởXem hub →ZH中文Chinese · Tiếng TrungMã ZH · viết từ trái sang phảiĐang mởXem hub →JA日本語Japanese · Tiếng NhậtMã JA · viết từ trái sang phảiĐang mởXem hub →KO한국어Korean · Tiếng HànMã KO · viết từ trái sang phảiĐang mởXem hub →FRFrançaisFrench · Tiếng PhápMã FR · viết từ trái sang phảiĐang mởXem hub →DEDeutschGerman · Tiếng ĐứcMã DE · viết từ trái sang phảiĐang mởXem hub →ESEspañolSpanish · Tiếng Tây Ban NhaMã ES · viết từ trái sang phảiĐang mởXem hub →CỘNG ĐỒNG MỞNgôn ngữ phát triển cùng người họcDanh mục được mở rộng từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Tham gia cộng đồng →Cộng đồng ngôn ngữCùng nhau học hỏi và chia sẻ ngôn ngữ, với sự tò mò và tôn trọng khác biệt.Về chúng tôiQuy tắc cộng đồngBảo mậtĐiều khoảnHỗ trợKhám pháTrang chủNgôn ngữCách bắt đầuCộng đồngCâu chuyện học tậpNguyên tắc chungNgôn ngữ giao diệnTiếng Việt© 2026 CongDongNgonNgu.vn",
+    "count": 8,
+    "expectedCount": 8
+  },
+  "languageRoutes": [
+    {
+      "href": "/languages/vietnamese",
+      "finalUrl": "http://127.0.0.1:5173/languages/vietnamese",
+      "h1": "Tiếng Việt",
+      "ready": true
+    },
+    {
+      "href": "/languages/english",
+      "finalUrl": "http://127.0.0.1:5173/languages/english",
+      "h1": "English",
+      "ready": true
+    },
+    {
+      "href": "/languages/chinese",
+      "finalUrl": "http://127.0.0.1:5173/languages/chinese",
+      "h1": "中文",
+      "ready": true
+    },
+    {
+      "href": "/languages/japanese",
+      "finalUrl": "http://127.0.0.1:5173/languages/japanese",
+      "h1": "日本語",
+      "ready": true
+    },
+    {
+      "href": "/languages/korean",
+      "finalUrl": "http://127.0.0.1:5173/languages/korean",
+      "h1": "한국어",
+      "ready": true
+    },
+    {
+      "href": "/languages/french",
+      "finalUrl": "http://127.0.0.1:5173/languages/french",
+      "h1": "Français",
+      "ready": true
+    },
+    {
+      "href": "/languages/german",
+      "finalUrl": "http://127.0.0.1:5173/languages/german",
+      "h1": "Deutsch",
+      "ready": true
+    },
+    {
+      "href": "/languages/spanish",
+      "finalUrl": "http://127.0.0.1:5173/languages/spanish",
+      "h1": "Español",
+      "ready": true
+    }
+  ],
+  "nonLatin": {
+    "route": "/languages/chinese",
+    "url": "http://127.0.0.1:5173/languages/chinese",
+    "h1": "中文",
+    "text": "Bỏ qua đến nội dung chínhCộng đồng ngôn ngữHọc cùng nhau, từ mọi nơiKhám pháThêmĐăng nhậpĐăng kýCộng đồng ngôn ngữTrang chủTìm kiếmMở menuNgôn ngữ/中文← Quay lại khám pháZHLANGUAGE HUB中文Chinese · Tiếng TrungMã ZH · viết từ trái sang phảiTổng quanTừ vựngSắp cóNgữ phápSắp cóMẫu câuSắp cóPhát âmSắp cóTài nguyênSắp cóCộng đồngSắp cóHỏi đápSắp cóLuyện tậpSắp cóTrao đổiSắp cóBỘ LỌCĐiều chỉnh không gian họcTùy chọn, không bắt buộcTrình độA1A2B1B2C1C2Chủ đềÁp dụngChủ đề sẽ được chuẩn hóa theo hợp đồng dữ liệu.? OVERVIEWTổng quan 中文Đang mởKhông gian nền tảng cho nội dung học tập và đóng góp cộng đồng của Chinese.Người họcChưa khả dụngNgười đóng gópChưa khả dụngTài nguyênChưa khả dụngNội dung tổng quan đang được chuẩn bịCác tài nguyên học tập sẽ được mở dần theo dữ liệu và đóng góp thực tế của cộng đồng.Đây là không gian mởChỉ những phần đã có dữ liệu mới được bật. Các mục còn lại sẽ xuất hiện khi s"
+  },
+  "filters": {
+    "beforeFilter": {
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "filterLevelAction": {
+      "foundLevel": true
+    },
+    "filterTopicAction": {
+      "foundTopic": true
+    },
+    "filterApplyAction": {
+      "foundApply": true
+    },
+    "filterApplied": true,
+    "filterState": {
+      "url": "http://127.0.0.1:5173/languages/english?level=B2&topic=travel",
+      "search": "?level=B2&topic=travel",
+      "topic": "",
+      "cefrPressed": [],
+      "filterUrl": ""
+    }
+  },
+  "hub": {
+    "default": {
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "disabledNoNavigation": {
+      "before": "http://127.0.0.1:5173/languages/english",
+      "after": "http://127.0.0.1:5173/languages/english",
+      "unchanged": true,
+      "clicked": true
+    }
+  },
+  "responsive": {
+    "320": {
+      "width": 320,
+      "documentWidth": 320,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "375": {
+      "width": 375,
+      "documentWidth": 360,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "390": {
+      "width": 390,
+      "documentWidth": 375,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "412": {
+      "width": 412,
+      "documentWidth": 397,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "768": {
+      "width": 768,
+      "documentWidth": 753,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "1024": {
+      "width": 1024,
+      "documentWidth": 1009,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    },
+    "1440": {
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "resourceText": "Tài nguyên học tập cho EnglishNội dung được thêm dần từ dữ liệu ngôn ngữ và đóng góp thực tế của cộng đồng.Trạng thái theo capabilityNội dung chưa khả dụngChưa có tài nguyên học tậpNội dung sẽ xuất hiện khi dữ liệu cộng đồng được kiểm duyệt và sẵn sàng.Hiện chưa có bản ghi phát hành cho các danh mục này.Danh mục học tậpNhững khu vực này sẽ mở theo dữ liệu thực tế, không theo nội dung mẫu.Từ vựngVocabularyChưa sẵn sàngTừ và cụm từ theo chủ đề, chỉ xuất hiện khi đã có dữ liệu được kiểm duyệt.Ngữ phápGrammarChưa sẵn sàngCấu trúc và cách dùng thực tế cho từng ngữ cảnh học tập.Mẫu câuSentencesChưa sẵn sàngCách diễn đạt đời thường với bối cảnh và nguồn rõ ràng.Phát âmPronunciationChưa sẵn sàngHướng dẫn âm và ngữ điệu khi có tài liệu âm thanh phù hợp.Tài nguyênResourcesChưa sẵn sàngTài liệu tham khảo được cộng đồng đóng góp và kiểm duyệt.",
+      "resourceEmpty": true,
+      "resourceLinks": 0,
+      "futureText": "CÁC KHÔNG GIAN TIẾP THEOKhông gian tương lai cho EnglishCác không gian này chỉ mở khi capability từ hệ thống và đường dẫn tương ứng đã sẵn sàng.Không mở trước dữ liệuCộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàngHỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàngLuyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàngTrao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng",
+      "futureDisabled": [
+        "Cộng đồngGặp gỡ người học và người đóng góp khi không gian trao đổi đã sẵn sàng.Chưa sẵn sàng",
+        "Hỏi đáp và sửa lỗiĐặt câu hỏi, chia sẻ cách dùng và cùng làm rõ những điểm còn chưa chắc chắn.Chưa sẵn sàng",
+        "Luyện tậpÔn lại điều đã học bằng những hoạt động dựa trên tài nguyên đã được kiểm duyệt.Chưa sẵn sàng",
+        "Trao đổiChia sẻ ngữ cảnh, kinh nghiệm và góc nhìn giữa các thành viên của cộng đồng.Chưa sẵn sàng"
+      ],
+      "futureDisabledCount": 4,
+      "futureNotReadyCount": 4,
+      "futureLinks": 0,
+      "navLinks": 1,
+      "navDisabled": 9,
+      "metricValues": [
+        "Chưa khả dụng",
+        "Chưa khả dụng",
+        "Chưa khả dụng"
+      ],
+      "noFakeCounts": true,
+      "fakeProductionContent": false,
+      "anchorHrefs": [
+        "#main-content",
+        "/",
+        "/",
+        "/login",
+        "/register",
+        "/",
+        "/",
+        "/languages",
+        "/languages",
+        "/languages/english",
+        "/register",
+        "/",
+        "#about",
+        "#community",
+        "#privacy",
+        "#terms",
+        "#support",
+        "/",
+        "#languages",
+        "#how-it-works",
+        "#community",
+        "#community"
+      ]
+    }
+  },
+  "deadLinks": {
+    "checked": [
+      "/languages/vietnamese",
+      "/languages/english",
+      "/languages/chinese",
+      "/languages/japanese",
+      "/languages/korean",
+      "/languages/french",
+      "/languages/german",
+      "/languages/spanish",
+      "/",
+      "/login",
+      "/register",
+      "/languages"
+    ],
+    "results": [
+      {
+        "href": "/languages/vietnamese",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/english",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/chinese",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/japanese",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/korean",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/french",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/german",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages/spanish",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/login",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/register",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "href": "/languages",
+        "status": 200,
+        "ok": true
+      }
+    ],
+    "failures": []
+  },
+  "api": {
+    "status": 200,
+    "ok": true,
+    "count": 8,
+    "codes": [
+      "vi",
+      "en",
+      "zh",
+      "ja",
+      "ko",
+      "fr",
+      "de",
+      "es"
+    ]
+  },
+  "events": {
+    "httpErrors": [
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      },
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      }
+    ],
+    "httpErrorGroups": [
+      {
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "status": 403,
+        "type": "Fetch"
+      }
+    ],
+    "loadFailures": [],
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "exceptions": [],
+    "logErrors": [
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+        "url": "http://127.0.0.1:5173/api/v1/auth/refresh",
+        "source": "network"
+      }
+    ],
+    "logWarnings": []
+  }
+}

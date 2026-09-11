@@ -1,0 +1,27 @@
+{
+  "level": {
+    "found": true
+  },
+  "afterLevel": {
+    "url": "http://127.0.0.1:5173/languages/english?level=B2",
+    "pressed": [
+      "B2"
+    ]
+  },
+  "topic": {
+    "found": true,
+    "value": "travel"
+  },
+  "apply": {
+    "found": true
+  },
+  "final": {
+    "url": "http://127.0.0.1:5173/languages/english?level=B2&topic=travel",
+    "search": "?level=B2&topic=travel",
+    "topic": "travel",
+    "pressed": [
+      "B2"
+    ],
+    "filterUrl": "?level=B2&topic=travel"
+  }
+}
