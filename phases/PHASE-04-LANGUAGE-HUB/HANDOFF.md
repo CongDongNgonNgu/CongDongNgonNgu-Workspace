@@ -12,7 +12,7 @@
   with URL integration are complete and verified.
 - LNG-04-003: DONE. The reusable Hub header, section shell, filters and
   truthful future-section states are complete and verified.
-- LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED.
+- LNG-04-004, LNG-04-005 and LNG-04-007 are VERIFYING pending owner visual acceptance.
 - Phase 04B owner visual acceptance was recorded for the four canonical
   Stitch screens; Phase 04 remains IN_PROGRESS.
 
@@ -74,10 +74,29 @@ At the completed Slice 3 checkpoint:
 - Google OAuth changed: NO.
 
 Phase 04A backend Slice 1–3 commits and the prior Workspace evidence update
-are already published at their recorded remote checkpoints. Owner-accepted
-Phase 04B commits are Frontend `f6a25e3` and Workspace `af35970`; the
-Workspace reconciliation/evidence commit is local and contains no application
-code. Backend remains unchanged; no deployment or Phase 04C/05 work is included.
+are already published at their recorded remote checkpoints. The owner-accepted
+Phase 04B frontend baseline is `f6a25e3`; the current Workspace evidence/state
+baseline is `28d98e9`. Earlier wording that named Workspace `af35970` as the
+accepted reconciliation checkpoint is stale and is superseded by `28d98e9`.
+Backend remains unchanged; no deployment or Phase 05/08 work is included.
+
+## Phase 04C status
+
+- LNG-04-004: VERIFYING. The reusable resource preview is capability-driven,
+  renders an honest empty state by default, and accepts a future resource
+  adapter shape without adding production fixtures.
+- LNG-04-005: VERIFYING. Community, Questions, Practice and Exchange are
+  visible future entrypoints; only an AVAILABLE, navigable capability with a
+  safe internal href can become a link.
+- LNG-04-007: VERIFYING. The same Hub component is covered for all eight launch
+  languages, long/non-Latin identity, URL filters, empty/error states and
+  unavailable section transitions.
+- Frontend commits: resource preview `3de9134`; future entrypoints and final
+  reconciliation regressions `2b7992a`.
+- These are clean local commits; no remote publication or deployment was
+  performed.
+- Focused Stitch delta IDs and runtime-tool limitations are recorded in
+  `evidence/PHASE-04C-EVIDENCE.md`.
 
 Phase 04 remains IN_PROGRESS. Owner visual acceptance for Phase 04B is recorded;
-LNG-04-004, LNG-04-005 and LNG-04-007 remain PLANNED. Phase 04C/05 was not started.
+Phase 04C remains VERIFYING. Phase 05 was not started.
