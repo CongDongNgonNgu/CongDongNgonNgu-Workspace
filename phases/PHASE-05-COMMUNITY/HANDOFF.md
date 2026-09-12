@@ -93,7 +93,7 @@ src/community/community.module.ts
 ## Verification
 
 ~~~text
-UNIT_TESTS=58 passed / 11 suites
+UNIT_TESTS=59 passed / 12 suites
 E2E_TESTS=24 passed / 6 suites
 TYPECHECK=PASS
 LINT=PASS
@@ -106,6 +106,48 @@ Migration execution was intentionally not attempted because no local
 PostgreSQL listener was available on localhost:5432; no configured or
 production database was touched.
 
+## Phase 05A CI remediation evidence
+
+The published Backend baseline 175e8d2c65527f633f2eadb8f63fb17b1d5e32f2
+failed CI run
+[34664137218](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34664137218)
+only in the concurrent Supertest HTTP reaction requests with 'read
+ECONNRESET'. Install, lint, typecheck and 58 unit tests had already passed;
+the build and audit were skipped by the failed E2E step.
+
+Source review and local Node 24 reproduction found the reaction application
+path safe: the Postgres insert is conflict-safe, the migration retains the
+(user_id, post_id, reaction_type) uniqueness invariant, the in-memory
+repository is idempotent, and the reaction limiter allows 120 requests per
+user per five minutes. The failure was therefore classified as a CI HTTP
+harness/socket flake on ubuntu-latest, not an application race.
+
+Remediation commit:
+85066b6c9e75a7f8a4339d2cc8415a7c627c7494
+(test(community): stabilize reaction concurrency coverage). HTTP E2E keeps
+authenticated add, duplicate 201, safe response, detail state, removal,
+unauthenticated rejection, unavailable-post rejection, save idempotency and
+viewer-private save assertions. The eight-way concurrent add race remains
+covered deterministically at the service/repository boundary, asserting eight
+safe responses, exactly one persisted reaction, helpfulCount=1,
+viewerReacted=true, and removal to count zero.
+
+Final local verification used Node 24.18.0:
+
+~~~text
+FOCUSED_INTERACTION_REPEAT=5/5
+BACKEND_CI_RUN=34668226991
+BACKEND_CI=PASS
+LIVE_MIGRATION_EXECUTED=NO
+RATE_LIMIT_IMPLEMENTATION=PROCESS_LOCAL
+HORIZONTAL_PRODUCTION_LIMITER_REQUIRED=YES
+~~~
+
+CI run
+[34668226991](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/34668226991)
+passed all quality steps: lint, type check, unit tests, E2E tests, build and
+security audit.
+
 ## Repository boundaries
 
 ~~~text
@@ -114,7 +156,7 @@ STITCH_USED=NO
 DEPLOYED=NO
 PHASE_05B_STARTED=NO
 PHASE_06_STARTED=NO
-BACKEND_SHA=175e8d2c65527f633f2eadb8f63fb17b1d5e32f2
+BACKEND_SHA=85066b6c9e75a7f8a4339d2cc8415a7c627c7494
 BACKEND_BASELINE_SHA=c8455a23731d8e8d0744818851ec50fa18d46a04
 FRONTEND_BASELINE_SHA=2b7992a9b7dd68d688a721690218a4a7b141bdc1
 WORKSPACE_BASELINE_SHA=628a765bfbc0b45fe0f2bd41e6305a73b3027467
