@@ -2,8 +2,10 @@
 
 Phase status: IN_PROGRESS
 
-Phase 05A backend foundation is implemented and locally verified. Frontend,
-Stitch, production deployment, Phase 05B, and Phase 06 were not started.
+Phase 05A backend foundation is implemented and locally verified. Phase 05B
+frontend feed and composer surfaces are implemented and locally verified;
+visual owner acceptance remains REVIEW. Production deployment and Phase 06
+were not started.
 
 ## Required status
 
@@ -12,9 +14,9 @@ PHASE_05=IN_PROGRESS
 LNG_05_001=DONE
 LNG_05_002=VERIFYING
 LNG_05_003=VERIFYING
-LNG_05_004=PLANNED
+LNG_05_004=VERIFYING
 LNG_05_005=VERIFYING
-LNG_05_006=PLANNED
+LNG_05_006=VERIFYING
 LNG_05_007=PLANNED
 ~~~
 
@@ -151,17 +153,111 @@ security audit.
 ## Repository boundaries
 
 ~~~text
-FRONTEND_CHANGED=NO
-STITCH_USED=NO
+FRONTEND_CHANGED=YES
+STITCH_USED=YES
 DEPLOYED=NO
-PHASE_05B_STARTED=NO
+PHASE_05B_STARTED=YES
 PHASE_06_STARTED=NO
+BACKEND_CHANGED=NO
+PUSHED=NO
 BACKEND_SHA=85066b6c9e75a7f8a4339d2cc8415a7c627c7494
 BACKEND_BASELINE_SHA=c8455a23731d8e8d0744818851ec50fa18d46a04
 FRONTEND_BASELINE_SHA=2b7992a9b7dd68d688a721690218a4a7b141bdc1
+FRONTEND_BRANCH=phase-05b-community
+FRONTEND_LOCAL_COMMIT=c306feb91e13366180cc6226a345955425b2c236
+WORKSPACE_LOCAL_COMMIT=SEE_FINAL_REPORT
 WORKSPACE_BASELINE_SHA=628a765bfbc0b45fe0f2bd41e6305a73b3027467
 WORKSPACE_EVIDENCE_SHA=2f3c32824a0b5c13cccf03c339bf23414ceb5fac
 ~~~
 
-Next gate: complete the remaining verification/publication checks, then a
-separate approved Phase 05B task may address Stitch-designed UI surfaces.
+Current state: clean local frontend and workspace commits created. Do not
+push or deploy. Visual task acceptance remains REVIEW, and Phase 05C/06
+remain unstarted.
+
+## Phase 05B frontend evidence
+
+### Effective status
+
+~~~text
+PHASE_05B_SCOPE=COMMUNITY_FEED_AND_COMPOSER
+PHASE_05=IN_PROGRESS
+LNG_05_001=DONE
+LNG_05_002=VERIFYING
+LNG_05_003=VERIFYING
+LNG_05_004=VERIFYING
+LNG_05_005=VERIFYING
+LNG_05_006=VERIFYING
+LNG_05_007=PLANNED
+~~~
+
+### Implemented scope
+
+- Added the direct /community route and a deterministic latest feed.
+- Added the real language-catalog filter, explicit Xem them pagination,
+  opaque cursor forwarding, unique append behavior, and truthful loading,
+  empty, error, and rate-limit states.
+- Added authenticated plain-text composer fields for post type, target
+  language, CEFR level, topic, visibility, and bounded Unicode content.
+- Added server-confirmed HELPFUL, save, share, and post-report actions.
+- Rendered post content as text with preserved newlines and no HTML injection;
+  comments remain count-only in this scope.
+
+### Contract and security evidence
+
+- Feed uses GET /api/v1/community/posts through the existing auth client;
+  public requests omit credentials and authenticated requests use the
+  existing protected client.
+- Composer uses POST /api/v1/community/posts with the exact supported
+  fields and PUBLIC default.
+- Helpful, save, share, and report paths/bodies are covered by API adapter
+  tests; unsupported reaction types and comment UX were not added.
+- The XSS regression fixture renders <script>alert(1)</script> as literal
+  text, preserves a newline, and contains no script role or HTML injection.
+- Canonical share paths are accepted only when root-relative and shareable.
+
+### Verification
+
+~~~text
+npm test -- --run = PASS (25 files, 105 tests)
+npm run typecheck = PASS
+npm run lint = PASS
+npm run build = PASS
+npm audit --audit-level=high = PASS (0 vulnerabilities)
+~~~
+
+Runtime and responsive evidence:
+
+- Direct /community navigation returned HTTP 200 and the page title was
+  Cộng đồng học ngôn ngữ | CongDongNgonNgu.vn.
+- The local backend was not running during browser verification; API
+  resources returned 500, and the UI showed generic error states without
+  fabricated feed or catalog data. No frontend runtime exception was seen;
+  console noise was limited to those expected API resource failures.
+- Chrome DevTools inline review covered desktop 1440 and mobile 390. The
+  responsive matrix measured no horizontal overflow at 320, 375, 390, 412,
+  768, 1024, and 1440 pixels.
+- Lighthouse/DevTools audit: Accessibility 100, Best Practices 100, SEO 100,
+  Agentic Browsing 100.
+- Screenshot output was inspected inline. The browser screenshot writer
+  rejected all repository target paths, so no screenshot file artifact is
+  claimed.
+
+### Stitch and visual acceptance
+
+~~~text
+STITCH_USED=YES
+STITCH_PROJECT=16442026920550574436
+STITCH_FEED_DESKTOP=dd54a8ce055d4284870e1822cef33d2f
+STITCH_FEED_MOBILE=edb521a9ac77463a896dd047770fb9e3
+STITCH_COMPOSER_DESKTOP=b7320fdfb139424e84e11d42f42a4525
+STITCH_COMPOSER_MOBILE=93e2741039e446938f56a1341980c77d
+VISUAL_FEED_DESKTOP=REVIEW
+VISUAL_FEED_MOBILE=REVIEW
+VISUAL_COMPOSER_DESKTOP=REVIEW
+VISUAL_COMPOSER_MOBILE=REVIEW
+~~~
+
+Visual tasks are intentionally not marked DONE; data-populated visual owner
+acceptance remains pending. No detail/comments route, edit/delete flow,
+comment-report flow, backend change, push, deployment, Phase 05C, or Phase
+06 work was started.
