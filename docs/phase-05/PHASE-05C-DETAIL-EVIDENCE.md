@@ -167,3 +167,98 @@ Lighthouse snapshot results: desktop and mobile each scored Accessibility 97, Be
 - `PHASE_05=IN_PROGRESS`
 - `LNG_05_001=DONE`, `LNG_05_002=DONE`, `LNG_05_003=VERIFYING`, `LNG_05_004=DONE`, `LNG_05_005=DONE`, `LNG_05_006=VERIFYING`, `LNG_05_007=PLANNED`
 - Backend source changed: NO. Frontend source changed: NO. Push: NO. Deploy: NO. Phase 05D: NOT STARTED. Phase 06: NOT STARTED.
+
+## Detail visual and accessibility remediation
+
+Date: 2026-09-14<br>
+Status: remediation complete; owner visual acceptance remains the next gate
+
+### Exact commits and boundaries
+
+- Frontend baseline before remediation: `39af852b637acadc4624846478f453460e90ccdf`
+- Frontend remediation commit: `d674578ae2c3f139b625200fe95d0f6c46bf0f14`
+- Workspace evidence baseline before this record: `d0ab817575ff4d77390beaf28e27013e9ab79397`
+- Workspace evidence commit: final local documentation commit; exact SHA is reported in the handoff below
+- Backend: `85066b6c9e75a7f8a4339d2cc8415a7c627c7494`, unchanged and read-only
+- Database and all visual review records: `NEON_TEST_ONLY`
+- Phase state remains `PHASE_05=IN_PROGRESS`; 003 and 006 remain `VERIFYING`
+
+### Visual remediation
+
+- Desktop 1440 now matches the locked Stitch composition: 880px main canvas, 340px rail, separate post and discussion surfaces, individual comment cards, explicit thread grouping, inline reply composer, and four rail sections.
+- Post actions now follow the canonical hierarchy: header Save/Share/overflow, bottom Helpful/discussion context, and owner/non-owner actions inside the contextual menu.
+- Deleted parents remain plain-text safe and author/content-free, with a neutral explanatory placeholder and visible retained replies.
+- Mobile 390 now uses a detail-local 56px back/title/save/share shell, hides the accepted global shell only on this route, keeps useful content width, and transitions the rail to the principles card.
+- No accepted Feed or Composer Stitch screen was regenerated.
+
+Final visual references:
+
+- `DETAIL_STITCH_DESKTOP=51fd56d9452c48d198f814f89c6baa36`
+- `DETAIL_STITCH_MOBILE=5c3d5fbc3ac646a183425122e9ae57f5`
+- `DETAIL_RUNTIME_DESKTOP=[DETAIL_RUNTIME_DESKTOP_FINAL.jpeg](./DETAIL_RUNTIME_DESKTOP_FINAL.jpeg)`
+- `DETAIL_RUNTIME_MOBILE=[DETAIL_RUNTIME_MOBILE_FINAL.jpeg](./DETAIL_RUNTIME_MOBILE_FINAL.jpeg)`
+- `DETAIL_SIDE_BY_SIDE_DESKTOP=[DETAIL_SIDE_BY_SIDE_DESKTOP.md](./DETAIL_SIDE_BY_SIDE_DESKTOP.md)`
+- `DETAIL_SIDE_BY_SIDE_MOBILE=[DETAIL_SIDE_BY_SIDE_MOBILE.md](./DETAIL_SIDE_BY_SIDE_MOBILE.md)`
+- `VISUAL_DETAIL_1440=PASS`
+- `VISUAL_DETAIL_390=PASS`
+- `MATERIAL_DIFFERENCES=NONE`
+
+### Accessibility remediation
+
+- Contrast: replaced failing orange eyebrow and rail-label usage with the local readable orange token and corrected muted author, timestamp, metadata, and placeholder text. Lighthouse contrast findings are cleared.
+- Shared Dialog: initial focus enters the first usable control, Tab and Shift+Tab remain contained, focus that starts outside is recovered, Escape follows the existing close policy, descriptions are connected with `aria-describedby`, and detached triggers are never focused during cleanup.
+- Focus restoration: edit and report dialogs return to their initiating menu trigger; comment deletion returns to the discussion heading; successful post deletion focuses the surviving unavailable-state heading.
+- Keyboard and semantics: native headings, article/comment landmarks, menu buttons, dialog labels, form labels, state labels, deleted-parent note semantics, visible focus, and Helpful/Save state names remain intact.
+
+### Runtime and regression evidence
+
+| Check | Result |
+| --- | --- |
+| `GET /api/v1/health` | 200 PASS |
+| `GET /health` | 404 expected; not a backend defect |
+| `GET /api/v1/languages` | 200 PASS |
+| `GET /api/v1/community/posts` | 200 PASS |
+| Full frontend tests | 26 files / 126 tests PASS |
+| Focused detail tests | 13/13 PASS |
+| Focused Dialog accessibility tests | 2/2 PASS |
+| Typecheck | PASS |
+| Lint | PASS |
+| Production build | PASS |
+| npm audit --audit-level=high | 0 vulnerabilities |
+| Lighthouse Accessibility | 100 |
+| Lighthouse Best Practices | 100 |
+| Lighthouse SEO | 100 |
+| Detail console errors | 0 |
+| Detail unexpected network errors | 0 |
+| Feed 05B regression | PASS at 1440 and 390 |
+| Composer 05B regression | PASS at 1440 and 390; dialog focus restored to trigger |
+
+The Lighthouse Agentic Browsing supporting score was 89 in the final mobile
+navigation audit because of a non-accessibility cumulative-layout-shift audit
+value of 0.181. Required accessibility, best-practices, and SEO gates are
+100; no remaining accessibility warning was reported.
+
+Responsive matrix: 320, 375, 390, 412, 768, 1024, and 1440 all had no
+horizontal overflow. Detail header, post, rail transition, comments,
+replies, deleted placeholder, composer, menus, and dialogs remained present
+and usable.
+
+### Final state boundaries
+
+- `COMMENT_THREAD=PASS`
+- `REPLY_DEPTH_0_1=PASS`
+- `DELETED_PARENT=PASS`
+- `POST_OWNER_EDIT_DELETE=PASS`
+- `COMMENT_OWNER_EDIT_DELETE=PASS`
+- `COMMENT_REPORT=PASS`
+- `HELPFUL_DETAIL=PASS`
+- `SAVE_DETAIL=PASS`
+- `SHARE_DETAIL=PASS`
+- `POST_REPORT_DETAIL=PASS`
+- `XSS_SAFE_RENDERING=PASS`
+- `FRONTEND_CHANGED=YES`
+- `BACKEND_CHANGED=NO`
+- `PUSHED=NO`
+- `DEPLOYED=NO`
+- `PHASE_05D_STARTED=NO`
+- `PHASE_06_STARTED=NO`
