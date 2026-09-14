@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phase 05C - Post Detail & Comments - Mobile 390</title>
+  <!-- Google Fonts: Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Material Symbols Outlined -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#1E4165',
+              orange: '#D96E28',
+              green: '#1E8A66',
+              cyan: '#2A9DB0',
+            },
+            surface: {
+              DEFAULT: '#F4F6F2',
+              elevated: '#FBFCF9',
+              low: '#EEF2EC',
+              card: '#FFFFFF',
+            },
+            neutral: {
+              border: '#E1E6DC',
+              'border-subtle': '#ECF0E8',
+              text: '#19242E',
+              muted: '#5A6E78',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #F4F6F2;
+      color: #19242E;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Thread hierarchy vertical rail */
+    .thread-rail {
+      position: relative;
+    }
+    .thread-rail::before {
+      content: "";
+      position: absolute;
+      top: 44px;
+      bottom: 12px;
+      left: 17px;
+      width: 2px;
+      background-color: #E1E6DC;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col justify-between max-w-[390px] mx-auto bg-[#F4F6F2] shadow-xl relative text-neutral-text border-x border-neutral-border">
+
+  <!-- TOP APP BAR / NAVIGATION (Canonical 56px Mobile Header) -->
+  <header class="sticky top-0 z-40 bg-surface-elevated/95 backdrop-blur-md border-b border-neutral-border px-3.5 h-14 flex items-center justify-between">
+    <div class="flex items-center gap-1.5">
+      <a href="#feed" class="w-10 h-10 -ml-1 flex items-center justify-center rounded-lg text-neutral-muted hover:text-brand-navy hover:bg-surface active:scale-95 transition-all" aria-label="Quay lại danh sách bài thảo luận">
+        <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+      </a>
+      <div class="flex flex-col">
+        <span class="text-[11px] font-semibold uppercase tracking-wider text-brand-navy">Cộng đồng</span>
+        <span class="text-xs text-neutral-muted truncate max-w-[200px]">Thảo luận ngữ nghĩa & kính ngữ</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-1">
+      <button class="w-10 h-10 flex items-center justify-center rounded-lg text-neutral-muted hover:text-brand-navy hover:bg-surface active:scale-95 transition-all" aria-label="Lưu bài viết">
+        <span class="material-symbols-outlined">bookmark_border</span>
+      </button>
+      <button class="w-10 h-10 flex items-center justify-center rounded-lg text-neutral-muted hover:text-brand-navy hover:bg-surface active:scale-95 transition-all" aria-label="Chia sẻ bài viết">
+        <span class="material-symbols-outlined">share</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN SCROLLABLE CONTENT -->
+  <main class="flex-1 px-3.5 py-3 space-y-4">
+
+    <!-- BREADCRUMB & CATEGORY INDICATORS -->
+    <nav class="flex items-center gap-1.5 text-[12px] text-neutral-muted flex-wrap" aria-label="Đường dẫn bài thảo luận">
+      <a href="#feed" class="hover:text-brand-navy transition-colors">Cộng đồng</a>
+      <span class="text-neutral-border">/</span>
+      <span class="text-neutral-text font-medium truncate">Phân biệt ngữ thái học thuật</span>
+    </nav>
+
+    <!-- POST ARTICLE CARD (CANONICAL POST BODY) -->
+    <article class="bg-surface-card rounded-xl p-4 border border-neutral-border shadow-sm space-y-3.5">
+      
+      <!-- Target Language, Classification & CEFR Tags -->
+      <div class="flex flex-wrap items-center gap-1.5">
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-50 text-brand-navy border border-blue-100">
+          <span class="material-symbols-outlined text-[16px] text-brand-navy">translate</span>
+          日本語 (Tiếng Nhật)
+        </span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-surface-low text-neutral-muted border border-neutral-border">
+          JLPT N2 / CEFR B2
+        </span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200">
+          Hỏi đáp ngữ nghĩa
+        </span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-lg font-bold text-neutral-text leading-snug tracking-tight">
+        Phân biệt sắc thái học thuật: 「〜と考えられる」 và 「〜と推測される」 trong viết báo cáo khoa học tiếng Nhật
+      </h1>
+
+      <!-- Author Metadata Row -->
+      <div class="flex items-center justify-between pt-1 border-t border-neutral-border-subtle">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full bg-brand-navy text-white font-bold text-xs flex items-center justify-center tracking-wider shadow-inner" aria-hidden="true">
+            KS
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-bold text-neutral-text">Kenji Sato</span>
+              <span class="inline-flex items-center px-1.5 py-0.2 rounded text-[10px] font-semibold bg-emerald-50 text-brand-green border border-emerald-200">
+                Bản xứ
+              </span>
+            </div>
+            <div class="text-[11px] text-neutral-muted flex items-center gap-1">
+              <span>Đăng 25 phút trước</span>
+              <span>•</span>
+              <span class="text-neutral-muted/80">Cập nhật 10 phút trước</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Action Overflow -->
+        <button class="w-8 h-8 rounded-md flex items-center justify-center text-neutral-muted hover:text-neutral-text hover:bg-surface active:scale-95" aria-label="Tùy chọn bài viết">
+          <span class="material-symbols-outlined text-[18px]">more_horiz</span>
+        </button>
+      </div>
+
+      <!-- Long Post Body (Preserved CJK & Vietnamese whitespace rhythm) -->
+      <div class="text-[13.5px] leading-relaxed text-neutral-text space-y-3 pt-1">
+        <p>
+          Chào mọi người, khi tham gia viết luận án tốt nghiệp hoặc gửi báo cáo khoa học (学術論文) bằng tiếng Nhật, rất nhiều bạn thường bối rối giữa hai cách diễn đạt thể hiện suy đoán và lập luận logic: <strong class="font-semibold text-brand-navy">「〜と考えられる」</strong> và <strong class="font-semibold text-brand-navy">「〜と推測される」</strong>.
+        </p>
+        <p>
+          Cả hai cấu trúc đều sử dụng thể bị động tôn kính hoặc khách quan hóa (自発・客観), nhưng biên độ chứng cứ và trách nhiệm lập luận của tác giả có sự khác biệt rõ rệt trong văn phong học thuật:
+        </p>
+
+        <!-- Comparative Contrast Cards for CJK Nuances -->
+        <div class="space-y-2.5 my-2">
+          <div class="bg-surface-low rounded-lg p-3 border-l-4 border-brand-navy border border-neutral-border/60">
+            <div class="flex items-start gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-navy text-white text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+              <div>
+                <p class="font-bold text-xs text-brand-navy">〜と考えられる <span class="font-normal text-neutral-muted text-[11px]">(Được xem là / Có cơ sở kết luận là)</span></p>
+                <p class="text-xs text-neutral-text mt-1 leading-normal">
+                  Dùng khi người viết đưa ra kết luận logic dựa trên chứng cứ thực nghiệm khách quan, số liệu thống kê rõ ràng hoặc phân tích thực tế từ mẫu khảo sát. Tác giả tự tin khẳng định lập luận có căn cứ khoa học vững chắc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-low rounded-lg p-3 border-l-4 border-brand-orange border border-neutral-border/60">
+            <div class="flex items-start gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-orange text-white text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+              <div>
+                <p class="font-bold text-xs text-brand-orange">〜と推測される <span class="font-normal text-neutral-muted text-[11px]">(Được suy đoán / phóng đoán là)</span></p>
+                <p class="text-xs text-neutral-text mt-1 leading-normal">
+                  Dùng khi đưa ra giả thiết, ước lượng hoặc phỏng đoán có tính xác suất cao từ các dấu hiệu gián tiếp, nhưng bản thân tác giả chưa thu thập đủ chứng cứ tuyệt đối để chứng minh khẳng định đó.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Theo quy chuẩn chung của Hội Ngôn ngữ học ứng dụng Tokyo, nếu bài báo cáo có đồ thị số liệu đối chiếu trực tiếp mà lại kết luận bằng <code class="bg-surface-low px-1.5 py-0.5 rounded text-xs text-brand-orange font-mono">〜と推測される</code>, giáo sư phản biện có thể đánh giá người viết thiếu tự tin vào dữ liệu nghiên cứu của chính mình.
+        </p>
+        <p>
+          Các bạn trong cộng đồng khi viết tài liệu kinh doanh cao cấp hoặc báo cáo nội bộ doanh nghiệp Nhật Bản (稟議書 – Ringisho) có gặp trường hợp nào ưu tiên dạng thứ hai hơn không? Rất mong được nghe chia sẻ thực tế từ các anh chị và các bạn!
+        </p>
+      </div>
+
+      <!-- Focus Tags / Contextual Keywords -->
+      <div class="flex flex-wrap gap-1.5 pt-2">
+        <span class="text-xs text-brand-navy font-medium bg-surface-low px-2 py-0.5 rounded">#Kính ngữ Keigo</span>
+        <span class="text-xs text-neutral-muted bg-surface-low px-2 py-0.5 rounded">#Văn phong học thuật</span>
+        <span class="text-xs text-neutral-muted bg-surface-low px-2 py-0.5 rounded">#Luận văn đại học</span>
+      </div>
+
+      <!-- Restrained Post Actions Bar -->
+      <div class="flex items-center justify-between pt-3 border-t border-neutral-border text-xs text-neutral-muted">
+        <div class="flex items-center gap-1.5">
+          <button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg font-semibold bg-surface-low text-brand-navy hover:bg-neutral-border/50 active:scale-95 transition-all" aria-label="Đánh giá bài viết hữu ích (hiện tại 14 lượt)">
+            <span class="material-symbols-outlined text-[17px] text-brand-navy fill-1">thumb_up</span>
+            <span>Hữu ích (14)</span>
+          </button>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1.5 text-neutral-muted">
+            <span class="material-symbols-outlined text-[17px]">chat_bubble_outline</span>
+            <span>6 phản hồi</span>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-0.5">
+          <button class="p-2 rounded-lg hover:bg-surface text-neutral-muted hover:text-neutral-text active:scale-95" aria-label="Lưu bài viết vào sổ tay">
+            <span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+          </button>
+          <button class="p-2 rounded-lg hover:bg-surface text-neutral-muted hover:text-neutral-text active:scale-95" aria-label="Chia sẻ liên kết">
+            <span class="material-symbols-outlined text-[18px]">share</span>
+          </button>
+          <button class="p-2 rounded-lg hover:bg-surface text-neutral-muted hover:text-red-700 active:scale-95" aria-label="Báo cáo vi phạm quy chuẩn">
+            <span class="material-symbols-outlined text-[18px]">flag</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACCESSIBILITY & COMMUNITY GUIDELINE CALLOUT (COMPACT MOBILE ACCORDION) -->
+    <section class="bg-surface-elevated rounded-xl p-3 border border-neutral-border text-xs text-neutral-muted">
+      <details class="group cursor-pointer">
+        <summary class="flex items-center justify-between font-semibold text-neutral-text list-none select-none">
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-brand-green text-[18px]">verified_user</span>
+            <span>Nguyên tắc trao đổi & bình đẳng tri thức</span>
+          </div>
+          <span class="material-symbols-outlined text-neutral-muted group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="pt-2.5 space-y-1.5 text-[11.5px] leading-relaxed border-t border-neutral-border-subtle mt-2">
+          <p>• <strong>Tôn trọng ngữ cảnh bản xứ:</strong> Không áp đặt tuyệt đối đúng/sai mà hãy dẫn chứng ngữ cảnh sử dụng.</p>
+          <p>• <strong>Dẫn chứng minh bạch:</strong> Ưu tiên trích xuất nguồn từ từ điển chuẩn mực hoặc tài liệu ngôn ngữ có kiểm chứng.</p>
+          <p>• <strong>Khích lệ người mới:</strong> Giải thích rõ căn nguyên từ ngữ để tạo động lực cho bạn học cùng tiến bộ.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- COMMENTS SECTION HEADER -->
+    <section class="space-y-3 pt-1">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1.5">
+          <h2 class="text-sm font-bold text-neutral-text">Thảo luận & Đóng góp tri thức</h2>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-surface-low text-neutral-muted">6</span>
+        </div>
+        <!-- Sorting dropdown -->
+        <div class="flex items-center gap-1 text-xs text-neutral-muted">
+          <span>Sắp xếp:</span>
+          <button class="font-semibold text-brand-navy flex items-center gap-0.5 hover:underline">
+            Hữu ích nhất
+            <span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TOP-LEVEL COMMENT COMPOSER (Edge-to-edge on mobile, 5,000 char limit hint, plain text only) -->
+      <div class="bg-surface-card rounded-xl p-3 border border-neutral-border shadow-sm space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-brand-green text-white font-bold text-xs flex items-center justify-center shrink-0" aria-label="Ảnh đại diện của bạn">
+            LN
+          </div>
+          <div class="flex-1">
+            <label for="new-comment-input" class="sr-only">Nhập bình luận hoặc đóng góp tri thức của bạn</label>
+            <textarea id="new-comment-input" rows="3" placeholder="Đóng góp góc nhìn ngôn ngữ, dẫn chứng ngữ cảnh hoặc giải thích của bạn..." class="w-full text-xs text-neutral-text bg-surface-low placeholder-neutral-muted/70 rounded-lg p-2.5 border border-neutral-border focus:border-brand-navy focus:bg-white focus:outline-none transition-colors resize-none"></textarea>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-1 text-[11px] text-neutral-muted">
+          <div class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">article</span>
+            <span>0 / 5.000 ký tự (Chấp nhận văn bản thuần)</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button class="px-2.5 py-1.5 rounded-lg text-neutral-muted hover:text-neutral-text font-medium text-xs">
+              Hủy
+            </button>
+            <button class="px-3.5 py-1.5 rounded-lg bg-brand-navy text-white font-semibold text-xs hover:bg-brand-navy/90 active:scale-95 transition-all shadow-sm">
+              Gửi thảo luận
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS LIST: FULL-WIDTH, CONTROLLED INDENTATION -->
+      <div class="space-y-3 pt-1">
+
+        <!-- THREAD 1: DEPTH 0 COMMENT + DEPTH 1 REPLY -->
+        <div class="bg-surface-card rounded-xl border border-neutral-border p-3.5 shadow-sm space-y-3">
+          
+          <!-- Depth 0 Item -->
+          <div class="space-y-2">
+            <!-- Author row -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-full bg-brand-navy text-white text-[11px] font-bold flex items-center justify-center">
+                  MH
+                </div>
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-xs font-bold text-neutral-text">Minh Hoàng</span>
+                    <span class="text-[10px] font-medium px-1.5 py-0.2 rounded bg-surface-low text-neutral-muted border border-neutral-border">
+                      Trợ giảng ngữ âm, B1
+                    </span>
+                  </div>
+                  <span class="text-[10px] text-neutral-muted">18 phút trước</span>
+                </div>
+              </div>
+
+              <!-- Comment Overflow Menu (Non-owner: Report / Copy) -->
+              <div class="relative">
+                <button class="w-7 h-7 rounded flex items-center justify-center text-neutral-muted hover:text-neutral-text hover:bg-surface active:scale-95" aria-label="Tùy chọn bình luận">
+                  <span class="material-symbols-outlined text-[16px]">more_vert</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Comment Content (CJK & Vietnamese quotes preserved) -->
+            <p class="text-xs text-neutral-text leading-relaxed">
+              Đồng ý sâu sắc với anh Sato! Trong quá trình làm việc cùng các giáo sư khoa Văn học tại Đại học Waseda, mình nhận thấy khi trình bày phần <em>Phương pháp nghiên cứu (Research Methodology)</em>, các thầy cô tuyệt đối không cho dùng 「〜と推測される」 vì câu chuyện lúc này là kiểm chứng chứ không phải dự đoán.
+            </p>
+            <p class="text-xs text-neutral-text leading-relaxed">
+              Tuy nhiên, ở phần <em>Triển vọng tương lai (Future Works)</em> khi dữ liệu chưa khảo sát hết, việc dùng 「〜と推測される」 lại thể hiện sự khiêm tốn học thuật (Academic Modesty) rất được khuyến khích.
+            </p>
+
+            <!-- Actions Row: Helpful, Reply, Report -->
+            <div class="flex items-center justify-between pt-1 text-[11px] text-neutral-muted border-t border-neutral-border-subtle">
+              <div class="flex items-center gap-2">
+                <button class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-low text-brand-navy font-semibold hover:bg-neutral-border/50">
+                  <span class="material-symbols-outlined text-[14px] fill-1">thumb_up</span>
+                  <span>Hữu ích (5)</span>
+                </button>
+                <button class="inline-flex items-center gap-1 px-2 py-1 rounded hover:bg-surface-low font-medium text-brand-navy">
+                  <span class="material-symbols-outlined text-[14px]">reply</span>
+                  <span>Trả lời</span>
+                </button>
+              </div>
+              <button class="text-neutral-muted hover:text-red-700 text-[11px]">Báo cáo</button>
+            </div>
+          </div>
+
+          <!-- DEPTH 1 REPLIES CONTAINER WITH REFINED RELATIONSHIP MARKER -->
+          <div class="pt-2 pl-3 border-l-2 border-brand-navy/20 space-y-3 ml-1.5">
+            
+            <!-- Depth 1 Reply 1 (OP Reply) -->
+            <div class="bg-surface-low/70 rounded-lg p-2.5 border border-neutral-border/60 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-6 h-6 rounded-full bg-brand-navy text-white text-[10px] font-bold flex items-center justify-center">
+                    KS
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <span class="text-xs font-bold text-neutral-text">Kenji Sato</span>
+                    <span class="text-[10px] font-semibold text-brand-navy bg-blue-50 px-1 rounded border border-blue-100">Tác giả</span>
+                    <span class="text-[10px] text-neutral-muted">• 12 phút trước</span>
+                  </div>
+                </div>
+
+                <!-- Owner actions for post author on own comment -->
+                <button class="text-neutral-muted hover:text-neutral-text p-1" aria-label="Tùy chọn phản hồi tác giả">
+                  <span class="material-symbols-outlined text-[15px]">more_horiz</span>
+                </button>
+              </div>
+
+              <p class="text-xs text-neutral-text leading-relaxed">
+                Cảm ơn Hoàng! Đúng là trong luận văn Thạc sĩ người Nhật cũng chuộng 「〜と考えられる」 hơn hẳn vì tính trung lập cao. Điểm bạn chỉ ra về phần “Triển vọng tương lai” là một lưu ý rất quý báu cho mọi người!
+              </p>
+
+              <div class="flex items-center gap-2 pt-1 text-[11px] text-neutral-muted">
+                <button class="inline-flex items-center gap-1 text-brand-navy font-semibold hover:underline">
+                  <span class="material-symbols-outlined text-[13px]">thumb_up</span>
+                  <span>Hữu ích (3)</span>
+                </button>
+                <span>•</span>
+                <button class="hover:underline text-neutral-muted">Trả lời</button>
+              </div>
+            </div>
+
+            <!-- CONTEXTUAL INLINE REPLY COMPOSER (Active inline reply state for depth 1) -->
+            <div class="bg-surface-card rounded-lg p-2.5 border border-brand-navy/30 shadow-sm space-y-2">
+              <div class="flex items-center justify-between text-[11px] text-neutral-muted">
+                <span class="font-medium text-brand-navy flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">reply</span>
+                  Đang trả lời <strong>Minh Hoàng</strong>
+                </span>
+                <button class="text-neutral-muted hover:text-neutral-text" aria-label="Đóng khung trả lời">
+                  <span class="material-symbols-outlined text-[14px]">close</span>
+                </button>
+              </div>
+              <label for="reply-box-1" class="sr-only">Nội dung câu trả lời</label>
+              <textarea id="reply-box-1" rows="2" placeholder="Viết phản hồi dẫn chứng của bạn..." class="w-full text-xs text-neutral-text bg-surface-low rounded-md p-2 border border-neutral-border focus:border-brand-navy focus:bg-white focus:outline-none resize-none"></textarea>
+              
+              <div class="flex items-center justify-between pt-0.5 text-[11px]">
+                <span class="text-neutral-muted">Tối đa 5.000 ký tự</span>
+                <div class="flex items-center gap-1.5">
+                  <button class="px-2.5 py-1 text-neutral-muted hover:text-neutral-text font-medium text-xs">
+                    Hủy
+                  </button>
+                  <button class="px-3 py-1 rounded bg-brand-orange text-white font-semibold text-xs hover:bg-brand-orange/90 active:scale-95 transition-all">
+                    Gửi phản hồi
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- THREAD 2: DELETED PARENT PLACEHOLDER WITH PRESERVED VISIBLE REPLIES -->
+        <div class="bg-surface-card rounded-xl border border-neutral-border p-3.5 shadow-sm space-y-2.5">
+          
+          <!-- Deleted Parent Notice (No user identity, no deleted text content, accessible styling) -->
+          <div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-low/80 border border-dashed border-neutral-border text-xs text-neutral-muted">
+            <span class="material-symbols-outlined text-[17px] text-neutral-muted/80">delete_sweep</span>
+            <div class="flex-1">
+              <span class="font-medium italic">[Bình luận này đã được người dùng xóa]</span>
+              <p class="text-[10px] text-neutral-muted mt-0.5">Các phản hồi bên dưới vẫn được duy trì để bảo toàn mạch thảo luận học thuật.</p>
+            </div>
+          </div>
+
+          <!-- Retained Visible Replies Under Deleted Parent (Full-width, depth 1 relationship) -->
+          <div class="pt-1 pl-3 border-l-2 border-neutral-border space-y-2.5 ml-1.5">
+            
+            <!-- Depth 1 Reply Under Deleted Parent (Research Contributor) -->
+            <div class="bg-surface-low/50 rounded-lg p-2.5 border border-neutral-border/60 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-6 h-6 rounded-full bg-amber-700 text-white text-[10px] font-bold flex items-center justify-center">
+                    TT
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-1">
+                      <span class="text-xs font-bold text-neutral-text">Thu Trang</span>
+                      <span class="text-[9px] font-medium px-1 rounded bg-emerald-50 text-brand-green border border-emerald-100">Nghiên cứu Hán học</span>
+                    </div>
+                    <span class="text-[10px] text-neutral-muted">8 phút trước</span>
+                  </div>
+                </div>
+
+                <!-- Overflow dropdown button -->
+                <button class="text-neutral-muted hover:text-neutral-text p-1" aria-label="Tùy chọn phản hồi">
+                  <span class="material-symbols-outlined text-[15px]">more_vert</span>
+                </button>
+              </div>
+
+              <p class="text-xs text-neutral-text leading-relaxed">
+                Dù bình luận gốc đã gỡ, nhưng mình xin bổ sung thêm về chữ Hán <strong>考 (Khảo)</strong> vs <strong>推 (Thôi)</strong> để mọi người nắm rõ bản chất hình vị:
+                <br>• <strong>考 (Khảo)</strong>: Mang nghĩa khảo sát, suy xét cẩn trọng dựa trên thực thể.
+                <br>• <strong>推 (Thôi)</strong>: Nghĩa là đẩy tới, suy diễn ra từ một điểm khởi phát có sẵn.
+                <br>Nắm gốc từ này sẽ không bao giờ nhầm lẫn trong văn viết!
+              </p>
+
+              <div class="flex items-center justify-between pt-1 text-[11px] text-neutral-muted">
+                <div class="flex items-center gap-2">
+                  <button class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface text-brand-navy font-semibold">
+                    <span class="material-symbols-outlined text-[13px] fill-1">thumb_up</span>
+                    <span>Hữu ích (7)</span>
+                  </button>
+                  <button class="text-brand-navy hover:underline font-medium">Trả lời</button>
+                </div>
+                <button class="hover:text-red-700 text-[10px]">Báo cáo</button>
+              </div>
+            </div>
+
+            <!-- Depth 1 Reply 2 Under Deleted Parent -->
+            <div class="bg-surface-low/50 rounded-lg p-2.5 border border-neutral-border/60 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-6 h-6 rounded-full bg-brand-cyan text-white text-[10px] font-bold flex items-center justify-center">
+                    ĐN
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-1">
+                      <span class="text-xs font-bold text-neutral-text">Đức Nam</span>
+                      <span class="text-[9px] font-medium px-1 rounded bg-blue-50 text-brand-navy border border-blue-100">Được kiểm duyệt ngữ cảnh</span>
+                    </div>
+                    <span class="text-[10px] text-neutral-muted">5 phút trước</span>
+                  </div>
+                </div>
+
+                <button class="text-neutral-muted hover:text-neutral-text p-1" aria-label="Tùy chọn phản hồi">
+                  <span class="material-symbols-outlined text-[15px]">more_vert</span>
+                </button>
+              </div>
+
+              <p class="text-xs text-neutral-text leading-relaxed">
+                Trong sách <em>Nihon Keigo no Kenkyu</em> của NXB Bonjinsha, có bảng tổng hợp về độ tự tin ngôn cảnh (Confidence Index) của người Nhật: 「〜と考えられる」 đạt 85% độ chắc chắn, trong khi 「〜と推測される」 dừng ở mức 55 - 60%. Đây là dẫn chứng rất hữu ích cho các bạn chuẩn bị bảo vệ khóa luận.
+              </p>
+
+              <div class="flex items-center gap-2 pt-1 text-[11px] text-neutral-muted">
+                <button class="inline-flex items-center gap-1 text-brand-navy font-semibold hover:underline">
+                  <span class="material-symbols-outlined text-[13px]">thumb_up</span>
+                  <span>Hữu ích (4)</span>
+                </button>
+                <span>•</span>
+                <button class="hover:underline text-neutral-muted">Trả lời</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- THREAD 3: RECENT TOP-LEVEL COMMENT WITH OWNER OVERFLOW SIMULATION -->
+        <div class="bg-surface-card rounded-xl border border-neutral-border p-3.5 shadow-sm space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-brand-green text-white text-[11px] font-bold flex items-center justify-center">
+                LN
+              </div>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold text-neutral-text">Linh Nguyễn</span>
+                  <span class="text-[10px] font-semibold text-brand-green bg-emerald-50 px-1 rounded border border-emerald-100">Bạn</span>
+                </div>
+                <span class="text-[10px] text-neutral-muted">Vừa xong</span>
+              </div>
+            </div>
+
+            <!-- Owner Action Pills (Direct access to Edit / Delete for owner) -->
+            <div class="flex items-center gap-1">
+              <button class="px-2 py-0.5 rounded text-[11px] text-neutral-muted hover:text-brand-navy hover:bg-surface flex items-center gap-0.5">
+                <span class="material-symbols-outlined text-[14px]">edit</span>
+                <span>Sửa</span>
+              </button>
+              <button class="px-2 py-0.5 rounded text-[11px] text-neutral-muted hover:text-red-700 hover:bg-red-50 flex items-center gap-0.5">
+                <span class="material-symbols-outlined text-[14px]">delete</span>
+                <span>Xóa</span>
+              </button>
+            </div>
+          </div>
+
+          <p class="text-xs text-neutral-text leading-relaxed">
+            Rất cảm ơn các anh chị đã phân tích sâu sắc. Em đang tổng hợp bảng so sánh này vào sổ tay tra cứu tiếng Nhật học thuật chung cho phân hệ Thư viện mở của cộng đồng.
+          </p>
+
+          <div class="flex items-center justify-between pt-1 text-[11px] text-neutral-muted border-t border-neutral-border-subtle">
+            <span class="text-[10px] text-neutral-muted italic">Chỉ bạn và quản trị viên thấy trạng thái chỉnh sửa</span>
+            <button class="text-brand-navy hover:underline font-medium">Trả lời</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SYSTEM STATES REFERENCE (ACCESSIBLE DISCLOSURE FOR TESTING LOADING, EMPTY, ERROR) -->
+    <section class="mt-4 pt-2">
+      <details class="bg-surface-elevated rounded-xl border border-neutral-border p-3 text-xs text-neutral-muted group">
+        <summary class="flex items-center justify-between font-semibold text-neutral-text cursor-pointer select-none">
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-brand-navy text-[18px]">tune</span>
+            <span>Mẫu kiểm thử trạng thái hệ thống (Kiểm tra QA)</span>
+          </div>
+          <span class="material-symbols-outlined text-neutral-muted group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        
+        <div class="pt-3 space-y-3 border-t border-neutral-border-subtle mt-2">
+          <!-- 1. Offline & Draft Caching State -->
+          <div class="p-2.5 rounded-lg bg-blue-50/70 border border-blue-200 text-[11.5px] text-brand-navy flex items-start gap-2">
+            <span class="material-symbols-outlined text-brand-navy text-[18px] shrink-0 mt-0.5">cloud_done</span>
+            <div>
+              <p class="font-semibold">Bộ nhớ tạm ngoại tuyến (Local draft cached)</p>
+              <p class="text-[11px] text-neutral-muted mt-0.5">Nội dung bạn đang soạn thảo được lưu an toàn tại máy. Không bị mất khi rớt mạng.</p>
+            </div>
+          </div>
+
+          <!-- 2. Comment Network Error State -->
+          <div class="p-2.5 rounded-lg bg-rose-50 border border-rose-200 text-[11.5px] text-rose-900 flex items-start gap-2">
+            <span class="material-symbols-outlined text-rose-700 text-[18px] shrink-0 mt-0.5">error_outline</span>
+            <div class="flex-1">
+              <p class="font-semibold">Không thể tải thêm phản hồi</p>
+              <p class="text-[11px] text-rose-800 mt-0.5">Đã xảy ra sự cố kết nối tới máy chủ. Dữ liệu thảo luận của bạn vẫn được giữ nguyên.</p>
+              <button class="mt-1.5 px-2.5 py-1 rounded bg-rose-700 text-white text-[11px] font-medium hover:bg-rose-800 active:scale-95">Thử lại</button>
+            </div>
+          </div>
+
+          <!-- 3. Empty Comment Section Simulation -->
+          <div class="p-3 rounded-lg bg-surface-low border border-neutral-border text-center space-y-1">
+            <span class="material-symbols-outlined text-neutral-muted text-[22px]">forum</span>
+            <p class="font-medium text-xs text-neutral-text">Mô phỏng bài viết chưa có thảo luận</p>
+            <p class="text-[11px] text-neutral-muted">Hãy là người đầu tiên diễn giải ngữ cảnh hoặc đặt câu hỏi mở.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- CANONICAL MOBILE FOOTER (Phase 01 Adaptation) -->
+  <footer class="bg-brand-navy text-white/90 text-xs px-4 py-6 border-t border-brand-navy/30 mt-6 space-y-3 text-center">
+    <div class="flex items-center justify-center gap-1.5 font-bold text-sm text-white">
+      <span class="w-5 h-5 rounded bg-brand-orange text-white flex items-center justify-center text-[11px]">CD</span>
+      <span>CongDongNgonNgu.vn</span>
+    </div>
+    <p class="text-[11px] text-white/70 leading-relaxed max-w-[320px] mx-auto">
+      Không gian thảo luận tri thức mở, minh bạch văn hóa và chia sẻ ngôn ngữ phi thương mại. Tuân thủ tiêu chuẩn WCAG 2.2 AA.
+    </p>
+    <div class="flex items-center justify-center gap-3 text-[11px] text-white/80 pt-1">
+      <a href="#rules" class="hover:underline hover:text-white">Quy tắc cộng đồng</a>
+      <span>•</span>
+      <a href="#privacy" class="hover:underline hover:text-white">Bảo mật</a>
+      <span>•</span>
+      <a href="#help" class="hover:underline hover:text-white">Trợ giúp</a>
+    </div>
+    <div class="text-[10px] text-white/50 pt-1 border-t border-white/10">
+      © 2025 CongDongNgonNgu.vn. Bản quyền thuộc về cộng đồng học tập.
+    </div>
+  </footer>
+
+</body>
+</html>

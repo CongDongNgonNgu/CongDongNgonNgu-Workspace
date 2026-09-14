@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thảo luận ngữ nghĩa &amp; kính ngữ | CongDongNgonNgu.vn</title>
+<!-- Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e1e3df",
+            "tertiary": "#003021",
+            "background": "#f8faf6",
+            "secondary": "#9c4500",
+            "outline": "#73777f",
+            "on-primary-container": "#8dadd7",
+            "on-surface": "#191c1a",
+            "on-tertiary-fixed-variant": "#005139",
+            "on-primary-fixed": "#001d36",
+            "error": "#ba1a1a",
+            "surface-variant": "#e1e3df",
+            "inverse-on-surface": "#eff1ed",
+            "secondary-fixed-dim": "#ffb68e",
+            "on-secondary-fixed-variant": "#773300",
+            "secondary-fixed": "#ffdbca",
+            "on-secondary": "#ffffff",
+            "surface-container": "#eceeea",
+            "primary": "#002b4d",
+            "tertiary-fixed": "#93f6cb",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#002115",
+            "on-secondary-fixed": "#331200",
+            "primary-fixed": "#d2e4ff",
+            "primary-container": "#1e4165",
+            "surface-bright": "#f8faf6",
+            "primary-fixed-dim": "#a8c9f4",
+            "on-background": "#191c1a",
+            "secondary-container": "#fd8a42",
+            "on-tertiary": "#ffffff",
+            "surface": "#f8faf6",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#27496d",
+            "surface-container-low": "#f2f4f0",
+            "surface-tint": "#406086",
+            "tertiary-container": "#004933",
+            "inverse-primary": "#a8c9f4",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#682c00",
+            "surface-container-high": "#e7e9e5",
+            "outline-variant": "#c3c6cf",
+            "surface-dim": "#d8dbd7",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#43474e",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#2e312f",
+            "tertiary-fixed-dim": "#77d9b0",
+            "on-tertiary-container": "#5abd95"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            headline: ["Be Vietnam Pro", "sans-serif"],
+            display: ["Be Vietnam Pro", "sans-serif"],
+            body: ["Be Vietnam Pro", "sans-serif"],
+            label: ["Be Vietnam Pro", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-full flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- ==================== TOP NAVIGATION BAR ==================== -->
+<!-- Conforms exactly to TopNavBar shared component anchor and semantic logic -->
+<header class="bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-40">
+<div class="w-full px-6 lg:px-12 flex items-center justify-between h-16 max-w-[1440px] mx-auto">
+<!-- Brand Logo & Main Nav Cluster -->
+<div class="flex items-center gap-8">
+<a class="font-headline text-xl font-bold tracking-tight text-primary flex items-center gap-2" href="#">
+<span class="w-7 h-7 rounded-lg bg-primary text-on-primary flex items-center justify-center text-sm font-black tracking-tighter">CD</span>
+<span>CongDongNgonNgu.vn</span>
+</a>
+<!-- Desktop Navigation Links (Active: 'Cộng đồng') -->
+<nav class="hidden md:flex items-center gap-1 font-body text-sm font-medium">
+<a class="px-3 py-5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 rounded-t-sm" href="#">
+            Khám phá
+          </a>
+<a class="px-3 py-5 text-primary border-b-2 border-secondary font-semibold transition duration-150 ease-out" href="#">
+            Cộng đồng
+          </a>
+<a class="px-3 py-5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 rounded-t-sm" href="#">
+            Học tập
+          </a>
+<a class="px-3 py-5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 rounded-t-sm" href="#">
+            Trao đổi
+          </a>
+<a class="px-3 py-5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 rounded-t-sm" href="#">
+            Thư viện
+          </a>
+</nav>
+</div>
+<!-- Right cluster: Search bar, Language toggle, Notifications, Actions, Profile -->
+<div class="flex items-center gap-4">
+<!-- Search Input -->
+<div class="hidden lg:flex items-center relative">
+<span class="material-symbols-outlined absolute left-3 text-outline pointer-events-none">search</span>
+<input class="w-64 pl-9 pr-3 py-1.5 text-xs bg-surface-container-low border border-outline-variant rounded-lg text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary transition-all" placeholder="Tìm theo chủ điểm ngữ pháp, thuật ngữ..." type="text"/>
+</div>
+<!-- Language Selector -->
+<button class="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-primary bg-surface-container-low hover:bg-surface-container rounded-lg transition-colors border border-outline-variant" type="button">
+<span class="material-symbols-outlined text-base">translate</span>
+<span>VI</span>
+<span class="material-symbols-outlined text-xs">expand_more</span>
+</button>
+<!-- Notification Bell with Unread Dot -->
+<button aria-label="Thông báo" class="relative p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-full transition-colors" type="button">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<!-- Primary Trailing Action: 'Đăng bài' -->
+<button class="hidden sm:inline-flex items-center gap-1.5 bg-secondary hover:bg-on-secondary-container text-on-secondary text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition duration-150 ease-out focus-visible:ring-2 focus-visible:ring-secondary" type="button">
+<span class="material-symbols-outlined text-base">edit_note</span>
+<span>Đăng bài</span>
+</button>
+<!-- Profile Avatar -->
+<div class="flex items-center gap-2 pl-2 border-l border-outline-variant">
+<img alt="Linh Nguyễn avatar" class="w-8 h-8 rounded-full ring-1 ring-outline-variant object-cover" data-alt="A portrait of Linh Nguyễn, a friendly young Vietnamese woman language enthusiast in a soft-lit indoor study space with books and natural wood tones, captured in an editorial portrait style with warm soft lighting and shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHnpFy7SI4Y3LgfxUtB47kcxpgLunBkraKH4S4bHBtnjQSOTQyKIy2cVp2x9mB6IRygUCJRz6_0NWbXwnDem-JILwX4LZSa3mCspC6mfa6c5I0zGLl04FU9kbiqZoHuJ5NTPuRcKxsYjoE-bpEhicAtex0dIqqrRGR6eU25tcm-SdPZ0wm31VAEUVoR7UMIJw9FYqPXm8GV3rYLkz1ujToreOPu26pU_CQ9u9QICn7HazkWQ2mNlVqKKW-tLkwoHraQlKlhdR-el4"/>
+</div>
+</div>
+</div>
+</header>
+<!-- ==================== BREADCRUMB STRIP ==================== -->
+<div class="w-full bg-surface-container-lowest border-b border-outline-variant/60">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-2.5">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">home</span>
+<span>Trang chủ</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Cộng đồng</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-medium truncate max-w-sm">Thảo luận ngữ nghĩa &amp; kính ngữ</span>
+</nav>
+</div>
+</div>
+<!-- ==================== MAIN 2-COLUMN VIEWPORT (1440px Max) ==================== -->
+<main class="flex-1 max-w-[1440px] w-full mx-auto px-6 lg:px-12 py-8">
+<div class="flex flex-col lg:flex-row gap-8 items-start">
+<!-- ================= LEFT COLUMN: MAIN DISCUSSION CANVAS (880px) ================= -->
+<div class="flex-1 w-full lg:max-w-[880px] space-y-6">
+<!-- POST CONTAINER CARD -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<!-- Post Header Section -->
+<div class="p-6 md:p-8 border-b border-outline-variant/60">
+<!-- Metadata Tags & Semantic Pills -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-sm">translate</span>
+                  日本語 • Tiếng Nhật
+                </span>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant">
+                  #Kính ngữ Keigo
+                </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold tracking-wide uppercase bg-secondary-fixed text-on-secondary-fixed">
+                  Hỏi đáp ngữ nghĩa / THẢO LUẬN
+                </span>
+</div>
+<!-- Top-right Post Actions Menu -->
+<div class="relative flex items-center gap-1 text-on-surface-variant" id="postActionsContainer">
+<button class="p-1.5 hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" title="Lưu bài viết" type="button">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" title="Chia sẻ bài viết" type="button">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<!-- 3-dot Overflow button and expanded state container -->
+<div class="relative">
+<button aria-label="Tùy chọn bài viết" class="p-1.5 hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors focus:ring-1 focus:ring-outline" onclick="document.getElementById('postOverflowMenu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+<!-- Accessible Dropdown Menu State -->
+<div class="hidden absolute right-0 mt-1.5 w-52 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-md z-30 py-1 text-xs" id="postOverflowMenu">
+<button class="w-full text-left px-3 py-2 text-on-surface hover:bg-surface-container-low flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Chỉnh sửa bài viết</span>
+</button>
+<button class="w-full text-left px-3 py-2 text-error hover:bg-error-container/30 flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+<span>Xóa bài viết</span>
+</button>
+<div class="h-px bg-outline-variant/60 my-1"></div>
+<button class="w-full text-left px-3 py-2 text-on-surface-variant hover:bg-surface-container-low flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-base">flag</span>
+<span>Báo cáo vi phạm</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Title of Post -->
+<h1 class="text-xl md:text-2xl font-bold font-headline text-primary leading-snug tracking-tight mb-4">
+              Phân biệt sắc thái học thuật: 「〜と考えられる」 và 「〜と推測される」 trong viết báo cáo khoa học tiếng Nhật
+            </h1>
+<!-- Author Card Strip -->
+<div class="flex items-center gap-3 pt-2">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shadow-xs">
+                KS
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-sm text-primary">Kenji Sato</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-tertiary text-on-tertiary">
+<span class="material-symbols-outlined text-xs">verified</span>
+                    Bản xứ
+                  </span>
+<span class="text-xs text-outline">•</span>
+<span class="text-xs text-on-surface-variant">Ngoại ngữ Nhật - ĐH Tokyo</span>
+</div>
+<span class="text-xs text-outline mt-0.5">Đã đăng 25 phút trước • Cập nhật lần cuối 10 phút trước</span>
+</div>
+</div>
+</div>
+<!-- Post Core Body Content -->
+<div class="p-6 md:p-8 space-y-5 text-[15px] leading-relaxed text-on-surface font-normal">
+<p>
+              Chào mọi người, khi tham gia viết luận án tốt nghiệp hoặc gửi báo cáo khoa học (学術論文) bằng tiếng Nhật, rất nhiều bạn thường bối rối giữa hai cách diễn đạt thể hiện suy đoán và lập luận logic: <strong class="font-semibold text-primary font-body">「〜と考えられる」</strong> và <strong class="font-semibold text-primary font-body">「〜と推測される」</strong>.
+            </p>
+<p>
+              Cả hai cấu trúc đều sử dụng thể bị động tôn kính hoặc khách quan hóa (自発・客観), nhưng biên độ chứng cứ và trách nhiệm lập luận của tác giả có sự khác biệt rõ rệt trong văn phong học thuật:
+            </p>
+<!-- Comparative Callout Quote Box -->
+<div class="bg-surface-container-low border-l-4 border-secondary p-4 rounded-r-lg space-y-3 my-4">
+<div class="flex items-start gap-3">
+<span class="px-2 py-0.5 text-xs font-bold bg-primary text-on-primary rounded shrink-0 mt-0.5">1</span>
+<div>
+<p class="font-semibold text-primary text-sm">〜と考えられる (Được xem là / Có cơ sở kết luận là)</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-normal">
+                    Dùng khi người viết đưa ra kết luận logic dựa trên chứng cứ thực nghiệm khách quan, số liệu thống kê rõ ràng hoặc phân tích thực tế từ mẫu khảo sát. Tác giả tự tin khẳng định lập luận có căn cứ khoa học vững chắc.
+                  </p>
+</div>
+</div>
+<div class="h-px bg-outline-variant/60"></div>
+<div class="flex items-start gap-3">
+<span class="px-2 py-0.5 text-xs font-bold bg-secondary text-on-secondary rounded shrink-0 mt-0.5">2</span>
+<div>
+<p class="font-semibold text-secondary text-sm">〜と推測される (Được suy đoán / phỏng đoán là)</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-normal">
+                    Dùng khi đưa ra giả thiết, ước lượng hoặc phỏng đoán có tính xác suất cao từ các dấu hiệu gián tiếp, nhưng bản thân tác giả chưa thu thập đủ chứng cứ tuyệt đối để chứng minh khẳng định đó.
+                  </p>
+</div>
+</div>
+</div>
+<p>
+              Theo quy chuẩn chung của Hội Ngôn ngữ học ứng dụng Tokyo, nếu bài báo cáo có đồ thị số liệu đối chiếu trực tiếp mà lại kết luận bằng <code class="bg-surface-container px-1.5 py-0.5 rounded text-xs font-mono text-secondary">〜と推測される</code>, giáo sư phản biện có thể đánh giá người viết thiếu tự tin vào dữ liệu nghiên cứu của chính mình.
+            </p>
+<p class="text-primary font-medium">
+              Các bạn trong cộng đồng khi viết tài liệu kinh doanh cao cấp hoặc báo cáo nội bộ doanh nghiệp Nhật Bản (稟議書 - Ringisho) có gặp trường hợp nào ưu tiên dạng thứ hai hơn không? Rất mong được nghe chia sẻ thực tế từ các anh chị và các bạn!
+            </p>
+</div>
+<!-- Post Action Bar (Restrained & Learning-focused) -->
+<div class="px-6 md:px-8 py-3.5 bg-surface-container-low/60 border-t border-outline-variant flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-3">
+<!-- Hữu ích Button -->
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant text-primary hover:border-secondary hover:text-secondary font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">thumb_up</span>
+<span>Hữu ích (14)</span>
+</button>
+<!-- Phản hồi count -->
+<span class="inline-flex items-center gap-1.5 text-on-surface-variant px-2 py-1">
+<span class="material-symbols-outlined text-base">forum</span>
+<span>6 phản hồi</span>
+</span>
+</div>
+<!-- Utility Actions -->
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">bookmark</span>
+<span>Lưu bài</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">share</span>
+<span>Chia sẻ</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/20 transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">report</span>
+<span>Báo cáo</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ================= COMMENTS SECTION ================= -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-6 md:p-8 space-y-6">
+<!-- Section Header & Sorter -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-outline-variant/60">
+<div>
+<h2 class="text-lg font-bold font-headline text-primary flex items-center gap-2">
+<span>Thảo luận &amp; Đóng góp tri thức</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-normal">6 bình luận</span>
+</h2>
+<p class="text-xs text-outline mt-0.5">Các ý kiến được đối chiếu dựa trên ngữ liệu thực tế và nguyên tắc hòa nhã.</p>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<label class="text-on-surface-variant font-medium" for="sortFilter">Sắp xếp:</label>
+<select class="bg-surface-container-low border border-outline-variant text-on-surface text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-secondary" id="sortFilter">
+<option selected="">Hữu ích nhất</option>
+<option>Mới nhất</option>
+<option>Người bản xứ trước</option>
+</select>
+</div>
+</div>
+<!-- Authenticated Comment Composer -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/80">
+<div class="flex items-start gap-3">
+<img alt="Linh Nguyễn avatar" class="w-9 h-9 rounded-full ring-1 ring-outline-variant object-cover mt-0.5 shrink-0" data-alt="A small circular avatar portrait of Linh Nguyễn looking engaged in quiet academic study with neat attire, warm lighting, and a soft neutral studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBacNfEvXpKiFe4x82txQ2tu-VyKdiuAUR44TRUQ7PI2Mz6x94YBcYjwpZciBSUflbiUT1RB96FgaIOKrb4bZ9jMJzzvDxUvWjBM2ep86WNsuUOJ4v3-B-ijs7lBsqFhrEQy4kqMS6E4LYKkIZxeA1VnWXN4Lx2GuiALpXHwYiR9iDlGiyemOoVx7vHuIbOZNecoxd9thpw4uiTW3XuaZRz7kzdC26AEvOVlhpffmus3PLze5oW8CkOjKjZXXD2JqFL0CuiQ7r_sCY"/>
+<div class="flex-1 space-y-3">
+<textarea class="w-full text-sm bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary transition-all resize-y" placeholder="Đóng góp góc nhìn ngôn ngữ, dẫn chứng ngữ cảnh hoặc giải thích của bạn..." rows="3"></textarea>
+<div class="flex flex-wrap items-center justify-between gap-3 text-xs">
+<span class="text-outline">0 / 5.000 ký tự (Chấp nhận văn bản thuần)</span>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors font-medium" type="button">
+                      Hủy
+                    </button>
+<button class="px-4 py-1.5 bg-secondary hover:bg-on-secondary-container text-on-secondary rounded-lg font-semibold shadow-xs transition-colors" type="button">
+                      Gửi bình luận
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- THREADED COMMENTS LIST -->
+<div class="space-y-6 pt-2">
+<!-- ===== COMMENT 1 (Top-Level) ===== -->
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-bright border border-outline-variant/70 space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs">
+                      MH
+                    </div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-semibold text-xs text-primary">Minh Hoàng</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] bg-surface-container-high text-on-surface-variant font-medium">Trợ giảng ngữ âm, B1</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-xs text-outline">18 phút trước</span>
+</div>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded" type="button">
+<span class="material-symbols-outlined text-base">more_horiz</span>
+</button>
+</div>
+<div class="text-xs md:text-sm text-on-surface leading-relaxed pl-10">
+<p>
+                    Đồng ý sâu sắc với anh Sato! Trong quá trình làm việc cùng các giáo sư khoa Văn học tại Đại học Waseda, mình nhận thấy khi trình bày phần <em>Phương pháp nghiên cứu (Research Methodology)</em>, các thầy cô tuyệt đối không cho dùng 「〜と推測される」 vì câu chuyện lúc này là kiểm chứng chứ không phải dự đoán. 
+                  </p>
+<p class="mt-2 text-on-surface-variant">
+                    Tuy nhiên, ở phần <em>Triển vọng tương lai (Future Works)</em> khi dữ liệu chưa khảo sát hết, việc dùng 「〜と推測される」 lại thể hiện sự khiêm tốn học thuật (Academic Modesty) rất được khuyến khích.
+                  </p>
+</div>
+<div class="flex items-center gap-4 pl-10 pt-1 text-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-medium" type="button">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>Hữu ích (5)</span>
+</button>
+<button class="flex items-center gap-1 text-primary hover:underline font-medium" type="button">
+<span class="material-symbols-outlined text-sm">reply</span>
+<span>Trả lời</span>
+</button>
+<span class="text-outline">•</span>
+<button class="text-outline hover:text-error" type="button">Báo cáo</button>
+</div>
+</div>
+<!-- Inline Contextual Reply Composer Under Comment 1 (Indented) -->
+<div class="ml-8 md:ml-12 pl-4 border-l-2 border-primary/20 space-y-2">
+<div class="bg-surface-container-low/70 rounded-lg p-3 border border-outline-variant/60">
+<div class="flex items-start gap-2.5">
+<img alt="Linh Nguyễn" class="w-7 h-7 rounded-full object-cover shrink-0 mt-1" data-alt="Linh Nguyễn portrait small detail avatar with natural lighting and studio backdrop representing logged in user active state." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdwHgxxwVeBXdLQRgg5tQVJyZelUnYsBkj9kSlkQqhJ8K-J23OjCMsCE_TnSdD-17r1vXDHmk9hkQ7nMIO9vNufm_BxxMMbnbgZZl94oMww-K_RmMr0SMrSCAb7lgA8SGAFlHZPrJJZ6xUIKJEXWiAMNL6lRF3OQjs9oQAUuS96KWVlT6c1bAj_wcuRTCFWMhOyfM5diWhQcDgaDoiCf4-1wWzo5TnC_L5DypbLvEWrgBRH5h4Zd9HlkNRZJ7L_LMUUZEqy8ky6oA"/>
+<div class="flex-1 space-y-2">
+<input class="w-full text-xs bg-surface-container-lowest border border-outline-variant rounded px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Trả lời Minh Hoàng..." type="text"/>
+<div class="flex justify-end gap-2 text-xs">
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface" type="button">Hủy</button>
+<button class="px-3 py-1 bg-secondary text-on-secondary rounded font-medium" type="button">Gửi phản hồi</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Nested Reply 1.1 (Level 1 nested reply) -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">
+                        KS
+                      </div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-semibold text-xs text-primary">Kenji Sato</span>
+<span class="px-1 py-0.2 rounded text-[10px] bg-primary-fixed text-on-primary-fixed font-semibold">Tác giả • Bản xứ</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-xs text-outline">12 phút trước</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-0.5" type="button">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<p class="text-xs md:text-sm text-on-surface leading-relaxed pl-8">
+                    Cảm ơn Hoàng! Đúng là trong luận văn Thạc sĩ người Nhật cũng chuộng 「〜と考えられる」 hơn hẳn vì tính trung lập cao. Điểm bạn chỉ ra về phần “Triển vọng tương lai” (今後の課題) là một lưu ý rất quý báu cho mọi người!
+                  </p>
+<div class="flex items-center gap-3 pl-8 text-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-medium" type="button">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>Hữu ích (3)</span>
+</button>
+<button class="flex items-center gap-1 text-primary hover:underline font-medium" type="button">
+<span>Trả lời</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== COMMENT 2: DELETED PARENT STATE & PRESERVED NESTED REPLY ===== -->
+<div class="space-y-4">
+<!-- Deleted Parent Placeholder -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-dashed border-outline-variant flex items-center gap-3 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-outline">delete_sweep</span>
+<span class="italic font-medium text-outline">[Bình luận này đã được người dùng xóa]</span>
+<span class="text-outline/60 text-[11px] ml-auto">Ngữ cảnh thảo luận vẫn được duy trì</span>
+</div>
+<!-- Preserved Visible Reply 2.1 under it -->
+<div class="ml-8 md:ml-12 pl-4 border-l-2 border-outline-variant/60">
+<div class="p-4 rounded-xl bg-surface-bright border border-outline-variant/70 space-y-2.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold flex items-center justify-center">
+                        TT
+                      </div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-semibold text-xs text-primary">Thu Trang</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-medium">Nghiên cứu Hán học</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-xs text-outline">8 phút trước</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<div class="text-xs md:text-sm text-on-surface leading-relaxed pl-9">
+<p>
+                      Dù bình luận gốc đã gỡ, nhưng mình xin bổ sung thêm về chữ Hán <strong class="font-semibold">考 (Khảo)</strong> vs <strong class="font-semibold">推 (Thôi)</strong> để mọi người nắm rõ bản chất hình vị:
+                    </p>
+<p class="mt-1.5 text-on-surface-variant">
+                      • <strong>考 (Khảo):</strong> Mang nghĩa khảo sát, suy xét cẩn trọng dựa trên thực thể.<br/>
+                      • <strong>推 (Thôi):</strong> Nghĩa là đẩy tới, suy diễn ra từ một điểm khởi phát có sẵn.<br/>
+                      Nắm gốc từ này sẽ không bao giờ nhầm lẫn trong văn viết!
+                    </p>
+</div>
+<div class="flex items-center gap-4 pl-9 pt-1 text-xs">
+<button class="flex items-center gap-1 text-secondary font-medium" type="button">
+<span class="material-symbols-outlined text-sm fill-icon">thumb_up</span>
+<span>Hữu ích (7)</span>
+</button>
+<button class="text-primary hover:underline font-medium" type="button">Trả lời</button>
+<span class="text-outline">•</span>
+<button class="text-outline hover:text-error" type="button">Báo cáo</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== COMMENT 3: MODERATED COMMUNITY GUIDELINES NOTE STATE ===== -->
+<div class="p-4 rounded-xl bg-surface-bright border border-outline-variant/70 space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-xs">
+                    DN
+                  </div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-semibold text-xs text-primary">Đức Nam</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xs">verified_user</span>
+                        Được kiểm duyệt ngữ cảnh
+                      </span>
+<span class="text-outline text-xs">•</span>
+<span class="text-xs text-outline">5 phút trước</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-xs md:text-sm text-on-surface leading-relaxed pl-10">
+<p>
+                  Trong sách <em>Nihon Keigo no Kenkyu</em> của NXB Bonjinsha, có bảng tổng hợp về độ tự tin ngôn cảnh (Confidence Index) của người Nhật. Theo đó, 「〜と考えられる」 đạt 85% độ chắc chắn khẳng định luận điểm, trong khi 「〜と推測される」 dừng ở mức 55 - 60%. Đây là dẫn chứng rất hữu ích cho các bạn đang chuẩn bị bảo vệ khóa luận.
+                </p>
+</div>
+<div class="flex items-center gap-4 pl-10 pt-1 text-xs">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary font-medium" type="button">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>Hữu ích (4)</span>
+</button>
+<button class="text-primary hover:underline font-medium" type="button">Trả lời</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SYSTEM STATE AFFORDANCES PANEL ================= -->
+<!-- Quiet contextual preview for loading, empty state, and edge notifications -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant p-4 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-outline">tune</span>
+              Trạng thái hệ thống &amp; Phản hồi kết nối
+            </span>
+<span class="text-[11px] text-outline">WCAG 2.2 AA Tự động thích ứng</span>
+</div>
+<!-- Subtle Status Alert Banner (Non-intrusive) -->
+<div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="flex-1">Bộ đệm ngoại tuyến đã lưu phiên bản mới nhất. Khi mất mạng đột ngột, nội dung bạn soạn thảo sẽ không bị mất.</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-[11px] text-outline">Sẵn sàng</span>
+</div>
+</div>
+</div>
+<!-- ================= RIGHT COLUMN: CONTEXT SIDE RAIL (340px) ================= -->
+<!-- Strictly linguistic & learning context only (no ads, no trending widgets) -->
+<aside class="w-full lg:w-[340px] space-y-6 shrink-0">
+<!-- CARD 1: NGỮ CẢNH HỌC TẬP -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-5 space-y-4">
+<h3 class="text-sm font-bold font-headline text-primary uppercase tracking-wide flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">school</span>
+<span>Ngữ cảnh học tập</span>
+</h3>
+<div class="space-y-3 text-xs">
+<!-- Target Language Badge -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/60">
+<div class="text-outline text-[11px] font-medium mb-1">Ngôn ngữ mục tiêu</div>
+<div class="font-semibold text-primary text-sm flex items-center justify-between">
+<span>日本語 (Tiếng Nhật)</span>
+<span class="text-[11px] px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">Japanese</span>
+</div>
+</div>
+<!-- CEFR Level -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/60">
+<div class="text-outline text-[11px] font-medium mb-1">Trình độ tương thích</div>
+<div class="flex items-center justify-between">
+<span class="font-bold text-secondary text-sm">JLPT N2 / CEFR B2</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Trung cao cấp</span>
+</div>
+</div>
+<!-- Topic Details -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/60">
+<div class="text-outline text-[11px] font-medium mb-1">Chủ điểm chuyên sâu</div>
+<div class="font-semibold text-on-surface text-xs leading-snug">
+                Văn phong học thuật, Luận văn đại học &amp; Kính ngữ Keigo
+              </div>
+</div>
+</div>
+</div>
+<!-- CARD 2: NGUYÊN TẮC THẢO LUẬN TỬ TẾ -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-5 space-y-3">
+<h3 class="text-sm font-bold font-headline text-tertiary flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">balance</span>
+<span>Nguyên tắc thảo luận tử tế</span>
+</h3>
+<ul class="text-xs space-y-2 text-on-surface-variant leading-relaxed list-disc list-inside">
+<li><strong>Tôn trọng sắc thái bản ngữ:</strong> Ngôn ngữ sống động luôn có ngoại lệ văn cảnh vùng miền.</li>
+<li><strong>Tránh áp đặt quy chuẩn:</strong> Hãy dẫn chứng tài liệu hoặc ngữ cảnh thay vì phán xét đúng/sai tuyệt đối.</li>
+<li><strong>Khích lệ người mới:</strong> Giải thích rõ căn nguyên từ ngữ để tạo động lực cùng tiến bộ.</li>
+</ul>
+<div class="pt-2 border-t border-outline-variant/60">
+<a class="text-xs text-secondary hover:underline font-medium flex items-center gap-1" href="#">
+<span>Đọc toàn văn Quy ước chuẩn mực</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 3: TÀI LIỆU LIÊN QUAN TRONG THƯ VIỆN -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-5 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-sm font-bold font-headline text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">local_library</span>
+<span>Tài liệu trong Thư viện</span>
+</h3>
+<span class="text-[11px] text-secondary font-medium hover:underline cursor-pointer">Xem tất cả</span>
+</div>
+<div class="space-y-2.5 text-xs">
+<!-- Link 1 -->
+<a class="block p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors border border-outline-variant/60 group" href="#">
+<div class="font-medium text-on-surface group-hover:text-primary leading-snug">
+                Chuyên khảo: 〜と考えられる vs 〜と推測される trong 500 bài báo khoa học
+              </div>
+<div class="flex items-center gap-2 text-[11px] text-outline mt-1.5">
+<span class="text-secondary font-semibold">Tài liệu N2</span>
+<span>•</span>
+<span>PDF (12 trang)</span>
+</div>
+</a>
+<!-- Link 2 -->
+<a class="block p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors border border-outline-variant/60 group" href="#">
+<div class="font-medium text-on-surface group-hover:text-primary leading-snug">
+                Cẩm nang Kính ngữ &amp; Khiêm nhường ngữ thương mại (Keigo B2B)
+              </div>
+<div class="flex items-center gap-2 text-[11px] text-outline mt-1.5">
+<span class="text-tertiary font-semibold">Thực hành</span>
+<span>•</span>
+<span>Cập nhật 2025</span>
+</div>
+</a>
+<!-- Link 3 -->
+<a class="block p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors border border-outline-variant/60 group" href="#">
+<div class="font-medium text-on-surface group-hover:text-primary leading-snug">
+                Tổng hợp 40 mẫu câu nhận định khách quan trong tiếng Nhật học thuật
+              </div>
+<div class="flex items-center gap-2 text-[11px] text-outline mt-1.5">
+<span class="text-primary font-semibold">Ngữ pháp</span>
+<span>•</span>
+<span>Đánh giá 4.9/5</span>
+</div>
+</a>
+</div>
+</div>
+<!-- CARD 4: MÃ NGUỒN MỞ & HỖ TRỢ HỌC THUẬT -->
+<div class="p-4 rounded-xl bg-primary-container text-on-primary text-xs space-y-2">
+<div class="flex items-center gap-2 font-semibold">
+<span class="material-symbols-outlined text-secondary-fixed">diversity_3</span>
+<span>Dự án phi lợi nhuận vì cộng đồng</span>
+</div>
+<p class="text-on-primary-container leading-relaxed">
+            Mọi bài viết và phản hồi ngữ nghĩa đều được mở cho người học tra cứu tự do theo giấy phép tri thức mở Creative Commons.
+          </p>
+</div>
+</aside>
+</div>
+</main>
+<!-- ==================== CANONICAL NAVY FOOTER ==================== -->
+<!-- Conforms exactly to Footer shared component anchor and semantic logic -->
+<footer class="bg-primary text-primary-fixed mt-12 border-t border-primary-container">
+<div class="w-full py-10 px-6 lg:px-12 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Logo & Accessibility Compliance -->
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+<a class="font-headline text-lg font-bold text-on-primary tracking-tight" href="#">
+          CongDongNgonNgu.vn
+        </a>
+<div class="text-primary-fixed-dim text-xs leading-relaxed max-w-md">
+          © 2025 CongDongNgonNgu.vn. Tuân thủ tiêu chuẩn WCAG 2.2 AA. Bảo lưu mọi quyền.
+        </div>
+</div>
+<!-- Semantic Footer Nav Links -->
+<nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-body text-xs">
+<a class="text-primary-fixed-dim hover:text-on-primary hover:underline transition-colors" href="#">
+          Điều khoản dịch vụ
+        </a>
+<a class="text-primary-fixed-dim hover:text-on-primary hover:underline transition-colors" href="#">
+          Chính sách bảo mật
+        </a>
+<a class="text-secondary-fixed font-medium underline hover:text-on-primary transition-colors" href="#">
+          Trợ năng (WCAG 2.2 AA)
+        </a>
+<a class="text-primary-fixed-dim hover:text-on-primary hover:underline transition-colors" href="#">
+          Hướng dẫn cộng đồng
+        </a>
+<a class="text-primary-fixed-dim hover:text-on-primary hover:underline transition-colors" href="#">
+          Liên hệ hỗ trợ
+        </a>
+</nav>
+</div>
+</footer>
+</body></html>

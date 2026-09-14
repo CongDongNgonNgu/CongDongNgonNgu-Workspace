@@ -71,3 +71,99 @@ fixtures still require the backend/runtime environment and owner review.
 - DEPLOYED=NO
 - PHASE_05D_STARTED=NO
 - PHASE_06_STARTED=NO
+
+## Runtime and owner review evidence
+
+Date: 2026-09-14
+Review status: runtime behavior verified; visual and accessibility owner review remain REVIEW.
+
+### Exact runtime baseline
+
+- Frontend: `39af852b637acadc4624846478f453460e90ccdf` (`phase-05c-post-detail`), clean before review and unchanged during review.
+- Workspace evidence baseline: `f116f0d42bbba141482842c896e477f4f2830440` (`main`).
+- Backend: `85066b6c9e75a7f8a4339d2cc8415a7c627c7494` (`main`), source read-only and clean.
+- Database: authorized Neon TEST database only. A read-only query found `0001_identity.sql`, `0002_language_profile.sql`, and `0003_community.sql` already recorded in `schema_migrations`; the migration runner was not invoked and no migration files were changed.
+- Real runtime origin: backend `localhost:3000`, frontend `http://localhost:5173`.
+- `/health` returns 404 because this backend exposes the namespaced route; `/api/v1/health` returns 200. `/api/v1/languages` and `/api/v1/community/posts` both return 200. No Community 500 occurred.
+
+### Test identities and review data
+
+Two disposable identities were registered, email-verified through the configured local test mail sink, and logged in through the normal auth flow. No production credentials, bypassed guards, source tokens, or passwords are recorded here.
+
+- USER_A / post owner: `a31742c2-88a5-418e-ac65-2c829e9eb53e`
+- USER_B / commenter: `8446ac93-e64b-4638-aa09-4f6495fc2b6c`
+- Canonical review post: `df20c0bb-0ac4-4231-9deb-e4d19613b218`
+- Disposable UI-delete post: `73601df6-ae14-4ecd-b82b-39fad9225070` (deleted through the owner UI after confirmation)
+- Deleted parent with retained reply: `044e12fd-be53-4474-b85f-d27cabf6072b` / reply `ea09bb2e-2426-424a-95e4-22e6c00f05b8`
+- Disposable comment deleted through USER_B UI: `f163f39e-4c94-4f0a-8b2a-90018bdeaa9c`
+- Long Vietnamese comment: `9a2751a5-ebc5-43fb-995e-e689df2f5c06`
+
+The canonical post is public, authored by USER_A, Japanese, DISCUSSION, CEFR B1, topic `neon-test-only`, multiline, and contains Vietnamese/CJK text plus literal XSS probes. All data above is `NEON_TEST_ONLY`.
+
+### API contract results
+
+| Contract | Result |
+| --- | --- |
+| Post detail and comments read | 200 / 200 |
+| Create top-level comment and depth-1 reply | 201 / 201 |
+| Depth-2 reply attempt | 400, `COMMUNITY_COMMENT_DEPTH_EXCEEDED`; no depth-2 UI path exposed |
+| Own comment edit | 200 |
+| Unauthorized comment edit/delete | 403, `COMMUNITY_FORBIDDEN` |
+| Delete parent with visible reply | 200; detail returns deleted placeholder (`author=null`, `content=null`, `isDeleted=true`) and visible reply |
+| Helpful add/remove | 201 / 200; final runtime state visible |
+| Save add/remove | 201 / 200; final runtime state visible |
+| Share | 200; canonical path `/community/posts/df20c0bb-0ac4-4231-9deb-e4d19613b218` |
+| Post and comment reports | 201 / 201; UI exposes generic submission only |
+| Own post edit | 200; UI edit retained input and displayed the saved marker |
+| Unauthorized post edit/delete | 403 / 403 |
+| Disposable post owner delete | 200 through the confirmed UI flow |
+
+### Browser owner/non-owner review
+
+- Direct navigation and browser refresh of the canonical detail route work at the CORS-allowed `localhost` origin.
+- Unauthenticated public detail/comments reads also worked; the expected unauthenticated refresh denial was not treated as an application error.
+- USER_A sees post edit/delete, current values in the edit dialog, no title field, the authenticated composer, and own comment controls.
+- USER_B does not see post edit/delete or USER_A comment edit/delete controls; USER_B can edit and delete only its own disposable comment. Report remains available where appropriate.
+- The report dialog contains only category/details and returns generic success. No moderation status, reporter identity, queue position, or duplicate count is exposed.
+- Literal `<script>alert(1)</script>` and `<img src=x onerror=alert(1)>` render as text. No script executed, no injected element appeared, and no `dangerouslySetInnerHTML` rendering path was used.
+
+### Screenshots and Stitch comparisons
+
+Canonical assets are preserved unchanged: [desktop Stitch raster](./DETAIL_STITCH_DESKTOP.png), [mobile Stitch raster](./DETAIL_STITCH_MOBILE.png), [desktop Stitch HTML](./DETAIL_STITCH_DESKTOP.html), and [mobile Stitch HTML](./DETAIL_STITCH_MOBILE.html).
+
+- `DETAIL_STITCH_DESKTOP=51fd56d9452c48d198f814f89c6baa36`
+- `DETAIL_STITCH_MOBILE=5c3d5fbc3ac646a183425122e9ae57f5`
+- `DETAIL_RUNTIME_DESKTOP=[DETAIL_RUNTIME_DESKTOP.png](./DETAIL_RUNTIME_DESKTOP.png)`
+- `DETAIL_RUNTIME_MOBILE=[DETAIL_RUNTIME_MOBILE.png](./DETAIL_RUNTIME_MOBILE.png)`
+- `DETAIL_SIDE_BY_SIDE_DESKTOP=[DETAIL_SIDE_BY_SIDE_DESKTOP.md](./DETAIL_SIDE_BY_SIDE_DESKTOP.md)`
+- `DETAIL_SIDE_BY_SIDE_MOBILE=[DETAIL_SIDE_BY_SIDE_MOBILE.md](./DETAIL_SIDE_BY_SIDE_MOBILE.md)`
+
+The populated runtime is functional at both canonical viewports, but it is not a visual PASS. Material differences are recorded explicitly in the side-by-side artifacts:
+
+1. Desktop comments are rendered as one enclosing card with divider-separated rows; Stitch uses individually bordered comment cards with richer per-thread grouping, metadata, overflow actions, and an inline reply-composer state.
+2. Runtime places the post Helpful/Save/Share/Report actions in one bottom action row and owner Edit/Delete beside the generic heading; Stitch places post save/share/overflow controls in the post header and uses a different comment action grouping.
+3. The Stitch desktop rail contains four learning-context cards; runtime currently exposes one concise learning-context card.
+4. Stitch’s deleted-parent treatment is a dashed explanatory placeholder with explicit continuation copy; runtime communicates the deleted state and keeps the indented reply, but with a simpler placeholder treatment.
+5. Stitch’s mobile detail header is a back/title/save/share bar; runtime retains the accepted global mobile header and bottom navigation. The populated runtime remains readable and has no horizontal overflow, but the shell/action placement is structurally different from the detail-specific Stitch reference.
+
+Therefore: `VISUAL_DETAIL_1440=REVIEW` and `VISUAL_DETAIL_390=REVIEW`. No broad redesign or frontend remediation was applied in this preparation pass.
+
+### Responsive and accessibility checks
+
+At 320, 375, 390, 412, 768, 1024, and 1440, `scrollWidth == clientWidth`; no horizontal overflow was observed. The post body, deleted placeholder, comments, reply indentation, and composer remained present. The mobile composer accepted keyboard input without submitting data.
+
+Lighthouse snapshot results: desktop and mobile each scored Accessibility 97, Best Practices 100, SEO 100, Agentic Browsing 100. The single accessibility audit failure is `color-contrast`. Manual dialog checks also found that opening a modal leaves focus on the trigger, Tab moves outside the dialog, and closing restores focus to `body` rather than the trigger. `ACCESSIBILITY=FAIL` for owner acceptance pending remediation.
+
+### Console and network
+
+- Application console errors: 0 during the final authenticated route review; Vite/React informational messages only.
+- Unexpected network errors: 0 on the final authenticated route review. Auth refresh 403 observed only on the intentionally unauthenticated `127.0.0.1` origin; the CORS-allowed `localhost` owner session refreshed with 201.
+- No failed asset requests, Community 500, unhandled promise rejection, or normal-path comment request failure observed.
+
+### Verification and state boundaries
+
+- Focused detail suite after runtime review: 10 tests passed.
+- Existing baseline retained because no frontend source changed: 26 test files / 122 tests passed, typecheck passed, lint passed, build passed, and `npm audit --audit-level=high` passed with 0 vulnerabilities.
+- `PHASE_05=IN_PROGRESS`
+- `LNG_05_001=DONE`, `LNG_05_002=DONE`, `LNG_05_003=VERIFYING`, `LNG_05_004=DONE`, `LNG_05_005=DONE`, `LNG_05_006=VERIFYING`, `LNG_05_007=PLANNED`
+- Backend source changed: NO. Frontend source changed: NO. Push: NO. Deploy: NO. Phase 05D: NOT STARTED. Phase 06: NOT STARTED.
