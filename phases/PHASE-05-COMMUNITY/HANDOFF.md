@@ -3,21 +3,40 @@
 Phase status: IN_PROGRESS
 
 Phase 05A backend foundation is implemented and locally verified. Phase 05B
-frontend feed and composer surfaces are implemented and locally verified;
-visual owner acceptance remains REVIEW. Production deployment and Phase 06
-were not started.
+frontend Feed and Composer surfaces were accepted by the owner on 2026-09-14
+after visual/runtime review. Phase 05C remains separate work; production
+deployment and Phase 06 were not started.
 
 ## Required status
 
 ~~~text
 PHASE_05=IN_PROGRESS
 LNG_05_001=DONE
-LNG_05_002=VERIFYING
+LNG_05_002=DONE
 LNG_05_003=VERIFYING
-LNG_05_004=VERIFYING
-LNG_05_005=VERIFYING
+LNG_05_004=DONE
+LNG_05_005=DONE
 LNG_05_006=VERIFYING
 LNG_05_007=PLANNED
+~~~
+
+## Current Phase 05B owner acceptance reconciliation
+
+The following is the current acceptance state. Earlier `REVIEW` and
+`PUSHED=NO` statements in this handoff are historical snapshots and are
+superseded by `evidence/phase-05b/OWNER-ACCEPTANCE-2026-09-14.md`.
+
+~~~text
+OWNER_VISUAL_ACCEPTANCE=YES
+FRONTEND_ACCEPTED_SHA=00727560aa5886f5780a58ba6d46746254c29248
+WORKSPACE_ACCEPTED_BASELINE_SHA=bde4eeafe034ce07bc82c7f07c9d2ec2e3b91e59
+WORKSPACE_RECONCILIATION_COMMIT=THIS_COMMIT
+BACKEND_SHA=85066b6c9e75a7f8a4339d2cc8415a7c627c7494
+BACKEND_CHANGED=NO
+NEXT_GATE=PHASE_05C
+PHASE_05C_STARTED=NO
+PHASE_06_STARTED=NO
+DEPLOYED=NO
 ~~~
 
 ## Backend contract
@@ -159,20 +178,20 @@ DEPLOYED=NO
 PHASE_05B_STARTED=YES
 PHASE_06_STARTED=NO
 BACKEND_CHANGED=NO
-PUSHED=NO
+PUBLISH_TARGET=main (publication follows this reconciliation commit)
 BACKEND_SHA=85066b6c9e75a7f8a4339d2cc8415a7c627c7494
 BACKEND_BASELINE_SHA=c8455a23731d8e8d0744818851ec50fa18d46a04
 FRONTEND_BASELINE_SHA=2b7992a9b7dd68d688a721690218a4a7b141bdc1
 FRONTEND_BRANCH=phase-05b-community
-FRONTEND_LOCAL_COMMIT=c306feb91e13366180cc6226a345955425b2c236
-WORKSPACE_LOCAL_COMMIT=SEE_FINAL_REPORT
+FRONTEND_LOCAL_COMMIT=00727560aa5886f5780a58ba6d46746254c29248
+WORKSPACE_LOCAL_COMMIT=bde4eeafe034ce07bc82c7f07c9d2ec2e3b91e59
 WORKSPACE_BASELINE_SHA=628a765bfbc0b45fe0f2bd41e6305a73b3027467
 WORKSPACE_EVIDENCE_SHA=2f3c32824a0b5c13cccf03c339bf23414ceb5fac
 ~~~
 
-Current state: clean local frontend and workspace commits created. Do not
-push or deploy. Visual task acceptance remains REVIEW, and Phase 05C/06
-remain unstarted.
+Current state before publication: accepted local Frontend and Workspace
+commits are clean; the Workspace reconciliation commit is documentation-only.
+Do not deploy. Phase 05C/06 remain unstarted.
 
 ## Phase 05B frontend evidence
 
@@ -182,10 +201,10 @@ remain unstarted.
 PHASE_05B_SCOPE=COMMUNITY_FEED_AND_COMPOSER
 PHASE_05=IN_PROGRESS
 LNG_05_001=DONE
-LNG_05_002=VERIFYING
+LNG_05_002=DONE
 LNG_05_003=VERIFYING
-LNG_05_004=VERIFYING
-LNG_05_005=VERIFYING
+LNG_05_004=DONE
+LNG_05_005=DONE
 LNG_05_006=VERIFYING
 LNG_05_007=PLANNED
 ~~~
@@ -252,13 +271,13 @@ STITCH_FEED_DESKTOP=dd54a8ce055d4284870e1822cef33d2f
 STITCH_FEED_MOBILE=edb521a9ac77463a896dd047770fb9e3
 STITCH_COMPOSER_DESKTOP=b7320fdfb139424e84e11d42f42a4525
 STITCH_COMPOSER_MOBILE=93e2741039e446938f56a1341980c77d
-VISUAL_FEED_DESKTOP=REVIEW
-VISUAL_FEED_MOBILE=REVIEW
-VISUAL_COMPOSER_DESKTOP=REVIEW
-VISUAL_COMPOSER_MOBILE=REVIEW
+VISUAL_FEED_DESKTOP=PASS
+VISUAL_FEED_MOBILE=PASS
+VISUAL_COMPOSER_DESKTOP=PASS
+VISUAL_COMPOSER_MOBILE=PASS
+OWNER_VISUAL_ACCEPTANCE=YES
 ~~~
 
-Visual tasks are intentionally not marked DONE; data-populated visual owner
-acceptance remains pending. No detail/comments route, edit/delete flow,
-comment-report flow, backend change, push, deployment, Phase 05C, or Phase
-06 work was started.
+Feed and Composer visual tasks are owner-accepted. No detail/comments route,
+edit/delete flow, comment-report flow, Backend change, deployment, Phase 05C,
+or Phase 06 work was started.
