@@ -11,7 +11,8 @@ creation, inline diff, acceptance, voting, reputation, Library promotion,
 audio, AI, or Backend changes.
 
 The parent Phase 06 remains IN_PROGRESS. LNG-06-002 remains VERIFYING pending
-owner visual/runtime acceptance.
+owner visual/runtime acceptance at the time of the historical implementation
+record.
 
 ## Canonical routes
 
@@ -188,7 +189,8 @@ MATERIAL_DIFFERENCES=NONE
 The focused local Frontend remediation commit is
 c85c9415c359a42919db0e29534177aa1ccc576b. It also makes the existing async
 redirect assertions deterministic. Backend and database state were not
-changed. LNG-06-002 remains VERIFYING pending owner acceptance.
+changed. Owner acceptance is now recorded in the reconciliation commit below;
+LNG-06-002 is DONE.
 
 ## Local commits
 

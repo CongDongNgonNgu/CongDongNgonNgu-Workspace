@@ -1,7 +1,7 @@
 # Phase 06B — Runtime Verification and Visual Evidence
 
 Date: 2026-09-15
-Status: CURRENT / OWNER VISUAL ACCEPTANCE PENDING
+Status: CURRENT / OWNER VISUAL ACCEPTED
 Data boundary: Neon TEST only
 
 This document supersedes the historical screenshot-export and runtime
@@ -160,5 +160,27 @@ controls at any required width. Live desktop and emulated 390px snapshots
 confirmed labels, descriptions, live counts, intent/radio semantics,
 visible focusable actions, and submit status.
 
-The parent Phase 06 remains IN_PROGRESS; LNG-06-002 remains VERIFYING pending
-owner visual acceptance.
+## Owner acceptance reconciliation
+
+OWNER_VISUAL_ACCEPTANCE_06B=YES
+
+The owner manually reviewed and accepted the Phase 06B visual and runtime
+result. The accepted routes, locked Stitch IDs, real Neon TEST creations,
+redirects, Unicode/source preservation, responsive checks, accessibility
+checks, and automated gates are recorded above.
+
+~~~text
+CURRENT_PHASE=06
+PHASE_06=IN_PROGRESS
+LNG_06_001=DONE
+LNG_06_002=DONE
+LNG_06_003=PLANNED
+LNG_06_004=PLANNED
+LNG_06_005=PLANNED
+LNG_06_006=PLANNED
+LNG_06_007=PLANNED
+NEXT_WORK=PHASE_06C
+~~~
+
+Phase 06 remains IN_PROGRESS. Phase 06C is the next planned work and was not
+started by this publication reconciliation.
