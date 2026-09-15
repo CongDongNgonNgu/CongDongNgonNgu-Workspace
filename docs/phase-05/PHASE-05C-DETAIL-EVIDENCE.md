@@ -262,3 +262,86 @@ and usable.
 - `DEPLOYED=NO`
 - `PHASE_05D_STARTED=NO`
 - `PHASE_06_STARTED=NO`
+
+## Owner acceptance and Phase 05C reconciliation
+
+Date: 2026-09-15<br>
+Owner visual acceptance: `OWNER_VISUAL_ACCEPTANCE_05C=YES`
+
+The owner has manually reviewed and accepted the populated Phase 05C Post
+Detail and Comments/Replies result against the locked Stitch references.
+
+### Accepted baselines
+
+- Frontend accepted local SHA: `d674578ae2c3f139b625200fe95d0f6c46bf0f14`
+- Workspace accepted evidence SHA before reconciliation: `c10533831425ffea499cca7eeea5521907ffb262`
+- Backend published baseline: `85066b6c9e75a7f8a4339d2cc8415a7c627c7494`, unchanged
+- Desktop Stitch: `51fd56d9452c48d198f814f89c6baa36`
+- Mobile Stitch: `5c3d5fbc3ac646a183425122e9ae57f5`
+- Runtime and visual-review data: `NEON_TEST_ONLY`
+
+### Accepted Phase 05C result
+
+- `VISUAL_DETAIL_1440=PASS`
+- `VISUAL_DETAIL_390=PASS`
+- `MATERIAL_DIFFERENCES=NONE`
+- `COMMENT_THREAD=PASS`
+- `REPLY_DEPTH_0_1=PASS`
+- `DELETED_PARENT=PASS`
+- `POST_OWNER_EDIT_DELETE=PASS`
+- `COMMENT_OWNER_EDIT_DELETE=PASS`
+- `COMMENT_REPORT=PASS`
+- `HELPFUL_DETAIL=PASS`
+- `SAVE_DETAIL=PASS`
+- `SHARE_DETAIL=PASS`
+- `POST_REPORT_DETAIL=PASS`
+- `XSS_SAFE_RENDERING=PASS`
+- `ACCESSIBILITY=PASS`
+- `COLOR_CONTRAST=PASS`
+- `MODAL_FOCUS_TRAP=PASS`
+- `MODAL_FOCUS_RESTORATION=PASS`
+- `KEYBOARD_NAVIGATION=PASS`
+- `VISIBLE_FOCUS=PASS`
+- Lighthouse: Accessibility 100, Best Practices 100, SEO 100
+- Responsive matrix: 320, 375, 390, 412, 768, 1024, 1440 all PASS
+- Frontend verification: 26 test files / 126 tests PASS; focused detail 13/13 PASS; Dialog/A11y 2/2 PASS; typecheck, lint, build, and audit PASS with 0 vulnerabilities
+- Runtime: application console errors 0; unexpected network errors 0
+- Accepted 05B regressions: Feed PASS; Composer PASS
+
+Final evidence remains available at:
+
+- [Phase 05C detail evidence](./PHASE-05C-DETAIL-EVIDENCE.md)
+- [Final desktop runtime](./DETAIL_RUNTIME_DESKTOP_FINAL.jpeg)
+- [Final mobile runtime](./DETAIL_RUNTIME_MOBILE_FINAL.jpeg)
+- [Desktop comparison](./DETAIL_SIDE_BY_SIDE_DESKTOP.md)
+- [Mobile comparison](./DETAIL_SIDE_BY_SIDE_MOBILE.md)
+
+### State transition
+
+```text
+PHASE_05=IN_PROGRESS
+LNG_05_001=DONE
+LNG_05_002=DONE
+LNG_05_003=DONE
+LNG_05_004=DONE
+LNG_05_005=DONE
+LNG_05_006=DONE
+LNG_05_007=PLANNED
+```
+
+LNG-05-003 is complete because Backend comments, replies, reactions, bounded
+depth, deleted-parent handling, owner mutation paths, and runtime integration
+are verified. LNG-05-006 is complete because Feed, Post Card, Composer, Post
+Detail, Comment Thread, desktop/mobile visual gates, responsive checks, and
+accessibility runtime checks are owner-accepted.
+
+The next gate is Phase 05D / LNG-05-007. Phase 05 remains in progress. Phase
+06 is not ready, and no Phase 05D implementation is included in this commit.
+
+### Health and database boundaries
+
+- Valid health contract: `GET /api/v1/health => 200`
+- `GET /health => 404` is expected for this Backend and is not a defect.
+- Neon TEST was not reset, migrated, seeded, or otherwise changed by this
+  publication task.
+- Backend source and application code in Workspace were not modified.
