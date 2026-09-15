@@ -7,7 +7,7 @@
 Extend community posts without duplicating the entire post model. Represent correction requests, structured correction proposals, explanations, accepted correction/answer, helpful votes and reviewer metadata. Preserve original text immutably or with explicit revision history so diffs remain meaningful.
 
 ## LNG-06-002 — Ask for Correction / Ask Question
-**Status:** VERIFYING (backend request-creation foundation present; 06B frontend deferred)
+**Status:** VERIFYING (06A backend foundation and 06B frontend request flows implemented locally; owner visual/runtime acceptance pending)
 **Depends on:** LNG-06-001
 
 Create validated flows for source text/question, target language, optional level/context and privacy/visibility consistent with community rules. Composer must clarify whether the user requests grammar/style/naturalness/pronunciation-related help. Prevent empty/oversized submissions and duplicate retries.

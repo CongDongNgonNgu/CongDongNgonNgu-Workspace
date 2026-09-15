@@ -90,3 +90,28 @@ NEON_TEST_DATA_CLEANUP=NONE (exact synthetic TEST records retained)
   34934973288 concluded successfully. Workspace main is published with this
   handoff/evidence reconciliation. Both temporary local branches were deleted;
   no matching temporary remote branches existed.
+
+## Phase 06B status
+
+The Frontend request-creation slice is implemented locally on
+phase-06b-request-ui. It adds /community/ask/correction and
+/community/ask/question, uses the published Phase 06A endpoints, preserves
+learner text, filters the active language catalog, and redirects to the real
+Community post detail ID after success.
+
+Exact Stitch IDs, payload boundaries, tests, browser checks, screenshot-export
+limitation, and owner-acceptance state are recorded in
+evidence/PHASE-06B-IMPLEMENTATION.md.
+
+~~~text
+FRONTEND_CHANGED=YES
+FRONTEND_LOCAL_SHA=04b452b62b3a0dbeec8df9f4b60403d4d3e7932e
+FRONTEND_LOCAL_WORKTREE=CLEAN
+LNG-06-002=VERIFYING
+VISUAL_OWNER_ACCEPTANCE=PENDING
+NEON_TEST_UI_CREATION=UNVERIFIED
+PUSHED=NO
+DEPLOYED=NO
+PHASE_06C_STARTED=NO
+PHASE_06D_STARTED=NO
+~~~
