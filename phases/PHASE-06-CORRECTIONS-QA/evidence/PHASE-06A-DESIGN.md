@@ -105,3 +105,16 @@ Rate controls reuse the existing process-local Community limiter for new Phase
 No diff algorithm/UI, frontend composer, response editing UI, vote/helpful UI,
 acceptance UI, reputation scoring, Library candidate conversion, moderation
 admin, production deployment, or production database access is part of 06A.
+
+## Implementation slices
+
+1. Contract slice: add bounded enums/types, text normalization, DTOs, the
+   migration/down migration, repository contracts, and red/green unit tests.
+2. Parent slice: add atomic correction/question creation, shared Community
+   parent projection, and authenticated controller routes; verify feed/detail
+   identity and rollback/uniqueness behavior.
+3. Response slice: add structured correction/answer creation and reads with
+   parent-kind, privacy, self-response, Unicode, no-op, and XSS coverage.
+4. Gate slice: run migration status/apply/rerun against authorized Neon TEST,
+   execute focused and full Backend gates, reconcile evidence/HANDOFF, commit,
+   publish only after all authorized gates pass.
