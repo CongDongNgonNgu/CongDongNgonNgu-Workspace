@@ -13,7 +13,7 @@ Model posts, comments/replies, reactions, tags, saved posts and reports with aut
 Backend: validated create/read/update/delete with ownership/admin hooks, content length/media rules and stable pagination. Frontend: use Stitch for composer and creation flows; choose post type, language, optional level/topic and content. Draft/retry states must not double-submit. Sanitize/render user content safely.
 
 ## LNG-05-003 — Comments, Replies & Reactions
-**Status:** VERIFYING (backend comments/replies/reactions and post-level Helpful exist; frontend comment/reply/detail integration remains Phase 05C)
+**Status:** DONE (comments, replies, reactions, authorization, abuse controls, and reconciliation verified in Phase 05D)
 **Depends on:** LNG-05-001, LNG-05-002
 
 Implement bounded threading strategy, author permissions, reaction idempotency/toggle behavior and deleted-parent presentation. Prevent reaction/comment spam with rate controls. Ensure counts reconcile after deletion/moderation.
@@ -31,13 +31,13 @@ Feed signals: learner languages, post language, usefulness and recency. Document
 Saved posts remain private. Share uses safe canonical links without leaking private content. Report captures category/reason and creates moderation-ready state; users cannot use report API to inspect other reports.
 
 ## LNG-05-006 — Community UI Surfaces
-**Status:** VERIFYING (Feed, Post Card, and Composer accepted; Post Detail and Comment Thread remain Phase 05C)
+**Status:** DONE (Feed, Post Card, Composer, Post Detail, Comment Thread, responsive, accessibility, and visual gates accepted)
 **Depends on:** LNG-05-002..005
 
 Use Stitch for feed, post card/list presentation, detail, comment thread and contextual right rail/filters. Mobile should prioritize readable content and composer access rather than stacking three desktop columns. Include empty/loading/error/moderated/deleted states.
 
 ## LNG-05-007 — Abuse, Authorization & Reconciliation
-**Status:** PLANNED (backend negative-path coverage started)
+**Status:** DONE (security negative paths, abuse controls, runtime regression, evidence, CI, and publication complete)
 **Depends on:** LNG-05-001..006
 
 Test ID tampering, blocked/deleted users if available, ownership, spam/rate boundaries, XSS rendering, duplicate reactions, pagination and report privacy. Run responsive/a11y/visual gates, push commits and update handoff.

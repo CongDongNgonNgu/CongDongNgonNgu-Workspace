@@ -45,3 +45,9 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Impact: commit and remote-SHA gates were open until publication; CI was not independently verified in this session.
   - Resolution evidence/date: Backend `25ad79cfa5740271fd925dfc4140a3d828ee98cc`, Frontend `b333707c2ca8a55a80dea945450dd0b3a6b69e9d`, and Workspace `5e35273ede61981fbeafeb3b29c94513d89cdf8f` each match origin/main, 2026-09-09.
   - Safe work that may continue: Google live-provider verification remains covered by BLOCKER-02-001; no EduAI repository or production database was touched.
+
+- BLOCKER-05D-001 / LNG-05-007 / BLOCKED_INTERNAL / OPEN
+  - Evidence/date: Community rate limiting is implemented as a process-local in-memory map; no approved shared limiter or Redis foundation is configured, 2026-09-15.
+  - Impact: the current single-process TEST runtime has deterministic per-actor/per-operation limits, but the control is not distributed across horizontally scaled Backend instances.
+  - Resolution owner/dependency: future production deployment work must confirm a single-instance model or provide an approved shared limiter before horizontal scaling.
+  - Safe work that may continue: Phase 05 is closed for the verified current scope; do not represent the current limiter as distributed protection.

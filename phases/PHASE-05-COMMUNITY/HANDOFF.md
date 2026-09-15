@@ -193,6 +193,33 @@ Current state before publication: accepted local Frontend and Workspace
 commits are clean; the Workspace reconciliation commit is documentation-only.
 Do not deploy. Phase 05C/06 remain unstarted.
 
+## Phase 05D security and closure
+
+Phase 05D is complete. The final evidence matrix, live TEST identifiers,
+runtime screenshots, rate-limit architecture note, and exact verification
+results are in
+docs/phase-05/PHASE-05D-SECURITY-EVIDENCE.md.
+
+~~~text
+PHASE_05=DONE
+LNG_05_007=DONE
+PHASE_06=READY
+PHASE_06_STARTED=NO
+BACKEND_CHANGED=YES
+BACKEND_SHA=833a4228a0e750aebfcd042a992afa26121f5be7
+BACKEND_CI=PASS / 34926059622
+FRONTEND_CHANGED=NO
+FRONTEND_SHA=d674578ae2c3f139b625200fe95d0f6c46bf0f14
+NEON_TEST_ONLY=YES
+PRODUCTION_DATABASE_TOUCHED=NO
+DEPLOYED=NO
+~~~
+
+Two minimal Backend corrections were made: inactive-author/inactive-language
+targets now use the same unavailable contract as other unreadable posts, and
+inactive-author comments remain privacy-safe placeholders so counts reconcile.
+No API shape, migration, OAuth flow, or Frontend source changed.
+
 ## Phase 05B frontend evidence
 
 ### Effective status
