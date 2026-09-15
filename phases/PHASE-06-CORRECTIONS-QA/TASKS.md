@@ -1,7 +1,7 @@
 # Phase 06 Tasks
 
 ## LNG-06-001 — Correction & Q&A Domain Model
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Depends on:** Phase 05
 
 Extend community posts without duplicating the entire post model. Represent correction requests, structured correction proposals, explanations, accepted correction/answer, helpful votes and reviewer metadata. Preserve original text immutably or with explicit revision history so diffs remain meaningful.
