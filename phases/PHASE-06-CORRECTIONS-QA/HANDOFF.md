@@ -36,9 +36,9 @@ evidence) is intentionally deferred.
 ## Exact implementation
 
 ~~~
-BACKEND_BRANCH=phase-06a-backend-foundation
+BACKEND_FINAL_BRANCH=main
 BACKEND_COMMIT=81fa517
-WORKSPACE_BRANCH=phase-06a-workspace-evidence
+WORKSPACE_FINAL_BRANCH=main
 FRONTEND_CHANGED=NO
 MIGRATION=0004_corrections_qa.sql
 ~~~
@@ -86,5 +86,7 @@ NEON_TEST_DATA_CLEANUP=NONE (exact synthetic TEST records retained)
 - No acceptance/revocation endpoints, response voting endpoints, reputation
   awards, Library candidate writes, AI verification, or Frontend changes were
   included.
-- CI/remote publication was not performed in this slice; the implementation
-  commit is local on the dedicated backend branch.
+- Backend main is published at 81fa517 and its required CI run
+  34934973288 concluded successfully. Workspace main is published with this
+  handoff/evidence reconciliation. Both temporary local branches were deleted;
+  no matching temporary remote branches existed.
