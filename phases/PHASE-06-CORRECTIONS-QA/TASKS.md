@@ -13,13 +13,13 @@ Extend community posts without duplicating the entire post model. Represent corr
 Create validated flows for source text/question, target language, optional level/context and privacy/visibility consistent with community rules. Composer must clarify whether the user requests grammar/style/naturalness/pronunciation-related help. Prevent empty/oversized submissions and duplicate retries.
 
 ## LNG-06-003 — Inline Correction Editor & Diff
-**Status:** PLANNED
+**Status:** VERIFYING (06C structured response editor, Unicode-safe diff, and accessible rendering implemented locally; authenticated runtime evidence pending)
 **Depends on:** LNG-06-001, LNG-06-002
 
 Use Stitch before frontend implementation. Build an accessible correction editor and diff presentation showing original vs corrected content without relying on red/green color alone. Support explanations tied to whole correction and future segment-level notes if architecture permits. Backend stores canonical structured values, not only rendered HTML.
 
 ## LNG-06-004 — Voting, Helpful & Accepted Answer/Correction
-**Status:** PLANNED
+**Status:** VERIFYING (Helpful and requester acceptance APIs/UI implemented locally; authenticated Neon TEST journey pending)
 **Depends on:** LNG-06-003
 
 Requester may accept a valid response according to ownership rules; voters cannot self-farm; one vote state per user; acceptance can be changed with audit/history if product permits. Distinguish “accepted by asker” from “verified linguistic resource”.

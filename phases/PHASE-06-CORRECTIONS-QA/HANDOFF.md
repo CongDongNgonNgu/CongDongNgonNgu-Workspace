@@ -115,3 +115,64 @@ DEPLOYED=NO
 PHASE_06C_STARTED=NO
 PHASE_06D_STARTED=NO
 ~~~
+
+## Phase 06C — local implementation and verification boundary
+
+The 06C implementation slice is present on local-only branches. It extends the
+existing structured-response contract with server-authoritative Helpful state,
+requester-only acceptance/revocation, a Unicode-safe accessible diff, and
+correction/QA response editors. No migration or schema change was made; the
+existing 0004 corrections/QA tables and constraints are used.
+
+~~~text
+FRONTEND_BRANCH=phase-06c-diff-ui
+FRONTEND_SHA=598ba64f586d11e38ef0631039221eb07263dcc7
+BACKEND_BRANCH=phase-06c-interactions
+BACKEND_SHA=6a326a79adf80b7ddc6e1cbb077171a6bc22ce78
+BACKEND_BASELINE=81fa51780ef43193eaf50cd41b517d1b917c71b5
+SCHEMA_CHANGE_REQUIRED=NO
+MIGRATION_CHANGED=NO
+PUSHED=NO
+DEPLOYED=NO
+PHASE_06D_STARTED=NO
+~~~
+
+Automated verification is green locally: Backend unit 81/81 across 18 suites,
+Backend e2e 39/39 across 8 suites, Frontend 147/147 across 32 files,
+typechecks/lint/builds pass in both repositories, and both dependency audits
+report zero vulnerabilities. Focused UI tests cover safe XSS text rendering,
+server-returned Helpful updates, requester acceptance, and self-vote action
+hiding. The diff tests cover one-word replacement, sentence rewrite,
+deletion/addition, long Unicode paragraphs, CJK and surrogate-pair text.
+
+Stitch references used for this slice are the locked/generated 06C screens:
+
+~~~text
+STITCH_PROJECT=3718538619973058970
+CORRECTION_STITCH_DESKTOP=6b1d27c554874ba28b0445321ea5ff73
+CORRECTION_STITCH_MOBILE=5dd468a98e9f4e78abfa0dd2876d963c
+QUESTION_STITCH_DESKTOP=00b56f19add842ffa17fb28e796b709c
+QUESTION_STITCH_MOBILE=1f3d9d68d2b84f809e46db969570443d
+~~~
+
+Read-only public checks against the existing Neon TEST parent records returned
+200 for both parent detail routes and both structured-response list routes;
+both lists were empty. Browser registration also exercised the real supported
+flow and created a disposable pending-verification TEST identity. The local
+development configuration has a memory email provider and no inbox, so the
+verification link is unavailable. Authenticated response creation, Helpful,
+acceptance, screenshots, side-by-side comparisons, Lighthouse, and populated
+responsive/a11y runtime evidence remain BLOCKED and are not represented as
+PASS. See BLOCKER-06C-001 and evidence/PHASE-06C-IMPLEMENTATION.md.
+
+~~~text
+CURRENT_PHASE=06
+PHASE_06=IN_PROGRESS
+LNG_06_001=DONE
+LNG_06_002=DONE
+LNG_06_003=VERIFYING
+LNG_06_004=VERIFYING
+LNG_06_005=PLANNED
+LNG_06_006=PLANNED
+LNG_06_007=PLANNED
+~~~

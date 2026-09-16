@@ -51,3 +51,9 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Impact: the current single-process TEST runtime has deterministic per-actor/per-operation limits, but the control is not distributed across horizontally scaled Backend instances.
   - Resolution owner/dependency: future production deployment work must confirm a single-instance model or provide an approved shared limiter before horizontal scaling.
   - Safe work that may continue: Phase 05 is closed for the verified current scope; do not represent the current limiter as distributed protection.
+
+- BLOCKER-06C-001 / LNG-06-003, LNG-06-004, LNG-06-007 / BLOCKED_EXTERNAL / OPEN
+  - Evidence/date: the exact local Backend and Frontend branches started successfully on 2026-09-16. Browser registration created a disposable Neon TEST identity and returned to the supported email-verification screen, but the local configuration uses the documented memory email provider and exposes no inbox or verification link.
+  - Impact: authenticated browser creation, Helpful, acceptance, responsive populated captures, and Lighthouse review cannot be truthfully completed in this session. Existing public TEST parent/detail and structured-response list reads remain verified; no Phase 06C response records were created.
+  - Resolution owner/dependency: provide an existing verified disposable TEST session or a supported verification link/inbox for the disposable account. Do not bypass email verification, intercept tokens, reuse production credentials, or disable auth.
+  - Safe work that may continue: local 06C implementation, unit/e2e/type/build/audit gates, public read-route checks, and evidence preparation. Phase 06 remains IN_PROGRESS and 06C/06D must not be marked DONE/started.
