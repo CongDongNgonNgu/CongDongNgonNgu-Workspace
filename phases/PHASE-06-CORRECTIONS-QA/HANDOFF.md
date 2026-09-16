@@ -176,3 +176,40 @@ LNG_06_005=PLANNED
 LNG_06_006=PLANNED
 LNG_06_007=PLANNED
 ~~~
+
+## Phase 06C authenticated runtime reconciliation
+
+The previous local-only 06C handoff remains historical. Authenticated runtime
+verification was completed on 2026-09-16 using three disposable TEST users and
+the real Backend/Frontend. The Backend MemoryEmailProvider was resolved from
+the same Nest application process that served the HTTP requests.
+
+    AUTH_RUNTIME_METHOD=MEMORY_EMAIL_PROVIDER_SAME_APP_PROCESS
+    RUNTIME_EMAIL_PROVIDER=MemoryEmailProvider
+    CORRECTION_CREATE_HTTP=201
+    CORRECTION_POST_ID=37e68473-2799-4410-81fa-9f820595f371
+    QUESTION_CREATE_HTTP=201
+    QUESTION_POST_ID=1c628792-8cfc-42f8-9955-1dc58acac3b1
+    HELPFUL_RUNTIME=PASS
+    SELF_VOTE_RUNTIME=PASS
+    REQUESTER_ONLY_ACCEPTANCE_RUNTIME=PASS
+    CHANGE_ACCEPTANCE_RUNTIME=PASS
+    REVOKE_ACCEPTANCE_RUNTIME=PASS
+    VISUAL_CORRECTION_1440=PASS
+    VISUAL_CORRECTION_390=PASS
+    VISUAL_QUESTION_1440=PASS
+    VISUAL_QUESTION_390=PASS
+    MATERIAL_DIFFERENCES=NONE
+    RESPONSIVE=PASS at 320, 375, 390, 412, 768, 1024, 1440
+    ACCESSIBILITY=PASS
+    APPLICATION_CONSOLE_ERRORS=0
+    UNEXPECTED_NETWORK_ERRORS=0
+    NEON_TEST_ONLY=YES
+    PRODUCTION_DATABASE_TOUCHED=NO
+    PUSHED=NO
+    DEPLOYED=NO
+    PHASE_06D_STARTED=NO
+
+Evidence files, locked Stitch references, structured response IDs, expected
+security rejections, and the exact local Backend/Frontend revisions are in
+evidence/PHASE-06C-IMPLEMENTATION.md and evidence/phase-06c/.
