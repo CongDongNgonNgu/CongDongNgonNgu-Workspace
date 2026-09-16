@@ -31,3 +31,15 @@ PHASE_19=BLOCKED_BY_PHASE_18
 ```
 
 Keep this file concise. Detailed task evidence belongs in each phase `HANDOFF.md`; real blockers belong in `state/BLOCKERS.md`.
+
+## Phase 06D local verification boundary
+
+    LNG_06_005=VERIFYING
+    LNG_06_006=VERIFYING
+    LNG_06_007=VERIFYING
+    PHASE_06=IN_PROGRESS
+    OWNER_VISUAL_ACCEPTANCE_06D=PENDING
+    PUSHED=NO
+    DEPLOYED=NO
+
+Detailed runtime and visual evidence is recorded in the Phase 06D handoff.

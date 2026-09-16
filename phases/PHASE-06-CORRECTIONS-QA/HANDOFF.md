@@ -255,3 +255,31 @@ the parent Phase 06 IN_PROGRESS and Phase 06D unstarted.
     PHASE_06D_STARTED=NO
     PUSHED=NO
     DEPLOYED=NO
+
+## Phase 06D local implementation and runtime verification
+
+Phase 06D is implemented locally and remains in verification pending owner
+visual acceptance. The Backend adds migration 0005, durable contribution
+events, provenance-aware pending library candidates, requester-only nomination,
+and reversal/invalidation hooks. The Frontend adds the restrained requester
+action and pending-review state without claiming verification or promotion.
+
+    LNG_06_005=VERIFYING
+    LNG_06_006=VERIFYING
+    LNG_06_007=VERIFYING
+    PHASE_06=IN_PROGRESS
+    OWNER_VISUAL_ACCEPTANCE_06D=PENDING
+    PUSHED=NO
+    DEPLOYED=NO
+
+The real Neon TEST journey used the same-process MemoryEmailProvider auth
+harness and isolated Playwright Chromium contexts. Correction and question
+runtime data, candidate provenance, contribution events, expected security
+rejections, screenshots, comparisons, responsive checks, accessibility checks,
+and verification totals are recorded in
+evidence/PHASE-06D-IMPLEMENTATION.md and evidence/phase-06d/.
+
+Next step: owner reviews the four populated comparisons and explicitly accepts
+the Phase 06D visual gates. Only then may normal fast-forward publication and
+06D state reconciliation proceed. Phase 07, Phase 08, and Phase 10 work was
+not started.
