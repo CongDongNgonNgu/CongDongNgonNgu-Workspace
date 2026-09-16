@@ -59,4 +59,4 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Historical safe work that may continue: local 06C implementation, unit/e2e/type/build/audit gates, public read-route checks, and evidence preparation. Phase 06 remains IN_PROGRESS and 06C/06D must not be marked DONE/started.
   - Resolution evidence/date: the real non-production MemoryEmailProvider was resolved from the same Nest application process as the local HTTP server; USER_A/B/C completed real register, verify-email, login, and /auth/me flows on Neon TEST, 2026-09-16.
   - Authenticated runtime evidence: correction/question creation, structured responses, Helpful, expected self-vote/non-requester rejection, acceptance change/revoke, responsive checks, accessibility checks, and populated screenshot comparisons are recorded in phases/PHASE-06-CORRECTIONS-QA/evidence/PHASE-06C-IMPLEMENTATION.md.
-  - Scope note: owner visual acceptance is still required before LNG-06-003/LNG-06-004 change from VERIFYING to DONE; Phase 06D remains not started.
+  - Scope note: OWNER_VISUAL_ACCEPTANCE_06C=YES; LNG-06-003 and LNG-06-004 are DONE; Phase 06D remains not started.

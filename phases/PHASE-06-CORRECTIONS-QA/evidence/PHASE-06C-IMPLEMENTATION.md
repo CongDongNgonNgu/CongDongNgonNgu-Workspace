@@ -1,12 +1,12 @@
 # Phase 06C — Structured Responses, Diff, Helpful & Acceptance
 
 Date: 2026-09-16
-Status: VERIFYING / authenticated runtime and visual evidence complete; owner acceptance pending
+Status: OWNER_ACCEPTED / publication pending
 Data boundary: Neon TEST only
 
-This record covers the local 06C implementation slice. It does not close
-LNG-06-003 or LNG-06-004, does not start 06D, and does not replace the prior
-06A/06B evidence.
+This record covers the local 06C implementation slice, its authenticated Neon
+TEST runtime evidence, and the explicit owner acceptance recorded below. It
+does not start 06D and does not replace the prior 06A/06B evidence.
 
 ## Exact local revisions
 
@@ -165,9 +165,10 @@ LIGHTHOUSE=NOT_RUN
 
 See the historical `state/BLOCKERS.md` entry `BLOCKER-06C-001` and the
 authenticated-runtime reconciliation below for the resolution. Owner visual
-acceptance is still required before changing LNG_06_003/LNG_06_004 to DONE.
+owner acceptance was still required at that historical checkpoint; the
+acceptance reconciliation below records its subsequent completion.
 
-## State
+## State before owner acceptance (historical)
 
 ~~~text
 CURRENT_PHASE=06
@@ -343,5 +344,67 @@ material structural differences.
     LNG_06_006=PLANNED
     LNG_06_007=PLANNED
     PHASE_06D_STARTED=NO
+    PUSHED=NO
+    DEPLOYED=NO
+
+## Owner acceptance reconciliation
+
+The owner explicitly reviewed and accepted the Phase 06C Structured
+Corrections / Q&A / Diff / Helpful / Acceptance result on 2026-09-16.
+Acceptance means accepted by the requester; it does not mean verified,
+linguistically verified, expert certified, or library verified.
+
+    OWNER_VISUAL_ACCEPTANCE_06C=YES
+    CURRENT_PHASE=06
+    PHASE_06=IN_PROGRESS
+    LNG_06_001=DONE
+    LNG_06_002=DONE
+    LNG_06_003=DONE
+    LNG_06_004=DONE
+    LNG_06_005=PLANNED
+    LNG_06_006=PLANNED
+    LNG_06_007=PLANNED
+    PHASE_06D_STARTED=NO
+
+    PUBLISHED_BACKEND_BASELINE=81fa51780ef43193eaf50cd41b517d1b917c71b5
+    ACCEPTED_BACKEND_SHA=6a326a79adf80b7ddc6e1cbb077171a6bc22ce78
+    PUBLISHED_FRONTEND_BASELINE=c85c9415c359a42919db0e29534177aa1ccc576b
+    ACCEPTED_FRONTEND_SHA=598ba64f586d11e38ef0631039221eb07263dcc7
+    PUBLISHED_WORKSPACE_BASELINE=10d687e419a9bc1a0231d90bb6d45244425da93a
+    ACCEPTED_WORKSPACE_RUNTIME_EVIDENCE_SHA=c7775d4b8c55c0044d18eb4f1169384c4494a6d7
+
+    AUTH_RUNTIME_METHOD=MEMORY_EMAIL_PROVIDER_SAME_APP_PROCESS
+    RUNTIME_EMAIL_PROVIDER=MemoryEmailProvider
+    CORRECTION_RUNTIME_JOURNEY=PASS
+    QUESTION_RUNTIME_JOURNEY=PASS
+    HELPFUL_RUNTIME=PASS
+    SELF_VOTE_RUNTIME=PASS
+    REQUESTER_ONLY_ACCEPTANCE_RUNTIME=PASS
+    CHANGE_ACCEPTANCE_RUNTIME=PASS
+    REVOKE_ACCEPTANCE_RUNTIME=PASS
+    VISUAL_CORRECTION_1440=PASS
+    VISUAL_CORRECTION_390=PASS
+    VISUAL_QUESTION_1440=PASS
+    VISUAL_QUESTION_390=PASS
+    MATERIAL_DIFFERENCES=NONE
+    RESPONSIVE_320=PASS
+    RESPONSIVE_375=PASS
+    RESPONSIVE_390=PASS
+    RESPONSIVE_412=PASS
+    RESPONSIVE_768=PASS
+    RESPONSIVE_1024=PASS
+    RESPONSIVE_1440=PASS
+    ACCESSIBILITY=PASS
+    APPLICATION_CONSOLE_ERRORS=0
+    UNEXPECTED_NETWORK_ERRORS=0
+
+    SCHEMA_CHANGE_REQUIRED=NO
+    MIGRATION_CHANGED=NO
+    BLOCKER_05D_001=OPEN
+    RATE_LIMIT_IMPLEMENTATION=PROCESS_LOCAL
+    HORIZONTAL_SCALE_RATE_LIMIT_BLOCKER=YES
+    NEON_TEST_ONLY=YES
+    PRODUCTION_DATABASE_TOUCHED=NO
+    NEXT_WORK=PHASE_06D
     PUSHED=NO
     DEPLOYED=NO

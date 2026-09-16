@@ -7,19 +7,19 @@
 Extend community posts without duplicating the entire post model. Represent correction requests, structured correction proposals, explanations, accepted correction/answer, helpful votes and reviewer metadata. Preserve original text immutably or with explicit revision history so diffs remain meaningful.
 
 ## LNG-06-002 — Ask for Correction / Ask Question
-**Status:** VERIFYING (06A backend foundation and 06B frontend request flows implemented locally; owner visual/runtime acceptance pending)
+**Status:** DONE (06A backend foundation and 06B frontend request flows; owner runtime/visual acceptance recorded)
 **Depends on:** LNG-06-001
 
 Create validated flows for source text/question, target language, optional level/context and privacy/visibility consistent with community rules. Composer must clarify whether the user requests grammar/style/naturalness/pronunciation-related help. Prevent empty/oversized submissions and duplicate retries.
 
 ## LNG-06-003 — Inline Correction Editor & Diff
-**Status:** VERIFYING (06C structured response editor, Unicode-safe diff, and accessible rendering implemented locally; authenticated runtime evidence pending)
+**Status:** DONE (06C structured response editor, Unicode-safe diff, accessible rendering, authenticated runtime, and owner visual acceptance complete)
 **Depends on:** LNG-06-001, LNG-06-002
 
 Use Stitch before frontend implementation. Build an accessible correction editor and diff presentation showing original vs corrected content without relying on red/green color alone. Support explanations tied to whole correction and future segment-level notes if architecture permits. Backend stores canonical structured values, not only rendered HTML.
 
 ## LNG-06-004 — Voting, Helpful & Accepted Answer/Correction
-**Status:** VERIFYING (Helpful and requester acceptance APIs/UI implemented locally; authenticated Neon TEST journey pending)
+**Status:** DONE (Helpful, self-vote protection, requester-only acceptance, change/revoke flows, authenticated Neon TEST journey, and owner visual acceptance complete)
 **Depends on:** LNG-06-003
 
 Requester may accept a valid response according to ownership rules; voters cannot self-farm; one vote state per user; acceptance can be changed with audit/history if product permits. Distinguish “accepted by asker” from “verified linguistic resource”.

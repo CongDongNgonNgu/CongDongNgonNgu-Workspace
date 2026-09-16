@@ -116,7 +116,7 @@ PHASE_06C_STARTED=NO
 PHASE_06D_STARTED=NO
 ~~~
 
-## Phase 06C — local implementation and verification boundary
+## Phase 06C — local implementation and verification boundary (historical pre-acceptance)
 
 The 06C implementation slice is present on local-only branches. It extends the
 existing structured-response contract with server-authoritative Helpful state,
@@ -155,15 +155,16 @@ QUESTION_STITCH_DESKTOP=00b56f19add842ffa17fb28e796b709c
 QUESTION_STITCH_MOBILE=1f3d9d68d2b84f809e46db969570443d
 ~~~
 
-Read-only public checks against the existing Neon TEST parent records returned
-200 for both parent detail routes and both structured-response list routes;
-both lists were empty. Browser registration also exercised the real supported
-flow and created a disposable pending-verification TEST identity. The local
-development configuration has a memory email provider and no inbox, so the
-verification link is unavailable. Authenticated response creation, Helpful,
-acceptance, screenshots, side-by-side comparisons, Lighthouse, and populated
-responsive/a11y runtime evidence remain BLOCKED and are not represented as
-PASS. See BLOCKER-06C-001 and evidence/PHASE-06C-IMPLEMENTATION.md.
+The following paragraph records the pre-unblock state and is retained as
+history. Read-only public checks against the existing Neon TEST parent
+records returned 200 for both parent detail routes and both structured-response
+list routes; both lists were empty. Browser registration also exercised the
+real supported flow and initially created a disposable pending-verification
+TEST identity. The same-process MemoryEmailProvider runtime harness later
+completed authenticated response creation, Helpful, acceptance, screenshots,
+side-by-side comparisons, and populated responsive/a11y runtime evidence.
+See the resolved BLOCKER-06C-001 entry and
+evidence/PHASE-06C-IMPLEMENTATION.md.
 
 ~~~text
 CURRENT_PHASE=06
@@ -213,3 +214,44 @@ the same Nest application process that served the HTTP requests.
 Evidence files, locked Stitch references, structured response IDs, expected
 security rejections, and the exact local Backend/Frontend revisions are in
 evidence/PHASE-06C-IMPLEMENTATION.md and evidence/phase-06c/.
+
+## Phase 06C owner acceptance
+
+The owner explicitly accepted the authenticated runtime and all four
+canonical visual gates. This closes LNG-06-003 and LNG-06-004 while keeping
+the parent Phase 06 IN_PROGRESS and Phase 06D unstarted.
+
+    OWNER_VISUAL_ACCEPTANCE_06C=YES
+    LNG_06_003=DONE
+    LNG_06_004=DONE
+    LNG_06_005=PLANNED
+    LNG_06_006=PLANNED
+    LNG_06_007=PLANNED
+    ACCEPTED_BACKEND_SHA=6a326a79adf80b7ddc6e1cbb077171a6bc22ce78
+    ACCEPTED_FRONTEND_SHA=598ba64f586d11e38ef0631039221eb07263dcc7
+    ACCEPTED_WORKSPACE_RUNTIME_EVIDENCE_SHA=c7775d4b8c55c0044d18eb4f1169384c4494a6d7
+    STITCH_PROJECT=3718538619973058970
+    CORRECTION_STITCH_DESKTOP=6b1d27c554874ba28b0445321ea5ff73
+    CORRECTION_STITCH_MOBILE=5dd468a98e9f4e78abfa0dd2876d963c
+    QUESTION_STITCH_DESKTOP=00b56f19add842ffa17fb28e796b709c
+    QUESTION_STITCH_MOBILE=1f3d9d68d2b84f809e46db969570443d
+    AUTH_RUNTIME_METHOD=MEMORY_EMAIL_PROVIDER_SAME_APP_PROCESS
+    RUNTIME_EMAIL_PROVIDER=MemoryEmailProvider
+    VISUAL_CORRECTION_1440=PASS
+    VISUAL_CORRECTION_390=PASS
+    VISUAL_QUESTION_1440=PASS
+    VISUAL_QUESTION_390=PASS
+    MATERIAL_DIFFERENCES=NONE
+    RESPONSIVE=PASS at 320, 375, 390, 412, 768, 1024, 1440
+    ACCESSIBILITY=PASS
+    SCHEMA_CHANGE_REQUIRED=NO
+    MIGRATION_CHANGED=NO
+    BLOCKER_05D_001=OPEN
+    RATE_LIMIT_IMPLEMENTATION=PROCESS_LOCAL
+    HORIZONTAL_SCALE_RATE_LIMIT_BLOCKER=YES
+    NEON_TEST_ONLY=YES
+    PRODUCTION_DATABASE_TOUCHED=NO
+    NEXT_WORK=PHASE_06D
+    PHASE_06D_STARTED=NO
+    PUSHED=NO
+    DEPLOYED=NO
