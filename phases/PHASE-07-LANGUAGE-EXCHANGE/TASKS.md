@@ -1,7 +1,7 @@
 # Phase 07 Tasks
 
 ## LNG-07-001 — Buddy Preference & Privacy Model
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** Phase 05 and Phase 03 profile
 
 Represent exchange opt-in, languages offered/wanted, preferred partner level/goals, timezone/availability visibility, interests and contact/discovery preferences. Default to conservative visibility. Do not require phone/email/social handles.

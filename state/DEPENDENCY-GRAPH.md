@@ -33,16 +33,16 @@ Rules:
 - 16 is a cross-cutting optimization pass, but responsiveness/accessibility are required earlier too.
 - 17 is final hardening, not permission to postpone baseline security.
 
-## Current phase state after Phase 06 closure
+## Current phase state after Phase 07A publication
 
-    CURRENT_PHASE=06
+    CURRENT_PHASE=07
     PHASE_06=DONE
-    PHASE_07=READY
+    PHASE_07=IN_PROGRESS
     PHASE_08=READY
     PHASE_09=BLOCKED_BY_PHASE_08
     PHASE_10=BLOCKED_BY_PHASE_08
     PHASE_11=BLOCKED_BY_PHASE_10
     PHASE_12=READY
 
-Phase 07, Phase 08, and Phase 10 remain not started. Phase 10 is blocked only
-by Phase 08; Phase 15 remains blocked by its still-incomplete dependencies.
+Phase 07 is IN_PROGRESS after completion of LNG-07-001. Phase 08 remains READY.
+Phase 10 is blocked only by Phase 08; Phase 15 remains blocked by its still-incomplete dependencies.
