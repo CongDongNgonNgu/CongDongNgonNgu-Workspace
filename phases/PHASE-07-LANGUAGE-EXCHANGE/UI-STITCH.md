@@ -11,3 +11,11 @@ Desktop can use filters plus a clean list/grid of partner summaries; mobile shou
 ```text
 Design public buddy profile preview based on Language Passport: languages/levels, learning goals, selected interests, safe availability summary and real reputation if available. Include connection state/request actions and prominent-but-not-alarming safety controls. Also design preferences screen for opt-in, languages offered/wanted, timezone/availability visibility and discovery controls. Mobile privacy controls must be easy to understand and not buried.
 ```
+
+## Phase 07B canonical references
+
+- Stitch project: `projects/3718538619973058970`
+- Shared design system: `assets/16442026920550574436`
+- Partner Discovery desktop reference (1440px): `ec933399f3134afaa6169c05957b0282`
+- Partner Discovery mobile refinement (390px): `4adb9e6d00e9421f93f4db11bcecd9c6`
+- Stitch was used for visual direction. Illustrative identities, activity, reputation, city, counts, exact schedules, and opaque scores were excluded from the product implementation.

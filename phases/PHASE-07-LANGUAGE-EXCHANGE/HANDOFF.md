@@ -50,11 +50,60 @@ No schema_migrations checksum values were manually rewritten.
 
 ## Remaining Phase 07 work
 
-- LNG-07-002 — PLANNED
-- LNG-07-003 — PLANNED
+- LNG-07-002 — VERIFYING
+- LNG-07-003 — VERIFYING
 - LNG-07-004 — PLANNED
 - LNG-07-005 — PLANNED
 - LNG-07-006 — PLANNED
 - LNG-07-007 — PLANNED
 
-Phase 07 remains IN_PROGRESS. Phase 07B may begin from the published 07A Backend foundation.
+Phase 07 remains IN_PROGRESS. Phase 07B is implemented and awaiting owner visual acceptance.
+
+## Phase 07B — Matching Engine V1 & Partner Discovery
+
+**Status:** VERIFYING — implementation gates pass; OWNER_VISUAL_ACCEPTANCE_07B=PENDING.
+Only LNG-07-002 and LNG-07-003 are in scope. LNG-07-004 through LNG-07-007 remain planned.
+
+### Reuse boundary
+
+- **KEEP:** Phase 03 language catalog, language relations, CEFR/proficiency, profile goals/interests/timezone/availability, public profile projection, auth/session, and Phase 07A preference/privacy contracts.
+- **ADAPT:** Existing header, mobile drawer, footer, and public profile entrypoint; the navigation entry is live at `/exchange`.
+- **BUILD_NEW:** Matching Engine V1, authenticated `GET /api/v1/exchange/discovery`, typed discovery DTO/response, Partner Discovery page, filters, reasons, pagination, and regression coverage.
+- **DEFER:** Connection requests/lifecycle, messaging, notifications, block/report UI, rooms, reputation/activity, and all 07-004–07-007 work.
+
+### Matching contract
+
+- Reciprocal language evidence is mandatory in both directions: viewer wants a candidate-offered language and candidate wants a viewer-offered language.
+- V1 dimensions are normalized to `[0, 1]`: reciprocal language `R = min(1, (forward reciprocal count + backward reciprocal count) / 2)`; preferred-level compatibility `L` is the mean of available directional level matches; timezone/availability `T` is the mean of available timezone and weekly-window evidence; shared goals/interests `S` is the mean of available goal/interest intersections.
+- Absent optional evidence is excluded from the denominator, so missing availability does not create a penalty or a schedule claim. Timezone offsets use the deterministic reference `2026-01-15T12:00:00Z` for V1 scoring; weekly windows are compared after conversion to UTC and never returned to discovery clients.
+- Default weights are configurable and testable: `R=.50`, `L=.20`, `T=.20`, `S=.10`. Final score is the weighted mean over active dimensions, rounded to four decimals and bounded to `[0, 1]`.
+- Ordering is deterministic: normalized score descending, then user ID by code-point order. Pagination defaults to page 1/page size 10; API limits are page 100 and page size 20.
+- Reasons are human-readable and generated only from reciprocal languages, compatible level evidence, compatible timezone/availability evidence, and real shared goals/interests. The UI prioritizes those reasons instead of displaying an opaque numeric score.
+- Candidates are excluded when self, inactive/unverified, opted out, not discoverable, not ready, invalid/private ineligible, safety-blocked, or lacking reciprocal evidence.
+
+### Privacy and API evidence
+
+- Discovery returns only candidate ID/display name, public exchange-selected language relations/proficiency, selected exchange goals/interests, normalized score, and reasons.
+- Discovery never returns email, phone, OAuth/provider identity, session/account internals, exact timezone, exact availability, exact schedule, reputation, activity, city, or private profile data.
+- The endpoint is access-token guarded and derives the viewer from the authenticated session; no target-user or spoofable owner field is accepted. Existing public profile preview IDOR/safety checks remain intact.
+- No migration was added or modified; migrations 0001–0006 remain untouched. Phase 07B did not mutate a test or production database and did not deploy.
+
+### Stitch and visual evidence
+
+- Stitch project: `projects/3718538619973058970`; shared design system asset: `assets/16442026920550574436`.
+- Desktop reference: screen `ec933399f3134afaa6169c05957b0282` (1440px); mobile refinement: screen `4adb9e6d00e9421f93f4db11bcecd9c6` (390px).
+- Native implementation uses the existing Be Vietnam Pro/blue-orange design system, a desktop filter rail plus results list, compact mobile filters, safe public-profile links, and loading/empty/no-match/error/auth states. Stitch output was treated as visual direction; illustrative names/counts/activity were not shipped as data.
+- Chrome DevTools visual verification covered widths 320, 375, 390, 412, 768, 1024, and 1440 with no horizontal overflow and required landmarks/headings. Lighthouse snapshots reported Accessibility 100 on desktop and mobile. The only observed console response was the existing unauthenticated `/api/v1/auth/refresh` 403 during session bootstrap.
+
+### Code and verification
+
+- Backend branch/SHA: `phase-07b-matching-discovery` / `1efbf1af394e1c702317d901fa4011edf8460dcb`.
+- Frontend branch/SHA: `phase-07b-matching-discovery` / `53981deafa18ddc0b79df7635c7404cd3296d34b`.
+- Backend: unit `23 suites / 105 tests PASS`; e2e `9 suites / 43 tests PASS`; typecheck, lint, build, npm audit (`0 vulnerabilities`), and `git diff --check` PASS.
+- Frontend: `33 test files / 154 tests PASS`; typecheck, lint, production build, npm audit (`0 vulnerabilities`), and `git diff --check` PASS.
+- Focused regression evidence: matching/service `16 tests PASS`; exchange e2e `3 tests PASS`; frontend Partner Discovery `6 tests PASS`.
+- Workspace branch: `phase-07b-matching-discovery`; final handoff/state documentation is pending its documentation commit.
+
+### Publication gate
+
+No push, merge, publication to `main`, or deployment has occurred. The implementation is ready for the mandatory owner visual acceptance review using the desktop and mobile evidence from Stitch/Chrome DevTools. Do not mark 07B or either task DONE until the owner explicitly accepts the visual result.
