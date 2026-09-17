@@ -97,3 +97,16 @@ personalized ranking. Rate controls are process-local until shared
 infrastructure is approved for horizontally scaled production. Full context
 and the local verification boundary are recorded in
 docs/DEC-012-PHASE-05-COMMUNITY-BACKEND.md.
+
+## DEC-013 - Phase 02 Google OAuth production rollout
+**Status:** Accepted and verified on 2026-09-17. This supersedes the temporary
+live-provider dependency state recorded by DEC-008.
+
+Production Google credentials were already configured in the CongDongNgonNgu
+Render service and were not changed or exposed. Verified Backend and Frontend
+main preserve subject-first identity, verified-email enforcement, one-time
+OAuth state, session/CSRF protections, explicit linking, and collision
+protection. The deployed Vercel `/api/v1` rewrite precedes the SPA fallback;
+the provider capability endpoint, Google redirect, and real browser callback
+were verified in production. No direct/manual production database mutation
+was performed.

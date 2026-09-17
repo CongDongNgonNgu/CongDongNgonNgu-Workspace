@@ -1,75 +1,65 @@
 # Phase 02 Handoff
 
-Date: 2026-09-10
+Date: 2026-09-17
 
-Phase status: BLOCKED_EXTERNAL
+Phase status: DONE
 
-Phase 03 was not started. The user-supplied PROMPT.md remains the
-authoritative implementation specification.
+Later phases retain their existing states. The user-supplied PROMPT.md
+remains the authoritative implementation specification.
 
 ## Task states
 
 | Task | State | Local result | Open gate |
 | --- | --- | --- | --- |
-| LNG-02-001 | VERIFYING | Opaque identity, provider/session schema, roles guard, constraints, and decision record | Commit and remote evidence |
-| LNG-02-002 | VERIFYING | Registration/login, password hashing, generic errors, rate limits, accessible UI | Commit and remote evidence |
-| LNG-02-003 | VERIFYING | Verification, resend, recovery, reset, expiry/single-use/revocation | Commit and remote evidence |
-| LNG-02-004 | VERIFYING | HMAC access tokens, HttpOnly refresh rotation, replay-family revocation, logout, CSRF | Commit and remote evidence |
-| LNG-02-005 | BLOCKED_EXTERNAL | Backend-owned Google code flow, state/nonce, collision handling, disabled fail-closed path | CongDongNgonNgu Google credentials and live callback |
-| LNG-02-006 | VERIFYING | Facebook/Zalo/Apple contracts and independently disabled configuration | Commit and remote evidence |
-| LNG-02-007 | VERIFYING | Explicit session-bound linking and collision protection | Commit and remote evidence |
-| LNG-02-008 | BLOCKED_EXTERNAL | Stitch reconciliation, route states, browser/a11y/security review, implementation, and visual UX complete locally | `BLOCKER-02-001`: live Google provider/callback verification |
+| LNG-02-001 | DONE | Opaque identity, provider/session schema, roles guard, constraints, and decision record | None |
+| LNG-02-002 | DONE | Registration/login, password hashing, generic errors, rate limits, accessible UI | None |
+| LNG-02-003 | DONE | Verification, resend, recovery, reset, expiry/single-use/revocation | None |
+| LNG-02-004 | DONE | HMAC access tokens, HttpOnly refresh rotation, replay-family revocation, logout, CSRF | None |
+| LNG-02-005 | DONE | Backend-owned Google code flow, state/nonce, collision handling, disabled fail-closed path, live callback | None |
+| LNG-02-006 | DONE | Facebook/Zalo/Apple contracts and independently disabled configuration | None |
+| LNG-02-007 | DONE | Explicit session-bound linking and collision protection | None |
+| LNG-02-008 | DONE | Stitch reconciliation, route states, browser/a11y/security review, implementation, publication, and live callback | None |
 | LNG-02-009 | DONE | Owner-requested Stitch raster fidelity remediation accepted across Auth surfaces; evidence preserved | None; accepted Frontend SHA `c5fba7b18fe1865c460e8b4d8aac72249558f0bd` |
 
-VERIFYING means local implementation and tests pass while that task's external
-gate remains open. LNG-02-009 is DONE because the owner granted visual
-acceptance on 2026-09-10. The owner-rejection history and pre-acceptance
-remediation record remain preserved in the existing evidence and prior
-Workspace commits.
+LNG-02-001 through LNG-02-009 are DONE. The owner-rejection history and
+pre-acceptance remediation record remain preserved in the existing evidence
+and prior Workspace commits.
 
-## Acceptance reconciliation — 2026-09-10
+## Acceptance reconciliation — 2026-09-17
 
 Owner visual acceptance for LNG-02-009 is granted against the canonical Stitch
 screen inventory and preserved raster/comparison evidence. The accepted
 Frontend-Web `main` commit is
 `c5fba7b18fe1865c460e8b4d8aac72249558f0bd`.
 
-LNG-02-008 implementation and visual UX are complete. Its only remaining
-external dependency is live Google provider/callback verification under
-`BLOCKER-02-001`; the earlier publication/remote/CI gate is resolved and is
-not duplicated as a second open blocker. `PHASE_02` remains
-`BLOCKED_EXTERNAL`, and Phase 03 was not started.
+LNG-02-008 implementation, visual UX, publication, and live Google
+provider/callback verification are complete. `BLOCKER-02-001` is resolved and
+`PHASE_02=DONE`. Later phase states are preserved; no later phase was rolled
+back.
 
 ## Repository evidence
 
 | Repository | Phase 02 evidence commit | Remote SHA verified for evidence | Phase 02 working tree |
 | --- | --- | --- | --- |
-| Backend | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | 25ad79cfa5740271fd925dfc4140a3d828ee98cc | Clean; Phase 02 pushed |
-| Frontend | c5fba7b18fe1865c460e8b4d8aac72249558f0bd | c5fba7b18fe1865c460e8b4d8aac72249558f0bd | Owner-accepted Auth UI visual-remediation commit; supplied SHA verified |
-| Workspace | 5294bca0974c1920d983f2d80c0be8c6d9586147 | 5294bca0974c1920d983f2d80c0be8c6d9586147 | Clean; acceptance reconciliation published |
+| Backend | 02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c | 02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c | Clean; Render production live |
+| Frontend | 08820da4dc3adf9e2d4e07d70f52f685aeff3f1a | 08820da4dc3adf9e2d4e07d70f52f685aeff3f1a | Clean; Vercel production live |
+| Workspace | pending final evidence commit | pending | Phase 02 rollout reconciliation in progress |
 
-The Phase 02 implementation, evidence, and owner-accepted Frontend visual
-remediation commit are published to their authorized origin/main destinations.
-This Workspace-only documentation update records the owner acceptance and
-reconciles the remaining Google-provider dependency. Backend and Frontend
-files are not modified by this update.
-
-Backend CI: not independently verified in this session.
-Frontend CI: GitHub Actions run 34346910662 completed successfully for
-b53ddda17823edcfeff3cd912640a94a413ca0ab. The `quality` job passed install,
-lint, typecheck, unit tests, build, and security audit steps.
-Remote SHA verification: the owner-accepted Frontend SHA is
-c5fba7b18fe1865c460e8b4d8aac72249558f0bd. Workspace acceptance
-reconciliation commit `5294bca0974c1920d983f2d80c0be8c6d9586147` was verified
-on `origin/main`; the final documentation follow-up SHA is verified after its
-push.
+The Phase 02 implementation is published to the authorized origin/main
+destinations. Backend CI run `35207854499` and Frontend CI run `35207852817`
+completed successfully for the exact main SHAs above. Render reports the
+Backend SHA live, and Vercel Production reports the Frontend SHA live.
+Vercel `/api/v1/auth/providers` returned HTTP 200 with Google enabled, and
+the OAuth start endpoint returned HTTP 302 to Google with the exact Vercel
+callback URI. A real browser account-selection/consent flow returned to the
+authenticated application home.
 
 ## Local verification
 
-- Backend: 7 unit suites / 33 tests passed; 2 E2E suites / 8 tests passed.
+- Backend: 23 unit suites / 107 tests passed; 9 E2E suites / 43 tests passed.
   Typecheck, lint, build, and npm audit --audit-level=high passed; audit
   reported 0 vulnerabilities.
-- Frontend: 8 test files / 37 tests passed. Typecheck, lint, build, and npm
+- Frontend: 34 test files / 157 tests passed. Typecheck, lint, build, and npm
   audit --audit-level=high passed; audit reported 0 vulnerabilities.
 - Browser: login and register forms were checked at exact 320, 375, 390,
   412, 768, 1024, and 1440px with no horizontal overflow and visible primary
@@ -85,8 +75,9 @@ push.
 - Footer follow-up: Login and Register at 390px computed the compact Footer
   background as `rgb(242, 244, 240)` (`#F2F4F0`) with no horizontal
   overflow; Register at 1440px retained the navy Footer background.
-- No production database, deployment, or EduAI repository was accessed for
-  mutation.
+- No direct/manual production database mutation was performed, and no EduAI
+  repository was touched. Production deployments were automatic from the
+  verified main SHAs and were checked read-only.
 
 ## Migration and persistence
 
@@ -174,12 +165,8 @@ network failures do not become unhandled browser promise errors.
 
 ## External blockers and next action
 
-1. BLOCKER-02-001: supply approved CongDongNgonNgu Google credentials and run
-   the real authorization-code callback/browser verification. Do not reuse
-   EduAI credentials.
-2. BLOCKER-02-002 remains resolved. Its prior publication SHA evidence is
-   preserved in the historical handoff; this update adds the current
-   Workspace-only reconciliation commit.
-
-Only after BLOCKER-02-001 is resolved may the phase transition to DONE and
-Phase 03 become READY.
+No Phase 02 external blocker remains. `BLOCKER-02-001` was resolved on
+2026-09-17 by the verified production provider response, Google redirect,
+and real browser callback. `BLOCKER-02-002` remains resolved. The unrelated
+`BLOCKER-05D-001` remains tracked for later community rate-limit hardening;
+it does not change `PHASE_02=DONE` or any later phase state.

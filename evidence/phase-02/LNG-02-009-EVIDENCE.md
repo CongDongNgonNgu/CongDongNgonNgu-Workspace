@@ -2,14 +2,15 @@
 
 Status: `DONE`
 
-Phase 02 status: `BLOCKED_EXTERNAL` (the Google credential blocker is
-unchanged). Owner visual acceptance was granted on 2026-09-10 for the
+Phase 02 status: `DONE` (live Google rollout was subsequently verified on
+2026-09-17). Owner visual acceptance was granted on 2026-09-10 for the
 accepted Frontend-Web `main` commit
 `c5fba7b18fe1865c460e8b4d8aac72249558f0bd`, so this task is marked `DONE`.
 
 Scope: `CongDongNgonNgu-Front-End-Web` and this Workspace repository only.
-Backend auth/security, schema, sessions, OAuth credentials, migrations,
-production, and Phase 03 were not modified.
+Backend auth/security, schema, sessions, OAuth credentials, migrations, and
+Phase 03 were not modified by this visual-remediation task. The later
+production rollout is recorded separately in `LNG-02-010`.
 
 ## Canonical screen IDs and runtime paths
 
@@ -117,5 +118,6 @@ preserved raster/comparison evidence. The accepted Frontend-Web `main` SHA is
 
 The owner-rejection history, remediation workflow, canonical IDs, rasters,
 comparison artifacts, and `SUPERSEDED / REFERENCE ONLY` records above remain
-unchanged. This acceptance closes LNG-02-009 only; the live Google
-provider/callback verification remains the external blocker for Phase 02.
+unchanged. This acceptance closes LNG-02-009. The later live Google
+provider/callback verification and Phase 02 completion are recorded in
+`LNG-02-010`.

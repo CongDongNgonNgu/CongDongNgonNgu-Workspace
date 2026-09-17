@@ -10,8 +10,8 @@ On Acceptance: Phase 03 DONE; Phase 04 READY.
 
 Startup evidence (2026-09-10): Backend main and origin/main were both at
 25ad79c with the Phase 02 auth/session foundation committed. The approved
-dependency exception is recorded as DEC-008; Phase 02 remains
-BLOCKED_EXTERNAL for live Google OAuth verification.
+dependency exception is recorded as DEC-008; the later Phase 02 production
+rollout and resolution are recorded by DEC-013.
 Frontend is read-only for Phase 03A.
 
 Backend Phase 03A checkpoint:
@@ -180,6 +180,6 @@ Final Phase 03 reconciliation (2026-09-11):
 - All canonical Stitch screen IDs and Phase 03 visual evidence remain
   preserved in `UI-STITCH.md` and `evidence/`.
 - `PHASE_03=DONE` and `PHASE_04=READY`. Phase 04 was not started.
-- `PHASE_02=BLOCKED_EXTERNAL` remains unchanged because CongDong-owned Google
-  OAuth credentials and live verification are still unresolved. No Google
-  OAuth work was performed in this reconciliation.
+- `PHASE_02=DONE` after the later production Google OAuth rollout recorded by
+  DEC-013. Phase 03 remains DONE and Phase 04 remains READY; no later phase
+  was rolled back by the Phase 02 reconciliation.

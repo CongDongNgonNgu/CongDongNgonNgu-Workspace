@@ -2,16 +2,17 @@
 
 Date: 2026-09-17
 
-Status: LOCAL_VERIFIED; Phase 02 remains `BLOCKED_EXTERNAL` because approved
-CongDongNgonNgu Google OAuth credentials and a live callback verification are
-still unavailable.
+Status: `DONE`; production rollout and real Google browser callback verified
+on 2026-09-17. Approved CongDongNgonNgu Google credentials were already
+configured in Render and were not exposed or changed.
 
 ## Published commits
 
 | Repository | Branch | Commit | Remote SHA |
 | --- | --- | --- | --- |
-| Backend | `phase-07b-matching-discovery` | `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c` | verified equal |
-| Frontend | `phase-07b-matching-discovery` | `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a` | verified equal |
+| Backend | `main` | `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c` | verified equal |
+| Frontend | `main` | `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a` | verified equal |
+| Workspace | `main` | pending final evidence commit | to be verified |
 
 ## Behavior delivered
 
@@ -42,19 +43,23 @@ still unavailable.
   passed; both audits reported 0 vulnerabilities.
 - Local browser runtime checked `/login`, `/register`, and the collision
   callback state at `http://127.0.0.1:5174`.
-- No production database was mutated.
+- No direct or manual production database mutation was performed. The one
+  production OAuth browser check used the normal application flow.
 
 ## Remote and deployment evidence
 
-- GitHub Actions returned no run for either feature-branch SHA. Both CI
-  workflows trigger only on `main` pushes or pull requests targeting `main`.
-- Existing public endpoints responded as follows during read-only checks:
+- GitHub Actions completed successfully for both `main` SHAs: Backend run
+  `35207854499`; Frontend run `35207852817`.
+- Production deployment evidence:
+  - Render live commit: `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c`.
+  - Vercel Production live commit: `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a`.
+- Public production checks responded as follows:
   - Vercel `/login`: HTTP 200.
-  - Render `/api/v1/health`: HTTP 200.
-  - Render `/api/v1/auth/providers`: HTTP 200.
-  - Current Vercel `/api/v1/health`: HTTP 404, confirming the current public
-    deployment has not yet picked up the feature-branch rewrite.
+  - Vercel `/register`: HTTP 200.
+  - Vercel `/api/v1/auth/providers`: HTTP 200 with Google enabled.
+  - Vercel `/api/v1/auth/oauth/google/start`: HTTP 302 to Google.
+  - OAuth redirect callback URI: `https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/oauth/google/callback`.
+  - Real Google browser flow: returned to the authenticated production app home.
 
-The remaining gate is to merge/deploy the frontend branch through the normal
-Vercel workflow, then run the real Google authorization-code callback with
-approved CongDongNgonNgu credentials. No EduAI credentials may be reused.
+Phase 02 is now `DONE`; no later phase was rolled back. The remaining open
+Workspace blocker is unrelated Phase 05D process-local rate limiting.

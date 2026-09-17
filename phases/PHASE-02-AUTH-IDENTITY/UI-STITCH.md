@@ -137,6 +137,6 @@ Frontend-Web `main` commit is
 
 The owner-rejection history, remediation workflow, canonical IDs, measurements,
 raster links, and `SUPERSEDED / REFERENCE ONLY` records above are preserved.
-This sign-off does not resolve `PHASE_02=BLOCKED_EXTERNAL`; the remaining
-external dependency is live Google provider/callback verification tracked by
-`BLOCKER-02-001`.
+At the time of this visual sign-off, live Google provider/callback verification
+was still tracked by `BLOCKER-02-001`; that blocker was subsequently resolved
+on 2026-09-17 and Phase 02 is now `DONE`.

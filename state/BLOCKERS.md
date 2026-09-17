@@ -34,17 +34,18 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution evidence/date: frontend origin/main verified at a94a338f4d1096c4da7a14136988879629d81d9e; Workspace acceptance commit a30e9c2 was pushed and the final Workspace remote head was verified; Frontend CI run 34184805897 concluded success; 2026-09-08.
   - Safe work that may continue: Phase 02 is READY after Phase 01 owner acceptance and was not started; no Backend/EduAI repository or production deployment was touched.
 
-- BLOCKER-02-001 / LNG-02-005 / BLOCKED_EXTERNAL / OPEN
-  - Evidence/date: no CongDongNgonNgu-owned Google OAuth client credentials are present in the local environment on 2026-09-09. Google, Facebook, Zalo, and Apple remain disabled in the safe environment; the backend capability and start paths were exercised and disabled start returns AUTH_PROVIDER_DISABLED.
-  - Impact: the real Google authorization-code callback, provider response, and live mobile/browser recovery cannot be verified. The implementation is not marked LIVE_VERIFIED or Phase 02 DONE.
-  - Resolution owner/dependency: provide approved CongDongNgonNgu Google client ID, secret, and exact callback configuration, then run the real-provider test plan. Do not reuse EduAI credentials.
-  - Safe work that may continue: all local identity, email, session, collision, adapter, UI, and disabled-provider tests are complete.
+- BLOCKER-02-001 / LNG-02-005 / BLOCKED_EXTERNAL / RESOLVED
+  - Historical opening evidence/date: the safe local test environment intentionally kept Google disabled on 2026-09-09; production Google configuration had not yet received live callback verification.
+  - Impact: the real Google authorization-code callback, provider response, and live browser recovery were not yet verified. Phase 02 remained blocked until that gate was completed.
+  - Resolution owner/dependency: use the already configured CongDongNgonNgu production Google credentials and the exact Vercel callback URI. Do not reuse EduAI credentials.
+  - Resolution evidence/date: 2026-09-17. Render reports the live Backend commit `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c`; Vercel production reports Frontend commit `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a`. Vercel `/api/v1/auth/providers` returned HTTP 200 with `data.providers[google].enabled=true`; OAuth start returned HTTP 302 to Google with callback URI `https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/oauth/google/callback`; the real browser consent flow returned to the authenticated app home.
+  - Safe work that may continue: no Phase 02 work remains blocked by this provider gate.
 
 - BLOCKER-02-002 / LNG-02-008 / BLOCKED_EXTERNAL / RESOLVED
-  - Evidence/date: direct user authorization was received; Phase 02 commits were created and pushed to the exact CongDongNgonNgu Backend, Frontend-Web, and Workspace origin/main destinations on 2026-09-09.
-  - Impact: commit and remote-SHA gates were open until publication; CI was not independently verified in this session.
-  - Resolution evidence/date: Backend `25ad79cfa5740271fd925dfc4140a3d828ee98cc`, Frontend `b333707c2ca8a55a80dea945450dd0b3a6b69e9d`, and Workspace `5e35273ede61981fbeafeb3b29c94513d89cdf8f` each match origin/main, 2026-09-09.
-  - Safe work that may continue: Google live-provider verification remains covered by BLOCKER-02-001; no EduAI repository or production database was touched.
+  - Historical evidence/date: direct user authorization was received; the initial Phase 02 commits were created and pushed to the exact CongDongNgonNgu Backend, Frontend-Web, and Workspace origin/main destinations on 2026-09-09.
+  - Historical impact: commit and remote-SHA gates were open until publication; CI was not independently verified in that session.
+  - Resolution evidence/date: Backend `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c`, Frontend `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a`, and the final Workspace evidence SHA each match origin/main after the 2026-09-17 production rollout. CI runs `35207854499` and `35207852817` completed successfully.
+  - Safe work that may continue: no additional Phase 02 publication gate remains; no EduAI repository or production database was touched.
 
 - BLOCKER-05D-001 / LNG-05-007 / BLOCKED_INTERNAL / OPEN
   - Evidence/date: Community rate limiting is implemented as a process-local in-memory map; no approved shared limiter or Redis foundation is configured, 2026-09-15.

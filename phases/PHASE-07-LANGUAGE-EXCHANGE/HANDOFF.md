@@ -42,9 +42,12 @@ The migration runner now normalizes CRLF/CR to LF before SHA-256 calculation so 
 No schema_migrations checksum values were manually rewritten.
 
 ### Safety / dependencies
-- BLOCKER-02-001 remains OPEN for live Google OAuth verification.
+- BLOCKER-02-001 is RESOLVED; Phase 02 production Google OAuth evidence is
+  recorded in `evidence/phase-02/LNG-02-010-UNIFIED-GOOGLE-OAUTH.md`.
 - BLOCKER-05D-001 remains OPEN: Community rate limiting is process-local and is not represented as distributed protection.
-- No EduAI repository, production database, or deployment was touched.
+- No EduAI repository or production database was touched. Phase 02 production
+  deployment evidence was verified read-only; no direct/manual database
+  mutation was performed.
 - OWNER_VISUAL_ACCEPTANCE_07A=N/A_BACKEND_ONLY.
 - Stitch=N/A_BACKEND_ONLY.
 
@@ -115,4 +118,7 @@ Owner visual acceptance was explicitly received on 2026-09-17 after the recorded
 - Frontend `main`: `b12d723aafda4412f5461443f341eab816702de8`. GitHub Actions CI run [35206137388](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/35206137388) completed SUCCESS for that exact SHA.
 - Workspace `main` was fast-forwarded from `cbb522d58fe37c6d6d5de790d854f16ce13cc9a8` to the accepted Phase 07B evidence base `d6677330b1ee32769ec71e9af12d3851e2eb8466` before this final evidence update; the resulting final Workspace SHA is reported with the publication result.
 - Phase 07B required no migration; `TEST_DB_MUTATED=NO`, `PRODUCTION_DB_MUTATED=NO`, and `DEPLOYED=NO`.
-- Stitch, responsive, and accessibility evidence remains recorded above. `BLOCKER-02-001` and `BLOCKER-05D-001` remain OPEN; Phase 02 Google OAuth work remains separate and is not marked DONE.
+- Stitch, responsive, and accessibility evidence remains recorded above.
+  `BLOCKER-05D-001` remains OPEN for its unrelated distributed-rate-limit
+  scope. Phase 02 Google OAuth is DONE and remains separate; no later phase
+  state was rolled back.
