@@ -50,18 +50,18 @@ No schema_migrations checksum values were manually rewritten.
 
 ## Remaining Phase 07 work
 
-- LNG-07-002 — VERIFYING
-- LNG-07-003 — VERIFYING
+- LNG-07-002 — DONE
+- LNG-07-003 — DONE
 - LNG-07-004 — PLANNED
 - LNG-07-005 — PLANNED
 - LNG-07-006 — PLANNED
 - LNG-07-007 — PLANNED
 
-Phase 07 remains IN_PROGRESS. Phase 07B is implemented and awaiting owner visual acceptance.
+Phase 07 remains IN_PROGRESS because LNG-07-004 through LNG-07-007 are still planned. Phase 07B is DONE; owner visual acceptance was received on 2026-09-17.
 
 ## Phase 07B — Matching Engine V1 & Partner Discovery
 
-**Status:** VERIFYING — implementation gates pass; OWNER_VISUAL_ACCEPTANCE_07B=PENDING.
+**Status:** DONE — implementation gates pass; OWNER_VISUAL_ACCEPTANCE_07B=YES (2026-09-17).
 Only LNG-07-002 and LNG-07-003 are in scope. LNG-07-004 through LNG-07-007 remain planned.
 
 ### Reuse boundary
@@ -106,4 +106,4 @@ Only LNG-07-002 and LNG-07-003 are in scope. LNG-07-004 through LNG-07-007 remai
 
 ### Publication gate
 
-No push, merge, publication to `main`, or deployment has occurred. The implementation is ready for the mandatory owner visual acceptance review using the desktop and mobile evidence from Stitch/Chrome DevTools. Do not mark 07B or either task DONE until the owner explicitly accepts the visual result.
+Owner visual acceptance was explicitly received on 2026-09-17 after the recorded desktop/mobile review. No deployment has occurred. Any push, merge, or publication to `main` remains a separate release action and must preserve the documented privacy boundary and open blockers.
