@@ -106,4 +106,13 @@ Only LNG-07-002 and LNG-07-003 are in scope. LNG-07-004 through LNG-07-007 remai
 
 ### Publication gate
 
-Owner visual acceptance was explicitly received on 2026-09-17 after the recorded desktop/mobile review. No deployment has occurred. Any push, merge, or publication to `main` remains a separate release action and must preserve the documented privacy boundary and open blockers.
+Owner visual acceptance was explicitly received on 2026-09-17 after the recorded desktop/mobile review. No deployment has occurred. The publication gate was completed with the exact main and CI evidence below, while preserving the documented privacy boundary and open blockers.
+
+### Final Phase 07B publication evidence
+
+- Phase state remains `PHASE_07=IN_PROGRESS`; `LNG_07_001`, `LNG_07_002`, and `LNG_07_003` are DONE; `LNG_07_004` through `LNG_07_007` remain PLANNED; `OWNER_VISUAL_ACCEPTANCE_07B=YES`.
+- Backend `main`: `1efbf1af394e1c702317d901fa4011edf8460dcb`. GitHub Actions CI run [35206109906](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/35206109906) completed SUCCESS for that exact SHA.
+- Frontend `main`: `b12d723aafda4412f5461443f341eab816702de8`. GitHub Actions CI run [35206137388](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/35206137388) completed SUCCESS for that exact SHA.
+- Workspace `main` was fast-forwarded from `cbb522d58fe37c6d6d5de790d854f16ce13cc9a8` to the accepted Phase 07B evidence base `d6677330b1ee32769ec71e9af12d3851e2eb8466` before this final evidence update; the resulting final Workspace SHA is reported with the publication result.
+- Phase 07B required no migration; `TEST_DB_MUTATED=NO`, `PRODUCTION_DB_MUTATED=NO`, and `DEPLOYED=NO`.
+- Stitch, responsive, and accessibility evidence remains recorded above. `BLOCKER-02-001` and `BLOCKER-05D-001` remain OPEN; Phase 02 Google OAuth work remains separate and is not marked DONE.
