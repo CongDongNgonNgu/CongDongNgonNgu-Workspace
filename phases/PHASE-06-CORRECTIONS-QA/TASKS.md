@@ -25,33 +25,34 @@ Use Stitch before frontend implementation. Build an accessible correction editor
 Requester may accept a valid response according to ownership rules; voters cannot self-farm; one vote state per user; acceptance can be changed with audit/history if product permits. Distinguish “accepted by asker” from “verified linguistic resource”.
 
 ## LNG-06-005 — Reviewer Reputation Hooks
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-06-004
 
 Emit domain events or contribution records for later Phase 10 without awarding hard-coded final point totals yet. Record enough evidence to attribute useful corrections/answers and reverse effects after moderation/deletion.
 
 ## LNG-06-006 — Library Candidate Conversion
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-06-003..005
 
 Create an explicit candidate/promotion contract for high-quality corrections/Q&A to enter Phase 08 review. Preserve provenance back to the community source and contributor; never auto-mark as verified.
 
 ## LNG-06-007 — Safety & Reconciliation
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-06-001..006
 
 Test ownership/acceptance abuse, self-vote, duplicate vote, deleted/moderated source, XSS in diffs/explanations, Unicode/non-Latin text, large diffs and privacy. Complete responsive/a11y/visual and handoff evidence.
 
 ## Phase 06D - local implementation and runtime verification boundary
 
-    LNG_06_005=VERIFYING
-    LNG_06_006=VERIFYING
-    LNG_06_007=VERIFYING
-    PHASE_06=IN_PROGRESS
-    OWNER_VISUAL_ACCEPTANCE_06D=PENDING
+    LNG_06_005=DONE
+    LNG_06_006=DONE
+    LNG_06_007=DONE
+    PHASE_06=DONE
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
     PUSHED=NO
     DEPLOYED=NO
 
-The local Phase 06D implementation and Neon TEST runtime journey are complete
-for owner review. Publication remains gated on visual acceptance. No Phase 07,
-08, or 10 UI/workflow was started.
+The local Phase 06D implementation, Neon TEST runtime journey, and four visual
+comparisons were explicitly accepted by the owner. Phase 06 is closed locally;
+publication is the remaining repository delivery operation. No Phase 07, 08,
+or 10 UI/workflow was started.

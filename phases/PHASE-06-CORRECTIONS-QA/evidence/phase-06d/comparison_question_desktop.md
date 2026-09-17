@@ -13,7 +13,7 @@ Helpful, accepted-by-requester state, generic-comment separation, and the
 pending library-candidate action/status.
 
     MATERIAL_DIFFERENCES=NONE_OBSERVED
-    VISUAL_QUESTION_1440=REVIEW
-    OWNER_VISUAL_ACCEPTANCE_06D=PENDING
+    VISUAL_QUESTION_1440=PASS
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
 
 The REVIEW status is the owner gate, not a discovered structural mismatch.

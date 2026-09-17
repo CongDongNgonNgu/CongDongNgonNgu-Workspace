@@ -1,9 +1,10 @@
 # Phase 06D - contribution hooks and library candidate evidence
 
-## Verification boundary
+## Pre-acceptance verification boundary
 
-This is the local Phase 06D implementation and runtime-verification record.
-It does not record owner visual acceptance or publication.
+This is the local Phase 06D implementation and runtime-verification record
+captured before owner acceptance. The final owner acceptance and closure
+reconciliation are recorded at the end of this document.
 
     CURRENT_PHASE=06
     PHASE_06=IN_PROGRESS
@@ -299,3 +300,72 @@ The authorized TEST database was changed during implementation verification by
 0005. No database action is part of the later publication step. No source push,
 deployment, Phase 07/08/10 workflow, or final Phase 06 reconciliation has been
 started.
+
+## Owner acceptance and Phase 06 closure reconciliation
+
+The owner explicitly accepted the four Phase 06D visual comparison surfaces.
+The local closure state is:
+
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
+    CURRENT_PHASE=06
+    PHASE_06=DONE
+    LNG_06_005=DONE
+    LNG_06_006=DONE
+    LNG_06_007=DONE
+    PHASE_07=READY
+    PHASE_08=READY
+    PHASE_09=BLOCKED_BY_PHASE_08
+    PHASE_10=BLOCKED_BY_PHASE_08
+    PHASE_11=BLOCKED_BY_PHASE_10
+    PHASE_12=READY
+    PHASE_07_STARTED=NO
+    PHASE_08_STARTED=NO
+    PHASE_10_STARTED=NO
+    PHASE_06D_STARTED=YES
+    VISUAL_CORRECTION_1440=PASS
+    VISUAL_CORRECTION_390=PASS
+    VISUAL_QUESTION_1440=PASS
+    VISUAL_QUESTION_390=PASS
+    MATERIAL_DIFFERENCES=NONE
+
+The accepted source heads remain:
+
+    BACKEND_SHA=1f0bc7a12176635afd4f9ccfee5c7a043e0713e7
+    FRONTEND_SHA=a9e3572ebd6e92bfebbf871541dd921213363304
+    WORKSPACE_ACCEPTED_EVIDENCE_SHA=3723e9d82ab6f83ef28a74590b767f437faeb899
+
+The contribution handoffs are complete without starting their owning phases:
+
+    CONTRIBUTION_IDEMPOTENCY=PASS
+    CONTRIBUTION_REVERSAL=PASS
+    PHASE10_CONTRIBUTION_HANDOFF=PASS
+    CANDIDATE_PENDING_ONLY=PASS
+    CANDIDATE_AUTO_VERIFIED=NO
+    CANDIDATE_PROVENANCE=PASS
+    CANDIDATE_DUPLICATE=PASS
+    CANDIDATE_INVALIDATION=PASS
+    PHASE08_CANDIDATE_HANDOFF=PASS
+
+Migration/publication boundary:
+
+    MIGRATION_0005=APPLIED_TEST
+    MIGRATION_CHANGED_IN_PUBLICATION_TASK=NO
+    NEON_TEST_ONLY=YES
+    PRODUCTION_DATABASE_TOUCHED=NO
+    BACKEND_REMOTE_SHA=PENDING_PUBLICATION
+    BACKEND_CI=PENDING_PUBLICATION
+    FRONTEND_REMOTE_SHA=PENDING_PUBLICATION
+    FRONTEND_CI=PENDING_PUBLICATION
+    WORKSPACE_REMOTE_SHA=PENDING_PUBLICATION
+    PUSHED=PENDING_PUBLICATION
+    DEPLOYED=NO
+
+The Phase 05D blocker remains unchanged:
+
+    BLOCKER_05D_001=OPEN
+    RATE_LIMIT_IMPLEMENTATION=PROCESS_LOCAL
+    HORIZONTAL_SCALE_RATE_LIMIT_BLOCKER=YES
+
+This closure record does not add XP/reputation scoring, auto-verify candidates,
+start Phase 07/08/10 work, reapply 0005, touch production, or alter the
+accepted application source.

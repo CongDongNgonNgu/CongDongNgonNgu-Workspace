@@ -26,3 +26,11 @@
 - Recheck responsive behavior at 320, 375, 390, 412, 768, 1024, and 1440;
   confirm semantic diff cues, labels, visible focus, touch targets, and zero
   unexpected console/network errors.
+
+## Phase 06 closure reconciliation
+
+Owner visual acceptance is recorded for the four Phase 06D comparison surfaces.
+All Phase 06D runtime and automated gates remain PASS. The final closure state
+is LNG_06_005=DONE, LNG_06_006=DONE, LNG_06_007=DONE, and PHASE_06=DONE.
+Publication and remote CI verification are tracked separately from this local
+acceptance record.

@@ -272,6 +272,54 @@ action and pending-review state without claiming verification or promotion.
     PUSHED=NO
     DEPLOYED=NO
 
+## Phase 06D owner acceptance and Phase 06 closure
+
+The owner explicitly accepted the four populated Phase 06D visual comparisons.
+All local runtime, security, responsive, accessibility, migration, and
+automated gates remain valid.
+
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
+    CURRENT_PHASE=06
+    PHASE_06=DONE
+    LNG_06_005=DONE
+    LNG_06_006=DONE
+    LNG_06_007=DONE
+    PHASE_07=READY
+    PHASE_08=READY
+    PHASE_09=BLOCKED_BY_PHASE_08
+    PHASE_10=BLOCKED_BY_PHASE_08
+    PHASE_11=BLOCKED_BY_PHASE_10
+    PHASE_12=READY
+    PHASE_07_STARTED=NO
+    PHASE_08_STARTED=NO
+    PHASE_10_STARTED=NO
+    PHASE_06D_STARTED=YES
+    VISUAL_CORRECTION_1440=PASS
+    VISUAL_CORRECTION_390=PASS
+    VISUAL_QUESTION_1440=PASS
+    VISUAL_QUESTION_390=PASS
+    MATERIAL_DIFFERENCES=NONE
+
+Accepted source heads:
+
+    BACKEND_SHA=1f0bc7a12176635afd4f9ccfee5c7a043e0713e7
+    FRONTEND_SHA=a9e3572ebd6e92bfebbf871541dd921213363304
+    WORKSPACE_ACCEPTED_EVIDENCE_SHA=3723e9d82ab6f83ef28a74590b767f437faeb899
+
+    CONTRIBUTION_IDEMPOTENCY=PASS
+    CONTRIBUTION_REVERSAL=PASS
+    PHASE10_CONTRIBUTION_HANDOFF=PASS
+    CANDIDATE_PENDING_ONLY=PASS
+    CANDIDATE_AUTO_VERIFIED=NO
+    CANDIDATE_PROVENANCE=PASS
+    CANDIDATE_DUPLICATE=PASS
+    CANDIDATE_INVALIDATION=PASS
+    PHASE08_CANDIDATE_HANDOFF=PASS
+
+Migration 0005 is already applied only to Neon TEST. Publication must not
+reapply it or touch production. Publication/remote CI values remain pending
+until the authorized fast-forward pushes and checks complete.
+
 The real Neon TEST journey used the same-process MemoryEmailProvider auth
 harness and isolated Playwright Chromium contexts. Correction and question
 runtime data, candidate provenance, contribution events, expected security

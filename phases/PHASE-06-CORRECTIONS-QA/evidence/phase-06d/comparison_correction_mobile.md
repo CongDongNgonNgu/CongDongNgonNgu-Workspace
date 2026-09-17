@@ -13,7 +13,7 @@ explanation, Helpful, accepted-by-requester state, and pending candidate state.
 Controls remain readable and accessible at the mobile width.
 
     MATERIAL_DIFFERENCES=NONE_OBSERVED
-    VISUAL_CORRECTION_390=REVIEW
-    OWNER_VISUAL_ACCEPTANCE_06D=PENDING
+    VISUAL_CORRECTION_390=PASS
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
 
 The REVIEW status is the owner gate, not a discovered structural mismatch.

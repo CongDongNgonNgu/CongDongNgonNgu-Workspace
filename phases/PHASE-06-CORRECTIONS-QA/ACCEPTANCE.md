@@ -27,3 +27,30 @@ verified, promoted, scored, or awarded reputation.
 The four populated runtime captures and side-by-side comparisons are in
 evidence/phase-06d/. Owner visual acceptance is still required before
 publication and reconciliation.
+
+## Phase 06D owner acceptance and Phase 06 closure
+
+The owner explicitly accepted all four populated Phase 06D visual comparison
+surfaces. The previously verified runtime, security, responsive, accessibility,
+migration, and automated evidence remains valid.
+
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
+    LNG_06_005=DONE
+    LNG_06_006=DONE
+    LNG_06_007=DONE
+    PHASE_06=DONE
+    CURRENT_PHASE=06
+    PHASE_07=READY
+    PHASE_08=READY
+    PHASE_09=BLOCKED_BY_PHASE_08
+    PHASE_10=BLOCKED_BY_PHASE_08
+    PHASE_11=BLOCKED_BY_PHASE_10
+    PHASE_12=READY
+    PHASE_07_STARTED=NO
+    PHASE_08_STARTED=NO
+    PHASE_10_STARTED=NO
+
+Contribution evidence remains durable, idempotent, reversible, and provenance
+aware. Candidates remain pending review only; no auto-verification, reputation,
+XP, or production Library promotion is part of Phase 06. Phase 08 owns review
+and verification, and Phase 10 owns scoring.

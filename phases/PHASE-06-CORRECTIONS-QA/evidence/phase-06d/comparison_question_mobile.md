@@ -13,7 +13,7 @@ state, generic-comment separation, and pending candidate state in the mobile
 layout. No clipped action or horizontal overflow was observed.
 
     MATERIAL_DIFFERENCES=NONE_OBSERVED
-    VISUAL_QUESTION_390=REVIEW
-    OWNER_VISUAL_ACCEPTANCE_06D=PENDING
+    VISUAL_QUESTION_390=PASS
+    OWNER_VISUAL_ACCEPTANCE_06D=YES
 
 The REVIEW status is the owner gate, not a discovered structural mismatch.
