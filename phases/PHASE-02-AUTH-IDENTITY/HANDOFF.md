@@ -43,7 +43,7 @@ back.
 | --- | --- | --- | --- |
 | Backend | 02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c | 02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c | Clean; Render production live |
 | Frontend | 08820da4dc3adf9e2d4e07d70f52f685aeff3f1a | 08820da4dc3adf9e2d4e07d70f52f685aeff3f1a | Clean; Vercel production live |
-| Workspace | pending final evidence commit | pending | Phase 02 rollout reconciliation in progress |
+| Workspace | aa3d5d9a7f11455cfe406fe938583a75a33b8933 | pending final follow-up | Phase 02 rollout reconciliation committed |
 
 The Phase 02 implementation is published to the authorized origin/main
 destinations. Backend CI run `35207854499` and Frontend CI run `35207852817`

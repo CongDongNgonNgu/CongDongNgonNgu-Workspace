@@ -12,7 +12,7 @@ configured in Render and were not exposed or changed.
 | --- | --- | --- | --- |
 | Backend | `main` | `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c` | verified equal |
 | Frontend | `main` | `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a` | verified equal |
-| Workspace | `main` | pending final evidence commit | to be verified |
+| Workspace | `main` | `aa3d5d9a7f11455cfe406fe938583a75a33b8933` | local evidence commit; final follow-up pending |
 
 ## Behavior delivered
 

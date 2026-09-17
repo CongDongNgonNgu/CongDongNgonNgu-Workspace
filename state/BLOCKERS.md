@@ -44,7 +44,7 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
 - BLOCKER-02-002 / LNG-02-008 / BLOCKED_EXTERNAL / RESOLVED
   - Historical evidence/date: direct user authorization was received; the initial Phase 02 commits were created and pushed to the exact CongDongNgonNgu Backend, Frontend-Web, and Workspace origin/main destinations on 2026-09-09.
   - Historical impact: commit and remote-SHA gates were open until publication; CI was not independently verified in that session.
-  - Resolution evidence/date: Backend `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c`, Frontend `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a`, and the final Workspace evidence SHA each match origin/main after the 2026-09-17 production rollout. CI runs `35207854499` and `35207852817` completed successfully.
+  - Resolution evidence/date: Backend `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c`, Frontend `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a`, and Workspace evidence `aa3d5d9a7f11455cfe406fe938583a75a33b8933` plus its final SHA reconciliation commit match origin/main after the 2026-09-17 production rollout. CI runs `35207854499` and `35207852817` completed successfully.
   - Safe work that may continue: no additional Phase 02 publication gate remains; no EduAI repository or production database was touched.
 
 - BLOCKER-05D-001 / LNG-05-007 / BLOCKED_INTERNAL / OPEN
