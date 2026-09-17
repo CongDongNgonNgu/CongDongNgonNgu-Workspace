@@ -98,11 +98,11 @@ Only LNG-07-002 and LNG-07-003 are in scope. LNG-07-004 through LNG-07-007 remai
 ### Code and verification
 
 - Backend branch/SHA: `phase-07b-matching-discovery` / `1efbf1af394e1c702317d901fa4011edf8460dcb`.
-- Frontend branch/SHA: `phase-07b-matching-discovery` / `53981deafa18ddc0b79df7635c7404cd3296d34b`.
+- Frontend branch/SHA: `phase-07b-matching-discovery` / `b12d723aafda4412f5461443f341eab816702de8`.
 - Backend: unit `23 suites / 105 tests PASS`; e2e `9 suites / 43 tests PASS`; typecheck, lint, build, npm audit (`0 vulnerabilities`), and `git diff --check` PASS.
 - Frontend: `33 test files / 154 tests PASS`; typecheck, lint, production build, npm audit (`0 vulnerabilities`), and `git diff --check` PASS.
 - Focused regression evidence: matching/service `16 tests PASS`; exchange e2e `3 tests PASS`; frontend Partner Discovery `6 tests PASS`.
-- Workspace branch: `phase-07b-matching-discovery`; final handoff/state documentation is pending its documentation commit.
+- Workspace branch: `phase-07b-matching-discovery`; handoff/state documentation is committed locally.
 
 ### Publication gate
 
