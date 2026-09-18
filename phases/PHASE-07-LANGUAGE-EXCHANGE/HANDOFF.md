@@ -122,3 +122,9 @@ Owner visual acceptance was explicitly received on 2026-09-17 after the recorded
   `BLOCKER-05D-001` remains OPEN for its unrelated distributed-rate-limit
   scope. Phase 02 Google OAuth is DONE and remains separate; no later phase
   state was rolled back.
+
+## Subsequent shared-shell auth regression fix — 2026-09-18
+
+The authenticated desktop/mobile header avatar regression is complete and is
+recorded in `evidence/phase-07/FRONTEND-AUTH-HEADER-AVATAR-2026-09-18.md`.
+This shared-shell fix preserves Phase 07 domain contracts and state.
