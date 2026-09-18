@@ -128,3 +128,11 @@ Owner visual acceptance was explicitly received on 2026-09-17 after the recorded
 The authenticated desktop/mobile header avatar regression is complete and is
 recorded in `evidence/phase-07/FRONTEND-AUTH-HEADER-AVATAR-2026-09-18.md`.
 This shared-shell fix preserves Phase 07 domain contracts and state.
+
+## Subsequent profile edit UX fix — 2026-09-18
+
+The profile inline edit UX is complete and is recorded in
+`evidence/phase-07/FRONTEND-PROFILE-EDIT-UX-2026-09-18.md`. The change keeps
+the profile identity context visible, replaces the read-only body in place,
+adds focus/scroll restoration, and preserves Phase 03 profile update and
+privacy contracts. No production profile data was mutated.
