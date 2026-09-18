@@ -8,3 +8,18 @@
 - Block/report actions are server-enforced and privacy-safe.
 - UI avoids dehumanizing swipe mechanics as the only interaction and works on mobile/desktop.
 - Stitch, tests, security/privacy, responsive/a11y, commits and CI evidence complete.
+
+## Phase 07C verification gate
+
+```text
+PHASE_07C=VERIFYING
+LNG_07_004=VERIFYING
+LNG_07_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_07C=PENDING
+DEPLOYED=NO
+```
+
+- Relationship lifecycle is server-authenticated and idempotent across request, accept, decline, cancel and disconnect.
+- Canonical pair uniqueness and reciprocal-request convergence prevent duplicate or crossed relationships.
+- Buddy Profile Preview is reachable from Partner Discovery and uses only the safe exchange projection.
+- Block/report mutation behavior remains out of scope for 07C and is reserved for LNG-07-006.

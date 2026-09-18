@@ -17,14 +17,20 @@ Implement explainable scoring using reciprocal language compatibility first, the
 Use Stitch. Show meaningful match reasons (e.g. “Bạn học English · họ học Vietnamese”, timezone overlap) without exposing private schedule details. Support language/filter controls, pagination and honest empty/no-match states. Do not gamify people as swipe-only objects.
 
 ## LNG-07-004 — Connection Requests & Relationship Lifecycle
+**Status:** VERIFYING
 **Depends on:** LNG-07-001, LNG-07-003
 
 Implement request, accept, decline, cancel and disconnect states with idempotency and authorization. Prevent duplicate/crossing requests from creating inconsistent relationships. Notifications integrate later through Phase 12 contract/events.
 
+Phase 07C boundary: actor identity comes from the authenticated session; reciprocal pending requests converge to one connected pair; block/report mutations and notification delivery remain deferred.
+
 ## LNG-07-005 — Buddy Profile Preview
+**Status:** VERIFYING
 **Depends on:** LNG-07-003
 
 Use Stitch and Language Passport public projection. Show only permitted language/goals/interests/reputation placeholders when real. Never expose email/phone/exact availability by default. Support report/block controls.
+
+Phase 07C boundary: report/block mutation controls remain deferred to LNG-07-006 and are not rendered as dead controls.
 
 ## LNG-07-006 — Block, Report & Contact Permission
 **Depends on:** LNG-07-004

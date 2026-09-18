@@ -44,5 +44,5 @@ Rules:
     PHASE_11=BLOCKED_BY_PHASE_10
     PHASE_12=READY
 
-Phase 07 is IN_PROGRESS after completion of LNG-07-001. Phase 08 remains READY.
+Phase 07 is IN_PROGRESS after completion of LNG-07-001 through LNG-07-003; LNG-07-004 and LNG-07-005 are currently VERIFYING. Phase 08 remains READY.
 Phase 10 is blocked only by Phase 08; Phase 15 remains blocked by its still-incomplete dependencies.
