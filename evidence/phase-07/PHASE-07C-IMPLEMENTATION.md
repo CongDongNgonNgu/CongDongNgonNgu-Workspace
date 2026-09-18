@@ -32,7 +32,7 @@ Backend:
 
 - `npm.cmd run typecheck`: pass
 - `npm.cmd run lint`: pass (repository script is the TypeScript check)
-- `npm.cmd test -- --runInBand`: 24 suites, 111 tests passed
+- `npm.cmd test -- --runInBand`: 25 suites, 114 tests passed
 - `npm.cmd run test:e2e -- --runInBand`: 9 suites, 44 tests passed
 - `npm.cmd run build`: pass
 - `npm.cmd audit --omit=dev`: 0 vulnerabilities
@@ -63,6 +63,15 @@ Browser runtime:
 - Migration applied to production: `NO`.
 - Local browser verification used an in-memory seeded runtime; no database mutation occurred.
 - `main` was not changed, pushed, merged, deployed, or published.
+
+## External review remediation
+
+- Connection requests now require the authenticated requester to be active/verified, opted in, stored-preference valid, and ready with offered and wanted languages. Requester discoverability remains optional; target eligibility still enforces discoverability, privacy, and safety rules.
+- The crossing-request E2E now disconnects the prior relationship before concurrent opposite-direction requests, verifies both viewpoints converge to `CONNECTED`, checks the canonical repository record, and retries idempotently.
+- A recording event sink test covers requested, connected, declined, cancelled, and disconnected transitions and proves duplicate retries do not publish duplicate transition events. Phase 12 delivery remains unimplemented.
+- Migration `0007` adds the participant-B/status index while preserving the canonical pair, requester index, foreign keys, checks, unique constraint, and unchanged down migration.
+- `POSTGRES_23505_STATIC_REVIEW=PASS` via a focused repository retry test. `POSTGRES_REAL_CONCURRENCY_TEST=PENDING_NEON_TEST` because no Neon database was accessed or mutated.
+- Frontend source and tests are unchanged for this remediation.
 
 ## Required next action
 
