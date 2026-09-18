@@ -12,10 +12,10 @@
 ## Phase 07C verification gate
 
 ```text
-PHASE_07C=VERIFYING
-LNG_07_004=VERIFYING
-LNG_07_005=VERIFYING
-OWNER_VISUAL_ACCEPTANCE_07C=PENDING
+PHASE_07C=DONE
+LNG_07_004=DONE
+LNG_07_005=DONE
+OWNER_VISUAL_ACCEPTANCE_07C=YES
 DEPLOYED=NO
 ```
 
@@ -23,3 +23,5 @@ DEPLOYED=NO
 - Canonical pair uniqueness and reciprocal-request convergence prevent duplicate or crossed relationships.
 - Buddy Profile Preview is reachable from Partner Discovery and uses only the safe exchange projection.
 - Block/report mutation behavior remains out of scope for 07C and is reserved for LNG-07-006.
+
+Final publication gates passed on 2026-09-18: Backend and Frontend main contain the accepted Phase 07C heads, exact-SHA CI succeeded, migration 0007 was applied and rerun successfully on Neon TEST, real PostgreSQL crossing concurrency converged to one canonical CONNECTED row with idempotent retries, and owner visual acceptance is YES. Production remains untouched and no deployment occurred.

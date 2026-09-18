@@ -55,12 +55,12 @@ No schema_migrations checksum values were manually rewritten.
 
 - LNG-07-002 — DONE
 - LNG-07-003 — DONE
-- LNG-07-004 — PLANNED
-- LNG-07-005 — PLANNED
+- LNG-07-004 — DONE
+- LNG-07-005 — DONE
 - LNG-07-006 — PLANNED
 - LNG-07-007 — PLANNED
 
-Phase 07 remains IN_PROGRESS because LNG-07-004 through LNG-07-007 are still planned. Phase 07B is DONE; owner visual acceptance was received on 2026-09-17.
+Phase 07 remains IN_PROGRESS because LNG-07-006 and LNG-07-007 are still planned. Phase 07B is DONE; owner visual acceptance was received on 2026-09-17.
 
 ## Phase 07B — Matching Engine V1 & Partner Discovery
 
@@ -136,3 +136,41 @@ The profile inline edit UX is complete and is recorded in
 the profile identity context visible, replaces the read-only body in place,
 adds focus/scroll restoration, and preserves Phase 03 profile update and
 privacy contracts. No production profile data was mutated.
+
+## Phase 07C — final publication evidence
+
+Phase 07C was published after explicit owner visual acceptance on 2026-09-18.
+
+```text
+PHASE_07=IN_PROGRESS
+LNG_07_001=DONE
+LNG_07_002=DONE
+LNG_07_003=DONE
+LNG_07_004=DONE
+LNG_07_005=DONE
+LNG_07_006=PLANNED
+LNG_07_007=PLANNED
+PHASE_07C=DONE
+OWNER_VISUAL_ACCEPTANCE_07C=YES
+```
+
+### Published repositories
+
+- Backend `main`: `a71cf48ea34e4aac6a9d751c2034b3fbc6254248`.
+- Backend GitHub Actions CI: run `35326438140`, SUCCESS for the exact main SHA.
+- Frontend `main`: `b44e6e875cca5b0597363cfe3283c67067fab899`.
+- Frontend GitHub Actions CI: run `35326486949`, SUCCESS for the exact main SHA.
+- Both main branches were fast-forwarded from their accepted Phase 07C review branches without merge commits or force pushes.
+
+### Runtime and database gates
+
+- Migration `0007_language_exchange_connections.sql` was applied to the authorized Neon TEST database through the existing runner; 0001-0006 skipped, and the immediate second run skipped 0001-0007 with the database up to date.
+- Read-only catalog evidence verified the table, primary key, participant A/B/requester foreign keys, status enum, canonical pair check, requester membership check, unique participant pair, requester/status index, and participant-B/status index.
+- Real PostgreSQL crossing verification used two valid disposable TEST participants. Concurrent A-to-B and B-to-A requests produced one canonical `CONNECTED` row; both viewpoints read `CONNECTED`, retries were idempotent, no unique-violation failure escaped, and exact scoped cleanup passed.
+- `MIGRATION_0007_TEST=PASS`, `POSTGRES_REAL_CONCURRENCY_TEST=PASS`, `PRODUCTION_DB_MUTATED=NO`, and `DEPLOYED=NO`.
+
+### Preserved evidence and next scope
+
+- Stitch project/design-system references, Buddy Profile Preview screenshots, responsive coverage at 320/375/390/412/768/1024/1440, keyboard/focus checks, and Lighthouse accessibility evidence remain recorded in `evidence/phase-07/PHASE-07C-IMPLEMENTATION.md`.
+- `BLOCKER-05D-001` remains OPEN and unchanged.
+- Phase 07D is the next phase; no Phase 07D implementation was started by this publication.

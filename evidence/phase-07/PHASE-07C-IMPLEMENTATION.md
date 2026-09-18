@@ -3,8 +3,8 @@
 Date: 2026-09-18
 Scope: LNG-07-004 Connection Requests & Relationship Lifecycle; LNG-07-005 Buddy Profile Preview
 Branches: `phase-07c-connections-profile` in backend, frontend, and workspace repositories
-Publication: not performed
-Owner visual acceptance: `PENDING`
+Publication: final Phase 07C publication evidence
+Owner visual acceptance: `YES`
 
 ## Delivered
 
@@ -37,6 +37,9 @@ Backend:
 - `npm.cmd run build`: pass
 - `npm.cmd audit --omit=dev`: 0 vulnerabilities
 - `git diff --check`: pass
+- Exact-SHA Backend CI run `35326438140`: SUCCESS for `a71cf48ea34e4aac6a9d751c2034b3fbc6254248`.
+- Exact-SHA Frontend CI run `35326486949`: SUCCESS for `b44e6e875cca5b0597363cfe3283c67067fab899`.
+- Real Neon TEST crossing verification: two valid disposable participants issued opposite requests concurrently; two operations completed safely, one canonical row ended `CONNECTED`, both viewpoints read `CONNECTED`, retries remained idempotent, and scoped cleanup passed.
 
 Frontend:
 
@@ -59,10 +62,11 @@ Browser runtime:
 ## Database and release boundary
 
 - Migration required: `YES`.
-- Migration applied to Neon TEST: `NO`.
+- Migration applied to Neon TEST: `YES` (`0001-0006 SKIP`, `0007 APPLY/DONE`).
+- Immediate second migration run: `0001-0007 SKIP`, database up to date.
 - Migration applied to production: `NO`.
-- Local browser verification used an in-memory seeded runtime; no database mutation occurred.
-- `main` was not changed, pushed, merged, deployed, or published.
+- Disposable TEST users/relationship rows were removed by exact UUID scope after concurrency verification.
+- Backend and Frontend `main` were fast-forwarded without merge commits; no deployment occurred.
 
 ## External review remediation
 
@@ -70,9 +74,15 @@ Browser runtime:
 - The crossing-request E2E now disconnects the prior relationship before concurrent opposite-direction requests, verifies both viewpoints converge to `CONNECTED`, checks the canonical repository record, and retries idempotently.
 - A recording event sink test covers requested, connected, declined, cancelled, and disconnected transitions and proves duplicate retries do not publish duplicate transition events. Phase 12 delivery remains unimplemented.
 - Migration `0007` adds the participant-B/status index while preserving the canonical pair, requester index, foreign keys, checks, unique constraint, and unchanged down migration.
-- `POSTGRES_23505_STATIC_REVIEW=PASS` via a focused repository retry test. `POSTGRES_REAL_CONCURRENCY_TEST=PENDING_NEON_TEST` because no Neon database was accessed or mutated.
+- `POSTGRES_23505_STATIC_REVIEW=PASS` via a focused repository retry test. `POSTGRES_REAL_CONCURRENCY_TEST=PASS` against Neon TEST.
 - Frontend source and tests are unchanged for this remediation.
 
-## Required next action
+## Final Phase 07C publication evidence
 
-Owner reviews the supplied 1440px and 390px captures and replies exactly `OWNER VISUAL ACCEPTANCE: YES`. After that, a fresh explicit authorization is required before applying migration `0007` to Neon TEST. Publication remains blocked until those approvals are complete.
+- `OWNER_VISUAL_ACCEPTANCE_07C=YES`.
+- Backend main: `a71cf48ea34e4aac6a9d751c2034b3fbc6254248`; CI run `35326438140` SUCCESS.
+- Frontend main: `b44e6e875cca5b0597363cfe3283c67067fab899`; CI run `35326486949` SUCCESS.
+- Workspace final publication evidence commit: `THIS_COMMIT` (the resulting commit is fast-forwarded to Workspace main after commit).
+- `PHASE_07=IN_PROGRESS`; `LNG_07_001` through `LNG_07_005` are DONE; `LNG_07_006` and `LNG_07_007` remain PLANNED; `PHASE_07C=DONE`.
+- Stitch references and the 320/375/390/412/768/1024/1440 responsive and accessibility evidence remain recorded above.
+- `MIGRATION_0007_TEST=PASS`, `POSTGRES_REAL_CONCURRENCY_TEST=PASS`, `PRODUCTION_DB_MUTATED=NO`, `DEPLOYED=NO`.
