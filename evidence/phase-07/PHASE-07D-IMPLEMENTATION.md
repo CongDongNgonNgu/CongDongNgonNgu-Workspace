@@ -9,7 +9,7 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 - Backend: `phase-07d-safety-reconciliation`, baseline `a71cf48ea34e4aac6a9d751c2034b3fbc6254248`
 - Frontend: `phase-07d-safety-reconciliation`, baseline `b44e6e875cca5b0597363cfe3283c67067fab899`
 - Workspace: `phase-07d-safety-reconciliation`, baseline `4bd3bfdd8be29e64bf06cd9a42ed50222ccdd9a9`
-- Backend implementation commit: `742bf658290583fba3d9d2b5989d8ae491ddb32e`; remediation commit: `7e6633e3d520cd0d89740bf34bdfda766086dfe7`
+- Backend implementation commit: `742bf658290583fba3d9d2b5989d8ae491ddb32e`; remediation commit: `7e6633e3d520cd0d89740bf34bdfda766086dfe7`; final schema/query fix commit: `9dd97c96c99cb124bc1eab183652af6a1bd90bb5`
 - Frontend implementation commit: `3b8d5adecae6735d7b41c055a99e0040d8f36d35`
 
 ## Implemented contracts
@@ -22,6 +22,8 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 - Contact permission is contract-only: `ALLOWED`, `DENIED_NOT_CONNECTED`, `DENIED_BLOCKED`, `DENIED_PERMISSION`, or `DENIED_INELIGIBLE`. No contact identifier or messaging surface is returned.
 - Actor identity is derived from the authenticated session; CSRF is required for block, unblock, and report writes.
 - Postgres block/removal and relationship mutations use the same canonical pair advisory transaction lock. The in-memory implementation serializes operations deterministically.
+
+The final external review fix aligns Postgres safety-removal `DELETE ... RETURNING` and metadata mapping with migration 0007's canonical `requester_id` column. The focused regression asserts the physical SQL does not use `requester_user_id`, and a static migration contract test guards the published 0007 schema. Migration 0007 and migration 0008 were not changed.
 
 ## External review remediation
 
@@ -53,8 +55,9 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 ## Verification
 
 - Backend typecheck: PASS
-- Backend focused remediation suite: PASS — 5 suites, 18 tests
-- Backend unit suite: PASS — 28 suites, 129 tests
+- Backend lint: PASS
+- Backend focused remediation suite: PASS — 5 suites, 19 tests
+- Backend unit suite: PASS — 28 suites, 130 tests
 - Backend e2e suite: PASS — 10 suites, 45 tests
 - Backend production build: PASS
 - Frontend typecheck: PASS
