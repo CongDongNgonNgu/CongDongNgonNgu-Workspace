@@ -38,10 +38,26 @@ The final external review fix aligns Postgres safety-removal `DELETE ... RETURNI
 
 `MIGRATION_REQUIRED=YES`
 
+`MIGRATION_0008_APPLIED=YES`
+
+`MIGRATION_SECOND_RUN=PASS`
+
+`MIGRATIONS_0001_0007=UNCHANGED`
+
 - File: `CongDongNgonNgu-Back-End/database/migrations/0008_language_exchange_safety.sql`
 - Down file: `CongDongNgonNgu-Back-End/database/migrations/0008_language_exchange_safety.down.sql`
 - Static migration contract checks pass.
-- `TEST_DB_MUTATED=NO`; migration 0008 was not applied.
+- `TEST_DB_MUTATED=YES`; only the authorized Neon TEST migration runner applied migration 0008. Production was not accessed or mutated.
+
+## Neon TEST migration and runtime verification
+
+- `DATABASE_SAFE_METADATA=neondb / public / ep-crimson-grass-azmsfir8-pooler.c-3.ap-southeast-1.aws.neon.tech / sslmode=verify-full`; configuration source `.env`; credentials omitted.
+- Preflight read-only status showed migrations 0001-0007 recorded with matching checksums. The existing runner applied only `0008_language_exchange_safety.sql`; the immediate rerun skipped 0001-0008 and reported the database up to date.
+- Read-only catalog verification passed for the block table, block columns, primary/FK/self-block/directional-unique constraints, blocked-user lookup index, report table and columns, both enums, active-only report unique index, target/state index, and reporter index.
+- Real Postgres Neon TEST verification passed for request-vs-block, accept-vs-block, reciprocal requests-vs-block, connected-then-block, duplicate block, inactive-target block, and unblock-vs-request. No raw unique/FK error escaped; final blocked-pair connection rows were `0`.
+- Real report verification passed for OPEN and IN_REVIEW dedupe, new reports after RESOLVED and DISMISSED, independent categories, and privacy-safe responses.
+- Real privacy/contact verification passed for discovery/profile/relationship block privacy, actor-owned block status, target-private reports, connected contact permission with viewer and target `discoverable=false`, and denial for `NO_CONTACT`/blocked pairs.
+- Disposable TEST users and their scoped reports, blocks, and relationships were cleaned up successfully.
 
 ## Stitch references
 
@@ -55,6 +71,8 @@ The final external review fix aligns Postgres safety-removal `DELETE ... RETURNI
 ## Verification
 
 - Backend typecheck: PASS
+- Backend focused safety suite (post-migration): PASS — 3 suites, 13 tests
+- Backend focused connection/matching suite (post-migration): PASS — 3 suites, 8 tests
 - Backend lint: PASS
 - Backend focused remediation suite: PASS — 5 suites, 19 tests
 - Backend unit suite: PASS — 28 suites, 130 tests
@@ -67,7 +85,7 @@ The final external review fix aligns Postgres safety-removal `DELETE ... RETURNI
 - `git diff --check`: PASS in all three repositories; only expected LF/CRLF warnings were emitted.
 - Local browser smoke: PASS for frontend route protection and new backend route registration. Authenticated safety states were verified through the focused page tests and remain subject to owner visual review at the Stitch 1440px/390px references.
 - Frontend was not rerun because no frontend code changed in this remediation.
-- Real PostgreSQL race verification remains `PENDING_NEON_TEST`; no Neon or other database was accessed.
+- Real PostgreSQL race, report lifecycle, privacy, and contact verification: PASS against the authorized Neon TEST database; disposable data cleanup passed.
 
 ## Gate state
 
