@@ -51,6 +51,20 @@ PHASE_10=BLOCKED_BY_PHASE_08
    fail closed. Asker acceptance never becomes verification.
 8. Quality scoring is deferred until a scoring policy and authority are
    defined; Phase 08A does not invent a score.
+9. For a member-created `ORIGINAL_AUTHOR` entry, the service binds internal
+   `originalContributorUserId` to the authenticated session actor and rejects a
+   different caller-supplied contributor ID. Reviewer/admin internal source
+   flows remain available only through their authorized path; public DTOs and
+   public projections never expose the internal contributor ID.
+10. `provenanceRevision` is an internal non-negative revision. Provenance
+    mutation and review transition writes carry expected review state and
+    revision; stale writes fail with `LIBRARY_REVIEW_CONFLICT` and are not
+    retried against unseen provenance. Migration 0009 owns a parent-row-locking
+    INSERT/UPDATE guard that permits only `DRAFT`/`COMMUNITY_REVIEW`, rejects
+    resource moves and immutable states, and increments the revision
+    atomically. Creator+moderator edits remain denied in `COMMUNITY_REVIEW`;
+    a different authorized reviewer may correct provenance, after which fresh
+    verification is required.
 
 ## Backend artifacts
 
@@ -64,6 +78,9 @@ PHASE_10=BLOCKED_BY_PHASE_08
 - `src/library/library.controller.ts`
 - `src/library/library.module.ts`
 - `test/library.e2e-spec.ts`
+- `src/library/library.service.spec.ts`
+- `src/library/postgres-library.repository.spec.ts`
+- `src/library/library.migration.spec.ts`
 
 The bounded API supports draft creation, provenance attachment, review
 transitions, public-safe resource reads, and active license lookup. There are
@@ -71,8 +88,11 @@ no search, import, candidate-promotion, or frontend routes in this slice.
 
 ## Verification evidence
 
-- Focused library tests: 4 suites, 62 tests passed.
-- Full unit tests: 32 suites, 193 tests passed.
+- Focused library tests: 4 suites, 68 tests passed, including actor-bound
+  provenance, creator-moderator freeze, revision guards, and deterministic
+  race tests for stale verify, stale draft mutation, verify-first mutation,
+  and fresh review after correction.
+- Full unit tests: 32 suites, 199 tests passed.
 - E2E tests: 11 suites, 49 tests passed, including the new real HTTP library
   suite using the non-production memory runtime (no Neon dependency).
 - `npm run typecheck`, `npm run lint`, and `npm run build` passed.

@@ -23,6 +23,10 @@ planned.
   source post/response/candidate/acceptance references for future Phase 06
   integration. The uniqueness scope is resource + source type + source ID;
   conflicting duplicate attribution is rejected rather than overwritten.
+- Member `ORIGINAL_AUTHOR` provenance is bound internally to the authenticated
+  actor's user ID; a caller-supplied different contributor ID is rejected.
+  Reviewer/admin source flows remain explicitly authorized, while the internal
+  contributor ID is omitted from public projection.
 - Review states are exactly `DRAFT`, `COMMUNITY_REVIEW`, `VERIFIED`, and
   `REJECTED`. Submission, reviewer verification/rejection, verified-item
   invalidation, and reviewer-only `REOPEN` are explicit transitions in an
@@ -32,6 +36,14 @@ planned.
   `DRAFT`. `REOPEN` requires a reviewer, an audit note, and clears review
   metadata; it never makes content public automatically. No
   `IMPORTED_UNREVIEWED` state is needed because Phase 08A performs no import.
+- `library_resources.provenance_revision` is an internal non-negative revision
+  used with expected review state for provenance mutations and every review
+  transition. Migration 0009 also adds a parent-row-locking provenance trigger
+  that rejects mutation in `VERIFIED`/`REJECTED`, prevents resource moves, and
+  increments the revision atomically. Stale mutations and reviews return a
+  deterministic review conflict; reviewers must reload after a provenance
+  correction. The creator remains frozen during `COMMUNITY_REVIEW` even when
+  holding a moderator/admin role.
 - Public projection is fail-closed: only public, active, verified resources
   with non-empty provenance whose every current registry license is both
   `active=true` and explicitly `redistributionAllowed=true` are returned.
@@ -55,14 +67,18 @@ candidates. Phase 08A does not consume or promote candidates and does not
 treat asker acceptance as verification.
 
 Migration `0009_open_language_library.sql` and its down migration contain the
-review `REOPEN` action, Phase 06 source-coherence trigger, and REOPEN-note
-constraint. Migration 0009 was not applied to Neon TEST, production, or any
-other database. No frontend files were changed and nothing was deployed.
+review `REOPEN` action, Phase 06 source-coherence trigger, REOPEN-note
+constraint, provenance revision column/check, and provenance mutation
+state/revision guard. Migration 0009 was not applied to Neon TEST, production,
+or any other database. No frontend files were changed and nothing was
+deployed.
 
 ## Verification
 
-- Focused library suite: 62 tests passed.
-- Full backend unit suite: 193 tests passed.
+- Focused library suite: 68 tests passed, including actor binding, creator-
+  moderator freeze, revision conflicts, and deterministic provenance/review
+  race coverage.
+- Full backend unit suite: 199 tests passed.
 - Backend e2e suite: 49 tests passed, including the new four-test library HTTP
   suite on the supported memory test runtime. Coverage includes session-bound
   actors, CSRF, source authority, owner/IDOR boundaries, submit/review/self-
