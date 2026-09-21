@@ -24,31 +24,50 @@ planned.
   integration. The uniqueness scope is resource + source type + source ID;
   conflicting duplicate attribution is rejected rather than overwritten.
 - Review states are exactly `DRAFT`, `COMMUNITY_REVIEW`, `VERIFIED`, and
-  `REJECTED`. Submission, reviewer verification/rejection, and verified-item
-  invalidation are explicit transitions in an append-only audit table. No
+  `REJECTED`. Submission, reviewer verification/rejection, verified-item
+  invalidation, and reviewer-only `REOPEN` are explicit transitions in an
+  append-only audit table. Provenance is creator-editable only in `DRAFT`,
+  reviewer-correctable while remaining in `COMMUNITY_REVIEW`, and immutable
+  after verification or rejection until `REOPEN` returns the resource to
+  `DRAFT`. `REOPEN` requires a reviewer, an audit note, and clears review
+  metadata; it never makes content public automatically. No
   `IMPORTED_UNREVIEWED` state is needed because Phase 08A performs no import.
 - Public projection is fail-closed: only public, active, verified resources
-  with active licenses and provenance are returned. Review notes and private
-  contributor IDs are excluded.
+  with non-empty provenance whose every current registry license is both
+  `active=true` and explicitly `redistributionAllowed=true` are returned.
+  License registry changes are re-evaluated at verification and public-read
+  time. Review notes, reviewer identity, moderation state, contributor IDs,
+  import batches, and transformation history are excluded from the public
+  projection; only safe source/license/attribution fields remain.
 - Quality scoring is intentionally deferred: no scoring policy or authority
   exists in Phase 08A, so no ungrounded score is stored or exposed.
 
 ## Compatibility and boundaries
 
 Phase 06 candidate provenance retains source post ID, source response ID,
-candidate ID, acceptance ID, and an internal contributor reference. Phase 08A
-does not consume or promote candidates and does not treat asker acceptance as
-verification.
+candidate ID, acceptance ID, and an internal contributor reference. A normal
+`MEMBER` may attach only `ORIGINAL_AUTHOR`; system/reviewer-owned source types
+remain restricted in 08A. Phase 06 attachment requires the complete coherent
+candidate/post/response/acceptance bundle, an active pending canonical
+candidate, and matching source IDs. A 0009-owned database trigger and service
+validation reject mismatches, unrelated Phase 06-only fields, and invalidated
+candidates. Phase 08A does not consume or promote candidates and does not
+treat asker acceptance as verification.
 
-Migration `0009_open_language_library.sql` and its down migration were added,
-but migration 0009 was not applied to Neon TEST, production, or any other
-database. No frontend files were changed and nothing was deployed.
+Migration `0009_open_language_library.sql` and its down migration contain the
+review `REOPEN` action, Phase 06 source-coherence trigger, and REOPEN-note
+constraint. Migration 0009 was not applied to Neon TEST, production, or any
+other database. No frontend files were changed and nothing was deployed.
 
 ## Verification
 
-- Focused library suite: 48 tests passed.
-- Full backend unit suite: 178 tests passed.
-- Backend e2e suite: 45 tests passed.
+- Focused library suite: 62 tests passed.
+- Full backend unit suite: 193 tests passed.
+- Backend e2e suite: 49 tests passed, including the new four-test library HTTP
+  suite on the supported memory test runtime. Coverage includes session-bound
+  actors, CSRF, source authority, owner/IDOR boundaries, submit/review/self-
+  verification, public draft/rejected/safe-license behavior, privacy, and
+  invalid mutation fields.
 - Typecheck/lint/build passed.
 - `npm audit --audit-level=high`: 0 vulnerabilities.
 - Migration contract tests confirm migrations 0001–0008 remain byte-for-byte

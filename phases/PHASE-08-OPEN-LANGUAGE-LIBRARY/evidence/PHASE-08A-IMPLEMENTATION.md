@@ -25,14 +25,31 @@ PHASE_10=BLOCKED_BY_PHASE_08
 3. Shared resource identity and metadata live in `library_resources`; each of
    the ten resource families has a constrained type-specific table.
 4. The review lifecycle remains the four-state baseline. `VERIFIED ->
-   REJECTED` is the reversible invalidation path and every transition writes
-   an audit row.
+   REJECTED` is the reversible invalidation path and `REJECTED -> DRAFT` is
+   the audited `REOPEN` path; every transition writes an audit row.
 5. Public reads require public visibility, active moderation, verified review,
-   non-empty provenance, and active referenced licenses. Internal review notes
-   and contributor user IDs are not public fields.
-6. Phase 06 references are typed nullable links. Candidate consumption and
-   promotion are deliberately deferred; asker acceptance is not verification.
-7. Quality scoring is deferred until a scoring policy and authority are
+   non-empty provenance, and every current referenced license must be active
+   with explicit `redistributionAllowed=true`. Unknown/null or false
+   redistribution permission fails closed at verification and public-read
+   time, including after a registry update. Review notes, reviewer identity,
+   moderation state, contributor IDs, import batches, and transformation
+   history are excluded from the public projection; safe source/license/
+   attribution fields remain.
+6. Provenance mutation is allowed for the owner only in `DRAFT`. An authorized
+   reviewer may make a bounded correction in `COMMUNITY_REVIEW`, but the
+   resource remains in review and must be verified again. Provenance is
+   immutable in `VERIFIED` and `REJECTED` until reviewer/admin `REOPEN`.
+   `REOPEN` requires an audit note, writes `REOPEN`, clears reviewed metadata,
+   and returns to `DRAFT` without public exposure.
+7. A normal `MEMBER` may attach only `ORIGINAL_AUTHOR` provenance. Dataset,
+   Phase 06 candidate, manual, and Community post source types are
+   reviewer/internal-only in 08A. Phase 06 provenance requires matching
+   source post, response, candidate, acceptance, and candidate source ID;
+   service lookup and a 0009-owned trigger require the canonical candidate to
+   remain `PENDING_REVIEW` with an active coherent acceptance. Mismatches,
+   invalidated candidates, and Phase 06-only fields on unrelated source types
+   fail closed. Asker acceptance never becomes verification.
+8. Quality scoring is deferred until a scoring policy and authority are
    defined; Phase 08A does not invent a score.
 
 ## Backend artifacts
@@ -46,6 +63,7 @@ PHASE_10=BLOCKED_BY_PHASE_08
 - `src/library/library.service.ts`
 - `src/library/library.controller.ts`
 - `src/library/library.module.ts`
+- `test/library.e2e-spec.ts`
 
 The bounded API supports draft creation, provenance attachment, review
 transitions, public-safe resource reads, and active license lookup. There are
@@ -53,11 +71,13 @@ no search, import, candidate-promotion, or frontend routes in this slice.
 
 ## Verification evidence
 
-- Focused library tests: 4 suites, 48 tests passed.
-- Full unit tests: 32 suites, 178 tests passed.
-- E2E tests: 10 suites, 45 tests passed.
+- Focused library tests: 4 suites, 62 tests passed.
+- Full unit tests: 32 suites, 193 tests passed.
+- E2E tests: 11 suites, 49 tests passed, including the new real HTTP library
+  suite using the non-production memory runtime (no Neon dependency).
 - `npm run typecheck`, `npm run lint`, and `npm run build` passed.
 - `npm audit --audit-level=high` passed with 0 vulnerabilities.
+- `git diff --check` passed.
 - Migration contract tests verify 0001–0008 byte-for-byte checksums.
 
 ## Database and release boundary
