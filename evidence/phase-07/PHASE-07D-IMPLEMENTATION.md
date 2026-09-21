@@ -9,6 +9,8 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 - Backend: `phase-07d-safety-reconciliation`, baseline `a71cf48ea34e4aac6a9d751c2034b3fbc6254248`
 - Frontend: `phase-07d-safety-reconciliation`, baseline `b44e6e875cca5b0597363cfe3283c67067fab899`
 - Workspace: `phase-07d-safety-reconciliation`, baseline `4bd3bfdd8be29e64bf06cd9a42ed50222ccdd9a9`
+- Backend implementation commit: `742bf658290583fba3d9d2b5989d8ae491ddb32e`
+- Frontend implementation commit: `3b8d5adecae6735d7b41c055a99e0040d8f36d35`
 
 ## Implemented contracts
 
