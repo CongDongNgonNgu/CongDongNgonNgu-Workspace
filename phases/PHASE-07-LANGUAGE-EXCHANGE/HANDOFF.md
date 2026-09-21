@@ -1,6 +1,6 @@
 # Phase 07 Handoff
 
-**Phase status:** IN_PROGRESS
+**Phase status:** DONE
 
 ## Phase 07A — Buddy Preference & Privacy Foundation
 
@@ -173,4 +173,46 @@ OWNER_VISUAL_ACCEPTANCE_07C=YES
 
 - Stitch project/design-system references, Buddy Profile Preview screenshots, responsive coverage at 320/375/390/412/768/1024/1440, keyboard/focus checks, and Lighthouse accessibility evidence remain recorded in `evidence/phase-07/PHASE-07C-IMPLEMENTATION.md`.
 - `BLOCKER-05D-001` remains OPEN and unchanged.
-- Phase 07D is the next phase; no Phase 07D implementation was started by this publication.
+- Phase 07D was subsequently completed and closed below; the historical Phase 07C record above is preserved unchanged.
+
+## Phase 07D / Phase 07 closure — 2026-09-21
+
+Owner visual acceptance was explicitly granted. Phase 07D and the complete Phase 07 dependency set are now closed after publication and exact main-commit CI verification.
+
+```text
+CURRENT_PHASE=07
+NEXT_PHASE=08
+PHASE_02=DONE
+PHASE_03=DONE
+PHASE_04=DONE
+PHASE_05=DONE
+PHASE_06=DONE
+PHASE_07=DONE
+LNG_07_001=DONE
+LNG_07_002=DONE
+LNG_07_003=DONE
+LNG_07_004=DONE
+LNG_07_005=DONE
+LNG_07_006=DONE
+LNG_07_007=DONE
+PHASE_07B=DONE
+PHASE_07C=DONE
+PHASE_07D=DONE
+OWNER_VISUAL_ACCEPTANCE_07B=YES
+OWNER_VISUAL_ACCEPTANCE_07C=YES
+OWNER_VISUAL_ACCEPTANCE_07D=YES
+BLOCKER-05D-001=OPEN
+```
+
+### Final publication evidence
+
+- Backend `main`: `9dd97c96c99cb124bc1eab183652af6a1bd90bb5`; GitHub Actions CI run [35558039931](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/35558039931) completed `SUCCESS` for the exact SHA.
+- Frontend `main`: `3b8d5adecae6735d7b41c055a99e0040d8f36d35`; GitHub Actions CI run [35558038683](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/35558038683) completed `SUCCESS` for the exact SHA.
+- Workspace `main` is fast-forwarded through the final Phase 07D closure commit after this handoff update; the exact Workspace main SHA is reported by the publication result.
+- Migration 0008 Neon TEST application: `PASS`; immediate second migration runner: `PASS` / up to date; migrations 0001-0007: unchanged.
+- Real Postgres safety races: request-vs-block, accept-vs-block, reciprocal-request-vs-block, connected-then-block, duplicate block, inactive-target block, and unblock-vs-request: `PASS`.
+- Active-only report dedupe, new reports after `RESOLVED`/`DISMISSED`, independent categories, privacy/contact reconciliation, and disposable TEST cleanup: `PASS`.
+- Production database: untouched. Deployment: `NO`.
+- Stitch project/design-system references, responsive evidence at 320/375/390/412/768/1024/1440, accessibility evidence, and owner visual acceptance are recorded in `evidence/phase-07/PHASE-07D-IMPLEMENTATION.md`.
+
+Phase 08 is READY and is the next executable phase. It was not started in this task.

@@ -1,6 +1,6 @@
 # Phase 07D — Safety and matching reconciliation evidence
 
-Status: VERIFYING
+Status: DONE
 
 Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-007 Matching / Safety Reconciliation`. No chat, messaging, notifications, rooms, contact-data delivery, later-phase work, deployment, or production action was performed.
 
@@ -32,7 +32,7 @@ The final external review fix aligns Postgres safety-removal `DELETE ... RETURNI
 - Report dedupe is now active-state bounded by a partial unique index for `OPEN`/`IN_REVIEW`. The Postgres conflict target uses the same predicate, allowing a new report after `RESOLVED` or `DISMISSED` while keeping different categories independent.
 - Contact permission uses a dedicated active/verified, opted-in, valid-exchange participation check and no longer requires `discoverable=true`. Discovery and profile-preview eligibility still require discoverability.
 - Blocking requires an active actor and an existing target, but the target may be disabled; stale relationships are still removed and later contact permission is denied.
-- `database/migrations/0001`–`0007` were not changed. Migration 0008 remains unapplied.
+- `database/migrations/0001`–`0007` were not changed. Migration 0008 was applied only to the authorized Neon TEST database; production remains untouched.
 
 ## Migration boundary
 
@@ -87,13 +87,28 @@ The final external review fix aligns Postgres safety-removal `DELETE ... RETURNI
 - Frontend was not rerun because no frontend code changed in this remediation.
 - Real PostgreSQL race, report lifecycle, privacy, and contact verification: PASS against the authorized Neon TEST database; disposable data cleanup passed.
 
+## Final Phase 07D / Phase 07 closure publication
+
+- Owner visual acceptance was explicitly granted: `OWNER_VISUAL_ACCEPTANCE_07D=YES`.
+- Backend `main` was fast-forwarded to `9dd97c96c99cb124bc1eab183652af6a1bd90bb5`; GitHub Actions CI run `35558039931` completed `SUCCESS` for that exact SHA.
+- Frontend `main` was fast-forwarded to `3b8d5adecae6735d7b41c055a99e0040d8f36d35`; GitHub Actions CI run `35558038683` completed `SUCCESS` for that exact SHA.
+- Workspace closure evidence is published through the accepted Phase 07D review history; the final Workspace `main` SHA is reported with the publication result.
+- Migration 0008 Neon TEST application and the immediate second-run up-to-date check both passed; migrations 0001-0007 remained unchanged.
+- Request-vs-block, accept-vs-block, reciprocal-request-vs-block, connected-then-block, duplicate block, inactive-target block, and unblock-vs-request all passed against real Neon TEST Postgres.
+- Active-only report dedupe, post-RESOLVED/DISMISSED report creation, privacy/contact reconciliation, disposable TEST cleanup, and production-untouched verification all passed.
+- Stitch references, responsive coverage, accessibility evidence, and owner visual acceptance remain recorded above.
+
 ## Gate state
 
-- `LNG_07_006=VERIFYING`
-- `LNG_07_007=VERIFYING`
-- `PHASE_07=IN_PROGRESS`
-- `OWNER_VISUAL_ACCEPTANCE=PENDING`
+- `LNG_07_006=DONE`
+- `LNG_07_007=DONE`
+- `PHASE_07=DONE`
+- `PHASE_07D=DONE`
+- `OWNER_VISUAL_ACCEPTANCE_07D=YES`
+- `MIGRATION_0008_APPLIED=YES`
+- `TEST_DB_MUTATED=YES`
+- `PRODUCTION_DB_MUTATED=NO`
 - `DEPLOYED=NO`
-- `MAIN_PUBLISHED=NO`
-
-Required next action: owner review of the desktop/mobile safety profile, report dialog, and blocked/unavailable state. Do not publish to main, apply migration 0008, or deploy until that review is explicitly accepted.
+- `MAIN_PUBLISHED=YES`
+- `CURRENT_PHASE=07`
+- `NEXT_PHASE=08`
