@@ -33,15 +33,15 @@ Use Stitch and Language Passport public projection. Show only permitted language
 Phase 07C boundary: report/block mutation controls remain deferred to LNG-07-006 and are not rendered as dead controls.
 
 ## LNG-07-006 — Block, Report & Contact Permission
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-07-004
 
 Blocking immediately removes discovery/active contact eligibility according to policy and prevents new requests. Reports create moderation-ready evidence without alerting the reported user to reporter identity. Define future messaging permission contract even if full chat is deferred.
 
 ## LNG-07-007 — Matching/Safety Reconciliation
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-07-001..006
 
 Test matching deterministically, edge cases with multilingual users/timezones/no availability, request races, blocks, privacy and IDOR. Run responsive/a11y/visual gates, commit/push and document match weights/decisions.
 
-Phase 07C final publication remains complete. Phase 07D implementation is recorded in `evidence/phase-07/PHASE-07D-IMPLEMENTATION.md`; owner visual acceptance is still pending before publication.
+Phase 07D publication is complete. `OWNER_VISUAL_ACCEPTANCE_07D=YES`; `LNG_07_006=DONE`; `LNG_07_007=DONE`; `PHASE_07=DONE`. Migration 0008 Neon TEST verification is complete; the production database was untouched and no deployment occurred. Phase 08 is READY and is the next executable phase.
