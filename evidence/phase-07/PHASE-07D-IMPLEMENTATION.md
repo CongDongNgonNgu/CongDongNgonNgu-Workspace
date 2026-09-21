@@ -9,7 +9,7 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 - Backend: `phase-07d-safety-reconciliation`, baseline `a71cf48ea34e4aac6a9d751c2034b3fbc6254248`
 - Frontend: `phase-07d-safety-reconciliation`, baseline `b44e6e875cca5b0597363cfe3283c67067fab899`
 - Workspace: `phase-07d-safety-reconciliation`, baseline `4bd3bfdd8be29e64bf06cd9a42ed50222ccdd9a9`
-- Backend implementation commit: `742bf658290583fba3d9d2b5989d8ae491ddb32e`
+- Backend implementation commit: `742bf658290583fba3d9d2b5989d8ae491ddb32e`; remediation commit: `7e6633e3d520cd0d89740bf34bdfda766086dfe7`
 - Frontend implementation commit: `3b8d5adecae6735d7b41c055a99e0040d8f36d35`
 
 ## Implemented contracts
@@ -22,6 +22,15 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 - Contact permission is contract-only: `ALLOWED`, `DENIED_NOT_CONNECTED`, `DENIED_BLOCKED`, `DENIED_PERMISSION`, or `DENIED_INELIGIBLE`. No contact identifier or messaging surface is returned.
 - Actor identity is derived from the authenticated session; CSRF is required for block, unblock, and report writes.
 - Postgres block/removal and relationship mutations use the same canonical pair advisory transaction lock. The in-memory implementation serializes operations deterministically.
+
+## External review remediation
+
+- Postgres block now uses `DELETE ... RETURNING` in the existing block transaction and returns removed connection metadata. The service emits exactly one `exchange.connection.safety_removed` event from atomic metadata and does not issue a second Postgres relationship delete.
+- Memory mode keeps deferred relationship removal and emits the same safety-removal event when a relationship existed; duplicate blocks with no new removal emit no event.
+- Report dedupe is now active-state bounded by a partial unique index for `OPEN`/`IN_REVIEW`. The Postgres conflict target uses the same predicate, allowing a new report after `RESOLVED` or `DISMISSED` while keeping different categories independent.
+- Contact permission uses a dedicated active/verified, opted-in, valid-exchange participation check and no longer requires `discoverable=true`. Discovery and profile-preview eligibility still require discoverability.
+- Blocking requires an active actor and an existing target, but the target may be disabled; stale relationships are still removed and later contact permission is denied.
+- `database/migrations/0001`–`0007` were not changed. Migration 0008 remains unapplied.
 
 ## Migration boundary
 
@@ -44,7 +53,8 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 ## Verification
 
 - Backend typecheck: PASS
-- Backend unit suite: PASS — 28 suites, 124 tests
+- Backend focused remediation suite: PASS — 5 suites, 18 tests
+- Backend unit suite: PASS — 28 suites, 129 tests
 - Backend e2e suite: PASS — 10 suites, 45 tests
 - Backend production build: PASS
 - Frontend typecheck: PASS
@@ -53,6 +63,8 @@ Scope is limited to `LNG-07-006 Block, Report & Contact Permission` and `LNG-07-
 - Backend/frontend high-severity audit: PASS — 0 vulnerabilities reported
 - `git diff --check`: PASS in all three repositories; only expected LF/CRLF warnings were emitted.
 - Local browser smoke: PASS for frontend route protection and new backend route registration. Authenticated safety states were verified through the focused page tests and remain subject to owner visual review at the Stitch 1440px/390px references.
+- Frontend was not rerun because no frontend code changed in this remediation.
+- Real PostgreSQL race verification remains `PENDING_NEON_TEST`; no Neon or other database was accessed.
 
 ## Gate state
 
