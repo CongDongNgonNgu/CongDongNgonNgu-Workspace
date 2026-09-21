@@ -100,10 +100,32 @@ no search, import, candidate-promotion, or frontend routes in this slice.
 - `git diff --check` passed.
 - Migration contract tests verify 0001–0008 byte-for-byte checksums.
 
+## Post-migration runtime defect remediation
+
+- Migration 0009 had already been applied successfully to the authorized
+  Neon TEST database before this remediation; no migration runner or schema
+  mutation was used for the fix.
+- Neon TEST runtime verification stopped on a real PostgreSQL typing defect
+  in `PostgresLibraryRepository.transitionReview`: the
+  `reviewed_by_user_id` CASE expression passed a text parameter to a UUID
+  column.
+- Backend review commit `8b391c8` fixes the repository SQL with explicit UUID,
+  timestamptz, and bigint casts, and adds explicit UUID/time casts to the
+  review-audit INSERT without changing review semantics.
+- Repository regressions cover the SQL contract, VERIFIED/REJECTED reviewed
+  metadata, REOPEN/DRAFT clearing, revision conflicts, and transaction
+  rollback. The focused repository/service/migration run passed 45 tests;
+  the full unit run passed 203 tests; library HTTP E2E passed 4 tests; full
+  E2E passed 49 tests; typecheck, lint, build, npm audit, and diff check
+  passed.
+- Migration 0009 and migrations 0001-0008 remain unchanged. Full Neon TEST
+  runtime re-verification is still pending.
+
 ## Database and release boundary
 
-`MIGRATION_REQUIRED=YES` because 0009 exists. `MIGRATION_APPLIED=NO` and
-`TEST_DB_MUTATED=NO`; no migration, deployment, or production mutation was
-performed. Frontend remains unchanged on its pinned main SHA. This evidence
-stops at external review and fresh owner authorization for any future Neon
-TEST application.
+`MIGRATION_REQUIRED=YES` because 0009 exists. `MIGRATION_APPLIED=YES` on the
+authorized Neon TEST target before this repository-only remediation;
+`TEST_DB_SCHEMA_MUTATED=NO` for this fix. No rollback, new migration,
+deployment, or production mutation was performed. Frontend remains unchanged
+on its pinned main SHA. This evidence stops pending full Neon TEST runtime
+re-verification of the corrected Backend review branch.
