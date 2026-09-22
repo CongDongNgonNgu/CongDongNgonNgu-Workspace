@@ -119,13 +119,38 @@ no search, import, candidate-promotion, or frontend routes in this slice.
   E2E passed 49 tests; typecheck, lint, build, npm audit, and diff check
   passed.
 - Migration 0009 and migrations 0001-0008 remain unchanged. Full Neon TEST
-  runtime re-verification is still pending.
+  runtime re-verification is recorded below.
+
+## Neon TEST runtime retest
+
+- Migration 0009 remained applied from the prior authorized run; no migration
+  runner, down migration, schema edit, or migration ledger edit was executed.
+  The runner-normalized SHA-256 for 0009 matched the applied ledger value:
+  `bf178d001a863ac6b1e3ad1c679eef616af699ae5c00646ce26ec779823f9e32`.
+  Migrations 0001-0008 also matched their ledger checksums.
+- The corrected review SQL passed the real PostgreSQL smoke lifecycle:
+  `DRAFT -> COMMUNITY_REVIEW -> VERIFIED -> REJECTED -> DRAFT`; reviewer UUID
+  and timestamps persisted, VERIFY/INVALIDATE/REOPEN audits were written, and
+  REOPEN cleared reviewed metadata.
+- Real provenance revisions were `0 -> 1 -> 2`; duplicate mutation rejected
+  atomically with revision and rows unchanged.
+- Database-level VERIFIED and REJECTED provenance guards rejected direct
+  inserts without changing rows or revisions.
+- Real PostgreSQL provenance/VERIFY, VERIFY/provenance, SUBMIT/provenance,
+  and provenance/SUBMIT races passed with stale conflicts and fresh retries.
+- Creator+moderator freeze, different-reviewer correction, member-bound
+  ORIGINAL_AUTHOR provenance, contributor spoof denial, Phase06 coherent and
+  mismatch/invalidation/revocation checks, license fail-closed checks, REOPEN,
+  and public privacy checks all passed.
+- Disposable TEST users, resources, provenance, audits, licenses, and Phase06
+  rows were cleaned up. Production was untouched and deployment remained NO.
 
 ## Database and release boundary
 
 `MIGRATION_REQUIRED=YES` because 0009 exists. `MIGRATION_APPLIED=YES` on the
 authorized Neon TEST target before this repository-only remediation;
-`TEST_DB_SCHEMA_MUTATED=NO` for this fix. No rollback, new migration,
+`MIGRATION_RERUN=NO`; `TEST_DB_SCHEMA_MUTATED=NO` for this fix and disposable
+runtime rows were created and cleaned up. No rollback, new migration,
 deployment, or production mutation was performed. Frontend remains unchanged
-on its pinned main SHA. This evidence stops pending full Neon TEST runtime
-re-verification of the corrected Backend review branch.
+on its pinned main SHA. This evidence records the completed Neon TEST runtime
+publication gate.
