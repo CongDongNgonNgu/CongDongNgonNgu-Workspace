@@ -212,3 +212,13 @@ Stitch references and inspected rasters are recorded in
 `evidence/PHASE-08B1-STITCH-*.png`. Final verification details, exact test
 counts, browser viewport metrics, accessibility results, and migration status
 are recorded in `evidence/PHASE-08B1-IMPLEMENTATION.md`.
+
+External review remediation is recorded in the same evidence file. It fixes
+the ordered-query cursor boundary/hydration race, aligns in-memory keyword
+semantics with PostgreSQL, refactors keyword candidates into a parameterized
+CTE, adds the topic/type/CEFR 0010 index contract and fixed checksums, and
+keeps 0010 unapplied. The mobile drawer now has stable focus across filter
+changes and exact body overflow restoration; topic edits apply on Enter or
+blur. Final implementation captures are stored beside the Stitch references
+with their 1440x900 and 390x900 viewport dimensions. The slice remains
+`LNG_08_003=VERIFYING` with `OWNER_VISUAL_ACCEPTANCE_08B1=PENDING`.

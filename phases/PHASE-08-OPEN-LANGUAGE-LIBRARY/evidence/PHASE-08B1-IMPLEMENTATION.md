@@ -122,3 +122,94 @@ DEPLOYED=NO
 The implementation is intentionally left at `VERIFYING` pending external and
 owner visual review. No merge, deployment, migration application, or
 LNG-08-004 work was started.
+
+## External review remediation
+
+The remediation remains limited to LNG-08-003 and is committed on the
+existing `phase-08b1-library-search` review branches.
+
+### Backend contract and query changes
+
+- `LibrarySearchRepositoryPage` now returns `nextBoundary` from the original
+  ordered page query. PostgreSQL selects `resource.updated_at` with the ID
+  before hydration; the service encodes that boundary instead of reading a
+  hydrated resource timestamp. In-memory pagination follows the same
+  contract.
+- Regression coverage simulates a row selected at T1 being hydrated at T2;
+  the opaque cursor remains anchored at T1. Equal timestamps use descending
+  UUID ID tie-breaking and three one-item pages contain no duplicates.
+- In-memory keyword matching now searches topics and type-specific learning
+  content only. Language remains an explicit primary-or-secondary filter;
+  parity coverage verifies that a language code alone does not satisfy `q`.
+- PostgreSQL keyword search uses a parameterized `keyword_matches` CTE with
+  `UNION` candidate IDs for topics and each type-specific table, including
+  dialogue JSON turns. Wildcard and backslash escaping remains explicit.
+
+### Migration 0010 review contract
+
+`0010_library_search.sql` remains review-only and unapplied. It now includes
+the topic trigram index and partial public type/CEFR ordering indexes in
+addition to the query-backed language/order and detail trigram indexes. The
+down migration drops every 0010-owned index, retains `pg_trgm`, and does not
+drop library tables. Static tests freeze the normalized checksums:
+
+```text
+0010_library_search.sql=0f5fc8b6e416fbed8e68eb033c2216ede4a1247d96217b9bf1617ebfe2df83f2
+0010_library_search.down.sql=dc230f48a075c947584f3e0bdd2aedf2f0a7be20371b4a94ee979c97e54fa0d0
+MIGRATIONS_0001_0009=UNCHANGED
+MIGRATION_APPLIED=NO
+```
+
+### Frontend remediation and implementation captures
+
+- The drawer receives a stable close callback, so URL/filter rerenders do not
+  reset focus while it remains open.
+- The drawer saves and restores the exact previous `document.body.style.overflow`
+  value and uses `hidden` only while open. Escape closes it and returns focus to
+  the original trigger.
+- Topic input uses apply-on-commit behavior: Enter or blur updates the URL and
+  search; typing alone does not request per character.
+- Playwright is not present in the Frontend package. DevTools runtime checks
+  covered populated, empty, detail, drawer, focus, URL, and no-console-error
+  states. Final implementation captures are implementation screenshots, not
+  Stitch rasters:
+
+| capture | viewport | path |
+| --- | ---: | --- |
+| desktop explorer | 1440x900 | `evidence/PHASE-08B1-IMPLEMENTATION-DESKTOP.png` |
+| mobile explorer | 390x900 | `evidence/PHASE-08B1-IMPLEMENTATION-MOBILE.png` |
+| mobile drawer | 390x900 | `evidence/PHASE-08B1-IMPLEMENTATION-MOBILE-DRAWER.png` |
+| public detail | 390x900 | `evidence/PHASE-08B1-IMPLEMENTATION-DETAIL.png` |
+| empty state | 390x900 | `evidence/PHASE-08B1-IMPLEMENTATION-EMPTY.png` |
+
+The remediated responsive matrix was rechecked at 320, 375, 390, 412, 768,
+1024, and 1440 CSS pixels. `scrollWidth` did not exceed the viewport width;
+the 320px result has the expected 15px vertical scrollbar difference between
+`clientWidth` and the viewport, but no additional horizontal content. Mobile
+drawer focus remained inside the dialog after a language change, body overflow
+was hidden while open and restored on Escape, and Lighthouse snapshot audits
+returned Accessibility 100 on desktop and mobile (with Best Practices, SEO,
+and Agentic Browsing also 100).
+
+### Remediation verification counts
+
+```text
+BACKEND_FOCUSED=57 tests passed (library service, PostgreSQL repository, migration contract)
+BACKEND_UNIT=32 suites, 215 tests passed
+BACKEND_E2E=11 suites, 50 tests passed
+FRONTEND_FOCUSED=7 tests passed
+FRONTEND_TESTS=39 files, 181 tests passed
+BACKEND_TYPECHECK=PASS
+BACKEND_BUILD=PASS
+FRONTEND_TYPECHECK=PASS
+FRONTEND_BUILD=PASS
+AUDIT=0 vulnerabilities (Backend and Frontend npm audit); Lighthouse accessibility 100 desktop/mobile
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_003=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_0010_AUTHORIZATION
+```
