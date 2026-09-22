@@ -7,8 +7,9 @@ This evidence covers only `LNG-08-001` and `LNG-08-002`. Workspace state is:
 ```text
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
-LNG_08_001=VERIFYING
-LNG_08_002=VERIFYING
+PHASE_08A=DONE
+LNG_08_001=DONE
+LNG_08_002=DONE
 LNG_08_003..008=PLANNED
 PHASE_09=BLOCKED_BY_PHASE_08
 PHASE_10=BLOCKED_BY_PHASE_08
@@ -98,7 +99,9 @@ no search, import, candidate-promotion, or frontend routes in this slice.
 - `npm run typecheck`, `npm run lint`, and `npm run build` passed.
 - `npm audit --audit-level=high` passed with 0 vulnerabilities.
 - `git diff --check` passed.
-- Migration contract tests verify 0001–0008 byte-for-byte checksums.
+- Migration contract tests freeze canonical normalized checksums for
+  migrations 0001-0009 and retain down-migration coverage; migration files
+  themselves remained unchanged.
 
 ## Post-migration runtime defect remediation
 
@@ -154,3 +157,38 @@ runtime rows were created and cleaned up. No rollback, new migration,
 deployment, or production mutation was performed. Frontend remains unchanged
 on its pinned main SHA. This evidence records the completed Neon TEST runtime
 publication gate.
+
+## Final Phase 08A publication
+
+- `PHASE_08A=DONE`; `CURRENT_PHASE=08`; `PHASE_08=IN_PROGRESS`;
+  `LNG_08_001=DONE`; `LNG_08_002=DONE`; `LNG_08_003..008=PLANNED`.
+  `PHASE_09=BLOCKED_BY_PHASE_08`, `PHASE_10=BLOCKED_BY_PHASE_08`, and
+  `BLOCKER-05D-001=OPEN` remain unchanged.
+- Backend main was published at
+  `ef66c1c1ef259aee93fbb9dc8281de88f8fbfccd`. Exact CI run `35680146545`
+  completed with overall `SUCCESS`; Lint, Type check, Unit tests, End-to-end
+  tests, Build, and Security audit all passed.
+- Historical exact-SHA CI run `35679027827` failed solely because the
+  migration immutability test hashed platform-dependent CRLF working-tree
+  bytes. The bounded Backend remediation changes only
+  `src/library/library.migration.spec.ts` to read UTF-8 text and apply the
+  same CRLF/CR-to-LF normalization as `database/migrate.cjs`; no migration
+  file changed.
+- Migration 0009 remains applied to the authorized Neon TEST database. The
+  second migration run had previously reported up to date; no migration was
+  rerun during the runtime retest. The normalized 0009 checksum matches the
+  applied ledger: `bf178d001a863ac6b1e3ad1c679eef616af699ae5c00646ce26ec779823f9e32`.
+- Real PostgreSQL review lifecycle, provenance revision, database provenance
+  guard, race reconciliation, creator-moderator freeze, member
+  `ORIGINAL_AUTHOR` actor binding, Phase06 coherence/invalidation/revocation,
+  license fail-closed behavior, REOPEN, public privacy, and disposable TEST
+  cleanup all passed. The reviewed-by UUID runtime defect was fixed and
+  revalidated on real PostgreSQL.
+- Final local regression evidence: 203 unit tests passed, 45 focused library
+  tests passed, 49 full E2E tests passed, and 4 library HTTP E2E tests passed;
+  typecheck, lint, build, `npm audit` (0 vulnerabilities), and diff-check
+  passed.
+- Frontend remained unchanged at
+  `3b8d5adeca6735d7b41c055a99e0040d8f36d35`. Production was untouched,
+  deployment was `NO`, and `NEXT_SLICE=08B` remains planned only; no 08B
+  implementation started.

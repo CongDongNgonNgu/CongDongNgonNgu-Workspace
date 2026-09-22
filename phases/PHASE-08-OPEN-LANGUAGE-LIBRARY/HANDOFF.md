@@ -1,6 +1,7 @@
 # Phase 08 Handoff
 
 **Phase status:** IN_PROGRESS
+**Slice status:** PHASE_08A=DONE
 
 Phase 08A implements only `LNG-08-001` (provenance and license model) and
 `LNG-08-002` (core resource schema and review lifecycle). The phase is not
@@ -69,9 +70,14 @@ treat asker acceptance as verification.
 Migration `0009_open_language_library.sql` and its down migration contain the
 review `REOPEN` action, Phase 06 source-coherence trigger, REOPEN-note
 constraint, provenance revision column/check, and provenance mutation
-state/revision guard. Migration 0009 was not applied to Neon TEST, production,
-or any other database. No frontend files were changed and nothing was
-deployed.
+state/revision guard. Migration 0009 was applied successfully to the
+authorized Neon TEST database under separate explicit authorization; its
+second migration-run check previously reported all migrations up to date, and
+the migration runner was not rerun during the runtime retest. The current
+runner-normalized 0009 checksum is
+`bf178d001a863ac6b1e3ad1c679eef616af699ae5c00646ce26ec779823f9e32`, and
+migrations 0001-0008 remained unchanged. Production was untouched, no
+frontend files were changed, and nothing was deployed.
 
 ## Verification
 
@@ -86,10 +92,54 @@ deployed.
   invalid mutation fields.
 - Typecheck/lint/build passed.
 - `npm audit --audit-level=high`: 0 vulnerabilities.
-- Migration contract tests confirm migrations 0001–0008 remain byte-for-byte
-  unchanged.
+- Migration contract tests freeze canonical normalized checksums for
+  migrations 0001-0009 and retain down-migration coverage; the migration files
+  themselves remained unchanged.
 
-External review must approve the schema/API boundary and authorize a fresh
-Neon TEST migration review before 0009 is applied. Keep Phase 08
-`IN_PROGRESS`, Phase 09/10 blocked, and stop at
-`NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW`.
+The earlier implementation-review snapshot required external review and fresh
+Neon TEST migration authorization; that historical gate is superseded by the
+authorized runtime retest and final publication evidence below. Phase 08
+remains `IN_PROGRESS`, Phase 09/10 remain blocked, and no 08B implementation
+has started.
+
+## Final Phase 08A publication evidence
+
+```text
+PHASE_08A=DONE
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=PLANNED
+LNG_08_004=PLANNED
+LNG_08_005=PLANNED
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+PHASE_09=BLOCKED_BY_PHASE_08
+PHASE_10=BLOCKED_BY_PHASE_08
+BLOCKER-05D-001=OPEN
+NEXT_SLICE=08B
+NEXT_ACTION=STOP
+```
+
+- Backend main was published at `ef66c1c1ef259aee93fbb9dc8281de88f8fbfccd`.
+  Exact Backend CI run `35680146545` completed successfully with Lint, Type
+  check, Unit tests, End-to-end tests, Build, and Security audit all passing.
+- The prior exact-SHA CI failure `35679027827` was solely the migration
+  checksum test hashing platform-dependent CRLF bytes. The remediation keeps
+  migration files unchanged and makes `library.migration.spec.ts` use the
+  same CRLF/CR-to-LF normalization as `database/migrate.cjs`. Canonical 0009
+  checksum remains the value recorded above.
+- Neon TEST 0009 application and the real PostgreSQL runtime retest passed;
+  no migration was rerun during the retest. The review lifecycle, provenance
+  revision, database provenance guard, race reconciliation, creator-moderator
+  freeze, member actor binding, Phase06 coherence/invalidation/revocation,
+  license fail-closed behavior, REOPEN, public privacy, and disposable TEST
+  cleanup all passed.
+- Final local regression evidence: 203 unit tests passed, 45 focused library
+  tests passed, 49 full E2E tests passed, and 4 library HTTP E2E tests passed;
+  typecheck, lint, build, `npm audit` (0 vulnerabilities), and diff-check
+  passed.
+- Frontend remained unchanged at `3b8d5adeca6735d7b41c055a99e0040d8f36d35`.
+  Production was untouched, deployment was `NO`, and 08B remains planned only.

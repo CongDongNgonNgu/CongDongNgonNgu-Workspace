@@ -1,13 +1,13 @@
 # Phase 08 Tasks
 
 ## LNG-08-001 — Provenance & License Model
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** Phase 05 and docs/04-DATA-LICENSING.md
 
 Define reusable provenance: source type/ID/URL, license reference, attribution, original contributor, import batch/transformation metadata, review status, quality score and audit timestamps. Preserve multiple sources if dedup merges equivalent resources. Create a license registry/config rather than free-text license chaos.
 
 ## LNG-08-002 — Core Resource Schema & Review Lifecycle
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-08-001
 
 Model resource families with shared language/level/topic/provenance metadata and type-specific fields. Baseline states: draft, community_review, verified, rejected; add imported_unreviewed only with documented rationale. Verification permissions are explicit and reversible/auditable.
