@@ -185,11 +185,11 @@ LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
-MIGRATION_APPLIED=NO
+MIGRATION_APPLIED=YES (NEON_TEST_ONLY; PRE-EXISTING AUTHORIZED APPLICATION)
 TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
-NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_REVIEW
+NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
 ```
 
 Phase 08B1 adds the public search contract `GET /api/v1/library/resources`
@@ -215,10 +215,13 @@ are recorded in `evidence/PHASE-08B1-IMPLEMENTATION.md`.
 
 External review remediation is recorded in the same evidence file. It fixes
 the ordered-query cursor boundary/hydration race, aligns in-memory keyword
-semantics with PostgreSQL, refactors keyword candidates into a parameterized
-CTE, adds the topic/type/CEFR 0010 index contract and fixed checksums, and
-keeps 0010 unapplied. The mobile drawer now has stable focus across filter
-changes and exact body overflow restoration; topic edits apply on Enter or
-blur. Final implementation captures are stored beside the Stitch references
-with their 1440x900 and 390x900 viewport dimensions. The slice remains
-`LNG_08_003=VERIFYING` with `OWNER_VISUAL_ACCEPTANCE_08B1=PENDING`.
+semantics with PostgreSQL, and changes keyword candidates to a materialized,
+parameterized relation joined to the public query. Its `UNION ALL` branches
+are deduplicated inside the candidate relation so the frozen 0010 trigram
+indexes are planner-usable. The authorized 0010 application remains frozen on
+Neon TEST; no 0011 was created. The mobile drawer now has stable focus across
+filter changes and exact body overflow restoration; topic edits apply on Enter
+or blur. Final implementation captures are stored beside the Stitch
+references with their 1440x900 and 390x900 viewport dimensions. The slice
+remains `LNG_08_003=VERIFYING` with
+`OWNER_VISUAL_ACCEPTANCE_08B1=PENDING`.

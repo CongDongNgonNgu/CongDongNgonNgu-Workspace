@@ -16,16 +16,87 @@ LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
-NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_REVIEW
+NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
+```
+
+## Post-0010 keyword planner remediation
+
+The authorized Neon TEST migration application remains valid and frozen. No
+migration was rerun during this remediation, no migration 0011 was created,
+and no application schema files were changed.
+
+```text
+BACKEND_REMEDIATION_SHA=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
+ROOT_CAUSE=CTE_INLINING_CORRELATED_KEYWORD_LOOKUPS
+KEYWORD_CTE=MATERIALIZED
+KEYWORD_CANDIDATE_SHAPE=SELECT DISTINCT resource_id FROM (UNION ALL branches)
+KEYWORD_OUTER_SHAPE=INNER JOIN keyword_matches AS keyword_match
+OLD_CORRELATED_EXISTS=REMOVED
+MIGRATION_0010_MODIFIED=NO
+MIGRATION_0010_REQUIRED=NO (ALREADY APPLIED AND FROZEN)
+MIGRATION_0011_CREATED=NO
+MIGRATION_RERUN=NO
+MIGRATIONS_0001_0010=UNCHANGED
+```
+
+Neon TEST identity and schema verification remained safe and unchanged:
+PostgreSQL `18.6 (6569466)`, database collation `C.UTF-8`, `pg_trgm` `1.6`,
+and all 17 expected 0010 indexes present. `ANALYZE` was run on the relevant
+library tables only. Direct escaped-I-LIKE probes continued to use the
+vocabulary and sentence trigram indexes.
+
+The real full application query was retested with disposable Vietnamese,
+Chinese, Japanese, Korean, and secondary-Vietnamese fixtures. Normal plans
+may use sequential scans on a small corpus. Under the authorized diagnostic
+session (`enable_seqscan=off`, bitmap/index scans enabled), the materialized
+candidate subtree used `Bitmap Heap Scan`/`Bitmap Index Scan` paths including
+`library_vocabularies_search_trgm_idx` and
+`library_sentences_search_trgm_idx`; the materialized CTE was computed once,
+with no correlated keyword loop. Functional Unicode search, language
+primary/secondary filtering, type/topic/CEFR/combined filters, cursor
+pagination, license fail-closed behavior, and public projection privacy all
+passed.
+
+The DB-backed HTTP retest returned 200 for `q=xin chào`, `q=你好`,
+`language=vi`, and `limit=1`. Invalid type, invalid level, malformed cursor,
+and `limit=51` returned safe 400 responses (`HTTP_400` or
+`LIBRARY_INVALID_CURSOR`). The local application emitted no error logs.
+Disposable users, resources, topics, provenance, licenses, and review audits
+were cleaned; the 0010 ledger, indexes, and `pg_trgm` were retained.
+
+```text
+FULL_CTE_NORMAL_PLAN=PASS (small-corpus Seq Scan choices accepted)
+FULL_CTE_FORCED_TRGM=PASS
+KEYWORD_CANDIDATE_MATERIALIZED=PASS
+CORRELATED_KEYWORD_LOOP=NO
+HTTP_DB_BACKED_SEARCH=PASS
+VALIDATION_SMOKE_4XX=PASS
+DISPOSABLE_TEST_CLEANUP=PASS
+BACKEND_UNIT=32 suites, 216 tests passed
+BACKEND_E2E=11 suites, 50 tests passed
+BACKEND_LIBRARY=4 suites, 85 tests passed
+BACKEND_TYPECHECK=PASS
+BACKEND_LINT=PASS
+BACKEND_BUILD=PASS
+AUDIT=0 vulnerabilities
+TEST_DB_SCHEMA_MUTATED=NO (0010 application pre-existed this remediation)
+TEST_DB_DISPOSABLE_DATA_REMAINING=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_003=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
+NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
 ```
 
 ## Review branches
 
 ```text
 BACKEND_BRANCH=phase-08b1-library-search
-BACKEND_SHA=766a150c862339571ff3a18c3ab7610330baf5bd
+BACKEND_SHA=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
 FRONTEND_BRANCH=phase-08b1-library-search
-FRONTEND_SHA=8d800004ccb639f62a6344279f3d443c6e7cd065
+FRONTEND_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
 WORKSPACE_BRANCH=phase-08b1-library-search
 WORKSPACE_SHA=reported in the final handoff after this evidence commit
 ```
@@ -63,9 +134,9 @@ implementation. Inspected rasters are stored beside this file as
 - Public search projection contains only safe attribution/license cues and
   excludes internal contributor, reviewer, import, transformation, and Phase
   06 metadata.
-- Migration support is required for the inspected query shape. Only
-  `database/migrations/0010_library_search.sql` and its down migration were
-  created; migration 0009 remains frozen and 0010 was not applied.
+- Migration 0010 is frozen and applied only on the authorized Neon TEST
+  database. No migration 0011 is required or created; migrations 0001-0009
+  remain unchanged.
 
 ## Frontend
 
@@ -113,15 +184,16 @@ FRONTEND_BUILD=PASS
 AUDIT=PASS (Lighthouse desktop/mobile accessibility 100; no final runtime console errors)
 MIGRATION_REQUIRED=YES
 MIGRATION_FILE=database/migrations/0010_library_search.sql
-MIGRATION_APPLIED=NO
+MIGRATION_APPLIED=YES (NEON_TEST_ONLY; PRE-EXISTING AUTHORIZED APPLICATION)
 TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 ```
 
 The implementation is intentionally left at `VERIFYING` pending external and
-owner visual review. No merge, deployment, migration application, or
-LNG-08-004 work was started.
+owner visual review. No merge, deployment, or LNG-08-004 work was started;
+the separate authorized Neon TEST migration application predates this
+remediation and remains frozen.
 
 ## External review remediation
 
@@ -141,13 +213,17 @@ existing `phase-08b1-library-search` review branches.
 - In-memory keyword matching now searches topics and type-specific learning
   content only. Language remains an explicit primary-or-secondary filter;
   parity coverage verifies that a language code alone does not satisfy `q`.
-- PostgreSQL keyword search uses a parameterized `keyword_matches` CTE with
-  `UNION` candidate IDs for topics and each type-specific table, including
-  dialogue JSON turns. Wildcard and backslash escaping remains explicit.
+- PostgreSQL keyword search uses a parameterized `MATERIALIZED keyword_matches`
+  candidate relation joined to the public resource query. Each type-specific
+  branch uses `UNION ALL`, followed by `SELECT DISTINCT resource_id` inside the
+  materialized relation so GIN candidate paths remain planner-eligible without
+  duplicate resources. Dialogue JSON turns, wildcard escaping, and backslash
+  escaping remain covered.
 
 ### Migration 0010 review contract
 
-`0010_library_search.sql` remains review-only and unapplied. It now includes
+`0010_library_search.sql` remains frozen after its authorized Neon TEST
+application. It includes
 the topic trigram index and partial public type/CEFR ordering indexes in
 addition to the query-backed language/order and detail trigram indexes. The
 down migration drops every 0010-owned index, retains `pg_trgm`, and does not
@@ -157,7 +233,7 @@ drop library tables. Static tests freeze the normalized checksums:
 0010_library_search.sql=0f5fc8b6e416fbed8e68eb033c2216ede4a1247d96217b9bf1617ebfe2df83f2
 0010_library_search.down.sql=dc230f48a075c947584f3e0bdd2aedf2f0a7be20371b4a94ee979c97e54fa0d0
 MIGRATIONS_0001_0009=UNCHANGED
-MIGRATION_APPLIED=NO
+MIGRATION_APPLIED=YES (NEON_TEST_ONLY)
 ```
 
 ### Frontend remediation and implementation captures
@@ -194,8 +270,8 @@ and Agentic Browsing also 100).
 ### Remediation verification counts
 
 ```text
-BACKEND_FOCUSED=57 tests passed (library service, PostgreSQL repository, migration contract)
-BACKEND_UNIT=32 suites, 215 tests passed
+BACKEND_FOCUSED=85 tests passed (4 library suites)
+BACKEND_UNIT=32 suites, 216 tests passed
 BACKEND_E2E=11 suites, 50 tests passed
 FRONTEND_FOCUSED=7 tests passed
 FRONTEND_TESTS=39 files, 181 tests passed
@@ -211,5 +287,5 @@ CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
 LNG_08_003=VERIFYING
 OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
-NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_0010_AUTHORIZATION
+NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
 ```
