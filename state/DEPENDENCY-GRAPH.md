@@ -33,15 +33,15 @@ Rules:
 - 16 is a cross-cutting optimization pass, but responsiveness/accessibility are required earlier too.
 - 17 is final hardening, not permission to postpone baseline security.
 
-## Current phase state during Phase 08A foundation work
+## Current phase state during Phase 08B1 library search work
 
     CURRENT_PHASE=08
     PHASE_06=DONE
     PHASE_07=DONE
     PHASE_08=IN_PROGRESS
-    LNG_08_001=VERIFYING
-    LNG_08_002=VERIFYING
-    LNG_08_003=PLANNED
+    LNG_08_001=DONE
+    LNG_08_002=DONE
+    LNG_08_003=VERIFYING
     LNG_08_004=PLANNED
     LNG_08_005=PLANNED
     LNG_08_006=PLANNED
@@ -53,7 +53,8 @@ Rules:
     PHASE_12=READY
 
 Phase 07 remains DONE after publication and verification of LNG-07-006 and
-LNG-07-007. Phase 08A is implementing only the provenance/license foundation
-and shared resource/review contracts. Search, contribution UX, imports,
-candidate consumption, AI, reputation, moderation UI, and deployment remain
-out of scope. Phase 09 and Phase 10 remain blocked by Phase 08.
+LNG-07-007. Phase 08A is complete. Phase 08B1 is implementing only the
+public library search/filter contract and read-only explorer/detail surfaces.
+Contribution UX, reviewer queue, imports, candidate consumption, AI,
+reputation, moderation UI, and deployment remain out of scope. Phase 09 and
+Phase 10 remain blocked by Phase 08.

@@ -13,10 +13,14 @@ Define reusable provenance: source type/ID/URL, license reference, attribution, 
 Model resource families with shared language/level/topic/provenance metadata and type-specific fields. Baseline states: draft, community_review, verified, rejected; add imported_unreviewed only with documented rationale. Verification permissions are explicit and reversible/auditable.
 
 ## LNG-08-003 — Library Search & Filtering
-**Status:** PLANNED
+**Status:** VERIFYING
 **Depends on:** LNG-08-002
 
 Backend supports language, type, keyword, topic, level and review-state filtering (public exposes only allowed states). Use scalable pagination/indexing for expected corpus size. Frontend uses Stitch for knowledge explorer, filters, result types, attribution and empty/loading/error states.
+
+Phase 08B1 implementation is complete on review branches. Owner visual acceptance
+is pending; contribution forms, reviewer UI, imports, candidate consumption,
+moderation UI, and deployment remain out of scope.
 
 ## LNG-08-004 — Community Contribution Flow
 **Status:** PLANNED

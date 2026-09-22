@@ -3,6 +3,32 @@
 **Phase status:** IN_PROGRESS
 **Slice status:** PHASE_08A=DONE
 
+## Phase 08B1 opening state
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+PHASE_08A=DONE
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=IN_PROGRESS
+LNG_08_004=PLANNED
+LNG_08_005=PLANNED
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+PHASE_09=BLOCKED_BY_PHASE_08
+PHASE_10=BLOCKED_BY_PHASE_08
+OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
+BACKEND_BRANCH=phase-08b1-library-search
+FRONTEND_BRANCH=phase-08b1-library-search
+WORKSPACE_BRANCH=phase-08b1-library-search
+```
+
+The Phase 08B1 implementation branches start from the pinned clean Phase 08A
+baselines. Stitch design references are recorded in the Phase 08B1 evidence
+once the dedicated project screens are generated and inspected.
+
 Phase 08A implements only `LNG-08-001` (provenance and license model) and
 `LNG-08-002` (core resource schema and review lifecycle). The phase is not
 complete: search, contribution UX, reviewer UI, importer work, Phase 06
@@ -143,3 +169,46 @@ NEXT_ACTION=STOP
   passed.
 - Frontend remained unchanged at `3b8d5adeca6735d7b41c055a99e0040d8f36d35`.
   Production was untouched, deployment was `NO`, and 08B remains planned only.
+
+## Phase 08B1 implementation handoff — LNG-08-003
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+PHASE_08A=DONE
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=VERIFYING
+LNG_08_004=PLANNED
+LNG_08_005=PLANNED
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
+MIGRATION_APPLIED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_REVIEW
+```
+
+Phase 08B1 adds the public search contract `GET /api/v1/library/resources`
+with `q`, `language`, `type`, `topic`, `level`, opaque cursor, and bounded
+limit parameters. Search and detail share the fail-closed public gate:
+`PUBLIC`, active moderation, `VERIFIED`, non-empty provenance, and every
+current license active with `redistributionAllowed=true`. The in-memory and
+Postgres repositories use Unicode-preserving matching and deterministic
+`updated_at DESC, id DESC` cursor ordering. Current-license changes are
+rechecked during projection, and search results omit internal creator,
+reviewer, moderation, import, transformation, and Phase 06 metadata.
+
+The frontend adds responsibility-based Library API/hooks/components/pages with
+CSS Modules, URL-backed filters, mixed resource rows, attribution/license
+cues, loading/error/empty states, opaque-cursor load-more, read-only detail,
+and a keyboard-managed mobile filter drawer. No contribution form was added.
+
+Stitch references and inspected rasters are recorded in
+`evidence/PHASE-08B1-IMPLEMENTATION-PLAN.md` and
+`evidence/PHASE-08B1-STITCH-*.png`. Final verification details, exact test
+counts, browser viewport metrics, accessibility results, and migration status
+are recorded in `evidence/PHASE-08B1-IMPLEMENTATION.md`.
