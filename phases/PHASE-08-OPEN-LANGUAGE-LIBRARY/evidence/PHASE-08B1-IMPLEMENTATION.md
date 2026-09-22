@@ -23,8 +23,11 @@ NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_REVIEW
 
 ```text
 BACKEND_BRANCH=phase-08b1-library-search
+BACKEND_SHA=766a150c862339571ff3a18c3ab7610330baf5bd
 FRONTEND_BRANCH=phase-08b1-library-search
+FRONTEND_SHA=8d800004ccb639f62a6344279f3d443c6e7cd065
 WORKSPACE_BRANCH=phase-08b1-library-search
+WORKSPACE_SHA=reported in the final handoff after this evidence commit
 ```
 
 The three branches were created from the pinned clean Phase 08A baselines.
