@@ -33,7 +33,7 @@ Rules:
 - 16 is a cross-cutting optimization pass, but responsiveness/accessibility are required earlier too.
 - 17 is final hardening, not permission to postpone baseline security.
 
-## Current phase state during Phase 08B2A contribution foundation work
+## Historical phase state during Phase 08B2A contribution foundation work
 
     CURRENT_PHASE=08
     PHASE_06=DONE
@@ -59,3 +59,22 @@ read-only explorer/detail surfaces.
 Contribution UX, reviewer queue, imports, candidate consumption, AI,
 reputation, moderation UI, and deployment remain out of scope. Phase 09 and
 Phase 10 remain blocked by Phase 08.
+
+## Active phase state during Phase 08C1A reviewer backend work
+
+    CURRENT_PHASE=08
+    PHASE_08=IN_PROGRESS
+    LNG_08_001=DONE
+    LNG_08_002=DONE
+    LNG_08_003=DONE
+    LNG_08_004=DONE
+    LNG_08_005=VERIFYING
+    LNG_08_006=PLANNED
+    LNG_08_007=PLANNED
+    LNG_08_008=PLANNED
+    PHASE_09=BLOCKED_BY_PHASE_08
+    PHASE_10=BLOCKED_BY_PHASE_08
+
+08C1A is limited to the reviewer queue/read model and atomic verify/reject
+actions. Reviewer UI, source invalidation, imports, Phase 06 candidate
+consumption, Phase 10 points, and deployment remain out of scope.

@@ -390,3 +390,62 @@ Migration 0011 remains applied on Neon TEST and frozen with matching checksums;
 it was not rerun, migration 0012 was not created, production was untouched,
 and no deployment occurred. Phase 08 remains in progress, LNG-08-004 is DONE,
 and the next planned slice is 08C / LNG-08-005, Review & Verification Workflow.
+
+## Phase 08C1A reviewer backend implementation handoff - LNG-08-005
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=DONE
+LNG_08_004=DONE
+LNG_08_005=VERIFYING
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+BACKEND_BRANCH=phase-08c1a-library-review-backend
+FRONTEND_CHANGED=NO
+FRONTEND_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
+REQUEST_CHANGES=NOT_IMPLEMENTED_BY_DESIGN
+MIGRATION_REQUIRED=NO
+MIGRATION_FILE=NONE
+MIGRATION_APPLIED=NO
+MIGRATION_0012_CREATED=NO
+SOURCE_INVALIDATION_08C1B=PENDING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_SLICE=08C1B
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW
+```
+
+08C1A adds the reviewer-only `GET /api/v1/library/reviews` queue with fixed
+`COMMUNITY_REVIEW` scope, bounded language/type/keyword/cursor/limit filters,
+opaque filter-bound pagination, and deterministic `updated_at ASC, id ASC`
+ordering. `GET /api/v1/library/reviews/:resourceId` exposes a reviewer-safe
+detail projection with canonical content, audit history, safe current license
+eligibility, attribution/source references, and contribution-event summary;
+email, authentication/session data, license `sourceNote`, contributor user
+IDs in event summaries, importer internals, and unrelated moderation metadata
+are excluded.
+
+The existing review endpoint remains the action surface. VERIFY and REJECT
+are reviewer-only; REJECT requires a note; creator self-verification remains
+denied even for MODERATOR/ADMIN. The existing INVALIDATE/REOPEN lifecycle is
+preserved, while Request Changes is intentionally not introduced.
+
+Postgres VERIFY and REJECT transitions now lock the resource boundary and
+hydrate the final resource through the same transaction before COMMIT. VERIFY
+rechecks current provenance, ACTIVE moderation, and current license rows with
+`FOR SHARE`; audit insertion, eligibility failure, hydration failure, and stale
+review boundaries roll back as one unit. The first committed concurrent action
+wins and a stale terminal action returns `LIBRARY_REVIEW_CONFLICT`.
+
+No migration was required: the existing 0009 review-state/order index covers
+the queue query, and migrations 0001-0011 remain unchanged. Neon TEST was not
+connected to or mutated, production was untouched, no deployment occurred,
+and Frontend source remained unchanged. Dynamic source invalidation is
+explicitly deferred to 08C1B. Full evidence is in
+`evidence/PHASE-08C1A-IMPLEMENTATION.md`.
