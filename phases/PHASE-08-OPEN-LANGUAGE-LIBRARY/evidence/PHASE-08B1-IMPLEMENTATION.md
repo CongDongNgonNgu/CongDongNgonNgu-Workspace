@@ -9,14 +9,14 @@ PHASE_08=IN_PROGRESS
 PHASE_08A=DONE
 LNG_08_001=DONE
 LNG_08_002=DONE
-LNG_08_003=VERIFYING
+LNG_08_003=DONE
 LNG_08_004=PLANNED
 LNG_08_005=PLANNED
 LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
-OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
-NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
+NEXT_ACTION=STOP
 ```
 
 ## Post-0010 keyword planner remediation
@@ -85,9 +85,9 @@ PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
-LNG_08_003=VERIFYING
-OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
-NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
+LNG_08_003=DONE
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
+NEXT_ACTION=STOP
 ```
 
 ## Review branches
@@ -98,7 +98,8 @@ BACKEND_SHA=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
 FRONTEND_BRANCH=phase-08b1-library-search
 FRONTEND_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
 WORKSPACE_BRANCH=phase-08b1-library-search
-WORKSPACE_SHA=reported in the final handoff after this evidence commit
+WORKSPACE_REVIEW_SHA=b1082522d49ed48b8bd9fe087ddf7d150cdddec2
+WORKSPACE_MAIN_SHA=FINAL_CLOSURE_COMMIT_REPORTED_IN_FINAL_OUTPUT
 ```
 
 The three branches were created from the pinned clean Phase 08A baselines.
@@ -190,10 +191,11 @@ PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 ```
 
-The implementation is intentionally left at `VERIFYING` pending external and
-owner visual review. No merge, deployment, or LNG-08-004 work was started;
-the separate authorized Neon TEST migration application predates this
-remediation and remains frozen.
+The implementation was held at `VERIFYING` pending external and owner visual
+review. Owner visual acceptance was subsequently granted, the accepted Backend
+and Frontend heads passed exact-SHA CI, and the slice was published. No
+deployment or LNG-08-004 work was started; the separate authorized Neon TEST
+migration application predates this remediation and remains frozen.
 
 ## External review remediation
 
@@ -285,7 +287,51 @@ PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
-LNG_08_003=VERIFYING
-OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
-NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
+LNG_08_003=DONE
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
+NEXT_ACTION=STOP
 ```
+
+## Final publication evidence
+
+Owner visual acceptance was explicitly granted before publication. The review
+heads were fast-forwarded to `main` only after exact-SHA CI succeeded; no merge
+commit, force push, deployment, or production database access was used.
+
+```text
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
+BACKEND_REVIEW_SHA=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
+BACKEND_MAIN_SHA=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
+BACKEND_CI_RUN=35945221151
+BACKEND_CI=SUCCESS
+FRONTEND_REVIEW_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+FRONTEND_MAIN_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+FRONTEND_CI_RUN=35945346637
+FRONTEND_CI=SUCCESS
+WORKSPACE_REVIEW_BASE_SHA=b1082522d49ed48b8bd9fe087ddf7d150cdddec2
+WORKSPACE_MAIN_SHA=FINAL_CLOSURE_COMMIT_REPORTED_IN_FINAL_OUTPUT
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_003=DONE
+LNG_08_004=PLANNED
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
+MIGRATION_0010_TEST=APPLIED
+MIGRATION_0010_FROZEN=YES
+MIGRATION_0010_CHECKSUM_MATCH=YES
+MIGRATION_RERUN=NO
+MIGRATION_0011_REQUIRED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_SLICE=08B2
+NEXT_TASK=LNG_08_004
+NEXT_ACTION=STOP
+```
+
+Publication evidence preserves the public Knowledge Explorer and detail
+routes, keyword and primary/secondary language filtering, type/topic/CEFR
+filters, deterministic cursor pagination, Unicode Vietnamese/CJK search,
+URL-backed state, accessible mobile drawer, responsive 320/375/390/412/768/
+1024/1440 coverage, Accessibility 100, fail-closed privacy/license gates,
+DB-backed HTTP 200 responses, validation 4xx responses, and the materialized
+keyword candidate/trigram planner evidence recorded above. Normal tiny TEST
+corpora may still choose sequential scans.

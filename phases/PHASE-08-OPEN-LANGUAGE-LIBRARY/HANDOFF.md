@@ -3,7 +3,7 @@
 **Phase status:** IN_PROGRESS
 **Slice status:** PHASE_08A=DONE
 
-## Phase 08B1 opening state
+## Phase 08B1 opening state (historical)
 
 ```text
 CURRENT_PHASE=08
@@ -178,18 +178,18 @@ PHASE_08=IN_PROGRESS
 PHASE_08A=DONE
 LNG_08_001=DONE
 LNG_08_002=DONE
-LNG_08_003=VERIFYING
+LNG_08_003=DONE
 LNG_08_004=PLANNED
 LNG_08_005=PLANNED
 LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
-OWNER_VISUAL_ACCEPTANCE_08B1=PENDING
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
 MIGRATION_APPLIED=YES (NEON_TEST_ONLY; PRE-EXISTING AUTHORIZED APPLICATION)
 TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
-NEXT_ACTION=STOP_FOR_OWNER_VISUAL_AND_PUBLICATION_GATE
+NEXT_ACTION=STOP
 ```
 
 Phase 08B1 adds the public search contract `GET /api/v1/library/resources`
@@ -222,6 +222,43 @@ indexes are planner-usable. The authorized 0010 application remains frozen on
 Neon TEST; no 0011 was created. The mobile drawer now has stable focus across
 filter changes and exact body overflow restoration; topic edits apply on Enter
 or blur. Final implementation captures are stored beside the Stitch
-references with their 1440x900 and 390x900 viewport dimensions. The slice
-remains `LNG_08_003=VERIFYING` with
-`OWNER_VISUAL_ACCEPTANCE_08B1=PENDING`.
+references with their 1440x900 and 390x900 viewport dimensions. Owner visual
+acceptance was granted and the slice is now published as
+`LNG_08_003=DONE`.
+
+## Phase 08B1 final publication evidence
+
+```text
+OWNER_VISUAL_ACCEPTANCE_08B1=YES
+BACKEND_MAIN_SHA=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
+BACKEND_CI_RUN=35945221151
+BACKEND_CI=SUCCESS
+FRONTEND_MAIN_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+FRONTEND_CI_RUN=35945346637
+FRONTEND_CI=SUCCESS
+WORKSPACE_REVIEW_BASE_SHA=b1082522d49ed48b8bd9fe087ddf7d150cdddec2
+WORKSPACE_MAIN_SHA=FINAL_CLOSURE_COMMIT_REPORTED_IN_FINAL_OUTPUT
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_003=DONE
+LNG_08_004=PLANNED
+MIGRATION_0010_TEST=APPLIED
+MIGRATION_0010_FROZEN=YES
+MIGRATION_0010_CHECKSUM_MATCH=YES
+MIGRATION_RERUN=NO
+MIGRATION_0011_REQUIRED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_SLICE=08B2
+NEXT_TASK=LNG_08_004
+NEXT_ACTION=STOP
+```
+
+The published slice includes the public Knowledge Explorer `/library` and
+resource detail `/library/:resourceId`, multilingual keyword search,
+primary/secondary language and type/topic/CEFR filters, deterministic cursor
+pagination, URL-backed state, accessible mobile filtering, responsive
+320/375/390/412/768/1024/1440 coverage, and Accessibility 100. Public gates,
+privacy, dynamic license fail-closed behavior, DB-backed HTTP search,
+validation 4xx, and materialized keyword/trigram planner evidence remain
+recorded in the implementation evidence.
