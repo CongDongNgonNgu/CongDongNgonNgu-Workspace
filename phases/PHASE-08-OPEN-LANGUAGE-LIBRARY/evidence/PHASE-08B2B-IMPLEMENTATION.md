@@ -2,7 +2,7 @@
 
 Date: 2026-09-24
 Slice: `LNG-08-004`
-Status: `VERIFYING`
+Status: `PUBLISHED`
 
 ## Boundary and accepted dependencies
 
@@ -169,7 +169,7 @@ focus and error-state remediations do not alter the captured form, consent,
 success, or no-license pixels, so the existing implementation captures remain
 valid.
 
-## Stop state
+## Pre-publication stop state (historical)
 
 ```text
 CURRENT_PHASE=08
@@ -187,5 +187,52 @@ NEXT_SLICE=08B2B
 NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
 ```
 
-Automated verification does not self-accept the visual gate. Owner acceptance
-remains external and pending.
+This was the implementation-stage stop state before external owner acceptance
+and final publication. The current published state is recorded below.
+
+## Final publication closure
+
+Owner visual acceptance was granted before publication. Backend and Frontend
+were fast-forwarded to their accepted review heads only after clean preflight
+and exact-SHA CI success. No merge commit, force push, deployment, production
+database access, or Neon connection occurred during publication.
+
+```text
+OWNER_VISUAL_ACCEPTANCE_08B2=YES
+BACKEND_MAIN_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
+BACKEND_CI_RUN=35976930338
+BACKEND_CI=SUCCESS
+FRONTEND_MAIN_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
+FRONTEND_CI_RUN=35977132211
+FRONTEND_CI=SUCCESS
+
+MIGRATION_0011_TEST=APPLIED
+MIGRATION_0011_FROZEN=YES
+MIGRATION_0011_CHECKSUM_MATCH=YES
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+```
+
+Backend contribution evidence carried into publication: policy API PASS;
+approved types VOCABULARY/SENTENCE/TRANSLATION; explicit contribution terms;
+PUBLIC DRAFT to COMMUNITY_REVIEW only; generic review bypass denied;
+owner-bound actor and ORIGINAL_AUTHOR provenance; fail-closed licenses;
+ACTIVE moderation; explicit rights and reuse consent; durable
+LIBRARY_CONTRIBUTION_SUBMITTED v1; atomic audit/event/state transition;
+event idempotency; no Phase 10 points; Neon TEST runtime PASS; license lock
+PASS; provenance race PASS; HTTP DB-backed PASS; and DB constraints PASS.
+
+Frontend publication evidence: `/library/contribute`; safe auth return path;
+Explorer CTA; policy-driven types/licenses; Vocabulary, Sentence, and
+Translation forms; explicit attribution and license selection; unchecked
+consents; create -> provenance -> submit; no duplicate draft on partial retry;
+stale-terms re-consent; permanent license-policy fail-closed behavior;
+COMMUNITY_REVIEW-only success; no public detail link; topic, license, and
+success focus remediation; responsive 320/375/390/412/768/1024/1440; and
+Lighthouse Accessibility 100 on desktop/mobile.
+
+The canonical project state is now `LNG_08_004=DONE` with Phase 08 remaining
+in progress. The next planned slice is `08C` / `LNG_08_005`, Review &
+Verification Workflow; it was not started here.

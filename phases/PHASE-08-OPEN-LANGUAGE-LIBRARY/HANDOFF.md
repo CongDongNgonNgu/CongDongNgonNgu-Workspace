@@ -318,23 +318,35 @@ PHASE_08=IN_PROGRESS
 LNG_08_001=DONE
 LNG_08_002=DONE
 LNG_08_003=DONE
-LNG_08_004=VERIFYING
+LNG_08_004=DONE
 LNG_08_005=PLANNED
 LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 FRONTEND_BRANCH=phase-08b2b-community-contribution-ui
 BACKEND_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
+BACKEND_MAIN_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
+BACKEND_CI_RUN=35976930338
+BACKEND_CI=SUCCESS
 FRONTEND_BASE_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
 BACKEND_CHANGED=NO
 MIGRATION_0011_TEST=APPLIED
 MIGRATION_0011_FROZEN=YES
+MIGRATION_0011_CHECKSUM_MATCH=YES
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
 FRONTEND_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
-OWNER_VISUAL_ACCEPTANCE_08B2=PENDING
+FRONTEND_MAIN_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
+FRONTEND_CI_RUN=35977132211
+FRONTEND_CI=SUCCESS
+OWNER_VISUAL_ACCEPTANCE_08B2=YES
 TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
-NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+NEXT_SLICE=08C
+NEXT_TASK=LNG_08_005
+NEXT_SCOPE=Review & Verification Workflow
+NEXT_ACTION=STOP
 ```
 
 08B2B adds the authenticated `/library/contribute` route and a quiet Library
@@ -347,10 +359,34 @@ success remains `COMMUNITY_REVIEW` only and does not link to public detail.
 
 Stitch references, final implementation captures, responsive widths,
 Lighthouse accessibility, tests, and failure-state behavior are recorded in
-`evidence/PHASE-08B2B-IMPLEMENTATION.md` and the companion plan. Frontend
-owner visual acceptance is intentionally still pending. The external review
-remediation also corrects topic-step validation/focus, focuses the real
-success landmark, targets the first license radio for license errors, and
-suppresses generic retry after a permanent license-policy change without
-creating a duplicate draft. Backend, migrations, Neon TEST data, production,
-and deployment were not changed in this slice.
+`evidence/PHASE-08B2B-IMPLEMENTATION.md` and the companion plan. Owner visual
+acceptance was granted externally. The external review remediation also
+corrects topic-step validation/focus, focuses the real success landmark,
+targets the first license radio for license errors, and suppresses generic
+retry after a permanent license-policy change without creating a duplicate
+draft. Backend, migrations, Neon TEST data, production, and deployment were
+not changed in the Frontend slice.
+
+## Phase 08B2 final publication closure
+
+Backend main was fast-forwarded from the canonical main baseline to
+`80df2dd0652c3fba024caf1224917e73b609a1d7` and passed exact-SHA CI run
+`35976930338` (lint, typecheck, unit tests, E2E, build, and security audit).
+Frontend main was then fast-forwarded to
+`a46194853b4da7cfa8d41d6e155f92ab908c4ff4` and passed exact-SHA CI run
+`35977132211` (tests, typecheck, lint, build, and security audit).
+
+The published 08B2 evidence includes the policy API, approved contribution
+types, terms version, PUBLIC DRAFT to COMMUNITY_REVIEW lifecycle, generic
+review bypass closure, actor-bound ORIGINAL_AUTHOR provenance, fail-closed
+license and moderation gates, explicit rights/reuse consent, durable v1
+contribution event, atomicity, idempotency, Neon TEST runtime verification,
+license locking, provenance race protection, HTTP DB-backed success, DB
+constraints, contribution UI, retry behavior, stale-terms re-consent,
+permanent license-policy failure handling, focus remediation, responsive
+coverage, and Lighthouse Accessibility 100.
+
+Migration 0011 remains applied on Neon TEST and frozen with matching checksums;
+it was not rerun, migration 0012 was not created, production was untouched,
+and no deployment occurred. Phase 08 remains in progress, LNG-08-004 is DONE,
+and the next planned slice is 08C / LNG-08-005, Review & Verification Workflow.

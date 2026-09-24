@@ -2,7 +2,7 @@
 
 Date: 2026-09-24
 Slice: `LNG-08-004`
-Status: `VERIFYING`
+Status: `PUBLISHED`
 
 ## Frozen boundaries
 
