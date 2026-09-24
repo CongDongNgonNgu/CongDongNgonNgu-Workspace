@@ -10,6 +10,7 @@ Status: `VERIFYING`
 BACKEND_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
 BACKEND_CHANGED=NO
 FRONTEND_BASE_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+FRONTEND_REVIEW_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
 WORKSPACE_BASE_SHA=fabb010f8d772c60cd1c2d4ae91bd9f651f761a5
 MIGRATION_0011_TEST=APPLIED
 MIGRATION_0011_FROZEN=YES
@@ -58,6 +59,25 @@ are implementation captures, not Stitch rasters.
   to the review step, and permits only fresh consent before retrying submit
   against the same resource. A changed-license response fails closed, refreshes
   policy, and never attaches replacement provenance automatically.
+
+## External review remediation
+
+- Step 0 now validates resource type, language metadata, CEFR, and topics. Step
+  1 validates only type-specific content. Invalid topic syntax and more than 20
+  topics keep the user on step 0, show the error beside the topics control, and
+  restore focus to the visible topics input.
+- The success region forwards its ref to the actual `section` with
+  `tabIndex=-1`, so successful submission moves focus into the named success
+  landmark without adding a positive tab stop.
+- The first eligible license radio has a deterministic ID and license errors
+  focus that interactive control instead of the non-focusable error paragraph.
+- Disabled, unknown, or redistribution-unsafe license responses refresh policy
+  and fail closed after provenance succeeds. The frozen draft is not silently
+  rewritten, replacement provenance is not attached, no generic retry is
+  offered, and an explicit “Bắt đầu đóng góp mới” action is the only way to
+  begin another attempt; no second draft is created automatically.
+- Stale terms behavior remains distinct: policy refresh, both consents cleared,
+  fresh re-consent, and submit retry against the same resource.
 
 ## Form and privacy contract
 
@@ -119,12 +139,13 @@ before verification and public gates pass.
 
 ## Tests and browser verification
 
-Focused contribution and Library suites: **20 tests passed** across four test
+Focused contribution and Library suites: **25 tests passed** across four test
 files, including policy loading, exact types, zero-license fail-closed state,
 unchecked consent, payload sequencing, attribution/privacy, retry reuse of the
-same resource ID, stale terms refresh/reset, and the explorer CTA.
+same resource ID, stale terms refresh/reset, topic-step validation and focus,
+license focus, permanent license-policy failure handling, and the explorer CTA.
 
-Full frontend suite: **42 files / 194 tests passed**. Typecheck, lint, and
+Full frontend suite: **42 files / 199 tests passed**. Typecheck, lint, and
 production build passed. `npm audit --audit-level=high` reported **0
 vulnerabilities**. `git diff --check` passed.
 
@@ -142,8 +163,11 @@ removed before the frontend commit. Final implementation captures are:
 
 Exact emulated widths 320, 375, 390, 412, 768, 1024, and 1440 reported no
 horizontal overflow or out-of-viewport elements. Lighthouse accessibility
-scored **100** on both desktop and mobile contribution-form checks; the final
-browser pass had no console errors or warnings.
+scored **100** on both desktop and mobile contribution-form checks after the
+remediation; the final browser pass had no console errors or warnings. The
+focus and error-state remediations do not alter the captured form, consent,
+success, or no-license pixels, so the existing implementation captures remain
+valid.
 
 ## Stop state
 

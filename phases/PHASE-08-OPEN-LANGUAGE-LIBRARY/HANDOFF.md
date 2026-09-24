@@ -329,6 +329,7 @@ FRONTEND_BASE_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
 BACKEND_CHANGED=NO
 MIGRATION_0011_TEST=APPLIED
 MIGRATION_0011_FROZEN=YES
+FRONTEND_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
 OWNER_VISUAL_ACCEPTANCE_08B2=PENDING
 TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
@@ -347,5 +348,9 @@ success remains `COMMUNITY_REVIEW` only and does not link to public detail.
 Stitch references, final implementation captures, responsive widths,
 Lighthouse accessibility, tests, and failure-state behavior are recorded in
 `evidence/PHASE-08B2B-IMPLEMENTATION.md` and the companion plan. Frontend
-owner visual acceptance is intentionally still pending. Backend, migrations,
-Neon TEST data, production, and deployment were not changed in this slice.
+owner visual acceptance is intentionally still pending. The external review
+remediation also corrects topic-step validation/focus, focuses the real
+success landmark, targets the first license radio for license errors, and
+suppresses generic retry after a permanent license-policy change without
+creating a duplicate draft. Backend, migrations, Neon TEST data, production,
+and deployment were not changed in this slice.
