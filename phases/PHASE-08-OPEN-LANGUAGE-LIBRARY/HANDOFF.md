@@ -309,3 +309,43 @@ and verified the real PostgreSQL contribution path; it did not award Phase 10
 points, change Frontend source, use Stitch, merge, deploy, or touch
 production. Full local and Neon TEST evidence is recorded in
 `evidence/PHASE-08B2A-IMPLEMENTATION.md`.
+
+## Phase 08B2B frontend implementation handoff — LNG-08-004
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=DONE
+LNG_08_004=VERIFYING
+LNG_08_005=PLANNED
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+FRONTEND_BRANCH=phase-08b2b-community-contribution-ui
+BACKEND_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
+FRONTEND_BASE_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+BACKEND_CHANGED=NO
+MIGRATION_0011_TEST=APPLIED
+MIGRATION_0011_FROZEN=YES
+OWNER_VISUAL_ACCEPTANCE_08B2=PENDING
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+```
+
+08B2B adds the authenticated `/library/contribute` route and a quiet Library
+Explorer entry. It consumes the frozen Backend policy contract, renders only
+policy-approved types and contribution-safe licenses, requires explicit public
+attribution and two unchecked consents, and submits through the three-stage
+create → ORIGINAL_AUTHOR provenance → contribution-submit sequence. Remote
+stage retries retain the same resource ID and freeze the attempt snapshot;
+success remains `COMMUNITY_REVIEW` only and does not link to public detail.
+
+Stitch references, final implementation captures, responsive widths,
+Lighthouse accessibility, tests, and failure-state behavior are recorded in
+`evidence/PHASE-08B2B-IMPLEMENTATION.md` and the companion plan. Frontend
+owner visual acceptance is intentionally still pending. Backend, migrations,
+Neon TEST data, production, and deployment were not changed in this slice.
