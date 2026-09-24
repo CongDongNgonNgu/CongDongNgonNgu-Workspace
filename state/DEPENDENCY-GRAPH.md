@@ -33,7 +33,7 @@ Rules:
 - 16 is a cross-cutting optimization pass, but responsiveness/accessibility are required earlier too.
 - 17 is final hardening, not permission to postpone baseline security.
 
-## Current phase state during Phase 08B1 library search work
+## Current phase state during Phase 08B2A contribution foundation work
 
     CURRENT_PHASE=08
     PHASE_06=DONE
@@ -42,7 +42,7 @@ Rules:
     LNG_08_001=DONE
     LNG_08_002=DONE
     LNG_08_003=DONE
-    LNG_08_004=PLANNED
+    LNG_08_004=VERIFYING
     LNG_08_005=PLANNED
     LNG_08_006=PLANNED
     LNG_08_007=PLANNED

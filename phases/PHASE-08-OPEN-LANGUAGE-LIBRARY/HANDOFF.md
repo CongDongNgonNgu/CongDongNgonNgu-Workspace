@@ -237,7 +237,7 @@ FRONTEND_MAIN_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
 FRONTEND_CI_RUN=35945346637
 FRONTEND_CI=SUCCESS
 WORKSPACE_REVIEW_BASE_SHA=b1082522d49ed48b8bd9fe087ddf7d150cdddec2
-WORKSPACE_MAIN_SHA=FINAL_CLOSURE_COMMIT_REPORTED_IN_FINAL_OUTPUT
+WORKSPACE_MAIN_SHA=3f863780cdfc38bd53d65da85ba630127ccb7f08
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
 LNG_08_003=DONE
@@ -262,3 +262,42 @@ pagination, URL-backed state, accessible mobile filtering, responsive
 privacy, dynamic license fail-closed behavior, DB-backed HTTP search,
 validation 4xx, and materialized keyword/trigram planner evidence remain
 recorded in the implementation evidence.
+
+## Phase 08B2A implementation handoff - LNG-08-004 foundation
+
+```text
+PHASE_08B2A_IMPLEMENTATION=PASS
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=DONE
+LNG_08_004=VERIFYING
+LNG_08_005=PLANNED
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+BACKEND_BRANCH=phase-08b2a-community-contribution
+BACKEND_SHA=816d9962d2af145211aff2694ef9e474535ab3c6
+FRONTEND_CHANGED=NO
+FRONTEND_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+WORKSPACE_BRANCH=phase-08b2a-community-contribution
+WORKSPACE_SHA=TO_BE_SET_AFTER_COMMIT
+MIGRATION_REQUIRED=YES
+MIGRATION_FILE=database/migrations/0011_library_contribution_events.sql
+MIGRATION_APPLIED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+OWNER_VISUAL_ACCEPTANCE_08B2=PENDING_NOT_STARTED
+NEXT_SLICE=08B2B
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_MIGRATION_AUTHORIZATION
+```
+
+The 08B2A backend foundation adds a public fail-closed contribution-policy
+contract, owner-bound consent validation, PUBLIC DRAFT to COMMUNITY_REVIEW
+submission, and a bounded durable contribution event written atomically with
+the normal review audit. It does not award Phase 10 points, apply migration
+0011, change Frontend source, use Stitch, merge, or deploy. Full local unit,
+HTTP E2E, typecheck/lint, build, audit, migration-contract, and diff checks
+are recorded in `evidence/PHASE-08B2A-IMPLEMENTATION.md`.

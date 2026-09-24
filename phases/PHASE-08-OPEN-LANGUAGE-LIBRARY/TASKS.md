@@ -23,7 +23,7 @@ forms, reviewer UI, imports, candidate consumption, moderation UI, and deploymen
 remain out of scope.
 
 ## LNG-08-004 — Community Contribution Flow
-**Status:** PLANNED
+**Status:** VERIFYING
 **Depends on:** LNG-08-002
 
 Allow users to contribute sentence, translation, vocabulary/definition/usage note and other approved types. Submission UX must show reuse/licensing/attribution expectations before publish. Contributions enter review, not verified state. Emit contribution events for Phase 10.
