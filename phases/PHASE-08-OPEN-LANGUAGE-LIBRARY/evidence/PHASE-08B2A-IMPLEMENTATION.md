@@ -26,9 +26,11 @@ BACKEND_BASELINE=850b0b0a36869effdad4b89063b1cc2a74bfe1e0
 FRONTEND_BASELINE=4137f51e392f8aa947768e7dc7a28a29bf64f206
 WORKSPACE_BASELINE=3f863780cdfc38bd53d65da85ba630127ccb7f08
 BACKEND_BRANCH=phase-08b2a-community-contribution
-BACKEND_REVIEW_SHA=816d9962d2af145211aff2694ef9e474535ab3c6
+BACKEND_REVIEW_BASE_SHA=816d9962d2af145211aff2694ef9e474535ab3c6
+BACKEND_REVIEW_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
 WORKSPACE_BRANCH=phase-08b2a-community-contribution
-WORKSPACE_REVIEW_SHA=53569cfb79fbeea2809b7ed78d48f82f9616202
+WORKSPACE_REVIEW_HEAD_BEFORE_REMEDIATION=32a5f2cb782a78e147fec35bb9fa407726c4e3e2
+WORKSPACE_INTERMEDIATE_IMPLEMENTATION_SHA=53569cfb79fbeea2809b7ed78d48f82f9616202 (historical foundation commit; not the current review head)
 FRONTEND_BRANCH=main
 ```
 
@@ -87,7 +89,7 @@ MIGRATIONS_0001_0010=UNCHANGED
 The down migration drops only the 0011-owned table and event type. The
 migration runner was not invoked; Neon TEST and production were untouched.
 
-## Verification
+## Initial implementation verification snapshot
 
 Backend verification completed locally:
 
@@ -107,3 +109,60 @@ contract review and migration authorization.
 
 The review branches are intentionally stopped before merge, deployment, or
 0011 application.
+
+## External review remediation
+
+The external review finding that the generic review endpoint could submit an
+approved community resource without consent evidence is closed. The service
+now rejects owner `DRAFT -> COMMUNITY_REVIEW` transitions for exactly
+`VOCABULARY`, `SENTENCE`, and `TRANSLATION` with
+`LIBRARY_CONTRIBUTION_SUBMIT_REQUIRED` and HTTP 409. `GRAMMAR_ITEM` remains on
+the existing generic review contract until a dedicated workflow exists.
+
+The PostgreSQL contribution transaction now requires an ACTIVE moderation
+state, locks current provenance rows and every referenced license row with
+`FOR SHARE`, validates actor-bound `ORIGINAL_AUTHOR` provenance and current
+license eligibility inside the transaction, writes the audit and durable event,
+hydrates the final resource with the same transaction client, and only then
+commits. Hydration, audit, event, and provenance failures roll back the full
+transition. No required database read occurs after `COMMIT`.
+
+```text
+GENERIC_REVIEW_BYPASS_CLOSED=PASS
+CONTRIBUTION_SUBMIT_REQUIRED_ERROR=PASS
+VOCABULARY_BYPASS=DENIED
+SENTENCE_BYPASS=DENIED
+TRANSLATION_BYPASS=DENIED
+DEDICATED_SUBMIT=PASS
+TRANSACTIONAL_PROVENANCE_AUTHORITY=PASS
+LICENSE_POLICY_TRANSACTION_LOCK=PASS
+LICENSE_FAIL_CLOSED=PASS
+POST_COMMIT_HYDRATION=NO
+HYDRATION_FAILURE_ROLLBACK=PASS
+EVENT_ATOMIC_WITH_SUBMIT=PASS
+EVENT_IDEMPOTENCY=PASS
+POINTS_AWARDED=NO
+MIGRATION_0011_MODIFIED=NO
+MIGRATION_0011_CHECKSUM_MATCH=YES
+MIGRATION_APPLIED=NO
+MIGRATIONS_0001_0010=UNCHANGED
+FRONTEND_CHANGED=NO
+FRONTEND_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
+```
+
+Remediation verification on Backend `80df2dd0652c3fba024caf1224917e73b609a1d7`:
+
+- focused service, contribution, and PostgreSQL transaction suites: 3 suites,
+  80 tests passed;
+- full unit suite: 34 suites, 257 tests passed;
+- contribution HTTP E2E: 4 tests passed;
+- full HTTP E2E suite: 12 suites, 54 tests passed;
+- typecheck, lint, build, `git diff --check`, normalized migration checksum
+  contract, and `npm audit --audit-level=high` passed with 0 vulnerabilities.
+
+The remediation commit changes Backend review behavior and tests only. The
+0011 migration remains review-only and unapplied; Neon TEST and production
+were not mutated, and no deployment occurred. The Workspace review head before
+this documentation remediation was `32a5f2cb782a78e147fec35bb9fa407726c4e3e2`;
+the older `53569cfb79fbeea2809b7ed78d48f82f9616202` value is retained above
+only as a clearly labeled historical implementation commit.

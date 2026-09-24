@@ -278,11 +278,13 @@ LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 BACKEND_BRANCH=phase-08b2a-community-contribution
-BACKEND_SHA=816d9962d2af145211aff2694ef9e474535ab3c6
+BACKEND_BASE_SHA=816d9962d2af145211aff2694ef9e474535ab3c6
+BACKEND_SHA=80df2dd0652c3fba024caf1224917e73b609a1d7
 FRONTEND_CHANGED=NO
 FRONTEND_SHA=4137f51e392f8aa947768e7dc7a28a29bf64f206
 WORKSPACE_BRANCH=phase-08b2a-community-contribution
-WORKSPACE_SHA=53569cfb79fbeea2809b7ed78d48f82f9616202
+WORKSPACE_REVIEW_HEAD_BEFORE_REMEDIATION=32a5f2cb782a78e147fec35bb9fa407726c4e3e2
+WORKSPACE_INTERMEDIATE_IMPLEMENTATION_SHA=53569cfb79fbeea2809b7ed78d48f82f9616202 (historical foundation commit; not the current review head)
 MIGRATION_REQUIRED=YES
 MIGRATION_FILE=database/migrations/0011_library_contribution_events.sql
 MIGRATION_APPLIED=NO
@@ -297,7 +299,11 @@ NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_MIGRATION_AUTHORIZATION
 The 08B2A backend foundation adds a public fail-closed contribution-policy
 contract, owner-bound consent validation, PUBLIC DRAFT to COMMUNITY_REVIEW
 submission, and a bounded durable contribution event written atomically with
-the normal review audit. It does not award Phase 10 points, apply migration
-0011, change Frontend source, use Stitch, merge, or deploy. Full local unit,
-HTTP E2E, typecheck/lint, build, audit, migration-contract, and diff checks
-are recorded in `evidence/PHASE-08B2A-IMPLEMENTATION.md`.
+the normal review audit. The external review remediation closes the generic
+review bypass for VOCABULARY, SENTENCE, and TRANSLATION, moves provenance and
+license eligibility checks plus `FOR SHARE` license locks inside the submission
+transaction, requires ACTIVE moderation state, and hydrates the response before
+commit. It does not award Phase 10 points, apply migration 0011, change
+Frontend source, use Stitch, merge, or deploy. Full local unit, HTTP E2E,
+typecheck/lint, build, audit, migration-contract, and diff checks are recorded
+in `evidence/PHASE-08B2A-IMPLEMENTATION.md`.

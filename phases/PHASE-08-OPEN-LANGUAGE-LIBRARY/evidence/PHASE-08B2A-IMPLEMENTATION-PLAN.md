@@ -109,6 +109,24 @@ deployment, or a Neon TEST migration application.
 | Reviewer/system provenance enters member flow | Require owner equality and every provenance row to be actor-bound `ORIGINAL_AUTHOR` on the dedicated endpoint. |
 | Migration drift or accidental TEST mutation | Add static checksum tests, do not run the migration runner, and record the application boundary explicitly. |
 
+## External review remediation before migration authorization
+
+- [x] Reject generic owner `DRAFT -> COMMUNITY_REVIEW` for the explicit
+      contribution allowlist with `LIBRARY_CONTRIBUTION_SUBMIT_REQUIRED` and
+      retain the generic contract for non-allowlisted types.
+- [x] Add service and HTTP regression coverage for VOCABULARY, SENTENCE, and
+      TRANSLATION bypass denial, dedicated submission success, and zero event
+      or audit side effects on the rejected path.
+- [x] Move provenance authority and current license eligibility into the
+      PostgreSQL submission transaction and lock referenced license rows with
+      `FOR SHARE` until commit.
+- [x] Require ACTIVE moderation state in both service and persistence gates.
+- [x] Hydrate the committed response before `COMMIT`; roll back if hydration,
+      audit, event, or provenance validation fails; prove no required query is
+      issued after commit.
+- [x] Re-run the full unit/E2E, typecheck/lint/build, audit, diff, and frozen
+      migration contract checks without applying 0011.
+
 ## External gates
 
 Migration authorization, external contract review, Phase 08B2B Stitch/frontend
