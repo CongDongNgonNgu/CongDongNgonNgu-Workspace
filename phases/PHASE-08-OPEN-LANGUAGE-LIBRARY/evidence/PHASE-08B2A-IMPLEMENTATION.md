@@ -12,11 +12,11 @@ LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 FRONTEND_CHANGED=NO
 OWNER_VISUAL_ACCEPTANCE_08B2=PENDING_NOT_STARTED
-TEST_DB_MUTATED=NO
+TEST_DB_MUTATED=YES (0011 schema only; disposable verification rows cleaned)
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 NEXT_SLICE=08B2B
-NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_MIGRATION_AUTHORIZATION
+NEXT_ACTION=STOP_FOR_FRONTEND_STITCH_IMPLEMENTATION_GATE
 ```
 
 ## Baselines and branches
@@ -81,14 +81,15 @@ Phase 10 points, award status, and processing state are intentionally absent.
 MIGRATION_REQUIRED=YES
 MIGRATION_FILE=database/migrations/0011_library_contribution_events.sql
 MIGRATION_DOWN_FILE=database/migrations/0011_library_contribution_events.down.sql
-MIGRATION_APPLIED=NO
+MIGRATION_APPLIED=NO (pre-authorization implementation snapshot)
 MIGRATIONS_0001_0010=UNCHANGED
 0011_UP_SHA256=556c9222004f909cc94738db592a7134a2b6bbd9fe6807d62adbc876b4e52a5a
 0011_DOWN_SHA256=436108a9e78fb5e3a5cf3f1a753b10a5cb756f7641f1c9d85f6ac1e80da13697
 ```
 
 The down migration drops only the 0011-owned table and event type. The
-migration runner was not invoked; Neon TEST and production were untouched.
+implementation snapshot above predates migration authorization; the separate
+Neon TEST runtime gate below records the authorized 0011 application.
 
 ## Initial implementation verification snapshot
 
@@ -162,8 +163,103 @@ Remediation verification on Backend `80df2dd0652c3fba024caf1224917e73b609a1d7`:
   contract, and `npm audit --audit-level=high` passed with 0 vulnerabilities.
 
 The remediation commit changes Backend review behavior and tests only. The
-0011 migration remains review-only and unapplied; Neon TEST and production
-were not mutated, and no deployment occurred. The Workspace review head before
-this documentation remediation was `32a5f2cb782a78e147fec35bb9fa407726c4e3e2`;
-the older `53569cfb79fbeea2809b7ed78d48f82f9616202` value is retained above
-only as a clearly labeled historical implementation commit.
+Workspace review head before the authorized Neon TEST runtime evidence was
+`30af1e4fc37eb8045edf7a09c6ea648fecf4ce05`; the older
+`53569cfb79fbeea2809b7ed78d48f82f9616202` value is retained above only as a
+clearly labeled historical implementation commit.
+
+## Authorized Neon TEST runtime gate
+
+The configured database target was verified as the CongDongNgonNgu Neon TEST
+database without printing credentials. Production was not contacted. Only
+`database/migrations/0011_library_contribution_events.sql` was authorized and
+applied; the down migration was not run. The first migration-runner pass
+skipped 0001-0010 and applied 0011; the immediate second pass skipped 0001-0011
+and reported that the database was up to date.
+
+```text
+NEON_RUNTIME_GATE=PASS
+TEST_DB_TARGET_VERIFIED=YES
+MIGRATION_0011_APPLY=PASS
+MIGRATION_SECOND_RUN=PASS
+MIGRATION_0011_FROZEN=YES
+MIGRATION_0011_CHECKSUM_MATCH=YES
+MIGRATION_0011_APPLIED=YES (NEON_TEST_ONLY)
+MIGRATION_0011_UP_SHA256=556c9222004f909cc94738db592a7134a2b6bbd9fe6807d62adbc876b4e52a5a
+MIGRATION_0011_DOWN_SHA256=436108a9e78fb5e3a5cf3f1a753b10a5cb756f7641f1c9d85f6ac1e80da13697
+MIGRATIONS_0001_0010=UNCHANGED
+MIGRATION_0012_CREATED=NO
+```
+
+Live schema verification passed: the bounded
+`library_contribution_event_type` enum contains only
+`LIBRARY_CONTRIBUTION_SUBMITTED`; `library_contribution_events` contains the
+required event, resource, contributor, audit-link, terms, consent, and time
+fields; the primary key, three restrictive foreign keys, unique
+`review_audit_id`, positive-version check, affirmative rights/reuse checks,
+and resource/contributor indexes are present. No Phase 10 point or award
+fields exist.
+
+The disposable real-Postgres gate passed all of the following:
+
+- policy returned `library-contribution-v1`, exactly `VOCABULARY`, `SENTENCE`,
+  and `TRANSLATION`, only the active redistribution-safe license, and no
+  `sourceNote` or internal metadata;
+- authenticated owner submission of a PUBLIC DRAFT created exactly one
+  `DRAFT -> COMMUNITY_REVIEW` `SUBMIT` audit and exactly one version-1
+  `LIBRARY_CONTRIBUTION_SUBMITTED` event with the resource, contributor, audit,
+  type, terms, consent, and timestamps linked correctly;
+- the generic review bypass returned 409
+  `LIBRARY_CONTRIBUTION_SUBMIT_REQUIRED` for VOCABULARY, SENTENCE, and
+  TRANSLATION, leaving each resource DRAFT with zero audit/event facts; the
+  dedicated endpoint then succeeded for each, while GRAMMAR_ITEM retained its
+  existing generic review behavior;
+- zero/non-original/wrong-bound provenance, inactive/false/NULL
+  redistribution licenses, non-ACTIVE moderation, stale terms, false
+  consent, missing consent, and non-boolean consent all failed closed with
+  no transition, audit, or event;
+- a second PostgreSQL connection could not mutate a license held by the
+  submission lock (`FOR SHARE`); a conflicting provenance mutation was blocked
+  by the resource lock and could not cross the validated provenance boundary;
+- retry after a successful submission returned deterministic conflict with
+  audit and event counts remaining one; rollback-only probes rejected version
+  zero, false rights, false reuse, and duplicate audit linkage;
+- HTTP DB-backed checks passed for public policy 200, unauthenticated 401,
+  cookie-auth CSRF 403, non-owner 403, generic bypass 409, dedicated success,
+  retry 409, and absence from public detail/search before verification.
+
+```text
+CONTRIBUTION_POLICY_POSTGRES=PASS
+POSTGRES_CONTRIBUTION_SUCCESS=PASS
+GENERIC_REVIEW_BYPASS_POSTGRES=PASS
+PROVENANCE_AUTHORITY_POSTGRES=PASS
+LICENSE_FAIL_CLOSED_POSTGRES=PASS
+MODERATION_FAIL_CLOSED_POSTGRES=PASS
+CONSENT_FAIL_CLOSED_POSTGRES=PASS
+LICENSE_FOR_SHARE_BLOCKS_MUTATION=PASS
+PROVENANCE_RACE_POSTGRES=PASS
+EVENT_IDEMPOTENCY_POSTGRES=PASS
+EVENT_DB_CONSTRAINTS=PASS
+POST_COMMIT_REQUIRED_READS=0
+DISPOSABLE_TEST_CLEANUP=PASS
+```
+
+The unchanged Backend review head `80df2dd0652c3fba024caf1224917e73b609a1d7`
+passed focused contribution/repository/migration tests (47 tests), the full
+unit suite (34 suites, 257 tests), the full HTTP E2E suite (12 suites, 54
+tests), typecheck, lint, build, `git diff --check`, and
+`npm audit --audit-level=high` with zero vulnerabilities. Frontend remains
+unchanged at `4137f51e392f8aa947768e7dc7a28a29bf64f206`; no Phase 10 points,
+Frontend material UI, Stitch work, merge, or deployment occurred.
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_004=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08B2=PENDING_NOT_STARTED
+FRONTEND_CHANGED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_SLICE=08B2B
+NEXT_ACTION=STOP_FOR_FRONTEND_STITCH_IMPLEMENTATION_GATE
+```

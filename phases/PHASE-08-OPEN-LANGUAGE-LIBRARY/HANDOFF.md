@@ -288,13 +288,13 @@ WORKSPACE_INTERMEDIATE_IMPLEMENTATION_SHA=53569cfb79fbeea2809b7ed78d48f82f961620
 WORKSPACE_REMEDIATION_COMMIT_SHA=6e56adfc5e9882e936f764c51410e27e869b5b5a
 MIGRATION_REQUIRED=YES
 MIGRATION_FILE=database/migrations/0011_library_contribution_events.sql
-MIGRATION_APPLIED=NO
-TEST_DB_MUTATED=NO
+MIGRATION_APPLIED=YES (NEON_TEST_ONLY; 0011 authorized in the runtime gate)
+TEST_DB_MUTATED=YES (0011 schema only; disposable verification rows cleaned)
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 OWNER_VISUAL_ACCEPTANCE_08B2=PENDING_NOT_STARTED
 NEXT_SLICE=08B2B
-NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_MIGRATION_AUTHORIZATION
+NEXT_ACTION=STOP_FOR_FRONTEND_STITCH_IMPLEMENTATION_GATE
 ```
 
 The 08B2A backend foundation adds a public fail-closed contribution-policy
@@ -304,7 +304,8 @@ the normal review audit. The external review remediation closes the generic
 review bypass for VOCABULARY, SENTENCE, and TRANSLATION, moves provenance and
 license eligibility checks plus `FOR SHARE` license locks inside the submission
 transaction, requires ACTIVE moderation state, and hydrates the response before
-commit. It does not award Phase 10 points, apply migration 0011, change
-Frontend source, use Stitch, merge, or deploy. Full local unit, HTTP E2E,
-typecheck/lint, build, audit, migration-contract, and diff checks are recorded
-in `evidence/PHASE-08B2A-IMPLEMENTATION.md`.
+commit. The authorized runtime gate applied only migration 0011 to Neon TEST
+and verified the real PostgreSQL contribution path; it did not award Phase 10
+points, change Frontend source, use Stitch, merge, deploy, or touch
+production. Full local and Neon TEST evidence is recorded in
+`evidence/PHASE-08B2A-IMPLEMENTATION.md`.
