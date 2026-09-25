@@ -556,3 +556,63 @@ high-severity npm audit with zero vulnerabilities. Migrations 0001-0011 remain
 unchanged; no 0012 exists or was applied. `LNG_08_005` remains `VERIFYING`,
 `SOURCE_INVALIDATION_08C1B=PENDING`, and the next action is external review
 before Neon runtime retest.
+
+## Phase 08C1B corrected Neon TEST runtime retest
+
+The previous runtime failure remains historical as
+`PREVIOUS_NEON_RUNTIME=FAIL`. The corrected retest ran against only the
+authorized existing Neon TEST database at Backend SHA
+`86c51f7b08a989db415e7c11361686fdf2379455`; Frontend stayed unchanged at
+`a46194853b4da7cfa8d41d6e155f92ab908c4ff4`. Safe metadata was recorded as
+`neondb` / `neondb_owner` / PostgreSQL `18.6` / Neon with `sslmode=verify-full`.
+No migration runner ran, no migration ledger or schema changed, production was
+untouched, and no deployment occurred.
+
+The runtime retest passed the exact PostgreSQL microsecond cursor contract:
+v2 cursors preserved the R4 boundary, invalid-source pages returned R2/R4 then
+R5, and public/reviewer pagination traversed sub-millisecond rows without
+duplicates or skips. It also passed logical invalid-source pagination across
+valid rows, concurrent reconciliation, public fail-closed reads, stale
+invalidation denial, reconciliation idempotency, multi-source fail-closed
+behavior, and non-Phase06 regression.
+
+The transaction-aware VERIFY-first harness held the actual parent, response,
+acceptance, and candidate source locks and observed the legitimate acceptance,
+response-moderation, parent-visibility, and parent-moderation mutations waiting
+on PostgreSQL row locks until VERIFY committed. Public reads then failed closed
+after each source mutation. Source-health reason priority matched canonical
+Phase 06 behavior, bearer authorization and explicit-cookie CSRF behavior were
+verified, and exact forbidden-key privacy checks passed for invalid-source
+queue and reviewer detail.
+
+All uniquely marked disposable runtime fixtures were deleted and zero marked
+users/resources/posts/licenses remained. Local post-runtime verification also
+passed: focused 12 suites/106 tests, full unit 41 suites/304 tests, full E2E 13
+suites/58 tests, migration contracts 4 suites/15 tests, typecheck, lint, build,
+`git diff --check`, and high-severity npm audit with 0 vulnerabilities.
+
+```text
+NEON_RUNTIME_RETEST=PASS
+TEST_DB_TARGET_VERIFIED=YES
+VERIFY_HELD_REAL_SOURCE_LOCKS=YES
+COMPETING_MUTATION_BLOCKED_BY_DB_LOCK=YES
+TRANSACTIONAL_AUDIT_REASON_POSTGRES=PASS
+SOURCE_RECONCILE_AUTH_HTTP=PASS
+SOURCE_REVIEW_PRIVACY=PASS
+POST_COMMIT_REQUIRED_READS=0
+DISPOSABLE_TEST_CLEANUP=PASS
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+MIGRATION_0011_CHECKSUM_MATCH=YES
+MIGRATION_0011_UP_SHA256=556c9222004f909cc94738db592a7134a2b6bbd9fe6807d62adbc876b4e52a5a
+MIGRATION_0011_DOWN_SHA256=436108a9e78fb5e3a5cf3f1a753b10a5cb756f7641f1c9d85f6ac1e80da13697
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+SOURCE_INVALIDATION_08C1B=RUNTIME_PASS
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+NEXT_SLICE=08C2
+NEXT_ACTION=STOP_FOR_REVIEWER_STITCH_UI_GATE
+```

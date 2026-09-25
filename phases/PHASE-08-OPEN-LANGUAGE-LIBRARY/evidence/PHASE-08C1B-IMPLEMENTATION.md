@@ -136,6 +136,105 @@ PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 ```
 
+## 08C1B corrected Neon TEST runtime retest
+
+The earlier Neon TEST runtime result remains historical and is not replaced:
+
+```text
+PREVIOUS_NEON_RUNTIME=FAIL
+CURRENT_RETEST_BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
+```
+
+The authorized retest used only the existing CongDongNgonNgu Neon TEST target.
+Safe connection metadata was `database=neondb`, `role=neondb_owner`,
+PostgreSQL `18.6`, Neon host, and `sslmode=verify-full`; credentials and the
+connection string were not printed. The migration ledger already contained
+exactly 0001-0011. No migration runner was executed, the ledger/schema was not
+changed, and no production connection or deployment was used.
+
+The retest created only uniquely marked disposable fixtures and removed them
+in FK-safe order. Cleanup verified zero remaining marked users, resources,
+community posts, or licenses. Canonical data and the frozen migration schema
+were unchanged.
+
+Runtime results:
+
+```text
+NEON_RUNTIME_RETEST=PASS
+TEST_DB_TARGET_VERIFIED=YES
+CURSOR_DB_MICROSECONDS_PRESENT=YES
+CURSOR_EXACT_MICROSECOND_BOUNDARY=PASS
+INVALID_QUEUE_LOGICAL_PAGINATION_POSTGRES=PASS
+INVALID_QUEUE_DUPLICATED_R4=NO
+INVALID_QUEUE_SKIPPED_R5=NO
+INVALID_QUEUE_NO_EMPTY_INTERMEDIATE_POSTGRES=PASS
+INVALID_QUEUE_CONCURRENT_RECONCILE=PASS
+PUBLIC_SEARCH_CURSOR_POSTGRES=PASS
+REVIEW_QUEUE_CURSOR_POSTGRES=PASS
+VERIFY_HELD_REAL_SOURCE_LOCKS=YES
+COMPETING_MUTATION_BLOCKED_BY_DB_LOCK=YES
+VERIFY_ACCEPTANCE_RACE_POSTGRES=PASS
+VERIFY_RESPONSE_MODERATION_RACE_POSTGRES=PASS
+VERIFY_PARENT_VISIBILITY_RACE_POSTGRES=PASS
+VERIFY_PARENT_MODERATION_RACE_POSTGRES=PASS
+SOURCE_HEALTH_REASON_MATRIX_POSTGRES=PASS
+SOURCE_RECONCILE_AUTH_HTTP=PASS
+SOURCE_REVIEW_PRIVACY=PASS
+TRANSACTIONAL_AUDIT_REASON_POSTGRES=PASS
+FAIL_CLOSED_BEFORE_RECONCILE=PASS
+STALE_INVALIDATION_POSTGRES=PASS
+SOURCE_RECONCILE_IDEMPOTENCY_POSTGRES=PASS
+MULTI_SOURCE_FAIL_CLOSED_POSTGRES=PASS
+NON_PHASE06_POSTGRES=PASS
+POST_COMMIT_REQUIRED_READS=0
+DISPOSABLE_TEST_CLEANUP=PASS
+```
+
+The real PostgreSQL cursor regression used non-zero microseconds and decoded
+the invalid-source continuation boundary from the opaque v2 cursor. The
+interleaved logical pages were exactly R2/R4 followed by R5, with no duplicate
+R4, skipped R5, or empty intermediate page. Public search and the normal
+COMMUNITY_REVIEW queue also traversed distinct sub-millisecond boundaries once
+each in their existing sort directions.
+
+The transaction-aware VERIFY harness paused the actual reviewed repository
+after all parent, response, acceptance, and candidate `FOR SHARE` locks were
+held. Each legitimate Phase 06 mutation remained pending on a PostgreSQL row
+lock until VERIFY committed; the post-mutation public projection then failed
+closed. Source-health priority matched canonical Phase 06 semantics:
+candidate invalidation dominates downstream acceptance/response causes, while
+pending candidates report parent visibility or moderation reasons. HTTP checks
+used bearer authorization, conditional explicit-cookie CSRF, and exact-key
+privacy assertions for both reviewer projections.
+
+Post-retest local verification passed: focused 12 suites/106 tests, full unit
+41 suites/304 tests, full E2E 13 suites/58 tests, migration contracts 4
+suites/15 tests, typecheck, lint, build, `git diff --check`, and
+`npm audit --audit-level=high` with 0 vulnerabilities. Backend remains clean at
+`86c51f7b08a989db415e7c11361686fdf2379455`; Frontend remains unchanged at
+`a46194853b4da7cfa8d41d6e155f92ab908c4ff4`.
+
+```text
+08C1A_RUNTIME=PASS
+SOURCE_INVALIDATION_08C1B=RUNTIME_PASS
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+MIGRATION_0011_CHECKSUM_MATCH=YES
+MIGRATION_0011_UP_SHA256=556c9222004f909cc94738db592a7134a2b6bbd9fe6807d62adbc876b4e52a5a
+MIGRATION_0011_DOWN_SHA256=436108a9e78fb5e3a5cf3f1a753b10a5cb756f7641f1c9d85f6ac1e80da13697
+TEST_DB_MUTATED=NO (disposable fixtures cleaned; schema/ledger unchanged)
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_SLICE=08C2
+NEXT_ACTION=STOP_FOR_REVIEWER_STITCH_UI_GATE
+```
+
 The existing Phase 06 source references and the frozen 0009 review ordering
 index are sufficient. No schema or cache was added.
 
@@ -310,4 +409,19 @@ TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_NEON_RUNTIME_RETEST
+```
+
+## Current stop state after corrected runtime retest
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+SOURCE_INVALIDATION_08C1B=RUNTIME_PASS
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+TEST_DB_MUTATED=NO (disposable fixtures created and cleaned; schema/ledger unchanged)
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_SLICE=08C2
+NEXT_ACTION=STOP_FOR_REVIEWER_STITCH_UI_GATE
 ```
