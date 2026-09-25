@@ -9,7 +9,7 @@ Status: `VERIFYING`
 This slice continues from the accepted 08C1A Backend review commit
 `82e3f66b88232e64ef71dc68d8a1c5f63a115257` on
 `phase-08c1a-library-review-backend`. The final 08C1B implementation head is
-`cf142b48390d60630cda6773191b69d14cf819a4` on
+`6ef7276461bab7c1781c668e00ec25e7920bd7e1` on
 `phase-08c1b-library-source-invalidation`, and the accepted Workspace runtime commit
 `989c96825b47da7ae8fee122c717c6842d1540b0` on
 `phase-08c1a-library-review-backend`.
@@ -85,6 +85,23 @@ If a stale queue observation is now healthy, the action returns
 after successful reconciliation returns `LIBRARY_REVIEW_CONFLICT` (`409`) and
 cannot create a second `INVALIDATE` audit.
 
+## External-review remediation
+
+The reconciliation service now passes only the normalized optional reviewer
+note into the repository. PostgreSQL constructs the durable system reason from
+the Phase 06 source rows locked and re-evaluated inside the transaction that
+commits `VERIFIED -> COMMUNITY_REVIEW`; preflight reasons cannot become audit
+facts. Reason codes are deduplicated and ordered canonically, and only the
+optional reviewer portion is truncated to keep the UTF-8-safe audit note at or
+below 2,000 code points.
+
+The invalid-source queue uses bounded internal scanning over the deterministic
+`VERIFIED`/Phase06-backed superset. It continues across currently healthy
+resources until it has `limit + 1` invalid resources or reaches exhaustion, then
+returns a cursor after the last visible invalid resource. This produces pages
+from the logical invalid set without empty intermediate pages caused by valid
+Phase06 resources, while preserving stable `updated_at ASC, id ASC` order.
+
 ## Transaction and race design
 
 VERIFY keeps the existing resource `FOR UPDATE` and provenance revision
@@ -142,13 +159,21 @@ NO_AUTO_REVERIFY=YES
 PHASE06_CANDIDATE_CONSUMPTION=NO
 POST_COMMIT_REQUIRED_READS=0
 HYDRATION_FAILURE_ROLLBACK=PASS
+TRANSACTIONAL_AUDIT_REASON=PASS
+STALE_PREFLIGHT_REASON_PERSISTED=NO
+AUDIT_REASON_ORDER_DETERMINISTIC=PASS
+AUDIT_NOTE_LENGTH_SAFE=PASS
+INVALID_QUEUE_LOGICAL_PAGINATION=PASS
+INVALID_QUEUE_EMPTY_INTERMEDIATE_PAGE=NO
+INVALID_QUEUE_NO_DUPLICATES=PASS
+INVALID_QUEUE_NO_SKIPS=PASS
 ```
 
 Focused source-health/reconciliation tests, reviewer tests, and Corrections
 tests pass. Full local Backend verification:
 
-- focused source-health/repository tests: 23 passed;
-- full unit suite: 39 suites, 293 tests passed;
+- focused source-health/repository tests: 5 suites, 27 tests passed;
+- full unit suite: 40 suites, 297 tests passed;
 - full E2E suite: 13 suites, 58 tests passed;
 - migration contract subset: 5 suites, 20 tests passed;
 - typecheck, lint, build, and `git diff --check`: passed;
@@ -161,7 +186,7 @@ The Frontend exact SHA check remains unchanged at
 
 ```text
 08C1A_RUNTIME=PASS
-08C1B_SOURCE_INVALIDATION=IMPLEMENTED_PENDING_EXTERNAL_REVIEW
+08C1B_SOURCE_INVALIDATION=IMPLEMENTED_PENDING_EXTERNAL_REVIEW_REMEDIATION
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
 LNG_08_005=VERIFYING
@@ -169,7 +194,7 @@ LNG_08_006=PLANNED
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
-SOURCE_INVALIDATION_08C1B=IMPLEMENTED_PENDING_EXTERNAL_REVIEW
+SOURCE_INVALIDATION_08C1B=IMPLEMENTED_PENDING_EXTERNAL_REVIEW_REMEDIATION
 NEXT_SLICE=08C1B_RUNTIME
-NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_NEON_RUNTIME
 ```
