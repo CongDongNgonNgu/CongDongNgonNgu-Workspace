@@ -198,3 +198,116 @@ SOURCE_INVALIDATION_08C1B=IMPLEMENTED_PENDING_EXTERNAL_REVIEW_REMEDIATION
 NEXT_SLICE=08C1B_RUNTIME
 NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_NEON_RUNTIME
 ```
+
+## 08C1B runtime failure classification and static remediation
+
+The previous Neon TEST runtime result remains historical and is not
+overwritten:
+
+```text
+PREVIOUS_NEON_RUNTIME=FAIL
+PREVIOUS_BACKEND_SHA=6ef7276461bab7c1781c668e00ec25e7920bd7e1
+```
+
+This remediation was static-only. Neon TEST was not connected, no database
+rows were changed, and no migration runner was executed.
+
+The confirmed code defect was cursor precision. Library pagination had
+serialized PostgreSQL `timestamptz` boundaries through JavaScript `Date`,
+losing microseconds and allowing an invalid-source row such as R4 to reappear
+after a cursor request. Backend commit
+`86c51f7b08a989db415e7c11361686fdf2379455` changes the opaque cursor to
+version 2 with canonical decimal `updatedAtMicros` strings. PostgreSQL
+projects the exact ordered-row boundary with
+`(EXTRACT(EPOCH FROM resource.updated_at) * 1000000)::bigint::text`, compares
+the raw indexed timestamp column against an epoch-microsecond parameter, and
+preserves `updated_at`/`id` ordering. Public search, the COMMUNITY_REVIEW
+queue, and the invalid-source queue use the same contract. The invalid-source
+scan retains exact boundaries aligned with hydrated items, so its continuation
+cursor is the last visible invalid row rather than a millisecond-truncated
+hydrated timestamp.
+
+Focused regressions cover cursor versioning/validation, exact microsecond
+boundaries, public search, reviewer queue, and the interleaved logical
+invalid-source sequence R1 valid, R2 invalid, R3 valid, R4 invalid, R5
+invalid. The expected pages are R2/R4 followed by R5 with no duplicate or
+skip. Existing source-transaction tests continue to prove resource,
+provenance, license, parent, response, acceptance, and candidate locks are
+acquired before the state mutation and that `COMMIT` is the final transaction
+operation. No source-locking semantics were changed in this remediation.
+
+The canonical source-health priority remains candidate state first, then
+reference coherence, parent moderation, parent visibility, response state,
+and acceptance state. Therefore an acceptance revoke or response moderation
+that canonically invalidates the candidate may report
+`CANDIDATE_INVALIDATED`; a still-pending candidate with a private parent
+reports `PARENT_NOT_PUBLIC`, and a non-active parent reports
+`PARENT_INACTIVE_OR_MISSING`.
+
+The auth runtime expectation is documented rather than changed: Library
+routes require `Authorization: Bearer <access token>`; no bearer is 401, a
+MEMBER bearer is 403, and MODERATOR/ADMIN bearer access is authorized subject
+to domain rules. CSRF is checked only when an explicit refresh cookie is
+present, in which case a missing or invalid header is `AUTH_CSRF_INVALID`.
+The reviewer E2E coverage now asserts this exact model.
+
+Reviewer privacy is checked recursively by exact forbidden field names rather
+than broad `userId` substring matching. The forbidden set is email,
+password/passwordHash, access/refresh tokens, undocumented session fields,
+license `sourceNote`, contribution-event `contributorUserId`, and unsafe
+`originalContributorUserId`. Safe resource/source IDs and review-audit
+`actorUserId` remain permitted reviewer evidence.
+
+### 08C1B Runtime Failure Classification
+
+| Previous runtime item | Classification | Static remediation status |
+| --- | --- | --- |
+| `VERIFY_ACCEPTANCE_RACE_POSTGRES` | `RUNTIME_HARNESS_DEFECT` | Existing lock-order tests pass; `NEEDS_RUNTIME_RETEST` with transaction-aware coordination. |
+| `VERIFY_RESPONSE_MODERATION_RACE_POSTGRES` | `RUNTIME_HARNESS_DEFECT` | Existing lock-order tests pass; `NEEDS_RUNTIME_RETEST` with transaction-aware coordination. |
+| `VERIFY_PARENT_RACE_POSTGRES` | `RUNTIME_HARNESS_DEFECT` | Existing lock-order tests pass; `NEEDS_RUNTIME_RETEST` with transaction-aware coordination. |
+| `INVALID_QUEUE_LOGICAL_PAGINATION_POSTGRES` | `CODE_DEFECT` | Fixed by exact microsecond cursor boundaries; static regression passes; Neon retest required. |
+| `INVALID_QUEUE_NO_EMPTY_INTERMEDIATE_PAGE` | `CODE_DEFECT` | Covered by the logical scan regression; Neon retest required. |
+| `INVALID_QUEUE_CONCURRENT_RECONCILE` | `CODE_DEFECT` | Same cursor-boundary defect path is covered; Neon retest required. |
+| `SOURCE_HEALTH_REASON_MATRIX_POSTGRES` | `GATE_EXPECTATION_DEFECT` | Candidate invalidation is the canonical dominant reason; evaluator unit matrix passes. |
+| `SOURCE_RECONCILE_AUTH_HTTP` | `GATE_EXPECTATION_DEFECT` | The prior cookie-only expectation was outside the bearer-auth contract; corrected HTTP coverage passes. |
+| `SOURCE_REVIEW_PRIVACY` | `GATE_EXPECTATION_DEFECT` | The prior substring check rejected safe IDs; exact-key recursive projection checks pass. |
+
+Static verification after remediation:
+
+```text
+CURSOR_ROOT_CAUSE_MICROSECOND_PRECISION=CONFIRMED
+LIBRARY_CURSOR_EXACT_PRECISION=PASS
+MICROSECOND_CURSOR_DUPLICATE=NO
+MICROSECOND_CURSOR_SKIP=NO
+PUBLIC_SEARCH_CURSOR_REGRESSION=PASS
+REVIEW_QUEUE_CURSOR_REGRESSION=PASS
+INVALID_QUEUE_LOGICAL_PAGINATION=PASS
+INVALID_QUEUE_NO_EMPTY_INTERMEDIATE_PAGE=PASS
+INVALID_QUEUE_NO_DUPLICATES=PASS
+INVALID_QUEUE_NO_SKIPS=PASS
+RACE_STATIC_INVARIANT=PASS
+RUNTIME_RACE_RETEST_REQUIRED=YES
+SOURCE_REASON_PRIORITY_DOCUMENTED=PASS
+SOURCE_RECONCILE_AUTH_STATIC=PASS
+AUTH_RUNTIME_GATE_CORRECTED=YES
+SOURCE_REVIEW_PRIVACY_STATIC=PASS
+```
+
+Backend static gates passed after commit
+`86c51f7b08a989db415e7c11361686fdf2379455`: 41 unit suites / 304
+tests, 13 E2E suites / 58 tests, typecheck, lint, build, migration contract
+tests, `git diff --check`, and `npm audit --audit-level=high` with zero
+vulnerabilities. Frontend remains unchanged at
+`a46194853b4da7cfa8d41d6e155f92ab908c4ff4`.
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+SOURCE_INVALIDATION_08C1B=PENDING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_NEON_RUNTIME_RETEST
+```

@@ -521,3 +521,38 @@ Implementation and focused/full verification details are recorded in
 `evidence/PHASE-08C1B-IMPLEMENTATION.md` and the companion plan. 08C1A
 runtime remains `PASS`; 08C1B source invalidation is implemented and pending
 external review. `LNG_08_005` remains `VERIFYING`.
+
+## Phase 08C1B static runtime-failure remediation
+
+The previous 08C1B Neon TEST runtime result remains recorded as
+`PREVIOUS_NEON_RUNTIME=FAIL`; this remediation did not connect to Neon, run
+migrations, mutate test data, deploy, or change Frontend. Backend review head
+`6ef7276461bab7c1781c668e00ec25e7920bd7e1` was remediated and pushed as
+`86c51f7b08a989db415e7c11361686fdf2379455` on
+`phase-08c1b-library-source-invalidation`.
+
+The confirmed defect was loss of PostgreSQL `timestamptz` microseconds in the
+opaque `updated_at + id` cursor. Cursor version 2 now carries exact decimal
+epoch microseconds, PostgreSQL compares the raw timestamp column against the
+exact parameter boundary, and public search, reviewer queue, and invalid-source
+queue share the same precision-safe contract. Invalid-source scan pages retain
+ordered-row boundaries aligned with hydrated items. Static R1/R2/R3/R4/R5
+coverage proves the logical pages are R2/R4 then R5 without duplicates/skips.
+
+The source-lock implementation was not weakened: existing deterministic tests
+still prove locks are acquired before VERIFY mutation and held until the final
+pre-COMMIT hydration. Prior VERIFY/source race failures are classified as
+runtime-harness defects requiring a transaction-aware Neon retest. The source
+reason matrix failure is a gate-expectation defect because canonical candidate
+invalidation dominates downstream acceptance/response causes. The auth failure
+is a gate-expectation defect because Library mutations are bearer-authenticated;
+cookie CSRF is conditional on an explicitly present refresh cookie. The privacy
+failure is a gate-expectation defect caused by broad `userId` matching; exact
+forbidden-key recursive checks now cover both reviewer projections.
+
+Static remediation gates passed: 41 unit suites / 304 tests, 13 E2E suites /
+58 tests, typecheck, lint, build, migration contracts, `git diff --check`, and
+high-severity npm audit with zero vulnerabilities. Migrations 0001-0011 remain
+unchanged; no 0012 exists or was applied. `LNG_08_005` remains `VERIFYING`,
+`SOURCE_INVALIDATION_08C1B=PENDING`, and the next action is external review
+before Neon runtime retest.
