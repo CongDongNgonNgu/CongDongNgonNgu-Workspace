@@ -78,3 +78,26 @@ Phase 10 remain blocked by Phase 08.
 08C1A is limited to the reviewer queue/read model and atomic verify/reject
 actions. Reviewer UI, source invalidation, imports, Phase 06 candidate
 consumption, Phase 10 points, and deployment remain out of scope.
+
+## Active phase state during Phase 08C1B source invalidation work
+
+    CURRENT_PHASE=08
+    PHASE_08=IN_PROGRESS
+    LNG_08_001=DONE
+    LNG_08_002=DONE
+    LNG_08_003=DONE
+    LNG_08_004=DONE
+    LNG_08_005=VERIFYING
+    LNG_08_006=PLANNED
+    LNG_08_007=PLANNED
+    LNG_08_008=PLANNED
+    SOURCE_INVALIDATION_08C1B=IMPLEMENTED_PENDING_EXTERNAL_REVIEW
+    OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+    PHASE_09=BLOCKED_BY_PHASE_08
+    PHASE_10=BLOCKED_BY_PHASE_08
+
+08C1B observes current Phase 06 source health, fails public reads closed for
+invalid Phase 06 provenance, adds reviewer invalid-source discovery, and
+provides atomic VERIFIED to COMMUNITY_REVIEW reconciliation. Phase 06
+candidate consumption, reviewer UI, Phase 10 points, Neon TEST mutation, and
+deployment remain out of scope.

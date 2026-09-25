@@ -449,3 +449,69 @@ connected to or mutated, production was untouched, no deployment occurred,
 and Frontend source remained unchanged. Dynamic source invalidation is
 explicitly deferred to 08C1B. Full evidence is in
 `evidence/PHASE-08C1A-IMPLEMENTATION.md`.
+
+## Phase 08C1B Phase 06 source health and reconciliation - LNG-08-005
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=DONE
+LNG_08_004=DONE
+LNG_08_005=VERIFYING
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+BACKEND_BRANCH=phase-08c1b-library-source-invalidation
+BACKEND_BASE_SHA=82e3f66b88232e64ef71dc68d8a1c5f63a115257
+FRONTEND_CHANGED=NO
+FRONTEND_SHA=a46194853b4da7cfa8d41d6e155f92ab908c4ff4
+WORKSPACE_BRANCH=phase-08c1b-library-source-invalidation
+WORKSPACE_BASE_SHA=989c96825b47da7ae8fee122c717c6842d1540b0
+08C1A_RUNTIME=PASS
+SOURCE_INVALIDATION_08C1B=IMPLEMENTED_PENDING_EXTERNAL_REVIEW
+MIGRATION_REQUIRED=NO
+MIGRATION_FILE=NONE
+MIGRATION_APPLIED=NO
+MIGRATION_RERUN=NO
+MIGRATIONS_0001_0011=UNCHANGED
+MIGRATION_0012_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+NEXT_SLICE=08C1B_RUNTIME
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW
+```
+
+08C1B adds a shared current Phase 06 source-health evaluator. It observes the
+existing candidate, parent post, structured response, and current acceptance
+semantics without mutating Phase 06 data. One invalid Phase 06 provenance entry
+fails public detail and search closed immediately, even while the Library
+resource remains `VERIFIED`; non-Phase06 provenance continues to use the
+existing Library gates.
+
+Reviewer projections now include safe source-health reason codes and
+`SOURCE_INVALID` verification eligibility. The bounded reviewer-only
+`GET /api/v1/library/reviews/source-invalid` queue discovers currently
+`VERIFIED` resources whose current Phase 06 source is invalid. The dedicated
+CSRF-protected `POST /api/v1/library/reviews/:resourceId/reconcile-source`
+action transactionally rechecks the source and atomically writes
+`VERIFIED -> COMMUNITY_REVIEW` with a normal reviewer `INVALIDATE` audit.
+`LIBRARY_SOURCE_STILL_VALID` rejects stale invalidation observations; replay
+after success returns `LIBRARY_REVIEW_CONFLICT` without a second audit.
+
+VERIFY now locks and rechecks the resource, provenance, current license rows,
+and referenced Phase 06 source rows inside the same PostgreSQL transaction
+before allowing verification. Source-lock ordering is parent, response,
+acceptance, candidate. VERIFY, REJECT, and reconciliation hydrate before
+commit (`POST_COMMIT_REQUIRED_READS=0`); audit, source, conflict, and hydration
+failures roll back atomically. No invalidation event table, worker, scheduler,
+candidate consumption, Request Changes state, Phase 10 points, Frontend, Neon
+TEST, production, or deployment was added.
+
+Implementation and focused/full verification details are recorded in
+`evidence/PHASE-08C1B-IMPLEMENTATION.md` and the companion plan. 08C1A
+runtime remains `PASS`; 08C1B source invalidation is implemented and pending
+external review. `LNG_08_005` remains `VERIFYING`.
