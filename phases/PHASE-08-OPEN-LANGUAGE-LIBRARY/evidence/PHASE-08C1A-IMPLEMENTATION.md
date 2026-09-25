@@ -149,3 +149,94 @@ TEST or production runtime was used by this slice.
 deleted sources, reviewer UI, and any distinct Request Changes lifecycle are
 future bounded slices. `LNG-08-005` remains `VERIFYING` pending external
 review.
+
+## Authorized Neon TEST reviewer runtime gate
+
+This section records the separately authorized real PostgreSQL runtime gate
+against the existing CongDongNgonNgu Neon TEST target. The reviewed Backend
+implementation remained unchanged at
+`82e3f66b88232e64ef71dc68d8a1c5f63a115257`; no migration runner was invoked.
+
+Safe database identity metadata:
+
+```text
+TEST_DB_TARGET_VERIFIED=YES
+DATABASE_SAFE_METADATA=database neondb; schema public; role neondb_owner; host category *.neon.tech
+POSTGRES_VERSION=PostgreSQL 18.6 (6569466)
+SSL_URL_MODE=verify-full
+SSL_SERVER_REPORTED=false
+MIGRATION_LEDGER=0001-0011 present; count=11
+```
+
+The server-reported session SSL flag was `false` while the configured URL
+declared `sslmode=verify-full`; no secret or connection URL was recorded.
+
+The frozen reviewer index was present as
+`library_resources_review_idx (review_state, updated_at ASC, id ASC)`. The
+normal tiny-corpus plan used a sequential scan; with `enable_seqscan=off`,
+PostgreSQL selected an Index Only Scan using that index.
+
+The real HTTP/application gate passed with isolated disposable actors,
+resources, provenance, licenses, review audits, and contribution events. The
+fixtures were removed in FK-safe order after the run; final matching counts
+were users=0, resources=0, provenance=0, audits=0, events=0, licenses=0.
+
+```text
+REVIEW_QUEUE_INDEX_USABLE=PASS
+REVIEW_QUEUE_POSTGRES=PASS
+REVIEW_QUEUE_PAGINATION_POSTGRES=PASS
+REVIEW_AUTH_HTTP=PASS
+REVIEW_DETAIL_PRIVACY=PASS
+VERIFY_POSTGRES=PASS
+VERIFY_PUBLIC_VISIBILITY_POSTGRES=PASS
+REJECT_POSTGRES=PASS
+REJECT_PUBLIC_VISIBILITY_POSTGRES=PASS
+SELF_VERIFICATION_POSTGRES=PASS
+VERIFY_FAIL_CLOSED_POSTGRES=PASS
+VERIFY_LICENSE_LOCK_REAL=PASS
+VERIFY_PROVENANCE_RACE_POSTGRES=PASS
+CONCURRENT_REVIEW_POSTGRES=PASS
+STALE_QUEUE_ELIGIBILITY_FAIL_CLOSED=PASS
+QUEUE_CONCURRENT_TRANSITION=PASS
+REVIEW_VALIDATION_4XX=PASS
+POST_COMMIT_REQUIRED_READS=0
+DISPOSABLE_TEST_CLEANUP=PASS
+```
+
+The gate verified queue language/type/query filters, stable cursor
+pagination, malformed and filter-mismatched cursors, unauthenticated and
+MEMBER denial, MODERATOR/ADMIN access, cookie-CSRF enforcement, safe detail
+privacy, atomic VERIFY/REJECT and public gates, self-verification denial,
+zero-provenance and unsafe-license failures, ACTIVE moderation enforcement,
+the actual repository license-row lock, resource/provenance race handling,
+first-writer-wins reviewer conflict, stale queue eligibility, concurrent
+queue transition behavior, and safe HTTP 4xx validation.
+
+Runtime-only database mutation was limited to disposable verification rows
+and was fully cleaned up; schema and migration state were not changed:
+
+```text
+TEST_DB_MUTATED=YES (disposable rows only; cleanup PASS)
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+```
+
+Local regression after the runtime gate remained green: focused reviewer
+tests 16/16, Library tests 142/142, full unit 273/273, full E2E 57/57,
+typecheck, lint, build, migration contract tests 9/9, audit with 0 high or
+critical vulnerabilities, and `git diff --check` all passed. Frontend stayed
+unchanged at `a46194853b4da7cfa8d41d6e155f92ab908c4ff4`.
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+SOURCE_INVALIDATION_08C1B=PENDING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
+NEXT_SLICE=08C1B
+NEXT_ACTION=STOP_FOR_SOURCE_INVALIDATION_IMPLEMENTATION_GATE
+```
