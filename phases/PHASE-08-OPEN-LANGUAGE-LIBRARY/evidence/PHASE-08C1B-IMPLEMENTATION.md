@@ -235,6 +235,56 @@ NEXT_SLICE=08C2
 NEXT_ACTION=STOP_FOR_REVIEWER_STITCH_UI_GATE
 ```
 
+## 08C1B Neon TEST target precheck reconciliation
+
+The later invocation that reported `TEST_DB_TARGET_VERIFIED=NO` stopped before
+feature runtime execution because its supplied Workspace review head did not
+match the live review branch. It is classified as an environment/repository
+precheck failure, not a code regression and not evidence against the accepted
+runtime result below.
+
+```text
+LATEST_FAILED_INVOCATION_CLASSIFICATION=ENVIRONMENT_PRECHECK_FAILURE
+PRECHECK_FAILURE_REASON=WORKSPACE_REVIEW_HEAD_MISMATCH_BEFORE_DB_TARGET_CHECK
+LATER_INVOCATION_PRECHECK=FAILED_BEFORE_RUNTIME
+PREVIOUS_NEON_RUNTIME=FAIL
+CORRECTED_NEON_RUNTIME_RETEST=PASS
+TARGET_PRECHECK_RECONCILIATION=PASS
+```
+
+The read-only reconciliation verified the exact Backend review SHA
+`86c51f7b08a989db415e7c11361686fdf2379455`, Frontend SHA
+`a46194853b4da7cfa8d41d6e155f92ab908c4ff4`, and current Workspace review
+branch head `d52b1b8f9ccbddf9dabf0aa3327aa19604dcff89`. All worktrees and main
+baselines were clean and unchanged.
+
+The normal Backend environment path loads `.env` through the Node
+`--env-file-if-exists=.env` invocation used by the migration runner and runtime
+diagnostics; `DATABASE_URL` was present. A read-only connection confirmed the
+authorized Neon TEST target without printing credentials:
+
+```text
+DATABASE_ENV_PRESENT=YES
+TEST_DB_TARGET_VERIFIED=YES
+DATABASE_NAME=neondb
+DATABASE_ROLE=neondb_owner
+POSTGRES_VERSION=PostgreSQL 18.6
+NEON_TARGET=YES
+SSL_VERIFIED=YES (client sslmode=verify-full; Neon backend pg_stat_ssl reported false on the proxy-side session)
+MIGRATION_LEDGER_0001_0011=PASS
+MIGRATION_LEDGER_READ_ONLY=YES
+DATABASE_WRITES=0
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+```
+
+The ledger read returned exactly 0001 through 0011. No runtime fixtures,
+source mutations, reconciliation actions, migrations, or Workspace changes
+were performed by this precheck. The previously accepted corrected Neon
+runtime evidence therefore remains canonical and does not require a second
+feature retest solely because the later invocation failed before target
+verification.
+
 The existing Phase 06 source references and the frozen 0009 review ordering
 index are sufficient. No schema or cache was added.
 

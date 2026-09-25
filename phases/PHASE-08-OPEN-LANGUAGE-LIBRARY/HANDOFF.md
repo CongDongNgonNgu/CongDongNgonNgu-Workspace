@@ -616,3 +616,40 @@ OWNER_VISUAL_ACCEPTANCE_08C=PENDING_NOT_STARTED
 NEXT_SLICE=08C2
 NEXT_ACTION=STOP_FOR_REVIEWER_STITCH_UI_GATE
 ```
+
+## 08C1B Neon TEST target precheck reconciliation
+
+The later invocation reporting `TEST_DB_TARGET_VERIFIED=NO` was stopped before
+feature runtime execution because the supplied Workspace review SHA did not
+match the live review branch. This remains an environment/repository precheck
+failure, not a code regression. The earlier corrected runtime PASS remains
+canonical and is not overwritten.
+
+```text
+LATEST_FAILED_INVOCATION_CLASSIFICATION=ENVIRONMENT_PRECHECK_FAILURE
+PRECHECK_FAILURE_REASON=WORKSPACE_REVIEW_HEAD_MISMATCH_BEFORE_DB_TARGET_CHECK
+LATER_INVOCATION_PRECHECK=FAILED_BEFORE_RUNTIME
+PREVIOUS_NEON_RUNTIME=FAIL
+CORRECTED_NEON_RUNTIME_RETEST=PASS
+TARGET_PRECHECK_RECONCILIATION=PASS
+DATABASE_ENV_PRESENT=YES
+TEST_DB_TARGET_VERIFIED=YES
+DATABASE_NAME=neondb
+DATABASE_ROLE=neondb_owner
+POSTGRES_VERSION=PostgreSQL 18.6
+NEON_TARGET=YES
+SSL_VERIFIED=YES (client sslmode=verify-full; Neon backend pg_stat_ssl reported false on the proxy-side session)
+MIGRATION_LEDGER_0001_0011=PASS
+MIGRATION_LEDGER_READ_ONLY=YES
+DATABASE_WRITES=0
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+```
+
+The exact Backend, Frontend, Workspace review, and main-baseline heads were
+verified clean. The configured `.env` path resolved `DATABASE_URL` to the
+authorized Neon TEST target; credentials and connection strings were not
+printed. A read-only ledger query confirmed exactly migrations 0001-0011.
+No fixtures, source mutations, reconciliation, migration commands, or other
+database writes occurred. No second feature runtime retest is required solely
+because the later invocation failed before target verification.
