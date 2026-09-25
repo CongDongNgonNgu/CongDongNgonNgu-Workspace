@@ -8,7 +8,9 @@ Status: `VERIFYING`
 
 This slice continues from the accepted 08C1A Backend review commit
 `82e3f66b88232e64ef71dc68d8a1c5f63a115257` on
-`phase-08c1a-library-review-backend` and the accepted Workspace runtime commit
+`phase-08c1a-library-review-backend`. The final 08C1B implementation head is
+`cf142b48390d60630cda6773191b69d14cf819a4` on
+`phase-08c1b-library-source-invalidation`, and the accepted Workspace runtime commit
 `989c96825b47da7ae8fee122c717c6842d1540b0` on
 `phase-08c1a-library-review-backend`.
 
