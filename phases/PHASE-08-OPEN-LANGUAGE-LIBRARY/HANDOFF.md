@@ -653,3 +653,66 @@ printed. A read-only ledger query confirmed exactly migrations 0001-0011.
 No fixtures, source mutations, reconciliation, migration commands, or other
 database writes occurred. No second feature runtime retest is required solely
 because the later invocation failed before target verification.
+
+## Phase 08C2 reviewer UI implementation handoff
+
+This append-only section records the reviewer UI slice. It does not close
+`LNG_08_005`; owner visual acceptance remains external and pending.
+
+```text
+PHASE_08C2_IMPLEMENTATION=PASS
+STITCH_STATUS=PASS
+STITCH_PROJECT=14639103242845084916
+BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
+BACKEND_CHANGED=NO
+FRONTEND_BRANCH=phase-08c2-library-reviewer-ui
+FRONTEND_SHA=48a5ed9472eb368c2dc593441d9d9b442b60555d
+WORKSPACE_BRANCH=phase-08c2-library-reviewer-ui
+WORKSPACE_PARENT=cf766bb887d4ebf282bcb97d3b083b39ab3d7231
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING
+NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+```
+
+The existing Stitch project was used with Prompt C before implementation. The
+six inspected screens are recorded in
+`evidence/PHASE-08C2-IMPLEMENTATION-PLAN.md`. Unsupported Request Changes and
+duplicate-similarity UI were intentionally omitted because neither exists in
+the accepted backend contract.
+
+Frontend adds `/library/review` and `/library/review/:resourceId` inside the
+Library feature, with pending and source-invalid views, opaque cursor filters,
+MODERATOR/ADMIN role gating, safe login return paths, reviewer-only Library
+entry, content-first detail, source-health/license/provenance evidence,
+contribution event/audit history, Verify/Reject actions, and source
+reconciliation. All transport uses the existing `useAuth().api` bearer path;
+no token store or cookie-only auth was added. Backend remains authoritative for
+eligibility, conflicts, self-verification, source health, and public exposure.
+
+The implementation captures are stored at the six `PHASE-08C2-*.png` paths in
+the evidence directory. Browser verification passed the 320/375/390/412/768/
+1024/1440 responsive matrix. Lighthouse Accessibility returned 100 for queue
+desktop, detail desktop, and detail mobile. A final fresh fixture navigation
+had no major console messages.
+
+Frontend verification passed 3 focused reviewer test files / 9 tests and the
+full 45-file / 208-test suite, typecheck, lint, build, high-severity npm audit
+(0 vulnerabilities), and diff-check. Backend integration smoke is recorded as
+`BLOCKED` because this UI slice did not start a local backend and explicitly
+did not connect to Neon TEST; no backend runtime result is implied.
+
+Accepted backend/runtime evidence remains unchanged:
+
+```text
+08C1A_RUNTIME=PASS
+08C1B_RUNTIME_RETEST=PASS
+08C1B_TARGET_PRECHECK_RECONCILIATION=PASS
+```
