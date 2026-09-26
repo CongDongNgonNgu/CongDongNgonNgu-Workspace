@@ -9,7 +9,7 @@ STITCH_PROJECT=14639103242845084916
 BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
 BACKEND_CHANGED=NO
 FRONTEND_BRANCH=phase-08c2-library-reviewer-ui
-FRONTEND_SHA=62b073bc11824ce328ebf3e3893a28978ba877d6
+FRONTEND_SHA=8ffab694cf5e024b24ca5e881405d2c50ba491e5
 WORKSPACE_BRANCH=phase-08c2-library-reviewer-ui
 WORKSPACE_PARENT=cf766bb887d4ebf282bcb97d3b083b39ab3d7231
 MIGRATION_REQUIRED=NO
@@ -86,9 +86,11 @@ inventing a different cause.
   `/library/reviews/:resourceId/reconcile-source`, explains fail-closed public
   reads and the absence of automatic re-verification, and supports an optional
   reviewer note.
-- `LIBRARY_SELF_VERIFICATION_DENIED` and
-  `LIBRARY_REVIEW_CONFLICT` show safe Vietnamese messages and offer reload via
-  the existing retry/detail refresh behavior; mutations are never auto-retried.
+- `LIBRARY_SELF_VERIFICATION_DENIED` keeps the reviewer on the same detail,
+  shows a safe Vietnamese message, and offers an explicit detail reload;
+  `LIBRARY_REVIEW_CONFLICT` closes the dialog, performs one safe detail
+  refresh, and offers the same reload path if that refresh fails. Mutations
+  are never auto-retried.
 - `LIBRARY_SOURCE_STILL_VALID` refreshes the detail without claiming a fake
   transition. Request Changes is explicitly not implemented by design.
 
@@ -113,8 +115,10 @@ RESPONSIVE_1440=PASS
 ```
 
 Lighthouse snapshot checks on the reviewer queue desktop, reviewer detail
-desktop, and reviewer detail mobile each returned Accessibility 100, with no
-major console messages on a fresh fixture navigation.
+desktop, and reviewer detail mobile each returned Accessibility 100 in the
+accepted browser evidence. The remediation reran live detail, attribution,
+guidance-copy, and keyboard-focus checks with a corrected disposable fixture;
+no Backend or Neon runtime was used.
 
 ## Final implementation captures
 
@@ -132,8 +136,8 @@ IMPLEMENTATION_RECONCILE=phases/PHASE-08-OPEN-LANGUAGE-LIBRARY/evidence/PHASE-08
 ## Verification
 
 ```text
-FOCUSED_REVIEW_TESTS=PASS (4 files, 14 tests)
-FRONTEND_TESTS=PASS (46 files, 213 tests)
+FOCUSED_REVIEW_TESTS=PASS (4 files, 19 tests)
+FRONTEND_TESTS=PASS (46 files, 218 tests)
 TYPECHECK=PASS
 LINT=PASS
 BUILD=PASS
@@ -170,3 +174,67 @@ LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
 ```
+
+## Phase 08C2 external review remediation
+
+The Frontend review branch received a focused remediation before owner visual
+acceptance. Backend SHA `86c51f7b08a989db415e7c11361686fdf2379455` and all
+migrations remain unchanged; Neon TEST was not used by this UI remediation.
+
+```text
+FRONTEND_REMEDIATION_COMMIT=8ffab694cf5e024b24ca5e881405d2c50ba491e5
+REVIEW_CONFLICT_REFRESH=PASS
+REVIEW_CONFLICT_MUTATION_RETRY=NO
+REVIEW_CONFLICT_REFRESH_TEST=PASS
+SELF_VERIFICATION_ERROR=PASS
+SELF_VERIFICATION_RELOAD_AVAILABLE=PASS
+VERIFY_DIALOG_FOCUS_RESTORE=PASS
+REJECT_DIALOG_FOCUS_RESTORE=PASS
+RECONCILE_DIALOG_FOCUS_RESTORE=PASS
+ACTION_DIALOG_FOCUS_TESTS=PASS
+LICENSE_ATTRIBUTION_REQUIRED_UI=PASS
+LICENSE_EVIDENCE=PASS
+REVIEW_TYPES_BACKEND_ALIGNED=PASS
+REQUEST_CHANGES_UI=NOT_IMPLEMENTED_BY_DESIGN
+SOURCE_STILL_VALID_HANDLING=PASS
+NO_AUTO_REVERIFY=YES
+PRIVATE_FIELD_RENDERING=NONE
+FOCUSED_REVIEW_TESTS=PASS (4 files, 19 tests)
+FRONTEND_TESTS=PASS (46 files, 218 tests)
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 vulnerabilities at --audit-level=high)
+GIT_DIFF_CHECK=PASS
+BACKEND_INTEGRATION_SMOKE=BLOCKED (accepted Backend not started locally; Neon TEST out of scope)
+RESPONSIVE_320=PASS
+RESPONSIVE_375=PASS
+RESPONSIVE_390=PASS
+RESPONSIVE_412=PASS
+RESPONSIVE_768=PASS
+RESPONSIVE_1024=PASS
+RESPONSIVE_1440=PASS
+ACCESSIBILITY=100 (existing Lighthouse queue/detail evidence retained; browser focus and live detail checks rerun)
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+```
+
+Conflict handling now refreshes reviewer detail once after the backend returns
+`LIBRARY_REVIEW_CONFLICT`; if the GET refresh fails, the conflict notice stays
+visible with an explicit `Tải lại chi tiết` action. Self-verification never
+retries the mutation and keeps the same detail with the same reload path.
+Verify, Reject, and Reconcile use separate trigger refs, so Cancel and Escape
+restore focus to the action that opened the dialog. Reviewer license evidence
+now renders `attributionRequired` as Có, Không, or Chưa xác định, and the
+Frontend type accepts the Backend's nullable reviewer-license contract.
+The internal Request Changes lifecycle note was removed; no Request Changes
+action was added. Existing screenshots and responsive/Lighthouse evidence are
+retained as visual baselines because the remediation is behavior/focus-oriented;
+the live browser check confirmed the updated attribution row and reviewer
+guidance copy.

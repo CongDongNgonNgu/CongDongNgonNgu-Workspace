@@ -666,7 +666,7 @@ STITCH_PROJECT=14639103242845084916
 BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
 BACKEND_CHANGED=NO
 FRONTEND_BRANCH=phase-08c2-library-reviewer-ui
-FRONTEND_SHA=62b073bc11824ce328ebf3e3893a28978ba877d6
+FRONTEND_SHA=8ffab694cf5e024b24ca5e881405d2c50ba491e5
 WORKSPACE_BRANCH=phase-08c2-library-reviewer-ui
 WORKSPACE_PARENT=cf766bb887d4ebf282bcb97d3b083b39ab3d7231
 MIGRATION_REQUIRED=NO
@@ -698,13 +698,15 @@ no token store or cookie-only auth was added. Backend remains authoritative for
 eligibility, conflicts, self-verification, source health, and public exposure.
 
 The implementation captures are stored at the six `PHASE-08C2-*.png` paths in
-the evidence directory. Browser verification passed the 320/375/390/412/768/
-1024/1440 responsive matrix. Lighthouse Accessibility returned 100 for queue
-desktop, detail desktop, and detail mobile. A final fresh fixture navigation
-had no major console messages.
+the evidence directory. The accepted browser verification passed the
+320/375/390/412/768/1024/1440 responsive matrix, and Lighthouse Accessibility
+returned 100 for queue desktop, detail desktop, and detail mobile. The
+remediation reran live detail, attribution, guidance-copy, and keyboard-focus
+checks with a corrected disposable fixture; no Backend or Neon runtime was
+used.
 
-Frontend verification passed 4 focused reviewer test files / 14 tests and the
-full 46-file / 213-test suite, typecheck, lint, build, high-severity npm audit
+Frontend verification passed 4 focused reviewer test files / 19 tests and the
+full 46-file / 218-test suite, typecheck, lint, build, high-severity npm audit
 (0 vulnerabilities), and diff-check. Backend integration smoke is recorded as
 `BLOCKED` because this UI slice did not start a local backend and explicitly
 did not connect to Neon TEST; no backend runtime result is implied.
@@ -716,3 +718,58 @@ Accepted backend/runtime evidence remains unchanged:
 08C1B_RUNTIME_RETEST=PASS
 08C1B_TARGET_PRECHECK_RECONCILIATION=PASS
 ```
+
+## Phase 08C2 external review remediation
+
+Before owner visual acceptance, the reviewer UI received a focused remediation
+on `phase-08c2-library-reviewer-ui`. The Frontend commit is
+`8ffab694cf5e024b24ca5e881405d2c50ba491e5`; Backend remains frozen at
+`86c51f7b08a989db415e7c11361686fdf2379455`, with no Neon TEST or migration
+activity in this remediation.
+
+```text
+REVIEW_CONFLICT_REFRESH=PASS
+REVIEW_CONFLICT_MUTATION_RETRY=NO
+REVIEW_CONFLICT_REFRESH_TEST=PASS
+SELF_VERIFICATION_ERROR=PASS
+SELF_VERIFICATION_RELOAD_AVAILABLE=PASS
+VERIFY_DIALOG_FOCUS_RESTORE=PASS
+REJECT_DIALOG_FOCUS_RESTORE=PASS
+RECONCILE_DIALOG_FOCUS_RESTORE=PASS
+ACTION_DIALOG_FOCUS_TESTS=PASS
+LICENSE_ATTRIBUTION_REQUIRED_UI=PASS
+LICENSE_EVIDENCE=PASS
+REVIEW_TYPES_BACKEND_ALIGNED=PASS
+REQUEST_CHANGES_UI=NOT_IMPLEMENTED_BY_DESIGN
+SOURCE_STILL_VALID_HANDLING=PASS
+NO_AUTO_REVERIFY=YES
+PRIVATE_FIELD_RENDERING=NONE
+FOCUSED_REVIEW_TESTS=PASS (4 files, 19 tests)
+FRONTEND_TESTS=PASS (46 files, 218 tests)
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 vulnerabilities at --audit-level=high)
+GIT_DIFF_CHECK=PASS
+BACKEND_INTEGRATION_SMOKE=BLOCKED (accepted Backend not started locally; Neon TEST out of scope)
+RESPONSIVE_MATRIX=PASS (320/375/390/412/768/1024/1440)
+ACCESSIBILITY=100 (existing Lighthouse queue/detail evidence; browser focus/detail checks rerun)
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+NEXT_ACTION=STOP_FOR_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+```
+
+The conflict path closes the mutation dialog, never repeats Verify/Reject/
+Reconcile, refreshes the detail once, and exposes `Tải lại chi tiết` if the
+refresh fails. Self-verification remains a safe same-detail error with an
+explicit reload path. Separate Verify, Reject, and Reconcile trigger refs now
+restore keyboard focus to the correct opener on Cancel and Escape. License
+evidence includes nullable `attributionRequired` using Có/Không/Chưa xác định,
+and the internal Request Changes lifecycle copy was replaced with neutral
+review guidance without adding a Request Changes action. Owner visual
+acceptance remains pending.
