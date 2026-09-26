@@ -234,7 +234,8 @@ restore focus to the action that opened the dialog. Reviewer license evidence
 now renders `attributionRequired` as Có, Không, or Chưa xác định, and the
 Frontend type accepts the Backend's nullable reviewer-license contract.
 The internal Request Changes lifecycle note was removed; no Request Changes
-action was added. Existing screenshots and responsive/Lighthouse evidence are
-retained as visual baselines because the remediation is behavior/focus-oriented;
-the live browser check confirmed the updated attribution row and reviewer
-guidance copy.
+action was added. Affected implementation captures were regenerated for
+reviewer detail desktop/mobile, Reject, Reconcile, and source-invalid states;
+the live browser capture confirmed the updated attribution row and reviewer
+guidance copy. The accepted responsive/Lighthouse evidence remains the visual
+quality baseline because the remediation did not redesign the layout.

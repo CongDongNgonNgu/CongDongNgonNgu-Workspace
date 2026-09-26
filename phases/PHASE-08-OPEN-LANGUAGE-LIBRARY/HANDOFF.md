@@ -771,5 +771,6 @@ explicit reload path. Separate Verify, Reject, and Reconcile trigger refs now
 restore keyboard focus to the correct opener on Cancel and Escape. License
 evidence includes nullable `attributionRequired` using Có/Không/Chưa xác định,
 and the internal Request Changes lifecycle copy was replaced with neutral
-review guidance without adding a Request Changes action. Owner visual
-acceptance remains pending.
+review guidance without adding a Request Changes action. Affected implementation
+captures were regenerated for detail desktop/mobile, Reject, Reconcile, and
+source-invalid states. Owner visual acceptance remains pending.
