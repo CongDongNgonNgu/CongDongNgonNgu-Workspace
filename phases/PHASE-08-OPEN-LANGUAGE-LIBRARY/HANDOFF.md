@@ -666,7 +666,7 @@ STITCH_PROJECT=14639103242845084916
 BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
 BACKEND_CHANGED=NO
 FRONTEND_BRANCH=phase-08c2-library-reviewer-ui
-FRONTEND_SHA=48a5ed9472eb368c2dc593441d9d9b442b60555d
+FRONTEND_SHA=62b073bc11824ce328ebf3e3893a28978ba877d6
 WORKSPACE_BRANCH=phase-08c2-library-reviewer-ui
 WORKSPACE_PARENT=cf766bb887d4ebf282bcb97d3b083b39ab3d7231
 MIGRATION_REQUIRED=NO
@@ -703,8 +703,8 @@ the evidence directory. Browser verification passed the 320/375/390/412/768/
 desktop, detail desktop, and detail mobile. A final fresh fixture navigation
 had no major console messages.
 
-Frontend verification passed 3 focused reviewer test files / 9 tests and the
-full 45-file / 208-test suite, typecheck, lint, build, high-severity npm audit
+Frontend verification passed 4 focused reviewer test files / 14 tests and the
+full 46-file / 213-test suite, typecheck, lint, build, high-severity npm audit
 (0 vulnerabilities), and diff-check. Backend integration smoke is recorded as
 `BLOCKED` because this UI slice did not start a local backend and explicitly
 did not connect to Neon TEST; no backend runtime result is implied.
