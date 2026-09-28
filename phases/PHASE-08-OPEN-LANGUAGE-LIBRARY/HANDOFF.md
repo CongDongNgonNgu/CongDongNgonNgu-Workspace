@@ -1054,6 +1054,55 @@ This plan does not alter TASKS or PROJECT-STATE: LNG_08_006 remains
 VERIFYING, LNG_08_007 and LNG_08_008 remain PLANNED, and Phase 08 remains
 IN_PROGRESS.
 
+## Phase 08D2 external-review remediation
+
+The external review identified a real directionality defect in the original
+unordered translation identity. The active planning contract is corrected
+below; the original baseline remains preserved in the evidence file as
+historical, superseded context.
+
+~~~
+08D2_EXTERNAL_REVIEW_REMEDIATION=PASS
+UNORDERED_TRANSLATION_IDENTITY_RUN_ORDER_DEFECT=CONFIRMED
+INPUT_PAIR_IDENTITY=TATOEBA:PAIR:<minId>:<maxId>
+DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<sourceSentenceId>:<targetSentenceId>
+TRANSLATION_LOCK_IDENTITY=OPEN_DATASET:TATOEBA:LINK:DIRECT:<sourceId>:<targetId>
+TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
+AUTO_CREATE_REVERSE_TRANSLATION=NO
+TRANSLATION_IDENTITY_INPUT_ORDER_INDEPENDENT=PASS
+REVERSE_DIRECTION_DISTINCT_IDENTITY=PASS
+BIDIRECTIONAL_CONFIGURATION_COLLISION=NO
+NEW_UNSAFE_CANDIDATE_DURABLE_RESOURCE=NO
+NEW_UNSAFE_CANDIDATE_ACTION=QUARANTINE_ZERO_WRITES
+INITIAL_IMPORT_ATOMICITY=ONE_POSTGRES_TRANSACTION
+PARTIAL_INITIAL_RESOURCE_AFTER_FAILURE=NO
+SENTENCE_SOURCE_IDENTITY=TATOEBA:SENTENCE:<id>
+IDEMPOTENT_RERUN_NOOP=YES
+AUTO_VERIFY_IMPORTED_RESOURCE=NO
+COMMUNITY_CONTRIBUTION_EVENT_EMITTED=NO
+MIGRATION_REQUIRED=NO
+08D2_IMPLEMENTATION_DECISION=GO
+BACKEND_CHANGED=NO
+FRONTEND_CHANGED=NO
+DATASET_DOWNLOADED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+NEXT_SLICE=08D3A
+NEXT_ACTION=STOP_FOR_08D3A_IMPLEMENTATION
+~~~
+
+Reciprocal link rows are collapsed only under the unordered input-pair
+identity. Endpoint language resolution then creates the directed durable
+identity and directional Library content. Exact role-qualified
+OPEN_DATASET provenance IDs are the global lookup boundary; no lookup may
+depend on transformation-history JSON. A new unsafe candidate produces zero
+durable Library writes. Only a pre-existing importer-owned DRAFT may remain
+DRAFT for safe reconciliation; it cannot submit until all facts are valid.
+
 ## Phase 08D2 publication evidence
 
 The plan branch was pushed from the exact Workspace main base. GitHub reported

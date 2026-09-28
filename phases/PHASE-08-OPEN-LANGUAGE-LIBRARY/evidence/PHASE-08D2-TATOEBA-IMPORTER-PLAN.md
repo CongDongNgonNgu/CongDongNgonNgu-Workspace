@@ -21,13 +21,20 @@ TATOEBA_LICENSE_REGISTRY_RUNTIME_CHECK=MANDATORY_FAIL_CLOSED
 INITIAL_IMPORT_ATOMICITY=ONE_POSTGRES_TRANSACTION
 IMPORT_CONCURRENCY_CONTRACT=TRANSACTION_SCOPED_ADVISORY_LOCK_PLUS_GLOBAL_LOOKUP_RECONCILE_CREATE
 SENTENCE_SOURCE_IDENTITY=TATOEBA:SENTENCE:<id>
-DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<minId>:<maxId>
+UNORDERED_TRANSLATION_IDENTITY_RUN_ORDER_DEFECT=CONFIRMED
+INPUT_PAIR_IDENTITY=TATOEBA:PAIR:<minId>:<maxId>
+DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<sourceSentenceId>:<targetSentenceId>
+TRANSLATION_LOCK_IDENTITY=OPEN_DATASET:TATOEBA:LINK:DIRECT:<sourceId>:<targetId>
 TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
+AUTO_CREATE_REVERSE_TRANSLATION=NO
 IDEMPOTENT_RERUN_NOOP=YES
 VERIFIED_UNSAFE_RERUN_ACTION=INVALIDATE_TO_COMMUNITY_REVIEW_BEFORE_RECONCILE
 COMMUNITY_CONTRIBUTION_EVENT_EMITTED=NO
 AUTO_VERIFY_IMPORTED_RESOURCE=NO
 DRY_RUN_ZERO_WRITES=YES
+NEW_UNSAFE_CANDIDATE_DURABLE_RESOURCE=NO
+NEW_UNSAFE_CANDIDATE_ACTION=QUARANTINE_ZERO_WRITES
+PARTIAL_INITIAL_RESOURCE_AFTER_FAILURE=NO
 MIGRATION_REQUIRED=NO
 08D2_IMPLEMENTATION_DECISION=GO
 ~~~
@@ -392,57 +399,78 @@ the importer must not hide a text rewrite.
 
 The links export is the only initial relation input. The importer must not
 compute transitive translation closure and must not treat an indirect path as
-a direct pair. Reciprocal rows are collapsed before API verification.
+a direct pair. Reciprocal rows are collapsed before API verification, but the
+unordered pair is input deduplication only.
 
-The canonical unordered direct-pair identity is:
+The input pair identity is:
 
 ~~~
-TATOEBA:LINK:DIRECT:<minId>:<maxId>
+INPUT_PAIR_IDENTITY=TATOEBA:PAIR:<minId>:<maxId>
 ~~~
 
-minId and maxId are numeric ordering for identity/deduplication only. They do
-not determine linguistic direction. The configured source/target language
-pair determines which endpoint becomes source_text and which becomes
-translated_text.
+The durable Library translation identity is directional:
 
-The bounded verifier must:
+~~~
+DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<sourceSentenceId>:<targetSentenceId>
+~~~
+
+sourceSentenceId corresponds exactly to primaryLanguageCode/sourceText.
+targetSentenceId corresponds exactly to secondaryLanguageCode/translatedText.
+Numeric ordering is never used to assign linguistic direction.
+
+For each explicitly configured source/target project-language pair, the
+verifier must:
 
 1. parse both endpoint IDs;
-2. collapse reciprocal rows;
-3. require both endpoints to be present in the eligible sentence/API set;
-4. verify both current API records and their licenses/owners/status;
-5. require endpoint languages to match the configured source/target pair;
-6. quarantine any missing, stale, unsupported, or contradictory endpoint;
-7. lock and reconcile the canonical pair identity before creation.
+2. collapse reciprocal rows into one input pair;
+3. resolve both endpoint languages before constructing the durable identity;
+4. require exactly one endpoint to match the configured source language and
+   the other to match the configured target language;
+5. exclude same-language, ambiguous, unsupported, or unknown-language pairs;
+6. verify both current API records and their licenses/owners/status;
+7. assign source_text and translated_text from the configured direction;
+8. quarantine any missing, stale, unsupported, or contradictory endpoint;
+9. lock and reconcile the directed durable identity before creation.
 
-A pair found under a conflicting configured direction must not silently
-rewrite an existing translation. It is a direction-conflict quarantine
-unless the implementation explicitly proves that the existing resource
-represents the same configured direction.
+Reversing the input row order must produce the same directed candidate when
+the configured language pair is unchanged. A vi -> en run creates only the
+vi -> en resource. It must not implicitly create en -> vi:
+
+~~~
+AUTO_CREATE_REVERSE_TRANSLATION=NO
+~~~
+
+An explicitly configured en -> vi run evaluates the same unordered input pair
+under the reverse directed identity. The reverse resource is distinct and is
+not a conflict merely because the opposite direction already exists.
 
 ### Two-license storage model
 
 The existing provenance table requires one license key per provenance row.
 The importer must not invent a combined license for a two-sentence relation.
-Each translation resource therefore receives two provenance entries:
+Each directional translation resource therefore receives two provenance
+entries:
 
 ~~~
 TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
 ~~~
 
-The entries use role-qualified deterministic IDs so that both actual licenses
-remain first-class facts:
+The entries derive from the directed relation identity:
 
-- TATOEBA:LINK:DIRECT:<minId>:<maxId>:SOURCE
-- TATOEBA:LINK:DIRECT:<minId>:<maxId>:TARGET
+- TATOEBA:LINK:DIRECT:<sourceId>:<targetId>:SOURCE
+- TATOEBA:LINK:DIRECT:<sourceId>:<targetId>:TARGET
 
-Each entry stores the endpoint's own source URL, actual license key, owner
-reference when known/required, attribution, batch, and transformation
-metadata. Both entries contain the canonical base relation identity,
-endpoint sentence ID, endpoint role, and the configured language direction.
-The durable relation identity and advisory-lock key remain the exact
-unordered TATOEBA:LINK:DIRECT:<minId>:<maxId> value. Role suffixes are
-storage identities only and are not linguistic direction.
+The SOURCE entry stores the actual source sentence URL, license, owner when
+known/required, attribution, and transformation metadata including
+endpointSentenceId=<sourceId> and endpointRole=SOURCE.
+
+The TARGET entry stores the actual target sentence URL, license, owner when
+known/required, attribution, and transformation metadata including
+endpointSentenceId=<targetId> and endpointRole=TARGET.
+
+Both entries also retain the directed relation identity, input pair identity,
+configured source/target languages, snapshot/API timestamps, and batch.
+Neither endpoint license is collapsed into a synthetic combined license.
 
 ## 9. Concurrency and idempotency
 
@@ -457,17 +485,18 @@ The selected contract is:
 IMPORT_CONCURRENCY_CONTRACT=TRANSACTION_SCOPED_ADVISORY_LOCK_PLUS_GLOBAL_LOOKUP_RECONCILE_CREATE
 ~~~
 
-For every sentence or direct relation:
+For every sentence or directed direct relation:
 
-1. derive one canonical external identity;
+1. derive the exact durable external identity;
 2. begin a PostgreSQL transaction;
 3. acquire a transaction-scoped advisory lock derived from that identity;
-4. query all resources/provenance globally for the canonical identity and,
-   for a translation, both role-qualified endpoint entries;
-5. lock an existing resource row for update when one is found;
-6. re-read current state and facts inside the lock;
-7. perform CREATE, NOOP, RECONCILE, INVALIDATE, or quarantine decision;
-8. commit or roll back the complete operation.
+4. query exact indexable OPEN_DATASET provenance source IDs globally;
+5. for a translation, require resource_type=TRANSLATION and both directed
+   role-qualified entries on the same resource;
+6. lock an existing resource row for update when one is found;
+7. re-read current state and facts inside the lock;
+8. perform CREATE, NOOP, RECONCILE, INVALIDATE, or quarantine decision;
+9. commit or roll back the complete operation.
 
 Sentence lock identity:
 
@@ -482,18 +511,39 @@ canonical lock namespace.
 Direct-link lock identity:
 
 ~~~
-OPEN_DATASET:TATOEBA:LINK:DIRECT:<minId>:<maxId>
+TRANSLATION_LOCK_IDENTITY=OPEN_DATASET:TATOEBA:LINK:DIRECT:<sourceId>:<targetId>
 ~~~
 
 The implementation may reuse the project's existing PostgreSQL advisory-lock
-pattern, including a stable hash of the canonical identity, but must test
-that the hash input is the exact canonical identity and that the lock is
-held until commit/rollback. It must not rely on a Node process mutex.
+pattern, including a stable hash of the exact directed identity, but must
+test that the hash input is the exact directed identity and that the lock is
+held until commit/rollback. A vi -> en identity and an en -> vi identity may
+therefore proceed as separate resources, while concurrent runs for the same
+directed identity serialize. It must not rely on a Node process mutex.
+
+The translation global lookup must not depend on transformation_history JSON
+as the correctness boundary. After the directed lock is acquired, locate:
+
+- TATOEBA:LINK:DIRECT:<sourceId>:<targetId>:SOURCE
+- TATOEBA:LINK:DIRECT:<sourceId>:<targetId>:TARGET
+
+using source_type=OPEN_DATASET and source_id. The required outcomes are:
+
+- neither role exists: create the candidate;
+- both roles exist on the same TRANSLATION resource: existing resource;
+- only one role exists, or roles resolve to different resources:
+  INTEGRITY_CONFLICT, quarantine, and stop that candidate;
+- roles exist on a non-TRANSLATION resource: INTEGRITY_CONFLICT, quarantine,
+  and stop that candidate.
+
+The importer must not silently repair an ambiguous duplicate identity during
+initial implementation.
 
 ### Unchanged rerun
 
-When source ID, text, language, license, owner/attribution facts, status,
-relation endpoints, and applicable snapshot/API contract facts are unchanged:
+When source ID, directed relation identity, text, language, license,
+owner/attribution facts, status, relation endpoints, and applicable
+snapshot/API contract facts are unchanged:
 
 ~~~
 IDEMPOTENT_RERUN_NOOP=YES
@@ -507,7 +557,9 @@ contribution event, and must not churn updated_at.
 The reconciliation rules are:
 
 - DRAFT: safe current facts may reconcile under the identity lock; keep
-  DRAFT until the normal submit step is complete.
+  DRAFT until the normal submit step is complete. A pre-existing importer-
+  owned DRAFT is different from a new unsafe candidate; it may be submitted
+  only after all facts are valid and the dedicated submit audit completes.
 - COMMUNITY_REVIEW: safe facts may reconcile under the identity lock while
   preserving review history; incomplete facts remain quarantined/DRAFT.
 - VERIFIED: any material source change, including text, license, owner,
@@ -533,33 +585,51 @@ remain hidden until a human reviewer verifies them.
 
 ## 10. Atomic transaction design
 
-Initial accepted sentence and translation operations use one importer-specific
-PostgreSQL transaction:
+For a NEW external identity, an incomplete or unsafe license, owner/status,
+language, text, provenance, API-evidence, or endpoint fact produces no
+durable Library write:
 
-1. validate the explicit ADMIN actor and run-level limits before writes;
-2. complete the read-only license-registry preflight;
-3. acquire the canonical identity advisory lock;
-4. perform global external-identity lookup;
-5. insert the resource and type row as DRAFT, with PUBLIC visibility
+~~~
+NEW_UNSAFE_CANDIDATE_DURABLE_RESOURCE=NO
+NEW_UNSAFE_CANDIDATE_ACTION=QUARANTINE_ZERO_WRITES
+~~~
+
+The candidate exists only in the bounded run report/quarantine result. Do not
+create a DRAFT merely to represent a new unsafe row. A pre-existing
+importer-owned DRAFT is handled separately by the reconciliation rules.
+
+For a NEW eligible candidate, the importer-specific transaction is:
+
+1. BEGIN;
+2. acquire the exact sentence or directed-translation advisory lock;
+3. perform global exact identity lookup;
+4. validate the explicit ACTIVE ADMIN actor;
+5. validate current license registry rows;
+6. insert the Library resource and type row as DRAFT, with PUBLIC visibility
    explicitly set so the existing public projection still hides it;
-6. attach all complete OPEN_DATASET provenance entries;
-7. validate every referenced current license row again in the transaction;
-8. insert a library_resource_review_audits row with action SUBMIT,
+7. insert complete OPEN_DATASET provenance;
+8. insert the library_resource_review_audits row with action SUBMIT,
    previous state DRAFT, new state COMMUNITY_REVIEW, and the explicit ADMIN
    actor;
-9. transition the resource to COMMUNITY_REVIEW;
-10. hydrate and commit.
+9. transition DRAFT to COMMUNITY_REVIEW;
+10. hydrate and COMMIT.
+
+Read-only run-level actor/license preflight may fail before BEGIN, but the
+transaction repeats the required validations after the identity lock and
+before any insert.
 
 ~~~
 INITIAL_IMPORT_ATOMICITY=ONE_POSTGRES_TRANSACTION
+PARTIAL_INITIAL_RESOURCE_AFTER_FAILURE=NO
 ~~~
 
-There is no composition of existing createResource(), mergeProvenance(),
-and generic submitContribution() calls across separate transactions. Those
+There is no composition of existing createResource(), mergeProvenance(), and
+generic submitContribution() calls across separate transactions. Those
 generic calls are not the importer contract. Any failure rolls back the
-initial resource, detail row, provenance rows, audit, and state change.
-Batch processing may use one bounded transaction per accepted resource or
-relation; a whole-corpus transaction is forbidden.
+initial resource, detail row, provenance rows, audit, and state change, with
+no partial initial resource remaining. Batch processing may use one bounded
+transaction per accepted resource or relation; a whole-corpus transaction is
+forbidden.
 
 For an already VERIFIED resource with changed facts, the committed
 invalidation transaction described above is the safety boundary. The
@@ -580,8 +650,12 @@ COMMUNITY_REVIEW is the state reached after the normal review boundary. It
 does not mean direct insertion into the queue without an audit. The importer
 must create as DRAFT, attach complete validated provenance and license facts,
 write the SUBMIT audit, then move to COMMUNITY_REVIEW. If any required fact
-is incomplete, the row remains DRAFT or is rejected/quarantined. Nothing
-reaches VERIFIED automatically and no reviewer audit is bypassed.
+for a NEW external identity is incomplete or unsafe, the importer performs
+zero durable Library writes and records QUARANTINE_ZERO_WRITES. An existing
+importer-owned DRAFT may remain DRAFT while safe reconciliation is performed;
+it may not receive a SUBMIT audit or move to COMMUNITY_REVIEW until all facts
+are valid and the dedicated submit transaction completes. Nothing reaches
+VERIFIED automatically and no reviewer audit is bypassed.
 
 Imported Tatoeba membership is source trust, not CongDongNgonNgu
 verification. No automatic quality score, tag, or Tatoeba approval is
@@ -635,6 +709,8 @@ TATOEBA_MALFORMED_BULK_ROW
 TATOEBA_DUPLICATE_BULK_ID
 TATOEBA_TRANSLATION_ENDPOINT_MISSING
 TATOEBA_TRANSLATION_DIRECTION_CONFLICT
+TATOEBA_TRANSLATION_INTEGRITY_CONFLICT
+TATOEBA_NEW_UNSAFE_ZERO_WRITE
 TATOEBA_LICENSE_REGISTRY_MISMATCH
 ~~~
 
@@ -699,9 +775,14 @@ Implement and test:
 - retry, timeout, 429, selected 5xx, 404, PROBLEM, and malformed JSON;
 - HTTPS host/redirect/response-size safety;
 - snapshot/API mismatch classification;
-- direct-link reciprocal collapse, endpoint eligibility, and direction;
-- deterministic batch/source/relation identities;
+- direct-link reciprocal collapse for input pairs only;
+- deterministic directed translation identity;
+- explicit configured language directions and no implicit reverse resource;
+- input-order-independent candidate identity;
 - dry-run report with an automated zero-write assertion.
+
+08D3A must not implement the advisory database transaction, global durable
+lookup, or Library writes.
 
 ### 08D3B - atomic sentence import, actor, license, and idempotency
 
@@ -715,15 +796,20 @@ Implement and test:
 - sentence advisory lock and global lookup;
 - concurrent same-sentence create/reconcile;
 - unchanged rerun NOOP with no audit/provenance/update churn;
-- rollback with zero partial rows.
+- rollback with zero partial rows;
+- new unsafe candidate zero-write behavior.
 
 ### 08D3C - direct translation and reconciliation
 
 Implement and test:
 
-- canonical unordered link identity and configured linguistic direction;
+- unordered input-pair deduplication plus directed durable identity;
+- directed translation advisory lock and exact role-qualified global lookup;
 - two endpoint provenance entries with two actual license keys;
 - reciprocal input deduplication and no transitive closure;
+- source/target content assignment independent of input row order;
+- explicit reverse-direction identity and no implicit reverse creation;
+- incomplete role lookup integrity conflict quarantine;
 - missing/changed/unapproved/deleted endpoint handling;
 - DRAFT/COMMUNITY_REVIEW reconciliation;
 - VERIFIED invalidation-before-reconcile;
@@ -738,6 +824,10 @@ Only after the preceding slices are accepted:
 - prove two concurrent same-source runs produce one durable resource;
 - prove a rerun is a NOOP;
 - prove transaction failure leaves no partial resource/provenance/audit;
+- prove new unsafe candidates produce zero durable Library writes;
+- prove reciprocal input order cannot change the directed identity;
+- prove explicitly configured reverse direction has a distinct identity;
+- prove both directions configured do not collide;
 - prove unsafe VERIFIED material is hidden before reconciliation;
 - prove both translation licenses and attributions are retained;
 - run cleanup only for test fixtures;
@@ -777,14 +867,75 @@ MIGRATION_0012_CREATED=NO
 TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
+UNORDERED_TRANSLATION_IDENTITY_RUN_ORDER_DEFECT=CONFIRMED
+INPUT_PAIR_IDENTITY=TATOEBA:PAIR:<minId>:<maxId>
+DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<sourceSentenceId>:<targetSentenceId>
+TRANSLATION_LOCK_IDENTITY=OPEN_DATASET:TATOEBA:LINK:DIRECT:<sourceId>:<targetId>
+TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
+AUTO_CREATE_REVERSE_TRANSLATION=NO
+NEW_UNSAFE_CANDIDATE_DURABLE_RESOURCE=NO
+NEW_UNSAFE_CANDIDATE_ACTION=QUARANTINE_ZERO_WRITES
+PARTIAL_INITIAL_RESOURCE_AFTER_FAILURE=NO
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
 LNG_08_006=VERIFYING
 LNG_08_007=PLANNED
 LNG_08_008=PLANNED
-NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3A
+NEXT_ACTION=STOP_FOR_08D3A_IMPLEMENTATION
 ~~~
 
 08D2 does not mark LNG-08-006 DONE or READY, does not start LNG-08-007,
-and does not authorize importer implementation before external review of
-this plan.
+and does not authorize importer implementation beyond the separately gated
+08D3A slice.
+
+## 18. External-review remediation
+
+The external review finding is confirmed:
+
+~~~
+08D2_EXTERNAL_REVIEW_REMEDIATION=PASS
+UNORDERED_TRANSLATION_IDENTITY_RUN_ORDER_DEFECT=CONFIRMED
+~~~
+
+The original unordered durable identity was not deterministic for the
+directional Library TRANSLATION model. It is now superseded by:
+
+~~~
+INPUT_PAIR_IDENTITY=TATOEBA:PAIR:<minId>:<maxId>
+DURABLE_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<sourceId>:<targetId>
+TRANSLATION_LOCK_IDENTITY=OPEN_DATASET:TATOEBA:LINK:DIRECT:<sourceId>:<targetId>
+TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
+AUTO_CREATE_REVERSE_TRANSLATION=NO
+~~~
+
+The input pair identity is used only to collapse reciprocal links. The
+directed identity is built after endpoint language resolution and maps exactly
+to primaryLanguageCode/sourceText and secondaryLanguageCode/translatedText.
+Reverse direction is independently configurable and independently durable.
+Exact role-qualified OPEN_DATASET source IDs are the global lookup boundary;
+transformation_history is explanatory metadata, not the idempotency key.
+
+The remediation acceptance matrix is:
+
+~~~
+TRANSLATION_IDENTITY_INPUT_ORDER_INDEPENDENT=PASS
+REVERSE_DIRECTION_DISTINCT_IDENTITY=PASS
+BIDIRECTIONAL_CONFIGURATION_COLLISION=NO
+NEW_UNSAFE_CANDIDATE_DURABLE_RESOURCE=NO
+NEW_UNSAFE_CANDIDATE_ACTION=QUARANTINE_ZERO_WRITES
+PARTIAL_INITIAL_RESOURCE_AFTER_FAILURE=NO
+~~~
+
+The pre-existing DRAFT exception remains narrow: only an importer-owned
+durable DRAFT may be safely reconciled under its identity lock. A NEW
+candidate with incomplete/unsafe required facts is report-only quarantine
+with zero Library writes. The new directed transaction and integrity tests
+remain in 08D3B/08D3C; 08D3A remains parser/API/dry-run only.
+
+## 19. Historical 08D2 baseline retained
+
+The initial 08D2 plan used
+TATOEBA:LINK:DIRECT:<minId>:<maxId> as the durable translation identity and
+used the same unordered identity for its direct-link lock and role-qualified
+provenance IDs. That baseline is retained here as historical context for the
+external review finding. It is superseded and must not be implemented.
