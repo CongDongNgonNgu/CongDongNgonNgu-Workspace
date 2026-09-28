@@ -234,3 +234,83 @@ NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3B2
 08D3B2 remains out of scope. It must separately review the first resource
 write transaction, advisory creation lock, idempotency/reconciliation,
 provenance writes, SUBMIT audit, and DRAFT-to-COMMUNITY_REVIEW transition.
+
+## 08D3B1 external review remediation: hardened TEST target identity
+
+Remediation verified: 2026-09-28 (Asia/Saigon). The original
+database-name-only target proof defect is confirmed: a TEST and production
+connection can share a database name. The implementation now requires all
+three independent target assertions before actor or license reads:
+
+```text
+DATABASE_NAME_ONLY_TARGET_PROOF_DEFECT=CONFIRMED
+DATABASE_HOST_TARGET_CHECK=MANDATORY
+DATABASE_NAME_TARGET_CHECK=MANDATORY
+DATABASE_USER_TARGET_CHECK=MANDATORY
+TEST_LABEL_ONLY_AUTHORIZATION=NO
+```
+
+The CLI still accepts only `--environment TEST` and an explicit actor UUID,
+but the environment label is not target proof. Before creating a PostgreSQL
+pool it requires the dedicated `TATOEBA_IMPORT_DATABASE_URL`, parses it with
+the URL API, requires an exact normalized hostname match against
+`TATOEBA_IMPORT_EXPECTED_DATABASE_HOST`, and requires explicit
+`TATOEBA_IMPORT_EXPECTED_DATABASE_NAME` and
+`TATOEBA_IMPORT_EXPECTED_DATABASE_USER` values. The expected database user is
+never inferred from the URL username. After connection, a `BEGIN READ ONLY`
+transaction checks `current_database()`, `current_user`, and `version()`;
+database-name or database-user mismatch rolls back before actor/license
+queries.
+
+Remote TEST targets fail closed unless the URL explicitly requests encrypted
+transport with `sslmode=require`, `verify-ca`, or `verify-full`. Explicit
+`disable`, `allow`, `prefer`, or an absent remote SSL mode is rejected. The
+Pool receives encryption settings without adding certificate material:
+`require` enables TLS and `verify-ca`/`verify-full` require certificate
+verification. URL credentials, query secrets, and raw connection errors are
+not included in CLI errors or normal PASS JSON.
+
+```text
+08D3B1_EXTERNAL_REVIEW_REMEDIATION=PASS
+PRE_NETWORK_TARGET_TESTS=PASS
+CONNECTED_TARGET_TESTS=PASS
+SAME_DB_NAME_CROSS_ENV_PROTECTION=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DB_TRANSACTION_MODE=READ_ONLY
+PREFLIGHT_DATABASE_READS=YES
+PREFLIGHT_DATABASE_WRITES=0
+PRODUCTION_PREFLIGHT_SUPPORTED=NO
+IMPORT_ACTOR_CONTRACT=EXPLICIT_ADMIN_CLI_ACTOR
+IMPORT_ACTOR_USER_ID_DISCOVERY=NONE
+AUTO_REGISTER_LICENSES=NO
+```
+
+Focused preflight verification now passes 5 suites / 40 tests. The complete
+Backend run passes 54 suites / 380 tests; Backend e2e passes 13 suites / 58
+tests. Typecheck, lint, build, `npm audit --audit-level=high` (0
+vulnerabilities), and `git diff --check` pass. The accepted Backend branch is
+now:
+
+```text
+BACKEND_BRANCH=phase-08d3b1-tatoeba-readonly-preflight
+BACKEND_SHA=4fbb7f2cddaeb8baf7d6ab90d82e02565e0ce59d
+```
+
+No authorized TEST runtime was attempted; the dedicated URL, expected host,
+expected database name/user, and explicit actor ID were not supplied as a
+complete approved set. Therefore:
+
+```text
+TEST_RUNTIME_PREFLIGHT=BLOCKED_INPUT
+ACTOR_RUNTIME_PREFLIGHT=NOT_RUN
+CC_BY_RUNTIME_PREFLIGHT=NOT_RUN
+CC0_RUNTIME_PREFLIGHT=NOT_RUN
+DATABASE_CONNECTED_FOR_08D3A=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+```
+
+No migration, license registration/update, resource write, production
+connection, deployment, dataset download, or live Tatoeba API call occurred.
+The next boundary remains 08D3B2, gated by final external review.

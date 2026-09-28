@@ -1522,3 +1522,74 @@ The Workspace state remains unchanged: `CURRENT_PHASE=08`,
 review audit, migration, dataset, production connection, or deployment was
 created. `NEXT_SLICE=08D3B2` and
 `NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3B2`.
+
+## Phase 08D3B1 external review remediation — TEST target identity
+
+The 08D3B1 target-identity review is closed as an implementation pass. The
+previous database-name-only proof defect is confirmed and is no longer the
+accepted target contract. The CLI now requires an exact normalized URL host,
+an explicit expected database name, and an explicit expected database user in
+addition to the exact `TEST` environment flag. It parses the dedicated
+`TATOEBA_IMPORT_DATABASE_URL` with the URL API before creating a Pool and
+never infers the expected database user from URL credentials.
+
+```text
+08D3B1_EXTERNAL_REVIEW_REMEDIATION=PASS
+DATABASE_NAME_ONLY_TARGET_PROOF_DEFECT=CONFIRMED
+DATABASE_HOST_TARGET_CHECK=MANDATORY
+DATABASE_NAME_TARGET_CHECK=MANDATORY
+DATABASE_USER_TARGET_CHECK=MANDATORY
+TEST_LABEL_ONLY_AUTHORIZATION=NO
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+DATABASE_URL_SECRET_LEAK=NO
+```
+
+Target verification order is fixed: parse CLI and validate actor UUID;
+require and parse the dedicated URL; require and compare expected host;
+require expected database name/user; create the Pool; begin `READ ONLY`, set
+the bounded local statement timeout, select `current_database()`,
+`current_user`, and `version()`; compare database name/user; only then read
+actor and license facts. Any target mismatch rolls back before actor/license
+queries. Remote targets require explicit encrypted `sslmode=require`,
+`verify-ca`, or `verify-full`; insecure, ambiguous, or absent remote SSL mode
+fails closed. No hostname is included in the normal PASS JSON, and no URL,
+password, raw pg options, or raw connection error is emitted.
+
+```text
+PRE_NETWORK_TARGET_TESTS=PASS
+CONNECTED_TARGET_TESTS=PASS
+SAME_DB_NAME_CROSS_ENV_PROTECTION=PASS
+DB_TRANSACTION_MODE=READ_ONLY
+PREFLIGHT_DATABASE_READS=YES
+PREFLIGHT_DATABASE_WRITES=0
+IMPORT_ACTOR_CONTRACT=EXPLICIT_ADMIN_CLI_ACTOR
+IMPORT_ACTOR_USER_ID_DISCOVERY=NONE
+AUTO_REGISTER_LICENSES=NO
+BACKEND_SHA=4fbb7f2cddaeb8baf7d6ab90d82e02565e0ce59d
+```
+
+Verification on the hardened branch: focused preflight 5 suites / 40 tests
+PASS; Backend 54 suites / 380 tests PASS; Backend e2e 13 suites / 58 tests
+PASS; typecheck PASS; lint PASS; build PASS; audit PASS (0 vulnerabilities);
+git diff --check PASS. No authorized TEST runtime was attempted because the
+dedicated URL, expected host/name/user, and explicit actor UUID were not
+available as a complete approved input set:
+
+```text
+TEST_RUNTIME_PREFLIGHT=BLOCKED_INPUT
+ACTOR_RUNTIME_PREFLIGHT=NOT_RUN
+CC_BY_RUNTIME_PREFLIGHT=NOT_RUN
+CC0_RUNTIME_PREFLIGHT=NOT_RUN
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+```
+
+The existing 08D3A dry-run CLI remains DB-free and dry-run-only. No migration,
+license registry mutation, resource/provenance/review write, production
+access, deployment, dataset download, or live Tatoeba API call occurred.
+`CURRENT_PHASE=08`, `PHASE_08=IN_PROGRESS`, `LNG_08_006=VERIFYING`,
+`LNG_08_007=PLANNED`, and `LNG_08_008=PLANNED` remain unchanged.
+
+```text
+NEXT_ACTION=STOP_FOR_FINAL_EXTERNAL_REVIEW_BEFORE_08D3B2
+```
