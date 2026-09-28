@@ -1776,3 +1776,79 @@ LNG_08_006=VERIFYING
 08D3B2_AUTHORIZED=NO
 NEXT_ACTION=RETRY_08D3B1_TEST_RUNTIME_PREFLIGHT
 ```
+
+## Phase 08D3B1 TEST runtime preflight retry
+
+The real Phase 08D3B1 preflight passed on 2026-09-28 against the
+owner-approved TEST database. The existing Backend `DATABASE_URL` was passed
+to the process as the dedicated preflight URL without recording its value.
+Parsed host, database name, database user, and connected PostgreSQL identity
+matched exactly; remote transport remained encrypted.
+
+```text
+PHASE_08D3B1_TEST_RUNTIME_PREFLIGHT_RETRY=PASS
+ENVIRONMENT=TEST
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_HOST_TARGET_CHECK=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+TEST_LABEL_ONLY_AUTHORIZATION=NO
+DB_CONNECTION_RESULT=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+```
+
+The explicit CLI actor was verified as the active ADMIN actor. Required
+license rows `CC_BY_2_0_FR` and `CC0_1_0` were read and matched their exact
+contracts. No actor discovery, license registration, or repair occurred.
+
+```text
+ACTOR_RUNTIME_PREFLIGHT=PASS
+ACTOR_USER_ID_SOURCE=EXPLICIT_CLI
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+TEST_ADMIN_ACTOR_ROLE=ADMIN
+TEST_ADMIN_ACTOR_STATUS=ACTIVE
+IMPORT_ACTOR_USER_ID_DISCOVERY=NONE
+CC_BY_RUNTIME_PREFLIGHT=PASS
+CC0_RUNTIME_PREFLIGHT=PASS
+REQUIRED_LICENSE_CC_BY_KEY=CC_BY_2_0_FR
+REQUIRED_LICENSE_CC0_KEY=CC0_1_0
+AUTO_REGISTER_LICENSES=NO
+```
+
+The transaction was READ ONLY: reads occurred, writes were zero, and the
+TEST database was not mutated by this runtime preflight. No URL, password,
+raw connection string, or raw database error was emitted; no Tatoeba network
+call or import was performed.
+
+```text
+DB_TRANSACTION_MODE=READ_ONLY
+PREFLIGHT_DATABASE_READS=YES
+PREFLIGHT_DATABASE_WRITES=0
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+AUTOMATED_LIVE_TATOEBA_CALLS=0
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+```
+
+Focused preflight/security verification passed 6 suites / 49 tests. Backend
+code, Frontend, migrations, production, deployment, and the 08D3A dry-run
+boundary remain unchanged. `LNG_08_006` is now `PASS`; 08D3B2 remains
+unauthorized.
+
+```text
+FOCUSED_TESTS=6 suites / 49 tests PASS
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_0012_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+08D3B2_AUTHORIZED=NO
+NEXT_ACTION=READY_FOR_08D3B2_AUTHORIZATION
+```
