@@ -312,3 +312,16 @@ background refreshes preserve stale detail and expose `Tải lại chi tiết`; 
 initial failure still renders ErrorState; and navigation from resource A to B
 does not flash A as B. No implementation capture needed replacement because
 the refresh-state change does not alter the rendered visual design.
+
+## Owner visual acceptance for Phase 08C
+
+```text
+OWNER_VISUAL_ACCEPTANCE_08C=YES
+OWNER_VISUAL_ACCEPTANCE_DATE=2026-09-28
+ACCEPTED_FRONTEND_SHA=cfe55763318ac47ac8bc6047aa747c0f353bafcb
+ACCEPTED_BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
+ACCEPTED_VISUALS=pending reviewer queue; reviewer detail desktop; reviewer detail mobile; source-invalid view; Reject action dialog; source reconciliation dialog
+STITCH_EVIDENCE_PRESERVED=YES
+IMPLEMENTATION_SCREENSHOT_EVIDENCE_PRESERVED=YES
+LNG_08_005=VERIFYING
+```

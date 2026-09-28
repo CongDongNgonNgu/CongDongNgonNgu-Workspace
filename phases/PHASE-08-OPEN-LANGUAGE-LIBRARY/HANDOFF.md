@@ -829,3 +829,23 @@ NEXT_ACTION=STOP_FOR_FINAL_EXTERNAL_AND_OWNER_VISUAL_REVIEW
 Previous remediation history and the accepted Backend/runtime evidence remain
 unchanged. No Frontend visual redesign, Backend change, Neon access, migration,
 deployment, or owner acceptance occurred in this remediation.
+
+## Phase 08C owner visual acceptance
+
+The owner explicitly accepted the Phase 08C reviewer experience on
+`2026-09-28`. This acceptance covers the pending reviewer queue, reviewer
+detail desktop, reviewer detail mobile, source-invalid view, Reject action
+dialog, and source reconciliation dialog. The canonical Stitch references
+and implementation screenshot evidence remain preserved in the Phase 08C2
+evidence directory.
+
+```text
+OWNER_VISUAL_ACCEPTANCE_08C=YES
+OWNER_VISUAL_ACCEPTANCE_DATE=2026-09-28
+ACCEPTED_FRONTEND_SHA=cfe55763318ac47ac8bc6047aa747c0f353bafcb
+ACCEPTED_BACKEND_SHA=86c51f7b08a989db415e7c11361686fdf2379455
+ACCEPTED_VISUALS=pending reviewer queue; reviewer detail desktop; reviewer detail mobile; source-invalid view; Reject action dialog; source reconciliation dialog
+STITCH_EVIDENCE_PRESERVED=YES
+IMPLEMENTATION_SCREENSHOT_EVIDENCE_PRESERVED=YES
+LNG_08_005=VERIFYING
+```
