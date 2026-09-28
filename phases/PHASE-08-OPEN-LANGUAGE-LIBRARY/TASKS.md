@@ -35,7 +35,7 @@ Allow users to contribute sentence, translation, vocabulary/definition/usage not
 Create reviewer queue, approve/reject/request-change if needed, evidence/notes and conflict handling. Prevent submitter from unilaterally verifying their own item unless explicit role/policy later permits with separate audit. Moderated/deleted sources can invalidate/promote review state appropriately.
 
 ## LNG-08-006 — Tatoeba Adapter
-**Status:** VERIFYING
+**Status:** PASS
 **Depends on:** LNG-08-001, LNG-08-002
 
 Before code, re-check current Tatoeba download/license/attribution requirements from authoritative source. If compatible, implement bounded importer preserving source IDs, languages, sentence/translation relationships, attribution/license and import batch; validate encoding and deduplicate idempotently. If current terms are incompatible/unclear, mark BLOCKED_EXTERNAL and do not ingest.
