@@ -774,3 +774,58 @@ and the internal Request Changes lifecycle copy was replaced with neutral
 review guidance without adding a Request Changes action. Affected implementation
 captures were regenerated for detail desktop/mobile, Reject, Reconcile, and
 source-invalid states. Owner visual acceptance remains pending.
+
+## Phase 08C2 external review remediation #2
+
+`EXTERNAL_REVIEW_REMEDIATION_2=PASS` is recorded on the existing reviewer UI
+branch. This remediation preserves the mounted detail during same-resource
+background GET refreshes while retaining the action/conflict/source-still-valid
+notice and intentional status focus. Initial load failure remains ErrorState;
+background refresh failure preserves stale detail and provides `Tải lại chi
+tiết`; changing the route resource ID clears the old detail before the new
+Skeleton/load cycle.
+
+```text
+FRONTEND_REMEDIATION_2_COMMIT=cfe5576
+PAGE_BACKGROUND_REFRESH_TEST=PASS
+PAGE_CONFLICT_REFRESH_TEST=PASS
+PAGE_SOURCE_STILL_VALID_REFRESH_TEST=PASS
+PAGE_REFRESH_FAILURE_TEST=PASS
+RESOURCE_ID_CHANGE_RESETS_DETAIL=PASS
+ACTION_NOTICE_SURVIVES_REFRESH=PASS
+VERIFY_SUCCESS_FOCUS=PASS
+REJECT_SUCCESS_FOCUS=PASS
+RECONCILE_SUCCESS_FOCUS=PASS
+REVIEW_CONFLICT_NOTICE_SURVIVES_REFRESH=PASS
+REVIEW_CONFLICT_MUTATION_RETRY=NO
+SOURCE_STILL_VALID_NOTICE_SURVIVES_REFRESH=PASS
+BACKGROUND_REFRESH_PRESERVES_DETAIL=PASS
+BACKGROUND_REFRESH_FAILURE_PRESERVES_DETAIL=PASS
+BACKGROUND_REFRESH_RETRY_AVAILABLE=PASS
+INITIAL_LOAD_SKELETON=PASS
+INITIAL_LOAD_FAILURE=PASS
+FOCUSED_REVIEW_TESTS=PASS (5 files, 26 tests)
+FRONTEND_TESTS=PASS (47 files, 225 tests)
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 vulnerabilities at --audit-level=high)
+GIT_DIFF_CHECK=PASS
+ACCESSIBILITY=100
+BACKEND_INTEGRATION_SMOKE=BLOCKED (accepted Backend not started locally; Neon TEST out of scope)
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING
+NEXT_ACTION=STOP_FOR_FINAL_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+```
+
+Previous remediation history and the accepted Backend/runtime evidence remain
+unchanged. No Frontend visual redesign, Backend change, Neon access, migration,
+deployment, or owner acceptance occurred in this remediation.

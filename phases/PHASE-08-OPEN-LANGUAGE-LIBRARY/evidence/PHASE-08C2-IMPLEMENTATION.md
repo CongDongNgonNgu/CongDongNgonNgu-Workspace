@@ -239,3 +239,76 @@ reviewer detail desktop/mobile, Reject, Reconcile, and source-invalid states;
 the live browser capture confirmed the updated attribution row and reviewer
 guidance copy. The accepted responsive/Lighthouse evidence remains the visual
 quality baseline because the remediation did not redesign the layout.
+
+## Phase 08C2 external review remediation #2
+
+The second external-review remediation keeps an already-rendered reviewer
+detail mounted while a same-resource action refresh is in flight. Initial
+loads still use the page Skeleton, while resource-ID changes clear the old
+detail and start a new initial load. A stale response cannot replace a newer
+resource because the hook retains request-id protection and the page verifies
+that returned detail belongs to the current route resource.
+
+```text
+EXTERNAL_REVIEW_REMEDIATION_2=PASS
+FRONTEND_REMEDIATION_2_COMMIT=cfe5576
+INITIAL_LOAD_SKELETON=PASS
+INITIAL_LOAD_FAILURE=PASS
+BACKGROUND_REFRESH_PRESERVES_DETAIL=PASS
+ACTION_NOTICE_SURVIVES_REFRESH=PASS
+VERIFY_SUCCESS_FOCUS=PASS
+REJECT_SUCCESS_FOCUS=PASS
+RECONCILE_SUCCESS_FOCUS=PASS
+REVIEW_CONFLICT_NOTICE_SURVIVES_REFRESH=PASS
+REVIEW_CONFLICT_MUTATION_RETRY=NO
+SOURCE_STILL_VALID_NOTICE_SURVIVES_REFRESH=PASS
+BACKGROUND_REFRESH_FAILURE_PRESERVES_DETAIL=PASS
+BACKGROUND_REFRESH_RETRY_AVAILABLE=PASS
+RESOURCE_ID_CHANGE_RESETS_DETAIL=PASS
+PAGE_BACKGROUND_REFRESH_TEST=PASS
+PAGE_CONFLICT_REFRESH_TEST=PASS
+PAGE_SOURCE_STILL_VALID_REFRESH_TEST=PASS
+PAGE_REFRESH_FAILURE_TEST=PASS
+VERIFY_DIALOG_FOCUS_RESTORE=PASS
+REJECT_DIALOG_FOCUS_RESTORE=PASS
+RECONCILE_DIALOG_FOCUS_RESTORE=PASS
+LICENSE_ATTRIBUTION_REQUIRED_UI=PASS
+REVIEW_TYPES_BACKEND_ALIGNED=PASS
+PRIVATE_FIELD_RENDERING=NONE
+FOCUSED_REVIEW_TESTS=PASS (5 files, 26 tests)
+FRONTEND_TESTS=PASS (47 files, 225 tests)
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 vulnerabilities at --audit-level=high)
+GIT_DIFF_CHECK=PASS
+ACCESSIBILITY=100 (accepted Lighthouse evidence retained; page-level background-refresh and focus tests pass)
+BACKEND_INTEGRATION_SMOKE=BLOCKED (accepted Backend not started locally; Neon TEST out of scope)
+RESPONSIVE_320=PASS
+RESPONSIVE_375=PASS
+RESPONSIVE_390=PASS
+RESPONSIVE_412=PASS
+RESPONSIVE_768=PASS
+RESPONSIVE_1024=PASS
+RESPONSIVE_1440=PASS
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_005=VERIFYING
+OWNER_VISUAL_ACCEPTANCE_08C=PENDING
+NEXT_ACTION=STOP_FOR_FINAL_EXTERNAL_AND_OWNER_VISUAL_REVIEW
+```
+
+The page-level regression suite uses the real `useLibraryReviewDetail` hook
+and deferred second GET requests. It proves that successful Verify, Reject,
+and Reconcile notices and status focus survive fresh detail replacement;
+conflict and source-still-valid notices survive their refreshes; failed
+background refreshes preserve stale detail and expose `Tải lại chi tiết`; an
+initial failure still renders ErrorState; and navigation from resource A to B
+does not flash A as B. No implementation capture needed replacement because
+the refresh-state change does not alter the rendered visual design.
