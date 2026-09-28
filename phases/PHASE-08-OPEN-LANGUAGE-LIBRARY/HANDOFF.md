@@ -1648,3 +1648,61 @@ LNG_08_006=VERIFYING
 08D3B2_AUTHORIZED=NO
 NEXT_ACTION=FINAL_EXTERNAL_REVIEW_RETRY
 ```
+
+## Phase 08D3B1 TEST admin actor preparation
+
+The owner-approved TEST database was rechecked using the existing Backend
+`DATABASE_URL` without recording its value. Parsed target identity matched the
+connected `current_database()` and `current_user`; the remote connection used
+`sslmode=verify-full`.
+
+```text
+ENVIRONMENT=TEST
+DATABASE_CONNECTION=PASS
+DATABASE_HOST=ep-crimson-grass-azmsfir8-pooler.c-3.ap-southeast-1.aws.neon.tech
+DATABASE_NAME=neondb
+DATABASE_USER=neondb_owner
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+```
+
+No valid active ADMIN actor existed. Exactly one TEST-only application actor
+was created transactionally as one `users` row plus one `user_roles` row, with
+no password or OAuth identity. Verification found exactly one active ADMIN and
+exactly one matching TEST identifier; no unrelated rows were modified:
+
+```text
+EXISTING_VALID_ADMIN_FOUND=NO
+TEST_ADMIN_CREATED=YES
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+TEST_ADMIN_ACTOR_ROLE=ADMIN
+TEST_ADMIN_ACTOR_STATUS=ACTIVE
+TEST_ADMIN_ACTOR_CONTRACT=PASS
+TEST_ADMIN_ROWS_CREATED=2
+ACTIVE_ADMIN_COUNT=1
+TEST_EMAIL_COUNT=1
+UNRELATED_DB_ROWS_MODIFIED=NO
+TEST_DB_MUTATED=YES_EXPECTED_ACTOR_ONLY
+```
+
+The required license keys were read only and are both absent. No license
+registration/update, migration, Tatoeba network call, import, resource write,
+or 08D3B2 work occurred:
+
+```text
+CC_BY_LICENSE_PRESENT=NO
+CC0_LICENSE_PRESENT=NO
+AUTO_REGISTER_LICENSES=NO
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+AUTOMATED_LIVE_TATOEBA_CALLS=0
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+08D3B2_AUTHORIZED=NO
+NEXT_ACTION=REMEDIATION_REQUIRED
+```

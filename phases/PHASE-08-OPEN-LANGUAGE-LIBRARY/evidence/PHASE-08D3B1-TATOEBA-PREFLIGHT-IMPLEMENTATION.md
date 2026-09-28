@@ -380,3 +380,62 @@ No database, migration, production target, resource, license registry,
 deployment, dataset, or live Tatoeba API was accessed or mutated. The
 Workspace state remains `CURRENT_PHASE=08`, `PHASE_08=IN_PROGRESS`,
 `LNG_08_006=VERIFYING`, and `08D3B2_AUTHORIZED=NO`.
+
+## 08D3B1 TEST admin actor preparation
+
+Runtime actor preparation verified: 2026-09-28 (Asia/Saigon), using the
+owner-approved TEST database through the existing Backend `DATABASE_URL`.
+The target was parsed and rechecked before the write: the URL hostname,
+`current_database()`, and `current_user` were consistent, and the remote
+connection used `sslmode=verify-full`. No URL, password, or query secret is
+recorded here.
+
+```text
+ENVIRONMENT=TEST
+DATABASE_CONNECTION=PASS
+DATABASE_HOST=ep-crimson-grass-azmsfir8-pooler.c-3.ap-southeast-1.aws.neon.tech
+DATABASE_NAME=neondb
+DATABASE_USER=neondb_owner
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+```
+
+The read-only inspection found no existing valid active ADMIN actor. One
+TEST-only application user and its single required ADMIN role row were then
+created in one transaction. The user has no password or OAuth identity; this
+actor is for the explicit import actor boundary and is not a login setup.
+
+```text
+EXISTING_VALID_ADMIN_FOUND=NO
+TEST_ADMIN_CREATED=YES
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+TEST_ADMIN_ACTOR_ROLE=ADMIN
+TEST_ADMIN_ACTOR_STATUS=ACTIVE
+TEST_ADMIN_ACTOR_CONTRACT=PASS
+TEST_ADMIN_ROWS_CREATED=2
+ACTIVE_ADMIN_COUNT=1
+TEST_EMAIL_COUNT=1
+UNRELATED_DB_ROWS_MODIFIED=NO
+TEST_DB_MUTATED=YES_EXPECTED_ACTOR_ONLY
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+```
+
+The required license registry rows were read only and remain absent; no
+license was created or repaired:
+
+```text
+CC_BY_LICENSE_PRESENT=NO
+CC0_LICENSE_PRESENT=NO
+AUTO_REGISTER_LICENSES=NO
+```
+
+The focused security/preflight suite remains 6 suites / 49 tests PASS. No
+Tatoeba data or API was accessed, no resource/provenance/review write was
+performed, and 08D3B2 remains unauthorized. Because the required license
+registry is not present, `LNG_08_006` remains `VERIFYING` and the next step is
+license/runtime remediation before a complete import preflight can pass.
