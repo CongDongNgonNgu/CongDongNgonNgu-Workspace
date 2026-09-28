@@ -101,3 +101,24 @@ invalid Phase 06 provenance, adds reviewer invalid-source discovery, and
 provides atomic VERIFIED to COMMUNITY_REVIEW reconciliation. Phase 06
 candidate consumption, reviewer UI, Phase 10 points, Neon TEST mutation, and
 deployment remain out of scope.
+
+## Final Phase 08C publication state
+
+    CURRENT_PHASE=08
+    PHASE_08=IN_PROGRESS
+    LNG_08_001=DONE
+    LNG_08_002=DONE
+    LNG_08_003=DONE
+    LNG_08_004=DONE
+    LNG_08_005=DONE
+    LNG_08_006=PLANNED
+    LNG_08_007=PLANNED
+    LNG_08_008=PLANNED
+    OWNER_VISUAL_ACCEPTANCE_08C=YES
+    SOURCE_INVALIDATION_08C1B=RUNTIME_PASS
+    PHASE_09=BLOCKED_BY_PHASE_08
+    PHASE_10=BLOCKED_BY_PHASE_08
+
+LNG-08-005 is closed after publication of the accepted Backend and Frontend
+heads. Tatoeba licensing validation is the next bounded task; no LNG-08-006
+implementation has started.

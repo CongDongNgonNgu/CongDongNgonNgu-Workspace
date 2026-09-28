@@ -29,7 +29,7 @@ remain out of scope.
 Allow users to contribute sentence, translation, vocabulary/definition/usage note and other approved types. Submission UX must show reuse/licensing/attribution expectations before publish. Contributions enter review, not verified state. Emit contribution events for Phase 10.
 
 ## LNG-08-005 — Review & Verification Workflow
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-08-002, LNG-08-004
 
 Create reviewer queue, approve/reject/request-change if needed, evidence/notes and conflict handling. Prevent submitter from unilaterally verifying their own item unless explicit role/policy later permits with separate audit. Moderated/deleted sources can invalidate/promote review state appropriately.

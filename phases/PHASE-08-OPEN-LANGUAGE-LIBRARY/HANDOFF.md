@@ -849,3 +849,59 @@ STITCH_EVIDENCE_PRESERVED=YES
 IMPLEMENTATION_SCREENSHOT_EVIDENCE_PRESERVED=YES
 LNG_08_005=VERIFYING
 ```
+
+## Phase 08C final publication closure
+
+Owner visual acceptance was explicitly granted before publication. The accepted
+reviewer experience covers the pending queue, reviewer detail on desktop and
+mobile, source-invalid view, Reject action dialog, and source reconciliation
+dialog. The accepted Stitch IDs and implementation screenshot evidence remain
+preserved above and in the Phase 08C2 evidence directory.
+
+08C1A delivered the reviewer queue/detail read model and atomic VERIFY/REJECT
+actions, with real Neon TEST runtime PASS. 08C1B delivered dynamic Phase 06
+source health, public fail-closed reads, invalid-source discovery and
+reconciliation, microsecond-safe pagination, and transaction-aware source
+races, with corrected runtime PASS. 08C2 delivered the reviewer UI, Verify /
+Reject actions, source reconciliation UI, responsive coverage from 320 through
+1440, Accessibility 100, and owner visual acceptance.
+
+```text
+PHASE_08C_PUBLICATION=PASS
+OWNER_VISUAL_ACCEPTANCE_08C=YES
+BACKEND_MAIN_SHA=86c51f7b08a989db415e7c11361686fdf2379455
+BACKEND_CI_RUN=36369515389
+BACKEND_CI_STATUS=SUCCESS
+FRONTEND_MAIN_SHA=cfe55763318ac47ac8bc6047aa747c0f353bafcb
+FRONTEND_CI_RUN=36369685714
+FRONTEND_CI_STATUS=SUCCESS
+SOURCE_INVALIDATION_08C1B=RUNTIME_PASS
+REQUEST_CHANGES=NOT_IMPLEMENTED_BY_DESIGN
+BACKEND_INTEGRATION_SMOKE=BLOCKED
+```
+
+`BACKEND_INTEGRATION_SMOKE=BLOCKED` remains accurate because the accepted
+Backend itself passed the real Neon TEST runtime gates and the accepted
+Frontend contract/test coverage passed; no unperformed local integrated smoke
+is claimed. This does not block closure.
+
+```text
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_001=DONE
+LNG_08_002=DONE
+LNG_08_003=DONE
+LNG_08_004=DONE
+LNG_08_005=DONE
+LNG_08_006=PLANNED
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+NEXT_TASK=LNG_08_006
+NEXT_ACTION=STOP_FOR_TATOEBA_LICENSE_VALIDATION_PLAN
+```
