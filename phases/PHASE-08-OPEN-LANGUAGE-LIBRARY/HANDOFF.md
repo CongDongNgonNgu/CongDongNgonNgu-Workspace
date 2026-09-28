@@ -1448,3 +1448,77 @@ This publication does not begin 08D3B1 or 08D3B2. Their read-only actor and
 license-registry preflight, then DB-aware transaction/idempotency work, remain
 separately gated. No database, migration, dataset, live Tatoeba API,
 Frontend, or deployment operation was used for publication.
+
+## Phase 08D3B1 — Tatoeba read-only import preflight
+
+08D3B1 adds the first DB-aware Tatoeba slice, but remains strictly read-only.
+The existing 08D3A dry-run command is unchanged and remains dry-run-only. The
+new standalone CLI requires exact `--environment TEST` and an explicit
+`--actor-user-id <uuid>`; it does not accept a database URL argument or infer
+an actor. It uses the dedicated `TATOEBA_IMPORT_DATABASE_URL` environment
+variable and requires an exact `TATOEBA_IMPORT_EXPECTED_DATABASE_NAME` target
+check before actor/license reads. Production preflight is unsupported.
+
+The actor contract is an explicit ACTIVE ADMIN. Missing, inactive,
+verification-pending, disabled, member-only, moderator-only, and malformed
+actors fail closed; additional roles do not invalidate an ADMIN. The safe
+projection contains only user ID, active, and admin booleans. No email,
+password, provider, session, or token data is selected or emitted.
+
+The typed license mapping and exact registry contracts are:
+
+~~~
+CC BY 2.0 FR -> CC_BY_2_0_FR
+CC0 1.0     -> CC0_1_0
+CC_BY_2_0_FR: CC BY 2.0 France, https://creativecommons.org/licenses/by/2.0/fr/, attribution=true, redistribution=true, active=true
+CC0_1_0: CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/, attribution=false, redistribution=true, active=true
+~~~
+
+The dedicated adapter exposes only actor/license reads in an explicit
+`BEGIN READ ONLY` transaction with bounded `SET LOCAL statement_timeout`,
+target identification, parameterized SELECTs, COMMIT, and rollback on error.
+It has no registry upsert or Library write surface. Missing or unsafe registry
+rows fail closed, and no license is auto-registered.
+
+~~~
+PHASE_08D3B1_IMPLEMENTATION=PASS
+IMPORT_ACTOR_CONTRACT=EXPLICIT_ADMIN_CLI_ACTOR
+IMPORT_ACTOR_USER_ID_DISCOVERY=NONE
+DB_TRANSACTION_MODE=READ_ONLY
+PREFLIGHT_DATABASE_READS=YES
+PREFLIGHT_DATABASE_WRITES=0
+PRODUCTION_PREFLIGHT_SUPPORTED=NO
+AUTO_REGISTER_LICENSES=NO
+PREFLIGHT_PRIVACY=PASS
+DB_ERROR_SANITIZATION=PASS
+CLI_PREFLIGHT=PASS
+CLI_DRY_RUN_ONLY=YES
+DATABASE_CONNECTED_FOR_08D3A=NO
+AUTOMATED_LIVE_TATOEBA_CALLS=0
+~~~
+
+Verification passed: focused preflight tests 4 suites / 32 tests; Backend unit
+tests 53 suites / 372 tests; Backend e2e 13 suites / 58 tests; typecheck,
+lint, build, high-severity audit (0 vulnerabilities), and diff check. The
+accepted Backend branch is
+`phase-08d3b1-tatoeba-readonly-preflight` at
+`26b1cebad44e6f9d1851edae2259f5f85852b570`.
+
+No authorized TEST runtime was attempted because no explicit actor UUID and no
+dedicated TEST URL/target inputs were supplied:
+
+~~~
+TEST_RUNTIME_PREFLIGHT=BLOCKED_INPUT
+ACTOR_RUNTIME_PREFLIGHT=NOT_RUN
+CC_BY_RUNTIME_PREFLIGHT=NOT_RUN
+CC0_RUNTIME_PREFLIGHT=NOT_RUN
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+~~~
+
+The Workspace state remains unchanged: `CURRENT_PHASE=08`,
+`PHASE_08=IN_PROGRESS`, `LNG_08_006=VERIFYING`, `LNG_08_007=PLANNED`, and
+`LNG_08_008=PLANNED`. No sentence/translation resource, provenance row,
+review audit, migration, dataset, production connection, or deployment was
+created. `NEXT_SLICE=08D3B2` and
+`NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3B2`.
