@@ -905,3 +905,39 @@ LNG_08_008=PLANNED
 NEXT_TASK=LNG_08_006
 NEXT_ACTION=STOP_FOR_TATOEBA_LICENSE_VALIDATION_PLAN
 ```
+
+## Phase 08D1 — Tatoeba license/export validation handoff
+
+The research-only validation is recorded in
+`evidence/PHASE-08D1-TATOEBA-LICENSE-VALIDATION.md`. Current authoritative
+Tatoeba terms and export/API documentation support conditional commercial text
+reuse, but bulk downloads expose per-sentence license and owner facts only
+partially. The API must be part of the bounded, fail-closed 08D2 importer plan.
+No corpus was downloaded and no application or database was changed.
+
+```text
+PHASE_08D1_TATOEBA_LICENSE_VALIDATION=PASS
+TATOEBA_ADAPTER_DECISION=NEEDS_REMEDIATION
+BACKEND_MAIN_SHA=86c51f7b08a989db415e7c11361686fdf2379455
+FRONTEND_MAIN_SHA=cfe55763318ac47ac8bc6047aa747c0f353bafcb
+WORKSPACE_MAIN_SHA=4d027b30e00b43bf1dbbc0d8ba6aa6e54f6cff7c
+BACKEND_CHANGED=NO
+FRONTEND_CHANGED=NO
+DATASET_DOWNLOADED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+NEXT_ACTION=STOP_FOR_08D2_IMPORTER_IMPLEMENTATION_PLAN
+```
+
+`LNG_08_006` is intentionally not marked `DONE` or `READY`. The existing
+schema is sufficient without a migration when Tatoeba is represented through
+the `OPEN_DATASET` source type and provider-qualified source IDs. The next
+bounded task is the 08D2 importer implementation plan; it must not start
+ingestion until the license/status enrichment and idempotency contract is
+accepted.
