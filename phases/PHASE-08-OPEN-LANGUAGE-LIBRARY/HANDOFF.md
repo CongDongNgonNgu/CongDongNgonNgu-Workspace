@@ -980,3 +980,76 @@ state: create as `DRAFT`, attach complete validated provenance/license, then
 submit through the existing review audit boundary. Incomplete rows remain
 `DRAFT` or are rejected/quarantined. No hidden actor, concurrency strategy, or
 runtime license registry entry is assumed or created in this closure.
+
+## Phase 08D2 - Tatoeba importer implementation-plan closure
+
+The implementation-only plan is recorded in
+evidence/PHASE-08D2-TATOEBA-IMPORTER-PLAN.md. This closure resolves the 08D1
+design remediation without implementing or running an importer. The plan
+confirms the existing schema is sufficient when the importer uses
+OPEN_DATASET, provider-qualified identities, a transaction-scoped advisory
+lock, and a dedicated internal importer repository operation.
+
+~~~
+PHASE_08D2_IMPORTER_PLAN=PASS
+IMPORT_SUBMIT_PATH_GAP=CONFIRMED
+IMPORT_ACTOR_CONTRACT=EXPLICIT_ADMIN_CLI_ACTOR
+IMPORT_ENTRYPOINT=CLI
+TATOEBA_LICENSE_REGISTRY_RUNTIME_CHECK=MANDATORY_FAIL_CLOSED
+INITIAL_IMPORT_ATOMICITY=ONE_POSTGRES_TRANSACTION
+IMPORT_CONCURRENCY_CONTRACT=TRANSACTION_SCOPED_ADVISORY_LOCK_PLUS_GLOBAL_LOOKUP_RECONCILE_CREATE
+SENTENCE_SOURCE_IDENTITY=TATOEBA:SENTENCE:<id>
+DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<minId>:<maxId>
+TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
+IDEMPOTENT_RERUN_NOOP=YES
+VERIFIED_UNSAFE_RERUN_ACTION=INVALIDATE_TO_COMMUNITY_REVIEW_BEFORE_RECONCILE
+COMMUNITY_CONTRIBUTION_EVENT_EMITTED=NO
+AUTO_VERIFY_IMPORTED_RESOURCE=NO
+DRY_RUN_ZERO_WRITES=YES
+MIGRATION_REQUIRED=NO
+08D2_IMPLEMENTATION_DECISION=GO
+~~~
+
+The importer lifecycle is explicitly:
+
+~~~
+TATOEBA_IMPORT_LIFECYCLE=DRAFT_THEN_SUBMIT_TO_COMMUNITY_REVIEW
+~~~
+
+COMMUNITY_REVIEW is the post-submit state, not a direct insertion state.
+Every accepted resource is created as DRAFT, receives complete validated
+provenance and runtime-validated license facts, and crosses the normal review
+audit boundary with an explicit SUBMIT audit. Incomplete facts remain DRAFT
+or are rejected/quarantined. Tatoeba content is never auto-verified and does
+not emit a community contribution event.
+
+The chosen actor contract is an explicit existing ACTIVE ADMIN user supplied
+to the protected CLI run. No hidden actor, actor provisioning, hardcoded ID,
+or fallback is allowed. The run must fail before writes when actor or license
+registry preflight fails.
+
+The bulk export is a discovery/snapshot input. The bounded stable Tatoeba v1
+sentence API is authoritative for id, lang, text, license, owner, and
+is_unapproved. Only CC BY 2.0 FR and CC0 1.0 are accepted. Missing or
+unknown license never defaults to CC BY. Bulk/API disagreement on text,
+language, license, required owner, or status is SKIP_OR_QUARANTINE, with
+snapshot ID, retrieval time, artifact hashes, API-check time, and mismatch
+reason retained.
+
+Direct translation input remains the links export only. Reciprocal rows are
+collapsed; transitive translations are not computed. The required identity
+TATOEBA:LINK:DIRECT:<minId>:<maxId> is numeric ordering for identity only.
+Configured source/target languages determine linguistic direction. Two
+role-qualified provenance entries preserve both endpoint licenses and
+attributions without inventing a combined license.
+
+~~~
+IMPORT_CONCURRENCY_CONTRACT=TRANSACTION_SCOPED_ADVISORY_LOCK_PLUS_GLOBAL_LOOKUP_RECONCILE_CREATE
+TATOEBA_LICENSE_REGISTRY_RUNTIME_CHECK=MANDATORY_FAIL_CLOSED
+NEXT_SLICE=08D3
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3A
+~~~
+
+This plan does not alter TASKS or PROJECT-STATE: LNG_08_006 remains
+VERIFYING, LNG_08_007 and LNG_08_008 remain PLANNED, and Phase 08 remains
+IN_PROGRESS.
