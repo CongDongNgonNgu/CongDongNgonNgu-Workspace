@@ -1852,3 +1852,76 @@ LNG_08_006=PASS
 08D3B2_AUTHORIZED=NO
 NEXT_ACTION=READY_FOR_08D3B2_AUTHORIZATION
 ```
+
+## Phase 08D3B2 sentence import implementation
+
+The first atomic D3B implementation unit is complete on the dedicated
+Backend branch. It is limited to Tatoeba sentence resources; direct
+translation resources and relation reconciliation remain a later D3C scope.
+
+```text
+PHASE_08D3B2_IMPLEMENTATION=PASS
+PHASE_08D3B2_SCOPE=atomic sentence import only: explicit ACTIVE ADMIN actor and required-license revalidation; sentence advisory lock; exact global OPEN_DATASET source-identity lookup; one-transaction SENTENCE resource creation/reconciliation; complete provenance; SUBMIT audit; DRAFT -> COMMUNITY_REVIEW; idempotent NOOP; concurrent create/reconcile; rollback and quarantine safety
+BACKEND_BRANCH=phase-08d3b2-tatoeba-sentence-import
+BACKEND_SHA=656f396c06797b993f625fb49820cebf6ca9fe0c
+```
+
+The dedicated CLI accepts one bounded, already-enriched candidate and keeps
+the existing `library:import:tatoeba` command dry-run-only and database-free.
+The durable sentence identity is `TATOEBA:SENTENCE:<id>` and its transaction
+lock is `OPEN_DATASET:TATOEBA:SENTENCE:<id>`. New unsafe candidates are
+quarantined with zero durable Library writes. New safe candidates are created
+as `DRAFT`, receive complete provenance and a `SUBMIT` audit, then transition
+to `COMMUNITY_REVIEW` in one PostgreSQL transaction. Unchanged reruns are
+`NOOP`; changed `VERIFIED` content is invalidated before reconciliation; a
+`REJECTED` resource is not silently reopened.
+
+The 08D3B1 safety contracts remain enforced: explicit active ADMIN actor,
+TEST-only target authorization by host/database/user, fail-closed remote SSL,
+sanitized database errors, no URL/password exposure, mandatory existing
+`CC_BY_2_0_FR` and `CC0_1_0` registry rows, and no automatic license
+registration. No real D3B2 import was executed, no Tatoeba network call was
+made, and no database was mutated during implementation verification.
+
+```text
+ACTOR_CONTRACT_PRESERVED=YES
+DATABASE_TARGET_AUTHORIZATION_PRESERVED=YES
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+SECRET_HANDLING=PASS
+LICENSE_CONTRACT_PRESERVED=YES
+AUTO_REGISTER_LICENSES=NO
+LIVE_TATOEBA_CALLS_DURING_TESTS=0
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+```
+
+Verification passed:
+
+```text
+FOCUSED_TESTS=16 suites / 99 tests PASS
+BACKEND_TESTS=59 suites / 412 tests PASS
+BACKEND_E2E=13 suites / 58 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 vulnerabilities)
+GIT_DIFF_CHECK=PASS
+```
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
+```
+
+The implementation branch remains unmerged pending external review. This
+closure does not authorize runtime import execution or the later translation
+slice.
