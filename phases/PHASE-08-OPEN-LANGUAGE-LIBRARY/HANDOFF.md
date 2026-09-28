@@ -1593,3 +1593,58 @@ access, deployment, dataset download, or live Tatoeba API call occurred.
 ```text
 NEXT_ACTION=STOP_FOR_FINAL_EXTERNAL_REVIEW_BEFORE_08D3B2
 ```
+
+## Phase 08D3B1 secret-leak remediation
+
+The final external review blocker was remediated on the existing
+`phase-08d3b1-tatoeba-readonly-preflight` branch. The defect was raw
+reflection of an unsupported CLI argument, allowing a supplied database URL
+to reach stderr. Typed preflight errors, CLI output, and the dedicated
+PostgreSQL adapter now fail closed with sanitized diagnostics; raw URLs,
+passwords, query secrets, connection options, and raw driver errors are not
+returned or logged.
+
+```text
+PHASE_08D3B1_SECRET_LEAK_REMEDIATION=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+SANITIZED_DIAGNOSTICS=PASS
+INVALID_URL_LEAK_TEST=PASS
+TARGET_MISMATCH_LEAK_TEST=PASS
+CONNECTION_FAILURE_LEAK_TEST=PASS
+SSL_FAILURE_LEAK_TEST=PASS
+AUTH_FAILURE_LEAK_TEST=PASS
+UNEXPECTED_DB_ERROR_LEAK_TEST=PASS
+CLI_OUTPUT_LEAK_TEST=PASS
+BACKEND_SHA=ebc22ce82479cbb191a95ea5a10370846fad8ab3
+```
+
+Verification: focused security/preflight tests 6 suites / 49 tests PASS;
+Backend tests 55 suites / 389 tests PASS; Backend e2e 13 suites / 58 tests
+PASS; typecheck PASS; lint PASS; build PASS; audit PASS (0 vulnerabilities);
+git diff --check PASS. The target authorization, same-database-name
+cross-environment protection, remote SSL fail-closed rule, explicit admin
+actor contract, and read-only transaction remain PASS with
+`PREFLIGHT_DATABASE_WRITES=0`. `AUTO_REGISTER_LICENSES=NO` and
+`IMPORT_ACTOR_USER_ID_DISCOVERY=NONE` remain unchanged.
+
+Runtime remains intentionally blocked because the complete approved TEST-only
+input set was not supplied: dedicated `TATOEBA_IMPORT_DATABASE_URL`, expected
+database host, expected database name, expected database user, and explicit
+actor UUID. No runtime preflight, database access, mutation, migration,
+production connection, deployment, dataset download, or live Tatoeba API call
+occurred.
+
+```text
+TEST_RUNTIME_PREFLIGHT=BLOCKED_INPUT
+ACTOR_RUNTIME_PREFLIGHT=NOT_RUN
+CC_BY_RUNTIME_PREFLIGHT=NOT_RUN
+CC0_RUNTIME_PREFLIGHT=NOT_RUN
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+08D3B2_AUTHORIZED=NO
+NEXT_ACTION=FINAL_EXTERNAL_REVIEW_RETRY
+```

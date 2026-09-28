@@ -314,3 +314,69 @@ PRODUCTION_DB_MUTATED=NO
 No migration, license registration/update, resource write, production
 connection, deployment, dataset download, or live Tatoeba API call occurred.
 The next boundary remains 08D3B2, gated by final external review.
+
+## 08D3B1 secret-leak remediation
+
+Remediation verified: 2026-09-28 (Asia/Saigon). The final external review
+found one blocking defect: an unsupported CLI argument was reflected verbatim,
+which could expose a database URL and credentials. The remediation removes raw
+argument reflection, sanitizes typed preflight diagnostics at construction and
+CLI output boundaries, and maps unexpected PostgreSQL connection/read/release
+failures to a stable fail-closed error without exposing driver text.
+
+```text
+PHASE_08D3B1_SECRET_LEAK_REMEDIATION=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+SANITIZED_DIAGNOSTICS=PASS
+INVALID_URL_LEAK_TEST=PASS
+TARGET_MISMATCH_LEAK_TEST=PASS
+CONNECTION_FAILURE_LEAK_TEST=PASS
+SSL_FAILURE_LEAK_TEST=PASS
+AUTH_FAILURE_LEAK_TEST=PASS
+UNEXPECTED_DB_ERROR_LEAK_TEST=PASS
+CLI_OUTPUT_LEAK_TEST=PASS
+```
+
+Focused security/preflight verification passes 6 suites / 49 tests. The full
+Backend run passes 55 suites / 389 tests; Backend e2e passes 13 suites / 58
+tests. Typecheck, lint, build, `npm audit --audit-level=high` (0
+vulnerabilities), and `git diff --check` pass. The remediation is committed
+on the existing branch at:
+
+```text
+BACKEND_BRANCH=phase-08d3b1-tatoeba-readonly-preflight
+BACKEND_SHA=ebc22ce82479cbb191a95ea5a10370846fad8ab3
+```
+
+The target-identity, SSL, actor, license, and read-only contracts remain
+unchanged:
+
+```text
+DATABASE_TARGET_AUTHORIZATION=PASS
+SAME_DB_NAME_CROSS_ENV_PROTECTION=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+DB_TRANSACTION_MODE=READ_ONLY
+PREFLIGHT_DATABASE_WRITES=0
+IMPORT_ACTOR_CONTRACT=PASS
+IMPORT_ACTOR_USER_ID_DISCOVERY=NONE
+AUTO_REGISTER_LICENSES=NO
+```
+
+No authorized TEST runtime was attempted. The dedicated TEST URL, expected
+host/name/user, and explicit actor UUID were not supplied as a complete
+approved input set:
+
+```text
+TEST_RUNTIME_PREFLIGHT=BLOCKED_INPUT
+ACTOR_RUNTIME_PREFLIGHT=NOT_RUN
+CC_BY_RUNTIME_PREFLIGHT=NOT_RUN
+CC0_RUNTIME_PREFLIGHT=NOT_RUN
+```
+
+No database, migration, production target, resource, license registry,
+deployment, dataset, or live Tatoeba API was accessed or mutated. The
+Workspace state remains `CURRENT_PHASE=08`, `PHASE_08=IN_PROGRESS`,
+`LNG_08_006=VERIFYING`, and `08D3B2_AUTHORIZED=NO`.
