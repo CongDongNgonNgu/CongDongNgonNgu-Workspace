@@ -1126,3 +1126,83 @@ TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 DEPLOYED=NO
 ~~~
+
+## Phase 08D3A — Tatoeba dry-run implementation foundation
+
+The bounded read-only implementation is recorded in
+`evidence/PHASE-08D3A-TATOEBA-DRY-RUN-IMPLEMENTATION.md`. The Backend branch
+adds strict streaming readers for the current Tatoeba detailed/CC0/link
+exports, exact UTF-8/text handling, snapshot hashes, v1 sentence API
+enrichment, CC0/API fail-closed validation, attribution previews, direct-link
+reciprocal collapse, deterministic directed translation identities, bounded
+JSON/JSONL dry-run reporting, and a standalone CLI that requires `--dry-run`.
+It has no Nest/Postgres/Library repository dependency and creates no durable
+Library resource.
+
+~~~
+PHASE_08D3A_IMPLEMENTATION=PASS
+BACKEND_BRANCH=phase-08d3a-tatoeba-dry-run
+BACKEND_SHA=a493f133f24d1bbf771da66a8e16bf0ef0e6bb73
+BACKEND_CI_RUN=NOT_TRIGGERED
+BACKEND_CI_STATUS=NOT_TRIGGERED
+IMPORT_ENTRYPOINT=CLI
+CLI_DRY_RUN_ONLY=YES
+CLI_REQUIRES_DRY_RUN=PASS
+DATABASE_CONNECTED=NO
+DATABASE_READS=0
+DATABASE_WRITES=0
+DB_PREFLIGHT=SKIPPED_08D3A
+LIBRARY_WRITE_PORT_PRESENT=NO
+AUTOMATED_LIVE_TATOEBA_CALLS=0
+DATASET_DOWNLOADER_IMPLEMENTED=NO
+DATASET_DOWNLOADED=NO
+SYNTHETIC_FIXTURES_ONLY=YES
+DRY_RUN_ZERO_WRITES=YES
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+BACKEND_CHANGED=YES
+FRONTEND_CHANGED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+~~~
+
+The implementation preserves the 08D2 lifecycle boundary:
+
+~~~
+TATOEBA_IMPORT_LIFECYCLE=DRAFT_THEN_SUBMIT_TO_COMMUNITY_REVIEW
+AUTO_VERIFY_IMPORTED_RESOURCE=NO
+COMMUNITY_CONTRIBUTION_EVENT_EMITTED=NO
+IMPORT_ACTOR_CONTRACT=PENDING_08D2_DESIGN
+IMPORT_CONCURRENCY_CONTRACT=PENDING_08D2_DESIGN
+TATOEBA_LICENSE_REGISTRY_RUNTIME_CHECK=PENDING
+~~~
+
+`COMMUNITY_REVIEW` remains a post-submit state, not direct import insertion.
+08D3A quarantines unsafe new candidates with zero durable writes. It does not
+implement the actor, registry, advisory-lock, global-lookup, transaction, or
+TEST-database contracts reserved for later slices.
+
+Local verification passed: focused Tatoeba/CLI tests 8 suites / 25 tests;
+Backend unit tests 49 suites / 329 tests; Backend e2e 13 suites / 58 tests;
+typecheck, lint, build, high-severity audit (0 vulnerabilities), and diff
+check. The e2e suite used the existing test in-memory persistence path; no
+database connection or mutation was made. The compiled CLI no-argument smoke
+failed closed with `TATOEBA_IMPORT_WRITE_MODE_NOT_IMPLEMENTED`.
+
+This does not change `TASKS.md` or `state/PROJECT-STATE.md`: `LNG_08_006`
+remains `VERIFYING`, `LNG_08_007` and `LNG_08_008` remain `PLANNED`, and Phase
+08 remains `IN_PROGRESS`. No importer implementation beyond 08D3A and no
+08D3B work may begin until external review is complete.
+
+~~~
+NEXT_SLICE=08D3B
+NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3B
+~~~
