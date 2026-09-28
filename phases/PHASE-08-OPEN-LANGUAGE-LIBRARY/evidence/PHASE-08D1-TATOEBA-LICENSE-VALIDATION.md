@@ -385,5 +385,80 @@ rows, preserve both sides of direct links, and make reconciliation idempotent.
 
 ```text
 TATOEBA_ADAPTER_DECISION=NEEDS_REMEDIATION
+NEXT_SLICE=08D2
 NEXT_ACTION=STOP_FOR_08D2_IMPORTER_IMPLEMENTATION_PLAN
 ```
+
+## 08D2 design boundaries recorded at closure
+
+The following items are design prerequisites, not importer implementation.
+
+### Lifecycle gate
+
+`TATOEBA_INITIAL_REVIEW_STATE=COMMUNITY_REVIEW` names the state reached only
+after the normal review boundary. It does not authorize direct insertion into
+that state:
+
+```text
+TATOEBA_IMPORT_LIFECYCLE=DRAFT_THEN_SUBMIT_TO_COMMUNITY_REVIEW
+```
+
+The importer must create/import as `DRAFT`, attach complete validated
+provenance and license facts, and submit through the existing review audit
+boundary. If any source, license, owner/attribution, status, or relationship
+fact is incomplete, the row remains `DRAFT` or is rejected/quarantined. It
+must never create `VERIFIED` directly or bypass review audit.
+
+### API authority and fail-closed checks
+
+The bulk export is discovery/snapshot input. For the bounded initial importer,
+the stable Tatoeba v1 sentence API is the authoritative per-sentence
+enrichment/check where required. The required facts are `id`, `lang`, `text`,
+`license`, `owner`, and `is_unapproved`.
+
+Only `CC BY 2.0 FR` and `CC0 1.0` are accepted. The importer must reject or
+fail closed on `PROBLEM`, an unknown license, missing required attribution
+facts, `is_unapproved=true`, deleted/API 404, unsupported language, or any
+bulk/API material mismatch. A missing license must never default to CC BY.
+
+### Snapshot consistency
+
+Bulk exports and API enrichment may represent different source states. The 08D2
+plan must record a snapshot identifier, bulk retrieval timestamp, source
+artifact hashes where available, API-check timestamp, and a material mismatch
+reason. If text, language, license, owner, or status differs materially between
+the bulk row and current API facts, the initial importer must
+`SKIP_OR_QUARANTINE`, not silently reconcile during creation.
+
+### Direct links
+
+The `links` export remains the direct-relation input. The plan must verify each
+link within bounded scope and must not compute transitive translations. The
+identity is:
+
+```text
+TATOEBA:LINK:DIRECT:<minId>:<maxId>
+```
+
+Numeric ordering is identity only; linguistic direction comes from the
+configured source/target language pair.
+
+### Unresolved implementation contracts
+
+No hidden system actor, migration, or concurrency mechanism is chosen in this
+closure:
+
+```text
+IMPORT_ACTOR_CONTRACT=PENDING_08D2_DESIGN
+IMPORT_CONCURRENCY_CONTRACT=PENDING_08D2_DESIGN
+TATOEBA_LICENSE_REGISTRY_RUNTIME_CHECK=PENDING
+```
+
+08D2 must choose an auditable authorized actor model, such as an explicit
+authorized ADMIN supplied to a CLI run or a documented pre-provisioned import
+actor. It must also design safe concurrent lookup/reconcile/create for the
+provider-qualified external identity because the current schema does not
+provide a confirmed global uniqueness constraint across all resources.
+Before import, 08D2 must inspect actual runtime/configured license registry
+entries for CC BY 2.0 FR and CC0 1.0; schema support alone is not evidence that
+the entries exist. No registry entry is inserted here.

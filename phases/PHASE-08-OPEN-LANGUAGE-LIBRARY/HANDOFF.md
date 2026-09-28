@@ -941,3 +941,42 @@ the `OPEN_DATASET` source type and provider-qualified source IDs. The next
 bounded task is the 08D2 importer implementation plan; it must not start
 ingestion until the license/status enrichment and idempotency contract is
 accepted.
+
+## Phase 08D1 closure reconciliation
+
+The current Workspace task/state files now agree with the accepted validation:
+the research gate passed, while importer design remediation remains. This is
+not an external legal blockage and does not authorize importer implementation.
+
+```text
+PHASE_08D1_TATOEBA_LICENSE_VALIDATION=PASS
+TATOEBA_ADAPTER_DECISION=NEEDS_REMEDIATION
+LNG_08_006=VERIFYING
+TATOEBA_IMPORT_LIFECYCLE=DRAFT_THEN_SUBMIT_TO_COMMUNITY_REVIEW
+IMPORT_ACTOR_CONTRACT=PENDING_08D2_DESIGN
+IMPORT_CONCURRENCY_CONTRACT=PENDING_08D2_DESIGN
+TATOEBA_LICENSE_REGISTRY_RUNTIME_CHECK=PENDING
+NEXT_SLICE=08D2
+NEXT_ACTION=STOP_FOR_08D2_IMPORTER_IMPLEMENTATION_PLAN
+```
+
+The bulk export is discovery/snapshot input. The stable Tatoeba v1 sentence
+API is the authoritative bounded enrichment/check for `id`, `lang`, `text`,
+`license`, `owner`, and `is_unapproved`. Only `CC BY 2.0 FR` and `CC0 1.0`
+are accepted; `PROBLEM`, unknown or missing license, missing required
+attribution, unapproved, deleted/API 404, unsupported language, and material
+bulk/API disagreement fail closed. No missing license defaults to CC BY.
+
+The 08D2 plan must record snapshot ID, bulk retrieval time, artifact hashes
+where available, API-check time, and mismatch reason. Material disagreement on
+text, language, license, owner, or status must `SKIP_OR_QUARANTINE`, not be
+silently reconciled during initial creation. Direct links remain bounded
+`links` input only; no transitive translations may be computed, and
+`TATOEBA:LINK:DIRECT:<minId>:<maxId>` is identity only while linguistic
+direction comes from the configured language pair.
+
+`COMMUNITY_REVIEW` is a post-submit lifecycle state, not an import insertion
+state: create as `DRAFT`, attach complete validated provenance/license, then
+submit through the existing review audit boundary. Incomplete rows remain
+`DRAFT` or are rejected/quarantined. No hidden actor, concurrency strategy, or
+runtime license registry entry is assumed or created in this closure.
