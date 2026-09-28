@@ -274,3 +274,128 @@ NEXT_ACTION=STOP_FOR_EXTERNAL_REVIEW_BEFORE_08D3B
 The dry-run foundation is accepted for external review only. It is not an
 importer publication, does not mark LNG-08-006 DONE or READY, and does not
 authorize database writes.
+
+## External review remediation before 08D3B
+
+The external review identified four classes of D3A contract defects: the
+bulk/API CC BY owner snapshot asymmetry, fabricated snapshot retrieval time,
+unsafe local-path exposure, and unbounded/redundant report DTOs. The existing
+Backend branch was remediated without adding database access, a write port, a
+migration, a downloader, or any Tatoeba corpus data.
+
+### Owner and snapshot consistency
+
+CC BY 2.0 FR now requires bulk `Username` and API `owner` to both be present
+and exactly equal. A missing/known asymmetry is `TATOEBA_OWNER_MISMATCH`; both
+missing is `TATOEBA_OWNER_REQUIRED`. CC0 does not require an owner: null/null,
+null/known, and known/null are allowed, while two known unequal owners fail
+closed as `TATOEBA_OWNER_MISMATCH`. No bulk owner is filled from the API.
+
+```text
+CC_BY_OWNER_SNAPSHOT_CONSISTENCY=PASS
+CC0_OWNER_RULE=PASS
+OWNER_ASYMMETRY_TESTS=PASS
+```
+
+`runStartedAt` is generated once by the importer clock. `snapshotRetrievedAt`
+is operator-supplied through `--snapshot-retrieved-at` only when it is a strict
+offset-aware ISO-8601 timestamp; when absent it is `null`. It is never inferred
+from CLI time, filesystem mtime, or the current clock. Snapshot identity still
+uses only artifact kind, safe basename, size, and SHA-256.
+
+```text
+SNAPSHOT_RETRIEVAL_TIME_FABRICATED=NO
+SNAPSHOT_TIMESTAMP_SEMANTICS=PASS
+SNAPSHOT_ID_RUN_TIME_INDEPENDENT=PASS
+SNAPSHOT_CLOCK_TESTS=PASS
+```
+
+### Safe report contract
+
+Serialized snapshot artifacts contain only `kind`, `fileName`, `sizeBytes`,
+and `sha256`. Reader rows no longer carry paths in the candidate contract;
+malformed-row diagnostics use artifact kind and line number. Quarantine
+details are sanitized before serialization. Sentence candidates reference
+`snapshotId` instead of repeating the complete snapshot/artifact structure.
+
+```text
+REPORT_ABSOLUTE_LOCAL_PATHS=NONE
+QUARANTINE_LOCAL_PATHS=NONE
+CANDIDATE_FULL_SNAPSHOT_DUPLICATION=NO
+```
+
+The report uses conservative project-owned budgets, not Tatoeba provider
+limits: 4,000,000 UTF-8 bytes maximum; at most 256 sentence samples, 256
+translation samples, and 256 quarantine samples; and at most 1,000,000 sample
+bytes per family. JSON and JSONL output are preflight-estimated before full
+serialization and fail closed if the DTO exceeds the budget. Truncation is
+deterministic and exposes flags plus omitted counts. Aggregate processing
+counts remain full-run counts.
+
+```text
+DRY_RUN_REPORT_BOUNDED=YES
+REPORT_TRUNCATION_EXPLICIT=YES
+REPORT_MEMORY_BOUND=PASS
+TRUNCATED_REPORT_COUNTS_ACCURATE=PASS
+```
+
+Exact sentence text, the stable v1 API endpoint/allowlist, bounded retries,
+response-size limits, CC0 snapshot agreement, fail-closed API mismatch rules,
+directed identities, reciprocal input collapse, and zero-database architecture
+remain unchanged. No automated live Tatoeba call was made.
+
+```text
+EXACT_TEXT_PRESERVED=PASS
+CC0_SNAPSHOT_CONTRACT=PASS
+TRANSLATION_IDENTITY_INPUT_ORDER_INDEPENDENT=PASS
+REVERSE_DIRECTION_DISTINCT_IDENTITY=PASS
+BIDIRECTIONAL_CONFIGURATION_COLLISION=NO
+AUTO_CREATE_REVERSE_TRANSLATION=NO
+CLI_DRY_RUN_ONLY=YES
+CLI_REQUIRES_DRY_RUN=PASS
+DATABASE_CONNECTED=NO
+DATABASE_READS=0
+DATABASE_WRITES=0
+DB_PREFLIGHT=SKIPPED_08D3A
+LIBRARY_WRITE_PORT_PRESENT=NO
+AUTOMATED_LIVE_TATOEBA_CALLS=0
+```
+
+### Remediation verification
+
+```text
+PHASE_08D3A_EXTERNAL_REVIEW_REMEDIATION=PASS
+BACKEND_BRANCH=phase-08d3a-tatoeba-dry-run
+BACKEND_SHA=a851e18d5827103982cbda9e3f04ba9cefbc9e28
+FOCUSED_TESTS=8 suites / 34 tests PASS
+BACKEND_TESTS=49 suites / 338 tests PASS
+BACKEND_E2E=13 suites / 58 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 vulnerabilities)
+GIT_DIFF_CHECK=PASS
+MIGRATION_REQUIRED=NO
+MIGRATION_RERUN=NO
+MIGRATION_0012_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+BACKEND_CHANGED=YES
+FRONTEND_CHANGED=NO
+DATASET_DOWNLOADED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+```
+
+No `db:migrate` command ran. E2E retained the existing in-memory test
+persistence path. The compiled CLI no-argument smoke exits with
+`TATOEBA_IMPORT_WRITE_MODE_NOT_IMPLEMENTED`. 08D3B remains blocked pending
+final external review.
+
+```text
+NEXT_SLICE=08D3B
+NEXT_ACTION=STOP_FOR_FINAL_EXTERNAL_REVIEW_BEFORE_08D3B
+```
