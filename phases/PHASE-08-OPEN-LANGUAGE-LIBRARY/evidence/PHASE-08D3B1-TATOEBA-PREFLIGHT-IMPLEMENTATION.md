@@ -439,3 +439,82 @@ Tatoeba data or API was accessed, no resource/provenance/review write was
 performed, and 08D3B2 remains unauthorized. Because the required license
 registry is not present, `LNG_08_006` remains `VERIFYING` and the next step is
 license/runtime remediation before a complete import preflight can pass.
+
+## 08D3B1 TEST license preparation
+
+On 2026-09-28 (Asia/Saigon), the owner-approved TEST target was revalidated
+before the only authorized data-preparation write. The parsed connection
+identity and connected PostgreSQL identity matched exactly. The connection
+used encrypted remote transport with `sslmode=verify-full`; no URL,
+password, or query secret is recorded here.
+
+```text
+ENVIRONMENT=TEST
+DATABASE_CONNECTION=PASS
+DATABASE_HOST=ep-crimson-grass-azmsfir8-pooler.c-3.ap-southeast-1.aws.neon.tech
+DATABASE_NAME=neondb
+DATABASE_USER=neondb_owner
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_HOST_TARGET_CHECK=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+```
+
+The exact required registry keys were absent immediately before the write.
+Exactly two primary `library_licenses` rows were created in one bounded
+transaction; no existing license was updated, no alias was added, and no
+runtime auto-registration behavior was changed. The canonical contract uses
+the project-owned display names and official Creative Commons URLs, with
+`active=true`, redistribution allowed, the required attribution flag, and
+null `derivative_constraints`/`source_note`.
+
+```text
+CC_BY_EXISTED_BEFORE=NO
+CC0_EXISTED_BEFORE=NO
+CC_BY_LICENSE_CREATED=YES
+CC0_LICENSE_CREATED=YES
+CC_BY_LICENSE_PRESENT=YES
+CC0_LICENSE_PRESENT=YES
+CC_BY_LICENSE_CONTRACT=PASS
+CC0_LICENSE_CONTRACT=PASS
+REQUIRED_LICENSE_CC_BY_KEY=CC_BY_2_0_FR
+REQUIRED_LICENSE_CC0_KEY=CC0_1_0
+LICENSE_PRIMARY_ROWS_CREATED=2
+UNRELATED_DB_ROWS_MODIFIED=NO
+AUTO_REGISTER_LICENSES=NO
+```
+
+The approved TEST actor remained unchanged and still satisfies the explicit
+ADMIN actor contract:
+
+```text
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+TEST_ADMIN_ACTOR_UNCHANGED=YES
+TEST_ADMIN_ACTOR_CONTRACT=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+```
+
+No Backend source, Frontend source, migration, Tatoeba data, import resource,
+provenance record, review audit, deployment, or production target was touched.
+The authorized TEST mutation was limited to the two missing license rows;
+`LNG_08_006` remains `VERIFYING` until the separate read-only runtime
+preflight is rerun.
+
+```text
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+08D3B2_AUTHORIZED=NO
+NEXT_ACTION=RETRY_08D3B1_TEST_RUNTIME_PREFLIGHT
+```

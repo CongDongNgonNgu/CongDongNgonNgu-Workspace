@@ -1706,3 +1706,73 @@ LNG_08_006=VERIFYING
 08D3B2_AUTHORIZED=NO
 NEXT_ACTION=REMEDIATION_REQUIRED
 ```
+
+## Phase 08D3B1 TEST license preparation
+
+The owner-approved TEST target was revalidated on 2026-09-28 before a
+strictly bounded data-preparation transaction. Host, database name, database
+user, and connected PostgreSQL identity matched; encrypted remote transport
+was `sslmode=verify-full`. The connection URL and all credentials remain
+excluded from this handoff.
+
+```text
+ENVIRONMENT=TEST
+DATABASE_CONNECTION=PASS
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_HOST_TARGET_CHECK=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+```
+
+Both required license keys were absent before the write. Exactly the two
+missing primary registry rows were created and then verified against the
+canonical Phase 08D3B1 contract; no existing row was updated and no unrelated
+database row was modified.
+
+```text
+CC_BY_EXISTED_BEFORE=NO
+CC0_EXISTED_BEFORE=NO
+CC_BY_LICENSE_CREATED=YES
+CC0_LICENSE_CREATED=YES
+CC_BY_LICENSE_PRESENT=YES
+CC0_LICENSE_PRESENT=YES
+CC_BY_LICENSE_CONTRACT=PASS
+CC0_LICENSE_CONTRACT=PASS
+LICENSE_PRIMARY_ROWS_CREATED=2
+UNRELATED_DB_ROWS_MODIFIED=NO
+AUTO_REGISTER_LICENSES=NO
+```
+
+The TEST admin actor was read back unchanged:
+
+```text
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+TEST_ADMIN_ACTOR_UNCHANGED=YES
+TEST_ADMIN_ACTOR_CONTRACT=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+```
+
+This was TEST data preparation only. No importer execution, Tatoeba network
+call, resource/provenance/review write, migration, deployment, or production
+access occurred. Backend code and Frontend remain unchanged. The next action
+is to retry the separate 08D3B1 read-only runtime preflight; 08D3B2 remains
+unauthorized.
+
+```text
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=VERIFYING
+08D3B2_AUTHORIZED=NO
+NEXT_ACTION=RETRY_08D3B1_TEST_RUNTIME_PREFLIGHT
+```
