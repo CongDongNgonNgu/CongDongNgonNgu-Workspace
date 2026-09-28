@@ -444,6 +444,13 @@ An explicitly configured en -> vi run evaluates the same unordered input pair
 under the reverse directed identity. The reverse resource is distinct and is
 not a conflict merely because the opposite direction already exists.
 
+If an existing directed resource's endpoint languages or source/target
+assignment no longer match its durable directed identity, the importer must
+invalidate or quarantine it under the identity lock before any material
+mutation. It must never rewrite a vi -> en resource into en -> vi. The
+opposite direction is a separate explicit identity and requires its own
+resource/provenance set.
+
 ### Two-license storage model
 
 The existing provenance table requires one license key per provenance row.

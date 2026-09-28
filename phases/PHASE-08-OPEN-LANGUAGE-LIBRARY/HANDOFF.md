@@ -1103,6 +1103,11 @@ depend on transformation-history JSON. A new unsafe candidate produces zero
 durable Library writes. Only a pre-existing importer-owned DRAFT may remain
 DRAFT for safe reconciliation; it cannot submit until all facts are valid.
 
+Direction is immutable per durable resource: if an existing resource no longer
+matches its directed source/target identity, invalidate or quarantine it before
+material mutation. Never rewrite one direction into its reverse; the reverse
+requires an explicitly configured separate identity and resource.
+
 ## Phase 08D2 publication evidence
 
 The plan branch was pushed from the exact Workspace main base. GitHub reported
