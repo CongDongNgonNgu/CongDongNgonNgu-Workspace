@@ -2039,3 +2039,72 @@ NEXT_08D3_TASK_NAME=direct translation and reconciliation
 NEXT_08D3_TASK_STATUS=PLANNED
 NEXT_ACTION=READY_FOR_NEXT_08D3_TASK
 ```
+
+## Phase 08D3C direct translation and reconciliation implementation
+
+The first atomic 08D3C implementation unit is complete on the dedicated
+feature branches. Scope is limited to direct Tatoeba translation candidate
+validation, directed identity, reciprocal input collapse, endpoint-role
+provenance, transaction-scoped advisory locking, exact global role lookup,
+idempotent translation creation/reconciliation, review audit/state handling,
+and a bounded internal translation-import CLI. Sentence import remains owned by
+08D3B2; no indirect or multi-hop translation is inferred.
+
+```text
+PHASE_08D3C_IMPLEMENTATION=PASS
+08D3C_SCOPE=direct translation and reconciliation only
+IMPLEMENTATION_RESULT=PASS
+BACKEND_BRANCH=phase-08d3c-tatoeba-direct-translation
+BACKEND_SHA=0506ca4357b91bc8f10247f9f522e5717db854c4
+WORKSPACE_BRANCH=phase-08d3c-tatoeba-direct-translation
+DIRECT_TRANSLATION_IDENTITY=TATOEBA:LINK:DIRECT:<sourceSentenceId>:<targetSentenceId>
+INPUT_PAIR_IDENTITY=TATOEBA:PAIR:<minId>:<maxId>
+TRANSLATION_LOCK_IDENTITY=OPEN_DATASET:TATOEBA:LINK:DIRECT:<sourceSentenceId>:<targetSentenceId>
+TRANSLATION_TWO_PROVENANCE_ENTRIES=YES
+AUTO_CREATE_REVERSE_TRANSLATION=NO
+```
+
+The write path validates the explicit ADMIN actor and existing required
+licenses, locks the directed identity, checks both role-qualified provenance
+rows, and keeps creation/reconciliation, provenance, SUBMIT audit, and
+`DRAFT -> COMMUNITY_REVIEW` transition in one PostgreSQL transaction. Exact
+retries are `NOOP`; conflicting or partial role state quarantines and rolls
+back; changed VERIFIED content is invalidated before later reconciliation;
+REJECTED content is not auto-reopened; auto-publish and contribution events are
+not emitted.
+
+```text
+ACTOR_CONTRACT_PRESERVED=YES
+LICENSE_CONTRACT_PRESERVED=YES
+AUTO_REGISTER_LICENSES=NO
+DATABASE_TARGET_AUTHORIZATION_PRESERVED=YES
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+SECRET_HANDLING=PASS
+INDIRECT_TRANSLATION_INFERENCE=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+LIVE_TATOEBA_CALLS_DURING_TESTS=0
+```
+
+Verification on the Backend branch passed 19 Tatoeba-focused suites / 113
+tests, 63 full unit suites / 431 tests, 13 e2e suites / 58 tests, typecheck,
+lint, build, high-severity audit, and `git diff --check`. The audit reported
+no high/critical findings and two moderate transitive `multer` advisories.
+No migration command, database runtime, dataset, or live Tatoeba call was
+used. The complete evidence is in
+`evidence/PHASE-08D3C-TATOEBA-DIRECT-TRANSLATION-IMPLEMENTATION.md`.
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+LNG_08_007=PLANNED
+LNG_08_008=PLANNED
+NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
+```
