@@ -2753,3 +2753,54 @@ NEXT_ACTION=READY_FOR_NEXT_08D3_TASK
 Runtime evidence remains sanitized and records no database URL, password,
 secret query parameters, or unnecessary personal data. The next task is
 documented only as ready/planned; it was not started by this closeout.
+
+## Phase 08D3D implementation / verification preparation
+
+The authoritative D2 decomposition defines `08D3D` as `TEST database
+verification and publication`, a sub-slice of the accepted `LNG_08_006`
+adapter task. This preparation determined that publication means sanitized
+TEST runtime evidence plus the normal review/publication gate. It does not
+mean production/public external publication and does not auto-transition an
+imported resource from `COMMUNITY_REVIEW` to `VERIFIED`.
+
+The importer lifecycle and review contract remain `DRAFT -> COMMUNITY_REVIEW`
+with explicit reviewer-authorized `VERIFY` as the separate normal review gate.
+No D3D runtime publication, TEST database connection, database write, live
+Tatoeba call, deployment, or merge was performed.
+
+Detailed evidence is recorded in
+`evidence/PHASE-08D3D-TATOEBA-TEST-VERIFICATION-PREP.md`.
+
+```text
+PHASE_08D3D_IMPLEMENTATION=PASS
+08D3D_SCOPE=TEST database verification and publication only
+PUBLICATION_MEANING=SANITIZED_TEST_RUNTIME_EVIDENCE_AND_NORMAL_REVIEW_PUBLICATION_GATE
+PUBLICATION_TARGET_ENVIRONMENT=TEST
+BACKEND_SHA=b4b922e86f15d6bd405cbea669d58d1fa18b5554
+BACKEND_CODE_CHANGED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+LIVE_TATOEBA_CALLS_DURING_TESTS=0
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+FOCUSED_TESTS=8 suites / 53 tests PASS
+BACKEND_TESTS=63 suites / 439 tests PASS
+BACKEND_E2E=13 suites / 58 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS (0 high/critical; 2 known moderate transitive multer advisories)
+GIT_DIFF_CHECK=PASS
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
+```
+
+The next gate is external review of the D3D preparation. A separate
+TEST-only runtime verification/publication task must be authorized after that
+review; 08D3D does not start any later Phase 08 task automatically.
