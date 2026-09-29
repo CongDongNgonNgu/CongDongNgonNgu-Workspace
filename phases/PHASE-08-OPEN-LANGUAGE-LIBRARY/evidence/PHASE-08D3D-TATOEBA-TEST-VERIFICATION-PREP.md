@@ -48,13 +48,15 @@ Tatoeba sentence and translation import ends at `COMMUNITY_REVIEW` and never
 auto-verifies or auto-publishes. The existing reviewer gate requires an
 explicit MODERATOR/ADMIN reviewer, active moderation, complete provenance, and
 current safe licenses; self-verification and invalid transitions fail closed.
-D3D preparation does not execute that reviewer transition. The later runtime
-gate must remain TEST-only and separately authorized.
+D3D preparation does not execute that reviewer transition. The public
+projection target is `VERIFIED` only after that normal human review gate. The
+later runtime gate must remain TEST-only and separately authorized.
 
 ```text
 PUBLICATION_MEANING=SANITIZED_TEST_RUNTIME_EVIDENCE_AND_NORMAL_REVIEW_PUBLICATION_GATE
 PUBLICATION_TARGET_ENVIRONMENT=TEST
-TARGET_PUBLICATION_STATE=COMMUNITY_REVIEW
+IMPORTER_RUNTIME_STATE=COMMUNITY_REVIEW
+TARGET_PUBLICATION_STATE=VERIFIED
 AUTO_VERIFY_IMPORTED_RESOURCE=NO
 AUTO_PUBLISH=NO
 PUBLICATION_STATE_TRANSITION=NOT_APPLICABLE_DURING_PREPARATION

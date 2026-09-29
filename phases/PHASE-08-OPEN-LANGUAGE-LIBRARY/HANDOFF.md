@@ -2765,6 +2765,9 @@ imported resource from `COMMUNITY_REVIEW` to `VERIFIED`.
 
 The importer lifecycle and review contract remain `DRAFT -> COMMUNITY_REVIEW`
 with explicit reviewer-authorized `VERIFY` as the separate normal review gate.
+The public projection target is `VERIFIED` only after that human reviewer
+gate; the importer’s `COMMUNITY_REVIEW` result is intentionally not published
+automatically.
 No D3D runtime publication, TEST database connection, database write, live
 Tatoeba call, deployment, or merge was performed.
 
