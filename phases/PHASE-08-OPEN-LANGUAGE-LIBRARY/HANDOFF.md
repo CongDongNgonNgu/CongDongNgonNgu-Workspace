@@ -2924,3 +2924,80 @@ NEXT_ACTION=READY_FOR_NEXT_PHASE_08_TASK
 
 The next documented Phase 08 task is `LNG_08_007 — Correction/Q&A Candidate
 Integration`; it remains planned and was not started by this closeout.
+
+## Phase 08 LNG-08-007 implementation
+
+LNG-08-007 is implemented on the Backend feature branch and remains pending
+external review. The authoritative task defines candidate consumption and
+review handoff but does not define an automatic mapping from correction/Q&A
+kind to a single Library resource type. The implementation therefore keeps
+the destination resource type/details reviewer-owned and normalized, while
+deriving every Phase 06 source identity and contributor reference from the
+canonical pending candidate.
+
+The atomic path supports both `CORRECTION_PROPOSAL` and `QA_ANSWER`. It
+revalidates the post/response/acceptance/candidate bundle, requires an
+explicit `MODERATOR` or `ADMIN` actor and an existing active
+redistribution-safe license, then creates or reconciles one public Library
+resource with `PHASE06_LIBRARY_CANDIDATE` provenance and a normal
+`DRAFT -> COMMUNITY_REVIEW` `SUBMIT` audit. Candidate-scoped locking,
+deterministic payload reconciliation, partial-state recovery, rollback, and
+source/provenance/audit deduplication are covered. The candidate remains
+pending; no canonical sentence/translation mutation, relationship creation,
+automatic correction application, automatic Q&A publication, or automatic
+approval occurs. No migration or Frontend change was made.
+
+Detailed scope and evidence are recorded in
+`evidence/PHASE-08-LNG-08-007-CANDIDATE-INTEGRATION-IMPLEMENTATION.md`.
+
+```text
+PHASE_08_LNG_08_007_IMPLEMENTATION=PASS
+08D3D_TASK_ID=LNG_08_006
+08D3D_TASK_STATUS=PASS
+LNG_08_007_TASK_STATUS=VERIFYING
+BACKEND_BRANCH=phase-08-lng-08-007-candidate-integration
+BACKEND_BASE_SHA=b4b922e86f15d6bd405cbea669d58d1fa18b5554
+BACKEND_SHA=d352da974bed2f3d1828762a3f486d43dab840e6
+WORKSPACE_BASE_SHA=da3d0110bcc720fdacf9c7fffd6acf2eae4df496
+CORRECTION_CANDIDATE_IN_SCOPE=YES
+QA_CANDIDATE_IN_SCOPE=YES
+CANDIDATE_SOURCE_CONTRACT=PASS
+CANONICAL_RESOURCE_MUTATION=NO
+CANDIDATE_RECONCILIATION=PASS
+CONCURRENT_RETRY=PASS
+PROVENANCE=PASS
+AUDIT_CONTRACT=PASS
+CANDIDATE_STATE_CONTRACT=PASS
+AUTO_APPROVE=NO
+CORRECTION_AUTO_APPLY=NO
+QA_AUTO_PUBLISH=NO
+TRANSACTIONAL_INTEGRITY=PASS
+FAILURE_ROLLBACK=PASS
+ACTOR_CONTRACT_PRESERVED=YES
+ACTOR_DISCOVERY=NONE
+LICENSE_CONTRACT_PRESERVED=YES
+AUTO_REGISTER_LICENSES=NO
+LIVE_EXTERNAL_CALLS_DURING_TESTS=0
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+FOCUSED_CANDIDATE_TESTS=2 suites / 10 tests PASS
+BACKEND_TESTS=65 suites / 449 tests PASS
+BACKEND_E2E=13 suites / 59 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS_WITH_2_MODERATE_PRE_EXISTING_MULTER_ADVISORIES
+GIT_DIFF_CHECK=PASS
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
+```
+
+LNG-08-007 is not marked accepted, Phase 08 is not marked complete, and no
+later task was started.
