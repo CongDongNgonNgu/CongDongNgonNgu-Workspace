@@ -44,7 +44,7 @@ fail closed without selecting a winner.
 ## Independent review results
 
 ```text
-PHASE_08_LNG_08_008_EXTERNAL_REVIEW=PASS
+PHASE_08_LNG_08_008_EXTERNAL_REVIEW=FAIL
 BACKEND_REVIEWED_SHA=7877184d4ce44cd2d43f8eefd58c9f2935adf623
 WORKSPACE_BASE_SHA=0a077a56c2363bfa7cd556240b29a920f0609d28
 BACKEND_BRANCH=phase-08-lng-08-008-sentence-reconciliation
@@ -127,7 +127,7 @@ MIGRATION_REQUIRED=NO
 MIGRATION_CREATED=NO
 MIGRATIONS_0001_0011=UNCHANGED
 
-FOCUSED_TESTS=sentence reconciliation suite 15/15 PASS; all Tatoeba importer suites 18/18 suites, 123/123 tests PASS
+FOCUSED_TESTS=FAIL: sentence reconciliation suite 15/15 PASS and all Tatoeba importer suites 18/18 suites, 123/123 tests PASS, but no executable sentence REJECTED_NO_REOPEN classification test exists
 BACKEND_TESTS=65 suites, 471 tests PASS
 BACKEND_E2E=13 suites, 59 tests PASS
 TYPECHECK=PASS
@@ -141,8 +141,8 @@ DEPLOYED=NO
 MERGED_TO_MAIN=NO
 CURRENT_PHASE=08
 PHASE_08=IN_PROGRESS
-REVIEW_FINDINGS=NONE
-NEXT_ACTION=READY_FOR_LNG_08_008_RUNTIME_VERIFICATION
+REVIEW_FINDINGS=IMPORTANT: add a focused sentence REJECTED_NO_REOPEN quarantine test covering changed facts, zero writes, rollback, and exact retry before runtime verification
+NEXT_ACTION=REMEDIATION_REQUIRED
 ```
 
 ## Evidence basis and boundaries
@@ -159,6 +159,7 @@ NEXT_ACTION=READY_FOR_LNG_08_008_RUNTIME_VERIFICATION
 - The only review artifact added by this review is this sanitized Workspace
   evidence file. No Backend code or commit was created by the review.
 
-This evidence records external review PASS only. It does not mark the task
-accepted and does not authorize runtime reconciliation or the next Phase 08
-task.
+The implementation code path for rejected resources is fail-closed on changed
+facts, but the required executable classification evidence is incomplete. This
+review therefore does not accept LNG-08-008 and does not authorize runtime
+reconciliation or the next Phase 08 task.
