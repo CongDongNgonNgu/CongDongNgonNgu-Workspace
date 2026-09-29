@@ -3163,3 +3163,70 @@ NEXT_ACTION=READY_FOR_NEXT_PHASE_08_TASK
 
 LNG-08-007 is accepted as `PASS`. Phase 08 remains `IN_PROGRESS`; the next
 task is projected only and was not started by this closeout.
+
+## Phase 08 LNG-08-008 Library Reconciliation implementation
+
+LNG-08-008 is now implemented on a bounded first atomic unit and remains
+pending external review. The authoritative documents define reconciliation
+acceptance obligations but do not define a whole-Library endpoint or a new
+batch protocol. The selected scope is one exact Tatoeba `OPEN_DATASET`
+`SENTENCE` identity per transaction, using the existing
+`TATOEBA:SENTENCE:<id>` source identity and
+`OPEN_DATASET:TATOEBA:SENTENCE:<id>` advisory lock.
+
+The implementation reconciles only the canonical resource, sentence,
+provenance, review state, and review-audit history for that identity. It
+supports `CREATED`, `NOOP`, `RECONCILED`, `INVALIDATED`, and the documented
+fail-closed quarantine paths for duplicate identity, partial/ambiguous state,
+canonical/provenance conflict, audit/history drift, and rejected no-reopen.
+It never chooses a winner for ambiguous records, reassigns external identity,
+auto-approves, or auto-publishes. Translation, Phase 06 candidate integration,
+bulk scans, contribution flow, frontend, deployment, and production mutation
+remain out of scope.
+
+Detailed evidence is recorded in
+`evidence/PHASE-08-LNG-08-008-LIBRARY-RECONCILIATION-IMPLEMENTATION.md`.
+
+```text
+PHASE_08_LNG_08_008_IMPLEMENTATION=PASS
+LNG_08_008_TASK_ID=LNG_08_008
+LNG_08_008_TASK_STATUS=VERIFYING
+BACKEND_BEFORE_SHA=76b02cd25865530fc626f57474fec1acc0e54e53
+BACKEND_AFTER_SHA=7877184d4ce44cd2d43f8eefd58c9f2935adf623
+BACKEND_BRANCH=phase-08-lng-08-008-sentence-reconciliation
+WORKSPACE_BEFORE_SHA=21dbb05d378553a2070559d5f06544b5fb9d439e
+RECONCILIATION_IDENTITY_DETERMINISTIC=YES
+AUTO_REPAIR_ALLOWED=YES
+AMBIGUOUS_RECONCILIATION_FAIL_CLOSED=PASS
+CONFLICT_RECONCILIATION_FAIL_CLOSED=PASS
+PROVENANCE_RECONCILIATION=PASS
+AUDIT_RECONCILIATION=PASS
+STATE_HISTORY_RECONCILIATION=PASS
+EXACT_RETRY=PASS
+CONCURRENCY_PROTECTION=PASS
+TRANSACTIONAL_INTEGRITY=PASS
+FAILURE_ROLLBACK=PASS
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+FOCUSED_TESTS=1 suite / 15 tests PASS
+BACKEND_TESTS=65 suites / 471 tests PASS
+BACKEND_E2E=13 suites / 59 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS_OFFLINE_0_VULNERABILITIES
+LIVE_EXTERNAL_CALLS_DURING_TESTS=0
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
+```
+
+No runtime database verification was started automatically. LNG-08-008 is not
+accepted; the next gate is external review of the bounded reconciliation
+contract.

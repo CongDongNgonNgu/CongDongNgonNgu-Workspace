@@ -47,7 +47,7 @@ Before code, re-check current Tatoeba download/license/attribution requirements 
 Consume provenance-aware candidates from Phase 06 and send them through review. Preserve source post/correction contributor links subject to visibility/privacy policy. Never treat accepted-by-asker as verified automatically.
 
 ## LNG-08-008 — Library Reconciliation
-**Status:** PLANNED
+**Status:** VERIFYING
 **Depends on:** LNG-08-001..007 as applicable
 
 Test provenance preservation, duplicate imports, review permissions, public visibility, search/filter, contribution consent and source invalidation. Complete responsive/a11y/visual tests, commits/CI and handoff.
