@@ -139,3 +139,67 @@ LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
 ```
+
+## Sentence reference contract remediation
+
+The external review identified one blocking gap in the original implementation:
+translation endpoint IDs and text were validated, but the write path did not
+prove that either `TATOEBA:SENTENCE:<id>` resolved to an existing canonical
+`SENTENCE` resource. The original implementation record above is retained as
+history; this section records the remediation.
+
+The translation transaction now resolves both endpoint identities through the
+existing `OPEN_DATASET` provenance mapping before creating or reconciling a
+translation. The lookup locks the resolved resource rows in deterministic
+sentence-ID order, requires exactly one mapping per endpoint, enforces
+`resource_type=SENTENCE`, checks the canonical language and exact text, and
+checks the stored source URL, license key, attribution, owner, import batch,
+and snapshot identity. Missing, ambiguous, non-sentence, mismatched, or
+shared-resource endpoint mappings quarantine and roll back before any
+translation, provenance, audit, or state write. 08D3C still never creates
+sentence resources; that remains owned by 08D3B2.
+
+```text
+PHASE_08D3C_SENTENCE_REFERENCE_REMEDIATION=PASS
+BACKEND_REMEDIATION_SHA=b4b922e86f15d6bd405cbea669d58d1fa18b5554
+SOURCE_SENTENCE_CANONICAL_LOOKUP=PASS
+TARGET_SENTENCE_CANONICAL_LOOKUP=PASS
+SENTENCE_REFERENCE_CONTRACT=PASS
+RESOURCE_TYPE_ENFORCEMENT=PASS
+EXTERNAL_IDENTITY_MAPPING=PASS
+AMBIGUOUS_MAPPING_FAIL_CLOSED=PASS
+08D3C_CREATES_SENTENCE_RESOURCES=NO
+SOURCE_MISSING_FAIL_CLOSED=PASS
+TARGET_MISSING_FAIL_CLOSED=PASS
+BOTH_MISSING_FAIL_CLOSED=PASS
+NON_SENTENCE_ENDPOINT_FAIL_CLOSED=PASS
+UNRELATED_CANONICAL_RESOURCE_FAIL_CLOSED=PASS
+FAILED_ENDPOINT_TRANSLATION_WRITES=0
+FAILED_ENDPOINT_PROVENANCE_WRITES=0
+FAILED_ENDPOINT_AUDIT_WRITES=0
+TRANSACTIONAL_INTEGRITY=PASS
+FAILURE_ROLLBACK=PASS
+LIVE_TATOEBA_CALLS_DURING_TESTS=0
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+```
+
+Focused Tatoeba coverage is 18 suites / 118 tests PASS; the affected
+translation repository is 17 tests PASS. Full Backend verification is 63
+suites / 439 tests PASS, 13 e2e suites / 58 tests PASS, typecheck PASS, lint
+PASS, build PASS, audit PASS at the high-severity threshold (two existing
+moderate transitive multer advisories), and `git diff --check` PASS. No
+database, live Tatoeba endpoint, migration, or frontend was accessed or
+modified.
+
+This remediation is not 08D3C acceptance. The branch remains gated for an
+external-review retry:
+
+```text
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+PHASE_08D3C_EXTERNAL_REVIEW=RETRY_REQUIRED
+NEXT_ACTION=EXTERNAL_REVIEW_RETRY
+```
