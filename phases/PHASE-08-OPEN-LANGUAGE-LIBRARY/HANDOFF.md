@@ -3001,3 +3001,62 @@ NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
 
 LNG-08-007 is not marked accepted, Phase 08 is not marked complete, and no
 later task was started.
+
+## Phase 08 LNG-08-007 controlled TEST runtime verification retry
+
+The approved TEST target, explicit ADMIN reviewer, exact Phase 06 correction
+candidate, and canonical community source passed read-only preflight. The
+candidate accepted timestamp mapped to the exact millisecond value
+`2026-09-16T05:49:31.627Z`; the earlier precision-loss failure was not
+reproduced. One reviewer-owned normalized `SENTENCE` resource was created
+with pre-existing `CC0_1_0` provenance and a normal `DRAFT -> COMMUNITY_REVIEW`
+`SUBMIT` audit. The exact retry reconciled to the same resource without
+duplicate provenance or audit evidence. The source community post digest was
+identical before and after integration.
+
+The runtime negative checks all failed closed with zero persistent row-count
+delta. No external service, production database, role, license, canonical
+community source, sentence, or translation fact was changed. The source post
+is a `COMMUNITY_POST` canonical resource whose valid community subtype is
+`CORRECTION_REQUEST`; the TEST registry had no `COMMUNITY-V1`, so the
+reviewer-owned contract used the existing active redistribution-safe
+`CC0_1_0` license without registration.
+
+Detailed sanitized evidence is recorded in
+`evidence/PHASE-08-LNG-08-007-TEST-RUNTIME-VERIFICATION-RETRY.md`.
+
+```text
+PHASE_08_LNG_08_007_TEST_RUNTIME_VERIFICATION_RETRY=PASS
+BACKEND_SHA=76b02cd25865530fc626f57474fec1acc0e54e53
+WORKSPACE_BASE_SHA=cee2dd5bb7ed07042d00840e40bdcee3e7156bce
+LNG_08_007_TASK_STATUS=VERIFYING
+PHASE_06_CANDIDATE_ID=199cc4de-7fc1-4601-81d2-02264aefe32b
+CANDIDATE_TYPE=CORRECTION
+REVIEWER_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+SOURCE_CANONICAL_RESOURCE_ID=0a7034f1-f89e-4527-85c5-befecaebbc47
+SOURCE_CANONICAL_RESOURCE_TYPE=COMMUNITY_POST
+RUNTIME_ACCEPTED_AT_SOURCE=2026-09-16T05:49:31.627Z
+RUNTIME_ACCEPTED_AT_MAPPED=2026-09-16T05:49:31.627Z
+CANONICAL_LIBRARY_RESOURCE_ID=67ca2b3f-192d-4d99-8689-2b1130abaf0c
+FIRST_INTEGRATION=PASS
+EXACT_RETRY=PASS
+FINAL_LIBRARY_RESOURCE_STATE=COMMUNITY_REVIEW
+LIBRARY_RESOURCE_DUPLICATES=0
+PROVENANCE_DUPLICATES=0
+AUDIT_DUPLICATES=0
+AUTHORIZED_TEST_ROWS_CREATED=4
+AUTHORIZED_TEST_ROWS_UPDATED=1
+LIVE_EXTERNAL_CALLS=0
+TEST_DB_MUTATED=YES
+PRODUCTION_DB_MUTATED=NO
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+NEXT_ACTION=READY_FOR_LNG_08_007_ACCEPTANCE
+```
+
+LNG-08-007 remains unaccepted and no later Phase 08 task was started.
