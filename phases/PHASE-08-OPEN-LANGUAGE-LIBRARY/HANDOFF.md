@@ -2692,3 +2692,64 @@ rows. The resulting resource remains in `COMMUNITY_REVIEW`; auto-publish was
 not performed. The two existing sentence resources remained unchanged and no
 sentence rows were created or updated by 08D3C. This is runtime verification
 evidence only; 08D3C acceptance remains a separate gate.
+
+## Phase 08D3C acceptance closeout
+
+The authoritative Workspace task mapping is the parent adapter task
+`LNG_08_006`; 08D3C is a completed direct-translation sub-slice and does not
+receive an invented task ID. The implementation, sentence-reference
+remediation, external-review retry, and controlled TEST runtime evidence now
+satisfy the documented 08D3C acceptance criteria. No Backend source, Frontend
+source, or database was changed during this closeout.
+
+```text
+PHASE_08D3C_ACCEPTANCE=PASS
+BACKEND_SHA=b4b922e86f15d6bd405cbea669d58d1fa18b5554
+WORKSPACE_BEFORE_SHA=627223488d87f7b3ce5c040831e036697f258c02
+08D3C_TASK_ID=LNG_08_006
+08D3C_TASK_STATUS=PASS
+IMPLEMENTATION_EVIDENCE=PASS
+REMEDIATION_EVIDENCE=PASS
+EXTERNAL_REVIEW_EVIDENCE=PASS
+TEST_RUNTIME_EVIDENCE=PASS
+SENTENCE_REFERENCE_CONTRACT=PASS
+DIRECT_ONLY_SEMANTICS=PASS
+INDIRECT_TRANSLATION_INFERENCE=NO
+IMPORT_BATCH_COMPATIBILITY=PASS
+SNAPSHOT_COMPATIBILITY=PASS
+SOURCE_PROVIDER_COMPATIBILITY=PASS
+TRANSLATION_RECONCILIATION=PASS
+IDEMPOTENT_RUNTIME_RETRY=PASS
+CANONICAL_TRANSLATION_ID=e726c590-3161-46cd-aa90-698b6eab8df9
+CANONICAL_TRANSLATION_ID_STABLE=YES
+TRANSLATION_DUPLICATES=0
+PROVENANCE_DUPLICATES=0
+AUDIT_DUPLICATES=0
+CONCURRENCY_PROTECTION=PASS
+PROVENANCE=PASS
+AUDIT_CONTRACT=PASS
+STATE_TRANSITION=PASS
+AUTO_PUBLISH=NO
+SOURCE_SENTENCE_UNCHANGED=YES
+TARGET_SENTENCE_UNCHANGED=YES
+08D3C_SENTENCE_ROWS_CREATED=0
+FAIL_CLOSED_CONTRACT=PASS
+PRODUCTION_DB_MUTATED=NO
+MIGRATION_REQUIRED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+NEXT_08D3_TASK_ID=08D3D
+NEXT_08D3_TASK_NAME=TEST database verification and publication
+NEXT_08D3_TASK_STATUS=PLANNED
+NEXT_ACTION=READY_FOR_NEXT_08D3_TASK
+```
+
+Runtime evidence remains sanitized and records no database URL, password,
+secret query parameters, or unnecessary personal data. The next task is
+documented only as ready/planned; it was not started by this closeout.
