@@ -139,3 +139,78 @@ LNG_08_007=PLANNED
 LNG_08_008=PLANNED
 NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
 ```
+
+## Phase 08D3B2 controlled TEST runtime verification
+
+After the implementation review passed, one bounded static candidate was run
+against the explicitly approved TEST database. The candidate was not fetched
+from Tatoeba; no live Tatoeba request or dataset download occurred.
+
+```text
+PHASE_08D3B2_TEST_RUNTIME_VERIFICATION=PASS
+ENVIRONMENT=TEST
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_HOST_TARGET_CHECK=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+ACTOR_RUNTIME_PREFLIGHT=PASS
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+CC_BY_RUNTIME_PREFLIGHT=PASS
+CC0_RUNTIME_PREFLIGHT=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+RUNTIME_FIXTURE_SOURCE=TATOEBA:SENTENCE:9999999999999999999999999999999999999999
+LIVE_TATOEBA_CALLS=0
+```
+
+The first import returned `CREATED` and produced canonical resource
+`2909ae60-def7-44f8-aa7e-07c7ba22d8c3`. A byte-for-byte logical retry returned
+`NOOP` with the same resource. Read-only verification found one source-linked
+SENTENCE resource, one provenance row, one exact `SUBMIT` audit, final
+`COMMUNITY_REVIEW`, and no contribution event.
+
+```text
+FIRST_IMPORT=PASS
+SENTENCE_RESOURCE_CONTRACT=PASS
+PROVENANCE=PASS
+SUBMIT_AUDIT=PASS
+COMMUNITY_REVIEW_TRANSITION=PASS
+AUTO_PUBLISH=NO
+EXACT_RETRY=PASS
+IDEMPOTENT_RUNTIME_RETRY=PASS
+CANONICAL_SENTENCE_DUPLICATES=0
+PROVENANCE_DUPLICATES=0
+AUDIT_DUPLICATES=0
+ADVISORY_LOCK_RUNTIME=PASS
+RECONCILIATION_RUNTIME=PASS
+TEST_DB_MUTATED=YES
+AUTHORIZED_TEST_ROWS_CREATED=4
+AUTHORIZED_TEST_ROWS_UPDATED=1
+UNRELATED_DB_ROWS_MODIFIED=NO
+PRODUCTION_DB_MUTATED=NO
+```
+
+The authorized writes were limited to the sentence resource, sentence
+content, its `OPEN_DATASET` provenance, and its `SUBMIT` review audit; the
+resource transition updated the same authorized resource. The exact retry
+created no additional durable rows and made no state change. The actor and
+license registry were revalidated only; no user, license, language,
+translation, moderation, contribution, bulk-job, or production records were
+written.
+
+```text
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+RUNTIME_FINDINGS=NONE
+NEXT_ACTION=READY_FOR_08D3B2_ACCEPTANCE
+```
