@@ -41,7 +41,7 @@ Create reviewer queue, approve/reject/request-change if needed, evidence/notes a
 Before code, re-check current Tatoeba download/license/attribution requirements from authoritative source. If compatible, implement bounded importer preserving source IDs, languages, sentence/translation relationships, attribution/license and import batch; validate encoding and deduplicate idempotently. If current terms are incompatible/unclear, mark BLOCKED_EXTERNAL and do not ingest.
 
 ## LNG-08-007 — Correction/Q&A Candidate Integration
-**Status:** VERIFYING
+**Status:** PASS
 **Depends on:** Phase 06, LNG-08-005
 
 Consume provenance-aware candidates from Phase 06 and send them through review. Preserve source post/correction contributor links subject to visibility/privacy policy. Never treat accepted-by-asker as verified automatically.
