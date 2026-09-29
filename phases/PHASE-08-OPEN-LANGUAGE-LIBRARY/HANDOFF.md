@@ -2807,3 +2807,54 @@ NEXT_ACTION=EXTERNAL_REVIEW_REQUIRED
 The next gate is external review of the D3D preparation. A separate
 TEST-only runtime verification/publication task must be authorized after that
 review; 08D3D does not start any later Phase 08 task automatically.
+
+## Phase 08D3D TEST runtime verification
+
+The authorized TEST-only D3D verification has now completed in read-only
+mode. The approved source sentence, target sentence, canonical translation,
+provenance, batch/snapshot/provider, license, actor, duplicate, and normal
+review readiness checks all passed. `TARGET_PUBLICATION_STATE=VERIFIED` is a
+sanitized readiness result; the persisted importer resource remains in
+`COMMUNITY_REVIEW`, with no publication transition or publication write.
+
+```text
+PHASE_08D3D_TEST_RUNTIME_VERIFICATION=PASS
+BACKEND_SHA=b4b922e86f15d6bd405cbea669d58d1fa18b5554
+WORKSPACE_RUNTIME_EVIDENCE=SANITIZED
+ENVIRONMENT=TEST
+TEST_ADMIN_ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+SOURCE_CANONICAL_SENTENCE_ID=2909ae60-def7-44f8-aa7e-07c7ba22d8c3
+TARGET_CANONICAL_SENTENCE_ID=0cd78981-c1d6-4f24-982a-cc6703ca7046
+CANONICAL_TRANSLATION_ID=e726c590-3161-46cd-aa90-698b6eab8df9
+IMPORT_BATCH_ID=tatoeba-08d3b2-runtime
+SNAPSHOT_ID=TATOEBA-SNAPSHOT-08D3B2-RUNTIME
+SOURCE_PROVIDER=TATOEBA
+DB_TRANSACTION_MODE=READ_ONLY
+RUNTIME_DATABASE_READS=YES
+RUNTIME_DATABASE_WRITES=0
+PUBLICATION_STATE_TRANSITION=NOT_APPLICABLE
+PUBLICATION_DB_WRITES=0
+AUTO_PUBLISH=NO
+CANONICAL_SENTENCE_DUPLICATES=0
+TRANSLATION_DUPLICATES=0
+PROVENANCE_DUPLICATES=0
+AUDIT_DUPLICATES=0
+LIVE_TATOEBA_CALLS=0
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+FOCUSED_TESTS=13 suites / 81 tests PASS
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+LNG_08_006=PASS
+08D3D=RUNTIME_VERIFIED
+NEXT_ACTION=READY_FOR_08D3D_ACCEPTANCE
+```
+
+The detailed sanitized runtime record is in
+`evidence/PHASE-08D3D-TATOEBA-TEST-VERIFICATION-PREP.md`. No Backend code,
+Frontend code, migration, deployment, merge, or database mutation was made
+by this runtime verification.
