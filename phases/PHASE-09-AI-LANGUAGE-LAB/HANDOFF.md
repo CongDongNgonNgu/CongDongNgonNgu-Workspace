@@ -12,10 +12,10 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09F=VERIFYING`.
-Current task: `LNG-09-008` is implemented, locally committed and validated;
-the grouped 09F feature-branch publication gate is pending explicit
-authorization. Phase 09 remains IN_PROGRESS and is not marked DONE.
+Current subphase: `PHASE_09F=DONE`.
+Current task: `LNG-09-008` is implemented, validated, evidenced and published
+on its scoped Backend and Workspace feature branches. Phase 09 is ready for
+the final gate, remains IN_PROGRESS, and is not marked DONE.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -304,7 +304,7 @@ state and sanitized evidence follow below.
 ## PHASE_09F sanitized evidence
 
 ```text
-PHASE_09F_RESULT=BLOCKED
+PHASE_09F_RESULT=PASS
 PHASE_SCOPE=Prompt-injection, malformed-output, outage, timeout, rate/quota, retry-charge, privacy, cost reconciliation, responsive, accessibility, CI, and final phase evidence gates for the provider-neutral Phase 09 AI runtime; preserve 09A-09E and do not add provider, billing, schema or production behavior.
 TASKS_INCLUDED=LNG-09-008
 TASKS_COMPLETED=LNG-09-008
@@ -353,19 +353,20 @@ RESPONSIVE_A11Y=PASS (09E accepted UI unchanged)
 DEPLOYED=NO
 MERGED_TO_MAIN=NO
 PHASE_09_TASK_SET_COMPLETE=YES
-PHASE_09_FINAL_GATE_READY=NO
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09F_FEATURE_BRANCHES
+PHASE_09_FINAL_GATE_READY=YES
+BLOCKERS=NONE
 CURRENT_PHASE=09
 CURRENT_SUBPHASE=09F
-SUBPHASE_STATUS=BLOCKED
-NEXT_RECOMMENDED_SUBPHASE=09F
-NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=NONE
+NEXT_ACTION=REQUEST_NEXT_PROMPT
 ```
 
 The 09F local implementation is Backend commit
 `8f2eebaf912d664893afbec885eddb7c49b88a06` on branch
 `phase-09f-safety-cost-reconciliation`. The Frontend branch is unchanged at
-`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`; the Workspace branch contains the
-local evidence/state update on the same branch. No branch was pushed, merged
-or deployed for 09F. The blocker is grouped publication authorization for
-Backend, Frontend and Workspace, not an implementation or test failure.
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`; the Workspace publication branch
+was verified at `fdf6c3c5c0053022325e950a500c9a877658cdeb` before this final
+state sync. Backend and Workspace were pushed and verified; Frontend had no
+09F source changes and required no new publication. No branch was merged or
+deployed. The next mandatory action is the Phase 09 final-gate prompt.

@@ -89,19 +89,23 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution evidence/date: grouped authorization was received; Backend, Frontend and Workspace `phase-09e-learn-from-community-library` branches were pushed and remote heads verified at `1e5c15635a628d864c7c74847cff25ded779ccdf`, `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`, and `2dde127619c575ee8c67bda8a5f1dff68274c990`, respectively, 2026-09-30. Feature-branch CI was not triggered because the repository workflows run only on `main` pushes and pull requests targeting `main`.
   - Safe work that may continue: mandatory relay to obtain the next prompt for Phase 09F; no merge or deployment was attempted.
 
-- BLOCKER-09F-001 / LNG-09-008 / `BLOCKED_EXTERNAL` / OPEN
+- BLOCKER-09F-001 / LNG-09-008 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: 09F Backend implementation, focused/full unit tests, E2E,
     typecheck, lint, build, online audit, deterministic runtime checks and
     review passed locally on 2026-09-30. Backend local head is
     `8f2eebaf912d664893afbec885eddb7c49b88a06`; Frontend remains at accepted
     09E head `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`.
-  - Impact: final remote SHA/publication evidence and the Phase 09 final gate
-    cannot be closed; no branch was pushed, merged or deployed for 09F.
+  - Impact: before resolution, final remote SHA/publication evidence and the
+    Phase 09 final gate could not be closed; no merge or deployment occurred.
   - Resolution owner/dependency: one grouped explicit authorization for
     `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09F_FEATURE_BRANCHES` covering
-    Backend, Frontend and Workspace branch
+    Backend and Workspace branches; Frontend had no 09F source change and
+    required no new publication
     `phase-09f-safety-cost-reconciliation`.
-  - Safe work that may continue: after authorization, push the already
-    verified feature branches, verify remote heads/CI policy, update the final
-    Phase 09 handoff and relay the resulting final-gate prompt. No Phase 10
-    work is authorized.
+  - Resolution evidence/date: authorization received; Backend remote branch
+    `phase-09f-safety-cost-reconciliation` verified at
+    `8f2eebaf912d664893afbec885eddb7c49b88a06`, Workspace at
+    `fdf6c3c5c0053022325e950a500c9a877658cdeb`, 2026-09-30. Workspace state
+    now records `PHASE_09F=DONE` and `PHASE_09_FINAL_GATE_READY=YES`.
+  - Safe work that may continue: request and execute the Phase 09 final-gate
+    prompt; no merge, deployment or Phase 10 work is authorized.

@@ -101,16 +101,21 @@ The next projection is `PHASE_09F` / `LNG-09-008`; it must not start until the
 
 ## 09F execution started
 
-`PHASE_09F` / `LNG-09-008` is now in progress on the scoped
-`phase-09f-safety-cost-reconciliation` branches. Phase 09 final readiness is
-not claimed until safety, cost, reconciliation, regression, evidence and the
-publication gate are reconciled.
+`PHASE_09F` / `LNG-09-008` was executed on the scoped
+`phase-09f-safety-cost-reconciliation` branches. Phase 09 final readiness was
+held until safety, cost, reconciliation, regression, evidence and the
+publication gate were reconciled.
 
 The 09F implementation and local acceptance cycle are now complete. The
 provider-neutral runtime hardens bounded inputs, structured-output failure,
 safe provider/policy error handling, token/cost validation and retry/quota
 integrity. A bounded, pure `ai.usage.reconciliation.v1` report detects
 duplicate identities and invalid usage facts without mutating or persisting
-records. Backend and Workspace changes are committed locally; grouped feature
-branch publication remains pending explicit authorization. No 09F final gate
-or Phase 09 completion is claimed.
+records. Before publication, Backend and Workspace changes were committed
+locally and the final gate was intentionally held. No Phase 09 completion is
+claimed here; the publication and final-gate projection follow below.
+
+The grouped 09F Backend and Workspace feature branches are now published and
+their remote heads are verified. Frontend had no 09F source changes and
+remains at the accepted 09E head. Phase 09 is ready for the final gate only;
+it is not marked DONE and no Phase 10 work has started.

@@ -3,8 +3,8 @@
 Date: 2026-09-30
 Subphase: `PHASE_09F`
 Task: `LNG-09-008`
-Status: local implementation, validation and acceptance complete; grouped
-feature-branch publication is blocked pending explicit authorization.
+Status: complete; grouped Backend and Workspace feature-branch publication
+verified after explicit authorization.
 
 ## Scope reconciled
 
@@ -87,5 +87,9 @@ reviewed. No normal finding remained.
 - Database schema change: NO; migration: NO; test DB mutation: NO; production
   DB mutation: NO; deployment: NO; merge to main: NO.
 - Feature-branch CI is not triggered by direct feature pushes under the
-  repository workflow; local validation is complete. Publication is waiting
-  for grouped explicit authorization for Backend, Frontend and Workspace.
+  repository workflow; local validation is complete. Backend remote branch
+  `phase-09f-safety-cost-reconciliation` is verified at
+  `8f2eebaf912d664893afbec885eddb7c49b88a06`; Workspace publication was
+  verified at `fdf6c3c5c0053022325e950a500c9a877658cdeb` before this final
+  state sync. Frontend had no 09F source changes and required no new push.
+  No merge or deployment was attempted.

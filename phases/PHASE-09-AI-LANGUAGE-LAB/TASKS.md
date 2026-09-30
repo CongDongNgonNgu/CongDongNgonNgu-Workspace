@@ -50,7 +50,7 @@ safe links back to the source where appropriate. It is stateless and creates
 no schema change or canonical resource mutation.
 
 ## LNG-09-008 — AI Safety, Cost & Reconciliation
-**Status:** VERIFYING (local implementation, validation, and evidence complete; publication authorization pending)
+**Status:** DONE (implementation, validation, evidence, and feature-branch publication complete)
 **Depends on:** LNG-09-001..007
 
 Test prompt injection boundaries around retrieved content, output parsing failure, provider outage, timeout, rate/quota exhaustion, duplicate/retry charges, private-content leakage and cost accounting. Complete responsive/a11y/visual, commit/CI and handoff evidence.
