@@ -249,3 +249,101 @@ responsive/a11y states and retry behavior were verified. No raw ledger or
 private moderation/evidence data is exposed. No schema change, migration,
 TEST database mutation, production database mutation or deployment occurred.
 Phase 10E is the next authorized subphase; Phase 11 has not started.
+
+## PHASE_10E final acceptance evidence
+
+```text
+PHASE_10E_RESULT=PASS
+PHASE_10_DECOMPOSITION=10A Ledger + Contribution Rules [LNG-10-001,LNG-10-002]; 10B Learning XP + Streaks [LNG-10-003,LNG-10-004]; 10C Badges + Levels + Anti-Farming [LNG-10-005,LNG-10-006]; 10D Passport/Profile UI [LNG-10-007]; 10E Reconciliation + Final Gate [LNG-10-008]
+PHASE_SCOPE=Bounded deterministic reconciliation of ledger replay/idempotency, reversals, derived XP/reputation balances, rewards, timezone-aware streaks, badges, levels, anti-farming decisions and owner Passport projections.
+TASKS_INCLUDED=LNG-10-008
+TASKS_COMPLETED=LNG-10-008
+BACKEND_BEFORE_SHA=1a75ed7279a0a76f9539c855512a03979a8cac69
+BACKEND_FEATURE_HEAD_SHA=7e1d252b03eab7e6a3200bd8f43efe696489e9bf
+BACKEND_AFTER_SHA=bc62bc0ac4e98df4abc7079236f573e9db7c2ed3
+BACKEND_PR=8
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_POST_MERGE_CI_RUN=40
+FRONTEND_BEFORE_SHA=6358552f23318f5dfd436ef8bd0b1b2cb4e034c7
+FRONTEND_AFTER_SHA=6358552f23318f5dfd436ef8bd0b1b2cb4e034c7
+FRONTEND_CHANGED=NO
+WORKSPACE_BEFORE_SHA=2f1b9a5f9b221922f6ec3abd91dec8a751d9f087
+WORKSPACE_AFTER_SHA=RECORDED_IN_FINAL_STATE_SYNC
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=NOT_REQUIRED
+ACCEPTANCE=PASS
+TESTS=Focused reconciliation 6 tests PASS; Backend full unit 89 suites/600 tests PASS; Backend E2E 13 suites/60 tests PASS; Frontend Phase 10D regression 54 files/242 tests PASS; browser desktop/mobile evidence PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: online npm audit --audit-level=high found 0 vulnerabilities in backend and frontend
+CI=PASS: Backend PR #8 exact head 1/1; backend post-merge CI run #40 on bc62bc0 PASS; Workspace CI NOT_REQUIRED
+RECONCILIATION_NON_DESTRUCTIVE=PASS
+RECONCILIATION_SAFE_REPAIR_BOUNDARY=PASS
+RECONCILIATION_IDEMPOTENCY=PASS
+RULE_VERSION_RECONCILIATION=PASS
+STREAK_RECONCILIATION=PASS
+BADGE_RECONCILIATION=PASS
+LEVEL_RECONCILIATION=PASS
+ANTI_FARMING_RECONCILIATION=PASS
+PASSPORT_PROJECTION_RECONCILIATION=PASS
+RECONCILIATION_AUTHORIZATION=PASS
+RECONCILIATION_PRIVACY=PASS
+ERROR_SANITIZATION=PASS
+SECRET_HANDLING=PASS
+ANOMALY_OBSERVABILITY=PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+MIGRATION_0012=UNCHANGED
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=YES
+BLOCKERS=NONE
+CURRENT_PHASE=10
+CURRENT_SUBPHASE=10E
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=NONE
+NEXT_ACTION=PHASE_10_FINAL_CLOSEOUT
+```
+
+The 10E implementation is a diagnostic-only reconciliation module and test
+suite. It never repairs or persists data, keeps issue output bounded and
+sanitized, preserves the Phase 10A migration baseline, and reuses the
+canonical XP/reputation/streak/badge/level/anti-farming/Passport calculators.
+Backend PR #8 and exact-head post-merge CI passed; the remote and local
+`phase-10e-reconciliation` branches were deleted after merge. Frontend source
+did not change in 10E, so the accepted 10D responsive/a11y/browser evidence
+remains the Phase 10 UI evidence. Workspace final SHA is recorded in the
+subsequent state-sync closeout.
+
+## PHASE 10 final gate and closeout
+
+```text
+PHASE_10_FINAL_CLOSEOUT=PASS
+PHASE_10_RESULT=PASS
+PHASE_10_TASK_SET_COMPLETE=YES
+PHASE_10_FINAL_GATE=PASS
+PHASE_10_CROSS_SUBPHASE_INTEGRITY=PASS
+PHASE_10_FULL_REGRESSION=PASS
+PHASE_10_SECURITY_PRIVACY=PASS
+PHASE_10_DB_MIGRATION_CLOSURE=PASS
+PHASE_10_EXACT_HEAD_CI=PASS
+PHASE_10_WORKSPACE_CONSISTENCY=PASS_PENDING_FINAL_STATE_SYNC
+PHASE_10_MERGE_READINESS=PASS
+PHASE_10_DEPLOYED=NO
+PHASE_10_PRODUCTION_DB_MUTATED=NO
+PHASE_10_TEST_DB_MUTATED=NO
+PHASE_10_DATABASE_SCHEMA_CHANGE=YES (authorized 0012 in 10A; unchanged in 10E)
+PHASE_10_MIGRATION_CREATED=YES (0012 in 10A; none in 10E)
+NEXT_PHASE=11
+NEXT_TASK_ID=LNG-11-001
+NEXT_TASK_NAME=Membership Product & Entitlement Model
+NEXT_TASK_STATUS=READY
+NEXT_ACTION=READY_FOR_NEXT_PHASE_AUTHORIZATION
+```
+
+Phase 10 is fully accepted and no Phase 11 work has started. The remaining
+Workspace state-sync PR only replaces the temporary evidence placeholders
+with verified Workspace main SHAs.

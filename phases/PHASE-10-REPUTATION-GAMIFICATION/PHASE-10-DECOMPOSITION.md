@@ -1,10 +1,15 @@
 # Phase 10 decomposition
 
-Status: `10D` complete; `10E` is ready. The grouping follows the authoritative task
+Status: `10E` complete; the Phase 10 final gate is PASS. The grouping follows the authoritative task
 dependencies in `TASKS.md`; each subphase completes implementation, tests,
 review, evidence, publication and merge gates as one lifecycle.
 
-Current lifecycle: `10A=DONE`, `10B=DONE`, `10C=DONE`, `10D=DONE`, `10E=READY`.
+Current lifecycle: `10A=DONE`, `10B=DONE`, `10C=DONE`, `10D=DONE`, `10E=DONE`.
+
+Phase 10 final gate: `PASS`. The complete task set is reconciled, backend
+post-merge CI is green on the exact merge head, Workspace evidence is being
+published with truthful SHA/state records, merged temporary branches are
+cleaned, and Phase 11 has not started.
 
 ## PHASE_10A — Auditable ledger and contribution rules
 

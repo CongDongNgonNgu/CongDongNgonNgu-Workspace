@@ -2,6 +2,24 @@
 
 Append durable decisions; do not silently rewrite history.
 
+## DEC-024 - Phase 10E bounded reputation reconciliation
+
+Accepted for Phase 10E / LNG-10-008 on 2026-09-30. Reconciliation is a pure,
+bounded, deterministic report over supplied ledger, derived-projection and
+rule facts. It verifies idempotency and duplicate source identities,
+append-only reversal links, derived XP/reputation balances, expected rewards,
+timezone-aware streaks, badge and contributor-level projections, anti-farming
+decisions and the owner Passport projection.
+
+The report exposes only bounded issue codes and sanitized entry/source
+references. It never repairs, persists, rewrites or deletes data; repair
+status is explicitly `NOT_APPLIED` and `mutationApplied` is always false.
+Rule versions remain explicit: `learning-xp-v1`, `community-reputation-v1`,
+`community-gamification-v1` and `community-antifarming-v1`. The Phase 10A
+`0012_phase10_reputation_ledger` migration remains unchanged; no additional
+migration, database write, provider call or deployment is authorized by
+10E. Full evidence is recorded in the Phase 10 handoff.
+
 ## DEC-023 — Phase 10D Passport and profile progress projection
 
 Accepted for Phase 10D on 2026-09-30. The owner Passport may compose the
