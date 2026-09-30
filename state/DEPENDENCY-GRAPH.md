@@ -122,3 +122,30 @@ deployment remain out of scope.
 LNG-08-005 is closed after publication of the accepted Backend and Frontend
 heads. Tatoeba licensing validation is the next bounded task; no LNG-08-006
 implementation has started.
+
+## Current phase state after Phase 08 final-gate acceptance
+
+    CURRENT_PHASE=08
+    PHASE_08=DONE
+    LNG_08_001=DONE
+    LNG_08_002=DONE
+    LNG_08_003=DONE
+    LNG_08_004=DONE
+    LNG_08_005=DONE
+    LNG_08_006=PASS
+    LNG_08_007=PASS
+    LNG_08_008=PASS
+    PHASE_09=READY
+    PHASE_10=READY
+    PHASE_11=BLOCKED_BY_PHASE_10
+    PHASE_12=READY
+    PHASE_15=BLOCKED_BY_PHASE_10_11
+    NEXT_PHASE=09
+    NEXT_TASK_ID=LNG-09-001
+    NEXT_TASK_NAME=AI Provider & Usage Architecture
+    NEXT_TASK_STATUS=PLANNED
+
+Phase 08 is DONE after exact-SHA Backend CI verification and final-gate
+acceptance. Phase 09 is the next selected phase and remains unstarted; its
+first task remains PLANNED. Phase 10 is independently READY from its Phase
+05/06/08 dependencies but was not selected or started.
