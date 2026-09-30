@@ -12,8 +12,9 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09B=DONE`.
-Current task: `LNG-09-002=DONE`.
+Current subphase: `PHASE_09D=BLOCKED_BY_PUBLISH_AUTHORIZATION`.
+Current task: `LNG-09-004` and `LNG-09-005` are locally implemented and
+validated; publication authorization is pending.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -168,3 +169,65 @@ explicit authorization. Remote HEADs were verified as Backend
 `757cd7aa21cd751fdddab28efde358bfd2bb2eca`, and Workspace
 `6332d6ace2358f38ddd3b33ea06f91304e836da2`. No merge or deployment was
 attempted.
+
+## PHASE_09D sanitized evidence
+
+```text
+PHASE_09D_RESULT=BLOCKED
+PHASE_SCOPE=Structured writing correction and grammar practice flows using validated model output and the approved correction presentation pattern.
+TASKS_INCLUDED=LNG-09-004,LNG-09-005
+TASKS_COMPLETED=LNG-09-004,LNG-09-005
+BACKEND_BEFORE_SHA=0390ed85b807d840ff1622a64d0d0dec40a34c39
+BACKEND_AFTER_SHA=62a48bf49291dd57daa8feb85cbac31694380e0b
+FRONTEND_BEFORE_SHA=757cd7aa21cd751fdddab28efde358bfd2bb2eca
+FRONTEND_AFTER_SHA=85fb969e43c54c53780376842fcfac36dd5881bc
+WORKSPACE_BEFORE_SHA=dddfb13080b6b5b0dd18c2b70dc16f29eba36361
+WORKSPACE_AFTER_SHA=PENDING_FINAL_LOCAL_EVIDENCE_COMMIT
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=PASS
+ACCEPTANCE=NOT_COMPLETED
+WRITING_COACHING_CONTRACT=PASS
+GRAMMAR_COACHING_CONTRACT=PASS
+STRUCTURED_OUTPUT_VALIDATION=PASS
+LEARNER_CONTEXT_INTEGRATION=PASS
+PROMPT_ROLE_SEPARATION=PASS
+WRITING_UNTRUSTED_CONTENT_BOUNDARY=PASS
+GRAMMAR_UNTRUSTED_CONTENT_BOUNDARY=PASS
+INPUT_BOUNDS=PASS
+ORIGINAL_CONTENT_INTEGRITY=PASS
+PROVIDER_NEUTRALITY=PASS
+PROVIDER_FAILURE_INTEGRITY=PASS
+USAGE_ACCOUNTING_INTEGRITY=PASS
+RETRY_DUPLICATION_PROTECTION=PASS
+TESTS=Backend focused 09D plus affected 09A-09C tests 4 suites/29 tests PASS; Backend full unit 73 suites/518 tests PASS; Backend E2E 13 suites/59 tests PASS; Frontend focused 2 files/4 tests PASS; Frontend full 51 files/232 tests PASS; browser unauthenticated route and accessibility inspection PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS:0 vulnerabilities
+CI=NOT_TRIGGERED_FEATURE_BRANCH_LOCAL_VALIDATION_PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+LIVE_AI_PROVIDER_CALLS=0
+FRONTEND_CHANGED=YES
+FRONTEND_TESTS=PASS
+RESPONSIVE_A11Y=PASS
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES; Backend branch phase-09d-writing-grammar-coaching at 62a48bf49291dd57daa8feb85cbac31694380e0b; Frontend branch phase-09d-writing-grammar-coaching at 85fb969e43c54c53780376842fcfac36dd5881bc; Workspace final evidence commit not yet published
+CURRENT_PHASE=09
+CURRENT_SUBPHASE=09D
+SUBPHASE_STATUS=BLOCKED
+NEXT_RECOMMENDED_SUBPHASE=09D
+NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+```
+
+The 09D local cycle completed without a schema change, migration, production
+write, merge, deployment, provider credential, or live AI call. The Workspace
+relay protocol is `CODE_BLOCK_V1`; next prompts are extracted from the full
+latest assistant code block and no BEGIN/END markers are required. Stitch
+references used for the 09D UI are project `3718538619973058970`, design
+system `16442026920550574436`, desktop `824e090fa88d4500b7ecb7a6662ce8cb`,
+and mobile `eaf04583f82648fda5c8453985f8a9bf`.

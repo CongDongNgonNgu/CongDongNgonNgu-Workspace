@@ -74,3 +74,9 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution evidence/date: the real non-production MemoryEmailProvider was resolved from the same Nest application process as the local HTTP server; USER_A/B/C completed real register, verify-email, login, and /auth/me flows on Neon TEST, 2026-09-16.
   - Authenticated runtime evidence: correction/question creation, structured responses, Helpful, expected self-vote/non-requester rejection, acceptance change/revoke, responsive checks, accessibility checks, and populated screenshot comparisons are recorded in phases/PHASE-06-CORRECTIONS-QA/evidence/PHASE-06C-IMPLEMENTATION.md.
   - Scope note: OWNER_VISUAL_ACCEPTANCE_06C=YES; LNG-06-003 and LNG-06-004 are DONE; Phase 06D remains not started.
+
+- BLOCKER-09D-001 / LNG-09-004, LNG-09-005 / `BLOCKED_EXTERNAL` / OPEN
+  - Evidence/date: Phase 09D implementation, focused/full tests, E2E, typecheck, lint, build, audit, review, and controlled browser-boundary verification passed locally on 2026-09-30. Backend local head is `62a48bf49291dd57daa8feb85cbac31694380e0b`; Frontend local head is `85fb969e43c54c53780376842fcfac36dd5881bc`.
+  - Impact: the 09D feature branches cannot receive final remote-SHA/CI acceptance evidence, so the subphase cannot be marked DONE or advance to 09E.
+  - Resolution owner/dependency: one explicit authorization for `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES`, covering Backend, Frontend, and the final Workspace evidence commit on `phase-09d-writing-grammar-coaching`.
+  - Safe work that may continue: no implementation change is required; after authorization, push the three exact branches, verify remote heads/CI, update the handoff from BLOCKED to PASS, and relay the sanitized DONE handoff.

@@ -70,10 +70,17 @@ migration.
 
 ## Current execution
 
-`PHASE_09C` implementation, validation, acceptance reconciliation, and
-feature-branch publication are complete. It delivers one provider-neutral
-conversation/roleplay path for `LNG-09-003` and `LNG-09-006`, bounded context,
-ownership checks, honest stop/retry/error/quota states, and the responsive
-Stitch-backed workspace. The slice uses an in-memory repository because no
-database schema change or live provider credential/cost was authorized.
-`PHASE_09D` may start after the handoff relay returns its next prompt.
+`PHASE_09D` implementation, validation, review, controlled runtime boundary,
+and acceptance reconciliation are complete locally for `LNG-09-004` and
+`LNG-09-005`. The slice adds provider-neutral structured writing correction,
+grammar explanations and focused practice, strict schema validation,
+untrusted learner-content boundaries, bounded inputs, original-text
+preservation, quota/rate/usage fail-closed integration, and a responsive
+Stitch-backed frontend workspace. It uses no database schema change and made
+zero live AI provider calls.
+
+Local feature heads are Backend `62a48bf49291dd57daa8feb85cbac31694380e0b`,
+Frontend `85fb969e43c54c53780376842fcfac36dd5881bc`, and the Workspace
+evidence branch is pending its final local acceptance commit. Publication of
+the 09D Backend, Frontend, and final Workspace feature heads requires one
+grouped explicit authorization; no merge or deployment was attempted.

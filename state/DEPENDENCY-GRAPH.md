@@ -149,3 +149,22 @@ Phase 08 is DONE after exact-SHA Backend CI verification and final-gate
 acceptance. Phase 09 is the next selected phase and remains unstarted; its
 first task remains PLANNED. Phase 10 is independently READY from its Phase
 05/06/08 dependencies but was not selected or started.
+
+## Current Phase 09D publication gate
+
+    CURRENT_PHASE=09
+    PHASE_09=IN_PROGRESS
+    PHASE_09A=DONE
+    PHASE_09B=DONE
+    PHASE_09C=DONE
+    PHASE_09D=BLOCKED_BY_PUBLISH_AUTHORIZATION
+    LNG_09_004=PASS_LOCAL_PENDING_PUBLICATION_AUTHORIZATION
+    LNG_09_005=PASS_LOCAL_PENDING_PUBLICATION_AUTHORIZATION
+    NEXT_TASK_ID=LNG-09-004
+    NEXT_TASK_NAME=Writing Coach + Grammar Coach
+    NEXT_TASK_STATUS=BLOCKED_EXTERNAL_PUBLISH_AUTHORIZATION
+
+The 09D implementation and all local validation gates are complete on the
+scoped Backend and Frontend branches. The final Workspace evidence commit is
+local and the three 09D feature heads are not merged. The remaining gate is
+explicit publication authorization, not an implementation or test failure.
