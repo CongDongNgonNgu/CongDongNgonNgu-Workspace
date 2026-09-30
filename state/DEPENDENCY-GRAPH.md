@@ -268,7 +268,7 @@ sync before Phase 09 can be recorded as fully merged and closed.
     PHASE_09_FRONTEND_MAIN_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
     PHASE_09_FRONTEND_POST_MERGE_CI=PASS
     PHASE_09_WORKSPACE_MERGED=YES
-    PHASE_09_WORKSPACE_MAIN_SHA=d8487d4ddfab6396f606a787bb5e7269123b7f51
+    PHASE_09_WORKSPACE_MAIN_SHA=06184bf8e9174032aeb47d5ee35d0a7261d38e25
     PHASE_09_WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
     PHASE_09_MERGED=YES
     PHASE_09_DEPLOYED=NO
@@ -277,7 +277,8 @@ sync before Phase 09 can be recorded as fully merged and closed.
     NEXT_TASK_NAME=Phase 10
     NEXT_TASK_STATUS=READY
 
-Backend PR #3, Frontend PR #8 and Workspace PR #4 are merged and their
-remote `main` heads were verified. Backend and Frontend current-main CI passed;
-Workspace has no CI workflow. Phase 09 is closed. Phase 10 is READY but has
-not started.
+Backend PR #3, Frontend PR #8 and Workspace PR #4 are merged, and Workspace
+PR #5 records the final state-only verification on remote `main` at
+`06184bf8e9174032aeb47d5ee35d0a7261d38e25`. Backend and Frontend current-main
+CI passed; Workspace has no CI workflow. Phase 09 is closed. Phase 10 is READY
+but has not started.
