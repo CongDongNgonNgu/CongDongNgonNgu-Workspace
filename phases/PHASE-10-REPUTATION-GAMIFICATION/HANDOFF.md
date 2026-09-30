@@ -268,7 +268,9 @@ FRONTEND_BEFORE_SHA=6358552f23318f5dfd436ef8bd0b1b2cb4e034c7
 FRONTEND_AFTER_SHA=6358552f23318f5dfd436ef8bd0b1b2cb4e034c7
 FRONTEND_CHANGED=NO
 WORKSPACE_BEFORE_SHA=2f1b9a5f9b221922f6ec3abd91dec8a751d9f087
-WORKSPACE_AFTER_SHA=RECORDED_IN_FINAL_STATE_SYNC
+WORKSPACE_AFTER_SHA=1b5c794967775ce2f4bf33b392b45384c269549d
+WORKSPACE_PR=15
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
 IMPLEMENTATION=PASS
 REVIEW=PASS
 RUNTIME=NOT_REQUIRED
@@ -315,8 +317,10 @@ canonical XP/reputation/streak/badge/level/anti-farming/Passport calculators.
 Backend PR #8 and exact-head post-merge CI passed; the remote and local
 `phase-10e-reconciliation` branches were deleted after merge. Frontend source
 did not change in 10E, so the accepted 10D responsive/a11y/browser evidence
-remains the Phase 10 UI evidence. Workspace final SHA is recorded in the
-subsequent state-sync closeout.
+remains the Phase 10 UI evidence. Workspace evidence PR #15 is merged at
+`1b5c794967775ce2f4bf33b392b45384c269549d`; the final state-sync branch
+records this verified evidence main and is itself subject to the same PR
+workflow.
 
 ## PHASE 10 final gate and closeout
 
@@ -330,7 +334,7 @@ PHASE_10_FULL_REGRESSION=PASS
 PHASE_10_SECURITY_PRIVACY=PASS
 PHASE_10_DB_MIGRATION_CLOSURE=PASS
 PHASE_10_EXACT_HEAD_CI=PASS
-PHASE_10_WORKSPACE_CONSISTENCY=PASS_PENDING_FINAL_STATE_SYNC
+PHASE_10_WORKSPACE_CONSISTENCY=PASS
 PHASE_10_MERGE_READINESS=PASS
 PHASE_10_DEPLOYED=NO
 PHASE_10_PRODUCTION_DB_MUTATED=NO
@@ -344,6 +348,6 @@ NEXT_TASK_STATUS=READY
 NEXT_ACTION=READY_FOR_NEXT_PHASE_AUTHORIZATION
 ```
 
-Phase 10 is fully accepted and no Phase 11 work has started. The remaining
-Workspace state-sync PR only replaces the temporary evidence placeholders
-with verified Workspace main SHAs.
+Phase 10 is fully accepted and no Phase 11 work has started. Workspace
+evidence main is verified at `1b5c794967775ce2f4bf33b392b45384c269549d`, and
+the state-sync closeout records that verification before the final stop.
