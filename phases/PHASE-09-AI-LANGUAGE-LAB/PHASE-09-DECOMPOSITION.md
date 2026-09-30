@@ -70,9 +70,11 @@ migration.
 
 ## Current execution
 
-`PHASE_09B` implementation, validation, acceptance reconciliation, and
-feature-branch publication are complete. Its implementation is backend-only
-because `LNG-09-002` defines reusable learner-context, prompt, and
-structured-output contracts; no provider, user-facing mode, or frontend
-surface is authorized until the later mode tasks. `PHASE_09C` remains planned
-and must not start before the 09B relay returns its next prompt.
+`PHASE_09C` implementation, validation, acceptance reconciliation, and
+feature-branch preparation are complete. It delivers one provider-neutral
+conversation/roleplay path for `LNG-09-003` and `LNG-09-006`, bounded context,
+ownership checks, honest stop/retry/error/quota states, and the responsive
+Stitch-backed workspace. The slice uses an in-memory repository because no
+database schema change or live provider credential/cost was authorized.
+`PHASE_09D` is the next planned subphase and must start only after the 09C
+handoff relay returns its next prompt.

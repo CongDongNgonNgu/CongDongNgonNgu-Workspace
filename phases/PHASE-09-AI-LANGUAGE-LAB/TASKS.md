@@ -13,6 +13,7 @@ Define provider adapter(s), model capability config, timeout/retry strategy, str
 Build versioned prompt contracts using target language, proficiency, goals and requested mode. Prevent user profile content from becoming hidden system instruction. Define output schemas where structured corrections/quiz material are required; validate model output before persistence/rendering.
 
 ## LNG-09-003 — AI Conversation Mode
+**Status:** DONE
 **Depends on:** LNG-09-001, LNG-09-002
 
 Use Stitch for conversation workspace. AI adapts vocabulary/complexity to learner level, can explain on request and maintains bounded session context. Provide stop/retry/error/rate-limit states. Do not falsely claim human/native review.
@@ -28,6 +29,7 @@ Input user writing and return structured correction, explanation, natural altern
 Explain errors and generate focused follow-up practice rather than only returning answers. Support target-language explanations and optional Vietnamese explanation where product/localization permits. Validate generated exercise structure and answer reveal flow.
 
 ## LNG-09-006 — Roleplay Mode
+**Status:** DONE
 **Depends on:** LNG-09-002, LNG-09-003
 
 Implement configurable scenarios rather than eight hard-coded pages. Each scenario defines context, roles, learner level, goals and safe boundaries. Provide session goal/progress and post-session feedback without fake precise scoring.

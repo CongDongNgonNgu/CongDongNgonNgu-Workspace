@@ -114,3 +114,50 @@ The 09B contracts and tests are committed on the scoped Backend feature
 branch, and the Workspace state, decomposition and ADR are published on the
 scoped Workspace feature branch at the accepted SHAs. No merge or deployment
 was attempted.
+
+## PHASE_09C sanitized evidence
+
+```text
+PHASE_09C_RESULT=PASS
+PHASE_09_DECOMPOSITION=09A Provider & Usage Foundation [LNG-09-001]; 09B Learner Context & Prompt Contracts [LNG-09-002]; 09C Conversation & Configurable Roleplay [LNG-09-003,LNG-09-006]; 09D Structured Writing & Grammar Coaching [LNG-09-004,LNG-09-005]; 09E Provenance-Aware Learn from Community/Library [LNG-09-007]; 09F Safety, Cost & Reconciliation [LNG-09-008]
+PHASE_SCOPE=Reusable conversation workspace and configurable roleplay scenarios with bounded context, ownership checks, stop/retry/explain/error/quota/provider-offline states, session goals, honest post-session feedback, and responsive Stitch-backed UI.
+TASKS_INCLUDED=LNG-09-003,LNG-09-006
+TASKS_COMPLETED=LNG-09-003,LNG-09-006
+BACKEND_BEFORE_SHA=a2b7bbb2c8b2f39f6f9845c85b09d0b6f1d24c06
+BACKEND_AFTER_SHA=0390ed85b807d840ff1622a64d0d0dec40a34c39
+FRONTEND_BEFORE_SHA=cfe55763318ac47ac8bc6047aa747c0f353bafc
+FRONTEND_AFTER_SHA=757cd7aa21cd751fdddab28efde358bfd2bb2eca
+WORKSPACE_BEFORE_SHA=d98eb30d678871e0161daaf3278e82e663aa53a8
+WORKSPACE_AFTER_SHA=PENDING_WORKSPACE_COMMIT
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=PASS
+ACCEPTANCE=PASS
+TESTS=Backend focused 09C plus 09A/09B tests passed; 71 unit suites / 510 tests; 13 E2E suites / 59 tests; Frontend focused 09C tests 2 files / 3 tests; 49 test files / 228 tests
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS:0 vulnerabilities
+CI=NOT_TRIGGERED_FEATURE_BRANCH_LOCAL_VALIDATION_PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+LIVE_AI_PROVIDER_CALLS=0
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+BLOCKERS=NONE
+CURRENT_PHASE=09
+CURRENT_SUBPHASE=09C
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=09D
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+```
+
+09C uses the accepted Stitch project `3718538619973058970` with desktop
+reference `e47128db24324885b1f2adc1aecf2ba4` and mobile reference
+`8edba24c3cc345b8ae6644853acd85d1`. Local runtime verification confirmed the
+new route renders responsively with accessibility score 100 in the
+unauthenticated boundary; authenticated live-provider behavior was not
+claimed because provider credentials/cost were not authorized. No merge or
+deployment was attempted.
