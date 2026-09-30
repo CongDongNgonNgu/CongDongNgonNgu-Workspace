@@ -3308,3 +3308,41 @@ NEXT_ACTION=READY_FOR_PHASE_08_FINAL_GATE
 There is no task after `LNG-08-008` in the authoritative Phase 08 task list.
 Phase 08 remains `IN_PROGRESS`; the Phase 08 final completion gate is the
 next documented gate and was not started automatically.
+
+## Phase 08 final gate — CI verification remains open
+
+The final gate was executed after `LNG-08-008` acceptance. All authoritative
+Phase 08 tasks are `DONE` or accepted as `PASS`, and the complete local
+regression, e2e, typecheck, lint, build, offline audit, migration, TEST-data,
+production-isolation, evidence, and worktree checks passed. The existing
+08B1/08B2B/08C2 Stitch, responsive, accessibility, owner-acceptance, and CI
+evidence also remain accepted.
+
+The final gate cannot mark the phase `DONE` yet because the repository rule
+requires CI verification before `DONE`, while the accepted Backend SHA has no
+exact GitHub Actions run. The Backend workflow runs on `main` pushes or pull
+requests targeting `main`; this task did not open a pull request or merge.
+
+Detailed evidence is recorded in
+`evidence/PHASE-08-FINAL-GATE.md`.
+
+```text
+PHASE_08_FINAL_GATE=FAIL
+BACKEND_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+WORKSPACE_BEFORE_SHA=3b8cd4f438fa83276f562857f2dcf7720b93231f
+PHASE_08_TASK_SET_COMPLETE=YES
+LNG_08_006_FINAL_STATUS=PASS
+LNG_08_007_FINAL_STATUS=PASS
+LNG_08_008_FINAL_STATUS=PASS
+BACKEND_CI_EXACT_SHA=NOT_VERIFIED
+BACKEND_MERGE_READY=NO
+WORKSPACE_MERGE_READY=NO
+FRONTEND_MERGE_READY=NOT_APPLICABLE
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+NEXT_PHASE=NONE
+NEXT_TASK_ID=NONE
+NEXT_TASK_NAME=NONE
+NEXT_TASK_STATUS=NONE
+NEXT_ACTION=REMEDIATION_REQUIRED
+```
