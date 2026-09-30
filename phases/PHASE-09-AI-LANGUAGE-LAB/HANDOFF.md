@@ -12,8 +12,8 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09B=BLOCKED`.
-Current task: `LNG-09-002=BLOCKED`.
+Current subphase: `PHASE_09B=DONE`.
+Current task: `LNG-09-002=DONE`.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -65,7 +65,7 @@ Phase 09 remains `IN_PROGRESS`; this acceptance applies only to 09A.
 ## PHASE_09B sanitized evidence
 
 ```text
-PHASE_09B_RESULT=BLOCKED
+PHASE_09B_RESULT=PASS
 PHASE_09_DECOMPOSITION=09A Provider & Usage Foundation [LNG-09-001]; 09B Learner Context & Prompt Contracts [LNG-09-002]; 09C Conversation & Configurable Roleplay [LNG-09-003,LNG-09-006]; 09D Structured Writing & Grammar Coaching [LNG-09-004,LNG-09-005]; 09E Provenance-Aware Learn from Community/Library [LNG-09-007]; 09F Safety, Cost & Reconciliation [LNG-09-008]
 PHASE_SCOPE=Versioned learner-context and mode prompt contracts; safe separation of profile/user data from system instructions; bounded deterministic normalization; and strict validated structured-output schemas for writing corrections, grammar coaching and quiz material.
 TASKS_INCLUDED=LNG-09-002
@@ -75,11 +75,11 @@ BACKEND_AFTER_SHA=a2b7bbb2c8b2f39f6f9845c85b09d0b6f1d24c06
 FRONTEND_BEFORE_SHA=N/A
 FRONTEND_AFTER_SHA=N/A
 WORKSPACE_BEFORE_SHA=37e69a3909337189ee0e789665659d117965ea95
-WORKSPACE_AFTER_SHA=423fc7bb74b07a121e301c9299d90c51e3916fec
+WORKSPACE_AFTER_SHA=PENDING_ACCEPTANCE_SHA
 IMPLEMENTATION=PASS
 REVIEW=PASS
 RUNTIME=NOT_REQUIRED
-ACCEPTANCE=NOT_COMPLETED
+ACCEPTANCE=PASS
 LEARNER_CONTEXT_CONTRACT=PASS
 DATA_MINIMIZATION=PASS
 PROMPT_CONTRACT=PASS
@@ -102,16 +102,15 @@ LIVE_AI_PROVIDER_CALLS=NO
 FRONTEND_CHANGED=NO
 DEPLOYED=NO
 MERGED_TO_MAIN=NO
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUSH_09B_WORKSPACE_FEATURE_BRANCH
+BLOCKERS=NONE
 CURRENT_PHASE=09
 CURRENT_SUBPHASE=09B
-SUBPHASE_STATUS=BLOCKED
-NEXT_RECOMMENDED_SUBPHASE=09B
-NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=09C
+NEXT_ACTION=REQUEST_NEXT_PROMPT
 ```
 
 The 09B contracts and tests are committed on the scoped Backend feature
-branch, which is published at the accepted Backend SHA. The Workspace state,
-decomposition and ADR are committed locally on the scoped Workspace feature
-branch, but its publication is blocked pending explicit authorization for the
-09B Workspace push. No merge or deployment was attempted.
+branch, and the Workspace state, decomposition and ADR are published on the
+scoped Workspace feature branch at the accepted SHAs. No merge or deployment
+was attempted.

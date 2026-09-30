@@ -20,6 +20,13 @@ For each real blocker append:
 - Resolution evidence/date when cleared.
 
 Do not classify normal coding work as a blocker. Do not work around missing provider/production credentials by inventing, exposing or reusing EduAI secrets. External-provider live verification may remain blocked while adapter/unit/sandbox work continues if the phase acceptance allows that distinction.
+
+- BLOCKER-09B-001 / LNG-09-002 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: the safety review rejected publication of the scoped Workspace 09B branch because prior authorization covered 09A only; local implementation and validation remained complete, 2026-09-30.
+  - Impact: Workspace remote-SHA verification and 09B acceptance publication were temporarily unavailable; no merge or deployment was attempted.
+  - Resolution owner/dependency: explicit user authorization for the exact `phase-09b-learner-context-contracts` Workspace push.
+  - Resolution evidence/date: authorization received in the current run; remote SHA verification follows the accepted push.
+  - Safe work that may continue: Phase 09C remains planned until the mandatory ChatGPT relay returns its next prompt.
 - BLOCKER-01-001 / LNG-01-001 through LNG-01-007 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: the configured Stitch MCP server is `https://stitch.googleapis.com/mcp`; `mcp__stitch__create_project` and `mcp__stitch__list_projects` both returned `Auth required`, 2026-09-08. No Stitch project or authenticated project listing was available in the session.
   - Impact: Phase 01 cannot safely begin user-facing design implementation because Workspace policy requires Stitch design and review before each substantial surface. Required Stitch references and accepted design evidence cannot be recorded.
