@@ -110,3 +110,14 @@ protection. The deployed Vercel `/api/v1` rewrite precedes the SPA fallback;
 the provider capability endpoint, Google redirect, and real browser callback
 were verified in production. No direct/manual production database mutation
 was performed.
+
+## DEC-014 - Phase 09A provider-neutral AI usage architecture
+**Status:** Accepted for Phase 09A implementation on 2026-09-30.
+
+Phase 09A establishes provider/model adapter contracts, optional streaming
+capability metadata, bounded timeout/retry orchestration, fail-closed
+disabled/misconfigured behavior, privacy-safe token/cost accounting, and
+quota/rate-limit ports. It deliberately selects no provider, stores no
+provider credential, creates no user-facing AI route, and creates no usage
+schema migration. The detailed rationale and alternatives are recorded in
+`docs/DEC-014-PHASE-09A-AI-PROVIDER-USAGE-ARCHITECTURE.md`.
