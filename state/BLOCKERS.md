@@ -27,6 +27,12 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution owner/dependency: explicit user authorization for the exact `phase-09b-learner-context-contracts` Workspace push.
   - Resolution evidence/date: authorization received in the current run; Workspace remote branch `phase-09b-learner-context-contracts` verified at `6c5530a31cda69562b0b5e93687905b51cdbdc37`, 2026-09-30.
   - Safe work that may continue: Phase 09C remains planned until the mandatory ChatGPT relay returns its next prompt.
+- BLOCKER-09C-001 / LNG-09-003, LNG-09-006 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: the safety review initially rejected publication of the three scoped Phase 09C feature branches because explicit 09C push authorization was not present; local implementation and validation remained complete, 2026-09-30.
+  - Impact: remote SHA verification and 09C acceptance publication were temporarily unavailable; no merge or deployment was attempted.
+  - Resolution owner/dependency: explicit user authorization for the exact Backend, Frontend, and Workspace `phase-09c-conversation-roleplay` pushes.
+  - Resolution evidence/date: authorization received in the current run; Backend remote verified at `0390ed85b807d840ff1622a64d0d0dec40a34c39`, Frontend at `757cd7aa21cd751fdddab28efde358bfd2bb2eca`, and Workspace at `6332d6ace2358f38ddd3b33ea06f91304e836da2`, 2026-09-30.
+  - Safe work that may continue: Phase 09D after the mandatory ChatGPT relay returns its next prompt.
 - BLOCKER-01-001 / LNG-01-001 through LNG-01-007 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: the configured Stitch MCP server is `https://stitch.googleapis.com/mcp`; `mcp__stitch__create_project` and `mcp__stitch__list_projects` both returned `Auth required`, 2026-09-08. No Stitch project or authenticated project listing was available in the session.
   - Impact: Phase 01 cannot safely begin user-facing design implementation because Workspace policy requires Stitch design and review before each substantial surface. Required Stitch references and accepted design evidence cannot be recorded.

@@ -70,12 +70,10 @@ migration.
 
 ## Current execution
 
-`PHASE_09C` implementation, validation, and acceptance reconciliation are
-complete locally, but feature-branch publication is blocked pending explicit
-authorization. It delivers one provider-neutral
+`PHASE_09C` implementation, validation, acceptance reconciliation, and
+feature-branch publication are complete. It delivers one provider-neutral
 conversation/roleplay path for `LNG-09-003` and `LNG-09-006`, bounded context,
 ownership checks, honest stop/retry/error/quota states, and the responsive
 Stitch-backed workspace. The slice uses an in-memory repository because no
 database schema change or live provider credential/cost was authorized.
-`PHASE_09D` must not start until the 09C publication authorization is resolved
-and the handoff relay returns its next prompt.
+`PHASE_09D` may start after the handoff relay returns its next prompt.
