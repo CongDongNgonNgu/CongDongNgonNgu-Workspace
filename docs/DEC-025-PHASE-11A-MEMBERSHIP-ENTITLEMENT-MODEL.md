@@ -28,8 +28,10 @@ The `MembershipAuthorizationService` evaluates current access from these
 server facts. It selects one current active subscription, never additively
 stacks overlapping active rows, and falls back to a built-in `FREE` version
 when no active membership row exists. Unknown or malformed feature keys fail
-closed. The API exposes only a safe capability projection; the frontend may
-render it but never becomes the access authority.
+closed. Retiring a product or plan version prevents future selection but does
+not revoke an already active subscription before that subscription's own
+period boundary. The API exposes only a safe capability projection; the
+frontend may render it but never becomes the access authority.
 
 11A does not model prices, orders, payment attempts, provider references,
 settlement, webhook events or fulfillment grants. Those are separate
