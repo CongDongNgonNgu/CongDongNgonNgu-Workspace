@@ -18,7 +18,8 @@ live AI provider.
 - Frontend: `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`, remote accepted
   `phase-09e-learn-from-community-library`; 09F has no frontend source change.
 - Workspace evidence head: `602bf4516bdb4b5020b96e9599b3089077c9b576`; final-gate
-  state is recorded on remote `phase-09f-safety-cost-reconciliation`.
+  state is recorded on remote `phase-09f-safety-cost-reconciliation` at
+  `8f8cd74ce8413f7669e9d5b9216b495ac126fe20`.
 - Every accepted 09A–09F head is an ancestor of the active accepted head in
   each repository. No open pull requests were found.
 
