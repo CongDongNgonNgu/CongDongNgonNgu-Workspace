@@ -75,8 +75,9 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Authenticated runtime evidence: correction/question creation, structured responses, Helpful, expected self-vote/non-requester rejection, acceptance change/revoke, responsive checks, accessibility checks, and populated screenshot comparisons are recorded in phases/PHASE-06-CORRECTIONS-QA/evidence/PHASE-06C-IMPLEMENTATION.md.
   - Scope note: OWNER_VISUAL_ACCEPTANCE_06C=YES; LNG-06-003 and LNG-06-004 are DONE; Phase 06D remains not started.
 
-- BLOCKER-09D-001 / LNG-09-004, LNG-09-005 / `BLOCKED_EXTERNAL` / OPEN
+- BLOCKER-09D-001 / LNG-09-004, LNG-09-005 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: Phase 09D implementation, focused/full tests, E2E, typecheck, lint, build, audit, review, and controlled browser-boundary verification passed locally on 2026-09-30. Backend local head is `62a48bf49291dd57daa8feb85cbac31694380e0b`; Frontend local head is `85fb969e43c54c53780376842fcfac36dd5881bc`; Workspace local head is `6260d7900f1a2be994d5814bb363986cbc95f225`.
-  - Impact: the 09D feature branches cannot receive final remote-SHA/CI acceptance evidence, so the subphase cannot be marked DONE or advance to 09E.
+  - Impact: before resolution, the 09D feature branches could not receive final remote-SHA/CI acceptance evidence, so the subphase could not be marked DONE or advance to 09E.
   - Resolution owner/dependency: one explicit authorization for `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES`, covering Backend, Frontend, and the final Workspace evidence commit on `phase-09d-writing-grammar-coaching`.
-  - Safe work that may continue: no implementation change is required; after authorization, push the three exact branches, verify remote heads/CI, update the handoff from BLOCKED to PASS, and relay the sanitized DONE handoff.
+  - Resolution evidence/date: explicit grouped authorization was received; Backend, Frontend, and Workspace `phase-09d-writing-grammar-coaching` branches were pushed and remote heads verified at `62a48bf49291dd57daa8feb85cbac31694380e0b`, `85fb969e43c54c53780376842fcfac36dd5881bc`, and `e08891a96e85bc6455fb8ef4186252898a3849e7`, respectively, 2026-09-30. Workspace state and handoff were updated to `PHASE_09D=DONE`.
+  - Safe work that may continue: Phase 09E / LNG-09-007 may begin only after the mandatory relay returns its next prompt; no merge or deployment was attempted.

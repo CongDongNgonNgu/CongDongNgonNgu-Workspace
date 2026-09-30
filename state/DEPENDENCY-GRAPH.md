@@ -157,14 +157,14 @@ first task remains PLANNED. Phase 10 is independently READY from its Phase
     PHASE_09A=DONE
     PHASE_09B=DONE
     PHASE_09C=DONE
-    PHASE_09D=BLOCKED_BY_PUBLISH_AUTHORIZATION
-    LNG_09_004=PASS_LOCAL_PENDING_PUBLICATION_AUTHORIZATION
-    LNG_09_005=PASS_LOCAL_PENDING_PUBLICATION_AUTHORIZATION
-    NEXT_TASK_ID=LNG-09-004
-    NEXT_TASK_NAME=Writing Coach + Grammar Coach
-    NEXT_TASK_STATUS=BLOCKED_EXTERNAL_PUBLISH_AUTHORIZATION
+    PHASE_09D=DONE
+    LNG_09_004=DONE
+    LNG_09_005=DONE
+    NEXT_TASK_ID=LNG-09-007
+    NEXT_TASK_NAME=Learn from Community/Library
+    NEXT_TASK_STATUS=PLANNED
 
-The 09D implementation and all local validation gates are complete on the
-scoped Backend and Frontend branches. The final Workspace evidence commit is
-local and the three 09D feature heads are not merged. The remaining gate is
-explicit publication authorization, not an implementation or test failure.
+The 09D implementation, validation gates, and grouped feature-branch
+publication are complete. Remote heads were verified for Backend, Frontend,
+and Workspace. The next dependency-eligible task is 09E / LNG-09-007; Phase
+09 remains IN_PROGRESS and is not marked DONE.

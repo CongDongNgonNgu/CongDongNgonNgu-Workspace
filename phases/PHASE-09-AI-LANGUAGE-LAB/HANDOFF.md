@@ -12,9 +12,9 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09D=BLOCKED_BY_PUBLISH_AUTHORIZATION`.
-Current task: `LNG-09-004` and `LNG-09-005` are locally implemented and
-validated; publication authorization is pending.
+Current subphase: `PHASE_09D=DONE`.
+Current task: `LNG-09-004` and `LNG-09-005` are implemented, validated, and
+published on their scoped feature branches. The next projection is `09E`.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -173,7 +173,7 @@ attempted.
 ## PHASE_09D sanitized evidence
 
 ```text
-PHASE_09D_RESULT=BLOCKED
+PHASE_09D_RESULT=PASS
 PHASE_SCOPE=Structured writing correction and grammar practice flows using validated model output and the approved correction presentation pattern.
 TASKS_INCLUDED=LNG-09-004,LNG-09-005
 TASKS_COMPLETED=LNG-09-004,LNG-09-005
@@ -182,11 +182,11 @@ BACKEND_AFTER_SHA=62a48bf49291dd57daa8feb85cbac31694380e0b
 FRONTEND_BEFORE_SHA=757cd7aa21cd751fdddab28efde358bfd2bb2eca
 FRONTEND_AFTER_SHA=85fb969e43c54c53780376842fcfac36dd5881bc
 WORKSPACE_BEFORE_SHA=dddfb13080b6b5b0dd18c2b70dc16f29eba36361
-WORKSPACE_AFTER_SHA=5b20e22bff6a9554522562f6716e995ee8704714
+WORKSPACE_AFTER_SHA=PENDING_FINAL_09D_ACCEPTANCE_SHA
 IMPLEMENTATION=PASS
 REVIEW=PASS
 RUNTIME=PASS
-ACCEPTANCE=NOT_COMPLETED
+ACCEPTANCE=PASS
 WRITING_COACHING_CONTRACT=PASS
 GRAMMAR_COACHING_CONTRACT=PASS
 STRUCTURED_OUTPUT_VALIDATION=PASS
@@ -216,18 +216,20 @@ FRONTEND_TESTS=PASS
 RESPONSIVE_A11Y=PASS
 DEPLOYED=NO
 MERGED_TO_MAIN=NO
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES; Backend branch phase-09d-writing-grammar-coaching at 62a48bf49291dd57daa8feb85cbac31694380e0b; Frontend branch phase-09d-writing-grammar-coaching at 85fb969e43c54c53780376842fcfac36dd5881bc; Workspace branch phase-09d-writing-grammar-coaching local head 6260d7900f1a2be994d5814bb363986cbc95f225, final evidence not published
+BLOCKERS=NONE
 CURRENT_PHASE=09
 CURRENT_SUBPHASE=09D
-SUBPHASE_STATUS=BLOCKED
-NEXT_RECOMMENDED_SUBPHASE=09D
-NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=09E
+NEXT_ACTION=REQUEST_NEXT_PROMPT
 ```
 
-The 09D local cycle completed without a schema change, migration, production
-write, merge, deployment, provider credential, or live AI call. The Workspace
-relay protocol is `CODE_BLOCK_V1`; next prompts are extracted from the full
-latest assistant code block and no BEGIN/END markers are required. Stitch
-references used for the 09D UI are project `3718538619973058970`, design
-system `16442026920550574436`, desktop `824e090fa88d4500b7ecb7a6662ce8cb`,
-and mobile `eaf04583f82648fda5c8453985f8a9bf`.
+The 09D cycle completed without a schema change, migration, production write,
+merge, deployment, provider credential, or live AI call. Backend, Frontend,
+and Workspace feature branches were published after explicit authorization;
+remote heads were verified. The Workspace relay protocol is
+`CODE_BLOCK_V1`; next prompts are extracted from the full latest assistant
+code block and no BEGIN/END markers are required. Stitch references used for
+the 09D UI are project `3718538619973058970`, design system
+`16442026920550574436`, desktop `824e090fa88d4500b7ecb7a6662ce8cb`, and
+mobile `eaf04583f82648fda5c8453985f8a9bf`.

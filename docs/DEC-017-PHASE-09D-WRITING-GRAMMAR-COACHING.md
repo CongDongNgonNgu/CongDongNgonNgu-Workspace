@@ -2,8 +2,8 @@
 
 ## Status
 
-Accepted for local Phase 09D implementation and validation on 2026-09-30;
-feature-branch publication remains externally gated.
+Accepted for Phase 09D implementation, validation, and feature-branch
+publication on 2026-09-30.
 
 ## Context
 
@@ -65,8 +65,9 @@ authorized. Deterministic tests and the disabled-provider path are used.
 - Design system: `16442026920550574436`
 - Desktop reference: `824e090fa88d4500b7ecb7a6662ce8cb`
 - Mobile reference: `eaf04583f82648fda5c8453985f8a9bf`
-- Backend local head: `62a48bf49291dd57daa8feb85cbac31694380e0b`
-- Frontend local head: `85fb969e43c54c53780376842fcfac36dd5881bc`
+- Backend published head: `62a48bf49291dd57daa8feb85cbac31694380e0b`
+- Frontend published head: `85fb969e43c54c53780376842fcfac36dd5881bc`
+- Workspace published head: `e08891a96e85bc6455fb8ef4186252898a3849e7`
 
 ## Consequences
 

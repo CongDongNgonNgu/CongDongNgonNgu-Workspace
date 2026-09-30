@@ -79,8 +79,10 @@ preservation, quota/rate/usage fail-closed integration, and a responsive
 Stitch-backed frontend workspace. It uses no database schema change and made
 zero live AI provider calls.
 
-Local feature heads are Backend `62a48bf49291dd57daa8feb85cbac31694380e0b`,
-Frontend `85fb969e43c54c53780376842fcfac36dd5881bc`, and the Workspace
-evidence branch is pending its final local acceptance commit. Publication of
-the 09D Backend, Frontend, and final Workspace feature heads requires one
-grouped explicit authorization; no merge or deployment was attempted.
+The published feature heads are Backend
+`62a48bf49291dd57daa8feb85cbac31694380e0b`, Frontend
+`85fb969e43c54c53780376842fcfac36dd5881bc`, and Workspace
+`e08891a96e85bc6455fb8ef4186252898a3849e7`. Remote SHAs were verified after
+the grouped publication authorization; no merge or deployment was attempted.
+The next projection is `PHASE_09E` / `LNG-09-007` after the mandatory handoff
+relay.

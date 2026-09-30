@@ -19,13 +19,13 @@ Build versioned prompt contracts using target language, proficiency, goals and r
 Use Stitch for conversation workspace. AI adapts vocabulary/complexity to learner level, can explain on request and maintains bounded session context. Provide stop/retry/error/rate-limit states. Do not falsely claim human/native review.
 
 ## LNG-09-004 — Writing Coach
-**Status:** PASS_LOCAL_PENDING_PUBLICATION_AUTHORIZATION
+**Status:** DONE (implementation, validation, and feature-branch publication complete)
 **Depends on:** LNG-09-002
 
 Input user writing and return structured correction, explanation, natural alternative and level-aware notes. Reuse accessible diff presentation from Phase 06 where appropriate. Make generated nature visible; saving to Library requires review, not automatic verification.
 
 ## LNG-09-005 — Grammar Coach
-**Status:** PASS_LOCAL_PENDING_PUBLICATION_AUTHORIZATION
+**Status:** DONE (implementation, validation, and feature-branch publication complete)
 **Depends on:** LNG-09-002
 
 Explain errors and generate focused follow-up practice rather than only returning answers. Support target-language explanations and optional Vietnamese explanation where product/localization permits. Validate generated exercise structure and answer reveal flow.
