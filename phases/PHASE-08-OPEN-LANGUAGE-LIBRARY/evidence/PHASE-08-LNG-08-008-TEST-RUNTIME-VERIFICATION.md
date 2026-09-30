@@ -1,0 +1,130 @@
+# Phase 08 — LNG-08-008 TEST Runtime Verification
+
+This record covers exactly one controlled Tatoeba `OPEN_DATASET` `SENTENCE`
+identity and its exact retry against the previously approved TEST database.
+The candidate was synthetic and already present in TEST; no live Tatoeba
+request or dataset download was made. The runtime used the explicit approved
+ADMIN actor and the existing Backend SHA. LNG-08-008 remains unaccepted.
+
+## Runtime result
+
+```text
+PHASE_08_LNG_08_008_TEST_RUNTIME_VERIFICATION=PASS
+BACKEND_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+WORKSPACE_BEFORE_SHA=6e118bf0e497120c5471a8f8b565fb677b417abb
+
+ENVIRONMENT=TEST
+DATABASE_TARGET_AUTHORIZATION=PASS
+DATABASE_HOST_TARGET_CHECK=PASS
+DATABASE_NAME_TARGET_CHECK=PASS
+DATABASE_USER_TARGET_CHECK=PASS
+TEST_LABEL_ONLY_AUTHORIZATION=NO
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+
+ACTOR_ID=f9520245-4388-4078-88ff-6f2411f08d55
+ACTOR_REQUIRED_ROLE=ADMIN
+ACTOR_AUTHORIZATION=PASS
+ACTOR_DISCOVERY=NONE
+
+TATOEBA_SENTENCE_ID=TATOEBA:SENTENCE:9999999999999999999999999999999999999999
+CANONICAL_RESOURCE_ID=2909ae60-def7-44f8-aa7e-07c7ba22d8c3
+CURRENT_RESOURCE_STATE=COMMUNITY_REVIEW
+
+EXPECTED_RECONCILIATION_CLASS=NOOP
+FIRST_RECONCILIATION=PASS
+ACTUAL_RECONCILIATION_CLASS=NOOP
+SECOND_RECONCILIATION_CLASS=NOOP
+RECONCILIATION_CLASS_MATCH=PASS
+
+CANONICAL_RESOURCE_INTEGRITY=PASS
+PROVENANCE_RECONCILIATION_RUNTIME=PASS
+AUDIT_RECONCILIATION_RUNTIME=PASS
+STATE_HISTORY_RECONCILIATION_RUNTIME=PASS
+
+AUTO_REOPEN=NO
+AUTO_APPROVE=NO
+AUTO_PUBLISH=NO
+
+EXACT_RETRY=PASS
+RECONCILIATION_RETRY_DEDUP=PASS
+RECONCILIATION_IDENTITY_DETERMINISTIC=YES
+LOCK_IDENTITY_DETERMINISTIC=YES
+CONCURRENCY_PROTECTION_RUNTIME=PASS
+
+LIBRARY_RESOURCE_DUPLICATES=0
+PROVENANCE_DUPLICATES=0
+AUDIT_DUPLICATES=0
+STATE_HISTORY_DUPLICATES=0
+
+IDENTITY_MISMATCH_FAIL_CLOSED=PASS
+AMBIGUOUS_RECONCILIATION_FAIL_CLOSED=PASS
+CONFLICT_RECONCILIATION_FAIL_CLOSED=PASS
+INVALID_ACTOR_FAIL_CLOSED=PASS
+INVALID_LICENSE_FAIL_CLOSED=PASS
+INVALID_TIMESTAMP_FAIL_CLOSED=PASS
+TIMEZONE_LESS_TIMESTAMP_FAIL_CLOSED=PASS
+
+MILLISECOND_PRECISION_PRESERVED=YES
+PROCESS_TIMEZONE_INDEPENDENCE=PASS
+
+LIVE_EXTERNAL_CALLS=0
+TEST_DB_MUTATED=NO
+
+AUTHORIZED_TEST_ROWS_CREATED=0
+AUTHORIZED_TEST_ROWS_UPDATED=0
+LIBRARY_RESOURCE_ROWS_CREATED=0
+LIBRARY_RESOURCE_ROWS_UPDATED=0
+PROVENANCE_ROWS_CREATED=0
+AUDIT_ROWS_CREATED=0
+STATE_HISTORY_ROWS_CREATED=0
+UNRELATED_DB_ROWS_MODIFIED=NO
+PRODUCTION_DB_MUTATED=NO
+
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+
+BACKEND_CODE_CHANGED=NO
+FRONTEND_CHANGED=NO
+
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+
+FOCUSED_TESTS=20 suites, 133 tests PASS
+RECONCILIATION_TESTS=5 suites, 38 tests PASS
+REJECTED_NO_REOPEN_TESTS=PASS (focused executable coverage present; 16 sentence repository tests)
+TIMESTAMP_REGRESSION_TESTS=2 suites, 10 tests PASS
+GIT_DIFF_CHECK=PASS
+
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+RUNTIME_FINDINGS=NONE
+RUNTIME_BLOCKER=NONE
+NEXT_ACTION=READY_FOR_LNG_08_008_ACCEPTANCE
+```
+
+## Sanitized evidence
+
+- Read-only preflight matched the approved TEST target (`neondb`, explicit
+  `neondb_owner`, remote `sslmode=verify-full`), explicit actor, and both
+  required pre-existing license contracts.
+- The pre-runtime snapshot found exactly one canonical `SENTENCE` resource in
+  `COMMUNITY_REVIEW`, one exact `OPEN_DATASET` provenance row, one `SUBMIT`
+  audit/state-history row, and the expected `vi` sentence facts. The sentence
+  text was recorded only as a bounded hash in the verification notes.
+- The first real sentence import transaction returned `NOOP` for the selected
+  resource. The exact retry returned the same `NOOP` result. The post-runtime
+  read-only snapshot preserved the resource ID, `SENTENCE` type, language,
+  source identity, license, provenance revision, text hash, state, timestamps,
+  and audit history.
+- Both runtime transactions were zero-write `NOOP` reconciliations. No
+  resource, sentence, provenance, audit, state-history, contribution, or
+  unrelated row was created or updated; duplicate counts remained zero.
+- The candidate input was temporary and was removed after the two runtime
+  executions. No Backend source, frontend source, migration, deployment, or
+  merge changed.
