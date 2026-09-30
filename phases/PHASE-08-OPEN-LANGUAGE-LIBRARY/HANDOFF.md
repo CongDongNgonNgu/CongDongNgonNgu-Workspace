@@ -3421,6 +3421,12 @@ override moved from `2.3.0` to `2.4.0`, and the lockfile resolved patched
 source, schema, migration, TEST data, production data, frontend, or deployment
 was changed.
 
+The original failing post-merge run was `36663991970` on Backend main
+`5411c1bfb8ce19b461af0625e293e4dd35683eb7` (`3` moderate, `1` high). The
+security remediation PR and its exact-head CI passed, the remediation was
+merged as `8c6558a426b043b27f1d5a966abb402f0b64b406`, and the subsequent main
+CI passed with `AUDIT_TOTAL=0`.
+
 Detailed sanitized evidence is recorded in
 `evidence/PHASE-08-BACKEND-POST-MERGE-SECURITY-REMEDIATION.md`.
 
@@ -3428,6 +3434,10 @@ Detailed sanitized evidence is recorded in
 PHASE_08_POST_MERGE_SECURITY_REMEDIATION=PASS
 BACKEND_PHASE_08_FEATURE_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
 BACKEND_MAIN_BEFORE_SECURITY_FIX_SHA=5411c1bfb8ce19b461af0625e293e4dd35683eb7
+ORIGINAL_POST_MERGE_CI_RUN_ID=36663991970
+ORIGINAL_POST_MERGE_CI_RESULT=FAIL
+INITIAL_AUDIT_HIGH=1
+INITIAL_AUDIT_MODERATE=3
 REMEDIATION_COMMIT_SHA=5830d1a944f66a7b7ca1a0868502edc342dfb811
 REMEDIATION_PR_NUMBER=2
 REMEDIATION_HEAD_SHA=5830d1a944f66a7b7ca1a0868502edc342dfb811
