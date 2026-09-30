@@ -91,7 +91,7 @@ only the authoritative public Library projection, preserves source IDs and
 attribution inside a bounded untrusted provider context, validates current
 license/provenance eligibility, returns five bounded structured study sections,
 and exposes a source-aware Library detail action/result. Backend and Frontend
-local heads are `1e5c15635a628d864c7c74847cff25ded779ccd` and
+local heads are `1e5c15635a628d864c7c74847cff25ded779ccdf` and
 `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. No schema change, migration,
 canonical mutation, live provider call, merge or deployment occurred.
 

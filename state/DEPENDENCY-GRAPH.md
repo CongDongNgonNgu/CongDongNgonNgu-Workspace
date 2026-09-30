@@ -182,8 +182,8 @@ and Workspace. The next dependency-eligible task is 09E / LNG-09-007; Phase
 LNG-09-007 is complete locally after the public Library projection, provenance
 and license gates, structured learning output, focused/full validation and
 security review passed. The local Backend/Frontend feature heads are
-`1e5c15635a628d864c7c74847cff25ded779ccd` and
+`1e5c15635a628d864c7c74847cff25ded779ccdf` and
 `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. The Workspace branch carries the
 09E acceptance evidence at local commit
-`056686a4e0cc7b6af9e71fe7e72b3cf29e22f2d7`; grouped publication is the only
+`056686a8092887fbc5e108a3d7262a5d15481e79`; grouped publication is the only
 open external gate. Phase 09F is not implemented and Phase 09 is not DONE.
