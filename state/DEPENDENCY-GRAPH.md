@@ -149,3 +149,108 @@ Phase 08 is DONE after exact-SHA Backend CI verification and final-gate
 acceptance. Phase 09 is the next selected phase and remains unstarted; its
 first task remains PLANNED. Phase 10 is independently READY from its Phase
 05/06/08 dependencies but was not selected or started.
+
+## Current Phase 09D publication gate
+
+    CURRENT_PHASE=09
+    PHASE_09=IN_PROGRESS
+    PHASE_09A=DONE
+    PHASE_09B=DONE
+    PHASE_09C=DONE
+    PHASE_09D=DONE
+    LNG_09_004=DONE
+    LNG_09_005=DONE
+    NEXT_TASK_ID=LNG-09-007
+    NEXT_TASK_NAME=Learn from Community/Library
+    NEXT_TASK_STATUS=PLANNED
+
+The 09D implementation, validation gates, and grouped feature-branch
+publication are complete. Remote heads were verified for Backend, Frontend,
+and Workspace. The next dependency-eligible task is 09E / LNG-09-007; Phase
+09 remains IN_PROGRESS and is not marked DONE.
+
+## Current Phase 09E publication gate
+
+    CURRENT_PHASE=09
+    PHASE_09=IN_PROGRESS
+    PHASE_09E=DONE
+    LNG_09_007=DONE
+    PHASE_09F=DONE
+    LNG_09_008=DONE
+    NEXT_TASK_ID=PHASE-09-FINAL-GATE
+    NEXT_TASK_NAME=Phase 09 final gate
+    NEXT_TASK_STATUS=READY
+
+LNG-09-007 is complete locally after the public Library projection, provenance
+and license gates, structured learning output, focused/full validation and
+security review passed. The local Backend/Frontend feature heads are
+`1e5c15635a628d864c7c74847cff25ded779ccdf` and
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. The Workspace branch carries the
+09E acceptance evidence at local commit
+`056686a8092887fbc5e108a3d7262a5d15481e79`; the Backend, Frontend and
+Workspace feature branches were published and their remote heads verified
+after grouped authorization. Phase 09F implementation, safety/cost/
+reconciliation review, deterministic runtime validation, Phase 09 regression
+and grouped feature-branch publication are complete. Backend remote branch
+`phase-09f-safety-cost-reconciliation` is verified at
+`8f2eebaf912d664893afbec885eddb7c49b88a06`; Workspace publication was
+verified at `fdf6c3c5c0053022325e950a500c9a877658cdeb` before this final state
+sync. Phase 09 is ready for its final gate; no merge or deployment is implied.
+
+## Current Phase 09 final gate
+
+    CURRENT_PHASE=09
+    PHASE_09=READY_FOR_FINAL_GATE
+    PHASE_09A=DONE
+    PHASE_09B=DONE
+    PHASE_09C=DONE
+    PHASE_09D=DONE
+    PHASE_09E=DONE
+    PHASE_09F=DONE
+    LNG_09_001=DONE
+    LNG_09_002=DONE
+    LNG_09_003=DONE
+    LNG_09_004=DONE
+    LNG_09_005=DONE
+    LNG_09_006=DONE
+    LNG_09_007=DONE
+    LNG_09_008=DONE
+    PHASE_09_TASK_SET_COMPLETE=YES
+    PHASE_09_FINAL_GATE=PASS
+    PHASE_09_FINAL_GATE_READY=YES
+    PHASE_09_MERGE_READINESS=READY
+    NEXT_PHASE=10
+    NEXT_TASK_ID=PHASE-10
+    NEXT_TASK_NAME=Phase 10
+    NEXT_TASK_STATUS=READY
+
+The final gate reconciled the complete task set, stacked feature-branch
+histories, exact-SHA validation evidence, cross-phase safety/privacy/usage and
+canonical-integrity checks, database isolation, and feature-branch CI policy.
+Backend `phase-09f-safety-cost-reconciliation` is verified remotely at
+`8f2eebaf912d664893afbec885eddb7c49b88a06`. Frontend has no 09F source
+changes; its accepted 09E head is verified remotely at
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. Workspace final-gate state is
+recorded on the 09F branch. No merge, deployment, Phase 10 implementation, or
+live provider call was performed.
+
+## Current Phase 09 merge closeout
+
+    CURRENT_PHASE=09
+    PHASE_09=IN_PROGRESS
+    PHASE_09_FINAL_GATE=PASS
+    PHASE_09_MERGE_CLOSEOUT=IN_PROGRESS
+    PHASE_09_BACKEND_MERGED=YES
+    PHASE_09_BACKEND_MAIN_SHA=42463097e3884fa9529741c196c33351a958820d
+    PHASE_09_BACKEND_POST_MERGE_CI=PASS
+    PHASE_09_FRONTEND_MERGED=YES
+    PHASE_09_FRONTEND_MAIN_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+    PHASE_09_FRONTEND_POST_MERGE_CI=PASS
+    PHASE_09_WORKSPACE_MERGED=NO
+    NEXT_TASK_ID=PHASE-09-MERGE-CLOSEOUT
+    NEXT_TASK_STATUS=IN_PROGRESS
+
+Backend PR #3 and Frontend PR #8 were merged into their respective `main`
+branches using the accepted Phase 09 heads. Their post-merge CI runs passed.
+Workspace still requires its ordered merge and a truthful post-merge state
+sync before Phase 09 can be recorded as fully merged and closed.

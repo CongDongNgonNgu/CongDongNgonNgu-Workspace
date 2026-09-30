@@ -20,6 +20,19 @@ For each real blocker append:
 - Resolution evidence/date when cleared.
 
 Do not classify normal coding work as a blocker. Do not work around missing provider/production credentials by inventing, exposing or reusing EduAI secrets. External-provider live verification may remain blocked while adapter/unit/sandbox work continues if the phase acceptance allows that distinction.
+
+- BLOCKER-09B-001 / LNG-09-002 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: the safety review rejected publication of the scoped Workspace 09B branch because prior authorization covered 09A only; local implementation and validation remained complete, 2026-09-30.
+  - Impact: Workspace remote-SHA verification and 09B acceptance publication were temporarily unavailable; no merge or deployment was attempted.
+  - Resolution owner/dependency: explicit user authorization for the exact `phase-09b-learner-context-contracts` Workspace push.
+  - Resolution evidence/date: authorization received in the current run; Workspace remote branch `phase-09b-learner-context-contracts` verified at `6c5530a31cda69562b0b5e93687905b51cdbdc37`, 2026-09-30.
+  - Safe work that may continue: Phase 09C remains planned until the mandatory ChatGPT relay returns its next prompt.
+- BLOCKER-09C-001 / LNG-09-003, LNG-09-006 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: the safety review initially rejected publication of the three scoped Phase 09C feature branches because explicit 09C push authorization was not present; local implementation and validation remained complete, 2026-09-30.
+  - Impact: remote SHA verification and 09C acceptance publication were temporarily unavailable; no merge or deployment was attempted.
+  - Resolution owner/dependency: explicit user authorization for the exact Backend, Frontend, and Workspace `phase-09c-conversation-roleplay` pushes.
+  - Resolution evidence/date: authorization received in the current run; Backend remote verified at `0390ed85b807d840ff1622a64d0d0dec40a34c39`, Frontend at `757cd7aa21cd751fdddab28efde358bfd2bb2eca`, and Workspace at `6332d6ace2358f38ddd3b33ea06f91304e836da2`, 2026-09-30.
+  - Safe work that may continue: Phase 09D after the mandatory ChatGPT relay returns its next prompt.
 - BLOCKER-01-001 / LNG-01-001 through LNG-01-007 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: the configured Stitch MCP server is `https://stitch.googleapis.com/mcp`; `mcp__stitch__create_project` and `mcp__stitch__list_projects` both returned `Auth required`, 2026-09-08. No Stitch project or authenticated project listing was available in the session.
   - Impact: Phase 01 cannot safely begin user-facing design implementation because Workspace policy requires Stitch design and review before each substantial surface. Required Stitch references and accepted design evidence cannot be recorded.
@@ -61,3 +74,38 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution evidence/date: the real non-production MemoryEmailProvider was resolved from the same Nest application process as the local HTTP server; USER_A/B/C completed real register, verify-email, login, and /auth/me flows on Neon TEST, 2026-09-16.
   - Authenticated runtime evidence: correction/question creation, structured responses, Helpful, expected self-vote/non-requester rejection, acceptance change/revoke, responsive checks, accessibility checks, and populated screenshot comparisons are recorded in phases/PHASE-06-CORRECTIONS-QA/evidence/PHASE-06C-IMPLEMENTATION.md.
   - Scope note: OWNER_VISUAL_ACCEPTANCE_06C=YES; LNG-06-003 and LNG-06-004 are DONE; Phase 06D remains not started.
+
+- BLOCKER-09D-001 / LNG-09-004, LNG-09-005 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: Phase 09D implementation, focused/full tests, E2E, typecheck, lint, build, audit, review, and controlled browser-boundary verification passed locally on 2026-09-30. Backend local head is `62a48bf49291dd57daa8feb85cbac31694380e0b`; Frontend local head is `85fb969e43c54c53780376842fcfac36dd5881bc`; Workspace local head is `6260d7900f1a2be994d5814bb363986cbc95f225`.
+  - Impact: before resolution, the 09D feature branches could not receive final remote-SHA/CI acceptance evidence, so the subphase could not be marked DONE or advance to 09E.
+  - Resolution owner/dependency: one explicit authorization for `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES`, covering Backend, Frontend, and the final Workspace evidence commit on `phase-09d-writing-grammar-coaching`.
+  - Resolution evidence/date: explicit grouped authorization was received; Backend, Frontend, and Workspace `phase-09d-writing-grammar-coaching` branches were pushed and remote heads verified at `62a48bf49291dd57daa8feb85cbac31694380e0b`, `85fb969e43c54c53780376842fcfac36dd5881bc`, and `e08891a96e85bc6455fb8ef4186252898a3849e7`, respectively, 2026-09-30. Workspace state and handoff were updated to `PHASE_09D=DONE`.
+  - Safe work that may continue: Phase 09E / LNG-09-007 may begin only after the mandatory relay returns its next prompt; no merge or deployment was attempted.
+
+- BLOCKER-09E-001 / LNG-09-007 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: Phase 09E implementation, focused/full Backend and Frontend validation, E2E, typecheck, lint, build, online audit, controlled deterministic runtime tests and review passed locally on 2026-09-30. Local heads are Backend `1e5c15635a628d864c7c74847cff25ded779ccdf`, Frontend `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`, and Workspace acceptance evidence is committed at `056686a8092887fbc5e108a3d7262a5d15481e79`.
+  - Impact: remote SHA and CI publication evidence for the three Phase 09E feature branches was unavailable until the grouped authorization was received; no merge or deployment was attempted.
+  - Resolution owner/dependency: one grouped explicit authorization for `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09E_FEATURE_BRANCHES` covering Backend, Frontend and Workspace branch `phase-09e-learn-from-community-library`.
+  - Resolution evidence/date: grouped authorization was received; Backend, Frontend and Workspace `phase-09e-learn-from-community-library` branches were pushed and remote heads verified at `1e5c15635a628d864c7c74847cff25ded779ccdf`, `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`, and `2dde127619c575ee8c67bda8a5f1dff68274c990`, respectively, 2026-09-30. Feature-branch CI was not triggered because the repository workflows run only on `main` pushes and pull requests targeting `main`.
+  - Safe work that may continue: mandatory relay to obtain the next prompt for Phase 09F; no merge or deployment was attempted.
+
+- BLOCKER-09F-001 / LNG-09-008 / `BLOCKED_EXTERNAL` / RESOLVED
+  - Evidence/date: 09F Backend implementation, focused/full unit tests, E2E,
+    typecheck, lint, build, online audit, deterministic runtime checks and
+    review passed locally on 2026-09-30. Backend local head is
+    `8f2eebaf912d664893afbec885eddb7c49b88a06`; Frontend remains at accepted
+    09E head `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`.
+  - Impact: before resolution, final remote SHA/publication evidence and the
+    Phase 09 final gate could not be closed; no merge or deployment occurred.
+  - Resolution owner/dependency: one grouped explicit authorization for
+    `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09F_FEATURE_BRANCHES` covering
+    Backend and Workspace branches; Frontend had no 09F source change and
+    required no new publication
+    `phase-09f-safety-cost-reconciliation`.
+  - Resolution evidence/date: authorization received; Backend remote branch
+    `phase-09f-safety-cost-reconciliation` verified at
+    `8f2eebaf912d664893afbec885eddb7c49b88a06`, Workspace at
+    `fdf6c3c5c0053022325e950a500c9a877658cdeb`, 2026-09-30. Workspace state
+    now records `PHASE_09F=DONE` and `PHASE_09_FINAL_GATE_READY=YES`.
+  - Safe work that may continue: request and execute the Phase 09 final-gate
+    prompt; no merge, deployment or Phase 10 work is authorized.

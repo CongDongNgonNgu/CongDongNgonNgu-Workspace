@@ -110,3 +110,40 @@ protection. The deployed Vercel `/api/v1` rewrite precedes the SPA fallback;
 the provider capability endpoint, Google redirect, and real browser callback
 were verified in production. No direct/manual production database mutation
 was performed.
+
+## DEC-014 - Phase 09A provider-neutral AI usage architecture
+**Status:** Accepted for Phase 09A implementation on 2026-09-30.
+
+Phase 09A establishes provider/model adapter contracts, optional streaming
+capability metadata, bounded timeout/retry orchestration, fail-closed
+disabled/misconfigured behavior, privacy-safe token/cost accounting, and
+quota/rate-limit ports. It deliberately selects no provider, stores no
+provider credential, creates no user-facing AI route, and creates no usage
+schema migration. The detailed rationale and alternatives are recorded in
+`docs/DEC-014-PHASE-09A-AI-PROVIDER-USAGE-ARCHITECTURE.md`.
+
+## DEC-015 - Phase 09B learner context and prompt contracts
+**Status:** Accepted for Phase 09B implementation on 2026-09-30.
+
+Phase 09B projects only the selected active learning target, explicit
+declared/assessed proficiency and normalized learning goals from the Phase 03
+profile contract. Versioned prompts keep the system instruction static and
+carry learner/profile text plus user input in an explicitly untrusted JSON
+user message. Strict versioned validators cover writing corrections, grammar
+coaching and quiz material with bounded fields and fail-closed parsing.
+No provider, frontend surface, schema migration or live call is introduced.
+The rationale and boundaries are recorded in
+`docs/DEC-015-PHASE-09B-LEARNER-CONTEXT-PROMPT-CONTRACTS.md`.
+
+## DEC-019 - Phase 09F safety, cost and non-destructive reconciliation
+**Status:** Accepted for Phase 09F / LNG-09-008 on 2026-09-30.
+
+Phase 09F keeps one provider-neutral AI path, normalizes runtime failures to
+safe codes/messages, treats missing USD pricing as explicit unknown, fails
+closed for invalid cost inputs, and audits bounded usage records without
+mutating or persisting them. Duplicate request identities, invalid token/cost
+facts, non-success charges, missing failure codes and invalid timestamps are
+reported as deterministic issue codes. No provider credential, billing system,
+database migration, production write or live AI call is introduced. The full
+rationale and contract are recorded in
+`docs/DEC-019-PHASE-09F-SAFETY-COST-RECONCILIATION.md`.
