@@ -37,9 +37,17 @@ Explain errors and generate focused follow-up practice rather than only returnin
 Implement configurable scenarios rather than eight hard-coded pages. Each scenario defines context, roles, learner level, goals and safe boundaries. Provide session goal/progress and post-session feedback without fake precise scoring.
 
 ## LNG-09-007 — Learn from Community/Library
+**Status:** DONE (local implementation and validation complete; publication authorization pending)
 **Depends on:** Phase 08, Phase 05
 
-From permitted public/owned content, generate vocabulary, grammar notes, questions, mini quiz and speaking prompts. Retrieval/context must preserve source IDs/attribution and exclude private/rejected/moderation-hidden items. Display links back to source where appropriate.
+From permitted public/owned content, generate vocabulary, grammar notes,
+questions, mini quiz and speaking prompts. Retrieval/context must preserve
+source IDs/attribution and exclude private/rejected/moderation-hidden items.
+The implementation reuses the authoritative public Library projection,
+validates current provenance/license eligibility, keeps source content
+untrusted, uses the provider-neutral structured-output runtime, and displays
+safe links back to the source where appropriate. It is stateless and creates
+no schema change or canonical resource mutation.
 
 ## LNG-09-008 — AI Safety, Cost & Reconciliation
 **Depends on:** LNG-09-001..007

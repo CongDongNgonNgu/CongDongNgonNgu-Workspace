@@ -84,5 +84,16 @@ The published feature heads are Backend
 `85fb969e43c54c53780376842fcfac36dd5881bc`, and Workspace
 `e08891a96e85bc6455fb8ef4186252898a3849e7`. Remote SHAs were verified after
 the grouped publication authorization; no merge or deployment was attempted.
-The next projection is `PHASE_09E` / `LNG-09-007` after the mandatory handoff
-relay.
+## 09E completion
+
+`PHASE_09E` / `LNG-09-007` is complete locally. The implementation consumes
+only the authoritative public Library projection, preserves source IDs and
+attribution inside a bounded untrusted provider context, validates current
+license/provenance eligibility, returns five bounded structured study sections,
+and exposes a source-aware Library detail action/result. Backend and Frontend
+local heads are `1e5c15635a628d864c7c74847cff25ded779ccd` and
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. No schema change, migration,
+canonical mutation, live provider call, merge or deployment occurred.
+
+The next projection is `PHASE_09F` / `LNG-09-008`; it must not start until the
+09E grouped publication gate and mandatory relay are resolved.
