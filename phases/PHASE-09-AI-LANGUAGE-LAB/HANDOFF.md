@@ -428,3 +428,38 @@ All accepted 09A–09F commits are ancestors of the active heads, no open PRs
 were found, and the repository workflows run only on `main` pushes or pull
 requests targeting `main`. No merge, branch deletion, deployment, production
 write, test database mutation, paid provider action, or live AI call occurred.
+
+## PHASE_09_MERGE_CLOSEOUT in progress
+
+```text
+PHASE_09_MERGE_CLOSEOUT=IN_PROGRESS
+BACKEND_PR_NUMBER=3
+BACKEND_PR_MERGED=YES
+BACKEND_MERGE_COMMIT_SHA=42463097e3884fa9529741c196c33351a958820d
+BACKEND_MAIN_AFTER_SHA=42463097e3884fa9529741c196c33351a958820d
+BACKEND_REMOTE_MAIN_VERIFIED=PASS
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_POST_MERGE_CI_RUN_ID=verified-current-main-CI
+BACKEND_POST_MERGE_CI_SHA=42463097e3884fa9529741c196c33351a958820d
+FRONTEND_PR_NUMBER=8
+FRONTEND_PR_MERGED=YES
+FRONTEND_MERGE_COMMIT_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_MAIN_AFTER_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_REMOTE_MAIN_VERIFIED=PASS
+FRONTEND_POST_MERGE_CI=PASS
+FRONTEND_POST_MERGE_CI_RUN_ID=verified-current-main-CI
+FRONTEND_POST_MERGE_CI_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+WORKSPACE_PR_NUMBER=PENDING
+WORKSPACE_PR_MERGED=NO
+WORKSPACE_MAIN_AFTER_SHA=PENDING
+WORKSPACE_REMOTE_MAIN_VERIFIED=PENDING
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+MERGED_TO_MAIN=NO
+DEPLOYED=NO
+NEXT_ACTION=MERGE_WORKSPACE
+```
+
+Backend and Frontend main branches contain their accepted Phase 09 histories,
+and their current-main CI runs passed. Workspace is intentionally still
+pending its own merge; no branch cleanup occurs until all three repositories
+are merged and verified.

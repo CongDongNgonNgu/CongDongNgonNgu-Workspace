@@ -233,3 +233,24 @@ changes; its accepted 09E head is verified remotely at
 `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. Workspace final-gate state is
 recorded on the 09F branch. No merge, deployment, Phase 10 implementation, or
 live provider call was performed.
+
+## Current Phase 09 merge closeout
+
+    CURRENT_PHASE=09
+    PHASE_09=IN_PROGRESS
+    PHASE_09_FINAL_GATE=PASS
+    PHASE_09_MERGE_CLOSEOUT=IN_PROGRESS
+    PHASE_09_BACKEND_MERGED=YES
+    PHASE_09_BACKEND_MAIN_SHA=42463097e3884fa9529741c196c33351a958820d
+    PHASE_09_BACKEND_POST_MERGE_CI=PASS
+    PHASE_09_FRONTEND_MERGED=YES
+    PHASE_09_FRONTEND_MAIN_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+    PHASE_09_FRONTEND_POST_MERGE_CI=PASS
+    PHASE_09_WORKSPACE_MERGED=NO
+    NEXT_TASK_ID=PHASE-09-MERGE-CLOSEOUT
+    NEXT_TASK_STATUS=IN_PROGRESS
+
+Backend PR #3 and Frontend PR #8 were merged into their respective `main`
+branches using the accepted Phase 09 heads. Their post-merge CI runs passed.
+Workspace still requires its ordered merge and a truthful post-merge state
+sync before Phase 09 can be recorded as fully merged and closed.
