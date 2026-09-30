@@ -191,3 +191,61 @@ used. Backend PR #6 and exact-head post-merge CI passed; Workspace PR #11
 merged at `8d002e5185f3bc385da9c98a921d70b7f450608d`, with its temporary
 branch deleted locally and remotely. Phase 10D is ready; Phase 11 has not
 started.
+
+## PHASE_10D final acceptance evidence
+
+```text
+PHASE_10D_RESULT=PASS
+PHASE_10_DECOMPOSITION=10A Ledger + Contribution Rules [LNG-10-001,LNG-10-002]; 10B Learning XP + Streaks [LNG-10-003,LNG-10-004]; 10C Badges + Levels + Anti-Farming [LNG-10-005,LNG-10-006]; 10D Passport/Profile UI [LNG-10-007]; 10E Reconciliation + Final Gate [LNG-10-008]
+PHASE_SCOPE=Stitch-backed owner-only Passport/progress surface separating language proficiency, Learning XP and Community Reputation with privacy-safe server projections.
+TASKS_INCLUDED=LNG-10-007
+TASKS_COMPLETED=LNG-10-007
+BACKEND_BEFORE_SHA=8edc67b988c4b854d5443cd97689dca9b82ad44e
+BACKEND_FEATURE_HEAD_SHA=3a023a82d30c6d83ef966485c2eb7471a335d3ea
+BACKEND_AFTER_SHA=1a75ed7279a0a76f9539c855512a03979a8cac69
+BACKEND_PR=7
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_POST_MERGE_CI_RUN=38
+FRONTEND_BEFORE_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_FEATURE_HEAD_SHA=e21d512e9c70616f23209d7178196fc1e1a64a0b
+FRONTEND_AFTER_SHA=6358552f23318f5dfd436ef8bd0b1b2cb4e034c7
+FRONTEND_PR=9
+FRONTEND_POST_MERGE_CI=PASS
+FRONTEND_POST_MERGE_CI_RUN=53
+WORKSPACE_BEFORE_SHA=7f20a9cc1f4df0aaf1c62538e854d30326d817ac
+WORKSPACE_FEATURE_HEAD_SHA=8f0bbaeb59888927bb9c7a23eee95ef973a0470e
+WORKSPACE_PR=13
+WORKSPACE_AFTER_SHA=4fa51acffab4174f808a20d4e6567c12e520ca56
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=PASS
+ACCEPTANCE=PASS
+TESTS=Backend focused controller 1 suite/1 test; backend full unit 88 suites/594 tests; backend E2E 13 suites/60 tests; frontend focused 3 files/17 tests; frontend full regression 54 files/242 tests; browser smoke desktop + mobile 390px PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: online npm audit --audit-level=high found 0 vulnerabilities in backend and frontend
+CI=PASS: backend PR #7 1/1 + post-merge run #38 on 1a75ed7; frontend PR #9 3/3 + post-merge run #53 on 6358552; Workspace PR #13 merged with CI NOT_REQUIRED
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+FRONTEND_CHANGED=YES
+DEPLOYED=NO
+MERGED_TO_MAIN=YES
+BLOCKERS=NONE
+CURRENT_PHASE=10
+CURRENT_SUBPHASE=10D
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=10E
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+```
+
+Phase 10D preserves the identity-first Passport while making Learning XP
+and Community Reputation visibly separate, server-authoritative projections.
+Public profile privacy, finite badge criteria, reversal-neutral language,
+responsive/a11y states and retry behavior were verified. No raw ledger or
+private moderation/evidence data is exposed. No schema change, migration,
+TEST database mutation, production database mutation or deployment occurred.
+Phase 10E is the next authorized subphase; Phase 11 has not started.
