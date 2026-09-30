@@ -185,5 +185,7 @@ security review passed. The local Backend/Frontend feature heads are
 `1e5c15635a628d864c7c74847cff25ded779ccdf` and
 `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. The Workspace branch carries the
 09E acceptance evidence at local commit
-`056686a8092887fbc5e108a3d7262a5d15481e79`; grouped publication is the only
-open external gate. Phase 09F is not implemented and Phase 09 is not DONE.
+`056686a8092887fbc5e108a3d7262a5d15481e79`; the Backend, Frontend and
+Workspace feature branches were published and their remote heads verified
+after grouped authorization. Phase 09F is not implemented and Phase 09 is not
+DONE.

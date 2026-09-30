@@ -3,7 +3,7 @@
 Date: 2026-09-30
 Subphase: `PHASE_09E`
 Task: `LNG-09-007`
-Status: locally complete; feature-branch publication requires explicit authorization.
+Status: complete; grouped feature-branch publication verified after explicit authorization.
 
 ## Scope reconciled
 
@@ -65,5 +65,13 @@ creep were reviewed. No finding remained that required a code change.
 - Workspace acceptance baseline before this evidence: `0d09df29a7adba00fb40b7740c1f318f724f0868`
 - Database schema change: NO; migration: NO; test DB mutation: NO; production
   DB mutation: NO; deployment: NO; merge to main: NO.
-- Publication is intentionally not claimed until the grouped user authorization
-  for the three `phase-09e-learn-from-community-library` branches is received.
+- Backend remote branch `phase-09e-learn-from-community-library` verified at
+  `1e5c15635a628d864c7c74847cff25ded779ccdf`.
+- Frontend remote branch `phase-09e-learn-from-community-library` verified at
+  `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`.
+- Workspace remote branch `phase-09e-learn-from-community-library` was verified
+  at `2dde127619c575ee8c67bda8a5f1dff68274c990` before this publication
+  evidence update; this update is the final governance record for the
+  publication gate.
+- The Backend and Frontend workflows intentionally do not run on feature-branch
+  pushes; they run on `main` pushes and pull requests targeting `main`.

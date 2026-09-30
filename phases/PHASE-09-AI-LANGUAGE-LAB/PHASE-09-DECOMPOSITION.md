@@ -86,7 +86,8 @@ The published feature heads are Backend
 the grouped publication authorization; no merge or deployment was attempted.
 ## 09E completion
 
-`PHASE_09E` / `LNG-09-007` is complete locally. The implementation consumes
+`PHASE_09E` / `LNG-09-007` is complete and published on its feature branches.
+The implementation consumes
 only the authoritative public Library projection, preserves source IDs and
 attribution inside a bounded untrusted provider context, validates current
 license/provenance eligibility, returns five bounded structured study sections,
@@ -96,4 +97,4 @@ local heads are `1e5c15635a628d864c7c74847cff25ded779ccdf` and
 canonical mutation, live provider call, merge or deployment occurred.
 
 The next projection is `PHASE_09F` / `LNG-09-008`; it must not start until the
-09E grouped publication gate and mandatory relay are resolved.
+09E mandatory relay returns the next prompt.

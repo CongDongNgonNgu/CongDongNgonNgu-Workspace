@@ -82,8 +82,9 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution evidence/date: explicit grouped authorization was received; Backend, Frontend, and Workspace `phase-09d-writing-grammar-coaching` branches were pushed and remote heads verified at `62a48bf49291dd57daa8feb85cbac31694380e0b`, `85fb969e43c54c53780376842fcfac36dd5881bc`, and `e08891a96e85bc6455fb8ef4186252898a3849e7`, respectively, 2026-09-30. Workspace state and handoff were updated to `PHASE_09D=DONE`.
   - Safe work that may continue: Phase 09E / LNG-09-007 may begin only after the mandatory relay returns its next prompt; no merge or deployment was attempted.
 
-- BLOCKER-09E-001 / LNG-09-007 / `BLOCKED_EXTERNAL` / OPEN
+- BLOCKER-09E-001 / LNG-09-007 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: Phase 09E implementation, focused/full Backend and Frontend validation, E2E, typecheck, lint, build, online audit, controlled deterministic runtime tests and review passed locally on 2026-09-30. Local heads are Backend `1e5c15635a628d864c7c74847cff25ded779ccdf`, Frontend `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`, and Workspace acceptance evidence is committed at `056686a8092887fbc5e108a3d7262a5d15481e79`.
-  - Impact: remote SHA and CI publication evidence for the three Phase 09E feature branches is unavailable; no merge or deployment was attempted.
+  - Impact: remote SHA and CI publication evidence for the three Phase 09E feature branches was unavailable until the grouped authorization was received; no merge or deployment was attempted.
   - Resolution owner/dependency: one grouped explicit authorization for `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09E_FEATURE_BRANCHES` covering Backend, Frontend and Workspace branch `phase-09e-learn-from-community-library`.
-  - Safe work that may continue: none beyond reviewing the local handoff; do not implement 09F or publish without the grouped authorization.
+  - Resolution evidence/date: grouped authorization was received; Backend, Frontend and Workspace `phase-09e-learn-from-community-library` branches were pushed and remote heads verified at `1e5c15635a628d864c7c74847cff25ded779ccdf`, `ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`, and `2dde127619c575ee8c67bda8a5f1dff68274c990`, respectively, 2026-09-30. Feature-branch CI was not triggered because the repository workflows run only on `main` pushes and pull requests targeting `main`.
+  - Safe work that may continue: mandatory relay to obtain the next prompt for Phase 09F; no merge or deployment was attempted.

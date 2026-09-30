@@ -284,16 +284,17 @@ FRONTEND_TESTS=PASS
 RESPONSIVE_A11Y=PASS
 DEPLOYED=NO
 MERGED_TO_MAIN=NO
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09E_FEATURE_BRANCHES
+BLOCKERS=NONE
 CURRENT_PHASE=09
 CURRENT_SUBPHASE=09E
 SUBPHASE_STATUS=DONE
 NEXT_RECOMMENDED_SUBPHASE=09F
-NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+NEXT_ACTION=REQUEST_NEXT_PROMPT
 ```
 
 09E uses Stitch project `3718538619973058970`, design system
 `16442026920550574436`, desktop `b2eba5cedc6c494d9e2d4c06fecd8e02`, and
 mobile `41ff35f0019648beac2408cfa8dfba9a`. The Workspace evidence and
-acceptance state are local until the grouped publication authorization is
-received; no merge or deployment was attempted. Phase 09F remains planned.
+acceptance state are published on the grouped feature branches; remote heads
+were verified after authorization. No merge or deployment was attempted.
+Phase 09F remains planned.
