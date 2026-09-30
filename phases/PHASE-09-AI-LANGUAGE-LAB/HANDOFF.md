@@ -118,7 +118,7 @@ was attempted.
 ## PHASE_09C sanitized evidence
 
 ```text
-PHASE_09C_RESULT=PASS
+PHASE_09C_RESULT=BLOCKED
 PHASE_09_DECOMPOSITION=09A Provider & Usage Foundation [LNG-09-001]; 09B Learner Context & Prompt Contracts [LNG-09-002]; 09C Conversation & Configurable Roleplay [LNG-09-003,LNG-09-006]; 09D Structured Writing & Grammar Coaching [LNG-09-004,LNG-09-005]; 09E Provenance-Aware Learn from Community/Library [LNG-09-007]; 09F Safety, Cost & Reconciliation [LNG-09-008]
 PHASE_SCOPE=Reusable conversation workspace and configurable roleplay scenarios with bounded context, ownership checks, stop/retry/explain/error/quota/provider-offline states, session goals, honest post-session feedback, and responsive Stitch-backed UI.
 TASKS_INCLUDED=LNG-09-003,LNG-09-006
@@ -132,7 +132,7 @@ WORKSPACE_AFTER_SHA=4297c4c2c219a6fa9eac974b4617e3bb08169bad
 IMPLEMENTATION=PASS
 REVIEW=PASS
 RUNTIME=PASS
-ACCEPTANCE=PASS
+ACCEPTANCE=NOT_COMPLETED
 TESTS=Backend focused 09C plus 09A/09B tests passed; 71 unit suites / 510 tests; 13 E2E suites / 59 tests; Frontend focused 09C tests 2 files / 3 tests; 49 test files / 228 tests
 TYPECHECK=PASS
 LINT=PASS
@@ -146,12 +146,12 @@ PRODUCTION_DB_MUTATED=NO
 LIVE_AI_PROVIDER_CALLS=0
 DEPLOYED=NO
 MERGED_TO_MAIN=NO
-BLOCKERS=NONE
+BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED:PUBLISH_PHASE_09C_FEATURE_BRANCHES
 CURRENT_PHASE=09
 CURRENT_SUBPHASE=09C
-SUBPHASE_STATUS=DONE
+SUBPHASE_STATUS=BLOCKED
 NEXT_RECOMMENDED_SUBPHASE=09D
-NEXT_ACTION=REQUEST_NEXT_PROMPT
+NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
 ```
 
 09C uses the accepted Stitch project `3718538619973058970` with desktop
@@ -161,3 +161,8 @@ new route renders responsively with accessibility score 100 in the
 unauthenticated boundary; authenticated live-provider behavior was not
 claimed because provider credentials/cost were not authorized. No merge or
 deployment was attempted.
+
+The 09C Backend, Frontend, and Workspace feature branches are committed
+locally and passed the stated validation gates, but publication was denied by
+the safety gate because explicit authorization for pushing 09C branches was
+not present. No workaround, merge, or deployment was attempted.
