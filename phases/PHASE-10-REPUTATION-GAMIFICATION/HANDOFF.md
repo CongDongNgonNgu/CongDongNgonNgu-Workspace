@@ -26,22 +26,22 @@ PHASE_10A_RESULT=VERIFYING
 PHASE_10_DECOMPOSITION=10A Ledger + Contribution Rules [LNG-10-001,LNG-10-002]; 10B Learning XP + Streaks [LNG-10-003,LNG-10-004]; 10C Badges + Levels + Anti-Farming [LNG-10-005,LNG-10-006]; 10D Passport/Profile UI [LNG-10-007]; 10E Reconciliation + Final Gate [LNG-10-008]
 PHASE_SCOPE=Append-oriented dual-system ledger, derived balances, idempotent event replay, versioned community contribution rules, independent-actor/source eligibility, and append-only compensating reversals.
 TASKS_INCLUDED=LNG-10-001,LNG-10-002
-TASKS_COMPLETED=LNG-10-001,LNG-10-002 (local implementation and focused validation)
+TASKS_COMPLETED=LNG-10-001,LNG-10-002 (local implementation, review, and full validation)
 BACKEND_BEFORE_SHA=42463097e3884fa9529741c196c33351a958820d
-BACKEND_AFTER_SHA=fb89f8c4b4a58d5defcdff153fbec4c8206634b0
+BACKEND_AFTER_SHA=554574f4e1d5032e09d94a53ccc0bb4d1b10dcf0
 FRONTEND_BEFORE_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
 FRONTEND_AFTER_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
 WORKSPACE_BEFORE_SHA=6e134f137297774c88863083cede853ec53c1fb4
 WORKSPACE_AFTER_SHA=PENDING
 IMPLEMENTATION=PASS
-REVIEW=VERIFYING
+REVIEW=PASS
 RUNTIME=NOT_REQUIRED
-ACCEPTANCE=VERIFYING
-TESTS=22 focused reputation unit/repository/migration tests PASS; app health E2E 2 tests PASS
+ACCEPTANCE=PASS (local acceptance; source-control integration pending)
+TESTS=23 focused reputation unit/repository/migration tests PASS; Backend full unit 81 suites/558 tests PASS; Backend E2E 13 suites/59 tests PASS
 TYPECHECK=PASS
-LINT=PENDING
-BUILD=PENDING
-AUDIT=PENDING
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: 0 vulnerabilities (online npm audit)
 CI=PENDING
 DATABASE_SCHEMA_CHANGE=YES
 MIGRATION_CREATED=YES (0012_phase10_reputation_ledger.sql + down migration)
@@ -55,7 +55,7 @@ CURRENT_PHASE=10
 CURRENT_SUBPHASE=10A
 SUBPHASE_STATUS=VERIFYING
 NEXT_RECOMMENDED_SUBPHASE=10B
-NEXT_ACTION=COMPLETE_LOCAL_GATES_THEN_PUBLISH_10A
+NEXT_ACTION=PUBLISH_10A_BRANCHES
 ```
 
 The Backend increment adds a provider-free `ReputationModule`, a versioned
@@ -63,5 +63,6 @@ contribution rule engine, an in-memory/Postgres ledger repository, and the
 authorized Phase 10A migration. It keeps Learning XP and Community
 Reputation independent, rejects self/private/unverified/raw-volume rewards,
 converges idempotent retries, derives balances from entries, and preserves
-awards through linked compensating reversals. No migration command or
-database write was run.
+awards through linked compensating reversals. Verified translation/resource
+rewards require `MODERATOR` or `ADMIN` actors, matching the existing review
+boundary. No migration command or database write was run.
