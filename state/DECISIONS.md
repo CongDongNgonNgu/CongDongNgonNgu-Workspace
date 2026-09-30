@@ -147,3 +147,19 @@ reported as deterministic issue codes. No provider credential, billing system,
 database migration, production write or live AI call is introduced. The full
 rationale and contract are recorded in
 `docs/DEC-019-PHASE-09F-SAFETY-COST-RECONCILIATION.md`.
+
+## DEC-021 - Phase 10B learning XP and timezone-aware streaks
+**Status:** Accepted for Phase 10B / LNG-10-003 and LNG-10-004 on 2026-09-30.
+
+Learning XP is awarded only by a trusted, bounded completion contract for
+practice, focused sessions, vocabulary milestones and passing quiz
+milestones. Events are versioned and idempotent by source identity; failed,
+abandoned, future, empty and insufficiently evidenced events fail closed.
+Streak days and milestone history are derived from positive, unreversed
+Phase 10A `learning_xp` ledger entries, so no additional schema migration is
+needed for 10B. The validated profile IANA timezone controls local calendar
+projection, with explicit UTC default only when the profile has no timezone;
+the pure calculator rejects timezone-less input. Timezone changes do not
+create, rewrite or backfill ledger events and are never qualifying activity.
+The full policy and alternatives are recorded in
+`docs/DEC-021-PHASE-10-LEARNING-XP-STREAKS.md`.

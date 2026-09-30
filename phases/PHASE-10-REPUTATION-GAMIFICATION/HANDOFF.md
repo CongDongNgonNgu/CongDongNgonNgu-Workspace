@@ -7,8 +7,8 @@ Record ledger schema, rule versions/table, reversal policy, abuse controls, time
 On Acceptance: Phase 10 DONE; Phase 11 becomes READY. Phase 15 also still waits on Phase 11.
 
 Phases 05, 06 and 08 satisfy the dependency for the first Phase 10 task.
-Phase 10 is active. Subphase 10A is closed; the next recommended subphase
-is 10B, starting with `LNG-10-003`.
+Phase 10 is active. Subphases 10A and 10B are closed; the next recommended
+subphase is 10C, starting with `LNG-10-005`.
 
 ## Phase 10A execution
 
@@ -70,3 +70,58 @@ rewards require `MODERATOR` or `ADMIN` actors, matching the existing review
 boundary. Backend and Workspace were merged through PRs, exact remote-main
 heads were verified, and merged feature branches were deleted locally and
 remotely. No migration command or database write was run.
+
+## PHASE_10B final acceptance evidence
+
+```text
+PHASE_10B_RESULT=PASS
+PHASE_10_DECOMPOSITION=10A Ledger + Contribution Rules [LNG-10-001,LNG-10-002]; 10B Learning XP + Streaks [LNG-10-003,LNG-10-004]; 10C Badges + Levels + Anti-Farming [LNG-10-005,LNG-10-006]; 10D Passport/Profile UI [LNG-10-007]; 10E Reconciliation + Final Gate [LNG-10-008]
+PHASE_SCOPE=Trusted bounded learning completion XP, deterministic source-id replay protection, timezone-aware streak projection, milestones, reversals and timezone-change policy derived from the Phase 10A ledger.
+TASKS_INCLUDED=LNG-10-003,LNG-10-004
+TASKS_COMPLETED=LNG-10-003,LNG-10-004
+BACKEND_BEFORE_SHA=438ace0c2141072e0118b1f397f4a78354b1d3d4
+BACKEND_FEATURE_HEAD_SHA=dd0f295a81f6d89b20a3efea6a31327ddfe9cf62
+BACKEND_AFTER_SHA=24e7aaa66d8801624200e2ced329bfe5c0fb65c2
+BACKEND_PR=5
+FRONTEND_BEFORE_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_AFTER_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+WORKSPACE_BEFORE_SHA=4172a5bb6e67a10cfff5808817124243b94ddc05
+WORKSPACE_AFTER_SHA=PENDING_WORKSPACE_MERGE
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=NOT_REQUIRED
+ACCEPTANCE=PASS
+TESTS=Focused Phase 10B 3 suites / 24 tests PASS; Backend full unit 84 suites / 582 tests PASS; Backend E2E 13 suites / 60 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: online npm audit found 0 vulnerabilities
+CI=PASS: Backend PR #5 1/1; Backend post-merge CI run #34 on 24e7aaa PASS; Workspace CI NOT_REQUIRED
+STREAK_TIMEZONE_DETERMINISM=PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+BLOCKERS=NONE
+CURRENT_PHASE=10
+CURRENT_SUBPHASE=10B
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=10C
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+```
+
+Phase 10B keeps Learning XP separate from Community Reputation and awards
+only trusted completed practice, focused-session, vocabulary-milestone and
+passing-quiz events. The backend derives bounded progress, milestones and
+current/longest streaks from positive unreversed Phase 10A ledger entries;
+failed, abandoned, empty, future, malformed, duplicate and insufficiently
+evidenced events write nothing. Explicit IANA timezone projection is
+calendar/DST/process-timezone independent, uses UTC only at the service
+boundary for a missing profile timezone, and rejects timezone-less input in
+the pure calculator. Timezone changes never create, rewrite or backfill XP.
+No frontend, migration, TEST database, production database or deployment was
+used. Backend PR #5 and exact-head post-merge CI passed; Workspace merge and
+branch cleanup remain to be recorded by the closeout update.
