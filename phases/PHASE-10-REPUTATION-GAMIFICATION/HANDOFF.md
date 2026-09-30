@@ -86,7 +86,9 @@ BACKEND_PR=5
 FRONTEND_BEFORE_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
 FRONTEND_AFTER_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
 WORKSPACE_BEFORE_SHA=4172a5bb6e67a10cfff5808817124243b94ddc05
-WORKSPACE_AFTER_SHA=PENDING_WORKSPACE_MERGE
+WORKSPACE_FEATURE_HEAD_SHA=81a49995a658b317dce335fc7ec0e3eb0b7a632a
+WORKSPACE_PR=9
+WORKSPACE_AFTER_SHA=bd568267fe4c210ec21861a858bfe9f731babfe3
 IMPLEMENTATION=PASS
 REVIEW=PASS
 RUNTIME=NOT_REQUIRED
@@ -96,7 +98,7 @@ TYPECHECK=PASS
 LINT=PASS
 BUILD=PASS
 AUDIT=PASS: online npm audit found 0 vulnerabilities
-CI=PASS: Backend PR #5 1/1; Backend post-merge CI run #34 on 24e7aaa PASS; Workspace CI NOT_REQUIRED
+CI=PASS: Backend PR #5 1/1; Backend post-merge CI run #34 on 24e7aaa PASS; Workspace PR #9 merged with CI NOT_REQUIRED
 STREAK_TIMEZONE_DETERMINISM=PASS
 DATABASE_SCHEMA_CHANGE=NO
 MIGRATION_CREATED=NO
@@ -104,7 +106,7 @@ TEST_DB_MUTATED=NO
 PRODUCTION_DB_MUTATED=NO
 FRONTEND_CHANGED=NO
 DEPLOYED=NO
-MERGED_TO_MAIN=NO
+MERGED_TO_MAIN=YES
 BLOCKERS=NONE
 CURRENT_PHASE=10
 CURRENT_SUBPHASE=10B
@@ -123,5 +125,7 @@ calendar/DST/process-timezone independent, uses UTC only at the service
 boundary for a missing profile timezone, and rejects timezone-less input in
 the pure calculator. Timezone changes never create, rewrite or backfill XP.
 No frontend, migration, TEST database, production database or deployment was
-used. Backend PR #5 and exact-head post-merge CI passed; Workspace merge and
-branch cleanup remain to be recorded by the closeout update.
+used. Backend PR #5 and exact-head post-merge CI passed; Workspace PR #9
+merged at `bd568267fe4c210ec21861a858bfe9f731babfe3`, with its temporary
+branch deleted locally and remotely. Phase 10C is the next recommended
+subphase; Phase 11 has not started.
