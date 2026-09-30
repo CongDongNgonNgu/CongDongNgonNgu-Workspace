@@ -3404,3 +3404,75 @@ MERGED_TO_MAIN=NO
 DEPLOYED=NO
 NEXT_ACTION=READY_FOR_PHASE_08_MERGE
 ```
+
+## Phase 08 Backend post-merge security audit remediation
+
+The Backend Phase 08 merge exposed a post-merge CI audit failure. The failure
+was reproduced with the authoritative workflow sequence (`npm ci` followed by
+`npm audit --audit-level=high`): four advisories were visible online (three
+moderate and one high). The accepted Phase 08 feature tree and the merged main
+tree had identical dependency files and dependency content; the earlier
+pre-merge evidence used offline audit data, while CI used the online advisory
+database.
+
+The remediation changed only dependency metadata: the existing `multer`
+override moved from `2.3.0` to `2.4.0`, and the lockfile resolved patched
+`fast-uri`, `brace-expansion`, and their nested dependencies. No application
+source, schema, migration, TEST data, production data, frontend, or deployment
+was changed.
+
+Detailed sanitized evidence is recorded in
+`evidence/PHASE-08-BACKEND-POST-MERGE-SECURITY-REMEDIATION.md`.
+
+```text
+PHASE_08_POST_MERGE_SECURITY_REMEDIATION=PASS
+BACKEND_PHASE_08_FEATURE_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+BACKEND_MAIN_BEFORE_SECURITY_FIX_SHA=5411c1bfb8ce19b461af0625e293e4dd35683eb7
+REMEDIATION_COMMIT_SHA=5830d1a944f66a7b7ca1a0868502edc342dfb811
+REMEDIATION_PR_NUMBER=2
+REMEDIATION_HEAD_SHA=5830d1a944f66a7b7ca1a0868502edc342dfb811
+REMEDIATION_CI_RUN_ID=36665232748
+REMEDIATION_CI_HEAD_SHA=5830d1a944f66a7b7ca1a0868502edc342dfb811
+REMEDIATION_EXACT_SHA_CI_MATCH=PASS
+REMEDIATION_PR_CI=PASS
+REMEDIATION_PR_MERGED=YES
+BACKEND_SECURITY_MERGE_COMMIT_SHA=8c6558a426b043b27f1d5a966abb402f0b64b406
+BACKEND_MAIN_AFTER_SECURITY_FIX_SHA=8c6558a426b043b27f1d5a966abb402f0b64b406
+BACKEND_POST_SECURITY_CI_RUN_ID=36665346385
+BACKEND_POST_SECURITY_CI_SHA=8c6558a426b043b27f1d5a966abb402f0b64b406
+BACKEND_POST_SECURITY_MERGE_CI=PASS
+AUDIT_CRITICAL=0
+AUDIT_HIGH=0
+AUDIT_MODERATE=0
+AUDIT_LOW=0
+AUDIT_TOTAL=0
+AUDIT_GATE=PASS
+PHASE_08_REGRESSION=PASS
+BACKEND_TESTS=65 suites / 472 tests PASS
+BACKEND_E2E=13 suites / 59 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+BACKEND_CODE_BEHAVIOR_CHANGED=NO
+FRONTEND_CHANGED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+MIGRATION_REQUIRED=NO
+MIGRATION_CREATED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+DEPLOYED=NO
+WORKSPACE_ACCEPTED_SHA=dbbee45df92adb547b4d958a0685574c36e19c96
+WORKSPACE_SECURITY_EVIDENCE_RECORDED=YES
+WORKSPACE_MERGED=NO
+BRANCH_CLEANUP_PERFORMED=NO
+CURRENT_PHASE=08
+PHASE_08=DONE
+NEXT_PHASE=09
+NEXT_TASK_ID=LNG-09-001
+NEXT_TASK_NAME=AI Provider & Usage Architecture
+NEXT_TASK_STATUS=PLANNED
+NEXT_ACTION=RESUME_PHASE_08_MERGE_CLOSEOUT
+```
+
+Backend main is green again. Workspace has not been merged and no Phase 08
+branch cleanup was performed in this remediation task.
