@@ -70,6 +70,7 @@ migration.
 
 ## Current execution
 
-`PHASE_09A` is the active subphase. Its first implementation slice is
-backend-only because `LNG-09-001` defines architecture and controls, while no
-provider or user-facing mode is authorized until the later task contracts.
+`PHASE_09B` is complete. Its implementation is backend-only because
+`LNG-09-002` defines reusable learner-context, prompt, and structured-output
+contracts; no provider, user-facing mode, or frontend surface is authorized
+until the later mode tasks.

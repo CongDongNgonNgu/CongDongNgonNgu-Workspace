@@ -121,3 +121,16 @@ quota/rate-limit ports. It deliberately selects no provider, stores no
 provider credential, creates no user-facing AI route, and creates no usage
 schema migration. The detailed rationale and alternatives are recorded in
 `docs/DEC-014-PHASE-09A-AI-PROVIDER-USAGE-ARCHITECTURE.md`.
+
+## DEC-015 - Phase 09B learner context and prompt contracts
+**Status:** Accepted for Phase 09B implementation on 2026-09-30.
+
+Phase 09B projects only the selected active learning target, explicit
+declared/assessed proficiency and normalized learning goals from the Phase 03
+profile contract. Versioned prompts keep the system instruction static and
+carry learner/profile text plus user input in an explicitly untrusted JSON
+user message. Strict versioned validators cover writing corrections, grammar
+coaching and quiz material with bounded fields and fail-closed parsing.
+No provider, frontend surface, schema migration or live call is introduced.
+The rationale and boundaries are recorded in
+`docs/DEC-015-PHASE-09B-LEARNER-CONTEXT-PROMPT-CONTRACTS.md`.

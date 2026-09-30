@@ -12,11 +12,11 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09A=DONE`.
-Current task: `LNG-09-001=DONE`.
-The active slice is provider-neutral backend architecture only. No provider
-has been selected, no credentials are recorded, no live-provider verification
-is claimed, and no database migration is authorized by the current scope.
+Current subphase: `PHASE_09B=DONE`.
+Current task: `LNG-09-002=DONE`.
+The accepted slices remain provider-neutral backend contracts. No provider has
+been selected, no credentials are recorded, no live-provider verification is
+claimed, and no database migration is authorized by the current scope.
 
 ## PHASE_09A sanitized evidence
 
@@ -61,3 +61,56 @@ feature branches. The Backend workflow only runs for pull requests targeting
 `main` or pushes to `main`, so this feature-branch push did not create a CI
 run. Local unit, E2E, typecheck, lint, build, and audit validation passed.
 Phase 09 remains `IN_PROGRESS`; this acceptance applies only to 09A.
+
+## PHASE_09B sanitized evidence
+
+```text
+PHASE_09B_RESULT=PASS
+PHASE_09_DECOMPOSITION=09A Provider & Usage Foundation [LNG-09-001]; 09B Learner Context & Prompt Contracts [LNG-09-002]; 09C Conversation & Configurable Roleplay [LNG-09-003,LNG-09-006]; 09D Structured Writing & Grammar Coaching [LNG-09-004,LNG-09-005]; 09E Provenance-Aware Learn from Community/Library [LNG-09-007]; 09F Safety, Cost & Reconciliation [LNG-09-008]
+PHASE_SCOPE=Versioned learner-context and mode prompt contracts; safe separation of profile/user data from system instructions; bounded deterministic normalization; and strict validated structured-output schemas for writing corrections, grammar coaching and quiz material.
+TASKS_INCLUDED=LNG-09-002
+TASKS_COMPLETED=LNG-09-002
+BACKEND_BEFORE_SHA=06eeab6802d15c22a733923e5cb02ba4fa36f79f
+BACKEND_AFTER_SHA=a2b7bbb2c8b2f39f6f9845c85b09d0b6f1d24c06
+FRONTEND_BEFORE_SHA=N/A
+FRONTEND_AFTER_SHA=N/A
+WORKSPACE_BEFORE_SHA=37e69a3909337189ee0e789665659d117965ea95
+WORKSPACE_AFTER_SHA=TO_BE_PINNED
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=NOT_REQUIRED
+ACCEPTANCE=PASS
+LEARNER_CONTEXT_CONTRACT=PASS
+DATA_MINIMIZATION=PASS
+PROMPT_CONTRACT=PASS
+PROMPT_ROLE_SEPARATION=PASS
+UNTRUSTED_CONTENT_BOUNDARY=PASS
+CONTEXT_BOUNDS=PASS
+PROVIDER_NEUTRALITY=PASS
+PHASE_09A_COMPATIBILITY=PASS
+TESTS=13 focused 09B tests; 69 unit suites / 501 tests; 13 E2E suites / 59 tests
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: 0 vulnerabilities
+CI=NOT_TRIGGERED_FEATURE_BRANCH_LOCAL_VALIDATION_PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+LIVE_AI_PROVIDER_CALLS=NO
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+BLOCKERS=NONE
+CURRENT_PHASE=09
+CURRENT_SUBPHASE=09B
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=09C
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+```
+
+The 09B contracts and tests are committed on the scoped Backend feature
+branch. The Workspace state, decomposition and ADR are committed on the
+scoped Workspace feature branch; `WORKSPACE_AFTER_SHA` is pinned to the
+substantive acceptance commit below before relay.
