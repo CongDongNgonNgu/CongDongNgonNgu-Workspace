@@ -1,12 +1,13 @@
 # Phase 09 Tasks
 
 ## LNG-09-001 — AI Provider & Usage Architecture
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** Phase 08 and Phase 02 identity
 
 Define provider adapter(s), model capability config, timeout/retry strategy, streaming if justified, token/cost accounting, per-user/entitlement quota interface, rate limits and provider-disabled behavior. Do not leak provider keys to frontend. Store minimum necessary prompt/session metadata with privacy-safe logs.
 
 ## LNG-09-002 — Learner Context & Prompt Contracts
+**Status:** DONE
 **Depends on:** LNG-09-001, Phase 03
 
 Build versioned prompt contracts using target language, proficiency, goals and requested mode. Prevent user profile content from becoming hidden system instruction. Define output schemas where structured corrections/quiz material are required; validate model output before persistence/rendering.
