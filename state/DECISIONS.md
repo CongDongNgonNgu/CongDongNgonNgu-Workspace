@@ -2,6 +2,27 @@
 
 Append durable decisions; do not silently rewrite history.
 
+## DEC-023 — Phase 10D Passport and profile progress projection
+
+Accepted for Phase 10D on 2026-09-30. The owner Passport may compose the
+existing language profile with server projections for Learning XP and
+Community Reputation, while public profiles remain identity/language views
+without private progress. The backend is the sole authority for XP,
+reputation, streaks, levels, thresholds, badge status and reversals.
+
+The owner-only `GET /api/v1/reputation/progress` contract intentionally
+projects only presentation-safe reputation data. It excludes ledger rows,
+evidence source identifiers, rule versions, source types and internal ledger
+summaries. The frontend does not calculate gamification values; it renders
+server facts and handles loading, refresh, error, unauthorized, empty/new
+learner, reversed badge and offline-adjacent states. Finite badge criteria
+remain inspectable without exposing moderation or private audit data.
+
+No schema change, migration, test database mutation, production database
+mutation, provider call or deployment is part of Phase 10D. Stitch references
+and browser evidence are recorded in
+`docs/DEC-023-PHASE-10D-PASSPORT-PROGRESS-UI.md`.
+
 ## DEC-022 — Phase 10C badges, contributor levels and anti-farming
 
 Accepted for Phase 10C on 2026-09-30. See
