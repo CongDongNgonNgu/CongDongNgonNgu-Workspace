@@ -25,7 +25,7 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Evidence/date: the safety review rejected publication of the scoped Workspace 09B branch because prior authorization covered 09A only; local implementation and validation remained complete, 2026-09-30.
   - Impact: Workspace remote-SHA verification and 09B acceptance publication were temporarily unavailable; no merge or deployment was attempted.
   - Resolution owner/dependency: explicit user authorization for the exact `phase-09b-learner-context-contracts` Workspace push.
-  - Resolution evidence/date: authorization received in the current run; remote SHA verification follows the accepted push.
+  - Resolution evidence/date: authorization received in the current run; Workspace remote branch `phase-09b-learner-context-contracts` verified at `6c5530a31cda69562b0b5e93687905b51cdbdc37`, 2026-09-30.
   - Safe work that may continue: Phase 09C remains planned until the mandatory ChatGPT relay returns its next prompt.
 - BLOCKER-01-001 / LNG-01-001 through LNG-01-007 / `BLOCKED_EXTERNAL` / RESOLVED
   - Evidence/date: the configured Stitch MCP server is `https://stitch.googleapis.com/mcp`; `mcp__stitch__create_project` and `mcp__stitch__list_projects` both returned `Auth required`, 2026-09-08. No Stitch project or authenticated project listing was available in the session.
