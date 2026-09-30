@@ -1,6 +1,7 @@
 # Phase 09 decomposition
 
-Status: active planning baseline for the Phase 09 orchestrator.
+Status: final-gate PASS; historical decomposition and current acceptance
+evidence for the Phase 09 orchestrator.
 
 The decomposition follows the authoritative task dependencies in `TASKS.md`
 and the library provenance dependency in `state/DEPENDENCY-GRAPH.md`. It does
@@ -119,3 +120,13 @@ The grouped 09F Backend and Workspace feature branches are now published and
 their remote heads are verified. Frontend had no 09F source changes and
 remains at the accepted 09E head. Phase 09 is ready for the final gate only;
 it is not marked DONE and no Phase 10 work has started.
+
+## Phase 09 final gate
+
+The final gate is PASS after reconciling LNG-09-001 through LNG-09-008,
+preserving the stacked Backend/Frontend/Workspace histories, reusing exact-SHA
+validation evidence, and reviewing cross-phase safety, privacy, usage/cost,
+canonical-content, database, provider, and production-isolation boundaries.
+The phase is recorded as `READY_FOR_FINAL_GATE`, not `DONE`, because no merge
+was required or authorized by this gate. Phase 10 remains READY but has not
+started.

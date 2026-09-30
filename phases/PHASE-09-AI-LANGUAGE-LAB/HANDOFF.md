@@ -1,10 +1,10 @@
 # Phase 09 Handoff
 
-**Phase status:** IN_PROGRESS
+**Phase status:** READY_FOR_FINAL_GATE
 
 Record provider/model configuration names without secrets, prompt/schema versions, quota/cost policy, retrieval policy, Stitch references, frontend/backend/workspace SHAs, safety/cost/test results and CI.
 
-Distinguish implementation verified with mocks from live provider verification. On Acceptance: Phase 09 DONE.
+Distinguish implementation verified with mocks from live provider verification. On final-gate acceptance, Phase 09 is READY_FOR_FINAL_GATE until any separately authorized merge workflow is completed.
 
 Phase 08 is DONE and Phase 09 has now started under the orchestrator.
 The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
@@ -12,10 +12,11 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09F=DONE`.
-Current task: `LNG-09-008` is implemented, validated, evidenced and published
-on its scoped Backend and Workspace feature branches. Phase 09 is ready for
-the final gate, remains IN_PROGRESS, and is not marked DONE.
+Current subphase: `FINAL_GATE`.
+Current task set `LNG-09-001` through `LNG-09-008` is DONE and published on
+the scoped feature branches. The Phase 09 final gate is PASS and merge
+readiness is READY; Phase 09 is recorded as `READY_FOR_FINAL_GATE`, not DONE,
+because no merge or deployment was required or authorized by this gate.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -370,3 +371,59 @@ was verified at `fdf6c3c5c0053022325e950a500c9a877658cdeb` before this final
 state sync. Backend and Workspace were pushed and verified; Frontend had no
 09F source changes and required no new publication. No branch was merged or
 deployed. The next mandatory action is the Phase 09 final-gate prompt.
+
+## PHASE_09_FINAL_GATE sanitized evidence
+
+```text
+PHASE_09_FINAL_GATE=PASS
+PHASE_09_TASK_SET_COMPLETE=YES
+PHASE_09_FINAL_GATE_READY=YES
+TASKS_COMPLETED=LNG-09-001,LNG-09-002,LNG-09-003,LNG-09-004,LNG-09-005,LNG-09-006,LNG-09-007,LNG-09-008
+BACKEND_SHA=8f2eebaf912d664893afbec885eddb7c49b88a06
+FRONTEND_SHA=ae7ae39fbecc17014c74d0d788b2acd004b0e6e4
+WORKSPACE_SHA=602bf4516bdb4b5020b96e9599b3089077c9b576
+BACKEND_PHASE_09_HISTORY_COMPLETE=YES
+FRONTEND_PHASE_09_HISTORY_COMPLETE=YES
+WORKSPACE_PHASE_09_HISTORY_COMPLETE=YES
+PHASE_09A_PRESERVED=YES
+PHASE_09B_PRESERVED=YES
+PHASE_09C_PRESERVED=YES
+PHASE_09D_PRESERVED=YES
+PHASE_09E_PRESERVED=YES
+PHASE_09F_PRESERVED=YES
+PHASE_09_SAFETY_INTEGRITY=PASS
+PHASE_09_PRIVACY_INTEGRITY=PASS
+PHASE_09_USAGE_COST_INTEGRITY=PASS
+PHASE_09_CANONICAL_INTEGRITY=PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+LIVE_AI_PROVIDER_CALLS=0
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+TESTS=Exact-SHA evidence reused: Backend focused 3 suites/24 tests; Backend full unit 76 suites/535 tests; Backend E2E 13 suites/59 tests; Frontend full 53 files/236 tests; all PASS.
+TYPECHECK=PASS (Backend and Frontend exact-SHA evidence)
+LINT=PASS (Backend and Frontend exact-SHA evidence)
+BUILD=PASS (Backend and Frontend exact-SHA evidence)
+AUDIT=PASS: 0 vulnerabilities in Backend and Frontend online npm audit
+CI=NOT_TRIGGERED_FEATURE_BRANCH_LOCAL_VALIDATION_PASS
+CI_STATUS=NOT_TRIGGERED_FEATURE_BRANCH_LOCAL_VALIDATION_PASS
+MERGE_READINESS=READY
+BLOCKERS=NONE
+CURRENT_PHASE=09
+CURRENT_SUBPHASE=FINAL_GATE
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_PHASE=10
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+```
+
+Topology evidence: Backend `phase-09f-safety-cost-reconciliation` remote HEAD
+is `8f2eebaf912d664893afbec885eddb7c49b88a06`; Frontend has no 09F source
+change and its accepted 09E remote HEAD is
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`; Workspace 09F remote HEAD before
+this final-gate state sync was `b049c35f4c9b0072f342feaa2c332b7bdf206d27`.
+All accepted 09A–09F commits are ancestors of the active heads, no open PRs
+were found, and the repository workflows run only on `main` pushes or pull
+requests targeting `main`. No merge, branch deletion, deployment, production
+write, test database mutation, paid provider action, or live AI call occurred.

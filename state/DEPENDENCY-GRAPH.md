@@ -196,3 +196,40 @@ and grouped feature-branch publication are complete. Backend remote branch
 `8f2eebaf912d664893afbec885eddb7c49b88a06`; Workspace publication was
 verified at `fdf6c3c5c0053022325e950a500c9a877658cdeb` before this final state
 sync. Phase 09 is ready for its final gate; no merge or deployment is implied.
+
+## Current Phase 09 final gate
+
+    CURRENT_PHASE=09
+    PHASE_09=READY_FOR_FINAL_GATE
+    PHASE_09A=DONE
+    PHASE_09B=DONE
+    PHASE_09C=DONE
+    PHASE_09D=DONE
+    PHASE_09E=DONE
+    PHASE_09F=DONE
+    LNG_09_001=DONE
+    LNG_09_002=DONE
+    LNG_09_003=DONE
+    LNG_09_004=DONE
+    LNG_09_005=DONE
+    LNG_09_006=DONE
+    LNG_09_007=DONE
+    LNG_09_008=DONE
+    PHASE_09_TASK_SET_COMPLETE=YES
+    PHASE_09_FINAL_GATE=PASS
+    PHASE_09_FINAL_GATE_READY=YES
+    PHASE_09_MERGE_READINESS=READY
+    NEXT_PHASE=10
+    NEXT_TASK_ID=PHASE-10
+    NEXT_TASK_NAME=Phase 10
+    NEXT_TASK_STATUS=READY
+
+The final gate reconciled the complete task set, stacked feature-branch
+histories, exact-SHA validation evidence, cross-phase safety/privacy/usage and
+canonical-integrity checks, database isolation, and feature-branch CI policy.
+Backend `phase-09f-safety-cost-reconciliation` is verified remotely at
+`8f2eebaf912d664893afbec885eddb7c49b88a06`. Frontend has no 09F source
+changes; its accepted 09E head is verified remotely at
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`. Workspace final-gate state is
+recorded on the 09F branch. No merge, deployment, Phase 10 implementation, or
+live provider call was performed.

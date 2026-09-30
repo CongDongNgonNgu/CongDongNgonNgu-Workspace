@@ -37,7 +37,7 @@ Explain errors and generate focused follow-up practice rather than only returnin
 Implement configurable scenarios rather than eight hard-coded pages. Each scenario defines context, roles, learner level, goals and safe boundaries. Provide session goal/progress and post-session feedback without fake precise scoring.
 
 ## LNG-09-007 — Learn from Community/Library
-**Status:** DONE (local implementation and validation complete; publication authorization pending)
+**Status:** DONE (implementation, validation, and feature-branch publication complete)
 **Depends on:** Phase 08, Phase 05
 
 From permitted public/owned content, generate vocabulary, grammar notes,
