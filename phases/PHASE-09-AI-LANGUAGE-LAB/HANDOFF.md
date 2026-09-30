@@ -12,9 +12,10 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `PHASE_09D=DONE`.
-Current task: `LNG-09-004` and `LNG-09-005` are implemented, validated, and
-published on their scoped feature branches. The next projection is `09E`.
+Current subphase: `PHASE_09F=VERIFYING`.
+Current task: `LNG-09-008` is implemented, locally committed and validated;
+the grouped 09F feature-branch publication gate is pending explicit
+authorization. Phase 09 remains IN_PROGRESS and is not marked DONE.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -297,4 +298,74 @@ NEXT_ACTION=REQUEST_NEXT_PROMPT
 mobile `41ff35f0019648beac2408cfa8dfba9a`. The Workspace evidence and
 acceptance state are published on the grouped feature branches; remote heads
 were verified after authorization. No merge or deployment was attempted.
-Phase 09F remains planned.
+At the time of 09E acceptance, Phase 09F remained planned; the current 09F
+state and sanitized evidence follow below.
+
+## PHASE_09F sanitized evidence
+
+```text
+PHASE_09F_RESULT=BLOCKED
+PHASE_SCOPE=Prompt-injection, malformed-output, outage, timeout, rate/quota, retry-charge, privacy, cost reconciliation, responsive, accessibility, CI, and final phase evidence gates for the provider-neutral Phase 09 AI runtime; preserve 09A-09E and do not add provider, billing, schema or production behavior.
+TASKS_INCLUDED=LNG-09-008
+TASKS_COMPLETED=LNG-09-008
+BACKEND_BEFORE_SHA=1e5c15635a628d864c7c74847cff25ded779ccdf
+BACKEND_AFTER_SHA=8f2eebaf912d664893afbec885eddb7c49b88a06
+FRONTEND_BEFORE_SHA=ae7ae39fbecc17014c74d0d788b2acd004b0e6e4
+FRONTEND_AFTER_SHA=ae7ae39fbecc17014c74d0d788b2acd004b0e6e4
+WORKSPACE_BEFORE_SHA=056686a8092887fbc5e108a3d7262a5d15481e79
+WORKSPACE_AFTER_SHA=LOCAL_09F_EVIDENCE_COMMIT
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=PASS
+ACCEPTANCE=PASS
+SAFETY=PASS
+DATA_MINIMIZATION=PASS
+PROMPT_INJECTION_BOUNDARY=PASS
+STRUCTURED_OUTPUT_FAIL_CLOSED=PASS
+SECRET_HANDLING=PASS
+ERROR_SANITIZATION=PASS
+USAGE_ACCOUNTING=PASS
+TOKEN_ACCOUNTING=PASS
+COST_CONTRACT=PASS
+QUOTA=PASS
+RATE_LIMIT=PASS
+RETRY_DUPLICATION_PROTECTION=PASS
+RECONCILIATION_CONTRACT=PASS
+RECONCILIATION_DETERMINISM=PASS
+RECONCILIATION_NON_DESTRUCTIVE=PASS
+RECONCILIATION_SAFE_REPAIR_BOUNDARY=PASS
+ROLLBACK=PASS
+PHASE_09A_09E_PRESERVED=PASS
+TESTS=Backend focused 3 suites/24 tests; Backend full unit 76 suites/535 tests; Backend E2E 13 suites/59 tests; Frontend full 53 files/236 tests; all PASS.
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS:0 vulnerabilities in Backend and Frontend online npm audit
+CI=NOT_TRIGGERED_FEATURE_BRANCH_LOCAL_VALIDATION_PASS
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+LIVE_AI_PROVIDER_CALLS=0
+FRONTEND_CHANGED=NO
+FRONTEND_TESTS=PASS
+RESPONSIVE_A11Y=PASS (09E accepted UI unchanged)
+DEPLOYED=NO
+MERGED_TO_MAIN=NO
+PHASE_09_TASK_SET_COMPLETE=YES
+PHASE_09_FINAL_GATE_READY=NO
+BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09F_FEATURE_BRANCHES
+CURRENT_PHASE=09
+CURRENT_SUBPHASE=09F
+SUBPHASE_STATUS=BLOCKED
+NEXT_RECOMMENDED_SUBPHASE=09F
+NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+```
+
+The 09F local implementation is Backend commit
+`8f2eebaf912d664893afbec885eddb7c49b88a06` on branch
+`phase-09f-safety-cost-reconciliation`. The Frontend branch is unchanged at
+`ae7ae39fbecc17014c74d0d788b2acd004b0e6e4`; the Workspace branch contains the
+local evidence/state update on the same branch. No branch was pushed, merged
+or deployed for 09F. The blocker is grouped publication authorization for
+Backend, Frontend and Workspace, not an implementation or test failure.

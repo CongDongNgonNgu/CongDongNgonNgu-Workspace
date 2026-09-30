@@ -175,9 +175,11 @@ and Workspace. The next dependency-eligible task is 09E / LNG-09-007; Phase
     PHASE_09=IN_PROGRESS
     PHASE_09E=DONE
     LNG_09_007=DONE
+    PHASE_09F=VERIFYING
+    LNG_09_008=VERIFYING
     NEXT_TASK_ID=LNG-09-008
     NEXT_TASK_NAME=AI Safety, Cost & Reconciliation
-    NEXT_TASK_STATUS=PLANNED
+    NEXT_TASK_STATUS=VERIFYING
 
 LNG-09-007 is complete locally after the public Library projection, provenance
 and license gates, structured learning output, focused/full validation and
@@ -187,5 +189,8 @@ security review passed. The local Backend/Frontend feature heads are
 09E acceptance evidence at local commit
 `056686a8092887fbc5e108a3d7262a5d15481e79`; the Backend, Frontend and
 Workspace feature branches were published and their remote heads verified
-after grouped authorization. Phase 09F is not implemented and Phase 09 is not
-DONE.
+after grouped authorization. Phase 09F implementation, safety/cost/
+reconciliation review, deterministic runtime validation and Phase 09
+regression are complete locally. Publication of the 09F feature branches
+remains an explicit external gate; no final Phase 09 merge or deployment is
+implied.

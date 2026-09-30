@@ -134,3 +134,16 @@ coaching and quiz material with bounded fields and fail-closed parsing.
 No provider, frontend surface, schema migration or live call is introduced.
 The rationale and boundaries are recorded in
 `docs/DEC-015-PHASE-09B-LEARNER-CONTEXT-PROMPT-CONTRACTS.md`.
+
+## DEC-019 - Phase 09F safety, cost and non-destructive reconciliation
+**Status:** Accepted for Phase 09F / LNG-09-008 on 2026-09-30.
+
+Phase 09F keeps one provider-neutral AI path, normalizes runtime failures to
+safe codes/messages, treats missing USD pricing as explicit unknown, fails
+closed for invalid cost inputs, and audits bounded usage records without
+mutating or persisting them. Duplicate request identities, invalid token/cost
+facts, non-success charges, missing failure codes and invalid timestamps are
+reported as deterministic issue codes. No provider credential, billing system,
+database migration, production write or live AI call is introduced. The full
+rationale and contract are recorded in
+`docs/DEC-019-PHASE-09F-SAFETY-COST-RECONCILIATION.md`.
