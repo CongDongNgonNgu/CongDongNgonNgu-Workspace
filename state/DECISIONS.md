@@ -2,6 +2,14 @@
 
 Append durable decisions; do not silently rewrite history.
 
+## DEC-022 — Phase 10C badges, contributor levels and anti-farming
+
+Accepted for Phase 10C on 2026-09-30. See
+`docs/DEC-022-PHASE-10-BADGES-LEVELS-ANTI-FARMING.md` for the finite badge
+criteria, versioned contributor-level thresholds, reversal behavior and the
+server-fact-only V1 anti-farming boundary. No Phase 10C migration or mutable
+badge/level projection is authorized.
+
 ## DEC-001 — Product identity
 **Status:** Accepted. CongDongNgonNgu is an independent Global Language Community, not a language-themed EduAI clone.
 
