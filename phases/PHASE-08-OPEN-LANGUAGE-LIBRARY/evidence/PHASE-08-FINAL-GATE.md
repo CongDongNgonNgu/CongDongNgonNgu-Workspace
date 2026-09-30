@@ -1,0 +1,122 @@
+# Phase 08 Final Gate Evidence
+
+This is the final-gate verification record for Phase 08 after all eight
+authoritative tasks reached their accepted states. It performs no import,
+reconciliation, TEST mutation, production access, migration, code change,
+deployment, or merge.
+
+## Authoritative final-gate requirements
+
+The Phase 08 `README.md` completion gate and `ACCEPTANCE.md` require the
+provenance-aware resource model, review workflow, search/filter, community
+contribution, the license-validated Tatoeba adapter, Stitch/responsive/a11y
+evidence, tests, commits, CI, and handoff evidence. The final gate also
+requires all Phase 08 task projections to be complete and all production,
+identity, provenance, duplicate, timestamp, security, migration, and TEST
+isolation contracts to remain satisfied.
+
+## Final-gate result
+
+```text
+PHASE_08_FINAL_GATE=FAIL
+BACKEND_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+WORKSPACE_BEFORE_SHA=3b8cd4f438fa83276f562857f2dcf7720b93231f
+
+PHASE_08_TASK_SET_COMPLETE=YES
+LNG_08_006_FINAL_STATUS=PASS
+LNG_08_007_FINAL_STATUS=PASS
+LNG_08_008_FINAL_STATUS=PASS
+
+DATABASE_TARGET_AUTHORIZATION_PRESERVED=YES
+TEST_LABEL_ONLY_AUTHORIZATION=NO
+REMOTE_DATABASE_SSL_FAIL_CLOSED=PASS
+ACTOR_DISCOVERY=NONE
+LICENSE_CONTRACT_PRESERVED=YES
+AUTO_REGISTER_LICENSES=NO
+SECRET_HANDLING=PASS
+DATABASE_URL_SECRET_LEAK=NO
+DATABASE_PASSWORD_LEAK=NO
+RAW_CONNECTION_STRING_LOGGING=NO
+RAW_DB_ERROR_EXPOSURE=NO
+
+PHASE_08_AUTO_APPROVE=NO
+PHASE_08_AUTO_PUBLISH=NO
+PHASE_08_CORRECTION_AUTO_APPLY=NO
+PHASE_08_REJECTED_AUTO_REOPEN=NO
+
+PHASE_08_CANONICAL_INTEGRITY=PASS
+PHASE_08_DUPLICATE_INTEGRITY=PASS
+
+MILLISECOND_PRECISION_PRESERVED=YES
+STRICT_OFFSET_AWARE_TIMESTAMP_VALIDATION=PASS
+TIMEZONE_LESS_TIMESTAMP_FAIL_CLOSED=PASS
+INVALID_TIMESTAMP_FAIL_CLOSED=PASS
+PROCESS_TIMEZONE_INDEPENDENCE=PASS
+
+PHASE_08_MIGRATION_REQUIRED=NO
+MIGRATIONS_0001_0011=UNCHANGED
+MIGRATION_0012_CREATED=NO
+
+BACKEND_SHA_CONSISTENCY=PASS
+WORKSPACE_EVIDENCE_SHA_CONSISTENCY=PASS
+WORKTREE_INTEGRITY=PASS
+
+PHASE_08_TEST_DATA_EVIDENCE=PASS
+FAILED_RUNTIME_UNSAFE_RESIDUE=NONE
+PRODUCTION_DB_MUTATED=NO
+DEPLOYED=NO
+
+PHASE_08_FOCUSED_TESTS=5 suites / 33 tests PASS (reconciliation-focused)
+TATOEBA_TESTS=20 suites / 135 tests PASS
+LIBRARY_TESTS=32 suites / 295 tests PASS
+CANDIDATE_TESTS=9 suites / 65 tests PASS
+RECONCILIATION_TESTS=5 suites / 33 tests PASS
+TIMESTAMP_TESTS=2 suites / 10 tests PASS
+BACKEND_TESTS=65 suites / 472 tests PASS
+BACKEND_E2E=13 suites / 59 tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS_OFFLINE_0_VULNERABILITIES
+
+WORKSPACE_STATE_VALIDATION=PASS
+TASK_PROJECTION_VALIDATION=PASS
+EVIDENCE_CONSISTENCY_VALIDATION=PASS
+HANDOFF_CONSISTENCY_VALIDATION=PASS
+GIT_DIFF_CHECK=PASS
+
+BACKEND_CODE_CHANGED_DURING_FINAL_GATE=NO
+FRONTEND_CHANGED=NO
+LIVE_EXTERNAL_CALLS=0
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+```
+
+## Remaining final-gate blocker
+
+The local regression and repository checks pass. The remaining required CI
+gate is not verified for the accepted Backend SHA. The Backend workflow is
+configured for `push` to `main` and `pull_request` targeting `main`; the
+authorized feature branch has no GitHub Actions run for
+`72dcb15e0143b603eabff61c14e37c3e4ae1d045`. No pull request was opened and no
+merge was performed in this final-gate-only task. Workspace has no CI workflow
+that can substitute for the Backend CI requirement.
+
+Under the repository rule that `DONE` requires CI verification, Phase 08
+cannot be marked `DONE` by this gate. The accepted task statuses remain
+unchanged, and the phase remains `IN_PROGRESS` until the exact Backend CI gate
+is verified through the authorized merge-review workflow.
+
+```text
+BACKEND_CI_EXACT_SHA=NOT_VERIFIED
+BACKEND_MERGE_READY=NO
+WORKSPACE_MERGE_READY=NO
+FRONTEND_MERGE_READY=NOT_APPLICABLE
+MERGED_TO_MAIN=NO
+FINAL_GATE_FINDINGS=Required Backend CI has no exact-SHA run for 72dcb15e0143b603eabff61c14e37c3e4ae1d045; Phase 08 remains IN_PROGRESS.
+NEXT_PHASE=NONE
+NEXT_TASK_ID=NONE
+NEXT_TASK_NAME=NONE
+NEXT_TASK_STATUS=NONE
+NEXT_ACTION=REMEDIATION_REQUIRED
+```
