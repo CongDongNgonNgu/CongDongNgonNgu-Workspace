@@ -3346,3 +3346,26 @@ NEXT_TASK_NAME=NONE
 NEXT_TASK_STATUS=NONE
 NEXT_ACTION=REMEDIATION_REQUIRED
 ```
+
+## Backend exact-SHA CI remediation — blocker closed
+
+PR #1 was opened from
+`phase-08-lng-08-008-sentence-reconciliation` to `main` without changing the
+Backend head. The existing pull-request workflow completed successfully for
+the exact accepted Backend SHA. No merge or deployment was performed.
+
+```text
+BACKEND_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+PR_NUMBER=1
+PR_HEAD_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+CI_RUN_ID=36660514785
+CI_HEAD_SHA=72dcb15e0143b603eabff61c14e37c3e4ae1d045
+BACKEND_CI=PASS
+BACKEND_SHA_UNCHANGED=YES
+BACKEND_CODE_CHANGED=NO
+MERGED_TO_MAIN=NO
+DEPLOYED=NO
+CURRENT_PHASE=08
+PHASE_08=IN_PROGRESS
+NEXT_ACTION=RETRY_PHASE_08_FINAL_GATE
+```
