@@ -76,7 +76,7 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Scope note: OWNER_VISUAL_ACCEPTANCE_06C=YES; LNG-06-003 and LNG-06-004 are DONE; Phase 06D remains not started.
 
 - BLOCKER-09D-001 / LNG-09-004, LNG-09-005 / `BLOCKED_EXTERNAL` / OPEN
-  - Evidence/date: Phase 09D implementation, focused/full tests, E2E, typecheck, lint, build, audit, review, and controlled browser-boundary verification passed locally on 2026-09-30. Backend local head is `62a48bf49291dd57daa8feb85cbac31694380e0b`; Frontend local head is `85fb969e43c54c53780376842fcfac36dd5881bc`.
+  - Evidence/date: Phase 09D implementation, focused/full tests, E2E, typecheck, lint, build, audit, review, and controlled browser-boundary verification passed locally on 2026-09-30. Backend local head is `62a48bf49291dd57daa8feb85cbac31694380e0b`; Frontend local head is `85fb969e43c54c53780376842fcfac36dd5881bc`; Workspace local head is `6260d7900f1a2be994d5814bb363986cbc95f225`.
   - Impact: the 09D feature branches cannot receive final remote-SHA/CI acceptance evidence, so the subphase cannot be marked DONE or advance to 09E.
   - Resolution owner/dependency: one explicit authorization for `HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES`, covering Backend, Frontend, and the final Workspace evidence commit on `phase-09d-writing-grammar-coaching`.
   - Safe work that may continue: no implementation change is required; after authorization, push the three exact branches, verify remote heads/CI, update the handoff from BLOCKED to PASS, and relay the sanitized DONE handoff.

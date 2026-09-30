@@ -216,7 +216,7 @@ FRONTEND_TESTS=PASS
 RESPONSIVE_A11Y=PASS
 DEPLOYED=NO
 MERGED_TO_MAIN=NO
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES; Backend branch phase-09d-writing-grammar-coaching at 62a48bf49291dd57daa8feb85cbac31694380e0b; Frontend branch phase-09d-writing-grammar-coaching at 85fb969e43c54c53780376842fcfac36dd5881bc; Workspace final evidence commit not yet published
+BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_PHASE_09D_FEATURE_BRANCHES; Backend branch phase-09d-writing-grammar-coaching at 62a48bf49291dd57daa8feb85cbac31694380e0b; Frontend branch phase-09d-writing-grammar-coaching at 85fb969e43c54c53780376842fcfac36dd5881bc; Workspace branch phase-09d-writing-grammar-coaching local head 6260d7900f1a2be994d5814bb363986cbc95f225, final evidence not published
 CURRENT_PHASE=09
 CURRENT_SUBPHASE=09D
 SUBPHASE_STATUS=BLOCKED
