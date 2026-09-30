@@ -1,8 +1,10 @@
 # Phase 10 decomposition
 
-Status: `10A` in progress. The grouping follows the authoritative task
+Status: `10B` complete; `10C` is ready. The grouping follows the authoritative task
 dependencies in `TASKS.md`; each subphase completes implementation, tests,
 review, evidence, publication and merge gates as one lifecycle.
+
+Current lifecycle: `10A=DONE`, `10B=DONE`, `10C=READY`.
 
 ## PHASE_10A — Auditable ledger and contribution rules
 
