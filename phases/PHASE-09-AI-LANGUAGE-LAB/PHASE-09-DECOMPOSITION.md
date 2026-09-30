@@ -70,7 +70,9 @@ migration.
 
 ## Current execution
 
-`PHASE_09B` is complete. Its implementation is backend-only because
-`LNG-09-002` defines reusable learner-context, prompt, and structured-output
-contracts; no provider, user-facing mode, or frontend surface is authorized
-until the later mode tasks.
+`PHASE_09B` implementation and local validation are complete, but publication
+is blocked by the explicit authorization gate for the Workspace feature
+branch. Its implementation is backend-only because `LNG-09-002` defines
+reusable learner-context, prompt, and structured-output contracts; no
+provider, user-facing mode, or frontend surface is authorized until the later
+mode tasks.
