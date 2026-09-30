@@ -81,8 +81,9 @@ reviewed. No normal finding remained.
 - Workspace 09E accepted baseline:
   `056686a8092887fbc5e108a3d7262a5d15481e79`; the current local Workspace
   branch also contains the 09E publication-evidence head before this 09F
-  evidence update. The final local Workspace commit is recorded in the
-  sanitized Phase 09F handoff after commit.
+  evidence update. The 09F evidence commit is
+  `602bf4516bdb4b5020b96e9599b3089077c9b576`; the later handoff-SHA metadata
+  commit is a documentation-only follow-up on the same feature branch.
 - Database schema change: NO; migration: NO; test DB mutation: NO; production
   DB mutation: NO; deployment: NO; merge to main: NO.
 - Feature-branch CI is not triggered by direct feature pushes under the
