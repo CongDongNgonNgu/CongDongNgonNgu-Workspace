@@ -13,6 +13,8 @@ Status: PASS; recorded after explicit merge authorization on 2026-09-30.
 - Workspace PR #4 merged to `main` at
   `d8487d4ddfab6396f606a787bb5e7269123b7f51`; the repository has no CI
   workflow, so post-merge CI is `NOT_REQUIRED`.
+- Workspace PR #5 then merged the final state-only verification to `main` at
+  `06184bf8e9174032aeb47d5ee35d0a7261d38e25`.
 
 Each merge used the accepted Phase 09 integration head and was verified on
 remote `main`. No stale head, force push, production write, deployment, live
