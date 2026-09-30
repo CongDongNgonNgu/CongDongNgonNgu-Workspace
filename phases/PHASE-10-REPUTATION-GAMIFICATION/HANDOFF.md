@@ -129,3 +129,65 @@ used. Backend PR #5 and exact-head post-merge CI passed; Workspace PR #9
 merged at `bd568267fe4c210ec21861a858bfe9f731babfe3`, with its temporary
 branch deleted locally and remotely. Phase 10C is the next recommended
 subphase; Phase 11 has not started.
+
+## PHASE_10C final acceptance evidence
+
+```text
+PHASE_10C_RESULT=PASS
+PHASE_10_DECOMPOSITION=10A Ledger + Contribution Rules [LNG-10-001,LNG-10-002]; 10B Learning XP + Streaks [LNG-10-003,LNG-10-004]; 10C Badges + Levels + Anti-Farming [LNG-10-005,LNG-10-006]; 10D Passport/Profile UI [LNG-10-007]; 10E Reconciliation + Final Gate [LNG-10-008]
+PHASE_SCOPE=Transparent finite badges, deterministic community-reputation contributor levels, server-fact-only anti-farming controls, reversal projection and anomaly observability hooks.
+TASKS_INCLUDED=LNG-10-005,LNG-10-006
+TASKS_COMPLETED=LNG-10-005,LNG-10-006
+BACKEND_BEFORE_SHA=24e7aaa66d8801624200e2ced329bfe5c0fb65c2
+BACKEND_FEATURE_HEAD_SHA=13efdccb6624401e1b57cdbe504950c8c99a4ae0
+BACKEND_AFTER_SHA=8edc67b988c4b854d5443cd97689dca9b82ad44e
+BACKEND_PR=6
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_POST_MERGE_CI_RUN=36
+FRONTEND_BEFORE_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_AFTER_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+WORKSPACE_BEFORE_SHA=e022314d4609088e33dcf6904deaf5902988e687
+WORKSPACE_FEATURE_HEAD_SHA=38ee75bbe00c90c324c87f2f8ea1dfb9c3418e5e
+WORKSPACE_PR=11
+WORKSPACE_AFTER_SHA=8d002e5185f3bc385da9c98a921d70b7f450608d
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=NOT_REQUIRED
+ACCEPTANCE=PASS
+TESTS=Focused reputation 11 suites / 58 tests PASS; Backend full unit 87 suites / 593 tests PASS; Backend E2E 13 suites / 60 tests PASS
+TYPECHECK=PASS
+LINT=PASS (tsc --noEmit alias)
+BUILD=PASS
+AUDIT=PASS: online npm audit found 0 vulnerabilities
+CI=PASS: Backend PR #6 exact head 1/1; Backend post-merge CI run #36 on 8edc67b PASS; Workspace PR #11 merged with CI NOT_REQUIRED
+LEVEL_DERIVATION_DETERMINISTIC=PASS
+BADGE_REVERSAL_PROJECTION=PASS
+ANTI_FARMING_RULE_VERSION=community-antifarming-v1
+GAMIFICATION_RULE_VERSION=community-gamification-v1
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+FRONTEND_CHANGED=NO
+DEPLOYED=NO
+MERGED_TO_MAIN=YES
+BLOCKERS=NONE
+CURRENT_PHASE=10
+CURRENT_SUBPHASE=10C
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=10D
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+```
+
+Phase 10C adds derived community badges and contributor levels without a
+mutable projection or role promotion. Badge state remains `LOCKED`, `EARNED`
+or `REVOKED`; reversals preserve ledger history and remove active evidence.
+The `community-antifarming-v1` rules use only server-derived facts for
+self-reward, repeated fingerprints, coordinated actor reuse and observable
+pair reuse; exact replay remains idempotent and rejected events write no
+reward. ADR-022 records the finite thresholds and the explicit V1 boundary.
+No frontend, migration, TEST database, production database or deployment was
+used. Backend PR #6 and exact-head post-merge CI passed; Workspace PR #11
+merged at `8d002e5185f3bc385da9c98a921d70b7f450608d`, with its temporary
+branch deleted locally and remotely. Phase 10D is ready; Phase 11 has not
+started.
