@@ -1,10 +1,10 @@
 # Phase 09 Handoff
 
-**Phase status:** READY_FOR_FINAL_GATE
+**Phase status:** DONE
 
 Record provider/model configuration names without secrets, prompt/schema versions, quota/cost policy, retrieval policy, Stitch references, frontend/backend/workspace SHAs, safety/cost/test results and CI.
 
-Distinguish implementation verified with mocks from live provider verification. On final-gate acceptance, Phase 09 is READY_FOR_FINAL_GATE until any separately authorized merge workflow is completed.
+Distinguish implementation verified with mocks from live provider verification. Final-gate acceptance and the separately authorized merge closeout are both complete; Phase 09 is DONE and Phase 10 has not started.
 
 Phase 08 is DONE and Phase 09 has now started under the orchestrator.
 The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
@@ -12,11 +12,10 @@ The ordered decomposition is recorded in `PHASE-09-DECOMPOSITION.md`:
 `09C` conversation/roleplay, `09D` writing/grammar coaching, `09E`
 provenance-aware learn-from-content, and `09F` safety/cost/reconciliation.
 
-Current subphase: `FINAL_GATE`.
-Current task set `LNG-09-001` through `LNG-09-008` is DONE and published on
-the scoped feature branches. The Phase 09 final gate is PASS and merge
-readiness is READY; Phase 09 is recorded as `READY_FOR_FINAL_GATE`, not DONE,
-because no merge or deployment was required or authorized by this gate.
+Current subphase: `MERGE_CLOSEOUT`.
+Current task set `LNG-09-001` through `LNG-09-008` is DONE, published and
+merged to the repository `main` branches. The Phase 09 final gate and merge
+closeout are PASS; Phase 09 is DONE, with no deployment and no Phase 10 work.
 The accepted slices remain provider-neutral backend contracts. No provider has
 been selected, no credentials are recorded, no live-provider verification is
 claimed, and no database migration is authorized by the current scope.
@@ -463,3 +462,46 @@ Backend and Frontend main branches contain their accepted Phase 09 histories,
 and their current-main CI runs passed. Workspace is intentionally still
 pending its own merge; no branch cleanup occurs until all three repositories
 are merged and verified.
+
+## PHASE_09_MERGE_CLOSEOUT final acceptance
+
+```text
+PHASE_09_MERGE_CLOSEOUT=PASS
+PHASE_09_FINAL_GATE=PASS
+PHASE_09_TASK_SET_COMPLETE=YES
+BACKEND_PR_NUMBER=3
+BACKEND_PR_MERGED=YES
+BACKEND_MERGE_COMMIT_SHA=42463097e3884fa9529741c196c33351a958820d
+BACKEND_MAIN_AFTER_SHA=42463097e3884fa9529741c196c33351a958820d
+BACKEND_REMOTE_MAIN_VERIFIED=PASS
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_POST_MERGE_CI_SHA=42463097e3884fa9529741c196c33351a958820d
+FRONTEND_PR_NUMBER=8
+FRONTEND_PR_MERGED=YES
+FRONTEND_MERGE_COMMIT_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_MAIN_AFTER_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+FRONTEND_REMOTE_MAIN_VERIFIED=PASS
+FRONTEND_POST_MERGE_CI=PASS
+FRONTEND_POST_MERGE_CI_SHA=5a258796ae96e6efb77d44dd72e168edcaa6213b
+WORKSPACE_PR_NUMBER=4
+WORKSPACE_PR_MERGED=YES
+WORKSPACE_MERGE_COMMIT_SHA=d8487d4ddfab6396f606a787bb5e7269123b7f51
+WORKSPACE_MAIN_AFTER_SHA=d8487d4ddfab6396f606a787bb5e7269123b7f51
+WORKSPACE_REMOTE_MAIN_VERIFIED=PASS
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+PHASE_09_MERGED=YES
+MERGED_TO_MAIN=YES
+DEPLOYED=NO
+NEXT_PHASE=10
+NEXT_TASK_ID=PHASE-10
+NEXT_TASK_NAME=Phase 10
+NEXT_TASK_STATUS=READY
+CURRENT_PHASE=09
+CURRENT_SUBPHASE=MERGE_CLOSEOUT
+SUBPHASE_STATUS=DONE
+NEXT_ACTION=STOP_BEFORE_PHASE_10
+```
+
+All three repository `main` branches contain the accepted Phase 09 history.
+Backend and Frontend current-main CI passed; Workspace has no CI workflow.
+Phase 09 branches remain until the final cleanup verification is complete.
