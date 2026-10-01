@@ -291,3 +291,118 @@ migration and leaves migrations `0012` and `0013` unchanged. Verification was
 static/local because no test or production database was mutated and `psql` was
 not available for an authorized database run. No provider call, real payment,
 deployment or production action occurred.
+
+## Phase 11D Handoff
+
+Phase 11D closes `LNG-11-005` and `LNG-11-006`. The Backend now accepts
+only a bounded, signature-verified PayOS webhook shape, persists sanitized
+reconciliation evidence, settles payment facts exactly once, and fulfills the
+server-authoritative membership contract in a separate idempotent boundary.
+Lifecycle access uses Backend time and half-open intervals. Contribution credit
+redemption is durable, owner-scoped, concurrency-safe and non-monetary; it
+does not mutate the Phase 10 Reputation ledger. PayOS remains disabled by
+default and Phase 11E owns all learner-facing membership UI.
+
+~~~text
+PHASE_11D_RESULT=PASS
+PHASE_11_DECOMPOSITION=11A:LNG-11-001; 11B:LNG-11-002,LNG-11-003; 11C:LNG-11-004; 11D:LNG-11-005,LNG-11-006; 11E:LNG-11-007; 11F:LNG-11-008
+PHASE_SCOPE=Signature-verified PayOS webhook parsing; durable event/attempt/order identity locking; exactly-once settlement and separate fulfillment; reconciliation evidence; server-authoritative membership activation/expiry; idempotent non-monetary contribution-credit redemption; explicit no recurring/cancel promise.
+TASKS_INCLUDED=LNG-11-005,LNG-11-006
+TASKS_COMPLETED=LNG-11-005,LNG-11-006
+
+BACKEND_BEFORE_SHA=dc796df03c011a6702bf7c8872fe508e87db6c65
+BACKEND_FEATURE_HEAD_SHA=f289351817c63250bb1b6aeba773a953e2fd7b19
+BACKEND_AFTER_SHA=92eaf0cc929e382bc2bc15b52158c7cbbc9c5277
+FRONTEND_BEFORE_SHA=6c026439ec62d50e61cd4e6d6e2000e4484790fe
+FRONTEND_FEATURE_HEAD_SHA=N/A
+FRONTEND_AFTER_SHA=6c026439ec62d50e61cd4e6d6e2000e4484790fe
+WORKSPACE_BEFORE_SHA=7c5d1ae2a7cbc7c71b8d417b7acc249253b6f397
+WORKSPACE_FEATURE_HEAD_SHA=d902cdcb82f7a9dac3aaf530902419870e139e9f
+WORKSPACE_AFTER_SHA=87d2565b54d87a08c1e74dc9b4e6525d7e16fb94
+
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=NOT_REQUIRED
+ACCEPTANCE=PASS
+WEBHOOK_CONTRACT=PASS
+WEBHOOK_AUTHENTICATION=PASS
+WEBHOOK_FAIL_CLOSED=PASS
+WEBHOOK_IDEMPOTENCY=PASS
+WEBHOOK_PRIVACY_BOUNDARY=PASS
+UNKNOWN_PAYMENT_REFERENCE_FAIL_CLOSED=PASS
+SETTLEMENT_SERVER_AUTHORITY=PASS
+SETTLEMENT_FACT_MATCH=PASS
+SETTLEMENT_FULFILLMENT_SEPARATION=PASS
+FULFILLMENT_CONTRACT=PASS
+FULFILLMENT_SERVER_AUTHORITY=PASS
+FULFILLMENT_IDEMPOTENCY=PASS
+FULFILLMENT_RETRY_SAFETY=PASS
+FULFILLMENT_OWNERSHIP=PASS
+ENTITLEMENT_GRANT_IDEMPOTENCY=PASS
+CONTRIBUTION_CREDIT_REDEMPTION=PASS
+CONTRIBUTION_CREDIT_DOUBLE_SPEND_PROTECTION=PASS
+CREDIT_MONETARY_CONFLATION=NO
+PHASE_10_ANTI_FARMING_PRESERVED=PASS
+MEMBERSHIP_LIFECYCLE_CONTRACT=PASS
+MEMBERSHIP_LIFECYCLE_STATE_MACHINE=PASS
+MEMBERSHIP_LIFECYCLE_TIME_BOUNDARIES=PASS
+MEMBERSHIP_EXPIRY_INTEGRITY=PASS
+MEMBERSHIP_RENEWAL=NOT_APPLICABLE: automatic recurring renewal unsupported
+MEMBERSHIP_CANCELLATION=NOT_APPLICABLE: no cancellation/auto-renew API in 11D
+PAYMENT_ATTEMPT_TRANSITION_INTEGRITY=PASS
+PAYMENT_PROVIDER_NEUTRALITY=PASS
+CLIENT_SUCCESS_GRANT=NO
+ADMIN_AUTHORIZATION=NOT_APPLICABLE
+ERROR_SANITIZATION=PASS
+SECRET_HANDLING=PASS
+LIVE_PAYMENT_PROVIDER_CALLS=0
+REAL_PAYMENT_TRANSACTIONS=0
+PHASE_10_PRESERVED=YES
+PHASE_11A_PRESERVED=YES
+PHASE_11B_PRESERVED=YES
+
+TESTS=Focused 5 suites/25 tests PASS; Backend full unit 102 suites/664 tests PASS; Backend full E2E 15 suites/63 tests PASS; replay/collision/mismatch/unknown/concurrent/delayed-expiry/retry/credit concurrency/lifecycle boundary tests PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: online npm audit --audit-level=high found 0 vulnerabilities
+CI=PASS: Backend PR #12 required quality on PR and post-merge CI #48 on 92eaf0cc929e382bc2bc15b52158c7cbbc9c5277
+
+DATABASE_SCHEMA_CHANGE=YES
+MIGRATION_CREATED=YES
+MIGRATION_NAME=0015_phase11_webhook_fulfillment_lifecycle
+MIGRATION_0012=UNCHANGED
+MIGRATION_0013=UNCHANGED
+MIGRATION_0014=UNCHANGED
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+
+BACKEND_CHANGED=YES
+FRONTEND_CHANGED=NO
+BACKEND_PR_NUMBER=12
+BACKEND_PR_MERGED=YES
+BACKEND_POST_MERGE_CI=PASS: run #48 on 92eaf0cc929e382bc2bc15b52158c7cbbc9c5277
+FRONTEND_PR_NUMBER=NONE
+FRONTEND_PR_MERGED=NOT_APPLICABLE
+FRONTEND_POST_MERGE_CI=N/A
+WORKSPACE_PR_NUMBERS=24,25
+WORKSPACE_MERGED_TO_MAIN=YES
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+MERGED_TO_MAIN=YES
+DEPLOYED=NO
+BRANCH_CLEANUP=PASS
+WORKTREE_CLEAN=YES
+BLOCKERS=NONE
+
+CURRENT_PHASE=11
+CURRENT_SUBPHASE=11D
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=11E
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+~~~
+
+Migration `0015_phase11_webhook_fulfillment_lifecycle` is additive with a
+scoped down migration and leaves `0012`, `0013` and `0014` unchanged.
+Verification was deterministic/local and CI-backed; no test or production
+database was mutated, no deployment occurred and no live payment provider call
+or real-money transaction occurred.
