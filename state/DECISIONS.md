@@ -210,3 +210,31 @@ the pure calculator rejects timezone-less input. Timezone changes do not
 create, rewrite or backfill ledger events and are never qualifying activity.
 The full policy and alternatives are recorded in
 `docs/DEC-021-PHASE-10-LEARNING-XP-STREAKS.md`.
+
+## DEC-031 - Standing owner authorization for routine orchestration
+
+**Status:** Accepted by the human project owner on 2026-10-01 and active
+for all current and future project phases/subphases until explicitly revoked
+or changed.
+
+The owner directly authorizes Codex to perform routine source-control and
+same-phase orchestration lifecycle actions without repeated permission
+prompts: create and clean short-lived branches, commit, push, create or
+update pull requests, observe and remediate ordinary CI failures, merge only
+after required gates and branch protection pass, publish Workspace
+evidence/state, verify remote `main`, synchronize local branches, and use
+the established browser relay. Same-phase subphase chaining is authorized;
+the next major phase remains a mandatory stop.
+
+This standing authorization does not permit production deployment or
+restart, production database writes/migrations, destructive schema/data or
+infrastructure changes, real-money or live-provider activation, external
+account/credential creation, secret rotation, production environment
+mutation, security weakening, bypassing tests/CI/branch protection,
+force-push/history rewrite, or mutation of authoritative financial facts.
+Tool- or runtime-level safety requirements remain binding, including any
+mandatory action-time confirmation for an external UI submission.
+
+The canonical operational block is maintained in
+`docs/engineering/CODEX-WORKING-RULES.md` under “Standing global
+orchestration authorization”.
