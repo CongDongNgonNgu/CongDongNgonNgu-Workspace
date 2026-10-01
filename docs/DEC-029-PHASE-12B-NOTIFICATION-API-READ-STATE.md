@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted for local Phase 12B implementation on 2026-10-01.
+Accepted for integrated Phase 12B implementation on 2026-10-01.
 
 ## Scope
 
