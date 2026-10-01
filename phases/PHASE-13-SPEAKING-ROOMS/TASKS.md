@@ -33,14 +33,22 @@ Backend migration 0019 and `src/rooms`. Backend PR #20 merged at
 `36857615046` and post-merge CI `36857869530` passed.
 
 ## LNG-13-004 — Raise Hand & Speaker Queue
+**Status:** DONE — 13C integrated on Backend main
+
 **Depends on:** LNG-13-003
 
 Implement deterministic queue, host accept/decline, promote/demote, self-cancel and reconnect handling. Authorization prevents listeners promoting themselves via API manipulation.
 
+13C evidence: server-authoritative deterministic waiting queue with unique active entry per participant, host/moderator accept/decline, role promotion/demotion, self-cancel, reconnect-lease retention and stale cancellation. Direct API authorization rejects listener moderation or self-promotion.
+
 ## LNG-13-005 — Moderation & Room Chat
+**Status:** DONE — 13C integrated on Backend main
+
 **Depends on:** LNG-13-003
 
 Host/moderator mute/remove/report with audit; participant block/report integration; bounded room text chat with rate limit and safe rendering. Clarify whether mute is server/provider-enforced or client cooperation and test accordingly.
+
+13C evidence: room-scoped moderation action audit, server mute state with provider-adapter-specific enforcement, participant removal, block/report integration, bounded plain-text chat, persistent replay identity, concurrent write serialization, rate limiting and privacy-safe projections are implemented in Backend migration 0020 and `src/rooms`.
 
 ## LNG-13-006 — Speaking Room UI
 **Depends on:** LNG-13-003..005

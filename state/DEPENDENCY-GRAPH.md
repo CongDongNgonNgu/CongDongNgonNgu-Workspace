@@ -449,3 +449,13 @@ duplicate-device, authorization and bounded privacy projection coverage. The
 next eligible work is 13C (`LNG-13-004` and `LNG-13-005`); 13D remains gated on
 13C, 13E remains independently gated on Phase 09 plus 13A, and 13F remains
 gated on 13A-13E. Phase 14 remains blocked until the Phase 13 final gate.
+
+## Phase 13C accepted record
+
+13C (`LNG-13-004`, `LNG-13-005`) is accepted on Backend main at
+`5046371cbcf36f36d8e14f232413f1eadc0aecaa`. The deterministic speaker queue,
+server-authoritative moderation, room-scoped block/report safety, audit and
+bounded rate-limited plain-text chat are complete. 13D (`LNG-13-006`) is now
+the next eligible subphase; 13E remains independently gated on Phase 09 plus
+13A, and 13F remains gated on 13A-13E. Phase 14 remains blocked until the
+Phase 13 final gate passes.
