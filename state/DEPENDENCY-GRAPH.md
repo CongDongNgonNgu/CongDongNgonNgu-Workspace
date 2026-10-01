@@ -336,7 +336,7 @@ The synchronized Phase 12 start heads are Backend
 provider/database/UI-free; its exact scope and exit criteria are recorded in
 `phases/PHASE-12-NOTIFICATIONS-REALTIME/DECOMPOSITION.md`.
 
-## Current Phase 12D integration state
+## Historical Phase 12D integration state
 
 ```text
 CURRENT_PHASE=12
@@ -371,5 +371,35 @@ Its owner-scoped category/channel preference matrix preserves the accepted
 notification, realtime and read-state contracts, suppresses optional noise,
 and protects mandatory in-app security/account/payment notices. Visible UI,
 event-producer integration and the Phase 12 final reliability gate remain
-owned by 12E and 12F respectively. With auto subphase chaining active, the
-validated 12E prompt is the next same-phase continuation target.
+owned by 12E and 12F respectively.
+
+## Current Phase 12E integration state
+
+```text
+CURRENT_PHASE=12
+CURRENT_SUBPHASE=12E
+PHASE_12A=DONE
+PHASE_12B=DONE
+PHASE_12C=DONE
+PHASE_12D=DONE
+PHASE_12E=DONE
+LNG_12_005=PASS_INTEGRATED_REMOTE
+LNG_12_006=PASS_INTEGRATED_REMOTE
+PHASE_12E_DEPENDENCIES=12B,12C,12D
+PHASE_12E_FRONTEND_MAIN_SHA=95337855b6a5d49d339ad581e955a074593f907a
+PHASE_12E_FRONTEND_PR=13
+PHASE_12E_FRONTEND_POST_MERGE_CI=PASS_RUN_36836934657
+PHASE_12E_WORKSPACE_EVIDENCE=PASS_LOCAL_PENDING_REMOTE
+NEXT_TASK_ID=LNG-12-007..008
+NEXT_TASK_NAME=Event Integration, Reliability & Final Gate
+NEXT_TASK_STATUS=READY
+PHASE_12F_DEPENDENCIES=12A,12B,12C,12D,12E
+PHASE_12_AUTO_CHAINING=AUTHORIZED
+PHASE_12_NEXT_PROMPT_TARGET=12F
+PHASE_12_NEXT_PROMPT_VALIDATION=REQUIRED
+```
+
+12E is integrated on the Frontend remote `main`; 12F is the next dependency-
+valid same-phase continuation. Phase 13 remains outside the current
+authorization boundary until Phase 12 final closeout and explicit human
+authorization.

@@ -1,37 +1,37 @@
 # Phase 12 Handoff
 
-**Current phase status:** `12D DONE — INTEGRATED_REMOTE_MAIN`
+**Current phase status:** `12E DONE - INTEGRATED_REMOTE_MAIN`
 
-The historical `BLOCKED_BY_PHASE_05` label is retained only as prior planning
-context. Phase 11 is now closed and Phase 12 is locally executing from the
-synchronized baseline. The current 12C evidence is authoritative for the
-local implementation and remote integration boundary; the 12B and 12A
-evidence remain authoritative for their own boundaries:
+Phase 12 remains in progress. The authoritative subphase decomposition is
+12A through 12F in `DECOMPOSITION.md`; 12A, 12B, 12C, 12D and 12E are now
+integrated. The current 12E evidence is:
 
+- `evidence/PHASE-12E-IMPLEMENTATION.md`
 - `evidence/PHASE-12D-IMPLEMENTATION.md`
 - `evidence/PHASE-12C-IMPLEMENTATION.md`
 - `evidence/PHASE-12B-IMPLEMENTATION.md`
 - `evidence/PHASE-12A-IMPLEMENTATION.md`
-- `DECOMPOSITION.md`
 
-12A completed the Backend-only notification domain/event contract foundation.
-12B added canonical notification persistence, owner-scoped reads, unread
-count, and idempotent read-state mutations. 12C added the authenticated
-provider-neutral SSE adapter, bounded canonical replay, explicit poll fallback,
-reconnect/backoff, notification deduplication, connection cleanup and
-user-scoped multi-tab fanout. 12D now adds owner-scoped server-side
-category/channel preferences with conservative defaults, optional-noise
-suppression, mandatory in-app protection for security/account/payment notices,
-and future email/push channel extensibility. Backend PR #17 is merged to
-remote `main` at `eaf121d`, with exact-head CI run `36832529646` and
-post-merge CI run #58 passing. Frontend remains unchanged at `1902b63`.
-Workspace PR #41 merged to remote `main` at `55cb08b`; the temporary evidence
-branch was verified contained in `main`, deleted locally/remotely and pruned.
+12E completed `LNG-12-005` desktop notification UI and `LNG-12-006` mobile
+notification center. Frontend PR #13 merged feature head
+`c9d7b2b46b1fded9f93dafde1a81e4d2e169c039` to remote `main` at
+`95337855b6a5d49d339ad581e955a074593f907a`. Exact-head CI run
+`36836734794` and post-merge main CI run `36836934657` passed. Frontend
+remote and local temporary branches were cleaned. Workspace main before this
+evidence update is `6973954342fb67a7f2c02ab0fc3dfc336bfff9e2`.
 
-Phase-wide status remains `IN_PROGRESS`; 12D is integrated and 12E is the next
-dependency-valid subphase. With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the next
-validated Phase 12 prompt is eligible for immediate automatic execution after
-this evidence/state closeout. The subphase boundary is not a human
-authorization boundary. No deployment, production migration, production
-database mutation, or provider activation occurred. Automatic chaining stops
-at the Phase 12 final closeout before Phase 13.
+The UI consumes Backend-owned notification, read-state, SSE and preference
+contracts. It keeps `CLIENT_NOTIFICATION_AUTHORITY=NO`,
+`CLIENT_READ_STATE_AUTHORITY=NO` and `CLIENT_PREFERENCE_AUTHORITY=NO`.
+Stitch desktop screen `ae655d0527df406d902fa050ca59ca48` and mobile screen
+`1409f61cf1474032b797bafee0310516` were created in the established project
+and design system.
+
+Phase 12F is the next dependency-valid subphase with tasks `LNG-12-007` and
+`LNG-12-008`. With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the validated 12F
+prompt is eligible for immediate execution after this Workspace evidence
+closeout. The subphase boundary is not a human authorization boundary.
+Automatic chaining stops at the Phase 12 final closeout before Phase 13.
+
+No production deployment, production migration, production database
+mutation, real notification-provider call or paid service activation occurred.

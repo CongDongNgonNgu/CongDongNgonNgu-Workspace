@@ -23,11 +23,13 @@ Allow category/channel preferences for nonessential events while preserving mand
 
 ## LNG-12-005 — Desktop Notification UI
 **Depends on:** LNG-12-002..004
+**Status:** DONE
 
 Use Stitch. Implement header unread badge/dropdown or panel, close/outside/Escape behavior, grouped/read states, safe actor/target rendering and link navigation. Do not let the dropdown trap/overflow viewport; provide link to full center when needed.
 
 ## LNG-12-006 — Mobile Notification Center
 **Depends on:** LNG-12-002..004
+**Status:** DONE
 
 Use Stitch for dedicated mobile-first notification screen rather than forcing a tiny desktop dropdown. Support filters/read state/preferences access and bottom/header navigation integration.
 
