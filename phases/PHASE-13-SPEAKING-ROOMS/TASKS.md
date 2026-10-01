@@ -71,4 +71,8 @@ Design optional transcription/AI feedback flow only when explicit consent and pr
 ## LNG-13-008 — Room Reliability & Safety Reconciliation
 **Depends on:** LNG-13-001..007 as applicable
 
+**Status:** DONE — 13F final gate PASS
+
 Test role escalation, private-room access, queue races, reconnect, capacity, provider failure, moderator removal, block/report and microphone permissions. Verify no recording occurs by default. Complete responsive/a11y/CI evidence.
+
+13F evidence: all Phase 13 tasks and accepted contracts were reconciled; Backend and Frontend full regression, typecheck, lint, build and online audits passed; accepted exact-head/post-merge CI remained PASS; migrations 0012–0020 are unchanged; no recording, provider activation, database mutation or deployment occurred. Phase 13 final gate and closeout are PASS.
