@@ -335,3 +335,28 @@ The synchronized Phase 12 start heads are Backend
 `1e23561703b2f6bdf3a1ea75b899a79007f0222d`. 12A is Backend-only and
 provider/database/UI-free; its exact scope and exit criteria are recorded in
 `phases/PHASE-12-NOTIFICATIONS-REALTIME/DECOMPOSITION.md`.
+
+## Current Phase 12C integration state
+
+```text
+CURRENT_PHASE=12
+CURRENT_SUBPHASE=12C
+PHASE_12A=DONE
+PHASE_12B=DONE
+PHASE_12C=DONE
+LNG_12_003=PASS_INTEGRATED_REMOTE
+PHASE_12C_DEPENDENCIES=12A,12B
+PHASE_12C_BACKEND_MAIN_SHA=4dece5023325499cbd7dcfa42994a3ed358c6ff5
+PHASE_12C_FRONTEND_MAIN_SHA=1902b63542a3dd896822070a62e0f8ad42cd9859
+PHASE_12C_BACKEND_POST_MERGE_CI=PASS_RUN_56
+PHASE_12C_FRONTEND_POST_MERGE_CI=PASS_RUN_59
+NEXT_TASK_ID=LNG-12-004
+NEXT_TASK_NAME=Notification Preferences
+NEXT_TASK_STATUS=PLANNED_WAITING_FOR_NEXT_PROMPT
+```
+
+12C is integrated on both application remote `main` branches. Its
+authenticated, bounded, provider-neutral realtime adapter preserves canonical
+notification recovery and owner isolation; preferences, visible UI, event
+producer integration and the Phase 12 final reliability gate remain owned by
+12D, 12E and 12F respectively.
