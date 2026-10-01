@@ -21,7 +21,8 @@ reconnect/backoff, notification deduplication, connection cleanup and
 user-scoped multi-tab fanout. Backend PR #16 is merged to remote `main` at
 `4dece50`, with post-merge CI run #56 passing. Frontend PR #12 is merged to
 remote `main` at `1902b63`, with post-merge CI run #59 passing. Workspace PR
-#36 is merged to remote `main` at `21380e0`; Workspace has no required CI
+#36 is merged to remote `main` at `21380e0`; documentation-only closeout PRs
+#37 and #38 pin exact evidence and handoff state. Workspace has no required CI
 workflow for this documentation-only change.
 
 Phase-wide status remains `IN_PROGRESS`; 12D is the next authoritative
