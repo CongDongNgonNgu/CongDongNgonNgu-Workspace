@@ -25,8 +25,11 @@ remote `main` at `1902b63`, with post-merge CI run #59 passing. Workspace PR
 #37 and #38 pin exact evidence and handoff state. Workspace has no required CI
 workflow for this documentation-only change.
 
-Phase-wide status remains `IN_PROGRESS`; 12D is the next authoritative
-projection but must not start until a subsequent ChatGPT orchestration prompt
-explicitly begins that subphase. No deployment, production migration,
-production database mutation, or provider activation occurred. Phase 13 is not
-ready.
+Phase-wide status remains `IN_PROGRESS`; 12D is the next dependency-valid
+subphase and the relayed 12D prompt targets this project and major Phase 12.
+With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the prompt is eligible for
+automatic execution after this policy update is merged and verified. The
+subphase boundary is not a human authorization boundary. No deployment,
+production migration, production database mutation, or provider activation
+occurred. Automatic chaining stops at the Phase 12 final closeout before
+Phase 13.
