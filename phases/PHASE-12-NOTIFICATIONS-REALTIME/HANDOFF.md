@@ -1,6 +1,6 @@
 # Phase 12 Handoff
 
-**Current phase status:** `12C DONE — INTEGRATED_REMOTE_MAIN`
+**Current phase status:** `12D DONE — INTEGRATED_REMOTE_MAIN`
 
 The historical `BLOCKED_BY_PHASE_05` label is retained only as prior planning
 context. Phase 11 is now closed and Phase 12 is locally executing from the
@@ -8,6 +8,7 @@ synchronized baseline. The current 12C evidence is authoritative for the
 local implementation and remote integration boundary; the 12B and 12A
 evidence remain authoritative for their own boundaries:
 
+- `evidence/PHASE-12D-IMPLEMENTATION.md`
 - `evidence/PHASE-12C-IMPLEMENTATION.md`
 - `evidence/PHASE-12B-IMPLEMENTATION.md`
 - `evidence/PHASE-12A-IMPLEMENTATION.md`
@@ -15,21 +16,22 @@ evidence remain authoritative for their own boundaries:
 
 12A completed the Backend-only notification domain/event contract foundation.
 12B added canonical notification persistence, owner-scoped reads, unread
-count, and idempotent read-state mutations. 12C now adds the authenticated
+count, and idempotent read-state mutations. 12C added the authenticated
 provider-neutral SSE adapter, bounded canonical replay, explicit poll fallback,
 reconnect/backoff, notification deduplication, connection cleanup and
-user-scoped multi-tab fanout. Backend PR #16 is merged to remote `main` at
-`4dece50`, with post-merge CI run #56 passing. Frontend PR #12 is merged to
-remote `main` at `1902b63`, with post-merge CI run #59 passing. Workspace PR
-#36 is merged to remote `main` at `21380e0`; documentation-only closeout PRs
-#37 and #38 pin exact evidence and handoff state. Workspace has no required CI
-workflow for this documentation-only change.
+user-scoped multi-tab fanout. 12D now adds owner-scoped server-side
+category/channel preferences with conservative defaults, optional-noise
+suppression, mandatory in-app protection for security/account/payment notices,
+and future email/push channel extensibility. Backend PR #17 is merged to
+remote `main` at `eaf121d`, with exact-head CI run `36832529646` and
+post-merge CI run #58 passing. Frontend remains unchanged at `1902b63`.
+Workspace evidence for 12D is being integrated from the current policy main
+`a620451`.
 
-Phase-wide status remains `IN_PROGRESS`; 12D is the next dependency-valid
-subphase and the relayed 12D prompt targets this project and major Phase 12.
-With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the prompt is eligible for
-automatic execution after this policy update is merged and verified. The
-subphase boundary is not a human authorization boundary. No deployment,
-production migration, production database mutation, or provider activation
-occurred. Automatic chaining stops at the Phase 12 final closeout before
-Phase 13.
+Phase-wide status remains `IN_PROGRESS`; 12D is integrated and 12E is the next
+dependency-valid subphase. With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the next
+validated Phase 12 prompt is eligible for immediate automatic execution after
+this evidence/state closeout. The subphase boundary is not a human
+authorization boundary. No deployment, production migration, production
+database mutation, or provider activation occurred. Automatic chaining stops
+at the Phase 12 final closeout before Phase 13.
