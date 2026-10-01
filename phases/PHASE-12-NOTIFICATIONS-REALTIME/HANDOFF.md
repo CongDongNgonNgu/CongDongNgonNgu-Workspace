@@ -23,6 +23,12 @@ locally, and stale refs were pruned. Frontend remains accepted at
 `95337855b6a5d49d339ad581e955a074593f907a`; its 12E exact-head and
 post-merge CI also passed.
 
+Workspace PR #45 merged the final evidence at
+`79baa38644706b227216a5cf99bf1d2653999b95`; its temporary branch was
+verified contained in `main`, deleted remotely and locally, and Workspace
+main was fast-forwarded to the merged revision. Workspace post-merge CI is
+not required by the repository policy.
+
 The final gate preserved domain/delivery separation, recipient authority,
 event versioning, idempotency, read-state/realtime contracts, preference
 semantics, privacy minimization, safe actor/target projection and the
