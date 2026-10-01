@@ -20,9 +20,9 @@ provider-neutral SSE adapter, bounded canonical replay, explicit poll fallback,
 reconnect/backoff, notification deduplication, connection cleanup and
 user-scoped multi-tab fanout. Backend PR #16 is merged to remote `main` at
 `4dece50`, with post-merge CI run #56 passing. Frontend PR #12 is merged to
-remote `main` at `1902b63`, with post-merge CI run #59 passing. Workspace
-evidence is being integrated separately; Workspace has no required CI workflow
-for this documentation-only change.
+remote `main` at `1902b63`, with post-merge CI run #59 passing. Workspace PR
+#36 is merged to remote `main` at `21380e0`; Workspace has no required CI
+workflow for this documentation-only change.
 
 Phase-wide status remains `IN_PROGRESS`; 12D is the next authoritative
 projection but must not start until a subsequent ChatGPT orchestration prompt
