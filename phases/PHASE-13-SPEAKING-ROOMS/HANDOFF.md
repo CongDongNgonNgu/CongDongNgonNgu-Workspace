@@ -34,3 +34,18 @@ production media provider remains disabled; no recording, transcript, AI,
 production database, provider call or deployment action occurred.
 
 The next same-phase subphase is 13D (`LNG-13-006`); Phase 14 has not started.
+
+## 13D closeout
+
+`LNG-13-006` is DONE on Frontend main. Frontend PR #14 merged at
+`fe9e5254d888e58fd39232729453d183c143564f`; exact-head quality CI
+`110375650554` and post-merge quality CI `110376649033` passed, with Vercel
+preview check `110375657107` reporting no unresolved feedback. The route uses
+the approved Stitch Prompt B direction, keeps private access tokens out of
+URLs, renders chat as bounded plain text, and preserves the disabled-provider,
+ephemeral-voice boundary. Full frontend verification passed at 66 test files /
+277 tests, typecheck, build and online audit with zero vulnerabilities. No
+Backend source, migration, database, provider or deployment action changed in
+13D.
+
+The next same-phase subphase is 13E (`LNG-13-007`); Phase 14 has not started.
