@@ -1,17 +1,19 @@
 # Phase 11 Tasks
 
 ## LNG-11-001 — Membership Product & Entitlement Model
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** Phase 10
 
 Model plan/version/status, membership/subscription lifecycle and explicit entitlements (feature key + limits/parameters). Create one authorization service usable by backend and a frontend capability projection. Free defaults must work without a paid row. Plan changes must not retroactively mutate historical transaction truth.
 
 ## LNG-11-002 — Free vs Member Product Policy
+**Status:** DONE
 **Depends on:** LNG-11-001
 
 Write an executable entitlement matrix covering AI quota, advanced practice, analytics, matching, rooms/events/resources only where those features exist. Keep core community/public learning usable on Free. Unknown entitlement defaults fail closed for premium capability without breaking Free basics.
 
 ## LNG-11-003 — Contribution-to-Membership Credit
+**Status:** DONE
 **Depends on:** Phase 10 ledger, LNG-11-001
 
 Design redemption/credit contract: eligible contribution balance or dedicated redeemable credit, conversion rule/version, idempotent redemption, expiration policy if any and audit trail. Do not simply subtract Community Reputation if reputation is meant to be status; create a deliberate redeemable-value model/ledger if needed.
