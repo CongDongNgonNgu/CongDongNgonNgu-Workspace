@@ -1,11 +1,11 @@
-# Phase 12B Local Acceptance Evidence
+# Phase 12B Integrated Remote Acceptance Evidence
 
-This evidence records the local implementation and acceptance boundary for
-`LNG-12-002`. It does not represent remote publication, pull-request merge,
-deployment, or Phase 12 completion.
+This evidence records the local implementation, remote publication, and
+integration boundary for `LNG-12-002`. It does not represent deployment or
+Phase 12 completion.
 
 ```text
-PHASE_12B_RESULT=PASS_LOCAL_AWAITING_PUBLISH
+PHASE_12B_RESULT=PASS_INTEGRATED_REMOTE
 PHASE_12_DECOMPOSITION=12A,12B,12C,12D,12E,12F
 PHASE_SCOPE=Backend notification persistence/API/read state plus Workspace evidence
 TASKS_INCLUDED=LNG-12-002
@@ -20,17 +20,17 @@ FRONTEND_LOCAL_ACCEPTED_SHA=N/A
 WORKSPACE_BEFORE_SHA=6de18528fb8f4a38452536c3f473d166e0fa4feb
 WORKSPACE_BRANCH=phase-12b-notification-api-read-state
 WORKSPACE_LOCAL_ACCEPTED_SHA=213ba9f1e0e7cdde28cd90d3cf1710fdf4f91d8d
-WORKSPACE_FEATURE_HEAD_SHA=RECORDED_AFTER_PIN_COMMIT
+WORKSPACE_FEATURE_HEAD_SHA=47086870b9e1ccd389db6d304e593465dd287a09
 
 BACKEND_PR_NUMBER=15
 BACKEND_MERGED_TO_MAIN=YES
 BACKEND_MERGE_SHA=7890ada40400d7be1db47698b30a7cb6db7f83b3
 BACKEND_POST_MERGE_CI=PASS
 BACKEND_POST_MERGE_CI_RUN=54
-WORKSPACE_PR_NUMBER=NOT_CREATED
-WORKSPACE_MERGED_TO_MAIN=NO
-WORKSPACE_MERGE_SHA=NOT_INTEGRATED
-WORKSPACE_POST_MERGE_CI=NOT_RUN
+WORKSPACE_PR_NUMBER=33
+WORKSPACE_MERGED_TO_MAIN=YES
+WORKSPACE_MERGE_SHA=2214a80509a20c00e975d9d29e843b7609b68dba
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
 FRONTEND_REMOTE_MAIN_SHA=e3ff9dd9bc8731e37f5601c4ceeadda9da9e32c8
 
 IMPLEMENTATION=PASS
@@ -82,18 +82,18 @@ ARCHIVE_DELETE_POLICY=NOT_SELECTED_HISTORY_PRESERVED
 BACKEND_CHANGED=YES
 FRONTEND_CHANGED=NO
 WORKSPACE_CHANGED=YES
-PUSHED_REMOTE=NO
-PR_CREATED=NO
-MERGED_TO_MAIN=NO
+PUSHED_REMOTE=YES
+PR_CREATED=YES
+MERGED_TO_MAIN=YES
 DEPLOYED=NO
-BRANCH_CLEANUP=NOT_APPLICABLE
+BRANCH_CLEANUP=PASS
 WORKTREE_CLEAN=YES
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_AND_INTEGRATE_PHASE_12B
+BLOCKERS=NONE
 CURRENT_PHASE=12
 CURRENT_SUBPHASE=12B
-SUBPHASE_STATUS=LOCALLY_ACCEPTED_AWAITING_PUBLISH
+SUBPHASE_STATUS=INTEGRATED_REMOTE_MAIN
 NEXT_RECOMMENDED_SUBPHASE=12C
-NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+NEXT_ACTION=RELAY_HANDOFF_THEN_REQUEST_NEXT_PROMPT
 ```
 
 ## Implemented boundary
@@ -123,9 +123,17 @@ audit all passed. Postgres repository and migration tests use deterministic
 fixtures; the E2E harness uses an in-memory repository override. No TEST or
 production database was mutated.
 
+## Remote integration
+
+Backend PR #15 merged with post-merge CI run #54 passing on `7890ada`.
+Workspace PR #33 merged without a required CI workflow on `2214a80`. The
+temporary feature branches were verified as fully integrated, deleted from
+remote and local repositories, and stale remote-tracking references were
+pruned.
+
 ## Safety boundary
 
 No live notification provider call, production deployment, production
 migration, production database mutation, secret activation, or real-money
-operation occurred. Phase 12C remains pending until the authorized remote
-integration relay completes and a later orchestration prompt starts it.
+operation occurred. Phase 12C remains pending until a later orchestration
+prompt explicitly starts it.
