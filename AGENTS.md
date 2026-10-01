@@ -60,4 +60,10 @@ Never commit secrets. Treat auth, account linking, payments, webhooks, uploads, 
 ## Git policy
 After each independent verified task: inspect diff, exclude unrelated files, run all applicable tests/gates, fix regressions, commit descriptively, push automatically to the authorized branch, verify remote SHA, check CI and update Workspace evidence.
 
+The standing global source-control and browser-relay authorization is
+recorded in `docs/engineering/CODEX-WORKING-RULES.md` section 10 and its
+machine-readable flags are recorded in `state/PROJECT-STATE.md`. When those
+flags are active, do not request routine push/PR/merge/relay permission
+again. The hard human stops in that section always remain mandatory.
+
 Examples: `feat(language-profile): add multilingual onboarding`, `feat(community): implement correction requests`, `feat(ai): add writing coach workflow`, `fix(auth): harden refresh-token rotation`, `refactor(onboarding): split state by responsibility`.
