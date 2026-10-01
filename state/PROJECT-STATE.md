@@ -779,3 +779,25 @@ Phase 12A through 12F are integrated on protected remote mains. Backend PR
 are recorded in the accepted evidence. Phase 12 is fully closed; automatic
 subphase chaining ends at this major-phase boundary. Phase 13 is not started
 and requires explicit human authorization.
+
+## Current Phase 13 execution
+
+    CURRENT_PHASE=13
+    CURRENT_SUBPHASE=13A
+    PHASE_13=IN_PROGRESS
+    PHASE_13_STARTED=YES
+    PHASE_13_AUTHORIZATION=YES
+    PHASE_13_DECOMPOSITION=13A,13B,13C,13D,13E,13F
+    PHASE_13_OBJECTIVE=Enable moderated public/private live language practice rooms where users can listen, speak, raise hand and participate safely; voice is ephemeral by default and recording/storage requires separate explicit consent and policy.
+    LNG_13_001=READY
+    LNG_13_002=READY
+    LNG_13_003=PLANNED
+    LNG_13_004=PLANNED
+    LNG_13_005=PLANNED
+    LNG_13_006=PLANNED
+    LNG_13_007=PLANNED
+    LNG_13_008=PLANNED
+    PHASE_13_START_BACKEND_SHA=5fdf3230bb28999ecdc362c4e8fff177abc94e6d
+    PHASE_13_START_FRONTEND_SHA=95337855b6a5d49d339ad581e955a074593f907a
+    PHASE_13_START_WORKSPACE_SHA=1273f247eddd70c7c865e378875760336839011c
+    PHASE_13_NEXT_ACTION=EXECUTE_13A
