@@ -19,6 +19,7 @@ Write an executable entitlement matrix covering AI quota, advanced practice, ana
 Design redemption/credit contract: eligible contribution balance or dedicated redeemable credit, conversion rule/version, idempotent redemption, expiration policy if any and audit trail. Do not simply subtract Community Reputation if reputation is meant to be status; create a deliberate redeemable-value model/ledger if needed.
 
 ## LNG-11-004 — PayOS Checkout & Payment Attempt Model
+**Status:** DONE
 **Depends on:** LNG-11-001
 
 Adapt secure patterns from EduAI audit. Create order/payment attempt with server-derived amount/product, provider reference mapping, idempotency and pending/paid/failed/cancelled states. Client cannot choose trusted amount/status. Provider disabled/misconfigured state returns safe actionable error.

@@ -1,6 +1,6 @@
 # Phase 11 decomposition
 
-Status: `11A=DONE; 11B=DONE; 11C=READY`; the grouping follows the authoritative task
+Status: `11A=DONE; 11B=DONE; 11C=DONE; 11D=READY`; the grouping follows the authoritative task
 dependencies in `TASKS.md`. Each subphase owns one coherent functional
 boundary and must complete its implementation, focused tests, regression,
 self-review/remediation, acceptance, publication, CI, merge/integration,
@@ -45,7 +45,10 @@ Workspace evidence and branch cleanup gates before the next subphase begins.
   behavior behind the provider adapter boundary.
 - **Done criteria:** Client amount/status tampering cannot affect trusted
   facts; payment facts remain separate from entitlement facts; PayOS is not
-  activated without explicit provider authorization.
+  activated without explicit provider authorization. Migration `0014` is
+  additive, `0012` and `0013` remain unchanged, replay/concurrency and
+  ownership boundaries pass, and no entitlement or contribution credit is
+  granted by checkout or payment-attempt creation.
 
 ## PHASE_11D — Webhook fulfillment and membership lifecycle
 

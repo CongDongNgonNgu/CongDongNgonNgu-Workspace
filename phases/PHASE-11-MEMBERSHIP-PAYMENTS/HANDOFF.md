@@ -180,3 +180,114 @@ SUBPHASE_STATUS=DONE
 NEXT_RECOMMENDED_SUBPHASE=11C
 NEXT_ACTION=REQUEST_NEXT_PROMPT
 ~~~
+
+## Phase 11C Handoff
+
+Phase 11C closes `LNG-11-004` with a provider-neutral checkout and payment-
+attempt foundation. The Backend derives trusted product, plan, price, amount,
+currency, period and status facts from the active catalog. Checkout and
+payment-attempt creation never grants membership, consumes contribution credit,
+or treats a client return/success claim as settlement. Provider integration is
+disabled by default and the configured PayOS boundary fails safely without a
+live adapter in this subphase.
+
+~~~text
+PHASE_11C_RESULT=PASS
+PHASE_11_DECOMPOSITION=11A:LNG-11-001; 11B:LNG-11-002,LNG-11-003; 11C:LNG-11-004; 11D:LNG-11-005,LNG-11-006; 11E:LNG-11-007; 11F:LNG-11-008
+PHASE_SCOPE=Server-derived membership checkout orders and payment attempts with provider-neutral references, owner authorization, replay-safe idempotency, deterministic minor-unit money handling and safe provider-disabled behavior; no settlement, webhook fulfillment, membership lifecycle mutation or UI.
+TASKS_INCLUDED=LNG-11-004
+TASKS_COMPLETED=LNG-11-004
+
+BACKEND_BEFORE_SHA=922009242ff5cac6ede5cf87b0d2732b8f9f0356
+BACKEND_FEATURE_HEAD_SHA=9c2cacadea86c6e4624c9dd22898f4a392339e84
+BACKEND_AFTER_SHA=dc796df03c011a6702bf7c8872fe508e87db6c65
+FRONTEND_BEFORE_SHA=6c026439ec62d50e61cd4e6d6e2000e4484790fe
+FRONTEND_FEATURE_HEAD_SHA=N/A
+FRONTEND_AFTER_SHA=6c026439ec62d50e61cd4e6d6e2000e4484790fe
+WORKSPACE_BEFORE_SHA=b384b156bbcff32e16395ca0b6245f608a82dff9
+WORKSPACE_FEATURE_HEAD_SHA=PENDING_EVIDENCE_COMMIT_SHA
+WORKSPACE_AFTER_SHA=PENDING_EVIDENCE_MERGE_SHA
+
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=NOT_REQUIRED
+ACCEPTANCE=PASS
+CHECKOUT_CONTRACT=PASS
+PAYMENT_ATTEMPT_CONTRACT=PASS
+PAYMENT_PROVIDER_NEUTRALITY=PASS
+PAYMENT_PROVIDER_DISABLED_BY_DEFAULT=PASS
+PAYMENT_STATE_MACHINE=PASS
+SERVER_AUTHORITATIVE_AMOUNT=PASS
+MONETARY_PRECISION=PASS
+PRODUCT_PLAN_SNAPSHOT_INTEGRITY=PASS
+CHECKOUT_IDEMPOTENCY=PASS
+PAYMENT_ATTEMPT_IDEMPOTENCY=PASS
+PAYMENT_ATTEMPT_CONCURRENCY=PASS
+ORDER_TO_ATTEMPT_CARDINALITY=PASS
+PAYMENT_OWNERSHIP_AUTHORIZATION=PASS
+RETURN_URL_VALIDATION=NOT_APPLICABLE
+PAYMENT_PRIVACY_BOUNDARY=PASS
+ERROR_SANITIZATION=PASS
+SECRET_HANDLING=PASS
+PAYMENT_ENTITLEMENT_SEPARATION=PASS
+CONTRIBUTION_CREDIT_CONSUMED=NO
+CONTRIBUTION_CREDIT_REDEMPTION=NO
+CHECKOUT_CREATION_GRANTS_ENTITLEMENT=NO
+PAYMENT_ATTEMPT_CREATION_GRANTS_ENTITLEMENT=NO
+LIVE_PAYMENT_PROVIDER_CALLS=0
+REAL_PAYMENT_TRANSACTIONS=0
+PHASE_11A_PRESERVED=YES
+PHASE_11B_PRESERVED=YES
+PHASE_10_PRESERVED=YES
+
+TESTS=Focused payment contract/service/repository/migration suites 4 suites/21 tests PASS; Backend full unit 98 suites/644 tests PASS; Backend full E2E 15 suites/63 tests PASS; replay, ownership, concurrency, expiry-boundary, provider-disabled, migration-static and API tampering cases PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=PASS: online npm audit --audit-level=high found 0 vulnerabilities
+CI=PASS: Backend PR #11 required quality check and post-merge quality check both passed on the accepted merge commit
+
+DATABASE_SCHEMA_CHANGE=YES
+MIGRATION_CREATED=YES
+MIGRATION_NAME=0014_phase11_checkout_payment
+MIGRATION_0012=UNCHANGED
+MIGRATION_0013=UNCHANGED
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+
+BACKEND_CHANGED=YES
+FRONTEND_CHANGED=NO
+BACKEND_PR_NUMBER=11
+BACKEND_PR_MERGED=YES
+BACKEND_POST_MERGE_CI=PASS: quality on dc796df03c011a6702bf7c8872fe508e87db6c65
+FRONTEND_PR_NUMBER=NONE
+FRONTEND_PR_MERGED=NOT_APPLICABLE
+FRONTEND_POST_MERGE_CI=N/A
+WORKSPACE_PR_NUMBERS=PENDING
+WORKSPACE_MERGED_TO_MAIN=NO
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+MERGED_TO_MAIN=NO
+DEPLOYED=NO
+BRANCH_CLEANUP=PASS
+WORKTREE_CLEAN=YES
+BLOCKERS=NONE
+
+CURRENT_PHASE=11
+CURRENT_SUBPHASE=11C
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=11D
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+~~~
+
+The 11C payment facts are intentionally separate from the 11A/11B
+authorization and contribution-credit facts. The order stores a server-side
+snapshot of the selected product/plan/price and the attempt records only
+payment-state transitions and provider-neutral checkout metadata. Provider
+references and failure details are not exposed through the owner API; no raw
+provider payload or secret is logged or returned.
+
+Migration `0014_phase11_checkout_payment` is additive with a scoped down
+migration and leaves migrations `0012` and `0013` unchanged. Verification was
+static/local because no test or production database was mutated and `psql` was
+not available for an authorized database run. No provider call, real payment,
+deployment or production action occurred.
