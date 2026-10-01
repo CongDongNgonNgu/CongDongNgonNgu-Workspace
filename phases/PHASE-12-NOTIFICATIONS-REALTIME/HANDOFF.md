@@ -25,8 +25,8 @@ suppression, mandatory in-app protection for security/account/payment notices,
 and future email/push channel extensibility. Backend PR #17 is merged to
 remote `main` at `eaf121d`, with exact-head CI run `36832529646` and
 post-merge CI run #58 passing. Frontend remains unchanged at `1902b63`.
-Workspace evidence for 12D is being integrated from the current policy main
-`a620451`.
+Workspace PR #41 merged to remote `main` at `55cb08b`; the temporary evidence
+branch was verified contained in `main`, deleted locally/remotely and pruned.
 
 Phase-wide status remains `IN_PROGRESS`; 12D is integrated and 12E is the next
 dependency-valid subphase. With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the next
