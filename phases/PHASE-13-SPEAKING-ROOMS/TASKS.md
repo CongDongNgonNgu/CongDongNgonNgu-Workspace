@@ -62,7 +62,11 @@ Use Stitch. Design mobile-first audio room—not video-conference clone—with t
 ## LNG-13-007 — Consent-Aware Post-Room AI Contract
 **Depends on:** Phase 09, LNG-13-002
 
+**Status:** DONE — 13E integrated on Backend main
+
 Design optional transcription/AI feedback flow only when explicit consent and provider capability exist. Specify what is transmitted/stored, retention and deletion. If not ready, keep feature disabled with no hidden recording.
+
+13E evidence: Backend PR #22 merged at `1cebe93343a912ea9e341862d3dd3957b270eab1`; exact-head quality run `36867936355` and post-merge quality run `36868608816` passed. The contract is fail-closed and disabled by default: no recording, transcript persistence, AI provider call, migration, frontend change or production side effect.
 
 ## LNG-13-008 — Room Reliability & Safety Reconciliation
 **Depends on:** LNG-13-001..007 as applicable
