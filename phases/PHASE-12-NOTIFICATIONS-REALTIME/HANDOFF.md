@@ -18,7 +18,9 @@ notification center. Frontend PR #13 merged feature head
 `95337855b6a5d49d339ad581e955a074593f907a`. Exact-head CI run
 `36836734794` and post-merge main CI run `36836934657` passed. Frontend
 remote and local temporary branches were cleaned. Workspace main before this
-evidence update is `6973954342fb67a7f2c02ab0fc3dfc336bfff9e2`.
+evidence update was `6973954342fb67a7f2c02ab0fc3dfc336bfff9e2`. Workspace PR
+#43 merged the evidence at `90279cb05e81e34e15851b1bd8e358d3afae5965`; the
+temporary evidence branch was cleaned remotely and locally.
 
 The UI consumes Backend-owned notification, read-state, SSE and preference
 contracts. It keeps `CLIENT_NOTIFICATION_AUTHORITY=NO`,
@@ -30,7 +32,8 @@ and design system.
 Phase 12F is the next dependency-valid subphase with tasks `LNG-12-007` and
 `LNG-12-008`. With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the validated 12F
 prompt is eligible for immediate execution after this Workspace evidence
-closeout. The subphase boundary is not a human authorization boundary.
+closeout/state-sync. The subphase boundary is not a human authorization
+boundary.
 Automatic chaining stops at the Phase 12 final closeout before Phase 13.
 
 No production deployment, production migration, production database

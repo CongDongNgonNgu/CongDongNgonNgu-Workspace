@@ -21,16 +21,16 @@ FRONTEND_FEATURE_HEAD_SHA=c9d7b2b46b1fded9f93dafde1a81e4d2e169c039
 FRONTEND_AFTER_SHA=95337855b6a5d49d339ad581e955a074593f907a
 WORKSPACE_BEFORE_SHA=6973954342fb67a7f2c02ab0fc3dfc336bfff9e2
 WORKSPACE_BRANCH=phase/12e-workspace-evidence
-WORKSPACE_FEATURE_HEAD_SHA=e2238424bf72cf2084b6fdb3083bedc0efb54566
-WORKSPACE_AFTER_SHA=PENDING_WORKSPACE_MERGE
+WORKSPACE_FEATURE_HEAD_SHA=860cc901c4c0e91b88584e6be246c16435a4f6a3
+WORKSPACE_AFTER_SHA=90279cb05e81e34e15851b1bd8e358d3afae5965
 
 FRONTEND_PR_NUMBER=13
 FRONTEND_PR_MERGED=YES
 FRONTEND_MERGE_SHA=95337855b6a5d49d339ad581e955a074593f907a
 FRONTEND_EXACT_HEAD_CI=PASS_RUN_36836734794
 FRONTEND_POST_MERGE_CI=PASS_RUN_36836934657
-WORKSPACE_PR_NUMBER=PENDING
-WORKSPACE_MERGED_TO_MAIN=PENDING
+WORKSPACE_PR_NUMBER=43
+WORKSPACE_MERGED_TO_MAIN=YES
 WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
 
 IMPLEMENTATION=PASS
@@ -95,7 +95,7 @@ PRODUCTION_DEPLOYED=NO
 PREVIEW_DEPLOYMENT=AUTOMATIC_PR_PREVIEW_ONLY
 
 FRONTEND_BRANCH_CLEANUP=PASS
-WORKSPACE_BRANCH_CLEANUP=PENDING
+WORKSPACE_BRANCH_CLEANUP=PASS
 WORKTREE_CLEAN=YES
 BLOCKERS=NONE
 CURRENT_PHASE=12
@@ -150,3 +150,10 @@ attached to the pull request was not a production deployment. No migration,
 database mutation, notification-provider call or production deployment
 occurred. The temporary Frontend branch was verified contained in `main`,
 deleted remotely and locally, and stale refs were pruned.
+
+Workspace PR #43 was merged through protected GitHub flow at
+`90279cb05e81e34e15851b1bd8e358d3afae5965`. Its evidence branch was verified
+contained in remote `main`, deleted remotely and locally, and the Workspace
+main was fast-forwarded to the merged revision. The subsequent state-sync
+closeout records the merge fact and keeps Phase 12F as the next same-phase
+continuation.
