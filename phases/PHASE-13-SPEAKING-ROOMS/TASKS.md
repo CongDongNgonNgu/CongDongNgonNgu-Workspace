@@ -19,9 +19,18 @@ Define room-token/session adapter for selected media provider; server authorizes
 13A evidence: provider-neutral session interface, five-minute server expiry, room/user/role-derived idempotency identity, disabled production adapter, and bounded media response. No real media provider is activated.
 
 ## LNG-13-003 — Join/Leave & Participant Presence
+**Status:** DONE - 13B integrated on Backend main
 **Depends on:** LNG-13-001, LNG-13-002
 
 Implement idempotent join/leave, reconnect, capacity, duplicate-tab/device policy and presence reconciliation. Clean up stale participants without ejecting legitimate reconnects. Display speaker/listener counts from real state.
+
+13B evidence: server-authoritative join, leave and heartbeat endpoints with
+exact/concurrent replay protection, reconnect leases, stale reconciliation,
+row-locked capacity enforcement, duplicate-device policy, bounded participant
+projections and direct authorization/privacy coverage are implemented in
+Backend migration 0019 and `src/rooms`. Backend PR #20 merged at
+`6d5c2f6b115bc65036b900f1a572f2e30a84301e`; exact-head CI
+`36857615046` and post-merge CI `36857869530` passed.
 
 ## LNG-13-004 — Raise Hand & Speaker Queue
 **Depends on:** LNG-13-003

@@ -441,3 +441,11 @@ Phase 14 remains blocked until Phase 13 final closeout passes.
 `LNG-13-001` and `LNG-13-002` are DONE; `LNG-13-003` is the next eligible
 task. The 13A Workspace evidence branch records the exact PR/CI/safety facts
 and must merge before same-phase relay to 13B.
+
+13B is now accepted on Backend main at
+`6d5c2f6b115bc65036b900f1a572f2e30a84301e`. `LNG-13-003` is DONE after
+exact/concurrent replay, reconnect lease, stale reconciliation, capacity,
+duplicate-device, authorization and bounded privacy projection coverage. The
+next eligible work is 13C (`LNG-13-004` and `LNG-13-005`); 13D remains gated on
+13C, 13E remains independently gated on Phase 09 plus 13A, and 13F remains
+gated on 13A-13E. Phase 14 remains blocked until the Phase 13 final gate.
