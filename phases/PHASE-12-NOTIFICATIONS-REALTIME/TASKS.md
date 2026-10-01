@@ -1,23 +1,26 @@
 # Phase 12 Tasks
 
 ## LNG-12-001 — Notification Domain & Event Contracts
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** Phase 05
 
 Define notification type, recipient, actor safe projection, target entity/link, created/read state, dedup key, priority/category and retention policy. Consume domain events rather than hard-coding UI strings across modules. System/provider actors must render safely when no human user exists.
 
 ## LNG-12-002 — Notification API & Read State
 **Depends on:** LNG-12-001
+**Status:** DONE
 
 Implement paginated list, unread count, mark one/many read and safe delete/archive policy if desired. Authorization prevents reading another user's notifications by ID. Mark-read is idempotent; count reconciles under concurrent writes.
 
 ## LNG-12-003 — Realtime Delivery
 **Depends on:** LNG-12-001, LNG-12-002
+**Status:** DONE
 
 Adapt proven SSE/realtime patterns from EduAI only after audit. Authenticate connection, reconnect with backoff, resume/poll fallback where feasible, deduplicate by notification/event ID and handle multi-tab behavior. Do not keep secrets in query strings if avoidable.
 
 ## LNG-12-004 — Notification Preferences
 **Depends on:** LNG-12-001
+**Status:** DONE
 
 Allow category/channel preferences for nonessential events while preserving mandatory security/payment/account notices where legally/product necessary. Default settings should not maximize interruptions. Store preferences server-side and make future email/push channels extensible.
 
