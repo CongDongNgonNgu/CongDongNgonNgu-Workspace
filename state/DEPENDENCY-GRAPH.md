@@ -413,3 +413,26 @@ PHASE_12_NEXT_PROMPT_VALIDATION=REQUIRED
 Phase 12F depends on and completes 12A through 12E. The full Phase 12 task
 set and final gate are PASS on synchronized remote mains. Phase 13 remains
 outside the authorization boundary and is not started.
+
+## Current Phase 13 execution record
+
+Phase 13 is authorized by the human owner and has been decomposed into the
+following dependency-ordered subphases. The complete authoritative scope is
+`phases/PHASE-13-SPEAKING-ROOMS/DECOMPOSITION.md`.
+
+```text
+13A LNG-13-001..002 Room authority and media session foundation
+  └── 13B LNG-13-003 Join, leave and reconciled presence
+          └── 13C LNG-13-004..005 Queue, moderation and room chat
+                  └── 13D LNG-13-006 Speaking-room UI
+13A + Phase 09
+  └── 13E LNG-13-007 Consent-aware post-room AI contract
+13A..13E
+  └── 13F LNG-13-008 Reliability, safety reconciliation and final gate
+```
+
+Synchronized Phase 13 start heads are Backend
+`5fdf3230bb28999ecdc362c4e8fff177abc94e6d`, Frontend
+`95337855b6a5d49d339ad581e955a074593f907a`, and Workspace
+`1273f247eddd70c7c865e378875760336839011c`. The next eligible work is 13A;
+Phase 14 remains blocked until Phase 13 final closeout passes.
