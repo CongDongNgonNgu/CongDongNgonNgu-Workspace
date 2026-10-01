@@ -336,27 +336,37 @@ The synchronized Phase 12 start heads are Backend
 provider/database/UI-free; its exact scope and exit criteria are recorded in
 `phases/PHASE-12-NOTIFICATIONS-REALTIME/DECOMPOSITION.md`.
 
-## Current Phase 12C integration state
+## Current Phase 12D integration state
 
 ```text
 CURRENT_PHASE=12
-CURRENT_SUBPHASE=12C
+CURRENT_SUBPHASE=12D
 PHASE_12A=DONE
 PHASE_12B=DONE
 PHASE_12C=DONE
+PHASE_12D=DONE
 LNG_12_003=PASS_INTEGRATED_REMOTE
+LNG_12_004=PASS_INTEGRATED_REMOTE
 PHASE_12C_DEPENDENCIES=12A,12B
+PHASE_12D_DEPENDENCIES=12A
 PHASE_12C_BACKEND_MAIN_SHA=4dece5023325499cbd7dcfa42994a3ed358c6ff5
 PHASE_12C_FRONTEND_MAIN_SHA=1902b63542a3dd896822070a62e0f8ad42cd9859
 PHASE_12C_BACKEND_POST_MERGE_CI=PASS_RUN_56
 PHASE_12C_FRONTEND_POST_MERGE_CI=PASS_RUN_59
-NEXT_TASK_ID=LNG-12-004
-NEXT_TASK_NAME=Notification Preferences
-NEXT_TASK_STATUS=PLANNED_WAITING_FOR_NEXT_PROMPT
+PHASE_12D_BACKEND_MAIN_SHA=eaf121d095f9dda7785bdf27411ea30233ad2a7a
+PHASE_12D_FRONTEND_MAIN_SHA=1902b63542a3dd896822070a62e0f8ad42cd9859
+PHASE_12D_BACKEND_POST_MERGE_CI=PASS_RUN_58
+PHASE_12D_FRONTEND_CHANGED=NO
+PHASE_12D_MIGRATION=0017_phase12_notification_preferences
+NEXT_TASK_ID=LNG-12-005..006
+NEXT_TASK_NAME=Notification UI Surfaces
+NEXT_TASK_STATUS=READY
 ```
 
-12C is integrated on both application remote `main` branches. Its
-authenticated, bounded, provider-neutral realtime adapter preserves canonical
-notification recovery and owner isolation; preferences, visible UI, event
-producer integration and the Phase 12 final reliability gate remain owned by
-12D, 12E and 12F respectively.
+12D is integrated on the Backend remote `main`; Frontend remains unchanged.
+Its owner-scoped category/channel preference matrix preserves the accepted
+notification, realtime and read-state contracts, suppresses optional noise,
+and protects mandatory in-app security/account/payment notices. Visible UI,
+event-producer integration and the Phase 12 final reliability gate remain
+owned by 12E and 12F respectively. With auto subphase chaining active, the
+validated 12E prompt is the next same-phase continuation target.
