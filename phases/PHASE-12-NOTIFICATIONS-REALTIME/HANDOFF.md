@@ -29,6 +29,10 @@ verified contained in `main`, deleted remotely and locally, and Workspace
 main was fast-forwarded to the merged revision. Workspace post-merge CI is
 not required by the repository policy.
 
+Workspace PR #46 then merged the state-sync closeout at
+`166626dc35d2898eae30aeeaddb44de4b2816784`; remote `main` was fetched and
+verified at that SHA before the closeout branch was deleted.
+
 The final gate preserved domain/delivery separation, recipient authority,
 event versioning, idempotency, read-state/realtime contracts, preference
 semantics, privacy minimization, safe actor/target projection and the
