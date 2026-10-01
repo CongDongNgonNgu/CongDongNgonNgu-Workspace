@@ -16,8 +16,9 @@ for its remote integration boundary:
 12B now adds canonical notification persistence, owner-scoped reads, unread
 count, and idempotent read-state mutations. It does not start realtime
 transport, preferences, provider activation, producer rewiring, or Frontend
-UI. Backend local acceptance is complete and awaits the authorized remote
-publication/integration relay.
+UI. Backend PR #15 is merged to remote `main` at `7890ada`, with post-merge
+CI run #54 passing. Workspace evidence is now locally accepted and awaits its
+authorized publication/integration relay.
 
 Phase-wide status remains `IN_PROGRESS`; 12C must not start until 12B is
 published/integrated and a subsequent ChatGPT orchestration prompt explicitly
