@@ -37,11 +37,13 @@ Verify provider signature using current official SDK/docs, parse safely, lock/re
 Implement activation/expiry/renewal model appropriate to one-time recurring-period payments, cancel/auto-renew semantics only if provider/system actually supports them, grace/failed behavior and admin-safe reconciliation. Do not promise automatic recurring billing unless implemented.
 
 ## LNG-11-007 — Pricing, Checkout & Membership Account UI
+**Status:** DONE
 **Depends on:** LNG-11-001..006
 
 Use Stitch. Clearly show Free vs Member benefits, price/period, payment state, contribution-credit option when implemented and membership status/history. Avoid fake countdowns, hidden renewal terms, preselected expensive options or blocked cancellation paths.
 
 ## LNG-11-008 — Payment Security Reconciliation
+**Status:** READY
 **Depends on:** LNG-11-004..007
 
 Run collision/idempotency/signature/mismatch/replay tests, sandbox or approved live verification with explicit owner authorization for real money, entitlement expiry tests and responsive/a11y checkout states. Record provider state and exact transaction evidence sanitized.
