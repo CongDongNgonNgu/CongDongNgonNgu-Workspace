@@ -70,3 +70,28 @@ passed. The next same-phase subphase is 13F (`LNG-13-008`); Phase 14 has not
 started.
 
 Phase 13E is complete on Backend main and ready for sanitized relay to 13F.
+
+## Phase 13 final closeout
+
+`LNG-13-008` is DONE. The final reconciliation confirms all eight Phase 13
+tasks are accepted on protected Backend/Frontend mains and all authoritative
+contracts remain intact: room ownership and access, provider-token secrecy,
+presence/reconnect/capacity, queue races, moderation/block/report/chat,
+responsive speaking-room safety, explicit consent and the disabled
+post-room-AI boundary. Backend full unit/E2E, Frontend full regression,
+typecheck, lint, build and online high-severity audits passed. The accepted
+Backend exact-head/post-merge CI and Frontend exact-head/post-merge/preview CI
+remain PASS. Migrations 0012–0020 are unchanged; no test or production
+database mutation, provider call, recording, transcript storage, deployment or
+production environment action occurred.
+
+The confirmed relay conversation was attempted after 13E, but the browser
+relay returned `Debugger unattached` after bounded retries. The authoritative
+Workspace task and acceptance documents were already available, so 13F was
+executed directly with the same scope and no hard-stop action. This relay
+exception is recorded in the final-gate evidence; it does not alter the
+accepted implementation or safety state.
+
+`PHASE_13_TASK_SET_COMPLETE=YES`, `PHASE_13_FINAL_GATE=PASS` and
+`PHASE_13_FINAL_CLOSEOUT=PASS`. Phase 14 has not started. The next action is
+`READY_FOR_NEXT_PHASE_AUTHORIZATION`.
