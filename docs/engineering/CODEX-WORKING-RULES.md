@@ -70,3 +70,70 @@ A task may be `DONE` only when all applicable acceptance, architecture, verifica
 
 ## 9. Conflict handling
 Workspace engineering policy is the cross-repository baseline. Target-repository `AGENTS.md` may add stricter local rules. If current documents conflict materially, do not guess which architecture to follow; record the conflict and request/obtain an explicit decision.
+
+## 10. Standing global orchestration authorization
+
+The following standing human-owner authorization is persistent for all
+current and future project phases/subphases from Phase 12 onward until the
+human owner explicitly revokes or changes it:
+
+```text
+GLOBAL_ORCHESTRATION_AUTHORIZATION=ACTIVE
+SOURCE_CONTROL_AUTONOMY=AUTHORIZED
+BROWSER_RELAY_AUTONOMY=AUTHORIZED
+ROUTINE_PUSH_PR_MERGE_PERMISSION_PROMPTS=DISABLED
+HARD_HUMAN_STOPS=REQUIRED
+```
+
+While this policy is active, Codex may autonomously perform the normal
+phase lifecycle inside authoritative Workspace scope: inspect dependencies,
+create or stack short-lived branches, implement, test, review, remediate
+ordinary defects, commit, push, create/update PRs, observe and rerun CI,
+merge only after authoritative gates and branch protection pass, update and
+publish Workspace evidence/state, verify remote `main` and post-merge CI,
+clean merged branches, synchronize local `main`, and send sanitized
+handoffs through the established browser relay. Routine permission prompts
+for push, publish, PR, merge, evidence/state sync, remote-main verification,
+post-merge CI, branch cleanup, and browser relay are disabled while the
+policy remains active.
+
+This authorization is bounded by all of the following:
+
+- The work must be inside the current authoritative phase/subphase scope and
+  dependency order.
+- Required tests, review, acceptance gates, CI, and branch protection must
+  pass; none may be bypassed.
+- Local, deterministic fixtures, test adapters, mocks, and approved
+  sandbox/test environments are allowed under project policy.
+- A migration file may be created when explicitly required by task scope and
+  accompanied by the project-required tests/rollback; it must not be
+  executed against production automatically.
+- Provider abstractions and adapters may be implemented with fake, test, or
+  sandbox fixtures, but this does not authorize live delivery or activation.
+
+The following remain hard human stops regardless of this standing
+authorization. Stop with `HUMAN_AUTHORIZATION_REQUIRED=<exact action>` for
+production deployment or restart; production database writes or migrations;
+destructive database, schema, data, infrastructure, or DNS operations;
+real-money payment or live provider/merchant activation; paid service
+activation, spending, purchasing, external account or credential creation;
+secret rotation or production secret/environment mutation; security-policy
+weakening; bypassing mandatory tests, CI, or branch protection; force merge,
+force push, or shared-history rewriting; and unapproved mutation of
+authoritative financial facts.
+
+For each future major phase, read the complete authoritative scope first,
+decompose it into meaningful dependency-ordered subphases, and run each
+subphase through its complete lifecycle. Relay only a completed subphase or
+a genuine hard blocker. After the final subphase, run the phase final gate,
+cross-phase regression/security/privacy checks, evidence reconciliation,
+merge closeout, branch cleanup, and repository synchronization. Stop before
+implementing the next major phase unless starting that phase has been
+explicitly authorized. A policy-only update does not start the next
+subphase; the current machine-readable project state remains authoritative.
+
+Browser relay may use the existing confirmed Chrome/ChatGPT session to send
+sanitized handoffs, wait for the response, retrieve the primary code block
+containing the next Codex prompt, and execute it. Do not expose secrets or
+unsanitized credentials. Retry relay failures boundedly; report a blocker
+only after those retries genuinely fail.
