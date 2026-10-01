@@ -25,11 +25,13 @@ Design redemption/credit contract: eligible contribution balance or dedicated re
 Adapt secure patterns from EduAI audit. Create order/payment attempt with server-derived amount/product, provider reference mapping, idempotency and pending/paid/failed/cancelled states. Client cannot choose trusted amount/status. Provider disabled/misconfigured state returns safe actionable error.
 
 ## LNG-11-005 — PayOS Webhook, Reconciliation & Fulfillment
+**Status:** DONE
 **Depends on:** LNG-11-004
 
 Verify provider signature using current official SDK/docs, parse safely, lock/recheck event→attempt→order→membership identity, make webhook idempotent, fulfill entitlements once and create reconciliation evidence for mismatches/unknown events without logging raw sensitive identifiers unnecessarily.
 
 ## LNG-11-006 — Membership Lifecycle
+**Status:** DONE
 **Depends on:** LNG-11-001, LNG-11-005
 
 Implement activation/expiry/renewal model appropriate to one-time recurring-period payments, cancel/auto-renew semantics only if provider/system actually supports them, grace/failed behavior and admin-safe reconciliation. Do not promise automatic recurring billing unless implemented.
