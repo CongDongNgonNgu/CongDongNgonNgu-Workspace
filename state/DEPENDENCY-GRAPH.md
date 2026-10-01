@@ -436,3 +436,8 @@ Synchronized Phase 13 start heads are Backend
 `95337855b6a5d49d339ad581e955a074593f907a`, and Workspace
 `1273f247eddd70c7c865e378875760336839011c`. The next eligible work is 13A;
 Phase 14 remains blocked until Phase 13 final closeout passes.
+
+13A is now accepted on Backend main at `60dff2de20b59893daaff7e185bc35083a60e5fb`.
+`LNG-13-001` and `LNG-13-002` are DONE; `LNG-13-003` is the next eligible
+task. The 13A Workspace evidence branch records the exact PR/CI/safety facts
+and must merge before same-phase relay to 13B.
