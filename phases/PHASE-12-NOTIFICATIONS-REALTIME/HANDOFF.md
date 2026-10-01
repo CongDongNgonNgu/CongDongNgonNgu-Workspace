@@ -1,40 +1,36 @@
 # Phase 12 Handoff
 
-**Current phase status:** `12E DONE - INTEGRATED_REMOTE_MAIN`
+**Current phase status:** `12 FINAL CLOSEOUT PASS - INTEGRATED_REMOTE_MAIN`
 
-Phase 12 remains in progress. The authoritative subphase decomposition is
-12A through 12F in `DECOMPOSITION.md`; 12A, 12B, 12C, 12D and 12E are now
-integrated. The current 12E evidence is:
+Phase 12 is complete. The authoritative decomposition is 12A through 12F in
+`DECOMPOSITION.md`; all six subphases and all eight task IDs are integrated.
+Final evidence is recorded in:
 
+- `evidence/PHASE-12F-IMPLEMENTATION.md`
 - `evidence/PHASE-12E-IMPLEMENTATION.md`
 - `evidence/PHASE-12D-IMPLEMENTATION.md`
 - `evidence/PHASE-12C-IMPLEMENTATION.md`
 - `evidence/PHASE-12B-IMPLEMENTATION.md`
 - `evidence/PHASE-12A-IMPLEMENTATION.md`
 
-12E completed `LNG-12-005` desktop notification UI and `LNG-12-006` mobile
-notification center. Frontend PR #13 merged feature head
-`c9d7b2b46b1fded9f93dafde1a81e4d2e169c039` to remote `main` at
-`95337855b6a5d49d339ad581e955a074593f907a`. Exact-head CI run
-`36836734794` and post-merge main CI run `36836934657` passed. Frontend
-remote and local temporary branches were cleaned. Workspace main before this
-evidence update was `6973954342fb67a7f2c02ab0fc3dfc336bfff9e2`. Workspace PR
-#43 merged the evidence at `90279cb05e81e34e15851b1bd8e358d3afae5965`; the
-temporary evidence branch was cleaned remotely and locally.
+12F completed `LNG-12-007` event integration and `LNG-12-008` reliability
+reconciliation. Backend PR #18 merged feature head
+`022ea94a43e2460d9c6ca9caa22834d5f87bec68` at
+`5fdf3230bb28999ecdc362c4e8fff177abc94e6d`. Exact-head CI run
+`36840750074` and post-merge main CI run `36841032606` passed. The Backend
+temporary branch was verified contained in `main`, deleted remotely and
+locally, and stale refs were pruned. Frontend remains accepted at
+`95337855b6a5d49d339ad581e955a074593f907a`; its 12E exact-head and
+post-merge CI also passed.
 
-The UI consumes Backend-owned notification, read-state, SSE and preference
-contracts. It keeps `CLIENT_NOTIFICATION_AUTHORITY=NO`,
-`CLIENT_READ_STATE_AUTHORITY=NO` and `CLIENT_PREFERENCE_AUTHORITY=NO`.
-Stitch desktop screen `ae655d0527df406d902fa050ca59ca48` and mobile screen
-`1409f61cf1474032b797bafee0310516` were created in the established project
-and design system.
+The final gate preserved domain/delivery separation, recipient authority,
+event versioning, idempotency, read-state/realtime contracts, preference
+semantics, privacy minimization, safe actor/target projection and the
+Backend-owned client authority boundary. Event producers cover the
+authoritative community, corrections, exchange, reputation and membership
+facts available in the current modules. No production provider call,
+production migration, production database mutation or deployment occurred.
 
-Phase 12F is the next dependency-valid subphase with tasks `LNG-12-007` and
-`LNG-12-008`. With `AUTO_SUBPHASE_CHAINING=AUTHORIZED`, the validated 12F
-prompt is eligible for immediate execution after this Workspace evidence
-closeout/state-sync. The subphase boundary is not a human authorization
-boundary.
-Automatic chaining stops at the Phase 12 final closeout before Phase 13.
-
-No production deployment, production migration, production database
-mutation, real notification-provider call or paid service activation occurred.
+`PHASE_12_FINAL_CLOSEOUT=PASS`.
+`PHASE_13_STARTED=NO`; Phase 13 remains outside the current authorization
+boundary and requires explicit human authorization before implementation.
