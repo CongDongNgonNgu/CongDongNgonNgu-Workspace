@@ -1,11 +1,11 @@
-# Phase 12A Local Acceptance Evidence
+# Phase 12A Integrated Remote Acceptance Evidence
 
-This evidence records the local implementation and acceptance boundary for
-`LNG-12-001`. It does not represent remote publication, pull-request merge,
-deployment, or Phase 12 completion.
+This evidence records the local implementation, remote publication, and
+integration boundary for `LNG-12-001`. It does not represent deployment or
+Phase 12 completion.
 
 ```text
-PHASE_12A_RESULT=PASS_LOCAL_AWAITING_PUBLISH
+PHASE_12A_RESULT=PASS_INTEGRATED_REMOTE
 PHASE_12_DECOMPOSITION=12A,12B,12C,12D,12E,12F
 PHASE_SCOPE=Backend-only provider/channel-neutral notification domain and event contracts plus Workspace evidence
 TASKS_INCLUDED=LNG-12-001
@@ -20,6 +20,18 @@ FRONTEND_LOCAL_ACCEPTED_SHA=N/A
 WORKSPACE_BEFORE_SHA=1e23561703b2f6bdf3a1ea75b899a79007f0222d
 WORKSPACE_BRANCH=phase-12a-notification-domain-contracts
 WORKSPACE_LOCAL_ACCEPTED_SHA=c7cf7af4b487163992150019800dfe87df25d5d8
+WORKSPACE_FEATURE_HEAD_SHA=5021cfb7249991c4f5585774e702dfc2f1a0e4d2
+
+BACKEND_PR_NUMBER=14
+BACKEND_MERGED_TO_MAIN=YES
+BACKEND_MERGE_SHA=26aa94c8089060b0ab6db6979a8996f4bd5af49e
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_POST_MERGE_CI_RUN=52
+WORKSPACE_PR_NUMBER=31
+WORKSPACE_MERGED_TO_MAIN=YES
+WORKSPACE_MERGE_SHA=53c3adf63fedc4edcc0d2b3e6e9e4976375c5342
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+FRONTEND_REMOTE_MAIN_SHA=e3ff9dd9bc8731e37f5601c4ceeadda9da9e32c8
 
 IMPLEMENTATION=PASS
 REVIEW=PASS
@@ -63,16 +75,18 @@ MIGRATION_0015_SHA256=6d3fd8687540b9bac299b7c80a2fc73ca7c6a9d7c3f58944bcbb7911a8
 BACKEND_CHANGED=YES
 FRONTEND_CHANGED=NO
 WORKSPACE_CHANGED=YES
-PUSHED_REMOTE=NO
-PR_CREATED=NO
-MERGED_TO_MAIN=NO
+PUSHED_REMOTE=YES
+PR_CREATED=YES
+MERGED_TO_MAIN=YES
 DEPLOYED=NO
-BLOCKERS=HUMAN_AUTHORIZATION_REQUIRED=PUBLISH_AND_INTEGRATE_PHASE_12A
+BRANCH_CLEANUP=PASS
+WORKTREE_CLEAN=YES
+BLOCKERS=NONE
 CURRENT_PHASE=12
 CURRENT_SUBPHASE=12A
-SUBPHASE_STATUS=LOCALLY_ACCEPTED_AWAITING_PUBLISH
+SUBPHASE_STATUS=INTEGRATED_REMOTE_MAIN
 NEXT_RECOMMENDED_SUBPHASE=12B
-NEXT_ACTION=HUMAN_AUTHORIZATION_REQUIRED
+NEXT_ACTION=RELAY_HANDOFF_THEN_REQUEST_NEXT_PROMPT
 ```
 
 ## Implemented boundary
@@ -111,6 +125,9 @@ liveNotificationProviderCalls=0
 databaseMutated=false
 ```
 
-Remote publication and integration remain intentionally unperformed. Phase
-12B must not begin until this 12A result is published/integrated under explicit
-human authorization and the next ChatGPT orchestration prompt is available.
+Remote publication and integration completed under explicit human
+authorization. Backend PR #14 merged with post-merge CI run #52 passing on
+`26aa94c`; Workspace PR #31 merged without a required CI workflow on
+`53c3adf`. No deployment, production migration, production database mutation,
+provider activation, or Phase 12B start occurred. Phase 12B remains pending
+until the next ChatGPT orchestration prompt is available.
