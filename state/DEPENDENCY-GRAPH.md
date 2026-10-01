@@ -314,3 +314,24 @@ integrity, security/privacy, migration closure, Workspace evidence and branch
 cleanup. Phase 11 is now the next eligible phase; no Phase 11 implementation,
 payment-provider activation, production deployment or production data change
 has started.
+
+## Current Phase 12 execution
+
+Phase 11 is closed at its accepted final gate. Phase 12 is in progress with
+the following dependency-ordered decomposition:
+
+```text
+12A LNG-12-001 Notification Domain & Event Contracts
+  ├── 12B LNG-12-002 Notification API & Read State
+  ├── 12C LNG-12-003 Realtime Delivery
+  ├── 12D LNG-12-004 Notification Preferences
+  └── 12E LNG-12-005..006 Notification UI Surfaces
+       └── 12F LNG-12-007..008 Event Integration, Reliability & Final Gate
+```
+
+The synchronized Phase 12 start heads are Backend
+`c8d22b2dfe4086d1da7faad6a9bdeb7637cb5d46`, Frontend
+`e3ff9dd9bc8731e37f5601c4ceeadda9da9e32c8`, and Workspace
+`1e23561703b2f6bdf3a1ea75b899a79007f0222d`. 12A is Backend-only and
+provider/database/UI-free; its exact scope and exit criteria are recorded in
+`phases/PHASE-12-NOTIFICATIONS-REALTIME/DECOMPOSITION.md`.
