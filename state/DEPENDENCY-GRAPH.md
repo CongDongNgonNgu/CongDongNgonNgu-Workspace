@@ -315,10 +315,10 @@ cleanup. Phase 11 is now the next eligible phase; no Phase 11 implementation,
 payment-provider activation, production deployment or production data change
 has started.
 
-## Current Phase 12 execution
+## Phase 12 authoritative execution record
 
-Phase 11 is closed at its accepted final gate. Phase 12 is in progress with
-the following dependency-ordered decomposition:
+Phase 11 is closed at its accepted final gate. Phase 12 is closed at its
+accepted final gate with the following dependency-ordered decomposition:
 
 ```text
 12A LNG-12-001 Notification Domain & Event Contracts
@@ -373,36 +373,40 @@ and protects mandatory in-app security/account/payment notices. Visible UI,
 event-producer integration and the Phase 12 final reliability gate remain
 owned by 12E and 12F respectively.
 
-## Current Phase 12E integration state
+## Current Phase 12 final closeout state
 
 ```text
 CURRENT_PHASE=12
-CURRENT_SUBPHASE=12E
+CURRENT_SUBPHASE=12F
 PHASE_12A=DONE
 PHASE_12B=DONE
 PHASE_12C=DONE
 PHASE_12D=DONE
 PHASE_12E=DONE
-LNG_12_005=PASS_INTEGRATED_REMOTE
-LNG_12_006=PASS_INTEGRATED_REMOTE
-PHASE_12E_DEPENDENCIES=12B,12C,12D
-PHASE_12E_FRONTEND_MAIN_SHA=95337855b6a5d49d339ad581e955a074593f907a
-PHASE_12E_FRONTEND_PR=13
-PHASE_12E_FRONTEND_POST_MERGE_CI=PASS_RUN_36836934657
-PHASE_12E_WORKSPACE_PR=43
-PHASE_12E_WORKSPACE_MERGE_SHA=90279cb05e81e34e15851b1bd8e358d3afae5965
-PHASE_12E_WORKSPACE_EVIDENCE=PASS_INTEGRATED_REMOTE
-PHASE_12E_WORKSPACE_BRANCH_CLEANUP=PASS
-NEXT_TASK_ID=LNG-12-007..008
-NEXT_TASK_NAME=Event Integration, Reliability & Final Gate
-NEXT_TASK_STATUS=READY
+PHASE_12F=DONE
+LNG_12_007=PASS_INTEGRATED_REMOTE
+LNG_12_008=PASS_INTEGRATED_REMOTE
 PHASE_12F_DEPENDENCIES=12A,12B,12C,12D,12E
+PHASE_12F_BACKEND_MAIN_SHA=5fdf3230bb28999ecdc362c4e8fff177abc94e6d
+PHASE_12F_BACKEND_PR=18
+PHASE_12F_BACKEND_POST_MERGE_CI=PASS_RUN_36841032606
+PHASE_12F_FRONTEND_MAIN_SHA=95337855b6a5d49d339ad581e955a074593f907a
+PHASE_12F_FRONTEND_CHANGED=NO
+PHASE_12F_WORKSPACE_FEATURE_HEAD_SHA=b3f75e738b4f5427639db09f16dfd48339b2c33c
+PHASE_12F_WORKSPACE_PR=45
+PHASE_12F_WORKSPACE_MERGE_SHA=79baa38644706b227216a5cf99bf1d2653999b95
+PHASE_12F_WORKSPACE_MAIN_SHA=79baa38644706b227216a5cf99bf1d2653999b95
+PHASE_12F_WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+PHASE_12F_FINAL_GATE=PASS
+PHASE_12_FINAL_CLOSEOUT=PASS
+PHASE_12_TASK_SET_COMPLETE=YES
+PHASE_13_STARTED=NO
+PHASE_13_STATUS=AWAITING_EXPLICIT_AUTHORIZATION
 PHASE_12_AUTO_CHAINING=AUTHORIZED
-PHASE_12_NEXT_PROMPT_TARGET=12F
+PHASE_12_NEXT_PROMPT_TARGET=NONE_MAJOR_PHASE_BOUNDARY
 PHASE_12_NEXT_PROMPT_VALIDATION=REQUIRED
 ```
 
-12E is integrated on the Frontend remote `main`; 12F is the next dependency-
-valid same-phase continuation. Phase 13 remains outside the current
-authorization boundary until Phase 12 final closeout and explicit human
-authorization.
+Phase 12F depends on and completes 12A through 12E. The full Phase 12 task
+set and final gate are PASS on synchronized remote mains. Phase 13 remains
+outside the authorization boundary and is not started.
