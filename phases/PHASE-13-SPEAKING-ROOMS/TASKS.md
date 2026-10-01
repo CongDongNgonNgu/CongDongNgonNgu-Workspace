@@ -1,15 +1,22 @@
 # Phase 13 Tasks
 
 ## LNG-13-001 — Room Domain & Permission Model
-**Status:** PLANNED  
+**Status:** DONE — 13A integrated on Backend main
+
 **Depends on:** Phase 12 and Identity/Profile
 
 Model room visibility, language/level/topic, host/moderators, lifecycle, capacity, participants and role states. Define who can create/join/speak/moderate; private invite/access tokens must not be guessable/public.
 
+13A evidence: bounded public/private room facts, host/moderator relation, lifecycle/capacity constraints, owner-scoped private access token hash, and server-derived role boundary are implemented in Backend migration 0018 and `src/rooms`.
+
 ## LNG-13-002 — Realtime Media Provider Abstraction
+**Status:** DONE — 13A integrated on Backend main
+
 **Depends on:** LNG-13-001
 
 Define room-token/session adapter for selected media provider; server authorizes issuance and scopes participant role/room/time. Provider secrets remain backend-only. Include provider-disabled/outage state. Do not claim live audio completion from UI mocks.
+
+13A evidence: provider-neutral session interface, five-minute server expiry, room/user/role-derived idempotency identity, disabled production adapter, and bounded media response. No real media provider is activated.
 
 ## LNG-13-003 — Join/Leave & Participant Presence
 **Depends on:** LNG-13-001, LNG-13-002
