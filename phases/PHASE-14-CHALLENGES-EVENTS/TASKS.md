@@ -1,12 +1,17 @@
 # Phase 14 Tasks
 
 ## LNG-14-001 — Challenge Model & Progress Rules
-**Status:** PLANNED  
+**Status:** DONE — integrated remote
 **Depends on:** Phase 13 and Phase 10 for reward hooks
 
 Model challenge type, language/level/topic, start/end/timezone policy, goals, eligible activity events, progress, completion and optional reward event. Rules are versioned/configurable; do not create a custom table/code path for each challenge example. Prevent progress from untrusted client-only claims.
 
+**Evidence:** `evidence/PHASE-14A-IMPLEMENTATION.md`
+
+**Remote:** Backend PR #23 merged to `main`; post-merge CI passed.
+
 ## LNG-14-002 — Challenge Discovery & Participation
+**Status:** READY
 **Depends on:** LNG-14-001
 
 Use Stitch. Users can discover active/upcoming challenges, join/leave according to rules, see clear finite goals and progress. No shame copy or fake urgency. Completed/expired states remain understandable.
