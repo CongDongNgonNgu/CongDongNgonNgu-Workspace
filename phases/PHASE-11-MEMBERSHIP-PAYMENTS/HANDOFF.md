@@ -406,3 +406,90 @@ scoped down migration and leaves `0012`, `0013` and `0014` unchanged.
 Verification was deterministic/local and CI-backed; no test or production
 database was mutated, no deployment occurred and no live payment provider call
 or real-money transaction occurred.
+
+## Phase 11E Handoff
+
+Phase 11E closes `LNG-11-007`. The Backend now exposes a safe, server-backed
+membership pricing catalog, while the Frontend provides responsive pricing,
+checkout, pending/failure, membership-account and contribution-credit surfaces.
+Protected checkout and payment-attempt requests remain idempotent and
+server-authoritative; the UI does not grant access from client claims, forged
+success parameters or payment initiation. Provider-disabled and unavailable
+states fail closed, and no renewal or cancellation promise is exposed.
+
+~~~text
+PHASE_11E_RESULT=PASS
+PHASE_11_DECOMPOSITION=11A:LNG-11-001; 11B:LNG-11-002,LNG-11-003; 11C:LNG-11-004; 11D:LNG-11-005,LNG-11-006; 11E:LNG-11-007; 11F:LNG-11-008
+PHASE_SCOPE=Server-backed pricing/catalog, transparent Free vs Member UI, protected idempotent checkout/order/payment-attempt flow, server-trusted payment state, contribution-credit UI, membership account/status/history, responsive/a11y/fail-closed UX; no renewal/cancellation promise.
+TASKS_INCLUDED=LNG-11-007
+TASKS_COMPLETED=LNG-11-007
+
+BACKEND_BEFORE_SHA=92eaf0cc929e382bc2bc15b52158c7cbbc9c5277
+BACKEND_FEATURE_HEAD_SHA=fda80b466878d491ee7935bd4c0cf0053fa7d52c
+BACKEND_AFTER_SHA=c8d22b2dfe4086d1da7faad6a9bdeb7637cb5d46
+FRONTEND_BEFORE_SHA=6c026439ec62d50e61cd4e6d6e2000e4484790fe
+FRONTEND_FEATURE_HEAD_SHA=f7d1b14dec1b9168549fdbd931f4ac9ceac31c82
+FRONTEND_AFTER_SHA=e3ff9dd9bc8731e37f5601c4ceeadda9da9e32c8
+WORKSPACE_BEFORE_SHA=b893cbccae2651d7b1ba0cb8f04705c8809e6d75
+WORKSPACE_FEATURE_HEAD_SHA=fff14a8d7b2f0d1523ef5d1ec87895fc97e09f8f
+WORKSPACE_AFTER_SHA=5ee126beb36e9ccaaeaaad14047303744d073161
+
+IMPLEMENTATION=PASS
+REVIEW=PASS
+RUNTIME=PASS
+ACCEPTANCE=PASS
+MEMBERSHIP_PRODUCT_CONTRACT=PASS
+ENTITLEMENT_CONTRACT=PASS
+ENTITLEMENT_SERVER_AUTHORITY=PASS
+ENTITLEMENT_IDEMPOTENCY=PASS
+ENTITLEMENT_TIME_BOUNDARIES=PASS
+ENTITLEMENT_HISTORY_INTEGRITY=PASS
+OWNERSHIP_AUTHORIZATION=PASS
+ADMIN_AUTHORIZATION=NOT_APPLICABLE
+PAYMENT_ENTITLEMENT_SEPARATION=PASS
+REPLAY_PROTECTION=PASS
+
+TESTS=Backend full Jest 102 suites/666 tests PASS; focused payment 13 tests PASS; Frontend full Vitest 57 files/254 tests PASS; browser desktop and 390px responsive smoke PASS; forged-success/provider-disabled/double-click/credit/a11y coverage PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS: Vite build; existing large-chunk warning only
+AUDIT=PASS: online npm audit --audit-level=high found 0 vulnerabilities
+CI=PASS: Backend PR #13 and post-merge run #50; Frontend PR #11 and post-merge run #57
+
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+MIGRATION_NAME=NONE
+MIGRATION_0012=UNCHANGED
+MIGRATION_0013=UNCHANGED
+MIGRATION_0014=UNCHANGED
+MIGRATION_0015=UNCHANGED
+TEST_DB_MUTATED=NO
+PRODUCTION_DB_MUTATED=NO
+
+BACKEND_CHANGED=YES
+FRONTEND_CHANGED=YES
+BACKEND_PR_NUMBER=13
+BACKEND_PR_MERGED=YES
+BACKEND_POST_MERGE_CI=PASS: run #50 on c8d22b2dfe4086d1da7faad6a9bdeb7637cb5d46
+FRONTEND_PR_NUMBER=11
+FRONTEND_PR_MERGED=YES
+FRONTEND_POST_MERGE_CI=PASS: run #57 on e3ff9dd9bc8731e37f5601c4ceeadda9da9e32c8
+WORKSPACE_PR_NUMBERS=26
+WORKSPACE_MERGED_TO_MAIN=YES
+WORKSPACE_POST_MERGE_CI=NOT_REQUIRED
+MERGED_TO_MAIN=YES
+DEPLOYED=NO
+BRANCH_CLEANUP=PASS
+WORKTREE_CLEAN=YES
+BLOCKERS=NONE
+
+CURRENT_PHASE=11
+CURRENT_SUBPHASE=11E
+SUBPHASE_STATUS=DONE
+NEXT_RECOMMENDED_SUBPHASE=11F
+NEXT_ACTION=REQUEST_NEXT_PROMPT
+~~~
+
+Phase 11E was verified locally with deterministic memory-mode runtime and
+browser smoke only. No test or production database was mutated, no deployment
+occurred, no live provider call was made and no real-money transaction occurred.
