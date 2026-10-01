@@ -1,6 +1,6 @@
 # Phase 11 decomposition
 
-Status: `11A=DONE; 11B=READY`; the grouping follows the authoritative task
+Status: `11A=DONE; 11B=DONE; 11C=READY`; the grouping follows the authoritative task
 dependencies in `TASKS.md`. Each subphase owns one coherent functional
 boundary and must complete its implementation, focused tests, regression,
 self-review/remediation, acceptance, publication, CI, merge/integration,
