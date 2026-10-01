@@ -35,10 +35,12 @@ Use Stitch for dedicated mobile-first notification screen rather than forcing a 
 
 ## LNG-12-007 — Event Integration
 **Depends on:** relevant implemented domain modules
+**Status:** DONE
 
 Wire community replies, corrections/acceptance, buddy requests, reputation and membership events as available. Each event must have dedup semantics and privacy-safe actor projection.
 
 ## LNG-12-008 — Reliability Reconciliation
 **Depends on:** LNG-12-001..007
+**Status:** DONE
 
 Test reconnect, duplicate delivery, missed-event recovery, multi-tab, unread count races, deleted target/actor, system actor and preference suppression. Run responsive/a11y/visual, push commits and evidence.
