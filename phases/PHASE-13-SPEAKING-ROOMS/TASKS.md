@@ -51,9 +51,13 @@ Host/moderator mute/remove/report with audit; participant block/report integrati
 13C evidence: room-scoped moderation action audit, server mute state with provider-adapter-specific enforcement, participant removal, block/report integration, bounded plain-text chat, persistent replay identity, concurrent write serialization, rate limiting and privacy-safe projections are implemented in Backend migration 0020 and `src/rooms`.
 
 ## LNG-13-006 — Speaking Room UI
+**Status:** DONE — 13D integrated on Frontend main
+
 **Depends on:** LNG-13-003..005
 
 Use Stitch. Design mobile-first audio room—not video-conference clone—with topic/language context, speakers, listener list, raise hand, queue, chat and moderation access. Handle permission prompts, reconnect, microphone denied, provider outage and safe-area mobile controls.
+
+13D evidence: Frontend PR #14 merged at `fe9e5254d888e58fd39232729453d183c143564f`; exact-head quality CI `110375650554` and post-merge quality CI `110376649033` passed. The responsive route, server-authoritative room transport, queue/moderation/chat states, private-token boundary, accessibility and safe media UX are recorded in `evidence/PHASE-13D-IMPLEMENTATION.md`.
 
 ## LNG-13-007 — Consent-Aware Post-Room AI Contract
 **Depends on:** Phase 09, LNG-13-002
