@@ -43,7 +43,7 @@ Implement activation/expiry/renewal model appropriate to one-time recurring-peri
 Use Stitch. Clearly show Free vs Member benefits, price/period, payment state, contribution-credit option when implemented and membership status/history. Avoid fake countdowns, hidden renewal terms, preselected expensive options or blocked cancellation paths.
 
 ## LNG-11-008 — Payment Security Reconciliation
-**Status:** READY
+**Status:** DONE
 **Depends on:** LNG-11-004..007
 
 Run collision/idempotency/signature/mismatch/replay tests, sandbox or approved live verification with explicit owner authorization for real money, entitlement expiry tests and responsive/a11y checkout states. Record provider state and exact transaction evidence sanitized.
