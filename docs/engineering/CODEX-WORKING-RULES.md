@@ -82,6 +82,11 @@ GLOBAL_ORCHESTRATION_AUTHORIZATION=ACTIVE
 SOURCE_CONTROL_AUTONOMY=AUTHORIZED
 BROWSER_RELAY_AUTONOMY=AUTHORIZED
 ROUTINE_PUSH_PR_MERGE_PERMISSION_PROMPTS=DISABLED
+AUTO_SUBPHASE_CHAINING=AUTHORIZED
+SAME_PHASE_AUTOMATIC_CONTINUATION=AUTHORIZED
+NEXT_PROMPT_AUTO_EXECUTION=AUTHORIZED
+SUBPHASE_BOUNDARY_HUMAN_STOP=DISABLED
+MAJOR_PHASE_BOUNDARY_HUMAN_STOP=REQUIRED
 HARD_HUMAN_STOPS=REQUIRED
 ```
 
@@ -124,16 +129,22 @@ authoritative financial facts.
 
 For each future major phase, read the complete authoritative scope first,
 decompose it into meaningful dependency-ordered subphases, and run each
-subphase through its complete lifecycle. Relay only a completed subphase or
-a genuine hard blocker. After the final subphase, run the phase final gate,
-cross-phase regression/security/privacy checks, evidence reconciliation,
-merge closeout, branch cleanup, and repository synchronization. Stop before
-implementing the next major phase unless starting that phase has been
-explicitly authorized. A policy-only update does not start the next
-subphase; the current machine-readable project state remains authoritative.
+subphase through its complete lifecycle. When a subphase is done, complete
+its merge/evidence/cleanup gates, send the sanitized handoff, wait for the
+response, validate that the primary returned prompt targets the next
+subphase or final closeout of the same authorized major phase, and execute it
+automatically. A subphase boundary is not a human authorization boundary.
+Stop only when the major phase final gate and closeout pass, before starting
+the next major phase, or at a genuine hard human stop. A policy-only update
+does not authorize skipping dependencies or hard stops; the current
+machine-readable project state remains authoritative.
 
 Browser relay may use the existing confirmed Chrome/ChatGPT session to send
-sanitized handoffs, wait for the response, retrieve the primary code block
-containing the next Codex prompt, and execute it. Do not expose secrets or
+sanitized handoffs, wait for the response, retrieve and copy the entire
+primary code block containing the next Codex prompt, validate its project,
+major-phase, dependency and hard-stop target, and execute it automatically
+when it continues the same authorized major phase. Do not expose secrets or
 unsanitized credentials. Retry relay failures boundedly; report a blocker
-only after those retries genuinely fail.
+only after those retries genuinely fail. Reject a returned prompt that
+targets another project, skips unresolved dependencies, starts another major
+phase, or requests a hard-stop action.

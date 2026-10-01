@@ -17,7 +17,7 @@ Before editing any repository:
 The Workspace engineering documents are canonical cross-repository policy. A target-repository `AGENTS.md` may add stricter or more local rules, but it must not silently weaken the Workspace baseline. If current instructions genuinely conflict, stop and record the conflict instead of guessing.
 
 ## Mandatory execution loop
-Confirm dependencies, select the smallest eligible task, inspect real source, classify reuse where relevant, implement the smallest maintainable change, verify, review the diff, commit with Conventional Commits, push to the authorized branch, verify remote SHA/CI, and update Workspace evidence. Stop and record genuine blockers; never fabricate credentials, provider access, UAT, CI, deployment, or production evidence.
+Confirm dependencies, select the smallest eligible task, inspect real source, classify reuse where relevant, implement the smallest maintainable change, verify, review the diff, commit with Conventional Commits, push to the authorized branch, verify remote SHA/CI, and update Workspace evidence. When a subphase is accepted, relay the sanitized handoff, validate the returned prompt, and automatically continue to the next subphase of the same authorized major phase. Stop and record genuine blockers; never fabricate credentials, provider access, UAT, CI, deployment, or production evidence.
 
 Allowed states: `PLANNED`, `READY`, `IN_PROGRESS`, `BLOCKED_INTERNAL`, `BLOCKED_EXTERNAL`, `VERIFYING`, `DONE`, `DEFERRED`, `CANCELLED`.
 
@@ -65,5 +65,24 @@ recorded in `docs/engineering/CODEX-WORKING-RULES.md` section 10 and its
 machine-readable flags are recorded in `state/PROJECT-STATE.md`. When those
 flags are active, do not request routine push/PR/merge/relay permission
 again. The hard human stops in that section always remain mandatory.
+
+The standing auto-chaining policy is also active for every authorized major
+phase:
+
+```text
+AUTO_SUBPHASE_CHAINING=AUTHORIZED
+SAME_PHASE_AUTOMATIC_CONTINUATION=AUTHORIZED
+NEXT_PROMPT_AUTO_EXECUTION=AUTHORIZED
+SUBPHASE_BOUNDARY_HUMAN_STOP=DISABLED
+MAJOR_PHASE_BOUNDARY_HUMAN_STOP=REQUIRED
+```
+
+After a completed subphase, Codex must finish its authoritative gates, relay
+the sanitized handoff, wait for the response, copy and validate the primary
+next prompt, and execute it when it targets the next dependency-valid
+subphase or final closeout of the same major phase. Codex must stop before a
+new major phase even when same-phase chaining is active. Prompt validation
+must reject another project, a different major phase, unresolved dependency
+skips, or any hard-stop production/destructive action.
 
 Examples: `feat(language-profile): add multilingual onboarding`, `feat(community): implement correction requests`, `feat(ai): add writing coach workflow`, `fix(auth): harden refresh-token rotation`, `refactor(onboarding): split state by responsibility`.
