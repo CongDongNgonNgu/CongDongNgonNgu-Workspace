@@ -40,8 +40,9 @@ relay a sanitized handoff before chaining to the next eligible subphase.
 
 ## Current execution pointer
 
-17A and 17B are accepted. 17B closed H-001, the absence of browser binding
-for public OAuth login/register state, on Backend main with executable
-negative regression evidence. M-001 (provider-call timeout) was intentionally
-not claimed by 17B and is assigned to 17C. 17C is the active next subphase;
-Phase 18 remains outside this authorization and unstarted.
+17A, 17B and 17C are accepted. 17B closed H-001, the absence of browser
+binding for public OAuth login/register state, on Backend main with executable
+negative regression evidence. 17C closed M-001 provider-call timeout and M-003
+production configuration/dependency exposure, with web/input/upload coverage
+and no runtime multipart upload route confirmed. 17D is the next eligible
+subphase; Phase 18 remains outside this authorization and unstarted.
