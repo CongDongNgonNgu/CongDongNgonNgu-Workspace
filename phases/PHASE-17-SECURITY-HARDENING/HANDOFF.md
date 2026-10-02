@@ -1,6 +1,6 @@
 # Phase 17 Handoff
 
-**Phase status:** IN_PROGRESS — 17A, 17B and 17C accepted; 17D next
+**Phase status:** IN_PROGRESS — 17A, 17B, 17C and 17D accepted; 17E next
 
 17A (LNG-17-001) established the threat model and attack-surface inventory in
 `THREAT-MODEL.md`. 17B (LNG-17-002) completed the auth/OAuth/session/
@@ -11,16 +11,25 @@ web/input/upload, secrets, dependency and configuration audit, closed M-001
 and M-003, and is accepted on Backend main at
 `76fb2732a62da5437ed4390f74ebe0fb507fca46`.
 
+17D (LNG-17-004 and LNG-17-005) completed the abuse, privacy, community
+safety and AI data-boundary audit. H-002, H-003 and H-004 are closed by
+server-authoritative projections, negative domain suites and hostile browser
+fixtures. M-002 is partially closed with the process-local community limiter
+and retention/deletion mapping explicitly carried to 17F. Frontend main is
+`01331d6e4f768c9a5d0079658c60b7fcedddcaa8` after PR #24; evidence is in
+`evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`.
+
 The ordered decomposition is in `DECOMPOSITION.md`:
 17A → 17B → 17C → 17D → 17E → 17F. Phase 18 is not started.
 
 17A evidence: `evidence/phase-17/PHASE-17A-EVIDENCE-2026-10-02.md`.
 17B evidence: `evidence/phase-17/PHASE-17B-EVIDENCE-2026-10-02.md`.
 17C evidence: `evidence/phase-17/PHASE-17C-EVIDENCE-2026-10-02.md`.
+17D evidence: `evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`.
 
-Next eligible work is 17D: abuse, privacy, community safety, AI prompt/
-retrieval and data-boundary audit. H-003 content/markdown and AI-output
-coverage remains a 17D gate. Phase 18 is not started.
+Next eligible work is 17E: commerce/payment/webhook/entitlement/credit
+adversarial audit. H-005 remains assigned to 17E; M-002 rate-limit and
+retention residuals remain explicit 17F gates. Phase 18 is not started.
 
 Do not paste secrets, exploit tokens or sensitive production data into this
 file. Production deployment/restart, production database writes/migrations,

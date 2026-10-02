@@ -193,5 +193,34 @@ E2E 17 suites / 73 tests, Frontend 82 files / 339 tests, focused Backend
 provider/config/import suites 9 suites / 58 tests across the final runs,
 focused Frontend security suites 5 files / 26 tests, typecheck, build, lint,
 dependency audits and `git diff --check`. H-003's remaining content/markdown
-and AI-output portion is explicitly carried to 17D; no critical/high finding
-is silently accepted. Phase 18 remains unstarted; 17D is next.
+and AI-output portion is closed by the 17D hostile-content fixtures and AI
+contract review; no critical/high finding is silently accepted. Phase 18
+remains unstarted; 17D is accepted and 17E is next.
+
+## 10. 17D abuse/privacy/community and AI acceptance
+
+LNG-17-004 and LNG-17-005 are accepted for 17D. The cross-domain review
+covered community abuse controls, exchange contact/privacy projections,
+notification recipient scoping, reputation anti-farming, speaking-room
+moderation, private event access, public Library retrieval and every current
+AI prompt/source/output route.
+
+- H-002 is closed for the reviewed resource matrix: actor identity is derived
+  from the authenticated session, service-owned ownership checks remain in
+  force, and the focused community, exchange, room, event, notification and
+  AI suites passed.
+- H-003 is closed for the actual attack surface: no runtime multipart upload
+  route exists, outbound URL checks are bounded, and community/AI content is
+  projected/rendered as text. Frontend PR #24 adds executable hostile
+  `<img>`/`<script>` fixtures for community and AI output.
+- H-004 is closed: AI conversation ownership, VERIFIED public Library
+  retrieval, target-language/provenance/license checks, explicit untrusted
+  prompt envelopes, fail-closed providers and strict exact-key output parsing
+  all passed.
+- H-005 remains assigned to 17E. M-002 is partially closed: block/report/
+  mute/privacy/projection controls passed, while the known process-local
+  community limiter and retention/deletion reconciliation remain explicit
+  17F residual gates with owners and mitigation recorded in the 17D evidence.
+
+Evidence: `evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`. Phase 18
+remains unstarted; 17E is the next eligible subphase.
