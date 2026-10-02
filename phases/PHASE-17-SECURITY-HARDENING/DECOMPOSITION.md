@@ -40,9 +40,11 @@ relay a sanitized handoff before chaining to the next eligible subphase.
 
 ## Current execution pointer
 
-17A, 17B and 17C are accepted. 17B closed H-001, the absence of browser
+17A, 17B, 17C and 17D are accepted. 17B closed H-001, the absence of browser
 binding for public OAuth login/register state, on Backend main with executable
 negative regression evidence. 17C closed M-001 provider-call timeout and M-003
 production configuration/dependency exposure, with web/input/upload coverage
-and no runtime multipart upload route confirmed. 17D is the next eligible
-subphase; Phase 18 remains outside this authorization and unstarted.
+and no runtime multipart upload route confirmed. 17D closed the reviewed
+IDOR/content/AI high-risk boundaries and recorded the process-local limiter and
+retention residuals for 17F. 17E is the next eligible subphase; Phase 18
+remains outside this authorization and unstarted.

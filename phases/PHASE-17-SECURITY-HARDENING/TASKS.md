@@ -1,27 +1,31 @@
 # Phase 17 Tasks
 
 ## LNG-17-001 — Threat Model & Attack Surface Inventory
-**Status:** PLANNED  
+**Status:** PASS<br>
 **Depends on:** Phase 16
 
 Inventory trust boundaries, assets, actors and external providers. Cover browser/API/database, OAuth, AI, payment, email/storage/realtime/media, community content and admin. Map sensitive data and privileged actions. Rank abuse cases by impact/likelihood and link to concrete endpoints/modules.
 
 ## LNG-17-002 — Auth/OAuth/Authorization Adversarial Audit
+**Status:** PASS<br>
 **Depends on:** LNG-17-001
 
 Test session fixation/replay/logout, reset/verify abuse, OAuth state/redirect/collision/linking, role escalation, IDOR across profiles/posts/corrections/exchange/library/notifications/payments/admin and blocked/suspended user behavior. Centralize fixes rather than endpoint-by-endpoint patches where possible.
 
 ## LNG-17-003 — Web/Input/Upload Security Audit
+**Status:** PASS<br>
 **Depends on:** LNG-17-001
 
 Review validation, output encoding, CSP/security headers, CSRF strategy, XSS/HTML/markdown, SQL/ORM raw queries, SSRF-like remote fetch, file type/size/content validation, path traversal and unsafe redirects. Add malicious fixtures and upload quarantine/scanning strategy if uploads exist.
 
 ## LNG-17-004 — Abuse, Privacy & Community Safety Audit
+**Status:** PASS<br>
 **Depends on:** LNG-17-001
 
 Review spam/rate limits, block/report/mute enforcement, exchange contact exposure, scraping risks, notification harassment, reputation farming, speaking-room moderation, event abuse and privacy projection. Ensure private fields/messages/rooms are inaccessible through search/cache/SEO APIs.
 
 ## LNG-17-005 — AI Security & Data Boundary Audit
+**Status:** PASS<br>
 **Depends on:** LNG-17-001, Phase 09
 
 Test prompt injection via user/retrieved content, cross-user context leakage, unsafe tool/provider calls if any, quota bypass, model-output XSS and sensitive logging/retention. Confirm Library retrieval authorization and provenance are enforced before prompt construction.
