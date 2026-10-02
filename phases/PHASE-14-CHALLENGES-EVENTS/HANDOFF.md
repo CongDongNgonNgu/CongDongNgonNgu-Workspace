@@ -1,6 +1,6 @@
 # Phase 14 Handoff
 
-**Phase status:** IN_PROGRESS — 14D ready
+**Phase status:** IN_PROGRESS — 14F ready
 
 The Phase 13 final gate and closeout are PASS. The synchronized Phase 14
 decomposition is recorded in `DECOMPOSITION.md`:
@@ -75,12 +75,37 @@ was deleted remotely and locally, and stale refs were pruned.
 
 Evidence: `evidence/PHASE-14D-IMPLEMENTATION.md`.
 
+## 14E closeout
+
+`LNG-14-006` is complete. Frontend PR #16 merged to `main` at
+`f4e05c9ee5713454b41545641a6b27281635fda9` from feature commit
+`9eae958c76e6290c184853382a44e01b3bd88b59`. Exact-head CI run
+`36956896550` and post-merge quality CI run `36957015003` passed.
+
+The frontend now provides project-native event discovery at `/events` and
+event detail at `/events/:eventId`. The UI presents server-provided event
+facts, local event time with an explicit IANA timezone, host profile data,
+guest login state, registration/cancellation state and truthful cancelled,
+full, waitlist, past and private-event boundaries. Capacity, waitlist,
+private access and Speaking Room authorization remain server-authoritative;
+registration never grants room access. A host/create form was intentionally
+omitted because the available capability does not yet cover safe room/host
+authorization.
+
+Verification covered 72 frontend test files / 297 tests, lint/typecheck,
+production build, high-severity audit (0 vulnerabilities), and local-only
+browser QA with an in-memory fixture. Accessibility tree, semantic time,
+focusable controls, discovery-to-detail navigation and responsive CSS
+breakpoints were reviewed. No production deployment, database write,
+migration execution, provider activation or credential action occurred.
+
+Evidence: `evidence/PHASE-14E-IMPLEMENTATION.md`.
+
 ## Next authorized subphase
 
-`14E` / `LNG-14-006` is ready. It owns event discovery and detail UI while
-preserving the backend event, registration, reminder, attendance and room
-authorization boundaries. Phase 15 remains outside this authorization
-boundary.
+`14F` / `LNG-14-007` is ready. It owns recurrence/timezone and safety
+reconciliation across the completed challenge/event stack, including the
+final Phase 14 gate. Phase 15 remains outside this authorization boundary.
 
-The current authorized subphase is `14E`. Phase 15 remains outside this
+The current authorized subphase is `14F`. Phase 15 remains outside this
 authorization boundary.

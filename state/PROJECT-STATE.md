@@ -1251,3 +1251,43 @@ Phase 14 is authorized only within the dependency-ordered decomposition above.
 No production deployment, production database mutation, production migration,
 real-money transaction, live provider activation, secret mutation or Phase 15
 work is authorized by this state.
+
+## Current Phase 14E accepted state
+
+The block below supersedes the earlier Phase 14E planned snapshot while
+preserving that snapshot as history.
+
+```text
+CURRENT_PHASE=14
+CURRENT_SUBPHASE=14F
+PHASE_14=IN_PROGRESS
+PHASE_14_STARTED=YES
+PHASE_14_AUTHORIZATION=YES
+PHASE_14E=DONE_INTEGRATED_REMOTE
+LNG_14_006=PASS_INTEGRATED_REMOTE
+LNG_14_007=PLANNED
+PHASE_14E_FRONTEND_FEATURE_BRANCH=phase-14e-event-discovery-ui
+PHASE_14E_FRONTEND_FEATURE_SHA=9eae958c76e6290c184853382a44e01b3bd88b59
+PHASE_14E_FRONTEND_MAIN_SHA=f4e05c9ee5713454b41545641a6b27281635fda9
+PHASE_14E_FRONTEND_PR=16
+PHASE_14E_FRONTEND_PRE_MERGE_CI=PASS_RUN_36956896550
+PHASE_14E_FRONTEND_POST_MERGE_CI=PASS_RUN_36957015003
+PHASE_14E_STITCH=PASS_REUSED_APPROVED_PHASE_14B_DIRECTION
+PHASE_14E_BROWSER_A11Y=PASS_LOCAL_FIXTURE
+PHASE_14E_RESPONSIVE=PASS_BREAKPOINT_REVIEWED
+PHASE_14E_HOST_CREATE_UI=OMITTED_CAPABILITY_GAP
+PHASE_14E_PRODUCTION_DEPLOYED=NO
+PHASE_14E_PRODUCTION_DB_MUTATED=NO
+PHASE_14E_MIGRATION_EXECUTED_PRODUCTION=NO
+PHASE_14E_BRANCH_CLEANUP=PASS_FRONTEND
+PHASE_14E_NEXT_SUBPHASE=14F
+PHASE_14E_NEXT_TASK=LNG-14-007
+PHASE_14_NEXT_ACTION=EXECUTE_14F
+PHASE_14_AUTO_CHAINING=AUTHORIZED_SAME_PHASE
+PHASE_15_STARTED=NO
+```
+
+Phase 14E is integrated on the protected Frontend `main`. The implementation
+uses backend-authoritative event, registration, private-access and Speaking
+Room boundaries. Phase 14F is the next same-phase task; Phase 15 remains
+outside the current execution boundary.
