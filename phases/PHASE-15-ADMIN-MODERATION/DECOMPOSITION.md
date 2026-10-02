@@ -1,6 +1,6 @@
 # Phase 15 — Admin & Moderation Decomposition
 
-Status: `IN_PROGRESS`
+Status: `DONE`
 
 Phase 15 is the first operational administration and moderation layer for
 the real CongDongNgonNgu domains delivered by Phases 05, 08, 10, 11, 12,
