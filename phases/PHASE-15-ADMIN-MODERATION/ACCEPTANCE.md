@@ -9,3 +9,11 @@
 - Dashboard metrics are real; no placeholder production charts.
 - Admin UI used Stitch and works intentionally on mobile, keyboard and screen readers.
 - Negative authorization/audit tests, commits and CI complete.
+
+## Final gate
+
+All acceptance items passed in the final reconciliation matrix. The detailed
+package evidence is in `evidence/PHASE-15E-ADMIN-UI.md`,
+`evidence/PHASE-15F-DOMAIN-SURFACES.md` and
+`evidence/PHASE-15G-RECONCILIATION.md`. Unsupported domain projections are
+explicitly documented and no placeholder production data is used.
