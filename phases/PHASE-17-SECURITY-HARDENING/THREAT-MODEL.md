@@ -93,12 +93,12 @@ surface is enabled.
 
 | ID | Severity | Abuse case | Current evidence | Owner/status |
 | --- | --- | --- | --- | --- |
-| H-001 | High | An attacker starts OAuth for the attacker account and sends the resulting callback URL to a victim. Because public login/register state is not bound to the initiating browser, the victim can receive a session for the attacker account (login CSRF/account confusion). | `auth/oauth/oauth.service.ts` stores one-time state but `auth.controller.ts` does not set/verify a browser state cookie for public start/callback. Frontend uses a top-level redirect and server refresh cookie. | Backend auth / open; remediate and regression-test in 17B. |
+| H-001 | High | An attacker starts OAuth for the attacker account and sends the resulting callback URL to a victim. Because public login/register state is not bound to the initiating browser, the victim can receive a session for the attacker account (login CSRF/account confusion). | Remediated in Backend PR #33, merge `403dc9a5c93d7b19784f5c0140a121a471208e37`: public login/register/link starts set a short-lived `cdn_oauth_state` cookie, and callbacks reject a missing, duplicate or mismatched state before invoking the OAuth service. The cookie is cleared before redirect; focused tests cover the negative boundary. | Backend auth / closed in 17B; regression evidence in `PHASE-17B-EVIDENCE-2026-10-02.md`. |
 | H-002 | High | A caller changes a path/body owner identifier to read or mutate another user’s resource. | Service-owned ID/ownership checks exist across the Phase 09–16 contracts; every resource family still requires adversarial matrix coverage in 17B–17E. | Backend domain owners / audit in 17B–17E; no silent acceptance. |
 | H-003 | High | A user-controlled content or upload payload becomes executable, path-traversing, oversized, or an SSRF pivot. | Global DTO hardening and plain-text UI patterns exist; upload and outbound URL coverage is not yet reconciled for every surface. | Backend content/config owners / audit in 17C–17D. |
 | H-004 | High | Prompt injection or private retrieval content causes the AI boundary to disclose another user’s data or provider details. | Phase 09 contracts separate roles, exclude private content and parse bounded outputs; 17D must prove the live route adapters preserve those invariants. | AI owner / audit in 17D. |
 | H-005 | High | Forged/replayed payment webhook or client-tampered amount/credit changes entitlement or balance. | Phase 11 defines provider-neutral signature, replay, idempotency and ledger contracts; 17E must verify all current routes and tests. | Commerce owner / audit in 17E. |
-| M-001 | Medium | OAuth token/profile calls hang and consume request resources under provider or network degradation. | `GoogleOAuthAdapter` catches fetch failure but has no explicit abort timeout in the reviewed source. | Backend auth/config / verify and fix-or-document in 17B/17C. |
+| M-001 | Medium | OAuth token/profile calls hang and consume request resources under provider or network degradation. | `GoogleOAuthAdapter` catches fetch failure but has no explicit abort timeout in the reviewed source. | Backend auth/config / deferred explicitly to 17C; not claimed fixed in 17B. |
 | M-002 | Medium | Rate-limit, block/report, privacy or retention gaps enable harassment, enumeration or stale-data leakage. | Phase 10–15 contain bounded policies and projections; cross-domain reconciliation is deliberately deferred to 17D/17F. | Community/privacy owners / audit in 17D/17F. |
 | M-003 | Medium | Misconfiguration exposes a non-HTTPS provider, placeholder secret, memory persistence or unsafe public origin in production. | `env.validation.ts` rejects the reviewed production misconfiguration classes; 17C must run dependency/config scans and verify no secret material is committed. | Platform/config owner / audit in 17C. |
 
@@ -136,3 +136,19 @@ The inventory is complete for the current source heads, H-001 is explicitly
 tracked with an owner and remediation subphase, all other high-risk domains
 have a named verification gate, and no critical/high item is marked accepted
 without evidence. 17A is eligible to close; Phase 17 remains in progress.
+
+## 8. 17B auth/OAuth acceptance
+
+LNG-17-002 is accepted for 17B. The adversarial review covered the
+AccessTokenGuard live session/user checks, refresh rotation and replay-family
+revocation, cookie-origin and double-submit CSRF checks, OAuth transaction
+expiry/one-time consumption, link-session ownership, provider/email collision
+handling, role capability boundaries and last-administrator protection. The
+existing negative regression suites passed together with the new H-001 browser
+binding tests.
+
+H-001 is closed by Backend main merge
+`403dc9a5c93d7b19784f5c0140a121a471208e37`. M-001 is intentionally not marked
+fixed here and is the 17C timeout/configuration audit item. H-002 through H-005
+remain future verification gates owned by 17C–17E. Phase 17 remains in
+progress; 17C is the next eligible subphase.
