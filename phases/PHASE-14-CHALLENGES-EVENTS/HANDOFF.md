@@ -1,5 +1,7 @@
 # Phase 14 Handoff
 
+**Final closeout status:** DONE - final gate PASS (`14F`)
+
 **Phase status:** IN_PROGRESS — 14F ready
 
 The Phase 13 final gate and closeout are PASS. The synchronized Phase 14
@@ -109,3 +111,21 @@ final Phase 14 gate. Phase 15 remains outside this authorization boundary.
 
 The current authorized subphase is `14F`. Phase 15 remains outside this
 authorization boundary.
+
+## 14F final closeout
+
+`LNG-14-007` is complete. Backend PR #27 and Frontend PR #17 merged to their
+protected `main` branches at `3fc6861a44a40fb372852374b33116d31f499c98` and
+`24c47e0adfb2fe831e666348cde431e21747cf18`. Exact-head and post-merge quality
+CI passed for both repositories. The feature branches were deleted remotely
+and locally, and both clean local `main` branches match `origin/main`.
+
+The final reconciliation covers bounded UTC/IANA recurrence facts and DST
+formatting, terminal challenge replay/idempotency, duplicate and concurrent
+registration safety, reminder cancellation timestamps, private access,
+room authorization, host/report coverage and the Phase 14E UI/a11y evidence.
+The detailed gate is `evidence/PHASE-14F-FINAL-GATE.md`.
+
+Workspace PR #69 carries this final gate, task state and handoff update. A
+follow-up state-sync PR records its exact Workspace merge SHA in
+`state/PROJECT-STATE.md`. Phase 15 is not started or implicitly authorized.
