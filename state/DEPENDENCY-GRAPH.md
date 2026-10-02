@@ -489,3 +489,24 @@ and acceptance criteria are in `DECOMPOSITION.md`. Phase 16 does not authorize
 production deployment, production database mutation or migration execution,
 provider activation, secret mutation, destructive reconciliation, force push,
 or CI/branch-protection bypass.
+
+## Phase 17 authorized dependency graph
+
+```text
+CURRENT_PHASE=17
+PHASE_16=DONE
+PHASE_17_STARTED=YES
+17A LNG-17-001 threat model and attack-surface inventory
+  ├── 17B LNG-17-002 auth/OAuth/authorization adversarial audit
+  ├── 17C LNG-17-003 web/input/upload + LNG-17-007 secrets/dependencies/config
+  ├── 17D LNG-17-004 abuse/privacy/community + LNG-17-005 AI/data boundary
+  └── 17E LNG-17-006 commerce/payment adversarial audit
+        └── 17F LNG-17-008 privacy/retention/security reconciliation and final gate
+PHASE_18=BLOCKED_BY_PHASE_17_FINAL_CLOSEOUT_AND_NEW_AUTHORIZATION
+```
+
+17A is accepted in the Workspace evidence branch with the complete current
+source inventory and a named open finding H-001 for public OAuth login-CSRF.
+17B is the next eligible subphase. The Phase 17 decomposition and acceptance
+contracts remain authoritative in
+`phases/PHASE-17-SECURITY-HARDENING/DECOMPOSITION.md` and `ACCEPTANCE.md`.
