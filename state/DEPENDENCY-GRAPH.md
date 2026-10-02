@@ -459,3 +459,26 @@ bounded rate-limited plain-text chat are complete. 13D (`LNG-13-006`) is now
 the next eligible subphase; 13E remains independently gated on Phase 09 plus
 13A, and 13F remains gated on 13A-13E. Phase 14 remains blocked until the
 Phase 13 final gate passes.
+
+## Phase 16 authorized dependency graph
+
+```text
+CURRENT_PHASE=16
+PHASE_15=DONE
+PHASE_16=IN_PROGRESS
+PHASE_16_STARTED=YES
+PHASE_16A LNG-16-001 + LNG-16-002 PWA foundation/cache safety
+  └── 16B LNG-16-003 + LNG-16-004 public SEO/structured semantics
+        └── 16C LNG-16-005 accessibility reconciliation
+              └── 16D LNG-16-006 performance budget/optimization
+                    └── 16E LNG-16-007 responsive/visual matrix
+                          └── 16F LNG-16-008 production-like reconciliation/final gate
+PHASE_17=BLOCKED_BY_PHASE_16_FINAL_CLOSEOUT_AND_NEW_AUTHORIZATION
+```
+
+The authoritative Phase 16 task contracts remain in
+`phases/PHASE-16-PWA-SEO-PERFORMANCE/TASKS.md`; the complete subphase scope
+and acceptance criteria are in `DECOMPOSITION.md`. Phase 16 does not authorize
+production deployment, production database mutation or migration execution,
+provider activation, secret mutation, destructive reconciliation, force push,
+or CI/branch-protection bypass.
