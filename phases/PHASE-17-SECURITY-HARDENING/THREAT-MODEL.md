@@ -98,9 +98,9 @@ surface is enabled.
 | H-003 | High | A user-controlled content or upload payload becomes executable, path-traversing, oversized, or an SSRF pivot. | Global DTO hardening and plain-text UI patterns exist; upload and outbound URL coverage is not yet reconciled for every surface. | Backend content/config owners / audit in 17C–17D. |
 | H-004 | High | Prompt injection or private retrieval content causes the AI boundary to disclose another user’s data or provider details. | Phase 09 contracts separate roles, exclude private content and parse bounded outputs; 17D must prove the live route adapters preserve those invariants. | AI owner / audit in 17D. |
 | H-005 | High | Forged/replayed payment webhook or client-tampered amount/credit changes entitlement or balance. | Phase 11 defines provider-neutral signature, replay, idempotency and ledger contracts; 17E must verify all current routes and tests. | Commerce owner / audit in 17E. |
-| M-001 | Medium | OAuth token/profile calls hang and consume request resources under provider or network degradation. | `GoogleOAuthAdapter` catches fetch failure but has no explicit abort timeout in the reviewed source. | Backend auth/config / deferred explicitly to 17C; not claimed fixed in 17B. |
+| M-001 | Medium | OAuth token/profile calls hang and consume request resources under provider or network degradation. | Closed in Backend PR #34: OAuth token/profile requests now use a 10-second abort deadline and bounded JSON-read deadline; the configured email provider uses the same abort-boundary pattern. Timeout regressions are executable. | Backend auth/config / closed in 17C. |
 | M-002 | Medium | Rate-limit, block/report, privacy or retention gaps enable harassment, enumeration or stale-data leakage. | Phase 10–15 contain bounded policies and projections; cross-domain reconciliation is deliberately deferred to 17D/17F. | Community/privacy owners / audit in 17D/17F. |
-| M-003 | Medium | Misconfiguration exposes a non-HTTPS provider, placeholder secret, memory persistence or unsafe public origin in production. | `env.validation.ts` rejects the reviewed production misconfiguration classes; 17C must run dependency/config scans and verify no secret material is committed. | Platform/config owner / audit in 17C. |
+| M-003 | Medium | Misconfiguration exposes a non-HTTPS provider, placeholder secret, memory persistence or unsafe public origin in production. | `env.validation.ts` rejects the reviewed production misconfiguration classes; tracked-file/history checks found no credential material; Backend and Frontend high-severity dependency audits report zero vulnerabilities. | Platform/config owner / closed in 17C. |
 
 ## 5. Existing controls that must not regress
 
@@ -152,3 +152,46 @@ H-001 is closed by Backend main merge
 fixed here and is the 17C timeout/configuration audit item. H-002 through H-005
 remain future verification gates owned by 17C–17E. Phase 17 remains in
 progress; 17C is the next eligible subphase.
+
+## 9. 17C web/input/upload/secrets/config acceptance
+
+LNG-17-003 and LNG-17-007 are accepted for 17C. The source-first audit
+covered the actual Backend and Frontend surfaces, then closed M-001 and M-003
+with executable evidence.
+
+- Backend PR #34 merged with CI 1/1 passed; implementation commit
+  `ba207fa000a390aba2baa41c60ae066ab982cc13`; Backend main is
+  `76fb2732a62da5437ed4390f74ebe0fb507fca46`.
+- OAuth token/profile requests and configured email delivery requests are
+  bounded by 10-second `AbortController` deadlines. OAuth JSON-body reads are
+  bounded by the same deadline and provider failures remain normalized.
+- `configureApp` and `env.validation.ts` enforce explicit CORS origins,
+  credentials-aware CSRF boundaries, DTO whitelist/unknown-field rejection,
+  CSP/clickjacking/referrer/nosniff headers, production HSTS, HTTPS production
+  origins/provider URLs, non-placeholder/minimum-length secrets, non-memory
+  production persistence, disabled-provider fail-closed behavior and blocked
+  external-product hosts.
+- No runtime multipart upload controller exists in the reviewed source, so
+  upload quarantine/scanning is not claimed as an enabled route. The
+  test-only Tatoeba import boundary is protected by canonical host/path
+  validation, redirect rejection, request timeout, bounded response bytes and
+  preflight/zero-write safeguards.
+- Frontend review found no raw HTML/markdown injection sink. API bases reject
+  protocol-relative URLs, credentials, query/fragment components and blocked
+  hosts; external library links accept only HTTP(S), payment checkout links
+  require HTTPS without credentials, and the service worker keeps API/auth/
+  mutation/private routes network-only.
+- Parameterized repository queries and fixed server-side SQL clause selection
+  were reviewed; no user-controlled identifier interpolation was found.
+- `.env` files are ignored and only `.env.example` is tracked. Suppressed-value
+  credential-marker scans over both repositories and tracked `.env` history
+  returned no exposed credential marker. Backend and Frontend
+  `npm audit --audit-level=high` both report zero vulnerabilities.
+
+Required regression gates passed: Backend unit 144 suites / 811 tests, Backend
+E2E 17 suites / 73 tests, Frontend 82 files / 339 tests, focused Backend
+provider/config/import suites 9 suites / 58 tests across the final runs,
+focused Frontend security suites 5 files / 26 tests, typecheck, build, lint,
+dependency audits and `git diff --check`. H-003's remaining content/markdown
+and AI-output portion is explicitly carried to 17D; no critical/high finding
+is silently accepted. Phase 18 remains unstarted; 17D is next.
