@@ -55,12 +55,32 @@ the Speaking Room authorization boundary remain server-enforced.
 
 Evidence: `evidence/PHASE-14C-IMPLEMENTATION.md`.
 
+## 14D closeout
+
+`LNG-14-004` and `LNG-14-005` are complete. Backend PR #26 merged to `main`
+at `a3a5a96f526d8052b6d6add2b6fec1df70fda761` from feature commit
+`d7971f59ac2650a23a79ee36e55dd424fe068b15`. Pre-merge CI run
+`36954449445` and post-merge CI run `36954634733` passed.
+
+The additive migration `0023_phase14_event_participation.sql` and scoped
+rollback were created and statically validated but not executed. Registration
+uses deterministic capacity/waitlist behavior with concurrency protection;
+private invitations, timezone/preference-aware reminder intents and
+host/room-presence attendance evidence remain server-authorized. No page-view
+attendance or automatic reward path was added.
+
+Local verification passed with 129 unit suites / 770 tests, 17 E2E suites /
+73 tests, typecheck, lint, build and high-severity audit. The feature branch
+was deleted remotely and locally, and stale refs were pruned.
+
+Evidence: `evidence/PHASE-14D-IMPLEMENTATION.md`.
+
 ## Next authorized subphase
 
-`14D` / `LNG-14-004` and `LNG-14-005` are ready. They own registration,
-capacity, reminders and attendance while preserving the event and room
+`14E` / `LNG-14-006` is ready. It owns event discovery and detail UI while
+preserving the backend event, registration, reminder, attendance and room
 authorization boundaries. Phase 15 remains outside this authorization
 boundary.
 
-The current authorized subphase is `14D`. Phase 15 remains outside this
+The current authorized subphase is `14E`. Phase 15 remains outside this
 authorization boundary.
