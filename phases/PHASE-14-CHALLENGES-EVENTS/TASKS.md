@@ -62,6 +62,14 @@ Create reminder events based on user timezone/preferences and attendance marking
 
 Use Stitch for calendar/list discovery, event card/detail, register state, host info and mobile date/time presentation. Avoid copying generic corporate calendar UI; emphasize language/community context. Handle cancelled/full/waitlisted/past states.
 
+**Status:** DONE - integrated remote
+
+**Evidence:** `evidence/PHASE-14E-IMPLEMENTATION.md`
+
+**Remote:** Frontend PR #16 merged to `main` at
+`f4e05c9ee5713454b41545641a6b27281635fda9`; exact-head CI and post-merge
+quality CI passed. Branch cleanup completed.
+
 ## LNG-14-007 — Recurrence/Timezone & Safety Reconciliation
 **Depends on:** LNG-14-001..006
 
