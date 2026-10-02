@@ -21,9 +21,17 @@ Use Stitch. Users can discover active/upcoming challenges, join/leave according 
 **Remote:** Backend PR #24 merged to `main` at `65f670873d92c133a6b689b332595348b582d9ed`; frontend PR #15 merged to `main` at `b9787ccae2e2b3ce25f756491a27f3b8add1f6a8`; both post-merge CI quality jobs passed.
 
 ## LNG-14-003 — Event Model & Scheduling
+**Status:** DONE — integrated remote
 **Depends on:** Phase 13
 
 Represent title, host, language/level/topic, start/end timezone-aware timestamps, capacity, visibility, venue type (speaking room/external/physical only when supported), recurrence series and cancellation. Store canonical UTC with original timezone where useful for display/recurrence.
+
+**Evidence:** `evidence/PHASE-14C-IMPLEMENTATION.md`
+
+**Remote:** Backend PR #25 merged to `main` at
+`d2f05f59c7da6284b9c9f83d44fe3cf69b3541a3`; post-merge CI run
+`36951816691` passed. Additive migration `0022_phase14_events.sql` was
+created but not executed.
 
 ## LNG-14-004 — Registration & Capacity
 **Depends on:** LNG-14-003
