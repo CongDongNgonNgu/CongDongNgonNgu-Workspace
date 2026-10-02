@@ -99,7 +99,7 @@ surface is enabled.
 | H-004 | High | Prompt injection or private retrieval content causes the AI boundary to disclose another user’s data or provider details. | Phase 09 contracts separate roles, exclude private content and parse bounded outputs; 17D must prove the live route adapters preserve those invariants. | AI owner / audit in 17D. |
 | H-005 | High | Forged/replayed payment webhook or client-tampered amount/credit changes entitlement or balance. | Phase 11 defines provider-neutral signature, replay, idempotency and ledger contracts; 17E must verify all current routes and tests. | Commerce owner / audit in 17E. |
 | M-001 | Medium | OAuth token/profile calls hang and consume request resources under provider or network degradation. | Closed in Backend PR #34: OAuth token/profile requests now use a 10-second abort deadline and bounded JSON-read deadline; the configured email provider uses the same abort-boundary pattern. Timeout regressions are executable. | Backend auth/config / closed in 17C. |
-| M-002 | Medium | Rate-limit, block/report, privacy or retention gaps enable harassment, enumeration or stale-data leakage. | Phase 10–15 contain bounded policies and projections; cross-domain reconciliation is deliberately deferred to 17D/17F. | Community/privacy owners / audit in 17D/17F. |
+| M-002 | Medium | Rate-limit, block/report, privacy or retention gaps enable harassment, enumeration or stale-data leakage. | Reconciled in 17F: bounded abuse/privacy projections and lifecycle boundaries are documented; the process-local limiter and any future deletion/purge executor remain explicit pre-production release gates. | Community/privacy owners; platform/domain owners for release-gated follow-up. |
 | M-003 | Medium | Misconfiguration exposes a non-HTTPS provider, placeholder secret, memory persistence or unsafe public origin in production. | `env.validation.ts` rejects the reviewed production misconfiguration classes; tracked-file/history checks found no credential material; Backend and Frontend high-severity dependency audits report zero vulnerabilities. | Platform/config owner / closed in 17C. |
 
 ## 5. Existing controls that must not regress
@@ -217,10 +217,10 @@ AI prompt/source/output route.
   retrieval, target-language/provenance/license checks, explicit untrusted
   prompt envelopes, fail-closed providers and strict exact-key output parsing
   all passed.
-- H-005 remains assigned to 17E. M-002 is partially closed: block/report/
-  mute/privacy/projection controls passed, while the known process-local
-  community limiter and retention/deletion reconciliation remain explicit
-  17F residual gates with owners and mitigation recorded in the 17D evidence.
+- H-005 is closed in 17E. M-002 is reconciled with explicit release gates:
+  block/report/mute/privacy/projection controls passed; the process-local
+  community limiter and retention/deletion boundary are documented with
+  owners, evidence and pre-production follow-up.
 
 Evidence: `evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`. Phase 18
 remains unstarted; 17E is the next eligible subphase.
@@ -247,6 +247,33 @@ contribution-credit double-spend protection.
   real-money transaction, production database mutation or migration execution
   occurred.
 
-Evidence: `evidence/phase-17/PHASE-17E-EVIDENCE-2026-10-02.md`. M-002's
-process-local community limiter and retention/deletion reconciliation remain
-explicit 17F residual gates. Phase 18 remains unstarted; 17F is next.
+Evidence: `evidence/phase-17/PHASE-17E-EVIDENCE-2026-10-02.md`. The final
+17F reconciliation is in evidence/phase-17/PHASE-17F-EVIDENCE-2026-10-02.md.
+Phase 17 is accepted with explicit pre-production release gates; Phase 18
+remains unstarted.
+
+## 12. 17F privacy, retention and final-gate reconciliation
+
+LNG-17-008 is accepted. The canonical data-class matrix and current
+offboarding boundary are in docs/08-DATA-LIFECYCLE.md.
+
+- Account disablement and session/authentication revocation are supported;
+  self-service account-wide deletion, complete export and scheduled purge are
+  not shipped or advertised.
+- Community removal, privacy projections, moderation evidence, provenance,
+  payment/fulfillment integrity and sanitized security audit facts were
+  reconciled without weakening existing authority or integrity boundaries.
+- Notification retention values are bounded policy data, not proof of a
+  running purge executor. AI conversations remain in-memory in the reviewed
+  implementation; audio recording, transcript storage, live AI and live
+  payment provider execution remain disabled.
+- The community limiter is deterministic and bounded per process, but not
+  distributed. A single-instance production model or approved shared limiter
+  is a pre-production gate before horizontal scale.
+- No confirmed critical or high finding remains open. M-002 is
+  RECONCILED_WITH_RELEASE_GATES, and all future lifecycle executors require
+  approved policy, authorization, TEST verification, audit evidence and a
+  release decision.
+
+Evidence: evidence/phase-17/PHASE-17F-EVIDENCE-2026-10-02.md. Phase 17 is
+complete; Phase 18 remains unstarted.
