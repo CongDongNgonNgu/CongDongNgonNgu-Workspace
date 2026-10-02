@@ -26,7 +26,7 @@
 | --- | --- | --- | --- |
 | Backend | `6859ec5e57e8792ea188fe03bcea9c9f94d3ad54` | Focused 22 tests, E2E 73 tests, typecheck/build passed | Phase 15D pre-merge CI runs `#85` and `#87` passed; `main` verified |
 | Frontend | `9304cdfe75a6bd7471a00fe593ebbf43a1e142f2` | Full 317 tests, lint/typecheck/build/audit passed | PR `#19` and post-merge quality passed |
-| Workspace | `PENDING_FINAL_EVIDENCE_COMMIT` | Diff review and evidence consistency gate | PR/CI to be completed for this evidence commit |
+| Workspace | `86154e054b5e50a87f1d76eee83418220cb38dba` | Evidence commit `9ac4facccde5f10c11e6b2cf021b6ed869c7d58d` merged; clean `main` verified | PR `#77` merged; repository reports no check-runs |
 
 ## Safety and phase boundary
 
