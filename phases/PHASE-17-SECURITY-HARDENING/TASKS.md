@@ -31,6 +31,7 @@ Review spam/rate limits, block/report/mute enforcement, exchange contact exposur
 Test prompt injection via user/retrieved content, cross-user context leakage, unsafe tool/provider calls if any, quota bypass, model-output XSS and sensitive logging/retention. Confirm Library retrieval authorization and provenance are enforced before prompt construction.
 
 ## LNG-17-006 — Commerce/Payment Adversarial Audit
+**Status:** PASS<br>
 **Depends on:** LNG-17-001, Phase 11
 
 Re-test signature verification, idempotency, event/order/payment/user identity chain, race/replay, amount/product tampering, entitlement escalation, contribution-credit double spend, reconciliation and audit sanitization. Use sandbox unless explicit owner authorization for real transactions.

@@ -224,3 +224,29 @@ AI prompt/source/output route.
 
 Evidence: `evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`. Phase 18
 remains unstarted; 17E is the next eligible subphase.
+
+## 11. 17E commerce/payment acceptance
+
+LNG-17-006 is accepted for 17E. The audit re-exercised the current Phase 11
+payment contracts across signature verification, event collision and replay,
+idempotency, provider/attempt/order/owner identity, amount and currency
+tampering, settlement/fulfillment separation, entitlement activation and
+contribution-credit double-spend protection.
+
+- H-005 is closed for the reviewed attack surface. PayOS webhook input is
+  bounded and HMAC-verified; invalid, unknown, mismatched, replayed and
+  out-of-order events fail closed without entitlement mutation.
+- Server catalog snapshots, owner-scoped idempotency, database uniqueness,
+  row locks and per-user transaction locks prevent client amount/product
+  tampering, duplicate settlement, duplicate fulfillment and concurrent credit
+  redemption.
+- Payment responses expose only bounded presentation facts. Sanitized webhook
+  evidence is separated from settlement, fulfillment and subscription facts;
+  raw payloads, signatures and secrets are not persisted or returned.
+- The payment provider remains disabled by default. No live provider call,
+  real-money transaction, production database mutation or migration execution
+  occurred.
+
+Evidence: `evidence/phase-17/PHASE-17E-EVIDENCE-2026-10-02.md`. M-002's
+process-local community limiter and retention/deletion reconciliation remain
+explicit 17F residual gates. Phase 18 remains unstarted; 17F is next.

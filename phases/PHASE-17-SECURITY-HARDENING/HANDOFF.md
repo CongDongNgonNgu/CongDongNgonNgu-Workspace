@@ -1,6 +1,6 @@
 # Phase 17 Handoff
 
-**Phase status:** IN_PROGRESS — 17A, 17B, 17C and 17D accepted; 17E next
+**Phase status:** IN_PROGRESS — 17A through 17E accepted; 17F next
 
 17A (LNG-17-001) established the threat model and attack-surface inventory in
 `THREAT-MODEL.md`. 17B (LNG-17-002) completed the auth/OAuth/session/
@@ -27,9 +27,16 @@ The ordered decomposition is in `DECOMPOSITION.md`:
 17C evidence: `evidence/phase-17/PHASE-17C-EVIDENCE-2026-10-02.md`.
 17D evidence: `evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`.
 
-Next eligible work is 17E: commerce/payment/webhook/entitlement/credit
-adversarial audit. H-005 remains assigned to 17E; M-002 rate-limit and
-retention residuals remain explicit 17F gates. Phase 18 is not started.
+17E (LNG-17-006) completed the commerce/payment/webhook/entitlement/credit
+adversarial audit. H-005 is closed for the reviewed attack surface after
+signature, replay, identity-chain, amount-tamper, entitlement and
+contribution-credit concurrency verification. Backend and Frontend mains were
+unchanged; evidence is in
+`evidence/phase-17/PHASE-17E-EVIDENCE-2026-10-02.md`.
+
+Next eligible work is 17F: privacy, retention and security reconciliation.
+M-002's process-local rate-limit and retention/deletion residuals remain
+explicit 17F gates. Phase 18 is not started.
 
 Do not paste secrets, exploit tokens or sensitive production data into this
 file. Production deployment/restart, production database writes/migrations,
