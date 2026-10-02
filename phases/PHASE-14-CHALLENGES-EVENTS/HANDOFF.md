@@ -1,6 +1,6 @@
 # Phase 14 Handoff
 
-**Phase status:** IN_PROGRESS — 14C ready
+**Phase status:** IN_PROGRESS — 14D ready
 
 The Phase 13 final gate and closeout are PASS. The synchronized Phase 14
 decomposition is recorded in `DECOMPOSITION.md`:
@@ -38,10 +38,29 @@ also confirmed a truthful API-unavailable state without touching production.
 
 Evidence: `evidence/PHASE-14B-IMPLEMENTATION.md`.
 
+## 14C closeout
+
+LNG-14-003 is complete. Backend PR #25 merged to `main` at
+`d2f05f59c7da6284b9c9f83d44fe3cf69b3541a3` from feature commit
+`62cb83294313bf22574c8f147c12cf562a3ee01c`. The post-merge CI run
+`36951816691` passed on that exact merge SHA. Local verification was 127 unit
+test suites / 763 tests, 17 E2E suites / 73 tests, with typecheck, lint,
+build and high-severity audit passing.
+
+The additive migration `0022_phase14_events.sql` and scoped rollback were
+created and statically validated. Migrations `0012`-`0021` were unchanged,
+the migration was not executed, and no production database, provider or
+deployment was touched. Host ownership, private-event fail-closed access and
+the Speaking Room authorization boundary remain server-enforced.
+
+Evidence: `evidence/PHASE-14C-IMPLEMENTATION.md`.
+
 ## Next authorized subphase
 
-`14C` / `LNG-14-003` is ready. It owns the timezone-aware event model and
-scheduling boundaries. Phase 15 remains outside this authorization boundary.
+`14D` / `LNG-14-004` and `LNG-14-005` are ready. They own registration,
+capacity, reminders and attendance while preserving the event and room
+authorization boundaries. Phase 15 remains outside this authorization
+boundary.
 
-The current authorized subphase is `14C`. Phase 15 remains outside this
+The current authorized subphase is `14D`. Phase 15 remains outside this
 authorization boundary.
