@@ -74,3 +74,11 @@ quality CI passed. Branch cleanup completed.
 **Depends on:** LNG-14-001..006
 
 Test recurrence near DST/timezone boundaries, duplicate registration, concurrent last seat, cancellation/reminders, private event access, host abuse/report path and challenge progress replay. Complete responsive/a11y/visual, commits and CI evidence.
+
+**Status:** DONE - integrated remote
+
+**Evidence:** `evidence/PHASE-14F-FINAL-GATE.md`
+
+**Remote:** Backend PR #27 and Frontend PR #17 merged to `main`; exact-head
+and post-merge quality CI passed. Feature branches were deleted remotely and
+locally, and stale refs were pruned.
