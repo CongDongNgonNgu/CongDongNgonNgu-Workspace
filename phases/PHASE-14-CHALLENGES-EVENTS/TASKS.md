@@ -34,14 +34,28 @@ Represent title, host, language/level/topic, start/end timezone-aware timestamps
 created but not executed.
 
 ## LNG-14-004 — Registration & Capacity
+**Status:** DONE — integrated remote
 **Depends on:** LNG-14-003
 
 Implement register/cancel/waitlist if justified, idempotent capacity allocation, host restrictions and private invite/access rules. Prevent overbooking under concurrency. Connect to room access for online room events without bypassing room authorization.
 
+**Evidence:** `evidence/PHASE-14D-IMPLEMENTATION.md`
+
+**Remote:** Backend PR #26 merged to `main` at
+`a3a5a96f526d8052b6d6add2b6fec1df70fda761`; pre-merge and post-merge quality
+CI passed. Additive migration `0023_phase14_event_participation.sql` was
+created but not executed.
+
 ## LNG-14-005 — Reminder & Attendance Events
+**Status:** DONE — integrated remote
 **Depends on:** LNG-14-003, Phase 12 notifications
 
 Create reminder events based on user timezone/preferences and attendance marking with host/system evidence. Attendance must not be inferred solely from opening an event page. Emit contribution/learning events only where policy supports them.
+
+**Evidence:** `evidence/PHASE-14D-IMPLEMENTATION.md`
+
+**Remote:** Delivered with Backend PR #26; post-merge quality CI passed on
+`a3a5a96f526d8052b6d6add2b6fec1df70fda761`.
 
 ## LNG-14-006 — Event UI
 **Depends on:** LNG-14-003..005
