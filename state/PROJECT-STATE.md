@@ -1358,3 +1358,38 @@ audit passing. The feature branches were deleted remotely and locally. The
 three additive Phase 14 migrations remain unexecuted. No production deployment,
 database mutation, provider activation, secret action or Phase 15 work is
 authorized by this state.
+
+## Current Phase 15 execution state
+
+This block supersedes the Phase 14 closeout snapshot above. Phase 15 is
+authorized by the user's Phase 15 Workflow Orchestrator request and is being
+executed in the dependency order recorded in
+`phases/PHASE-15-ADMIN-MODERATION/DECOMPOSITION.md`.
+
+```text
+CURRENT_PHASE=15
+CURRENT_SUBPHASE=15A
+PHASE_14=DONE
+PHASE_15=IN_PROGRESS
+PHASE_15_STARTED=YES
+PHASE_15_AUTHORIZATION=YES
+PHASE_15_DECOMPOSITION=15A,15B,15C,15D,15E,15F,15G
+PHASE_15_OBJECTIVE=Deliver backend-authoritative admin and moderation for real domains with reversible actions, privacy-safe projections and audit evidence.
+PHASE_15_START_BACKEND_SHA=3fc6861a44a40fb372852374b33116d31f499c98
+PHASE_15_START_FRONTEND_SHA=a337ad394e293ec7f2f2105da273a42a6acb3eba
+PHASE_15_START_WORKSPACE_SHA=bbb61bcfb46f64af7a544ce657fd57d5bd41f5a0
+PHASE_15A=IN_PROGRESS
+LNG_15_001=IN_PROGRESS
+LNG_15_002=PLANNED
+LNG_15_003=PLANNED
+LNG_15_004=PLANNED
+LNG_15_005=PLANNED
+LNG_15_006=PLANNED
+LNG_15_007=PLANNED
+PHASE_16_STARTED=NO
+PHASE_15_PRODUCTION_DEPLOYED=NO
+PHASE_15_PRODUCTION_DB_MUTATED=NO
+PHASE_15_PROVIDER_ACTIVATED=NO
+PHASE_15_SECRET_MUTATION=NO
+NEXT_ACTION=EXECUTE_15A
+```
