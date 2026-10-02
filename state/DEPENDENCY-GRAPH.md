@@ -505,8 +505,23 @@ PHASE_17_STARTED=YES
 PHASE_18=BLOCKED_BY_PHASE_17_FINAL_CLOSEOUT_AND_NEW_AUTHORIZATION
 ```
 
-17A is accepted in the Workspace evidence branch with the complete current
-source inventory and a named open finding H-001 for public OAuth login-CSRF.
-17B is the next eligible subphase. The Phase 17 decomposition and acceptance
-contracts remain authoritative in
+17A and 17B are accepted in Workspace evidence. 17B closed H-001 for public
+OAuth login-CSRF with Backend main and executable negative regression evidence;
+M-001 is explicitly deferred to 17C. 17C is the next eligible subphase. The
+Phase 17 decomposition and acceptance contracts remain authoritative in
 `phases/PHASE-17-SECURITY-HARDENING/DECOMPOSITION.md` and `ACCEPTANCE.md`.
+
+## Phase 17B accepted dependency record
+
+```text
+CURRENT_PHASE=17
+CURRENT_SUBPHASE=17B
+17A LNG-17-001 PASS
+17B LNG-17-002 PASS — Backend main 403dc9a5c93d7b19784f5c0140a121a471208e37
+17C LNG-17-003 + LNG-17-007 NEXT
+17D LNG-17-004 + LNG-17-005 PENDING_17C
+17E LNG-17-006 PENDING_17C
+17F LNG-17-008 PENDING_17B_17E
+M-001 DEFERRED_TO_17C
+PHASE_18=NOT_STARTED
+```
