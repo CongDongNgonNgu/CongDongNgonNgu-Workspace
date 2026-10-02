@@ -1,6 +1,6 @@
 # Phase 14 Handoff
 
-**Phase status:** IN_PROGRESS — 14B ready
+**Phase status:** IN_PROGRESS — 14C ready
 
 The Phase 13 final gate and closeout are PASS. The synchronized Phase 14
 decomposition is recorded in `DECOMPOSITION.md`:
@@ -27,11 +27,21 @@ provider was activated.
 
 Evidence: `evidence/PHASE-14A-IMPLEMENTATION.md`.
 
+## 14B closeout
+
+LNG-14-002 is complete. Backend PR #24 merged to `main` at
+`65f670873d92c133a6b689b332595348b582d9ed`; frontend PR #15 merged to `main`
+at `b9787ccae2e2b3ce25f756491a27f3b8add1f6a8`. Post-merge quality runs
+`36949241768` and `36949423776` passed. Local test, typecheck, build, audit,
+responsive browser and accessibility verification passed; the local browser
+also confirmed a truthful API-unavailable state without touching production.
+
+Evidence: `evidence/PHASE-14B-IMPLEMENTATION.md`.
+
 ## Next authorized subphase
 
-`14B` / `LNG-14-002` is ready. It owns challenge discovery, detail,
-join/leave, server-projected progress states, Stitch direction and browser
-verification. Phase 15 remains outside this authorization boundary.
+`14C` / `LNG-14-003` is ready. It owns the timezone-aware event model and
+scheduling boundaries. Phase 15 remains outside this authorization boundary.
 
-The current authorized subphase is `14B`. Phase 15 remains outside this
+The current authorized subphase is `14C`. Phase 15 remains outside this
 authorization boundary.

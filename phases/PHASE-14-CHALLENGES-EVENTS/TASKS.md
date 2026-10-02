@@ -11,10 +11,14 @@ Model challenge type, language/level/topic, start/end/timezone policy, goals, el
 **Remote:** Backend PR #23 merged to `main`; post-merge CI passed.
 
 ## LNG-14-002 — Challenge Discovery & Participation
-**Status:** READY
+**Status:** DONE — integrated remote
 **Depends on:** LNG-14-001
 
 Use Stitch. Users can discover active/upcoming challenges, join/leave according to rules, see clear finite goals and progress. No shame copy or fake urgency. Completed/expired states remain understandable.
+
+**Evidence:** `evidence/PHASE-14B-IMPLEMENTATION.md`
+
+**Remote:** Backend PR #24 merged to `main` at `65f670873d92c133a6b689b332595348b582d9ed`; frontend PR #15 merged to `main` at `b9787ccae2e2b3ce25f756491a27f3b8add1f6a8`; both post-merge CI quality jobs passed.
 
 ## LNG-14-003 — Event Model & Scheduling
 **Depends on:** Phase 13
