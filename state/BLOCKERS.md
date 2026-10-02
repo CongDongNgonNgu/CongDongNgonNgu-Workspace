@@ -60,7 +60,7 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Resolution evidence/date: Backend `02c3cfa5f4a2d0e7bb4e882a863d17723217ee0c`, Frontend `08820da4dc3adf9e2d4e07d70f52f685aeff3f1a`, and Workspace evidence `a0f0101688b05fd1de4cb065b2a96d9576ae0a5c` match origin/main after the 2026-09-17 production rollout; the final Workspace publication follow-up is also on origin/main. CI runs `35207854499` and `35207852817` completed successfully.
   - Safe work that may continue: no additional Phase 02 publication gate remains; no EduAI repository or production database was touched.
 
-- BLOCKER-05D-001 / LNG-05-007 / BLOCKED_INTERNAL / OPEN
+- BLOCKER-05D-001 / LNG-05-007 / BLOCKED_INTERNAL / RECONCILED_RELEASE_GATE
   - Evidence/date: Community rate limiting is implemented as a process-local in-memory map; no approved shared limiter or Redis foundation is configured, 2026-09-15.
   - Impact: the current single-process TEST runtime has deterministic per-actor/per-operation limits, but the control is not distributed across horizontally scaled Backend instances.
   - Resolution owner/dependency: future production deployment work must confirm a single-instance model or provide an approved shared limiter before horizontal scaling.
@@ -109,3 +109,21 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
     now records `PHASE_09F=DONE` and `PHASE_09_FINAL_GATE_READY=YES`.
   - Safe work that may continue: request and execute the Phase 09 final-gate
     prompt; no merge, deployment or Phase 10 work is authorized.
+
+- BLOCKER-17F-001 / LNG-17-008 / RECONCILED_RELEASE_GATE / OPEN
+  - Evidence/date: Phase 17F reconciled the data-class lifecycle matrix,
+    offboarding boundary and M-002 disposition in
+    evidence/phase-17/PHASE-17F-EVIDENCE-2026-10-02.md and
+    docs/08-DATA-LIFECYCLE.md, 2026-10-02.
+  - Impact: no self-service account deletion, account-wide purge executor or
+    general scheduled retention worker is shipped. The product must not
+    advertise those capabilities. The community limiter remains process-local
+    and is not distributed across horizontally scaled instances.
+  - Resolution owner/dependency: domain owners must approve and test any
+    offboarding, retention, export, erase or purge executor with audit and
+    recovery evidence; the platform owner must confirm a single-instance
+    production model or provide an approved shared limiter before horizontal
+    scale.
+  - Safe work that may continue: Phase 17 is accepted with this explicit
+    release gate. Phase 18 remains unstarted and no production deployment,
+    database mutation, provider activation or secret action is authorized.

@@ -1,6 +1,6 @@
 # Phase 17 Handoff
 
-**Phase status:** IN_PROGRESS — 17A through 17E accepted; 17F next
+**Phase status:** PASS — 17A through 17F accepted; stop before Phase 18
 
 17A (LNG-17-001) established the threat model and attack-surface inventory in
 `THREAT-MODEL.md`. 17B (LNG-17-002) completed the auth/OAuth/session/
@@ -14,8 +14,9 @@ and M-003, and is accepted on Backend main at
 17D (LNG-17-004 and LNG-17-005) completed the abuse, privacy, community
 safety and AI data-boundary audit. H-002, H-003 and H-004 are closed by
 server-authoritative projections, negative domain suites and hostile browser
-fixtures. M-002 is partially closed with the process-local community limiter
-and retention/deletion mapping explicitly carried to 17F. Frontend main is
+fixtures. M-002 is reconciled with explicit pre-production release gates for
+the process-local community limiter and future retention/deletion execution.
+Frontend main is
 `01331d6e4f768c9a5d0079658c60b7fcedddcaa8` after PR #24; evidence is in
 `evidence/phase-17/PHASE-17D-EVIDENCE-2026-10-02.md`.
 
@@ -34,9 +35,11 @@ contribution-credit concurrency verification. Backend and Frontend mains were
 unchanged; evidence is in
 `evidence/phase-17/PHASE-17E-EVIDENCE-2026-10-02.md`.
 
-Next eligible work is 17F: privacy, retention and security reconciliation.
-M-002's process-local rate-limit and retention/deletion residuals remain
-explicit 17F gates. Phase 18 is not started.
+17F (LNG-17-008) completed the privacy, retention and security reconciliation.
+The final evidence is in
+evidence/phase-17/PHASE-17F-EVIDENCE-2026-10-02.md. Phase 17 is accepted with
+explicit pre-production release gates; Phase 18 is not started and must
+remain outside this authorization.
 
 Do not paste secrets, exploit tokens or sensitive production data into this
 file. Production deployment/restart, production database writes/migrations,

@@ -40,13 +40,15 @@ relay a sanitized handoff before chaining to the next eligible subphase.
 
 ## Current execution pointer
 
-17A, 17B, 17C, 17D and 17E are accepted. 17B closed H-001, the absence of browser
-binding for public OAuth login/register state, on Backend main with executable
-negative regression evidence. 17C closed M-001 provider-call timeout and M-003
-production configuration/dependency exposure, with web/input/upload coverage
-and no runtime multipart upload route confirmed. 17D closed the reviewed
-IDOR/content/AI high-risk boundaries and recorded the process-local limiter and
-retention residuals for 17F. 17E closed H-005 for the reviewed commerce,
-payment, webhook, entitlement and contribution-credit attack surface; no
-provider or live payment action was performed. 17F is the next eligible
-subphase; Phase 18 remains outside this authorization and unstarted.
+17A, 17B, 17C, 17D, 17E and 17F are accepted. 17B closed H-001, the absence
+of browser binding for public OAuth login/register state, on Backend main with
+executable negative regression evidence. 17C closed M-001 provider-call
+timeout and M-003 production configuration/dependency exposure, with
+web/input/upload coverage and no runtime multipart upload route confirmed.
+17D closed the reviewed IDOR/content/AI high-risk boundaries and recorded
+the process-local limiter and retention residuals for 17F. 17E closed H-005
+for the reviewed commerce, payment, webhook, entitlement and
+contribution-credit attack surface; no provider or live payment action was
+performed. 17F reconciled M-002, documented the data lifecycle boundary and
+accepted the final gate with explicit pre-production release gates. Phase 17
+is complete; Phase 18 remains outside this authorization and unstarted.

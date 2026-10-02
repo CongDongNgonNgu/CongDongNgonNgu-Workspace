@@ -12,6 +12,6 @@ AI: rate/cost limits, provider secret isolation, safe logging and moderation/saf
 
 Secrets/logs: no secrets in repository, browser bundle, telemetry, screenshots or audit logs. Redact tokens, signatures and sensitive identifiers.
 
-Privacy: document purpose/retention/deletion behavior for profiles, messages, corrections, audio and AI sessions. Speaking rooms do not record/store voice by default without explicit informed consent.
+Privacy: document purpose/retention/deletion behavior for profiles, messages, corrections, audio and AI sessions. The canonical data-class matrix and current offboarding boundary are in `docs/08-DATA-LIFECYCLE.md`. Speaking rooms do not record/store voice by default without explicit informed consent.
 
 Phase 17 performs final threat-model and hardening review; earlier phases must still implement baseline security immediately.
