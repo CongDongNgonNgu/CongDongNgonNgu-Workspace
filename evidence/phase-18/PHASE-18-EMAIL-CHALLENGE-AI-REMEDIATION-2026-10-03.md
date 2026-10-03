@@ -158,6 +158,24 @@ the production hard-stop human authorization. No PayOS, R2, monitoring, live
 AI, production email, production database, migration, deployment, or DNS
 action was performed.
 
+## Current R2 reconciliation - 2026-10-03
+
+The preceding paragraph is the historical pre-R2 state. The bounded R2
+backup/restore drill subsequently passed against approved TEST/UAT and an
+isolated disposable PostgreSQL target. See
+`PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
+
+```text
+R2_STORAGE=VERIFIED
+UAT_BACKUP_RESTORE=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+EXTERNAL_MONITORING=UNRESOLVED
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+```
+
 Historical J-002 inbox, J-010/J-011 AI, Challenge-catalog, and J-017
 `EVENT_REGISTRATION_CONFLICT` / `SQLSTATE_42P18` records remain preserved in
 the earlier Phase 18 evidence. They are historical references, not current

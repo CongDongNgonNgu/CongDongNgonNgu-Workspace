@@ -64,3 +64,30 @@ SECRET_MUTATION=NO
 18F may be reconciled only as `HUMAN_AUTHORIZATION_REQUIRED` for production
 deployment/smoke. This evidence does not authorize deployment, restart,
 migration, provider activation, real-money action or secret mutation.
+
+## Current R2 backup/restore sub-gate reconciliation - 2026-10-03
+
+The backup paragraph above is a historical 18E snapshot. The current bounded
+TEST/UAT result is recorded in
+`PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`:
+
+```text
+LNG_18_006_BACKUP_RESTORE_SUBGATE=PASS
+R2_STORAGE=VERIFIED
+R2_CONNECTIVITY=PASS
+UAT_BACKUP_CREATE=PASS
+UAT_BACKUP_UPLOAD=PASS
+UAT_BACKUP_DOWNLOAD=PASS
+UAT_BACKUP_INTEGRITY=PASS
+UAT_BACKUP_RESTORE=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+BACKUP_PUBLIC_ACCESS=UNKNOWN
+BACKUP_SECRET_BOUNDARY=PASS
+BACKUP_PRIVACY_BOUNDARY=PASS
+SECRET_LEAK_CHECK=PASS
+```
+
+The dump was taken only from the approved TEST/UAT database and restored only
+into an isolated disposable UTF-8 PostgreSQL target. The broader production
+rollback/redeploy, monitoring and payment release gates remain outside this
+bounded drill and Phase 18 remains `BLOCKED_EXTERNAL`.

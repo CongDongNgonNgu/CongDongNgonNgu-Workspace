@@ -94,7 +94,54 @@ JOURNEY_MATRIX_FAIL=0
 JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
 JOURNEY_MATRIX_NOT_APPLICABLE=2
 
-Remaining blockers are PayOS sandbox/payment strategy, Cloudflare R2
-backup/restore verification, external monitoring/release-gate disposition, and
-production hard-stop human authorization. Phase 18 remains blocked, not done
-or launch-ready.
+At this pre-R2 snapshot, remaining blockers were PayOS sandbox/payment
+strategy, Cloudflare R2 backup/restore verification, external
+monitoring/release-gate disposition, and production hard-stop human
+authorization. The current disposition is recorded in the R2 reconciliation
+below; Phase 18 remains blocked, not done or launch-ready.
+
+## Current R2 backup/restore reconciliation - 2026-10-03
+
+The earlier R2 blocker statement above is a historical snapshot. The bounded
+TEST/UAT backup and restore drill is now verified in
+`PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
+
+```text
+R2_STORAGE=VERIFIED
+R2_CONFIGURATION_BOUNDARY=PASS
+R2_CONNECTIVITY=PASS
+R2_PUT=PASS
+R2_HEAD=PASS
+R2_GET=PASS
+R2_CHECKSUM=PASS
+R2_DELETE=PASS
+DATABASE_CLASSIFICATION=APPROVED_TEST_UAT
+UAT_BACKUP_CREATE=PASS
+UAT_BACKUP_UPLOAD=PASS
+UAT_BACKUP_DOWNLOAD=PASS
+UAT_BACKUP_INTEGRITY=PASS
+RESTORE_TARGET_CLASSIFICATION=DISPOSABLE_TEST
+RESTORE_COMMAND=PASS
+RESTORE_SCHEMA_VALIDATION=PASS
+RESTORE_MIGRATION_VALIDATION=PASS
+RESTORE_DATA_VALIDATION=PASS
+UAT_BACKUP_RESTORE=PASS
+DISPOSABLE_RESTORE_CLEANUP=PASS
+LOCAL_BACKUP_TEMP_CLEANUP=PASS
+BACKUP_PUBLIC_ACCESS=UNKNOWN
+BACKUP_SECRET_BOUNDARY=PASS
+BACKUP_PRIVACY_BOUNDARY=PASS
+SECRET_LEAK_CHECK=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+EXTERNAL_MONITORING=UNRESOLVED
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+```
+
+The journey matrix remains `TOTAL=22`, `PASS=18`, `FAIL=0`,
+`BLOCKED_EXTERNAL=2`, `NOT_APPLICABLE=2`; R2 is a phase-level operational
+sub-gate and does not change those journey-row counts. Remaining blockers are
+PayOS/payment strategy, external monitoring/release-gate disposition and the
+production hard-stop authorization.

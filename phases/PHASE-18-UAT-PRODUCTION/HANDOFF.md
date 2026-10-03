@@ -71,6 +71,34 @@ PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
 PHASE_19_STARTED=NO
 
-Remaining blockers: PayOS sandbox/payment strategy, Cloudflare R2
-backup/restore verification, external monitoring/release-gate disposition,
-and production hard-stop human authorization.
+The pre-R2 handoff snapshot listed PayOS sandbox/payment strategy, Cloudflare
+R2 backup/restore verification, external monitoring/release-gate disposition,
+and production hard-stop human authorization. The current R2 reconciliation
+below supersedes that snapshot.
+
+## Current R2 backup/restore reconciliation - 2026-10-03
+
+The earlier handoff text is preserved as the pre-drill snapshot. The bounded
+R2 backup/restore sub-gate is now verified by
+`evidence/phase-18/PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
+
+```text
+R2_STORAGE=VERIFIED
+UAT_BACKUP_CREATE=PASS
+UAT_BACKUP_UPLOAD=PASS
+UAT_BACKUP_DOWNLOAD=PASS
+UAT_BACKUP_INTEGRITY=PASS
+UAT_BACKUP_RESTORE=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+EXTERNAL_MONITORING=UNRESOLVED
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=RECONCILE_PAYMENT_STRATEGY_AND_MONITORING_RELEASE_GATE
+```
+
+Remaining blockers are PayOS/payment strategy, external monitoring/release-gate
+disposition and production hard-stop human authorization. Do not deploy,
+restart production, mutate production data/secrets, activate providers or
+start Phase 19.
