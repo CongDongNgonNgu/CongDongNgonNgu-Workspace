@@ -137,10 +137,12 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
     passed, and the verified UAT result is `200 / CANCELLED` with deterministic
     `200 / REPLAYED` retry behavior.
   - J-017 is not an active Phase 18 blocker.
-- LNG-18-004 / `BLOCKED_EXTERNAL` / OPEN
-  - Approved inbox/Resend final delivery and authoritative AI/challenge
-    provider verification remain unavailable for the affected external
-    journeys. The current matrix is 17 PASS, 0 FAIL, 5 BLOCKED_EXTERNAL.
+- LNG-18-004 / `RESOLVED` / RESOLVED
+  - Resend transport and J-002 registration/verification/session lifecycle
+    passed in approved TEST/UAT. The Challenge catalog/runtime is PostgreSQL-
+    backed and passed with a guarded deterministic fixture. AI is intentionally
+    disabled for authoritative V1 and its fail-closed behavior is classified
+    `NOT_APPLICABLE`; it is not an external-provider blocker.
 - LNG-18-005 / `BLOCKED_EXTERNAL_WITH_DISABLED_PROVIDER_PROOF` / OPEN
   - PayOS sandbox/test-live verification strategy and required provider
     release evidence remain unavailable; no provider activation occurred.
@@ -152,3 +154,22 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
 - LNG-18-008 / `HUMAN_AUTHORIZATION_REQUIRED` / OPEN
   - Production deployment/restart, production DB migration/write, provider
     activation and secret mutation remain unauthorized.
+## Phase 18 email, Challenge and AI remediation - current state (2026-10-03)
+
+The earlier Phase 18 blocker entries remain historical baseline records. The
+current authoritative disposition is:
+
+LNG-18-004=RESOLVED
+J_002_STATUS=PASS
+CHALLENGE_EXTERNAL_PROVIDER_REQUIRED=NO
+J_010_STATUS=NOT_APPLICABLE
+J_011_STATUS=NOT_APPLICABLE
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+
+Remaining active Phase 18 blockers are PayOS sandbox/payment strategy,
+Cloudflare R2 backup/restore verification, external monitoring/release-gate
+disposition, and production hard-stop human authorization. J-002, Challenge,
+J-010 and J-011 are not active blockers.

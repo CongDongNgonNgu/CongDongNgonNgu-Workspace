@@ -174,3 +174,40 @@ assertion, PayOS sandbox/test-live strategy, authoritative AI/challenge
 provider verification where required, Cloudflare R2 backup/restore drill,
 external monitoring/release-gate disposition, and the production hard stop.
 J-017 is not in the remaining blocker list.
+
+## Current email, Challenge and AI remediation reconciliation - 2026-10-03
+
+The historical 18D baseline above remains immutable evidence. The current
+authoritative follow-up is recorded in
+`PHASE-18-EMAIL-CHALLENGE-AI-REMEDIATION-2026-10-03.md`.
+
+J-002 now passes after one bounded Resend UAT transport verification and a
+separate in-memory-only registration/verification/session lifecycle run. The
+Resend API key was present but never printed or recorded; no additional
+external email call was made by the auth journey.
+
+Challenge is PostgreSQL-backed, not an external provider. A guarded,
+deterministic TEST/UAT fixture enabled catalog, detail, server-time, join,
+trusted progress, projection, exact-retry idempotency, and cross-user
+authorization verification. The repository enum-array text mapping defect was
+fixed without a schema change or migration.
+
+AI remains intentionally disabled for the authoritative V1 scope. The
+provider-neutral fail-closed behavior is the launch-safe contract; no
+provider-specific live adapter or provider call was introduced.
+
+J_002_STATUS=PASS
+J_010_STATUS=NOT_APPLICABLE
+J_011_STATUS=NOT_APPLICABLE
+CHALLENGE_EXTERNAL_PROVIDER_REQUIRED=NO
+J_017_STATUS=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+
+The remaining blocked journey rows are J-014 (PayOS sandbox/payment strategy)
+and J-022 (external monitoring/release gate). Phase-level blockers also retain
+the R2 backup/restore drill and production hard-stop human authorization.

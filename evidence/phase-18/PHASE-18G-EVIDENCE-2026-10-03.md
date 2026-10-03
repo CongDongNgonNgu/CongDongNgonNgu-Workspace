@@ -72,6 +72,29 @@ preserved for the next authorized continuation.
 The historical launch-gate snapshot above is superseded only for the
 application defect disposition: J-017 is now verified PASS after Backend PR
 #37 was merged and its post-merge CI passed. Phase 18 remains
-`BLOCKED_EXTERNAL`, not DONE or launch-ready, because the five external
-journey rows and production release gates remain unresolved. See
+`BLOCKED_EXTERNAL`, not DONE or launch-ready, because the two external journey
+rows and production release gates remain unresolved. See
 `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` for the sanitized before/after record.
+## Current external-blocker reconciliation pointer - 2026-10-03
+
+The approved TEST/UAT run resolved the Resend/auth and Challenge-catalog
+blockers for the current executable scope. J-010 and J-011 are not applicable
+to the authoritative V1 launch because AI is intentionally disabled and
+fail-closed behavior is verified.
+
+J_002_STATUS=PASS
+CHALLENGE_EXTERNAL_PROVIDER_REQUIRED=NO
+CHALLENGE_RUNTIME=PASS
+J_010_STATUS=NOT_APPLICABLE
+J_011_STATUS=NOT_APPLICABLE
+J_017_STATUS=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+
+Remaining blockers are PayOS sandbox/payment strategy, Cloudflare R2
+backup/restore verification, external monitoring/release-gate disposition, and
+production hard-stop human authorization. Phase 18 remains blocked, not done
+or launch-ready.

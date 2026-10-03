@@ -2158,3 +2158,37 @@ Evidence: `evidence/phase-18/PHASE-18B-JOURNEY-MATRIX.md` and
 `evidence/phase-18/PHASE-18D-UAT-EVIDENCE-2026-10-03.md`. The previous 18D
 and external-remediation records remain historical snapshots and are not
 erased.
+## Phase 18 email, Challenge and AI remediation - current authoritative state - 2026-10-03
+
+The earlier Phase 18 records preserve historical baseline and J-017 failure
+evidence. This latest state is authoritative for the bounded TEST/UAT
+remediation:
+
+J_002_STATUS=PASS
+CHALLENGE_EXTERNAL_PROVIDER_REQUIRED=NO
+CHALLENGE_CATALOG=PASS
+CHALLENGE_JOIN=PASS
+CHALLENGE_PROGRESS=PASS
+CHALLENGE_IDEMPOTENCY=PASS
+CHALLENGE_AUTHORIZATION=PASS
+J_010_STATUS=NOT_APPLICABLE
+J_011_STATUS=NOT_APPLICABLE
+AI_PROVIDER_SPECIFIC_ADAPTER_IMPLEMENTED=NO
+AI_PROVIDER_LIVE_CONFIGURATION_REQUIRED_FOR_V1=NO
+AI_V1_LAUNCH_CONFIGURATION=DISABLED
+J_017_STATUS=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+
+Remaining blockers are PayOS sandbox/payment strategy, Cloudflare R2
+backup/restore verification, external monitoring/release-gate disposition, and
+production hard-stop human authorization. No production or live provider action
+was performed.
