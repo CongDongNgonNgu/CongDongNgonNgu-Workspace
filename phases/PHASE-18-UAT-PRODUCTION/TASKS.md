@@ -7,17 +7,19 @@
 Define dedicated UAT personas and deterministic seed fixtures for all required roles/language scenarios. Include Vietnamese learner, foreign Vietnamese learner, English/native exchange pair, contributor/reviewer and moderator/admin. Seed commands must be idempotent and environment-guarded; never run destructive/reset seed against production unintentionally.
 
 ## LNG-18-002 — End-to-End Journey Matrix
-**Status:** IN_PROGRESS
+**Status:** PASS
 **Depends on:** LNG-18-001
 
 Create traceable journey IDs covering anonymous discovery, register/verify/login/onboarding, language hub, community post/comment, correction acceptance, Library contribution/review/search, exchange discovery/request, AI practice, XP/reputation, membership/PayOS sandbox, notifications, speaking/event where enabled, moderation/admin. Mark dependencies and expected evidence.
 
 ## LNG-18-003 — Full Automated Regression
+**Status:** PASS_WITH_LIVE_UAT_PENDING
 **Depends on:** LNG-18-002
 
 Run clean backend/frontend install/build/type/lint/test, HTTP/API, Playwright critical journeys, visual matrix and security regression. Resolve flaky tests or clearly quarantine with owner/reason—not repeated retries until green. Capture exact suite/test counts and commit SHAs.
 
 ## LNG-18-004 — UAT Functional Execution
+**Status:** BLOCKED_EXTERNAL_PENDING_APPROVED_TEST_UAT
 **Depends on:** LNG-18-001..003
 
 Execute the journey matrix against approved UAT/production-like environment with real services where required. Classify each check `PASS`, `FAIL`, `BLOCKED_EXTERNAL`, `UNSAFE_PRODUCTION_TEST` or `NOT_APPLICABLE` with evidence. Do not count skipped/blocked tests as PASS.
