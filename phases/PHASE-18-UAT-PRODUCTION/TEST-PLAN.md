@@ -1,6 +1,11 @@
 # Phase 18 Test Plan
 
-Maintain a journey table with ID, persona, preconditions, steps, expected result, environment, automation/manual classification and evidence reference.
+Maintain the traceable journey table in
+`evidence/phase-18/PHASE-18B-JOURNEY-MATRIX.md` with ID, persona,
+preconditions, steps, expected result, environment, automation/manual
+classification and evidence reference. The matrix is a plan until 18D
+execution; do not count `PENDING_18D`, `BLOCKED_EXTERNAL` or
+`UNSAFE_PRODUCTION_TEST` as `PASS`.
 
 Minimum journeys:
 - Anonymous: home/language hub/public Library/community/SEO basics.

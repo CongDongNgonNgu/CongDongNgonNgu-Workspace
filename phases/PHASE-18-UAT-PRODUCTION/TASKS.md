@@ -1,12 +1,13 @@
 # Phase 18 Tasks
 
 ## LNG-18-001 — UAT Dataset & Persona Plan
-**Status:** PLANNED  
+**Status:** PASS_WITH_LIVE_EXECUTION_PENDING
 **Depends on:** Phase 17
 
 Define dedicated UAT personas and deterministic seed fixtures for all required roles/language scenarios. Include Vietnamese learner, foreign Vietnamese learner, English/native exchange pair, contributor/reviewer and moderator/admin. Seed commands must be idempotent and environment-guarded; never run destructive/reset seed against production unintentionally.
 
 ## LNG-18-002 — End-to-End Journey Matrix
+**Status:** IN_PROGRESS
 **Depends on:** LNG-18-001
 
 Create traceable journey IDs covering anonymous discovery, register/verify/login/onboarding, language hub, community post/comment, correction acceptance, Library contribution/review/search, exchange discovery/request, AI practice, XP/reputation, membership/PayOS sandbox, notifications, speaking/event where enabled, moderation/admin. Mark dependencies and expected evidence.
