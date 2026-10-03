@@ -4,12 +4,13 @@
 
 **Current subphase:** 18G - launch reconciliation and final gate
 
-**Latest evidence:** `evidence/phase-18/PHASE-18G-EVIDENCE-2026-10-03.md`
+**Latest evidence:** `evidence/phase-18/PHASE-18-EXTERNAL-REMEDIATION-EVIDENCE-2026-10-03.md`
 
-**Next action:** stop before Phase 19. Resume only after the exact external
-TEST/UAT, sandbox, backup/restore and monitoring dependencies are supplied,
-the required production hard-stop authorization is recorded, and the pushed
-branches complete the normal PR/CI/merge/remote-main verification workflow.
+**Next action:** stop before Phase 19. Resume only after the remaining
+TEST/UAT inbox, PayOS sandbox, backup/restore and monitoring dependencies are
+supplied, J-017 is fixed and regression-tested, the required production
+hard-stop authorization is recorded, and the pushed branches complete the
+normal PR/CI/merge/remote-main verification workflow.
 
 Record release candidate/deployed frontend/backend/workspace SHAs, CI/deploy runs, UAT totals by PASS/FAIL/BLOCKED/UNSAFE/N/A, payment/provider evidence (sanitized), backup/restore drill, observability checks, production smoke and residual risk decisions.
 
