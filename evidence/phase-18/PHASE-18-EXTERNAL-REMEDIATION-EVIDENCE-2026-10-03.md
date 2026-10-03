@@ -197,3 +197,45 @@ external blockers are inbox/Resend final delivery, PayOS test/live strategy,
 authoritative AI/challenge-provider verification, the R2 backup/restore
 drill, external monitoring/release-gate disposition, and the production hard
 stop. J-017 is resolved and is not an active blocker.
+
+## Current R2 backup/restore result - 2026-10-03
+
+The historical R2 connectivity-only and unavailable-tooling statements above
+are preserved. The complete TEST/UAT drill is now verified in
+`PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
+
+```text
+STORAGE_PROVIDER=r2
+STORAGE_CONFIG=VALID
+STORAGE_TOKEN_VALUE_USED_BY_SOURCE=NO
+STORAGE_TOKEN_VALUE_PURPOSE=UNUSED_BY_CURRENT_BACKEND
+R2_CONFIGURATION_BOUNDARY=PASS
+R2_CONNECTIVITY=PASS
+R2_PUT=PASS
+R2_HEAD=PASS
+R2_GET=PASS
+R2_CHECKSUM=PASS
+R2_DELETE=PASS
+BACKUP_PUBLIC_ACCESS=UNKNOWN
+DATABASE_CLASSIFICATION=APPROVED_TEST_UAT
+UAT_BACKUP_CREATE=PASS
+UAT_BACKUP_UPLOAD=PASS
+UAT_BACKUP_DOWNLOAD=PASS
+UAT_BACKUP_INTEGRITY=PASS
+RESTORE_TARGET_CLASSIFICATION=DISPOSABLE_TEST
+RESTORE_COMMAND=PASS
+RESTORE_SCHEMA_VALIDATION=PASS
+RESTORE_MIGRATION_VALIDATION=PASS
+RESTORE_DATA_VALIDATION=PASS
+UAT_BACKUP_RESTORE=PASS
+DISPOSABLE_RESTORE_CLEANUP=PASS
+LOCAL_BACKUP_TEMP_CLEANUP=PASS
+BACKUP_SECRET_BOUNDARY=PASS
+BACKUP_PRIVACY_BOUNDARY=PASS
+SECRET_LEAK_CHECK=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+```
+
+The current remaining blockers are PayOS/payment strategy, external
+monitoring/release-gate disposition and production hard-stop human
+authorization. No production or live-provider action occurred.

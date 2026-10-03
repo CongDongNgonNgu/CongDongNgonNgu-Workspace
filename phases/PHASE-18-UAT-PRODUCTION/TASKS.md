@@ -31,10 +31,15 @@ Execute the journey matrix against approved UAT/production-like environment with
 Verify PayOS using sandbox or explicitly authorized low-value live transactions; verify OAuth/AI/realtime/media/email providers in intended launch configuration. Record sanitized IDs/status/timestamps; never store keys/tokens. Disabled providers must have documented product behavior.
 
 ## LNG-18-006 — Backup, Migration & Rollback Drill
-**Status:** BLOCKED_EXTERNAL
+**Status:** BACKUP_RESTORE_SUBGATE_RESOLVED
 **Depends on:** deployment architecture
 
 Verify database backup creation and restore procedure on safe target, migration status/permissions, application rollback/redeploy path and recovery ownership. Record timestamps and commands without credentials. A backup not test-restored is not `BACKUP VERIFIED`.
+
+The Cloudflare R2 backup/restore sub-gate is verified in
+`evidence/phase-18/PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`. The broader
+application rollback/redeploy and recovery-ownership controls remain separate
+release-readiness work and are not claimed complete by this TEST/UAT drill.
 
 ## LNG-18-007 — Observability & Operational Readiness
 **Status:** BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS

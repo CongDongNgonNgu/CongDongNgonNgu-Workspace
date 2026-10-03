@@ -825,6 +825,33 @@ PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
 PHASE_19_STARTED=NO
 
-The remaining external dependency blockers are PayOS sandbox/payment
-strategy, Cloudflare R2 backup/restore verification, external monitoring or
-release-gate disposition, and production hard-stop human authorization.
+At the prior email/Challenge/AI reconciliation point, the remaining external
+dependency blockers were PayOS sandbox/payment strategy, Cloudflare R2
+backup/restore verification, external monitoring or release-gate disposition,
+and production hard-stop human authorization. The current R2 reconciliation
+below supersedes that snapshot.
+
+## Phase 18 R2 backup/restore current authoritative state - 2026-10-03
+
+The previous dependency snapshot is historical. The R2 backup/restore
+sub-gate has now passed using the approved TEST/UAT database and an isolated
+disposable restore target.
+
+```text
+LNG_18_006_BACKUP_RESTORE_SUBGATE=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+R2_STORAGE=VERIFIED
+UAT_BACKUP_RESTORE=PASS
+LNG_18_007=BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS
+EXTERNAL_MONITORING=UNRESOLVED
+PHASE_18=IN_PROGRESS
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19=NOT_STARTED
+NEXT_ACTION=RECONCILE_PAYMENT_STRATEGY_AND_MONITORING_RELEASE_GATE
+```
+
+This removes the R2 backup/restore verification dependency blocker only; it
+does not close the payment, external monitoring or production hard-stop
+dependencies.

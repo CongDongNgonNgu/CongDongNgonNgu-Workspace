@@ -146,9 +146,11 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
 - LNG-18-005 / `BLOCKED_EXTERNAL_WITH_DISABLED_PROVIDER_PROOF` / OPEN
   - PayOS sandbox/test-live verification strategy and required provider
     release evidence remain unavailable; no provider activation occurred.
-- LNG-18-006 / `BLOCKED_EXTERNAL` / OPEN
-  - Cloudflare R2 connectivity is verified, but the complete database
-    backup/isolated restore drill remains unavailable.
+- LNG-18-006 / `BACKUP_RESTORE_SUBGATE_RESOLVED` / CLOSED
+  - Cloudflare R2 connectivity, approved TEST/UAT database backup, private
+    artifact integrity, isolated disposable restore and post-restore
+    validation all passed. The complete evidence is in
+    `evidence/phase-18/PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
 - LNG-18-007 / `BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS` / OPEN
   - External monitoring and alert/release-gate disposition remain unavailable.
 - LNG-18-008 / `HUMAN_AUTHORIZATION_REQUIRED` / OPEN
@@ -170,6 +172,27 @@ JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
 JOURNEY_MATRIX_NOT_APPLICABLE=2
 
 Remaining active Phase 18 blockers are PayOS sandbox/payment strategy,
-Cloudflare R2 backup/restore verification, external monitoring/release-gate
-disposition, and production hard-stop human authorization. J-002, Challenge,
-J-010 and J-011 are not active blockers.
+external monitoring/release-gate disposition, and production hard-stop human
+authorization. J-002, Challenge, J-010, J-011 and the R2 backup/restore
+sub-gate are not active blockers.
+
+## Phase 18 R2 backup/restore reconciliation - current state (2026-10-03)
+
+The earlier R2-open entry and all pre-drill statements remain historical where
+they appear in prior evidence. The current active disposition is:
+
+```text
+BACKUP_TARGET_BLOCKER=RESOLVED
+R2_STORAGE=VERIFIED
+UAT_BACKUP_RESTORE=PASS
+LNG_18_006_BACKUP_RESTORE_SUBGATE=PASS
+EXTERNAL_MONITORING=UNRESOLVED
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+```

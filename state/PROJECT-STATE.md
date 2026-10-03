@@ -2197,7 +2197,51 @@ PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
 PHASE_19_STARTED=NO
 
-Remaining blockers are PayOS sandbox/payment strategy, Cloudflare R2
-backup/restore verification, external monitoring/release-gate disposition, and
-production hard-stop human authorization. No production or live provider action
-was performed.
+At the prior email/Challenge/AI reconciliation point, remaining blockers were
+PayOS sandbox/payment strategy, Cloudflare R2 backup/restore verification,
+external monitoring/release-gate disposition, and production hard-stop human
+authorization. The current R2 reconciliation below supersedes that blocker
+list. No production or live provider action was performed.
+
+## Phase 18 R2 backup/restore current authoritative state - 2026-10-03
+
+Earlier snapshots that describe R2 backup/restore as unavailable remain
+historical. The current TEST/UAT-only drill is verified by
+`evidence/phase-18/PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
+
+```text
+CURRENT_SUBPHASE=18G
+CURRENT_DATABASE_CLASSIFICATION=APPROVED_TEST_UAT
+PRODUCTION_DATABASE=NO
+STORAGE_PROVIDER=r2
+R2_STORAGE=VERIFIED
+R2_CONFIGURATION_BOUNDARY=PASS
+UAT_BACKUP_CREATE=PASS
+UAT_BACKUP_UPLOAD=PASS
+UAT_BACKUP_DOWNLOAD=PASS
+UAT_BACKUP_INTEGRITY=PASS
+UAT_BACKUP_RESTORE=PASS
+RESTORE_TARGET_CLASSIFICATION=DISPOSABLE_TEST
+RESTORE_SCHEMA_VALIDATION=PASS
+RESTORE_MIGRATION_VALIDATION=PASS
+RESTORE_DATA_VALIDATION=PASS
+BACKUP_TARGET_BLOCKER=RESOLVED
+BACKUP_PUBLIC_ACCESS=UNKNOWN
+BACKUP_SECRET_BOUNDARY=PASS
+BACKUP_PRIVACY_BOUNDARY=PASS
+SECRET_LEAK_CHECK=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=RECONCILE_PAYMENT_STRATEGY_AND_MONITORING_RELEASE_GATE
+```
+
+Remaining active blockers are PayOS/payment strategy, external
+monitoring/release-gate disposition and production hard-stop human
+authorization. No production or live-provider action was performed.
