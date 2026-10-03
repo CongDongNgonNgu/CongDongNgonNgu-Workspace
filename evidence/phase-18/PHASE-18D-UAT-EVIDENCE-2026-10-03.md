@@ -322,3 +322,37 @@ Phase 18 task set is not marked complete because the authoritative acceptance
 record still requires the 18F production-safe smoke/deployment gate and the
 18G launch reconciliation; those remain release/human-authorization actions,
 not reasons to perform a live payment in TEST/UAT.
+
+## Payment implementation source-control verification - 2026-10-03
+
+The payment implementation and capability projection were merged through the
+normal GitHub PR flow. These are the exact revisions verified after merge;
+this evidence contains no provider credentials, production data or live
+payment result.
+
+```text
+BACKEND_FEATURE_HEAD_SHA=8486b8e7bab7423ba466f41ed2c98f9fe0f84678
+BACKEND_PR_NUMBER=40
+BACKEND_PR_URL=https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/40
+BACKEND_PR_HEAD_SHA=8486b8e7bab7423ba466f41ed2c98f9fe0f84678
+BACKEND_PR_CHECKS=CI_QUALITY_PULL_REQUEST_PASS
+BACKEND_MERGE_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_MAIN_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_POST_MERGE_CI=PASS_RUN_104
+
+FRONTEND_FEATURE_HEAD_SHA=f261b9e198d9b2aaa8975146b2fe97f1406b5e99
+FRONTEND_PR_NUMBER=25
+FRONTEND_PR_URL=https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/pull/25
+FRONTEND_PR_HEAD_SHA=f261b9e198d9b2aaa8975146b2fe97f1406b5e99
+FRONTEND_PR_CHECKS=3_OF_3_PASS
+FRONTEND_MERGE_SHA=a013c45cc22d5f6b82bfd5be2f07a19d28a9f9a6
+FRONTEND_MAIN_SHA=a013c45cc22d5f6b82bfd5be2f07a19d28a9f9a6
+FRONTEND_POST_MERGE_CI=PASS_RUN_85
+
+WORKSPACE_PR_NUMBER=92
+WORKSPACE_PR_URL=https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/92
+WORKSPACE_FEATURE_HEAD_SHA=12e64ab00682c2336f47425eadbdcf6dfbfe6182
+WORKSPACE_PR_HEAD_SHA=12e64ab00682c2336f47425eadbdcf6dfbfe6182
+WORKSPACE_PR_CHECKS=NO_CHECKS_REPORTED
+WORKSPACE_MAIN_SHA=NOT_YET_MERGED_AT_THIS_EVIDENCE_COMMIT
+```

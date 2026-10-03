@@ -201,3 +201,21 @@ Required unopened gates are the authorized live PayOS configuration and
 verification transaction, public HTTPS webhook registration/reconciliation,
 external production monitoring/alerting, and the human-authorized 18F
 production-safe smoke/deployment. No such action was executed in this task.
+
+## Payment PR and CI verification - 2026-10-03
+
+```text
+BACKEND_PR_NUMBER=40
+BACKEND_FEATURE_HEAD_SHA=8486b8e7bab7423ba466f41ed2c98f9fe0f84678
+BACKEND_MERGE_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_MAIN_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_POST_MERGE_CI=PASS_RUN_104
+FRONTEND_PR_NUMBER=25
+FRONTEND_FEATURE_HEAD_SHA=f261b9e198d9b2aaa8975146b2fe97f1406b5e99
+FRONTEND_MERGE_SHA=a013c45cc22d5f6b82bfd5be2f07a19d28a9f9a6
+FRONTEND_MAIN_SHA=a013c45cc22d5f6b82bfd5be2f07a19d28a9f9a6
+FRONTEND_POST_MERGE_CI=PASS_RUN_85
+WORKSPACE_PR_NUMBER=92
+WORKSPACE_FEATURE_HEAD_SHA=12e64ab00682c2336f47425eadbdcf6dfbfe6182
+WORKSPACE_PR_CHECKS=NO_CHECKS_REPORTED
+```
