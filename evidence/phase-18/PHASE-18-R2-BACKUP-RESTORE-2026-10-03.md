@@ -183,3 +183,8 @@ Remaining active Phase 18 blockers are:
 - PayOS/payment strategy and required provider release evidence;
 - external monitoring and production release-gate disposition;
 - production hard-stop human authorization.
+
+The later payment/release-gate reconciliation supersedes this blocker list.
+External monitoring is now classified as `PRODUCTION_RELEASE_GATE`; this
+artifact preserves the R2-era disposition and remains valid for the verified
+backup/restore sub-gate.

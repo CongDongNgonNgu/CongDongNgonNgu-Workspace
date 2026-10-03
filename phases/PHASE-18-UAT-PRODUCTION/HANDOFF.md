@@ -1,7 +1,8 @@
 # Phase 18 Handoff
 
-**Phase status:** BLOCKED - 18A/18B/18C accepted; J-017 is verified, while
-18D/18E external blockers and the 18F production hard stop prevent launch
+**Phase status:** BLOCKED - 18A/18B/18C accepted; J-017, Resend, Challenge,
+R2, payment architecture and local operational signals are verified. The 18F
+production hard stop and unopened production release gates prevent launch
 closeout.
 
 **Current subphase:** 18G - launch reconciliation and final gate
@@ -30,9 +31,9 @@ PHASE_18_LAUNCH_READY=NO
 PHASE_19_STARTED=NO
 ```
 
-**Next action:** stop before Phase 19 and resolve the remaining PayOS
-sandbox/test-live strategy, Cloudflare R2 backup/restore drill, external
-monitoring/release-gate disposition and production hard-stop authorization.
+**Next action:** wait for an explicitly authorized production release action or
+Phase 19 authorization; do not perform live PayOS, production deployment or
+external monitoring configuration in this reconciliation.
 
 Record release candidate/deployed frontend/backend/workspace SHAs, CI/deploy
 runs, UAT totals by PASS/FAIL/BLOCKED/UNSAFE/N/A, payment/provider evidence
@@ -76,7 +77,7 @@ R2 backup/restore verification, external monitoring/release-gate disposition,
 and production hard-stop human authorization. The current R2 reconciliation
 below supersedes that snapshot.
 
-## Current R2 backup/restore reconciliation - 2026-10-03
+## Historical R2 backup/restore reconciliation snapshot - 2026-10-03
 
 The earlier handoff text is preserved as the pre-drill snapshot. The bounded
 R2 backup/restore sub-gate is now verified by
@@ -102,3 +103,76 @@ Remaining blockers are PayOS/payment strategy, external monitoring/release-gate
 disposition and production hard-stop human authorization. Do not deploy,
 restart production, mutate production data/secrets, activate providers or
 start Phase 19.
+
+## Current payment and release-gate disposition - 2026-10-03
+
+The preceding handoff and R2 paragraphs are preserved snapshots. The current
+technical disposition is:
+
+```text
+J_014_STATUS=PASS
+J_014_TECHNICAL_VERIFICATION=PASS
+J_014_LIVE_PAYOS_VERIFICATION=PRODUCTION_RELEASE_GATE
+J_022_STATUS=PASS
+J_022_TECHNICAL_VERIFICATION=PASS
+EXTERNAL_MONITORING=PRODUCTION_RELEASE_GATE
+EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=20
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=0
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+
+PAYMENT_ARCHITECTURE=PASS
+PAYMENT_DOMAIN_PROVIDER_NEUTRAL=PASS
+PAYOS_ADAPTER=PASS
+PAYOS_CONTRACT_VERIFICATION=PASS
+FAKE_PAYMENT_E2E=PASS
+QR_KILL_SWITCH=PASS
+IN_FLIGHT_SETTLEMENT_POLICY=PASS
+PAYMENT_SECURITY_REGRESSION=PASS
+LIVE_PAYOS_CALLS=0
+REAL_MONEY_ACTIONS=0
+PAYOS_SANDBOX_AVAILABLE=NO
+
+R2_STORAGE=VERIFIED
+BACKUP_TARGET_BLOCKER=RESOLVED
+PRODUCTION_DEPLOYMENT_AUTHORIZATION=REQUIRED_BEFORE_PRODUCTION_ACTION
+PRODUCTION_DEPLOYMENT_AUTHORIZATION_CURRENTLY_GRANTED=NO
+PRODUCTION_LAUNCH_EXECUTED=NO
+PHASE_18_TASK_SET_COMPLETE=NO
+PHASE_18_FINAL_GATE=BLOCKED_BY_PRODUCTION_RELEASE_GATES_AND_HUMAN_AUTHORIZATION
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PRODUCTION_RELEASE_GATES_OPEN=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19_AUTHORIZATION_OR_PRODUCTION_RELEASE_ACTION
+```
+
+The remaining items are release gates rather than unresolved payment code:
+authorized live PayOS configuration and verification, public HTTPS webhook
+registration/reconciliation, external production monitoring/alerting and the
+human-authorized 18F deployment/smoke path. No secrets or production data are
+recorded here.
+
+## Payment implementation source-control verification - 2026-10-03
+
+```text
+BACKEND_PR_NUMBER=40
+BACKEND_FEATURE_HEAD_SHA=8486b8e7bab7423ba466f41ed2c98f9fe0f84678
+BACKEND_MERGE_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_MAIN_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_POST_MERGE_CI=PASS_RUN_104
+FRONTEND_PR_NUMBER=25
+FRONTEND_FEATURE_HEAD_SHA=f261b9e198d9b2aaa8975146b2fe97f1406b5e99
+FRONTEND_MERGE_SHA=a013c45cc22d5f6b82bfd5be2f07a19d28a9f9a6
+FRONTEND_MAIN_SHA=a013c45cc22d5f6b82bfd5be2f07a19d28a9f9a6
+FRONTEND_POST_MERGE_CI=PASS_RUN_85
+WORKSPACE_PR_NUMBER=92
+WORKSPACE_FEATURE_HEAD_SHA=12e64ab00682c2336f47425eadbdcf6dfbfe6182
+WORKSPACE_PR_CHECKS=NO_CHECKS_REPORTED
+WORKSPACE_MAIN_SHA=NOT_YET_MERGED_AT_THIS_EVIDENCE_COMMIT
+```

@@ -4,7 +4,7 @@
 **Dependency:** Phase 18A / LNG-18-001
 **Matrix authored against:** Workspace `8f4c05f`, Backend `cdcbc6d`, Frontend
 `01331d6`
-**Execution status:** The historical 18D baseline is preserved in the evidence record; the post-fix J-017 rerun reconciles the current matrix to 17 PASS, 0 FAIL and 5 BLOCKED_EXTERNAL. See `PHASE-18D-UAT-EVIDENCE-2026-10-03.md`.
+**Execution status:** Historical 18D and intermediate remediation snapshots are preserved in the evidence record. The current reconciliation records 20 PASS, 0 FAIL, 0 BLOCKED_EXTERNAL and 2 NOT_APPLICABLE rows. See `PHASE-18D-UAT-EVIDENCE-2026-10-03.md`.
 
 ## Classification contract
 
@@ -44,7 +44,7 @@ substitute for a required runtime/provider journey.
 | J-011 | Vietnamese Learner | AI conversation store and disabled-provider policy | Create conversation; add turn; request explain; stop; reload conversation | Conversation ownership and bounded in-memory lifecycle hold; provider failure does not fabricate output or persist disallowed data | TEST/UAT | HTTP/E2E | NOT_APPLICABLE | `PHASE-18-EMAIL-CHALLENGE-AI-REMEDIATION-2026-10-03.md` - authoritative V1 AI-disabled classification |
 | J-012 | Learner, Contributor | Authenticated user; reputation/learning progress facts | Read learning progress/reputation; perform eligible contribution/learning action; reread progress | XP/reputation is server-derived, idempotent and anti-farming; ledger/audit identity remains intact | TEST/UAT | HTTP/E2E | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` |
 | J-013 | Member | Membership catalog/policy; no paid entitlement assumed | Read catalog/capabilities/policy; verify Free fallback and contribution-credit projection | Entitlements come from server plan facts; client cannot claim paid status/expiry | TEST/UAT | HTTP/E2E + browser | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` |
-| J-014 | Member | Only an approved PayOS sandbox or explicit non-production provider; no real charge | Create order; create payment attempt; deliver signed sandbox webhook; repeat webhook; inspect status/entitlement | Signature/replay/amount/idempotency and user/order identity checks hold; no real-money transaction | PayOS sandbox only | Manual/API provider verification | BLOCKED_EXTERNAL | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` - PayOS sandbox unavailable |
+| J-014 | Member | Approved TEST/UAT fake provider and signed contract fixture; no real charge | Create order; create payment attempt; create fake checkout; deliver signed provider-shaped webhook; repeat webhook; inspect status/entitlement | Signature/replay/amount/idempotency and user/order identity checks hold; no real-money transaction | TEST/UAT fake provider and offline PayOS contract | Focused tests + fake payment lifecycle | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` - offline PayOS contract/fake lifecycle PASS; live verification is a production release gate |
 | J-015 | Vietnamese Learner | Notification facts; reconnect-capable client | List notifications/unread count; mark one/all read; update preference; reconnect/reload | Canonical server state survives refresh/reconnect; read transitions are bounded/idempotent | TEST/UAT | HTTP/E2E + browser | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` |
 | J-016 | English Native Buddy, Moderator | Speaking room enabled for text/room flow; media provider disabled by default | Create/list/join/leave room; presence heartbeat; queue/chat/report/moderation; request media session | Room/chat/moderation state is server-authoritative; media request is `NOT_APPLICABLE` while provider is disabled; no recording | TEST/UAT | HTTP/E2E + browser | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` - media explicitly not applicable |
 | J-017 | Vietnamese Learner, Moderator | Event/challenge catalog; server time | Discover event; view detail; register/cancel; reconcile reminder; attendance; join challenge/progress | Registration, capacity, reminder and progress transitions are idempotent and server-time controlled | TEST/UAT | HTTP/E2E | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` plus `PHASE-18-EMAIL-CHALLENGE-AI-REMEDIATION-2026-10-03.md` - cancellation and Challenge progress verified; historical SQLSTATE 42P18 preserved |
@@ -52,7 +52,7 @@ substitute for a required runtime/provider journey.
 | J-019 | Admin | Admin fixture; non-destructive admin dataset | Read metrics/users/reports/audit; execute an allowed reversible moderation/user action; reconcile audit | Admin boundary is role-safe; audit contains actor/action/target/result without secrets; no destructive launch test | TEST/UAT | HTTP/E2E + manual audit review | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` |
 | J-020 | Anonymous, New User, Learner | Threat fixtures; no production target | Attempt unauthenticated protected route, IDOR, malformed input, CSRF/CORS/open redirect and rate-limit bypass | Requests fail closed with stable error contracts; no cross-user data, token, provider secret or stack trace leaks | Local/TEST | Automated security regression | PASS | `18C` full backend/frontend security regression |
 | J-021 | All critical personas | Frontend build; viewport/accessibility harness | Exercise critical journeys at 320, 375, 390, 412, 768, 1024, 1440; keyboard/focus/errors/live regions | No horizontal overflow or blocker-level a11y regression; Vietnamese/CJK/long content remains usable | Local preview/UAT | Browser visual/manual matrix | PASS | `18C` DevTools 390/1440 + Phase 16 responsive evidence |
-| J-022 | Operational owner | Health/readiness, logs and deployment runbook; no production mutation | Check health, readiness, redaction, correlation IDs, provider/payment failure visibility and alert/runbook references | Operational signals are actionable and secret-safe; unavailable external monitors are `BLOCKED_EXTERNAL` | TEST/production-like only | Manual ops checklist | BLOCKED_EXTERNAL | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` - local health only; external monitoring unavailable |
+| J-022 | Operational owner | Health/readiness, logs and deployment runbook; no production mutation | Check health, readiness, redaction, correlation IDs, provider/payment failure visibility and alert/runbook references | Operational signals are actionable and secret-safe; external monitoring is required before production launch | TEST/UAT/local production-like | Automated/manual ops checklist | PASS | `PHASE-18D-UAT-EVIDENCE-2026-10-03.md` - local operational signals PASS; external monitoring remains a production release gate |
 
 ## Interim J-017-only reconciliation result - 2026-10-03
 
@@ -83,7 +83,7 @@ J-017-only reconciliation point, the five
 `BLOCKED_EXTERNAL` rows remained unchanged; the later email, Challenge and AI
 reconciliation above supersedes that interim count.
 
-## Current Phase 18 email, Challenge and AI reconciliation - 2026-10-03
+## Historical Phase 18 email, Challenge and AI reconciliation snapshot - 2026-10-03
 
 The current authoritative matrix supersedes the historical 18D baseline above
 for J-002, J-010 and J-011. Historical blocker evidence remains preserved in
@@ -103,8 +103,9 @@ ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
   provider is required.
 - J-017 remains `PASS`; its Challenge catalog/join/progress/idempotency and
   authorization sub-flow is now backed by the deterministic UAT fixture.
-- J-014 (PayOS) and J-022 (external monitoring/release gate) remain the two
-  `BLOCKED_EXTERNAL` rows.
+- At that intermediate reconciliation point, J-014 (PayOS) and J-022
+  (external monitoring/release gate) were the two `BLOCKED_EXTERNAL` rows;
+  the current payment reconciliation below supersedes that classification.
 
 ## Execution constraints and owners
 
@@ -122,3 +123,30 @@ ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
   owners resolve `FAIL`; platform/operations owns external blockers; security
   owns J-020/J-021 release decisions. The authoritative execution record is
   `PHASE-18D-UAT-EVIDENCE-2026-10-03.md`.
+
+## Current payment and release-gate reconciliation - 2026-10-03
+
+The current row classifications below supersede the earlier intermediate
+counts while preserving those snapshots for audit. J-014 is proven through
+offline provider-contract and fake-payment execution. J-022 is technically
+verified against local operational signals; external production monitoring is
+still a required release gate and is not represented as currently deployed.
+
+```text
+J_014_STATUS=PASS
+J_014_TECHNICAL_VERIFICATION=PASS
+J_014_LIVE_PAYOS_VERIFICATION=PRODUCTION_RELEASE_GATE
+J_022_STATUS=PASS
+J_022_TECHNICAL_VERIFICATION=PASS
+EXTERNAL_MONITORING=PRODUCTION_RELEASE_GATE
+EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=20
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=0
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+```
+
+No live PayOS request, payment link, webhook registration or real-money
+transaction was performed.

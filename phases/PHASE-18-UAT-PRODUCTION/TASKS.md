@@ -25,10 +25,15 @@ Run clean backend/frontend install/build/type/lint/test, HTTP/API, Playwright cr
 Execute the journey matrix against approved UAT/production-like environment with real services where required. Classify each check `PASS`, `FAIL`, `BLOCKED_EXTERNAL`, `UNSAFE_PRODUCTION_TEST` or `NOT_APPLICABLE` with evidence. Do not count skipped/blocked tests as PASS.
 
 ## LNG-18-005 — Payment & Provider Verification
-**Status:** BLOCKED_EXTERNAL_WITH_DISABLED_PROVIDER_PROOF
+**Status:** PASS_WITH_PRODUCTION_PAYOS_RELEASE_GATE
 **Depends on:** Phase 11 and LNG-18-004
 
 Verify PayOS using sandbox or explicitly authorized low-value live transactions; verify OAuth/AI/realtime/media/email providers in intended launch configuration. Record sanitized IDs/status/timestamps; never store keys/tokens. Disabled providers must have documented product behavior.
+
+The current technical gate is reconciled with provider-neutral payment
+architecture, a PayOS adapter, offline contract/signature verification and a
+deterministic fake payment lifecycle. PayOS has no separate sandbox, so live
+provider verification remains a production release gate and was not attempted.
 
 ## LNG-18-006 — Backup, Migration & Rollback Drill
 **Status:** BACKUP_RESTORE_SUBGATE_RESOLVED
@@ -42,10 +47,14 @@ application rollback/redeploy and recovery-ownership controls remain separate
 release-readiness work and are not claimed complete by this TEST/UAT drill.
 
 ## LNG-18-007 — Observability & Operational Readiness
-**Status:** BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS
+**Status:** PASS_WITH_PRODUCTION_MONITORING_RELEASE_GATE
 **Depends on:** deployed production-like environment
 
 Verify health/readiness endpoints, structured logs/redaction, error tracking/metrics/alerts as available, correlation IDs, payment/realtime/provider failure visibility and basic runbooks. Alerts should be actionable, not noisy.
+
+Local health/readiness, structured logging/redaction and correlation behavior
+are verified. External production monitoring/alerting is intentionally not
+configured before production and remains a release gate.
 
 ## LNG-18-008 — Production Deployment & Safe Smoke
 **Status:** HUMAN_AUTHORIZATION_REQUIRED
@@ -58,3 +67,7 @@ Deploy exact tested revisions through normal CI/CD. Verify domain/TLS, frontend 
 **Depends on:** LNG-18-008
 
 Reconcile deployed SHAs with tested SHAs, all completion gates, residual blockers/non-applicable items and owner decisions. Update Workspace/hand-off and mark project launch phase complete only when evidence supports it.
+
+Payment and local operational implementation gates are reconciled, but 18F
+production-safe deployment/smoke and 18G closeout remain unopened. Phase 18 is
+therefore not marked done or launch-ready.

@@ -143,23 +143,28 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
     backed and passed with a guarded deterministic fixture. AI is intentionally
     disabled for authoritative V1 and its fail-closed behavior is classified
     `NOT_APPLICABLE`; it is not an external-provider blocker.
-- LNG-18-005 / `BLOCKED_EXTERNAL_WITH_DISABLED_PROVIDER_PROOF` / OPEN
-  - PayOS sandbox/test-live verification strategy and required provider
-    release evidence remain unavailable; no provider activation occurred.
+- LNG-18-005 / `PASS_WITH_PRODUCTION_PAYOS_RELEASE_GATE` / RELEASE_GATE
+  - Provider-neutral payment architecture, offline PayOS contract/signature
+    verification and fake payment lifecycle passed. PayOS has no separate
+    sandbox; live provider configuration, webhook registration and one
+    human-authorized verification transaction remain production gates.
 - LNG-18-006 / `BACKUP_RESTORE_SUBGATE_RESOLVED` / CLOSED
   - Cloudflare R2 connectivity, approved TEST/UAT database backup, private
     artifact integrity, isolated disposable restore and post-restore
     validation all passed. The complete evidence is in
     `evidence/phase-18/PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`.
-- LNG-18-007 / `BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS` / OPEN
-  - External monitoring and alert/release-gate disposition remain unavailable.
-- LNG-18-008 / `HUMAN_AUTHORIZATION_REQUIRED` / OPEN
+- LNG-18-007 / `PASS_WITH_PRODUCTION_MONITORING_RELEASE_GATE` / RELEASE_GATE
+  - Local health/readiness, logging/redaction and correlation behavior passed.
+    External production monitoring and alerting remain a release gate and are
+    intentionally not configured in this task.
+- LNG-18-008 / `HUMAN_AUTHORIZATION_REQUIRED` / RELEASE_GATE
   - Production deployment/restart, production DB migration/write, provider
     activation and secret mutation remain unauthorized.
-## Phase 18 email, Challenge and AI remediation - current state (2026-10-03)
+## Historical Phase 18 email, Challenge and AI remediation snapshot - 2026-10-03
 
-The earlier Phase 18 blocker entries remain historical baseline records. The
-current authoritative disposition is:
+The earlier Phase 18 blocker entries remain historical baseline records. This
+was the authoritative bounded TEST/UAT disposition before payment-gate
+reconciliation:
 
 LNG-18-004=RESOLVED
 J_002_STATUS=PASS
@@ -171,10 +176,12 @@ JOURNEY_MATRIX_FAIL=0
 JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
 JOURNEY_MATRIX_NOT_APPLICABLE=2
 
-Remaining active Phase 18 blockers are PayOS sandbox/payment strategy,
-external monitoring/release-gate disposition, and production hard-stop human
-authorization. J-002, Challenge, J-010, J-011 and the R2 backup/restore
-sub-gate are not active blockers.
+The prior active-blocker list is superseded. Remaining Phase 18 items are
+production release gates: live PayOS configuration/verification, external
+monitoring/alerting and human authorization for the 18F deployment/smoke
+path. J-002, Challenge, J-010, J-011, J-017, J-014 technical verification,
+J-022 technical verification and the R2 backup/restore sub-gate are not active
+engineering blockers.
 
 ## Phase 18 R2 backup/restore reconciliation - current state (2026-10-03)
 
@@ -186,11 +193,19 @@ BACKUP_TARGET_BLOCKER=RESOLVED
 R2_STORAGE=VERIFIED
 UAT_BACKUP_RESTORE=PASS
 LNG_18_006_BACKUP_RESTORE_SUBGATE=PASS
-EXTERNAL_MONITORING=UNRESOLVED
-JOURNEY_MATRIX_PASS=18
+EXTERNAL_MONITORING=PRODUCTION_RELEASE_GATE
+EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
+JOURNEY_MATRIX_PASS=20
 JOURNEY_MATRIX_FAIL=0
-JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=0
 JOURNEY_MATRIX_NOT_APPLICABLE=2
+J_014_STATUS=PASS
+J_014_LIVE_PAYOS_VERIFICATION=PRODUCTION_RELEASE_GATE
+J_022_STATUS=PASS
+J_022_TECHNICAL_VERIFICATION=PASS
+PHASE_18_TASK_SET_COMPLETE=NO
+PHASE_18_FINAL_GATE=BLOCKED_BY_PRODUCTION_RELEASE_GATES_AND_HUMAN_AUTHORIZATION
+PRODUCTION_RELEASE_GATES_OPEN=NO
 PHASE_18_STATUS=BLOCKED_EXTERNAL
 PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
