@@ -1,5 +1,8 @@
 # Phase 18D Evidence - Safe UAT Functional Execution
 
+> Historical pre-approved-target classification. The authoritative approved
+> TEST/UAT execution record is `PHASE-18D-UAT-EVIDENCE-2026-10-03.md`.
+
 **Date:** 2026-10-03
 
 **Task:** LNG-18-004
