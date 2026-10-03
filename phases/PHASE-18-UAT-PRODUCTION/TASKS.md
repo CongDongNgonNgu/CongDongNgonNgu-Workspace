@@ -19,22 +19,25 @@ Create traceable journey IDs covering anonymous discovery, register/verify/login
 Run clean backend/frontend install/build/type/lint/test, HTTP/API, Playwright critical journeys, visual matrix and security regression. Resolve flaky tests or clearly quarantine with owner/reason—not repeated retries until green. Capture exact suite/test counts and commit SHAs.
 
 ## LNG-18-004 — UAT Functional Execution
-**Status:** BLOCKED_EXTERNAL_PENDING_APPROVED_TEST_UAT
+**Status:** BLOCKED_EXTERNAL
 **Depends on:** LNG-18-001..003
 
 Execute the journey matrix against approved UAT/production-like environment with real services where required. Classify each check `PASS`, `FAIL`, `BLOCKED_EXTERNAL`, `UNSAFE_PRODUCTION_TEST` or `NOT_APPLICABLE` with evidence. Do not count skipped/blocked tests as PASS.
 
 ## LNG-18-005 — Payment & Provider Verification
+**Status:** BLOCKED_EXTERNAL_WITH_DISABLED_PROVIDER_PROOF
 **Depends on:** Phase 11 and LNG-18-004
 
 Verify PayOS using sandbox or explicitly authorized low-value live transactions; verify OAuth/AI/realtime/media/email providers in intended launch configuration. Record sanitized IDs/status/timestamps; never store keys/tokens. Disabled providers must have documented product behavior.
 
 ## LNG-18-006 — Backup, Migration & Rollback Drill
+**Status:** BLOCKED_EXTERNAL
 **Depends on:** deployment architecture
 
 Verify database backup creation and restore procedure on safe target, migration status/permissions, application rollback/redeploy path and recovery ownership. Record timestamps and commands without credentials. A backup not test-restored is not `BACKUP VERIFIED`.
 
 ## LNG-18-007 — Observability & Operational Readiness
+**Status:** BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS
 **Depends on:** deployed production-like environment
 
 Verify health/readiness endpoints, structured logs/redaction, error tracking/metrics/alerts as available, correlation IDs, payment/realtime/provider failure visibility and basic runbooks. Alerts should be actionable, not noisy.
