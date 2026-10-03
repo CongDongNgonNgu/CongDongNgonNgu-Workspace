@@ -610,3 +610,27 @@ PHASE_17_FINAL_GATE=PASS_WITH_EXPLICIT_PRE_PRODUCTION_RELEASE_GATES
 PHASE_18=NOT_STARTED
 NEXT_ACTION=STOP_BEFORE_PHASE_18
 ```
+
+## Phase 18 authorized dependency graph
+
+```text
+Phase 17 final closeout + explicit Phase 18 authorization
+  └── 18A LNG-18-001 UAT dataset/personas/guarded seed fixtures
+        └── 18B LNG-18-002 journey matrix
+              └── 18C LNG-18-003 full automated regression
+                    └── 18D LNG-18-004 safe UAT execution
+                          ├── 18E LNG-18-005 + LNG-18-006 + LNG-18-007
+                          └── 18F LNG-18-008 production deployment/safe smoke
+                                └── 18G LNG-18-009 reconciliation + final gate
+PHASE_18=IN_PROGRESS
+PHASE_18_STARTED=YES
+PHASE_18_DECOMPOSITION=18A,18B,18C,18D,18E,18F,18G
+PHASE_19=NOT_STARTED
+```
+
+The complete Phase 18 subphase scope and done criteria are authoritative in
+`phases/PHASE-18-UAT-PRODUCTION/DECOMPOSITION.md`. The Phase 17 M-002
+release gates remain inherited; production deployment, production database
+mutation/migration, live provider activation, real-money action, secret
+mutation and security/CI/branch-protection bypass remain prohibited without
+the required human hard stop authorization.
