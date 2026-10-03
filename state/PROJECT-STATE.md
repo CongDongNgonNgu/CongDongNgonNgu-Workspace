@@ -2167,11 +2167,11 @@ Evidence: `evidence/phase-18/PHASE-18B-JOURNEY-MATRIX.md` and
 `evidence/phase-18/PHASE-18D-UAT-EVIDENCE-2026-10-03.md`. The previous 18D
 and external-remediation records remain historical snapshots and are not
 erased.
-## Phase 18 email, Challenge and AI remediation - current authoritative state - 2026-10-03
+## Historical Phase 18 email, Challenge and AI remediation snapshot - 2026-10-03
 
 The earlier Phase 18 records preserve historical baseline and J-017 failure
-evidence. This latest state is authoritative for the bounded TEST/UAT
-remediation:
+evidence. This was authoritative for the bounded TEST/UAT remediation before
+the later payment and production-release-gate reconciliation:
 
 J_002_STATUS=PASS
 CHALLENGE_EXTERNAL_PROVIDER_REQUIRED=NO
@@ -2200,10 +2200,11 @@ PHASE_19_STARTED=NO
 At the prior email/Challenge/AI reconciliation point, remaining blockers were
 PayOS sandbox/payment strategy, Cloudflare R2 backup/restore verification,
 external monitoring/release-gate disposition, and production hard-stop human
-authorization. The current R2 reconciliation below supersedes that blocker
-list. No production or live provider action was performed.
+authorization. That blocker list is historical; the current payment and
+production-release-gate reconciliation follows it. No production or live
+provider action was performed.
 
-## Phase 18 R2 backup/restore current authoritative state - 2026-10-03
+## Phase 18 R2 backup/restore historical reconciliation snapshot - 2026-10-03
 
 Earlier snapshots that describe R2 backup/restore as unavailable remain
 historical. The current TEST/UAT-only drill is verified by
@@ -2242,6 +2243,69 @@ PHASE_19_STARTED=NO
 NEXT_ACTION=RECONCILE_PAYMENT_STRATEGY_AND_MONITORING_RELEASE_GATE
 ```
 
-Remaining active blockers are PayOS/payment strategy, external
-monitoring/release-gate disposition and production hard-stop human
-authorization. No production or live-provider action was performed.
+The preceding blocker list is superseded by the current payment and
+production-release-gate reconciliation below. No production or live-provider
+action was performed.
+
+## Phase 18 payment and production release-gate current authoritative state - 2026-10-03
+
+```text
+CURRENT_PHASE=18
+CURRENT_SUBPHASE=18G
+PAYMENT_REQUIRED_FOR_V1=YES
+PAYMENT_REQUIRED_FOR_PHASE18_TASK_COMPLETION=YES
+LIVE_PROVIDER_VERIFICATION_REQUIRED_FOR_PHASE18=NO
+PAYMENT_PROVIDER_MODEL=disabled|payos
+PAYMENT_QR_ENABLED_MODEL=false|true
+PAYMENT_ARCHITECTURE=PASS
+PAYMENT_DOMAIN_PROVIDER_NEUTRAL=PASS
+FUTURE_PROVIDER_EXTENSION_POINT=PASS
+PAYOS_ADAPTER_IMPLEMENTED=YES
+PAYOS_CREATE_SIGNATURE=PASS
+PAYOS_WEBHOOK_VERIFICATION=PASS
+PAYOS_WEBHOOK_REPLAY_PROTECTION=PASS
+PAYOS_FULFILLMENT_ATOMICITY=PASS
+WEBHOOK_PROVIDER_ISOLATION=PASS
+QR_KILL_SWITCH=PASS
+IN_FLIGHT_SETTLEMENT_POLICY=PASS
+PAYMENT_CAPABILITY_API=PASS
+FRONTEND_PAYMENT_CAPABILITY=PASS
+FAKE_PAYMENT_E2E=PASS
+PAYMENT_SECURITY_REGRESSION=PASS
+LIVE_PAYOS_CALLS=0
+REAL_MONEY_ACTIONS=0
+PAYOS_SANDBOX_AVAILABLE=NO
+PAYOS_LIVE_VERIFICATION=PRODUCTION_RELEASE_GATE
+J_014_STATUS=PASS
+
+EXTERNAL_MONITORING=PRODUCTION_RELEASE_GATE
+EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
+J_022_STATUS=PASS
+J_022_TECHNICAL_VERIFICATION=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=20
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=0
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+PRODUCTION_DATABASE=NO
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+PRODUCTION_PROVIDER_ACTIVATED=NO
+PRODUCTION_SECRET_MUTATION=NO
+PRODUCTION_DEPLOYMENT_AUTHORIZATION=REQUIRED_BEFORE_PRODUCTION_ACTION
+PRODUCTION_DEPLOYMENT_AUTHORIZATION_CURRENTLY_GRANTED=NO
+PRODUCTION_LAUNCH_EXECUTED=NO
+PHASE_18_TASK_SET_COMPLETE=NO
+PHASE_18_FINAL_GATE=BLOCKED_BY_PRODUCTION_RELEASE_GATES_AND_HUMAN_AUTHORIZATION
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PRODUCTION_RELEASE_GATES_OPEN=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19_AUTHORIZATION_OR_PRODUCTION_RELEASE_ACTION
+```

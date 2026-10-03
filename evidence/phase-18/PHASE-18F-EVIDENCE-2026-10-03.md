@@ -45,7 +45,7 @@ REAL_PAYMENT_TRANSACTIONS=0
 The phase must not report a deployment SHA, production smoke PASS or launch
 readiness until the exact tested revisions are approved and the normal
 deployment/CI workflow is available. This hard stop is carried into 18G.
-## Current email, Challenge and AI disposition - 2026-10-03
+## Historical email, Challenge and AI disposition snapshot - 2026-10-03
 
 The historical 18F observations remain preserved. The bounded TEST/UAT
 remediation verified Resend transport, J-002, and the PostgreSQL-backed
@@ -62,3 +62,7 @@ JOURNEY_MATRIX_PASS=18
 JOURNEY_MATRIX_FAIL=0
 JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
 JOURNEY_MATRIX_NOT_APPLICABLE=2
+
+The later payment/release-gate reconciliation in the 18D/18G records
+supersedes these intermediate journey counts; this file remains the historical
+18F hard-stop record.

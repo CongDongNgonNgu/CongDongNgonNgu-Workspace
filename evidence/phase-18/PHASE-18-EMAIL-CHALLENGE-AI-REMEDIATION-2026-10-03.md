@@ -141,7 +141,7 @@ AUDIT_HIGH=0 vulnerabilities
 GIT_DIFF_CHECK=PASS
 FRONTEND_CHANGED=NO
 
-## Current journey and blocker reconciliation
+## Historical journey and blocker reconciliation snapshot
 
 J_017_STATUS=PASS
 JOURNEY_MATRIX_TOTAL=22
@@ -158,7 +158,7 @@ the production hard-stop human authorization. No PayOS, R2, monitoring, live
 AI, production email, production database, migration, deployment, or DNS
 action was performed.
 
-## Current R2 reconciliation - 2026-10-03
+## Historical R2 reconciliation snapshot - 2026-10-03
 
 The preceding paragraph is the historical pre-R2 state. The bounded R2
 backup/restore drill subsequently passed against approved TEST/UAT and an
@@ -180,3 +180,10 @@ Historical J-002 inbox, J-010/J-011 AI, Challenge-catalog, and J-017
 `EVENT_REGISTRATION_CONFLICT` / `SQLSTATE_42P18` records remain preserved in
 the earlier Phase 18 evidence. They are historical references, not current
 active states.
+
+## Superseded by final payment/release-gate reconciliation - 2026-10-03
+
+The current authoritative payment and journey state is recorded in
+`PHASE-18D-UAT-EVIDENCE-2026-10-03.md`, `PHASE-18B-JOURNEY-MATRIX.md` and
+`PHASE-18G-EVIDENCE-2026-10-03.md`. The earlier counts in this document remain
+historical evidence.

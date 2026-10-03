@@ -175,10 +175,11 @@ provider verification where required, Cloudflare R2 backup/restore drill,
 external monitoring/release-gate disposition, and the production hard stop.
 J-017 is not in the remaining blocker list.
 
-## Current email, Challenge and AI remediation reconciliation - 2026-10-03
+## Historical email, Challenge and AI remediation reconciliation snapshot - 2026-10-03
 
-The historical 18D baseline above remains immutable evidence. The current
-authoritative follow-up is recorded in
+The historical 18D baseline above remains immutable evidence. The follow-up
+below was authoritative before the later payment reconciliation and remains
+preserved in
 `PHASE-18-EMAIL-CHALLENGE-AI-REMEDIATION-2026-10-03.md`.
 
 J-002 now passes after one bounded Resend UAT transport verification and a
@@ -208,17 +209,19 @@ JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
 JOURNEY_MATRIX_NOT_APPLICABLE=2
 ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
 
-The remaining blocked journey rows are J-014 (PayOS sandbox/payment strategy)
-and J-022 (external monitoring/release gate). Phase-level blockers also retain
-the R2 backup/restore drill and production hard-stop human authorization.
+At that intermediate reconciliation point, the remaining blocked journey rows
+were J-014 (PayOS sandbox/payment strategy) and J-022 (external monitoring/
+release gate). The current payment reconciliation below supersedes those row
+classifications. Phase-level release gates remain explicit.
 
-## Current R2 backup/restore reconciliation - 2026-10-03
+## Historical R2 backup/restore reconciliation snapshot - 2026-10-03
 
 The preceding paragraph belongs to the pre-R2 reconciliation snapshot. The
 R2 backup/restore sub-gate is now verified by
 `PHASE-18-R2-BACKUP-RESTORE-2026-10-03.md`; it is no longer an active blocker.
-The journey counts remain unchanged because R2 is a phase-level operational
-sub-gate rather than a new journey row.
+At that point, the journey counts remained unchanged because R2 was a
+phase-level operational sub-gate rather than a new journey row. The payment
+reconciliation below is the current classification.
 
 ```text
 JOURNEY_MATRIX_TOTAL=22
@@ -233,3 +236,89 @@ PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
 PHASE_19_STARTED=NO
 ```
+
+## Current payment provider and release-gate reconciliation - 2026-10-03
+
+This is the authoritative current payment disposition. Earlier failure and
+external-blocker snapshots remain preserved above and in the dedicated
+remediation evidence. No live PayOS API, payment link, webhook registration,
+production provider, production database or real-money transaction was used.
+
+```text
+PAYMENT_REQUIRED_FOR_V1=YES
+PAYMENT_REQUIRED_FOR_PHASE18_TASK_COMPLETION=YES
+LIVE_PROVIDER_VERIFICATION_REQUIRED_FOR_PHASE18=NO
+PAYMENT_PROVIDER_MODEL=disabled|payos
+PAYMENT_QR_ENABLED_MODEL=false|true
+PAYMENT_ARCHITECTURE=PASS
+PAYMENT_DOMAIN_PROVIDER_NEUTRAL=PASS
+FUTURE_PROVIDER_EXTENSION_POINT=PASS
+LEGACY_PAYMENT_ENV_DISPOSITION=REMOVED_FROM_VALIDATED_RUNTIME_AND_ENV_EXAMPLE; LEGACY_NAMES_ONLY_SCRUBBED_FROM_BACKUP_CHILD_PROCESSES
+
+PAYOS_ADAPTER_IMPLEMENTED=YES
+PAYOS_CREATE_SIGNATURE=PASS
+PAYOS_WEBHOOK_VERIFICATION=PASS
+PAYOS_WEBHOOK_REPLAY_PROTECTION=PASS
+PAYOS_FULFILLMENT_ATOMICITY=PASS
+WEBHOOK_PROVIDER_ISOLATION=PASS
+QR_KILL_SWITCH=PASS
+IN_FLIGHT_SETTLEMENT_POLICY=PASS
+PAYMENT_CAPABILITY_API=PASS
+FRONTEND_PAYMENT_CAPABILITY=PASS
+FAKE_PAYMENT_E2E=PASS
+PAYMENT_SECURITY_REGRESSION=PASS
+PAYMENT_FOCUSED_TESTS=6_SUITES_55_TESTS_PASS
+FRONTEND_PAYMENT_FOCUSED_TESTS=2_FILES_9_TESTS_PASS
+
+LIVE_PAYOS_CALLS=0
+REAL_MONEY_ACTIONS=0
+PAYOS_SANDBOX_AVAILABLE=NO
+PAYOS_LIVE_VERIFICATION=PRODUCTION_RELEASE_GATE
+J_014_STATUS=PASS
+J_014_TECHNICAL_VERIFICATION=PASS
+
+EXTERNAL_MONITORING=PRODUCTION_RELEASE_GATE
+EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
+J_022_STATUS=PASS
+J_022_TECHNICAL_VERIFICATION=PASS
+PRODUCTION_DEPLOYMENT_AUTHORIZATION=REQUIRED_BEFORE_PRODUCTION_ACTION
+PRODUCTION_DEPLOYMENT_AUTHORIZATION_CURRENTLY_GRANTED=NO
+PRODUCTION_LAUNCH_EXECUTED=NO
+
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=20
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=0
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+
+BACKEND_UNIT=151_SUITES_852_TESTS_PASS
+BACKEND_E2E=17_SUITES_73_TESTS_PASS
+FRONTEND_TESTS=82_FILES_342_TESTS_PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT=0_HIGH_CRITICAL_VULNERABILITIES
+GIT_DIFF_CHECK=PASS
+
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+PRODUCTION_PROVIDER_ACTIVATED=NO
+PRODUCTION_SECRET_MUTATION=NO
+PHASE_18_TASK_SET_COMPLETE=NO
+PHASE_18_FINAL_GATE=BLOCKED_BY_PRODUCTION_RELEASE_GATES_AND_HUMAN_AUTHORIZATION
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PRODUCTION_RELEASE_GATES_OPEN=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+```
+
+The payment and local operational implementation gates are complete. The
+Phase 18 task set is not marked complete because the authoritative acceptance
+record still requires the 18F production-safe smoke/deployment gate and the
+18G launch reconciliation; those remain release/human-authorization actions,
+not reasons to perform a live payment in TEST/UAT.

@@ -831,7 +831,7 @@ backup/restore verification, external monitoring or release-gate disposition,
 and production hard-stop human authorization. The current R2 reconciliation
 below supersedes that snapshot.
 
-## Phase 18 R2 backup/restore current authoritative state - 2026-10-03
+## Phase 18 R2 backup/restore historical reconciliation snapshot - 2026-10-03
 
 The previous dependency snapshot is historical. The R2 backup/restore
 sub-gate has now passed using the approved TEST/UAT database and an isolated
@@ -852,6 +852,43 @@ PHASE_19=NOT_STARTED
 NEXT_ACTION=RECONCILE_PAYMENT_STRATEGY_AND_MONITORING_RELEASE_GATE
 ```
 
-This removes the R2 backup/restore verification dependency blocker only; it
-does not close the payment, external monitoring or production hard-stop
-dependencies.
+This removes the R2 backup/restore verification dependency blocker. The
+payment and monitoring classifications in this historical snapshot are
+superseded by the current reconciliation below; production release gates and
+the 18F/18G dependency remain unopened.
+
+## Phase 18 payment and production release-gate current dependency record - 2026-10-03
+
+```text
+18E LNG-18-005 PASS_WITH_PRODUCTION_PAYOS_RELEASE_GATE
+18E LNG-18-006 BACKUP_RESTORE_SUBGATE_RESOLVED
+18E LNG-18-007 PASS_WITH_PRODUCTION_MONITORING_RELEASE_GATE
+18F LNG-18-008 HUMAN_AUTHORIZATION_REQUIRED
+18G LNG-18-009 NOT_READY
+
+J_014_STATUS=PASS
+J_014_LIVE_PAYOS_VERIFICATION=PRODUCTION_RELEASE_GATE
+J_022_STATUS=PASS
+EXTERNAL_MONITORING=PRODUCTION_RELEASE_GATE
+EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=20
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=0
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+
+PHASE_18_TASK_SET_COMPLETE=NO
+PHASE_18_FINAL_GATE=BLOCKED_BY_PRODUCTION_RELEASE_GATES_AND_HUMAN_AUTHORIZATION
+PHASE_18=BLOCKED
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PRODUCTION_RELEASE_GATES_OPEN=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19=NOT_STARTED
+NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19_AUTHORIZATION_OR_PRODUCTION_RELEASE_ACTION
+```
+
+Phase 19 remains dependent on the authoritative Phase 18 closeout, not merely
+on the payment implementation. No Phase 19 work was started.
