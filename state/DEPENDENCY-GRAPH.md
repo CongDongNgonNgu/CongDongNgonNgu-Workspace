@@ -799,5 +799,32 @@ PHASE_19=NOT_STARTED
 NEXT_ACTION=RECONCILE_REMAINING_PHASE_18_EXTERNAL_BLOCKERS
 ```
 
-The five external journey blockers and production hard-stop remain in the
-dependency graph; J-017 is no longer an active dependency blocker.
+At the earlier J-017-only reconciliation point, the five external journey
+blockers and production hard-stop remained in the dependency graph; J-017 was
+no longer an active dependency blocker. The current email, Challenge and AI
+disposition is recorded in the authoritative addendum below.
+## Phase 18 email, Challenge and AI remediation - current authoritative state - 2026-10-03
+
+The previous dependency records preserve the historical 18D baseline. The
+current bounded TEST/UAT result is:
+
+J_002=PASS
+CHALLENGE_EXTERNAL_PROVIDER_REQUIRED=NO
+CHALLENGE_RUNTIME=PASS
+J_010=NOT_APPLICABLE
+J_011=NOT_APPLICABLE
+J_017=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=18
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=2
+JOURNEY_MATRIX_NOT_APPLICABLE=2
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+PHASE_18_STATUS=BLOCKED_EXTERNAL
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_STARTED=NO
+
+The remaining external dependency blockers are PayOS sandbox/payment
+strategy, Cloudflare R2 backup/restore verification, external monitoring or
+release-gate disposition, and production hard-stop human authorization.
