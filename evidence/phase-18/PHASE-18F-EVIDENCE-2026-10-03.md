@@ -1,0 +1,43 @@
+# Phase 18F Evidence - Production Deployment and Safe Smoke
+
+**Date:** 2026-10-03
+
+**Task:** LNG-18-008
+
+## Hard-stop decision
+
+Production deployment, restart, production database migration/write, provider
+activation, real-money action, secret rotation/environment mutation and
+destructive production smoke are not authorized by the accepted Phase 17/18
+release gates. No such action was attempted.
+
+```text
+HUMAN_AUTHORIZATION_REQUIRED=PRODUCTION_DEPLOYMENT_RESTART_DB_MIGRATION_PROVIDER_ACTIVATION_SECRET_MUTATION
+PRODUCTION_DEPLOYED=NO
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+PROVIDER_ACTIVATED=NO
+SECRET_MUTATION=NO
+REAL_PAYMENT_TRANSACTIONS=0
+```
+
+## Safe evidence available
+
+- Backend and frontend exact local/test heads were verified by clean
+  regression and recorded in 18C.
+- Local test-only health and anonymous homepage/browser smoke were observed;
+  these are not production smoke.
+- No production domain/TLS target, deployment run, migration status, error
+  rate, external alert sink or provider sandbox was supplied for a safe
+  production-like verification.
+- The Workspace and Backend Phase 18 branches are pushed but not merged. The
+  GitHub compare page is prepared; no PR/CI/merge/remote-main verification is
+  claimed. The repository has no `gh` CLI.
+
+## Result
+
+`LNG-18-008=HUMAN_AUTHORIZATION_REQUIRED`.
+
+The phase must not report a deployment SHA, production smoke PASS or launch
+readiness until the exact tested revisions are approved and the normal
+deployment/CI workflow is available. This hard stop is carried into 18G.

@@ -43,11 +43,13 @@ Verify database backup creation and restore procedure on safe target, migration 
 Verify health/readiness endpoints, structured logs/redaction, error tracking/metrics/alerts as available, correlation IDs, payment/realtime/provider failure visibility and basic runbooks. Alerts should be actionable, not noisy.
 
 ## LNG-18-008 — Production Deployment & Safe Smoke
+**Status:** HUMAN_AUTHORIZATION_REQUIRED
 **Depends on:** LNG-18-003..007 PASS or formally approved constraints
 
 Deploy exact tested revisions through normal CI/CD. Verify domain/TLS, frontend assets/API health, anonymous public routes, authenticated safe smoke, no migration errors and no obvious elevated error rate. Avoid destructive production tests and real-user messaging.
 
 ## LNG-18-009 — Launch Reconciliation
+**Status:** NOT_READY_BLOCKED_BY_18D_18E_18F
 **Depends on:** LNG-18-008
 
 Reconcile deployed SHAs with tested SHAs, all completion gates, residual blockers/non-applicable items and owner decisions. Update Workspace/hand-off and mark project launch phase complete only when evidence supports it.
