@@ -4,6 +4,10 @@
 
 **Task:** LNG-18-009
 
+**Record status:** Historical pre-reconciliation snapshot. The matrix,
+source-control and launch-gate values below are preserved for audit; the
+current J-017 state is recorded in the reconciled 18D evidence and handoff.
+
 ## Reconciled Phase 18 status
 
 | Task | Decision | Evidence / blocker |
@@ -32,7 +36,8 @@ REMOTE_MAIN_VERIFIED=NO
 TEMPORARY_BRANCH_CLEANUP=NOT_ALLOWED_BEFORE_MERGE
 ```
 
-The GitHub compare page was opened for review, but submitting a pull request
+At the time of this historical record, the GitHub compare page was opened for
+review, but submitting a pull request
 is an external representational action requiring confirmation at action time;
 it has not been performed. No merge, force push, history rewrite or branch
 deletion occurred.
@@ -61,3 +66,12 @@ NEXT_ACTION=STOP_BEFORE_PHASE_19_AND_REQUEST_REQUIRED_AUTHORIZATIONS
 Phase 18 is not reported as DONE or launch-ready. The orchestrator stops
 before Phase 19 with the exact external and human-authorization blockers
 preserved for the next authorized continuation.
+
+## Current J-017 reconciliation pointer - 2026-10-03
+
+The historical launch-gate snapshot above is superseded only for the
+application defect disposition: J-017 is now verified PASS after Backend PR
+#37 was merged and its post-merge CI passed. Phase 18 remains
+`BLOCKED_EXTERNAL`, not DONE or launch-ready, because the five external
+journey rows and production release gates remain unresolved. See
+`PHASE-18D-UAT-EVIDENCE-2026-10-03.md` for the sanitized before/after record.

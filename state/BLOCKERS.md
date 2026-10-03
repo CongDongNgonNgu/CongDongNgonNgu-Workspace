@@ -127,3 +127,28 @@ Do not classify normal coding work as a blocker. Do not work around missing prov
   - Safe work that may continue: Phase 17 is accepted with this explicit
     release gate. Phase 18 remains unstarted and no production deployment,
     database mutation, provider activation or secret action is authorized.
+
+## Phase 18 current blocker disposition - 2026-10-03
+
+- J-017 / LNG-18-004 / `RESOLVED`
+  - The historical `FAIL` / `EVENT_REGISTRATION_CONFLICT` /
+    `SQLSTATE_42P18` is preserved in the 18D evidence. Backend PR #37 is
+    merged at `4f5a9c2872e16e1c2be4236b3a51d707d067ca36`, post-merge CI run 98
+    passed, and the verified UAT result is `200 / CANCELLED` with deterministic
+    `200 / REPLAYED` retry behavior.
+  - J-017 is not an active Phase 18 blocker.
+- LNG-18-004 / `BLOCKED_EXTERNAL` / OPEN
+  - Approved inbox/Resend final delivery and authoritative AI/challenge
+    provider verification remain unavailable for the affected external
+    journeys. The current matrix is 17 PASS, 0 FAIL, 5 BLOCKED_EXTERNAL.
+- LNG-18-005 / `BLOCKED_EXTERNAL_WITH_DISABLED_PROVIDER_PROOF` / OPEN
+  - PayOS sandbox/test-live verification strategy and required provider
+    release evidence remain unavailable; no provider activation occurred.
+- LNG-18-006 / `BLOCKED_EXTERNAL` / OPEN
+  - Cloudflare R2 connectivity is verified, but the complete database
+    backup/isolated restore drill remains unavailable.
+- LNG-18-007 / `BLOCKED_EXTERNAL_WITH_LOCAL_HEALTH_PASS` / OPEN
+  - External monitoring and alert/release-gate disposition remain unavailable.
+- LNG-18-008 / `HUMAN_AUTHORIZATION_REQUIRED` / OPEN
+  - Production deployment/restart, production DB migration/write, provider
+    activation and secret mutation remain unauthorized.

@@ -6,6 +6,10 @@
 **Matrix:** `evidence/phase-18/PHASE-18B-JOURNEY-MATRIX.md`
 **Execution revision:** Backend `6a5b558e3951962be6445d23111cb2cbaaad337a`
 
+> This document preserves the historical pre-fix 18D execution snapshot. Its
+> J-017 failure and SQLSTATE evidence remain historical; the current post-fix
+> reconciliation is recorded at the end of this document.
+
 ## Scope and target safety
 
 - `CURRENT_DATABASE_CLASSIFICATION=APPROVED_TEST_UAT`
@@ -28,7 +32,7 @@ No production database was accessed, no production migration/write was
 performed, and no secret, token, password, raw message or production data was
 recorded in this evidence.
 
-## Journey classification
+## Historical pre-fix journey classification
 
 | Classification | Count | Rows |
 | --- | ---: | --- |
@@ -38,7 +42,7 @@ recorded in this evidence.
 | `UNSAFE_PRODUCTION_TEST` | 0 | No unsafe production action was attempted |
 | `NOT_APPLICABLE` | 0 | Disabled sub-capabilities are recorded within their parent row; for example, J-016 media failed closed as `ROOM_MEDIA_UNAVAILABLE` and was explicitly not applicable |
 
-### Observed blockers and defect
+### Historical observed blockers and defect
 
 - **J-002:** Seeded login/refresh/logout/logout-all passed. Register/verify was
   not executed because the approved inbox is unavailable.
@@ -64,7 +68,7 @@ in-process HTTP journey runner. J-020 remains supported by the existing 18C
 security evidence and J-021 remains supported by the existing 18C responsive
 and accessibility evidence.
 
-## Phase status and follow-up
+## Historical phase status and follow-up (before J-017 remediation)
 
 This execution improves the evidence for 18D but does not close Phase 18:
 
@@ -80,3 +84,93 @@ provider, challenge catalog, backup target and external monitoring, plus the
 J-017 cancellation defect. No production deploy/restart/migration/write,
 provider activation, secret mutation, DNS change, real-money action or Phase
 19 action was authorized or performed.
+
+## Post-fix J-017 reconciliation - 2026-10-03
+
+The historical failure above is preserved as the before-fix result. The
+focused remediation was merged to Backend `main` and rerun against the
+approved TEST/UAT target without contacting production or live providers.
+
+### Before-fix result preserved
+
+```text
+J_017_STATUS_BEFORE=FAIL
+J_017_APPLICATION_RESULT_BEFORE=EVENT_REGISTRATION_CONFLICT
+J_017_POSTGRES_DIAGNOSTIC_BEFORE=SQLSTATE_42P18
+```
+
+### Repository-backed root cause and remediation
+
+The cancellation `UPDATE` in
+`PostgresEventParticipationRepository.cancelRegistration` referenced `$1`
+and `$3` while binding `[existing.id, event.id, now]`. The unused `$2` had no
+inferable PostgreSQL type, producing SQLSTATE `42P18`. The remediation binds
+the timestamp as `$2` with `[existing.id, now]`. Unexpected participation
+persistence failures are also classified as sanitized
+`EVENT_INTERNAL_ERROR`, rather than being mislabeled as
+`EVENT_REGISTRATION_CONFLICT`.
+
+### Verified after-fix result
+
+```text
+J_017_STATUS=PASS
+J_017_REMEDIATION=VERIFIED
+J_017_RUNTIME_VERIFICATION=PASS
+J_017_UAT=PASS
+J_017_ACTIVE_BLOCKER=NO
+J_017_FOCUSED_TESTS=PASS_14_OF_14
+CANCELLATION_STATE_MACHINE=PASS
+CANCELLATION_IDEMPOTENCY=PASS
+CANCELLATION_TRANSACTION_ATOMICITY=PASS
+DATABASE_ERROR_MAPPING=PASS
+ERROR_SANITIZATION=PASS
+AUTHORIZATION=PASS
+OWNERSHIP=PASS
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=17
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=5
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+PROVIDER_ROUTES_INVOKED=0
+REAL_MONEY_ACTIONS=0
+```
+
+Runtime semantics were `200 / CANCELLED` on the first valid cancellation,
+persisted `CANCELLED` state in the projection, and `200 / REPLAYED` on the
+exact retry. The approved UAT database remained classified as non-production.
+
+```text
+MIGRATIONS_STATUS=PASS
+MIGRATIONS_TOTAL=26
+MIGRATIONS_APPLIED=15
+MIGRATION_CHECKSUM_MISMATCH=0
+UAT_SEED=PASS
+UAT_PERSONAS=9
+BACKEND_UNIT=147_SUITES_834_TESTS_PASS
+BACKEND_E2E=17_SUITES_73_TESTS_PASS
+TYPECHECK=PASS
+LINT=PASS
+BUILD=PASS
+AUDIT_HIGH=0
+GIT_DIFF_CHECK=PASS
+BACKEND_PR_NUMBER=37
+BACKEND_MERGE_SHA=4f5a9c2872e16e1c2be4236b3a51d707d067ca36
+BACKEND_MAIN_SHA=4f5a9c2872e16e1c2be4236b3a51d707d067ca36
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_CI_RUN=98
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+PRODUCTION_DATABASE_CONTACTED=NO
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+PRODUCTION_DEPLOYED=NO
+PROVIDER_ACTIVATED=NO
+SECRET_MUTATION=NO
+PHASE_19_STARTED=NO
+```
+
+Remaining Phase 18 blockers are the approved inbox/Resend final-delivery
+assertion, PayOS sandbox/test-live strategy, authoritative AI/challenge
+provider verification where required, Cloudflare R2 backup/restore drill,
+external monitoring/release-gate disposition, and the production hard stop.
+J-017 is not in the remaining blocker list.

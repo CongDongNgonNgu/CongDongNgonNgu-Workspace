@@ -4,6 +4,10 @@
 
 **Task:** LNG-18-008
 
+**Record status:** Historical pre-merge hard-stop snapshot. The branch and
+source-control statements below describe the state at capture time and are
+not the current post-merge state.
+
 ## Hard-stop decision
 
 Production deployment, restart, production database migration/write, provider

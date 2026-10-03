@@ -6,6 +6,10 @@ Resend test-mode verification
 **Classification:** sanitized evidence; no secret, password, raw provider
 message ID, production data, or production endpoint is recorded
 
+> This is a historical pre-fix remediation snapshot. The matrix and J-017
+> defect values below are preserved for audit; the post-fix verified state is
+> recorded in the reconciliation section at the end of this document.
+
 ## Execution safety
 
 ```text
@@ -33,8 +37,8 @@ provider, secret store, DNS record, or monitoring account was mutated.
 | Environment validation | `PASS` | `NODE_ENV=development`, database URL present, production database `NO` |
 | Approved migrations | `PASS` | 26 migrations present; database up to date; checksum mismatches: 0 |
 | Guarded 9-persona seed | `PASS` | 9 persona keys seeded; runtime password not recorded |
-| Existing journey matrix | `RECORDED` | `PASS=16`, `FAIL=1`, `BLOCKED_EXTERNAL=5`, `UNSAFE_PRODUCTION_TEST=0` |
-| Known defect | `FAIL` | J-017 event cancellation remains PostgreSQL SQLSTATE `42P18` |
+| Existing journey matrix (historical pre-fix snapshot) | `RECORDED` | `PASS=16`, `FAIL=1`, `BLOCKED_EXTERNAL=5`, `UNSAFE_PRODUCTION_TEST=0` |
+| Known defect (historical pre-fix snapshot) | `FAIL` | J-017 event cancellation was PostgreSQL SQLSTATE `42P18` |
 
 The migration and seed commands used the existing guarded UAT workflow and
 did not modify the repository `.env` file.
@@ -126,7 +130,7 @@ The E2E test setup explicitly disables local `.env` provider activation so
 tests cannot accidentally send external email or invoke other configured
 providers.
 
-## Remaining blockers and final state
+## Historical remaining blockers and final state (before J-017 remediation)
 
 - PayOS sandbox/credentials remain unavailable; payment stays disabled and
   no real-money action occurred.
@@ -135,8 +139,8 @@ providers.
 - A real UAT database backup and isolated restore drill remain blocked until
   backup tooling and a disposable restore target are supplied.
 - External monitoring remains deferred to the production release gate.
-- The J-017 event-cancellation defect remains a recorded `FAIL` and requires
-  a separate code fix and regression verification.
+- The J-017 event-cancellation defect was a recorded `FAIL` and required a
+  separate code fix and regression verification.
 - AI provider and challenge-catalog dependencies remain unavailable for the
   previously recorded blocked journey rows.
 
@@ -149,5 +153,47 @@ PROVIDER_ACTIVATED=NO
 SECRET_MUTATION=NO
 REAL_MONEY_ACTIONS=0
 PHASE_19_STARTED=NO
-NEXT_ACTION=WAIT_FOR_REMAINING_PHASE_18_EXTERNAL_BLOCKERS_AND_J017_FIX
+HISTORICAL_NEXT_ACTION=WAIT_FOR_REMAINING_PHASE_18_EXTERNAL_BLOCKERS_AND_J017_FIX
 ```
+
+## Post-fix J-017 reconciliation - 2026-10-03
+
+```text
+J_017_STATUS=PASS
+J_017_REMEDIATION=VERIFIED
+J_017_RUNTIME_VERIFICATION=PASS
+J_017_UAT=PASS
+J_017_ACTIVE_BLOCKER=NO
+J_017_HISTORICAL_EVIDENCE=PRESERVED
+JOURNEY_MATRIX_TOTAL=22
+JOURNEY_MATRIX_PASS=17
+JOURNEY_MATRIX_FAIL=0
+JOURNEY_MATRIX_BLOCKED_EXTERNAL=5
+ZERO_EXECUTABLE_JOURNEY_FAILURES=YES
+BACKEND_PR_NUMBER=37
+BACKEND_MERGE_SHA=4f5a9c2872e16e1c2be4236b3a51d707d067ca36
+BACKEND_MAIN_SHA=4f5a9c2872e16e1c2be4236b3a51d707d067ca36
+BACKEND_POST_MERGE_CI=PASS
+BACKEND_CI_RUN=98
+MIGRATIONS_STATUS=PASS
+MIGRATIONS_TOTAL=26
+MIGRATIONS_APPLIED=15
+MIGRATION_CHECKSUM_MISMATCH=0
+UAT_SEED=PASS
+UAT_PERSONAS=9
+DATABASE_SCHEMA_CHANGE=NO
+MIGRATION_CREATED=NO
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+PROVIDER_ACTIVATED=NO
+SECRET_MUTATION=NO
+REAL_MONEY_ACTIONS=0
+PHASE_19_STARTED=NO
+```
+
+The post-fix UAT journey returned `200 / CANCELLED`, persisted
+`CANCELLED`, and returned `200 / REPLAYED` on the exact retry. The remaining
+external blockers are inbox/Resend final delivery, PayOS test/live strategy,
+authoritative AI/challenge-provider verification, the R2 backup/restore
+drill, external monitoring/release-gate disposition, and the production hard
+stop. J-017 is resolved and is not an active blocker.
