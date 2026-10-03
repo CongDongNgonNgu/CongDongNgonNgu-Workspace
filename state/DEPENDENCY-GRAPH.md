@@ -634,3 +634,22 @@ release gates remain inherited; production deployment, production database
 mutation/migration, live provider activation, real-money action, secret
 mutation and security/CI/branch-protection bypass remain prohibited without
 the required human hard stop authorization.
+
+## Phase 18A accepted implementation record
+
+```text
+CURRENT_PHASE=18
+CURRENT_SUBPHASE=18A
+18A LNG-18-001 PASS_WITH_LIVE_EXECUTION_PENDING
+18B LNG-18-002 NEXT
+18C LNG-18-003 VERIFIED_ON_CURRENT_HEAD_PENDING_MATRIX_ARTIFACT
+18D LNG-18-004 BLOCKED_EXTERNAL_FOR_LIVE_DATABASE_SEED
+18E LNG-18-005 + LNG-18-006 + LNG-18-007 PENDING_18D
+18F LNG-18-008 HUMAN_AUTHORIZATION_REQUIRED_WHEN_REACHED
+18G LNG-18-009 PENDING_18F
+PHASE_18=IN_PROGRESS
+PHASE_19=NOT_STARTED
+NEXT_ACTION=EXECUTE_18B
+```
+
+Evidence: `evidence/phase-18/PHASE-18A-EVIDENCE-2026-10-03.md`.
