@@ -11,3 +11,14 @@ Database changes use reviewed migrations, forward-compatible rollout where feasi
 Feature flags may gate risky providers or phased rollout; they must not become permanent architecture substitutes.
 
 Phase 18 cannot complete until build, test, security, responsive, accessibility, UAT, payment, backup and observability gates have evidence.
+
+## Production operations
+
+The authoritative deployment, rollback, revision ledger, restore, monitoring
+and production go/no-go procedure is
+[Phase 18 operational readiness](../evidence/phase-18/PHASE-18-OPERATIONAL-READINESS.md).
+Runbook readiness does not authorize execution. Production backup, restore,
+deployment, restart, rollback, secret/provider changes and monitoring activation
+remain separate human authorization boundaries. Internal provider IDs are
+optional when repository plus hostname identify the target unambiguously;
+actual account wiring and revisions must be verified before release execution.

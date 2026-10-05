@@ -1,5 +1,10 @@
 # Data Lifecycle, Retention and Offboarding Policy
 
+Production backup/restore authorization, integrity, financial reconciliation,
+role ownership and uncontracted RPO/RTO are defined in the
+[operational runbook](../evidence/phase-18/PHASE-18-OPERATIONAL-READINESS.md).
+This does not add an automatic retention/purge worker or authorize data mutation.
+
 **Status:** Phase 17F accepted on 2026-10-02
 
 **Scope:** This document is the canonical repository-backed record of the

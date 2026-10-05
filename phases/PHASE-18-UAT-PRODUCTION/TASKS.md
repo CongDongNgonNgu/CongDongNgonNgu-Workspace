@@ -46,6 +46,11 @@ The Cloudflare R2 backup/restore sub-gate is verified in
 application rollback/redeploy and recovery-ownership controls remain separate
 release-readiness work and are not claimed complete by this TEST/UAT drill.
 
+Update 2026-10-05: the [operational runbook](../../evidence/phase-18/PHASE-18-OPERATIONAL-READINESS.md)
+now completes deployment/rollback/restore documentation and assigns recovery
+roles. Production backup/restore and application rollback execution remain
+separately authorized release actions; no production drill is claimed.
+
 ## LNG-18-007 — Observability & Operational Readiness
 **Status:** PASS_WITH_PRODUCTION_MONITORING_RELEASE_GATE
 **Depends on:** deployed production-like environment
@@ -55,6 +60,11 @@ Verify health/readiness endpoints, structured logs/redaction, error tracking/met
 Local health/readiness, structured logging/redaction and correlation behavior
 are verified. External production monitoring/alerting is intentionally not
 configured before production and remains a release gate.
+
+Update 2026-10-05: the same operational runbook defines the provider-neutral
+monitoring plan, primary/secondary ownership and activation evidence gate.
+Documentation is READY; external monitoring remains inactive and required
+before production launch.
 
 ## LNG-18-008 — Production Deployment & Safe Smoke
 **Status:** HUMAN_AUTHORIZATION_REQUIRED
