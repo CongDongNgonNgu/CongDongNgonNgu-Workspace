@@ -1148,3 +1148,43 @@ Remaining gates: production environment mode remediation; PayOS configuration;
 webhook registration; monitoring activation; Frontend deployment authorization
 and deployment; final production-mode smoke; separately authorized live PayOS
 verification; final Phase 18 reconciliation. No later production action is authorized.
+
+## Current production-mode transition failure - 2026-10-05
+
+[Failure evidence](../evidence/phase-18/PHASE-18-PRODUCTION-NODE-ENV-TRANSITION-2026-10-05.md) supersedes earlier pending NODE_ENV-transition
+snapshots. The only saved change was NODE_ENV=production. Its integrated deployment
+failed closed because CORS_ALLOWED_ORIGINS must use HTTPS in production. The prior
+bec4ea4 deployment remains Live and healthy in development mode. No revert, CORS
+change or additional deploy was attempted. Provider production startup is unverified.
+
+```text
+PHASE_18_PRODUCTION_MODE_TRANSITION=FAILED
+PRODUCTION_BACKEND_DEPLOYED_SHA=bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5
+SOURCE_REVISION_PRESERVED=YES
+NODE_ENV_CURRENT_ON_RENDER=production
+HEALTH_ENDPOINT_ENVIRONMENT=development
+ENVIRONMENT_SIGNAL_CONSISTENT=NO
+RENDER_ENV_MUTATED_VARIABLES=NODE_ENV_ONLY
+RENDER_ENV_TRANSITION_DEPLOY_STATUS=FAILED
+DEPLOYMENT_FAILURE_CLASS=CORS_ALLOWED_ORIGINS_HTTPS_REQUIRED
+PRODUCTION_RUNTIME_SOURCE_COMPATIBILITY_REMEDIATED=YES
+PRODUCTION_ENVIRONMENT_MODE_REMEDIATED=NO
+PRODUCTION_ENVIRONMENT_BLOCKER=YES
+RENDER_AUTO_DEPLOY=OFF
+POST_MUTATION_HEALTH_HTTP=200
+PAYMENT_POST_FAILURE_CHECK=NOT_RUN_STOPPED_ON_FAILURE
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+PRODUCTION_SECRET_MUTATION=NO
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=HUMAN_REVIEW_PRODUCTION_MODE_FAILURE_AND_AUTHORIZE_EXACT_REMEDIATION
+```
+
+Production environment configuration remediation remains a gate. PayOS config,
+webhook registration, monitoring activation, Frontend deployment acceptance,
+production smoke, live PayOS verification and final Phase 18 reconciliation remain
+unsatisfied. The demo-only backup waiver persists. Do not stage PayOS or retry the
+transition before separately authorizing an exact remediation.
