@@ -472,3 +472,42 @@ webhook registration, monitoring activation, Frontend deployment acceptance,
 production smoke, live PayOS verification and final Phase 18 reconciliation remain
 unsatisfied. The demo-only backup waiver persists. Do not stage PayOS or retry the
 transition before separately authorizing an exact remediation.
+
+## Current production CORS remediation accepted - 2026-10-05
+
+[Verified remediation](../../evidence/phase-18/PHASE-18-PRODUCTION-CORS-REMEDIATION-2026-10-05.md) supersedes earlier failed-transition and
+production environment blocker snapshots. Only CORS_ALLOWED_ORIGINS was changed
+by explicit authorization. The integrated save deployment succeeded at the same
+bec4ea4 revision. Saved and serving environments now both report production.
+
+```text
+PHASE_18_CORS_PRODUCTION_REMEDIATION=PASS
+PRODUCTION_BACKEND_DEPLOYED_SHA=bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5
+SOURCE_REVISION_PRESERVED=YES
+CORS_ALLOWED_ORIGINS_CURRENT=https://cong-dong-ngon-ngu-sigma.vercel.app
+NODE_ENV_CURRENT_ON_RENDER=production
+HEALTH_ENDPOINT_ENVIRONMENT=production
+ENVIRONMENT_SIGNAL_CONSISTENT=YES
+RENDER_AUTO_DEPLOY=OFF
+RENDER_ENV_MUTATED_VARIABLES=CORS_ALLOWED_ORIGINS_ONLY
+PRODUCTION_RUNTIME_SOURCE_COMPATIBILITY_REMEDIATED=YES
+PRODUCTION_ENVIRONMENT_MODE_REMEDIATED=YES
+PRODUCTION_ENVIRONMENT_BLOCKER=NO
+EXPECTED_FRONTEND_ORIGIN_ALLOWED=YES
+LOCALHOST_PRODUCTION_CORS_REMOVED=YES
+PAYMENT_REMAINS_DISABLED=YES
+SAFE_BACKEND_SMOKE=PASS
+POST_CORS_REMEDIATION_LOG_SANITY=PASS
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=HUMAN_AUTHORIZE_STAGE_PAYOS_PRODUCTION_CONFIG_WITH_PAYMENT_DISABLED
+```
+
+PRODUCTION_ENV_CONFIGURATION_REMEDIATION is satisfied. Remaining gates are
+PAYOS_CONFIG; WEBHOOK_REGISTRATION; MONITORING_ACTIVATION;
+FRONTEND_DEPLOYMENT_ACCEPTANCE; PRODUCTION_SMOKE; LIVE_PAYOS_VERIFICATION;
+FINAL_PHASE18_RECONCILIATION. The scoped Backend smoke does not complete overall
+release smoke. Demo backup waiver persists; no backup verification was performed.
+No PayOS staging/activation, migration, database write or Phase 19 action occurred.
