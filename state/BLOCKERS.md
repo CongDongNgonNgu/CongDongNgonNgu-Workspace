@@ -428,3 +428,43 @@ production environment remediation; PayOS configuration; webhook registration;
 monitoring activation; safe smoke; live PayOS verification; final Phase 18
 reconciliation. Load the compatible Backend revision before separately authorizing
 NODE_ENV=production. No production action is performed by this documentation change.
+
+## Current controlled Backend deployment - 2026-10-05
+
+[Deployment evidence](../evidence/phase-18/PHASE-18-CONTROLLED-BACKEND-DEPLOY-2026-10-05.md) supersedes earlier old-runtime and
+pending-Backend-deploy snapshots. Exactly one authorized deployment is Live.
+Compatible source is now running, but NODE_ENV remains development intentionally.
+The demo-only backup waiver remains scoped to this release; no backup was verified.
+
+```text
+PRODUCTION_BACKEND_PREVIOUS_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+PRODUCTION_BACKEND_DEPLOYED_SHA=bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5
+TARGET_REVISION_LIVE=YES
+RENDER_AUTO_DEPLOY=OFF
+NODE_ENV_CURRENT_ON_RENDER=development
+NODE_ENV_UNCHANGED=YES
+PRODUCTION_RUNTIME_SOURCE_COMPATIBILITY_REMEDIATED=YES
+PRODUCTION_ENVIRONMENT_MODE_REMEDIATED=NO
+PRODUCTION_ENVIRONMENT_BLOCKER=YES
+PAYMENT_REMAINS_DISABLED=YES
+HEALTH_HTTP=200
+HEALTH_ENVIRONMENT=development
+POST_DEPLOY_LOG_SANITY=PASS
+PRE_DEPLOY_BACKUP=WAIVED
+BACKUP_CREATED=NO
+PRODUCTION_DEPLOYED=YES
+PRODUCTION_RESTARTED_AS_PART_OF_DEPLOYMENT=YES
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MIGRATION_EXECUTED=NO
+RENDER_ENV_MUTATED=NO
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=HUMAN_AUTHORIZE_RENDER_NODE_ENV_PRODUCTION_MUTATION_AND_CONTROLLED_RESTART
+```
+
+Remaining gates: production environment mode remediation; PayOS configuration;
+webhook registration; monitoring activation; Frontend deployment authorization
+and deployment; final production-mode smoke; separately authorized live PayOS
+verification; final Phase 18 reconciliation. No later production action is authorized.
