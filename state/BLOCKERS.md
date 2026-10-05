@@ -395,3 +395,36 @@ the tested artifact loaded: changing NODE_ENV while the old source revision rema
 the startup artifact would still encounter its Resend/R2 production rejections.
 PayOS configuration, webhook, monitoring, backup, deployment acceptance, safe smoke,
 live verification and Phase 18 final reconciliation remain release gates.
+
+
+## Current demo-release backup exception - 2026-10-05
+
+[Owner-confirmed exception](../evidence/phase-18/PHASE-18-DEMO-BACKUP-WAIVER-2026-10-05.md) supersedes earlier backup-required
+and next-action snapshots for this release only. The owner confirms the database
+contains only recreatable seed/demo data. No production dump was run. The backup
+gate is waived, not verified PASS. Normal backup policy applies once persistent
+user/payment data exists. No destructive operation or deployment is authorized.
+
+```text
+PRODUCTION_BACKUP_GATE=WAIVED_FOR_CURRENT_DEMO_RELEASE
+PRE_DEPLOY_PRODUCTION_BACKUP_REQUIRED=WAIVED_FOR_CURRENT_DEMO_RELEASE
+PRODUCTION_BACKUP_CREATED=NO
+LOCAL_BACKUP_TEMP_CLEANUP=PASS
+RENDER_AUTO_DEPLOY=OFF
+NODE_ENV_CURRENT_ON_RENDER=development
+PRODUCTION_ENVIRONMENT_BLOCKER=YES
+PRODUCTION_DEPLOYED=NO
+PRODUCTION_RESTARTED=NO
+PRODUCTION_DB_MUTATED=NO
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=HUMAN_AUTHORIZE_CONTROLLED_BACKEND_DEPLOY_BEC4EA4_WITH_NODE_ENV_STILL_DEVELOPMENT
+```
+
+Remaining gates: deploy authorization; controlled Backend/Frontend deployment;
+production environment remediation; PayOS configuration; webhook registration;
+monitoring activation; safe smoke; live PayOS verification; final Phase 18
+reconciliation. Load the compatible Backend revision before separately authorizing
+NODE_ENV=production. No production action is performed by this documentation change.
