@@ -614,28 +614,43 @@ NEXT_ACTION=HUMAN_AUTHORIZE_PRODUCTION_ENV_CONFIGURATION_REMEDIATION
 ```
 
 
-## Production provider compatibility candidate ? 2026-10-05
+## Production provider compatibility merged - 2026-10-05
 
-[Source remediation evidence](PHASE-18-PRODUCTION-PROVIDER-COMPATIBILITY-2026-10-05.md) records passing offline regression
-and a reviewed Backend candidate in PR #41. Earlier provider rejection observations
-remain accurate for the deployed/current main revision; the candidate removes those
-application restrictions while preserving both UAT hard stops. Backend merge is held
-until Render auto-deploy is confirmed already Off. No production action is authorized.
+[Current reconciliation](PHASE-18-PRODUCTION-PROVIDER-COMPATIBILITY-2026-10-05.md)
+records the explicitly authorized Auto-Deploy On Commit -> Off change, persisted
+across reload, and safe Backend PR #41 merge. Earlier provider-rejection,
+auto-deploy-unknown and candidate-only observations are historical source snapshots.
+Production continues running the old revision in development mode; no redeployment
+or environment mutation occurred. Only source main compatibility is resolved.
 
 ```text
-SOURCE_PRODUCTION_CONFIG_COMPATIBILITY=PASS_ON_REVIEWED_CANDIDATE
-BACKEND_PR_NUMBER=41
-BACKEND_PR_MERGED=NO
-CURRENT_MAIN_PRODUCTION_CONFIG_COMPATIBLE_WITH_RESEND_R2=NO
-BACKEND_MERGE_SAFETY_GATE=BLOCKED_UNVERIFIED_AUTO_DEPLOY
+BACKEND_PR_41=MERGED
+BACKEND_MAIN_SHA=bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5
+BACKEND_POST_MERGE_CI=PASS
+RENDER_AUTO_DEPLOY_BEFORE=ON
+RENDER_AUTO_DEPLOY_AFTER=OFF
+RENDER_AUTO_DEPLOY_DISABLE=PASS
+RENDER_AUTO_DEPLOY_MUTATED=YES
+RENDER_DEPLOY_TRIGGERED_BY_SETTING_CHANGE=NO
+RENDER_DEPLOY_TRIGGERED_BY_PR41_MERGE=NO
+SOURCE_PRODUCTION_CONFIG_COMPATIBILITY=PASS
+CURRENT_MAIN_PRODUCTION_CONFIG_COMPATIBLE_WITH_RESEND_R2=YES
+SOURCE_MAIN_READY_FOR_PRODUCTION_ENV_REMEDIATION=YES
+PRODUCTION_RUNTIME_REMEDIATED=NO
 NODE_ENV_CURRENT_ON_RENDER=development
 PRODUCTION_ENVIRONMENT_BLOCKER=YES
-RENDER_START_COMMAND_RUNTIME_EQUIVALENT=YES
-RENDER_BUILD_COMMAND_CLASSIFICATION=FUNCTIONALLY_VALID_BUT_LESS_DETERMINISTIC
-PRODUCTION_BACKUP_EXECUTION=HARD_STOP_FUTURE_ACTION
+RENDER_ENV_MUTATED=NO
+PRODUCTION_DEPLOYED=NO
+PRODUCTION_RESTARTED=NO
 PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
 PHASE_19_DEPENDENCY_SATISFIED=NO
 PHASE_19_STARTED=NO
-NEXT_ACTION=CONFIRM_RENDER_AUTO_DEPLOY_OFF_BEFORE_BACKEND_MERGE
+NEXT_ACTION=HUMAN_AUTHORIZE_RENDER_PRODUCTION_ENV_MUTATION_NODE_ENV_ONLY
 ```
+
+The next authorization must explicitly control restart/redeploy consequences and
+the tested artifact loaded: changing NODE_ENV while the old source revision remains
+the startup artifact would still encounter its Resend/R2 production rejections.
+PayOS configuration, webhook, monitoring, backup, deployment acceptance, safe smoke,
+live verification and Phase 18 final reconciliation remain release gates.
