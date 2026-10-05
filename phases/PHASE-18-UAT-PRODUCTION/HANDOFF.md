@@ -236,7 +236,7 @@ PRODUCTION_SECRET_MUTATION=NO
 PAYOS_WEBHOOK_REGISTERED=NO
 EXTERNAL_MONITORING_ACTIVATED=NO
 REAL_MONEY_ACTIONS=0
-NEXT_ACTION=OBTAIN_HUMAN_AUTHORIZATION_FOR_PAYOS_PRODUCTION_CONFIGURATION_VALIDATION
+NEXT_ACTION=RESTORE_AUTHENTICATED_RENDER_READ_ONLY_CONFIG_ACCESS
 ```
 
 Remaining release gates: authorized PayOS configuration validation; public
@@ -245,3 +245,32 @@ production backup execution; explicit deployment authorization; Backend and
 Frontend deployment; safe smoke; separately authorized live verification;
 final Phase 18 reconciliation. Provider account settings and live revision
 checks remain OPERATOR_VERIFY_AT_RELEASE. No production action was taken.
+
+## Read-only PayOS configuration gate observation — 2026-10-05
+
+Read-only validation is authorized and attempted; earlier requests to obtain
+that authorization are historical. [Sanitized configuration evidence](../../evidence/phase-18/PHASE-18-PAYOS-PRODUCTION-CONFIG-VALIDATION-2026-10-05.md)
+records source contracts and two safe public GETs. Health returned 200 with
+`environment=development`; public payment capability is disabled. Render is
+signed out, so production secret presence, flags, service identity and deployed
+SHA remain UNKNOWN. No missing secret or production-mode readiness is inferred.
+Operational runbooks remain READY; the config execution gate remains unverified.
+
+```text
+PHASE_18_PAYOS_PRODUCTION_CONFIG_VALIDATION=PARTIAL
+PAYOS_PRODUCTION_CONFIG_STATE=CONFIG_UNVERIFIED
+PAYOS_PRODUCTION_CONFIG_READINESS=BLOCKED_UNVERIFIED_CONFIG
+PAYOS_CLIENT_ID=UNKNOWN
+PAYOS_API_KEY=UNKNOWN
+PAYOS_CHECKSUM_KEY=UNKNOWN
+PRODUCTION_PAYMENT_CAPABILITY=DISABLED
+PRODUCTION_BACKEND_DEPLOYED_SHA=UNKNOWN
+PRODUCTION_BACKEND_REVISION_CURRENT=UNKNOWN
+PAYOS_LIVE_API_CALLS=0
+REAL_MONEY_ACTIONS=0
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=RESTORE_AUTHENTICATED_RENDER_READ_ONLY_CONFIG_ACCESS
+```
