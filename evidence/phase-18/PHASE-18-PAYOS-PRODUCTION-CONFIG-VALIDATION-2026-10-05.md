@@ -1,5 +1,9 @@
 # Phase 18 PayOS production configuration validation
 
+**Historical access snapshot:** signed-out/UNKNOWN production observations below
+are superseded by [authenticated Render validation](PHASE-18-RENDER-PRODUCTION-CONFIG-VALIDATION-2026-10-05.md).
+Source contracts remain valid; current configuration blockers are in that record.
+
 **Date:** 2026-10-05. **Result:** PARTIAL; production config gate remains
 `BLOCKED_UNVERIFIED_CONFIG`. This is a read-only observation record, not
 activation, a live PayOS validation or production deployment evidence.
