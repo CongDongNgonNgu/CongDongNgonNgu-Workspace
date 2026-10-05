@@ -10,7 +10,7 @@ Workspace baseline: `ba7737471c8e90d41926b5490dfba3e4fdc9719e`.
 [Backend PR #41](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/41)
 head: `0326ec9be09ccf194231db8c7a75d193695a24e6`.
 
-Current main explicitly rejects Resend and R2 literals when NODE_ENV is production
+Baseline main explicitly rejects Resend and R2 literals when NODE_ENV is production
 in src/config/env.validation.ts. The candidate removes only those two rejection
 clauses. Transport identity is independent of environment purpose. Required
 credentials, HTTPS, vendor-host restrictions, sender header safety, production
@@ -60,18 +60,36 @@ The [operational runbook](PHASE-18-OPERATIONAL-READINESS.md) is reconciled accor
 Production backup execution remains a future hard stop using approved operator tooling;
 never repurpose the guarded UAT backup runner against production.
 
-## Merge safety and current state
+## Authorized Auto-Deploy disable and PR #41 reconciliation
 
-Render is Git-linked to main. Its read-only Auto-Deploy control exposes no readable
-current value. Backend main merge is held until auto-deploy is confirmed already Off,
-or its production deployment side effect is explicitly authorized. Do not change
-provider settings under this task. The reviewed branch/PR is intentionally retained
-while unmerged; cleanup would lose required work. Workspace evidence may merge independently.
+The owner explicitly authorized only Render Auto-Deploy ON -> OFF and the safe
+Backend merge. Service identity matched CongDongNgonNgu-Back-End, repository
+CongDongNgonNgu/CongDongNgonNgu-Back-End, branch main and the expected public hostname.
+The visible setting initially read On Commit. Only its editor was opened; Off was
+selected and saved. A full reload showed persisted Off. No environment, secret,
+build/start/branch or other provider setting was changed.
+
+Before merge, deployment history remained at 30 entries with the same manual live
+deployment dep-db1hs7dg1s2s73a8nab0. PR #41 was re-read: open, non-draft, main base,
+one commit, five files, mergeable clean, exact expected head and green CI. No branch
+protection/rules were bypassed. The permitted merge-commit strategy produced
+`bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5`. Remote main's tree matches the reviewed feature exactly.
+
+Post-merge Render deployment history and service events show no new deploy/restart;
+the latest live/start events remain the previous manual deployment at 10:48/10:49
+Asia/Saigon. Production remains on `9e15f8c6ff0ae24e05a928079cc3a643d58bfa08`.
+This is bounded dashboard evidence during the task, not an ongoing monitoring guarantee.
+[Post-merge Backend CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/37264890349)
+is checked on the exact merge SHA before acceptance and branch cleanup.
+
+Source main supports valid production Resend/R2 configuration, while production's
+last confirmed NODE_ENV remains development. New source behavior is not live.
+Prior unknown/on auto-deploy and unmerged candidate states are historical.
 
 ```text
-SOURCE_PRODUCTION_CONFIG_COMPATIBILITY=PASS_ON_REVIEWED_CANDIDATE
-EMAIL_PROVIDER_RESEND_PRODUCTION_SUPPORTED=YES_ON_CANDIDATE
-STORAGE_PROVIDER_R2_PRODUCTION_SUPPORTED=YES_ON_CANDIDATE
+SOURCE_PRODUCTION_CONFIG_COMPATIBILITY=PASS
+EMAIL_PROVIDER_RESEND_PRODUCTION_SUPPORTED=YES
+STORAGE_PROVIDER_R2_PRODUCTION_SUPPORTED=YES
 RESEND_PRODUCTION_TRANSPORT=PASS
 RESEND_UAT_TEST_PATH_IN_PRODUCTION=BLOCKED
 PRODUCTION_VERIFICATION_EMAIL_CONTRACT=PASS
@@ -87,10 +105,23 @@ NODE_24_14_1_COMPATIBILITY=PASS
 RENDER_START_COMMAND_RUNTIME_EQUIVALENT=YES
 RENDER_BUILD_COMMAND_CLASSIFICATION=FUNCTIONALLY_VALID_BUT_LESS_DETERMINISTIC
 BACKEND_PR_NUMBER=41
-BACKEND_PR_MERGED=NO
-CURRENT_MAIN_PRODUCTION_CONFIG_COMPATIBLE_WITH_RESEND_R2=NO
-RENDER_AUTO_DEPLOY=UNKNOWN
-BACKEND_MERGE_SAFETY_GATE=BLOCKED_UNVERIFIED_AUTO_DEPLOY
+BACKEND_PR_MERGED=YES
+CURRENT_MAIN_PRODUCTION_CONFIG_COMPATIBLE_WITH_RESEND_R2=YES
+RENDER_AUTO_DEPLOY=OFF
+RENDER_AUTO_DEPLOY_BEFORE=ON
+RENDER_AUTO_DEPLOY_AFTER=OFF
+RENDER_AUTO_DEPLOY_DISABLE=PASS
+RENDER_AUTO_DEPLOY_MUTATED=YES
+RENDER_DEPLOY_TRIGGERED_BY_SETTING_CHANGE=NO
+PRODUCTION_RESTART_TRIGGERED_BY_SETTING_CHANGE=NO
+RENDER_DEPLOY_TRIGGERED_BY_PR41_MERGE=NO
+PRODUCTION_BACKEND_DEPLOYED_SHA_CHANGED=NO
+PRODUCTION_BACKEND_DEPLOYED_SHA=9e15f8c6ff0ae24e05a928079cc3a643d58bfa08
+BACKEND_MAIN_SHA=bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5
+BACKEND_POST_MERGE_CI=PASS
+SOURCE_MAIN_READY_FOR_PRODUCTION_ENV_REMEDIATION=YES
+PRODUCTION_RUNTIME_REMEDIATED=NO
+BACKEND_MERGE_SAFETY_GATE=PASS
 NODE_ENV_CURRENT_ON_RENDER=development
 PRODUCTION_RUNTIME_ENVIRONMENT=FAIL_DEVELOPMENT
 PRODUCTION_ENVIRONMENT_BLOCKER=YES
@@ -117,7 +148,7 @@ PHASE_18_DONE=NO
 PHASE_18_LAUNCH_READY=NO
 PHASE_19_DEPENDENCY_SATISFIED=NO
 PHASE_19_STARTED=NO
-NEXT_ACTION=CONFIRM_RENDER_AUTO_DEPLOY_OFF_BEFORE_BACKEND_MERGE
+NEXT_ACTION=HUMAN_AUTHORIZE_RENDER_PRODUCTION_ENV_MUTATION_NODE_ENV_ONLY
 AFTER_SAFE_BACKEND_MERGE_NEXT_ACTION=HUMAN_AUTHORIZE_RENDER_PRODUCTION_ENV_MUTATION_NODE_ENV_ONLY
 ```
 
