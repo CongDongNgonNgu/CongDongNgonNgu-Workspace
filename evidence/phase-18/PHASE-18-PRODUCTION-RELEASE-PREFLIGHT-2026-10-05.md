@@ -2,6 +2,14 @@
 
 **Task:** Final pre-production readiness audit
 
+**Historical snapshot:** operational documentation/ownership states and the
+checklist below describe the pre-remediation audit at PR #93. The active
+deployment, rollback, restore, monitoring and go/no-go procedure is now
+[Phase 18 operational readiness](PHASE-18-OPERATIONAL-READINESS.md).
+Its READY documentation states supersede the historical BLOCKED/NO/UNASSIGNED
+values below. Production execution gates, unknown PayOS values and the
+PARTIAL preflight / blocked Phase 18 status remain unchanged.
+
 **Record status:** `PARTIAL` — read-only preflight completed; production
 release gates remain unopened.
 
