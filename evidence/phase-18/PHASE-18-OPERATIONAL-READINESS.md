@@ -180,7 +180,12 @@ history plus prior smoke evidence and schema/API compatibility for rollback.
    latest-commit selection when it differs from the approved SHA, a secret
    deploy-hook URL, a source edit, force push or branch reset.
    [Render deployment procedure](https://render.com/docs/deploys).
-5. Expect `npm ci && npm run build`, then `npm run start:prod` serving the
+5. Preferred build is `npm ci && npm run build`. Authenticated Render currently uses
+   `npm install; npm run build`: functionally valid when installation/build succeed,
+   but less deterministic and not fail-fast. Treat command alignment as an
+   operational improvement for separately authorized provider configuration.
+   Current `npm run start` and preferred `npm run start:prod` both execute
+   `node dist/main.js`; the script name alone is not a production blocker. Expect the
    configured platform port. Compare sanitized build logs and provider commit
    metadata to full SHA; successful build alone is not successful release.
 6. POST-DEPLOY: execute the safe smoke section, inspect Render runtime logs and
@@ -606,4 +611,31 @@ PHASE_18_LAUNCH_READY=NO
 PHASE_19_DEPENDENCY_SATISFIED=NO
 PHASE_19_STARTED=NO
 NEXT_ACTION=HUMAN_AUTHORIZE_PRODUCTION_ENV_CONFIGURATION_REMEDIATION
+```
+
+
+## Production provider compatibility candidate ? 2026-10-05
+
+[Source remediation evidence](PHASE-18-PRODUCTION-PROVIDER-COMPATIBILITY-2026-10-05.md) records passing offline regression
+and a reviewed Backend candidate in PR #41. Earlier provider rejection observations
+remain accurate for the deployed/current main revision; the candidate removes those
+application restrictions while preserving both UAT hard stops. Backend merge is held
+until Render auto-deploy is confirmed already Off. No production action is authorized.
+
+```text
+SOURCE_PRODUCTION_CONFIG_COMPATIBILITY=PASS_ON_REVIEWED_CANDIDATE
+BACKEND_PR_NUMBER=41
+BACKEND_PR_MERGED=NO
+CURRENT_MAIN_PRODUCTION_CONFIG_COMPATIBLE_WITH_RESEND_R2=NO
+BACKEND_MERGE_SAFETY_GATE=BLOCKED_UNVERIFIED_AUTO_DEPLOY
+NODE_ENV_CURRENT_ON_RENDER=development
+PRODUCTION_ENVIRONMENT_BLOCKER=YES
+RENDER_START_COMMAND_RUNTIME_EQUIVALENT=YES
+RENDER_BUILD_COMMAND_CLASSIFICATION=FUNCTIONALLY_VALID_BUT_LESS_DETERMINISTIC
+PRODUCTION_BACKUP_EXECUTION=HARD_STOP_FUTURE_ACTION
+PHASE_18_DONE=NO
+PHASE_18_LAUNCH_READY=NO
+PHASE_19_DEPENDENCY_SATISFIED=NO
+PHASE_19_STARTED=NO
+NEXT_ACTION=CONFIRM_RENDER_AUTO_DEPLOY_OFF_BEFORE_BACKEND_MERGE
 ```
