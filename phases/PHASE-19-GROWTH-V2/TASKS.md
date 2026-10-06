@@ -54,10 +54,10 @@ Define clear recommendation problem, offline/online evaluation, privacy/fairness
 Design graph relationships among language, concept, sentence, translation, grammar, topic, contributor, provenance and review confidence. RAG must preserve authorization/provenance/citations and evaluate hallucination/retrieval quality against a baseline.
 
 ## LNG-19-009 — V2 Portfolio Prioritization
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** completed LNG-19-002 through LNG-19-008 pre-launch discoveries
 
 For each candidate record `BUILD_NEXT`, `EXPERIMENT`, `DEFER` or `REJECT`, expected outcome, effort/risk, dependencies and release metrics. Record separate proposed implementation/release scope for future approved work. Do not create/start a new phase/epic until authorized. BUILD_NEXT is owner direction plus technical evidence, not proven demand.
 
 ## 19B discovery artifacts
-[Discovery index](DISCOVERY-INDEX.md) links all seven assessments; future implementation is not shipped by these task states. All discoveries integrated inPR113 with CI/cleanup verified. 009 [portfolio](PORTFOLIO.md) is VERIFYING pending its own gates.
+[Discovery index](DISCOVERY-INDEX.md) links all seven assessments; future implementation is not shipped by these task states. All discoveries integrated inPR113 with CI/cleanup verified. 009 [portfolio](PORTFOLIO.md) integrated inPR114, CI/post-merge/cleanup verified. Phase19 closes discovery/portfolio only; implementation separate future approval.
