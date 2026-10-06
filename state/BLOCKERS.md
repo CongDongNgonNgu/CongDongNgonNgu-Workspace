@@ -1,5 +1,23 @@
 # Blockers
 
+## Current Phase 19 evidence blocker — 2026-10-06
+
+- BLOCKER-19-001 / LNG-19-001 / `BLOCKED_EXTERNAL` / OPEN
+  - Evidence: [19A inventory](../evidence/phase-19/PHASE-19A-EVIDENCE-INVENTORY-2026-10-06.md).
+    Repository acceptance/monitoring records do not supply a dated post-launch
+    product metrics/feedback package. Missing observations are UNKNOWN, not zero.
+  - Impact: evidence-grounded opportunity selection and downstream discovery/
+    portfolio acceptance cannot complete. Phase 19 is authorized and started;
+    Phase 18 DONE / DEMO_NO_PAYMENT is preserved.
+  - Resolution owner: PROJECT_RELEASE_OWNER / product owner; provide existing
+    privacy-safe aggregate evidence with dates, cohort/test exclusions, metric
+    definitions/denominators, redacted themes and provenance, or identify an
+    approved accessible source. No raw PII or credentials in Workspace.
+  - Safe work completed: scope discovery, synchronized baseline, execution
+    decomposition and evidence inventory. No application feature, production
+    instrumentation, data write or provider action follows from this blocker.
+  - Next action: PROVIDE_PRIVACY_SAFE_POST_LAUNCH_EVIDENCE_PACKAGE.
+
 ## Current demo release disposition - 2026-10-06
 
 [Monitoring activation and final demo closeout](../evidence/phase-18/PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md) is the current

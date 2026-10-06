@@ -1,5 +1,55 @@
 # Project State
 
+## Current Phase 19 authorization and evidence dependency — 2026-10-06
+
+Owner `START_PHASE_19=YES` supersedes the earlier wait-for-authorization
+next action. [Execution plan](../phases/PHASE-19-GROWTH-V2/DECOMPOSITION.md)
+and [19A evidence inventory](../evidence/phase-19/PHASE-19A-EVIDENCE-INVENTORY-2026-10-06.md)
+are current. Earlier Phase 19 unopened/Phase 18 dependency blocks are historical.
+Phase 18 closeout and its original evidence scope remain unchanged.
+
+```text
+CURRENT_PHASE=19
+PHASE_19_TITLE=Phase 19 — Growth V2
+PHASE_19_BOOTSTRAP=PASS
+PHASE_19_AUTHORITATIVE_SCOPE_FOUND=YES
+PHASE_19_DEPENDENCY_SATISFIED=YES
+PHASE_19_STARTED=YES
+PHASE_19_STATUS=IN_PROGRESS
+PHASE_19_DONE=NO
+PHASE_19_DECOMPOSITION=19A,19B,19C
+CURRENT_SUBPHASE=19A
+PHASE_19A=BLOCKED_EXTERNAL
+LNG_19_001=BLOCKED_EXTERNAL
+LNG_19_002=PLANNED
+LNG_19_003=PLANNED
+LNG_19_004=PLANNED
+LNG_19_005=PLANNED
+LNG_19_006=PLANNED
+LNG_19_007=PLANNED
+LNG_19_008=PLANNED
+LNG_19_009=PLANNED
+PHASE_19_BLOCKER=POST_LAUNCH_PRODUCT_EVIDENCE_UNAVAILABLE
+PHASE_18_DONE=YES
+PHASE_18_CLOSEOUT_PROFILE=DEMO_NO_PAYMENT
+PAYMENT_PROVIDER_SELECTED=NO
+PAYMENT_REMAINS_DISABLED=YES
+MONITORING_PROVIDER=GITHUB_ACTIONS_WORKSPACE
+MONITORING_ACTIVE=YES
+MONITORING_CADENCE=15_MINUTES
+ALERT_CHANNEL=GITHUB_ISSUE
+PRODUCTION_MUTATION_PERFORMED=NO
+PRODUCTION_DB_MUTATED=NO
+REAL_MONEY_ACTIONS=0
+PHASE_20_STARTED=NO
+NEXT_ACTION=PROVIDE_PRIVACY_SAFE_POST_LAUNCH_EVIDENCE_PACKAGE
+```
+
+No V2 candidate has been selected. Availability and TEST/UAT evidence do not
+establish real-user demand, trustworthy interaction data or corpus maturity.
+The initial evidence inventory is recorded; LNG-19-001 and Phase 19 remain
+incomplete. Resume within Phase 19 when the evidence dependency is resolved.
+
 ## Current demo release disposition - 2026-10-06
 
 [Monitoring activation and final demo closeout](../evidence/phase-18/PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md) is the current
