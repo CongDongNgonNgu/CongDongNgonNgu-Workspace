@@ -1,5 +1,11 @@
 # Phase 18 demo scope and read-only release acceptance - 2026-10-06
 
+[Final monitoring/demo closeout](PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md)
+supersedes the pending monitoring/closeout and next-action snapshots below.
+Original observed acceptance and payment-deferral facts remain valid; older
+remaining-gate/status text is historical.
+
+
 The [subsequent controlled Frontend acceptance](PHASE-18-FRONTEND-PRODUCTION-ACCEPTANCE-2026-10-06.md) supersedes
 the defect, unpushed branch and pending Frontend/smoke findings recorded below.
 Those observations are historical; the owner-approved payment deferral remains
