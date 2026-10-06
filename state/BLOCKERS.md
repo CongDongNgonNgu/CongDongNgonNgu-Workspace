@@ -16,7 +16,12 @@
   - Safe work completed: scope discovery, synchronized baseline, execution
     decomposition and evidence inventory. No application feature, production
     instrumentation, data write or provider action follows from this blocker.
-  - Next action: PROVIDE_PRIVACY_SAFE_POST_LAUNCH_EVIDENCE_PACKAGE.
+  - Recovery: terminal relay exercised; complete validated same-phase prompt
+    automatically executed as the [acquisition plan](../phases/PHASE-19-GROWTH-V2/MEASUREMENT-PLAN.md).
+    Source structure is not approved aggregate evidence. Observation window,
+    cohort/exclusion provenance, source access and suppression require owner
+    decisions; no production telemetry or collection is activated.
+  - Next action: RELAY_19A_ACQUISITION_PLAN_AND_REQUEST_OWNER_DECISION_PROMPT.
 
 ## Current demo release disposition - 2026-10-06
 

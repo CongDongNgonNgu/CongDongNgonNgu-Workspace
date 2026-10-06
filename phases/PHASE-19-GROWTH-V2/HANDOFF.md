@@ -13,7 +13,17 @@ Post-launch metrics/feedback, trustworthy interactions and corpus maturity
 remain UNKNOWN; TEST/UAT and operational availability are not substitutes.
 No V2 candidate selected. LNG-19-002–009 remain PLANNED. Phase 19 is not DONE.
 
-Next action: PROVIDE_PRIVACY_SAFE_POST_LAUNCH_EVIDENCE_PACKAGE.
+The merged terminal-relay policy was exercised: current BLOCKED_EXTERNAL report
+sent, full CODE_BLOCK recovery received and validated for the same project/
+Phase 19 with no execution hard stop. Safe recovery was automatically executed
+as the [measurement plan](MEASUREMENT-PLAN.md), [source map](EVIDENCE-SOURCE-MAP.md),
+[inactive gap design](INSTRUMENTATION-DESIGN.md) and
+[blank evidence/feedback template](../../evidence/phase-19/templates/POST-LAUNCH-EVIDENCE-PACKAGE-TEMPLATE.md).
+PHASE_19A_EVIDENCE_ACQUISITION_PLAN=PASS concerns planning artifacts only;
+no approved product observations were obtained. Window/cohort/source-access
+and small-cell suppression choices remain owner decisions. No candidate selected.
+
+Next action: RELAY_19A_ACQUISITION_PLAN_AND_REQUEST_OWNER_DECISION_PROMPT.
 Backend/Frontend unchanged; payment disabled; production monitor active;
 no production mutation, DB write or real money. Phase 20 remains unauthorized.
 
