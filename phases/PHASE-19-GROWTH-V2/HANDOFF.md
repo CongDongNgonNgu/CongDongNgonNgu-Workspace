@@ -23,7 +23,13 @@ PHASE_19A_EVIDENCE_ACQUISITION_PLAN=PASS concerns planning artifacts only;
 no approved product observations were obtained. Window/cohort/source-access
 and small-cell suppression choices remain owner decisions. No candidate selected.
 
-Next action: RELAY_19A_ACQUISITION_PLAN_AND_REQUEST_OWNER_DECISION_PROMPT.
+Recovery PR #110 merged; PR/post-merge CI and branch cleanup passed. Its
+BLOCKED_EXTERNAL report was relayed again. The complete next prompt is an
+owner-decision gate: window/start/timezone, suppression, exclusion provenance,
+approved aggregate source and feedback source. Its form was sent into the
+project conversation. Recommendations remain unapplied; no collection begins.
+
+Next action: WAIT_FOR_EXPLICIT_PHASE_19A_OWNER_DECISIONS.
 Backend/Frontend unchanged; payment disabled; production monitor active;
 no production mutation, DB write or real money. Phase 20 remains unauthorized.
 

@@ -76,3 +76,50 @@ exchange-history and abbreviated-reference issues; all corrected and re-reviewed
 PASS with no remaining findings. Live learning/challenge producers explicitly
 remain NOT_ESTABLISHED. Self/security/privacy review PASS for documents only.
 No application test/build or production/data acquisition PASS is claimed.
+
+## Recovery integration and second terminal relay
+
+[PR #110](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/110)
+merged as `1c3811ff15af58ff8ab767339c4894ca65a05856`. Remote feature SHA
+`4f0f0a2c5fae7d7c053fb36a2c8936c67d2b757c` verified; PR quality run
+37434032116 PASS; post-merge quality run 37434100517 PASS. Local main matched
+remote main, feature ancestry verified, remote/local
+`phase-19a-evidence-acquisition-plan` deleted and stale refs pruned.
+
+The completed recovery report was then sent into the same confirmed project
+conversation, including source limitations, exact policy/plan PR/main provenance,
+proposed windows/suppression and unresolved owner choices. The UI displayed
+the report as a new user message and assistant generation began. It requested
+a compact next same-Phase-19 prompt, avoiding duplicate completed planning and
+preserving explicit human/source/data boundaries. This demonstrates a second
+BLOCKED_EXTERNAL relay; no collected evidence or 19A DONE is implied.
+
+The second assistant response completed. Its virtualized primary code block
+was copied in full (13,140 characters), titled “CongDongNgonNgu — PHASE 19A
+OWNER DECISION GATE”, ending NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19A_OWNER_DECISIONS.
+After one stale copy-control error, fresh UI state identified the live control;
+no message was duplicated. Complete extraction and semantic validation PASS:
+same project/Phase 19, freeze collection, no repeated planning, no fabricated
+approval/evidence, no production/provider/security/Phase 20 action.
+
+This prompt's safe action was executed: keep collection frozen and relay the
+exact seven owner fields (window, start policy, IANA timezone, suppression,
+cohort exclusion provenance, aggregate source, feedback source). The UI showed
+the form as a sent user message in the same project conversation. The proposed
+28-day/from-approval/Asia-Ho_Chi_Minh/K20 package was explicitly labeled NOT
+OWNER APPROVED; source/registry/feedback availability must be confirmed as facts.
+No defaults or source access are inferred from ChatGPT recommendations.
+
+NEXT_PROMPT_HARD_STOP_REQUIRED=YES means a genuine owner decision/source-policy
+dependency before collection; it does not request instrumentation deployment.
+The first recovery planning prompt had NO execution hard stop. Safe recovery
+and owner-form relay were auto-executed; collection waits for actual human
+choices. No new PR or planning cycle is needed merely to restate a pending
+choice. This final record adds new observed relay/response/integration evidence
+and reconciles the previously pending NEXT_ACTION, not another product subphase.
+
+Final disposition: TERMINAL_SUBPHASE_RELAY_FIX=PASS; two complete same-phase
+prompts received/validated; safe planning and owner form executed. 19A remains
+BLOCKED_EXTERNAL; Phase 19 DONE=NO; Phase 20 STARTED=NO. Backend/Frontend and
+monitor/payment boundaries preserved. No production query/write/collection,
+raw export, provider credentials, deployment/restart or real-money action.
