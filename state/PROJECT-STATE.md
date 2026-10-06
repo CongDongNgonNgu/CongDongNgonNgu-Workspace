@@ -32,6 +32,19 @@ LNG_19_007=PLANNED
 LNG_19_008=PLANNED
 LNG_19_009=PLANNED
 PHASE_19_BLOCKER=POST_LAUNCH_PRODUCT_EVIDENCE_UNAVAILABLE
+PHASE_19A_EVIDENCE_ACQUISITION_PLAN=PASS
+PHASE_19A_EVIDENCE_PACKAGE_RECEIVED=NO
+COHORT_EXCLUSION_RELIABILITY=INSUFFICIENT
+OBSERVATION_WINDOW=OWNER_DECISION_REQUIRED
+SMALL_COHORT_SUPPRESSION_POLICY=PROPOSED_NOT_APPROVED
+BROWSER_RELAY_ATTEMPTED=YES
+BROWSER_RELAY_RESULT=PASS
+NEXT_PROMPT_RECEIVED=YES
+NEXT_PROMPT_SOURCE=CODE_BLOCK
+NEXT_PROMPT_SAME_PROJECT=YES
+NEXT_PROMPT_SAME_PHASE=YES
+NEXT_PROMPT_HARD_STOP_REQUIRED=NO
+RECOVERY_PROMPT_AUTO_EXECUTED=YES
 PHASE_18_DONE=YES
 PHASE_18_CLOSEOUT_PROFILE=DEMO_NO_PAYMENT
 PAYMENT_PROVIDER_SELECTED=NO
@@ -44,7 +57,7 @@ PRODUCTION_MUTATION_PERFORMED=NO
 PRODUCTION_DB_MUTATED=NO
 REAL_MONEY_ACTIONS=0
 PHASE_20_STARTED=NO
-NEXT_ACTION=RELAY_19A_BLOCKED_EXTERNAL_AND_OBTAIN_RECOVERY_PROMPT
+NEXT_ACTION=RELAY_19A_ACQUISITION_PLAN_AND_REQUEST_OWNER_DECISION_PROMPT
 ```
 
 No V2 candidate has been selected. Availability and TEST/UAT evidence do not
@@ -52,7 +65,13 @@ establish real-user demand, trustworthy interaction data or corpus maturity.
 The initial evidence inventory is recorded; LNG-19-001 and Phase 19 remain
 incomplete. The owner's terminal-relay amendment requires sending the current
 19A blocker and obtaining/validating a safe same-phase recovery prompt; it does
-not waive the evidence dependency. Follow CHATGPT-RELAY-PROTOCOL.md.
+not waive the evidence dependency. The first relay returned a complete,
+validated safe 19A recovery prompt, now executed as the
+[measurement plan](../phases/PHASE-19-GROWTH-V2/MEASUREMENT-PLAN.md),
+[source map](../phases/PHASE-19-GROWTH-V2/EVIDENCE-SOURCE-MAP.md) and
+[blank package template](../evidence/phase-19/templates/POST-LAUNCH-EVIDENCE-PACKAGE-TEMPLATE.md).
+PASS refers to the acquisition plan only, not observed product evidence.
+Final recovery integration/relay evidence follows CHATGPT-RELAY-PROTOCOL.md.
 
 ## Current demo release disposition - 2026-10-06
 
