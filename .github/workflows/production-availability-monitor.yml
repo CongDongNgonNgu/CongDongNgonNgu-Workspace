@@ -1,0 +1,35 @@
+name: CongDongNgonNgu Production Availability Monitor
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Safe availability or synthetic issue lifecycle check
+        required: true
+        default: live
+        type: choice
+        options: [live, simulate_failure, simulate_recovery]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: congdongngonngu-production-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check availability and reconcile incident
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MONITOR_MODE: ${{ github.event_name == 'schedule' && 'live' || inputs.mode }}
+        run: node scripts/production-availability-monitor.mjs
