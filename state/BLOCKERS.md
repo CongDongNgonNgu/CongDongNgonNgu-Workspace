@@ -21,7 +21,10 @@
     Source structure is not approved aggregate evidence. Observation window,
     cohort/exclusion provenance, source access and suppression require owner
     decisions; no production telemetry or collection is activated.
-  - Next action: RELAY_19A_ACQUISITION_PLAN_AND_REQUEST_OWNER_DECISION_PROMPT.
+  - Second terminal relay returned a complete owner-decision gate; seven-field
+    form sent to the owner conversation. Recommendations are not applied and
+    no production/data collection action is requested yet.
+  - Next action: WAIT_FOR_EXPLICIT_PHASE_19A_OWNER_DECISIONS.
 
 ## Current demo release disposition - 2026-10-06
 

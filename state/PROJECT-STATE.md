@@ -43,8 +43,12 @@ NEXT_PROMPT_RECEIVED=YES
 NEXT_PROMPT_SOURCE=CODE_BLOCK
 NEXT_PROMPT_SAME_PROJECT=YES
 NEXT_PROMPT_SAME_PHASE=YES
-NEXT_PROMPT_HARD_STOP_REQUIRED=NO
+NEXT_PROMPT_HARD_STOP_REQUIRED=YES
+NEXT_PROMPT_HUMAN_DEPENDENCY=EXPLICIT_PHASE_19A_OWNER_DECISIONS_BEFORE_COLLECTION
 RECOVERY_PROMPT_AUTO_EXECUTED=YES
+PHASE_19A_OWNER_DECISION_GATE=WAITING_OWNER
+RECOMMENDED_DEFAULTS_APPLIED=NO
+PRODUCTION_PRODUCT_EVIDENCE_COLLECTION=NO
 PHASE_18_DONE=YES
 PHASE_18_CLOSEOUT_PROFILE=DEMO_NO_PAYMENT
 PAYMENT_PROVIDER_SELECTED=NO
@@ -57,7 +61,7 @@ PRODUCTION_MUTATION_PERFORMED=NO
 PRODUCTION_DB_MUTATED=NO
 REAL_MONEY_ACTIONS=0
 PHASE_20_STARTED=NO
-NEXT_ACTION=RELAY_19A_ACQUISITION_PLAN_AND_REQUEST_OWNER_DECISION_PROMPT
+NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19A_OWNER_DECISIONS
 ```
 
 No V2 candidate has been selected. Availability and TEST/UAT evidence do not
@@ -71,7 +75,14 @@ validated safe 19A recovery prompt, now executed as the
 [source map](../phases/PHASE-19-GROWTH-V2/EVIDENCE-SOURCE-MAP.md) and
 [blank package template](../evidence/phase-19/templates/POST-LAUNCH-EVIDENCE-PACKAGE-TEMPLATE.md).
 PASS refers to the acquisition plan only, not observed product evidence.
-Final recovery integration/relay evidence follows CHATGPT-RELAY-PROTOCOL.md.
+Recovery PR #110 merged with post-merge CI and branch cleanup. The second
+terminal relay returned a complete validated OWNER DECISION GATE prompt;
+its seven-field form was sent to the project conversation. No defaults were
+applied. NEXT_PROMPT_HARD_STOP_REQUIRED describes this human/source-policy
+dependency, not a requested production deployment or telemetry action.
+[Runtime evidence](../evidence/phase-19/PHASE-19-TERMINAL-RELAY-2026-10-06.md)
+records both complete prompts and the owner form. Wait for actual owner choices;
+ChatGPT cannot supply them as authorization. No collection is started.
 
 ## Current demo release disposition - 2026-10-06
 
