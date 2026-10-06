@@ -1,5 +1,11 @@
 # Blockers
 
+## Current Phase 19 blocker reconciliation - 2026-10-06
+BLOCKER-19-001=CLOSED_BY_OWNER_SCOPE_SUPERSESSION, not evidence received.
+001 CANCELLED/SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE; missing metrics EXPECTED_PRE_LAUNCH. Current discovery requires no observation/source approval; future production/provider/payment/data/next-phase gates remain. Old seven-field observation owner gate superseded, recommendations unapplied.
+
+## Historical evidence blocker - superseded for current profile
+
 ## Current Phase 19 evidence blocker — 2026-10-06
 
 - BLOCKER-19-001 / LNG-19-001 / `BLOCKED_EXTERNAL` / OPEN

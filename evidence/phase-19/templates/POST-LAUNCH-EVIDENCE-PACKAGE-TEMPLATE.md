@@ -1,5 +1,11 @@
 # Phase 19 post-launch evidence package — blank template
 
+> Historical post-launch profile artifact. Owner PRE_LAUNCH_FEATURE_EXPANSION
+> amendment (2026-10-06) supersedes its current evidence/observation dependency.
+> Original findings/results retained; no metrics, collection access, window or
+> suppression policy approved.
+
+
 This is not evidence. Replace REQUIRED fields only with approved observations;
 keep missing/disabled/N/A explicitly classified with reasons. No example users,
 counts or rates are supplied. Refer to the
