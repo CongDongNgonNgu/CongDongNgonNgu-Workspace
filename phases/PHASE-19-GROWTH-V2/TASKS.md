@@ -1,7 +1,15 @@
 # Phase 19 Tasks
 
+## Current execution disposition — 2026-10-06
+
+Owner authorization and Phase 18 demo closeout satisfy phase startup.
+[DECOMPOSITION.md](DECOMPOSITION.md) maps the existing tasks to 19A/19B/19C.
+[19A inventory](../../evidence/phase-19/PHASE-19A-EVIDENCE-INVENTORY-2026-10-06.md)
+records the missing post-launch product evidence. LNG-19-002–009 remain PLANNED;
+none is selected for implementation. Their original requirements below stand.
+
 ## LNG-19-001 — Post-Launch Evidence Review
-**Status:** PLANNED  
+**Status:** BLOCKED_EXTERNAL
 **Depends on:** Phase 18
 
 Review privacy-safe product metrics, user feedback, moderation/safety data, AI cost/usefulness, Library growth/verification, active language hubs, exchange completion, membership conversion/churn and support issues. Identify problems/opportunities rather than starting from feature hype.

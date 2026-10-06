@@ -1,5 +1,16 @@
 # Dependency Graph
 
+## Current Phase 19 dependency disposition — 2026-10-06
+
+Phase 18 DONE / DEMO_NO_PAYMENT satisfies the Phase 19 major-phase dependency.
+Owner `START_PHASE_19=YES` authorizes its execution. Earlier unopened/wait
+snapshots below are historical. [Plan](../phases/PHASE-19-GROWTH-V2/DECOMPOSITION.md):
+19A / LNG-19-001 evidence review -> 19B selected candidate discoveries ->
+19C / LNG-19-009 portfolio decisions. 19A is BLOCKED_EXTERNAL on the missing
+privacy-safe post-launch evidence package, not Phase 18. LNG-19-005 retains
+Phase 16 PWA evidence; 007 requires trustworthy interaction data; 008 requires
+mature Phase 08 corpus. No data gate is waived. Phase 20 is unauthorized.
+
 ## Current demo release disposition - 2026-10-06
 
 [Monitoring activation and final demo closeout](../evidence/phase-18/PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md) is the current
