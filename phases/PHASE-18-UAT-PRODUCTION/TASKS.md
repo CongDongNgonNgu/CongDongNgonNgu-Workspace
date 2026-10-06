@@ -2,25 +2,25 @@
 
 ## Current demo release disposition - 2026-10-06
 
-The [owner-approved no-payment demo amendment](../../evidence/phase-18/PHASE-18-DEMO-NO-PAYMENT-2026-10-06.md) is the
-current Phase 18 release disposition and evidence index. Earlier dated state,
-next-action and release-gate snapshots below are historical where superseded.
-Payment provider selection/activation is DEFERRED_BY_OWNER_FOR_DEMO; legacy
-PayOS/config/webhook/live gates are DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO,
-not PASS. Payment remains disabled. Backend/CORS smoke and frontend provenance
-are verified. Frontend hash navigation fails to scroll; full demo smoke is FAIL
-and deployment acceptance remains BLOCKED_DEPLOYMENT_REQUIRED after a source fix.
-Monitoring is not waived: MONITORING_ACTIVATION=BLOCKED_EXTERNAL_ACTIVATION_REQUIRED.
+[Controlled Frontend production acceptance](../../evidence/phase-18/PHASE-18-FRONTEND-PRODUCTION-ACCEPTANCE-2026-10-06.md) is the current
+release evidence index. The owner's NO_PAYMENT demo scope remains unchanged:
+payment gates are DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO, not PASS. Payment
+remains disabled. Frontend PR #26 is merged and main/live is
+`940e278555b2d33054fb2780d7348ded59ba2c3e`; Vercel production is Ready.
+FRONTEND_RUNTIME_ACCEPTANCE=PASS; FRONTEND_DEPLOYMENT_ACCEPTANCE=PASS;
+PRODUCTION_SMOKE=PASS for the bounded anonymous/read-only demo scope.
+Earlier defect, local-branch retention, next-action and dated gate snapshots
+below are historical where superseded. Full authenticated UAT is not relabeled.
+MONITORING_ACTIVATION=BLOCKED_EXTERNAL_ACTIVATION_REQUIRED; monitoring is not waived.
 FINAL_PHASE18_RECONCILIATION=BLOCKED; PHASE_18_DEMO_RELEASE_READY=NO;
 FULL_PAYMENT_LAUNCH_READY=NO; PHASE_18_DONE=NO; PHASE_18_STATUS=BLOCKED_EXTERNAL;
 PHASE_18_CLOSEOUT_PROFILE=NOT_CLOSED; PHASE_19_DEPENDENCY_SATISFIED=NO;
-PHASE_19_STARTED=NO. Remaining demo gates: FRONTEND_DEPLOYMENT_ACCEPTANCE,
-PRODUCTION_SMOKE, MONITORING_ACTIVATION and FINAL_PHASE18_RECONCILIATION.
-NEXT_ACTION=HUMAN_AUTHORIZE_FRONTEND_PRODUCTION_DEPLOYMENT.
+PHASE_19_STARTED=NO. Remaining demo gates: MONITORING_ACTIVATION and
+FINAL_PHASE18_RECONCILIATION. NEXT_ACTION=HUMAN_AUTHORIZE_MONITORING_ACTIVATION.
 
-LNG-18-008 remains open for frontend navigation remediation/deployment
-acceptance and repeat smoke. LNG-18-009 remains BLOCKED by applicable demo
-gates and owner closeout. Historical task statuses below retain their original
+LNG-18-008 deployment/anonymous demo smoke sub-gate is PASS with exact live
+revision evidence. LNG-18-009 remains BLOCKED by monitoring and final
+applicable-gate/owner closeout. Historical task statuses below retain their original
 evidence scope, including pending full UAT.
 
 ## LNG-18-001 — UAT Dataset & Persona Plan

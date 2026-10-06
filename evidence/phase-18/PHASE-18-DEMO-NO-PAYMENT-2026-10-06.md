@@ -1,5 +1,11 @@
 # Phase 18 demo scope and read-only release acceptance - 2026-10-06
 
+The [subsequent controlled Frontend acceptance](PHASE-18-FRONTEND-PRODUCTION-ACCEPTANCE-2026-10-06.md) supersedes
+the defect, unpushed branch and pending Frontend/smoke findings recorded below.
+Those observations are historical; the owner-approved payment deferral remains
+current. Frontend acceptance/smoke now PASS; monitoring and final reconciliation
+remain BLOCKED. NEXT_ACTION=HUMAN_AUTHORIZE_MONITORING_ACTIVATION.
+
 ## Owner-approved scope amendment
 
 This is the current release disposition. Earlier dated evidence remains historical.
