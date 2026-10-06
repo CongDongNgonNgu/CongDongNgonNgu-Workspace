@@ -1,5 +1,23 @@
 # Phase 18 operational readiness
 
+## Current demo release disposition - 2026-10-06
+
+The [owner-approved no-payment demo amendment](PHASE-18-DEMO-NO-PAYMENT-2026-10-06.md) is the
+current Phase 18 release disposition and evidence index. Earlier dated state,
+next-action and release-gate snapshots below are historical where superseded.
+Payment provider selection/activation is DEFERRED_BY_OWNER_FOR_DEMO; legacy
+PayOS/config/webhook/live gates are DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO,
+not PASS. Payment remains disabled. Backend/CORS smoke and frontend provenance
+are verified. Frontend hash navigation fails to scroll; full demo smoke is FAIL
+and deployment acceptance remains BLOCKED_DEPLOYMENT_REQUIRED after a source fix.
+Monitoring is not waived: MONITORING_ACTIVATION=BLOCKED_EXTERNAL_ACTIVATION_REQUIRED.
+FINAL_PHASE18_RECONCILIATION=BLOCKED; PHASE_18_DEMO_RELEASE_READY=NO;
+FULL_PAYMENT_LAUNCH_READY=NO; PHASE_18_DONE=NO; PHASE_18_STATUS=BLOCKED_EXTERNAL;
+PHASE_18_CLOSEOUT_PROFILE=NOT_CLOSED; PHASE_19_DEPENDENCY_SATISFIED=NO;
+PHASE_19_STARTED=NO. Remaining demo gates: FRONTEND_DEPLOYMENT_ACCEPTANCE,
+PRODUCTION_SMOKE, MONITORING_ACTIVATION and FINAL_PHASE18_RECONCILIATION.
+NEXT_ACTION=HUMAN_AUTHORIZE_FRONTEND_PRODUCTION_DEPLOYMENT.
+
 **Date:** 2026-10-05. **Scope:** documentation and role assignment only.
 This is the authoritative production deployment, rollback, restore, smoke,
 monitoring and go/no-go runbook. It supersedes operational documentation gaps
@@ -454,8 +472,8 @@ This checklist is READY as an operator procedure. All unchecked execution gates
 remain OPEN; `PRODUCTION_RELEASE_GO_NO_GO=NO_GO`. The preflight checklist is a
 historical snapshot and must not be used as a competing active checklist.
 
-- [ ] CODE: Backend intended full SHA verified against provider source.
-- [ ] CODE: Frontend intended full SHA verified against provider source.
+- [x] CODE: Backend bec4ea4 full SHA verified against Render; see current demo evidence.
+- [x] CODE: Frontend a013c45 full SHA verified against Vercel; navigation fix not live yet.
 - [ ] CODE: exact-head CI PASS and no unresolved engineering blocker.
 - [ ] DATABASE: migration disposition/current schema compatibility confirmed.
 - [x] DATABASE: backup gate waived for the current recreatable seed/demo release
@@ -467,20 +485,17 @@ historical snapshot and must not be used as a competing active checklist.
 - [ ] RECOVERY: operator access/availability and acceptable recovery window confirmed.
 - [ ] MONITORING: authorized external monitor active and alert delivery tested.
 - [x] MONITORING: primary/secondary alert ownership assigned.
-- [ ] PAYMENT: PayOS credential presence/configuration verified without disclosure.
-- [ ] PAYMENT: public HTTPS webhook registered and signed processing verified
-      within separately authorized scope (no fabricated callback).
-- [ ] PAYMENT: desired QR state explicit; keep false until activation authorized.
-- [ ] PAYMENT: bounded live verification separately authorized (execution after
-      deployment; not a deployment/smoke side effect).
+- PAYMENT: credentials/webhook/live verification DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO;
+  none performed or counted PASS. Future provider activation remains separately authorized.
+- [x] PAYMENT SAFETY: server capability disabled, QR false; disabled UX verified.
 - [ ] AUTHORIZATION: exact production deploy/restart action authorized.
 - [x] POST DEPLOY / Backend compatibility step: exact bec4ea4 revision Live,
       health/catalog smoke PASS in development mode; see
       [controlled deployment evidence](PHASE-18-CONTROLLED-BACKEND-DEPLOY-2026-10-05.md).
-- [ ] POST DEPLOY / final release: Frontend revision and production-mode smoke PASS.
+- [ ] POST DEPLOY / demo release: frontend hash-navigation fix live and repeat smoke PASS.
 - [ ] POST DEPLOY: logs/error rate/redaction/correlation/alerts sane.
-- [ ] FINAL: live verification evidence reconciled and Phase 18 final release
-      evidence/owner closeout accepted; Phase 19 requires separate authorization.
+- [ ] FINAL: demo evidence and explicit payment deferral reconciled; all applicable
+      non-payment gates/owner closeout accepted. Phase 19 requires separate authorization.
 
 Runbook documentation readiness is complete. Release-time access/config checks,
 backup/monitor activation and production execution are not documentation defects.
