@@ -239,5 +239,8 @@ The canonical operational block is maintained in
 `docs/engineering/CODEX-WORKING-RULES.md` under “Standing global
 orchestration authorization”.
 
-## DEC-032 - Phase 19 pre-launch scope and dependency amendment
+## DEC-033 - Phase 19 pre-launch scope and dependency amendment
 Accepted by explicit owner Scope Correction on 2026-10-06. [Amendment](../phases/PHASE-19-GROWTH-V2/SCOPE-AMENDMENT.md) defines PRE_LAUNCH_FEATURE_EXPANSION / PRE_LAUNCH_DEMO. No known real users; seed/demo/UAT technical evidence not demand. 001 cancelled as inapplicable; all002 through 008 design eligible;009 compares. PRs#108-111 post-launch gates superseded for current profile; artifacts/results preserved. No artificial wait or production/activation/next-phase permission. Existing009 separate future-epic implementation boundary retained.
+
+## DEC-034 - PWA-first client decision
+[Accepted discovery ADR](../docs/DEC-034-PHASE-19-PWA-FIRST-CLIENT-DECISION.md) retains PWA before a separately approved physical-device gap comparison. No client fork/store/provider activation or next-phase authorization. DEC-033 renumbers the scope amendment to avoid collision with the existing DEC-032 Phase18 payment boundary; no decision substance changed.
