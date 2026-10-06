@@ -3,9 +3,11 @@
 ## Current Phase 19 pre-launch dependency exception - 2026-10-06
 Phase18 DONE/DEMO_NO_PAYMENT satisfied. Accepted [amendment](../phases/PHASE-19-GROWTH-V2/SCOPE-AMENDMENT.md):19A reconciliation ->19B all002 through 008 ->19C009. 001 CANCELLED/SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE no longer blocks discovery. 005 retains Phase16 PWA comparison; interactions/corpus maturity apply to later ML/RAG deployment. No seed demand claims. Implementation future separately approved epic; Phase20 unauthorized.
 
+Phase19 prelaunch discovery/portfolio DONE after all seven assessments and009 integrated (PR112–114, CI/cleanup verified). 001 cancellation satisfies the accepted scope exception, not evidence completion. NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_20_AUTHORIZATION. No next-phase task graph or implementation epic created.
+
 ## Historical post-launch dependency snapshot - superseded
 
-## Current Phase 19 dependency disposition — 2026-10-06
+### Historical Phase 19 dependency disposition — 2026-10-06
 
 Phase 18 DONE / DEMO_NO_PAYMENT satisfies the Phase 19 major-phase dependency.
 Owner `START_PHASE_19=YES` authorizes its execution. Earlier unopened/wait

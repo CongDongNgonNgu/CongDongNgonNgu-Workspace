@@ -4,9 +4,11 @@
 BLOCKER-19-001=CLOSED_BY_OWNER_SCOPE_SUPERSESSION, not evidence received.
 001 CANCELLED/SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE; missing metrics EXPECTED_PRE_LAUNCH. Current discovery requires no observation/source approval; future production/provider/payment/data/next-phase gates remain. Old seven-field observation owner gate superseded, recommendations unapplied.
 
+Phase19 has no unresolved current discovery/portfolio blocker. Original001 remains CANCELLED, no fabricated evidence. Future locale/copy/group/ML/corpus/provider/legal/payment/backup decisions remain prerequisites for future approved initiatives. Major-phase boundary is WAIT_FOR_EXPLICIT_PHASE_20_AUTHORIZATION.
+
 ## Historical evidence blocker - superseded for current profile
 
-## Current Phase 19 evidence blocker — 2026-10-06
+### Historical Phase 19 evidence blocker — 2026-10-06
 
 - BLOCKER-19-001 / LNG-19-001 / `BLOCKED_EXTERNAL` / OPEN
   - Evidence: [19A inventory](../evidence/phase-19/PHASE-19A-EVIDENCE-INVENTORY-2026-10-06.md).
