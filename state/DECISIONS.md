@@ -244,3 +244,6 @@ Accepted by explicit owner Scope Correction on 2026-10-06. [Amendment](../phases
 
 ## DEC-034 - PWA-first client decision
 [Accepted discovery ADR](../docs/DEC-034-PHASE-19-PWA-FIRST-CLIENT-DECISION.md) retains PWA before a separately approved physical-device gap comparison. No client fork/store/provider activation or next-phase authorization. DEC-033 renumbers the scope amendment to avoid collision with the existing DEC-032 Phase18 payment boundary; no decision substance changed.
+
+## DEC-035 - Pre-launch Growth V2 portfolio recommendation
+[Phase19 portfolio](../phases/PHASE-19-GROWTH-V2/PORTFOLIO.md) proposes006 bounded multilingual journey next,004 scoped-membership experiment,008 relational/lexical experiment; defers002 scoring,003 marketplace,005 native and007 ML. Based on owner global-community direction plus inspected technical evidence, not proven demand. Future implementation/experiments require separately approved epic; no Phase20 created or started. Portfolio integration gates pending.
