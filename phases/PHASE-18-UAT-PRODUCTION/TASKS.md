@@ -2,26 +2,48 @@
 
 ## Current demo release disposition - 2026-10-06
 
-[Controlled Frontend production acceptance](../../evidence/phase-18/PHASE-18-FRONTEND-PRODUCTION-ACCEPTANCE-2026-10-06.md) is the current
-release evidence index. The owner's NO_PAYMENT demo scope remains unchanged:
-payment gates are DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO, not PASS. Payment
-remains disabled. Frontend PR #26 is merged and main/live is
-`940e278555b2d33054fb2780d7348ded59ba2c3e`; Vercel production is Ready.
-FRONTEND_RUNTIME_ACCEPTANCE=PASS; FRONTEND_DEPLOYMENT_ACCEPTANCE=PASS;
-PRODUCTION_SMOKE=PASS for the bounded anonymous/read-only demo scope.
-Earlier defect, local-branch retention, next-action and dated gate snapshots
-below are historical where superseded. Full authenticated UAT is not relabeled.
-MONITORING_ACTIVATION=BLOCKED_EXTERNAL_ACTIVATION_REQUIRED; monitoring is not waived.
-FINAL_PHASE18_RECONCILIATION=BLOCKED; PHASE_18_DEMO_RELEASE_READY=NO;
-FULL_PAYMENT_LAUNCH_READY=NO; PHASE_18_DONE=NO; PHASE_18_STATUS=BLOCKED_EXTERNAL;
-PHASE_18_CLOSEOUT_PROFILE=NOT_CLOSED; PHASE_19_DEPENDENCY_SATISFIED=NO;
-PHASE_19_STARTED=NO. Remaining demo gates: MONITORING_ACTIVATION and
-FINAL_PHASE18_RECONCILIATION. NEXT_ACTION=HUMAN_AUTHORIZE_MONITORING_ACTIVATION.
+[Monitoring activation and final demo closeout](../../evidence/phase-18/PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md) is the current
+authoritative release evidence index. All earlier dated gate/status/next-action
+snapshots below are historical where superseded; their original test scope is
+preserved. Backend main/live bec4ea4 and Frontend main/live 940e278 are unchanged.
+NODE_ENV=production; RENDER_AUTO_DEPLOY=OFF. Backend/Frontend deployment
+acceptance and bounded demo PRODUCTION_SMOKE are PASS.
 
-LNG-18-008 deployment/anonymous demo smoke sub-gate is PASS with exact live
-revision evidence. LNG-18-009 remains BLOCKED by monitoring and final
-applicable-gate/owner closeout. Historical task statuses below retain their original
-evidence scope, including pending full UAT.
+MONITORING_PROVIDER=GITHUB_ACTIONS_WORKSPACE; MONITORING_ACTIVE=YES;
+MONITORING_ACTIVATION=PASS. Main workflow is enabled at 15-minute cadence;
+TEST Issue #106 creation/recovery and live three-target run passed. Alert channel
+is GitHub Issue; PROJECT_RELEASE_OWNER primary, APPLICATION_OWNER secondary.
+No real-time SLA, human notification latency or automated escalation is claimed.
+
+FINAL_PHASE18_RECONCILIATION=PASS; PHASE_18_DEMO_RELEASE_SCOPE=NO_PAYMENT;
+PHASE_18_DEMO_RELEASE_READY=YES; PHASE_18_DONE=YES; PHASE_18_STATUS=DONE;
+PHASE_18_TASK_SET_COMPLETE=YES; PHASE_18_FINAL_GATE=PASS_FOR_DEMO_NO_PAYMENT;
+PHASE_18_CLOSEOUT_PROFILE=DEMO_NO_PAYMENT; FULL_PAYMENT_LAUNCH_READY=NO.
+PHASE_19_DEPENDENCY_SATISFIED=YES; PHASE_19_STARTED=NO.
+REMAINING_PHASE_18_DEMO_GATES=NONE.
+NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19_AUTHORIZATION.
+
+Payment provider remains unselected and disabled. PAYOS_CONFIG,
+WEBHOOK_REGISTRATION and LIVE_PAYOS_VERIFICATION remain
+DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO, not PASS. Backup remains
+WAIVED_FOR_RECREATABLE_DEMO_DATA_ONLY, verification NOT_PERFORMED.
+Revisit backup before relying on persistent user/payment data. Frontend log
+sanity stays WARN for EXPECTED_ANONYMOUS_REFRESH_403, release blocker NO.
+Latest journey matrix: 20 PASS/0 FAIL/0 BLOCKED/2 N/A in original TEST/UAT scope;
+production acceptance remains bounded read-only demo smoke. Full live
+authenticated/provider execution and recovery-time guarantees are not claimed.
+
+## Current task status - DEMO_NO_PAYMENT
+
+LNG-18-001..009=DONE_FOR_APPLICABLE_DEMO_SCOPE. Historical task descriptions
+and statuses below describe their original capture time; latest accepted matrix
+resolves executable UAT failures, retained regression covers source gates,
+production deployment/smoke and monitoring are verified, and final closeout is
+accepted. Payment production execution is DEFERRED; production backup is WAIVED,
+never relabeled PASS. Live authenticated production mutations are outside this
+read-only demo acceptance profile. Phase 19 has not started.
+
+## Historical task records
 
 ## LNG-18-001 — UAT Dataset & Persona Plan
 **Status:** PASS_WITH_LIVE_EXECUTION_PENDING

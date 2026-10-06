@@ -1,5 +1,11 @@
 # Phase 18 controlled Frontend production acceptance - 2026-10-06
 
+[Final monitoring/demo closeout](PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md)
+supersedes the pending monitoring/closeout and next-action snapshots below.
+Original observed acceptance and payment-deferral facts remain valid; older
+remaining-gate/status text is historical.
+
+
 ## Authorization and exact integration
 
 Owner explicitly authorized pushing candidate

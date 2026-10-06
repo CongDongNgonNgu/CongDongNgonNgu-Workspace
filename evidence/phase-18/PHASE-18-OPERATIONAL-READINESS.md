@@ -2,21 +2,36 @@
 
 ## Current demo release disposition - 2026-10-06
 
-[Controlled Frontend production acceptance](PHASE-18-FRONTEND-PRODUCTION-ACCEPTANCE-2026-10-06.md) is the current
-release evidence index. The owner's NO_PAYMENT demo scope remains unchanged:
-payment gates are DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO, not PASS. Payment
-remains disabled. Frontend PR #26 is merged and main/live is
-`940e278555b2d33054fb2780d7348ded59ba2c3e`; Vercel production is Ready.
-FRONTEND_RUNTIME_ACCEPTANCE=PASS; FRONTEND_DEPLOYMENT_ACCEPTANCE=PASS;
-PRODUCTION_SMOKE=PASS for the bounded anonymous/read-only demo scope.
-Earlier defect, local-branch retention, next-action and dated gate snapshots
-below are historical where superseded. Full authenticated UAT is not relabeled.
-MONITORING_ACTIVATION=BLOCKED_EXTERNAL_ACTIVATION_REQUIRED; monitoring is not waived.
-FINAL_PHASE18_RECONCILIATION=BLOCKED; PHASE_18_DEMO_RELEASE_READY=NO;
-FULL_PAYMENT_LAUNCH_READY=NO; PHASE_18_DONE=NO; PHASE_18_STATUS=BLOCKED_EXTERNAL;
-PHASE_18_CLOSEOUT_PROFILE=NOT_CLOSED; PHASE_19_DEPENDENCY_SATISFIED=NO;
-PHASE_19_STARTED=NO. Remaining demo gates: MONITORING_ACTIVATION and
-FINAL_PHASE18_RECONCILIATION. NEXT_ACTION=HUMAN_AUTHORIZE_MONITORING_ACTIVATION.
+[Monitoring activation and final demo closeout](PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md) is the current
+authoritative release evidence index. All earlier dated gate/status/next-action
+snapshots below are historical where superseded; their original test scope is
+preserved. Backend main/live bec4ea4 and Frontend main/live 940e278 are unchanged.
+NODE_ENV=production; RENDER_AUTO_DEPLOY=OFF. Backend/Frontend deployment
+acceptance and bounded demo PRODUCTION_SMOKE are PASS.
+
+MONITORING_PROVIDER=GITHUB_ACTIONS_WORKSPACE; MONITORING_ACTIVE=YES;
+MONITORING_ACTIVATION=PASS. Main workflow is enabled at 15-minute cadence;
+TEST Issue #106 creation/recovery and live three-target run passed. Alert channel
+is GitHub Issue; PROJECT_RELEASE_OWNER primary, APPLICATION_OWNER secondary.
+No real-time SLA, human notification latency or automated escalation is claimed.
+
+FINAL_PHASE18_RECONCILIATION=PASS; PHASE_18_DEMO_RELEASE_SCOPE=NO_PAYMENT;
+PHASE_18_DEMO_RELEASE_READY=YES; PHASE_18_DONE=YES; PHASE_18_STATUS=DONE;
+PHASE_18_TASK_SET_COMPLETE=YES; PHASE_18_FINAL_GATE=PASS_FOR_DEMO_NO_PAYMENT;
+PHASE_18_CLOSEOUT_PROFILE=DEMO_NO_PAYMENT; FULL_PAYMENT_LAUNCH_READY=NO.
+PHASE_19_DEPENDENCY_SATISFIED=YES; PHASE_19_STARTED=NO.
+REMAINING_PHASE_18_DEMO_GATES=NONE.
+NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_19_AUTHORIZATION.
+
+Payment provider remains unselected and disabled. PAYOS_CONFIG,
+WEBHOOK_REGISTRATION and LIVE_PAYOS_VERIFICATION remain
+DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO, not PASS. Backup remains
+WAIVED_FOR_RECREATABLE_DEMO_DATA_ONLY, verification NOT_PERFORMED.
+Revisit backup before relying on persistent user/payment data. Frontend log
+sanity stays WARN for EXPECTED_ANONYMOUS_REFRESH_403, release blocker NO.
+Latest journey matrix: 20 PASS/0 FAIL/0 BLOCKED/2 N/A in original TEST/UAT scope;
+production acceptance remains bounded read-only demo smoke. Full live
+authenticated/provider execution and recovery-time guarantees are not claimed.
 
 **Date:** 2026-10-05. **Scope:** documentation and role assignment only.
 This is the authoritative production deployment, rollback, restore, smoke,
@@ -410,34 +425,27 @@ Procedural sources: [pg_dump](https://www.postgresql.org/docs/current/app-pgdump
 Production tooling access and database mapping remain release-time operator
 requirements; the TEST/UAT CLI is not repurposed or advertised as production-ready.
 
-## Provider-neutral monitoring plan
+## Active demo monitoring and retained broader plan
 
-```text
-MONITORING_PLAN=READY
-MONITORING_PROVIDER=OWNER_CHOICE
-EXTERNAL_MONITORING_CURRENTLY_ACTIVE=NO
-EXTERNAL_MONITORING_REQUIRED_BEFORE_PRODUCTION_LAUNCH=YES
-```
+MONITORING_PLAN=READY; MONITORING_PROVIDER=GITHUB_ACTIONS_WORKSPACE;
+EXTERNAL_MONITORING_CURRENTLY_ACTIVE=YES; MONITORING_ACTIVATION=PASS.
+The independent GitHub Actions availability monitor checks Backend health,
+Frontend HTML and Frontend-to-Backend health every 15 minutes. Alert channel is
+GitHub Issue; PROJECT_RELEASE_OWNER primary, APPLICATION_OWNER secondary.
 
-PROJECT_RELEASE_OWNER chooses provider and privately confirms an alert
-destination with APPLICATION_OWNER as backup acknowledgement role. Selection
-and activation are separately authorized; no vendor account is required to
-complete this plan. At release, record target list, polling window, failure
-threshold, observation window, acknowledgement deadline, escalation timeout
-and coverage roster; these are execution inputs, not an invented SLA.
+See [activation/closeout evidence](PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md)
+and [monitor operation](../../docs/operations/PRODUCTION-AVAILABILITY-MONITOR.md).
+TEST Issue creation, recovery comment/close and live probes are verified.
+Scheduling is periodic with possible delay; there is no contracted real-time
+SLA, human acknowledgement response-time guarantee or automated escalation.
+Primary manually reviews Issues/run failures and coordinates secondary response.
 
-| Signal | Requirement / response |
-| --- | --- |
-| Backend availability | HTTPS GET exact health URL; HTTP 200 plus expected envelope/service/production marker; transport/body failure alerts primary owner |
-| Frontend availability | HTTPS production home URL status/response; alert on sustained unreachable/HTTP failure |
-| API health | Sustained unexpected 5xx and latency versus pre-release baseline where platform telemetry supports it; APPLICATION_OWNER investigates |
-| Payment | Existing telemetry for provider/checkout errors, webhook processing/signature/reconciliation failures, no raw payload/signature; PAYMENT_RECONCILIATION_OWNER investigates |
-| Operational | Delivery failure and unacknowledged alerts escalate to secondary; record ownership and incident reference |
-
-Before launch: activate approved monitor, verify target identity and redaction,
-test alert delivery/acknowledgement/escalation without financial or DB mutation,
-and attach sanitized evidence. Lack of required telemetry must be resolved or
-explicitly reviewed before execution; do not invent a configured log sink.
+Broader telemetry requirements remain documented for future release review:
+platform 5xx/latency, provider delivery, payment/webhook/reconciliation signals
+and escalation-channel testing where supported. Availability monitoring does
+not claim those signals configured. Payment is excluded from the current demo.
+Revisit alert delivery/roster/windows before expanding beyond recreatable demo
+data or promising stronger availability; no vendor or secret was added.
 
 ## Safe smoke — future authorized post-deploy/recovery check
 
@@ -466,41 +474,49 @@ release authorization, using a bounded observation window recorded in ledger.
    Record observed window, result and exact provider revisions; public HTTP
    success alone does not prove source SHA or all release gates.
 
-## Authoritative production go/no-go checklist
+## Authoritative production go/no-go checklist ? DEMO_NO_PAYMENT
 
-This checklist is READY as an operator procedure. All unchecked execution gates
-remain OPEN; `PRODUCTION_RELEASE_GO_NO_GO=NO_GO`. The preflight checklist is a
-historical snapshot and must not be used as a competing active checklist.
+PRODUCTION_RELEASE_GO_NO_GO=GO_FOR_DEMO_NO_PAYMENT_ONLY.
+This disposition applies to the exact accepted recreatable no-payment demo,
+not a future full-payment release. Earlier preflight checklists are historical.
 
-- [x] CODE: Backend bec4ea4 full SHA verified against Render; see current demo evidence.
-- [x] CODE: Frontend 940e278 full SHA verified against Vercel; hash navigation PASS.
-- [ ] CODE: exact-head CI PASS and no unresolved engineering blocker.
-- [ ] DATABASE: migration disposition/current schema compatibility confirmed.
-- [x] DATABASE: backup gate waived for the current recreatable seed/demo release
-      by owner confirmation; no backup was created or verified. See the
-      [release-specific exception](PHASE-18-DEMO-BACKUP-WAIVER-2026-10-05.md).
-      Reinstate the normal backup requirement when persistent user/payment data exists.
-- [ ] RECOVERY: verified deployed rollback targets/artifacts recorded in ledger.
-- [x] RECOVERY: deployment/rollback/restore runbooks ready; roles assigned.
-- [ ] RECOVERY: operator access/availability and acceptable recovery window confirmed.
-- [ ] MONITORING: authorized external monitor active and alert delivery tested.
-- [x] MONITORING: primary/secondary alert ownership assigned.
-- PAYMENT: credentials/webhook/live verification DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO;
-  none performed or counted PASS. Future provider activation remains separately authorized.
-- [x] PAYMENT SAFETY: server capability disabled, QR false; disabled UX verified.
-- [ ] AUTHORIZATION: exact production deploy/restart action authorized.
-- [x] POST DEPLOY / Backend compatibility step: exact bec4ea4 revision Live,
-      health/catalog smoke PASS in development mode; see
-      [controlled deployment evidence](PHASE-18-CONTROLLED-BACKEND-DEPLOY-2026-10-05.md).
-- [x] POST DEPLOY / demo release: frontend hash-navigation fix live and repeat smoke PASS.
-- [ ] POST DEPLOY: logs/error rate/redaction/correlation/alerts sane.
-- [ ] FINAL: demo evidence and explicit payment deferral reconciled; all applicable
-      non-payment gates/owner closeout accepted. Phase 19 requires separate authorization.
+- [x] CODE: Backend bec4ea4 and Frontend 940e278 exact main/live provenance,
+      accepted CI/regression and hash-navigation remediation verified.
+- [x] DATABASE: no migration introduced/required for this release; none executed.
+- DATABASE BACKUP: WAIVED_FOR_RECREATABLE_DEMO_DATA_ONLY, NOT_PERFORMED,
+      not PASS. [Owner exception](PHASE-18-DEMO-BACKUP-WAIVER-2026-10-05.md).
+      Reinstate backup before relying on persistent user/payment data.
+- [x] RECOVERY DOCUMENTATION: deployment/rollback/restore runbooks and roles ready.
+- RECOVERY LIMITATIONS: previous Backend 9e15f8c and Frontend a013c45 deployment
+      revisions recorded as historical provenance. Backend 9e15f8c rejects
+      production+Resend/R2 with retained config and is not a safe rollback target;
+      Frontend a013c45 restores the known hash defect. Both require compatible
+      source/config review and separate authorization. No recovery execution is claimed. RPO/RTO remain
+      NOT_YET_CONTRACTED; continuous operator availability is not guaranteed.
+- [x] MONITORING: enabled main schedule; TEST Issue #106 alert/recovery, live
+      three-target run PASS; Issue primary/secondary ownership documented.
+- MONITORING LIMITATIONS: no real-time SLA or external notification delivery/
+      automated escalation promise; manually review Issues and run failures.
+- PAYMENT: provider unselected; credentials/webhook/live verification
+      DEFERRED_PROVIDER_NOT_SELECTED_FOR_DEMO, never PASS.
+- [x] PAYMENT SAFETY: safe catalog disabled, QR unavailable, provider null.
+- [x] AUTHORIZATION: prior exact Backend deploy/CORS and Frontend merge/deploy
+      actions explicitly authorized; this monitoring and final closeout authorized.
+- [x] POST DEPLOY: exact Backend production mode and Frontend Ready; bounded
+      read-only smoke, hash navigation, three-width acceptance and API routing PASS.
+- [x] BOUNDED OBSERVABILITY: prior startup/redaction/correlation evidence and
+      current monitor/live/public checks reconciled. Frontend WARN anonymous
+      refresh403 preserved as non-fatal, non-blocking baseline.
+- [x] FINAL: applicable demo evidence, excluded live authenticated mutations,
+      payment deferral, demo backup waiver and residual risks reconciled.
 
-Runbook documentation readiness is complete. Release-time access/config checks,
-backup/monitor activation and production execution are not documentation defects.
+PHASE_18_DEMO_RELEASE_READY=YES; FULL_PAYMENT_LAUNCH_READY=NO.
+Phase 19 eligibility does not start it; separate owner authorization required.
+See [final evidence](PHASE-18-MONITORING-AND-DEMO-CLOSEOUT-2026-10-06.md).
 
-## Current disposition
+## Historical operational-readiness disposition
+
+
 
 Documentation validation: balanced Markdown fences, 10 local links resolved,
 source paths checked, current operational values matched across PROJECT-STATE,
