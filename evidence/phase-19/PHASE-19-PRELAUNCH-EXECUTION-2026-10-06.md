@@ -51,3 +51,15 @@ Independent review PASS after clarifying exchange completion start cohort/horizo
 No prototype necessary for design acceptance; no runtime/accuracy/translation/fairness/market validation PASS claimed. Existing monitor tests passed; documents/links/secret/diff/security review gates apply. Application lint/typecheck/build/audit/migration/UI/runtime N/A, not fabricated. 19B is VERIFYING pending normal PR/CI/main/cleanup.
 
 19A response completed; complete primary code block copied (24,344 characters), titled PHASE19B PRE-LAUNCH V2 CANDIDATE DISCOVERY, final NEXT_ACTION requests19C. Validated same project/phase, amended prelaunch scope, no feature build/production/Phase20 action. Additional capability/input/scope/security matrices supplied in discovery index; safe discovery executed automatically. Browser text was not treated as provider or production authorization.
+
+## 19B integration and 19C portfolio
+
+[PR #113](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/113) merged at9c0b4f3c806af13408fb652c075daae2fe6945ae. Feature62e2d955c73881b76ba8667cc3f6752febc2e67d ancestry/main verified; CI37437385405 and post-merge37437419453 PASS; remote/local discovery branch deleted/pruned. Reviewer confirmed corrected exchange metric and index/ADR PASS. Clean main before19C branch.
+
+19B DONE report actually sent to confirmed same project conversation; complete7235-character next code block copied after response complete, titled PHASE19C PORTFOLIO PRIORITIZATION, ending WAIT_FOR_EXPLICIT_NEXT_MAJOR_PHASE_AUTHORIZATION. Validation PASS: same project/Phase19, portfolio only, no build/provider/production/newphase action. Safe portfolio executed automatically.
+
+Portfolio includes all7 comparison rows and one disposition each:006 BUILD_NEXT,004/008 EXPERIMENT,002/003/005/007 DEFER. Product benefits hypotheses; no demand/metrics/price fabricated. Independent advisory review supports006 bounded complete journey over groups as first recommendation given verified vi-only UI and greater group ownership/privacy work. Choice is revisable by owner, not direct approval to build. Promoted scopes have expected outcomes/acceptance/dependencies/hardstops/future metrics/rollback; no new epic/phase artifact.
+
+19C portfolio VERIFYING pending normal review/PR/CI/main/cleanup. Phase19DONE=NO until closeout gates are actually verified. Backend/Frontend unchanged; no production query/mutation or payment/AI/telemetry activation.
+
+19C independent review PASS with no actionable findings. Local checks PASS: seven unique portfolio dispositions, three promoted scopes x six required fields,32 current local links, credential pattern scan, staged diff check; self/security/privacy review PASS. No dependency/application changes, accepted audit state unchanged. Required CI/post-merge/cleanup still pending.
