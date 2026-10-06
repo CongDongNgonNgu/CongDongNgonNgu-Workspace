@@ -1,5 +1,11 @@
 # Phase 19A privacy-safe measurement plan
 
+> Historical post-launch profile artifact. Owner PRE_LAUNCH_FEATURE_EXPANSION
+> amendment (2026-10-06) supersedes its current evidence/observation dependency.
+> Original findings/results retained; no metrics, collection access, window or
+> suppression policy approved.
+
+
 Status: planning artifact, not collected evidence or production activation.
 Authority: LNG-19-001; validated same-Phase-19 recovery prompt received through
 the terminal relay on 2026-10-06. [Source map](EVIDENCE-SOURCE-MAP.md),

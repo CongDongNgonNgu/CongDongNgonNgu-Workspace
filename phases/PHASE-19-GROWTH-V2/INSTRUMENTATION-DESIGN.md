@@ -1,5 +1,11 @@
 # Phase 19A conceptual measurement gaps — inactive design
 
+> Historical post-launch profile artifact. Owner PRE_LAUNCH_FEATURE_EXPANSION
+> amendment (2026-10-06) supersedes its current evidence/observation dependency.
+> Original findings/results retained; no metrics, collection access, window or
+> suppression policy approved.
+
+
 No implementation, tracking script, migration, persisted event, SDK, provider,
 credential, deployment or collection is added. These are optional future
 designs for gaps found in the [source map](EVIDENCE-SOURCE-MAP.md), not selected

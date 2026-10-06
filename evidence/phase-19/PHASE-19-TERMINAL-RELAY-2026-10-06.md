@@ -1,5 +1,11 @@
 # Phase 19 terminal relay correction — 2026-10-06
 
+> Historical post-launch profile artifact. Owner PRE_LAUNCH_FEATURE_EXPANSION
+> amendment (2026-10-06) supersedes its current evidence/observation dependency.
+> Original findings/results retained; no metrics, collection access, window or
+> suppression policy approved.
+
+
 Owner explicitly requires relay at DONE, BLOCKED_EXTERNAL, BLOCKED, PARTIAL
 and FAILED, followed by next/recovery prompt validation and safe same-phase
 execution. This supersedes the DONE-only wording; hard human stops remain.

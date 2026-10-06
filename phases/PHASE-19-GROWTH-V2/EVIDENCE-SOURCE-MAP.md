@@ -1,5 +1,11 @@
 # Phase 19A evidence source map
 
+> Historical post-launch profile artifact. Owner PRE_LAUNCH_FEATURE_EXPANSION
+> amendment (2026-10-06) supersedes its current evidence/observation dependency.
+> Original findings/results retained; no metrics, collection access, window or
+> suppression policy approved.
+
+
 Read-only source inspection on 2026-10-06; not production data acquisition.
 Backend source baseline `bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5`, Frontend
 `940e278555b2d33054fb2780d7348ded59ba2c3e`, Workspace recovery baseline

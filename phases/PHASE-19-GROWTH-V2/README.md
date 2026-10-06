@@ -1,13 +1,13 @@
 # Phase 19 — Growth V2
 
-## Goal
-Plan post-launch expansion using observed community/learning data rather than prematurely building every possible feature. Every V2 initiative must have a measurable user problem, dependency/risk review and explicit go/no-go decision.
+## Current profile
+Owner-approved [scope amendment](SCOPE-AMENDMENT.md): PRE_LAUNCH_FEATURE_EXPANSION / PRE_LAUNCH_DEMO. No known real post-launch users; current data seed/demo/TEST/UAT only. Evaluate, prioritize and prepare appropriate V2 features before real-user launch. No observation window or demand evidence required for current discovery.
 
 ## Candidate themes
-Pronunciation scoring/speech recognition, Common Voice research, teacher/expert marketplace, paid workshops, expert verification, certificates, study/private groups, organization spaces, native mobile/wrapper, multilingual product UI, recommendation ML, Language Knowledge Graph and RAG over the Open Language Library.
+Pronunciation/speech, expert/teacher economy, groups/private communities/organization spaces, PWA/native wrapper, multilingual product UI, recommendation ML and Knowledge Graph/RAG V2. Use LNG-19-002 through 008 only.
 
-## Principle
-This phase is a portfolio of discovery/build tasks, not permission to implement all candidates. Prioritize healthy community value, data quality, safety and sustainable economics.
+## Principle and completion gate
+Bounded discovery then portfolio comparison. Every candidate has technical evidence, product-value hypothesis, security/privacy/dependency review, readiness and future validation. 009 assigns BUILD_NEXT/EXPERIMENT/DEFER/REJECT and separate implementation/release recommendations. BUILD_NEXT means owner direction plus technical evidence, not proven demand. Implementation is a future approved epic; no Phase 20 planning or build authorized.
 
-## Completion gate
-Each selected V2 initiative has discovery evidence, architecture/product decision, separate implementation plan and release criteria. Unselected items stay DEFERRED without placeholder production UI.
+## Superseded assumption
+Original post-launch execution/dependency from PRs #108-111 is superseded. Historical evidence and planning are preserved. 001 CANCELLED / SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE, never PASS or evidence collected.
