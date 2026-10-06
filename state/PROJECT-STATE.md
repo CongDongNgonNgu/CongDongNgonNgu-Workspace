@@ -18,6 +18,8 @@ PHASE_19_STARTED=YES
 PHASE_19_STATUS=IN_PROGRESS
 PHASE_19_DONE=NO
 PHASE_19_DECOMPOSITION=19A,19B,19C
+SUBPHASE_TERMINAL_RELAY=REQUIRED
+SUBPHASE_TERMINAL_STATES=DONE|BLOCKED_EXTERNAL|BLOCKED|PARTIAL|FAILED
 CURRENT_SUBPHASE=19A
 PHASE_19A=BLOCKED_EXTERNAL
 LNG_19_001=BLOCKED_EXTERNAL
@@ -42,13 +44,15 @@ PRODUCTION_MUTATION_PERFORMED=NO
 PRODUCTION_DB_MUTATED=NO
 REAL_MONEY_ACTIONS=0
 PHASE_20_STARTED=NO
-NEXT_ACTION=PROVIDE_PRIVACY_SAFE_POST_LAUNCH_EVIDENCE_PACKAGE
+NEXT_ACTION=RELAY_19A_BLOCKED_EXTERNAL_AND_OBTAIN_RECOVERY_PROMPT
 ```
 
 No V2 candidate has been selected. Availability and TEST/UAT evidence do not
 establish real-user demand, trustworthy interaction data or corpus maturity.
 The initial evidence inventory is recorded; LNG-19-001 and Phase 19 remain
-incomplete. Resume within Phase 19 when the evidence dependency is resolved.
+incomplete. The owner's terminal-relay amendment requires sending the current
+19A blocker and obtaining/validating a safe same-phase recovery prompt; it does
+not waive the evidence dependency. Follow CHATGPT-RELAY-PROTOCOL.md.
 
 ## Current demo release disposition - 2026-10-06
 

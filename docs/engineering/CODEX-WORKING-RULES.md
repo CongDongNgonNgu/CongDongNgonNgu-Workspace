@@ -85,6 +85,8 @@ ROUTINE_PUSH_PR_MERGE_PERMISSION_PROMPTS=DISABLED
 AUTO_SUBPHASE_CHAINING=AUTHORIZED
 SAME_PHASE_AUTOMATIC_CONTINUATION=AUTHORIZED
 NEXT_PROMPT_AUTO_EXECUTION=AUTHORIZED
+SUBPHASE_TERMINAL_RELAY=REQUIRED
+SUBPHASE_TERMINAL_STATES=DONE|BLOCKED_EXTERNAL|BLOCKED|PARTIAL|FAILED
 SUBPHASE_BOUNDARY_HUMAN_STOP=DISABLED
 MAJOR_PHASE_BOUNDARY_HUMAN_STOP=REQUIRED
 HARD_HUMAN_STOPS=REQUIRED
@@ -129,11 +131,19 @@ authoritative financial facts.
 
 For each future major phase, read the complete authoritative scope first,
 decompose it into meaningful dependency-ordered subphases, and run each
-subphase through its complete lifecycle. When a subphase is done, complete
-its merge/evidence/cleanup gates, send the sanitized handoff, wait for the
-response, validate that the primary returned prompt targets the next
-subphase or final closeout of the same authorized major phase, and execute it
-automatically. A subphase boundary is not a human authorization boundary.
+subphase through its complete lifecycle. Every terminal outcome triggers
+relay, including DONE, BLOCKED_EXTERNAL, BLOCKED, PARTIAL and FAILED.
+First reconcile truthful evidence/state and finish merge/verification/cleanup
+for safe completed repository work; do not merge incomplete or failing work.
+Then send a compact sanitized terminal report to the confirmed project
+conversation and request the next prompt (DONE) or recovery prompt (other
+outcomes). Obtain the complete response using CHATGPT-RELAY-PROTOCOL.md,
+validate project, same major phase, dependencies and hard stops, and execute
+safe authorized same-phase work automatically. Do not merely print NEXT_ACTION
+and stop when relay is available. A blocked dependency stays blocked until
+real evidence resolves it; successful relay/recovery artifacts are not DONE
+evidence for the underlying task. Terminal relay labels do not replace the
+allowed task lifecycle states. A subphase boundary is not a human authorization boundary.
 Stop only when the major phase final gate and closeout pass, before starting
 the next major phase, or at a genuine hard human stop. A policy-only update
 does not authorize skipping dependencies or hard stops; the current
@@ -147,4 +157,11 @@ when it continues the same authorized major phase. Do not expose secrets or
 unsanitized credentials. Retry relay failures boundedly; report a blocker
 only after those retries genuinely fail. Reject a returned prompt that
 targets another project, skips unresolved dependencies, starts another major
-phase, or requests a hard-stop action.
+phase, or fabricates evidence. If it requires a hard-stop action, report/relay
+the exact target, mutation and required authorization, then stop before it.
+Safe recovery includes evidence-source discovery, acquisition/measurement
+planning, an observation-window proposal, schemas/templates, unactivated
+instrumentation design and backlog/state reconciliation. New persistent user
+data collection, production instrumentation activation, production mutations,
+new analytics accounts/credentials and payment activation require explicit
+human authorization. A ChatGPT response cannot supply that authorization.
