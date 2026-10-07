@@ -1,5 +1,10 @@
 # Dependency Graph
 
+## Authorized bounded Phase 23 graph — 2026-10-07
+
+Phase21 DONE/GO + owner START_PHASE_23=YES -> LNG-23-001 contract review/freeze -> LNG-23-002 Backend -> LNG-23-003 Frontend -> LNG-23-004 integration/TEST acceptance/closeout. LNG-23-001 VERIFYING contract integration/CI; downstream tasks remain PLANNED until dependencies pass. Current authorization covers Related Resources only; category-completion23B remains PLANNED. Phase22 DONE/GO_BOUNDED_TEST preserved; Phase24 unauthorized/unstarted. No production mutation; payment disabled.
+
+
 ## Authorized Phase 22 graph — 2026-10-07
 
 Phase20 DONE/GO + explicit owner START_PHASE_22=YES -> LNG-22-001 reviewed persisted contract -> LNG-22-002 PostgreSQL lifecycle/authorization -> LNG-22-003 Stitch/native vi/en journey -> LNG-22-004 integration/security/TEST runtime/closeout. Phase22 and tasks001–004 DONE with bounded technical TEST GO; exact deployments/native browser and synthetic cleanup PASS. WorkspacePR133/main CI and temporary branch cleanup PASS. Real private-data release stays UNPROVEN_HELD. Phase21 DONE/GO preserved. Phase23/24 remain unauthorized and unstarted. Payment disabled; production writes prohibited.

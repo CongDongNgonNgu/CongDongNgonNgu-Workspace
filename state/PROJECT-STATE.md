@@ -1,5 +1,35 @@
 # Project State
 
+## Authorized bounded Phase 23 start — 2026-10-07
+
+Owner START_PHASE_23=YES authorizes the original Related-Resource Library journey and LNG-23-001 through004. Current bounded scope supersedes historical unauthorized flags only for this journey; roadmap category-completion23B remains PLANNED/outside this run. Mandatory preflight verified all three remote main SHAs match the owner handoff; all working trees were clean, with main as the only local/remote branch. Complete canonical state/dependency/roadmap and Phase21 closeout read; Backend AGENTS absent, Frontend AGENTS read; no .ai-dos manifest or repository-local skills found.
+
+```text
+CURRENT_PHASE=23
+PHASE_23_STATUS=IN_PROGRESS
+PHASE_23_STARTED=YES
+PHASE_23_EXECUTION_AUTHORIZED=YES
+PHASE_23_AUTHORIZED_SCOPE=RELATED_RESOURCE_LIBRARY_ONLY
+LNG_23_001=VERIFYING
+LNG_23_002=PLANNED
+LNG_23_003=PLANNED
+LNG_23_004=PLANNED
+PHASE_23B_STATUS=PLANNED
+PHASE_23B_EXECUTION_AUTHORIZED=NO_BY_CURRENT_BOUNDED_SCOPE
+PHASE_20_STATUS=DONE
+PHASE_20_VERDICT=GO
+PHASE_21_STATUS=DONE
+PHASE_21_VERDICT=GO
+PHASE_22_STATUS=DONE
+PHASE_22_VERDICT=GO_BOUNDED_TEST
+PHASE_24_EXECUTION_AUTHORIZED=NO
+PHASE_24_STARTED=NO
+PAYMENT_REMAINS_DISABLED=YES
+PRODUCTION_DB_MUTATED=NO
+PRODUCTION_MUTATION_PERFORMED=NO
+NEXT_ACTION=VERIFY_CONTRACT_PR_CI_AND_INTEGRATION
+```
+
 ## Authorized Phase 22 execution — 2026-10-07
 
 Owner START_PHASE_22=YES authorizes LNG-22-001 through004, existing TEST paths and normal source-control lifecycle. The Phase22 [implementation contract](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/POLICY-CONTRACT.md) is frozen and integrated; Backend and Frontend implementation and bounded TEST acceptance are complete; see the [Phase22 handoff](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/HANDOFF.md). Closeout PR133/main CI and branch cleanup PASS; Phase22 is DONE with bounded technical TEST GO. Earlier Phase22 planning flags below are historical.
