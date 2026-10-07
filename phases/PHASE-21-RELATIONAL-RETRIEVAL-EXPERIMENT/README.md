@@ -1,6 +1,6 @@
 # Phase 21 — Provenance-Safe Relational Retrieval Experiment
 
-**Status:** VERIFYING
+**Status:** DONE
 **Source candidate:** `LNG-19-008` relational/non-generative slice  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
@@ -36,7 +36,7 @@ Owner authorized the complete Phase 21 lifecycle on 2026-10-07. Current
 prospective [contract](FROZEN-CONTRACT.md) and [fixtures](fixture-v1.json) are
 accepted before candidate implementation. [Observed evidence](EVIDENCE.md) and
 [raw results](benchmark-results-v1.json) meet all frozen quality/safety gates.
-The reviewed [verdict](VERDICT.md) is GO; final integration/cleanup remains in
-verification. [Handoff](HANDOFF.md) defines the separate Phase23 inheritance gates.
+The reviewed [verdict](VERDICT.md) is GO; verdict integration, PR/main CI and
+branch cleanup PASS. [Handoff](HANDOFF.md) defines the separate Phase23 inheritance gates.
 Phase 22 remains
 eligible but unauthorized/unstarted; Phase 23–24 remain unauthorized/unstarted.
