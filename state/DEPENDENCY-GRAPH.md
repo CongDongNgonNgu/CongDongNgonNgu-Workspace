@@ -1,9 +1,29 @@
 # Dependency Graph
 
-## Current Phase 19 pre-launch dependency exception - 2026-10-06
+## Current post-Phase-19 planned dependency graph — 2026-10-07
+
+[Authoritative V2 roadmap](../docs/V2-ROADMAP.md) defines phase cards, entry/exit
+criteria and deferred re-entry gates. Owner authorized planning only; every future
+phase has STATUS=PLANNED, execution authorization NO and started NO.
+
+- Closed Phase 19 -> 20 group policy/authorization experiment.
+- Closed Phase 19 + current Library -> 21 relational retrieval experiment.
+- 20 GO + accepted policy + new owner execution authorization -> 22 bounded text groups.
+- 21 GO + accepted benchmark + new owner execution authorization -> 23 related resources.
+- Completed LNG-19-006 foundation + new owner execution authorization -> 24 additional
+  onboarding/exchange localization; no repeat of vi/en shell/Library.
+
+20, 21 and 24 have independent technical entry gates. Recommended product order
+is 20,21,22,23,24, not a mandatory technical chain. Experiment DEFER/REJECT prevents
+downstream eligibility until reconciled; no automatic promotion or next-phase start.
+Deferred speech/economy/native/ML have explicit conditional re-entry gates, no new
+task graph. Payment remains disabled; monitoring remains active.
+NEXT_ACTION=WAIT_FOR_OWNER_TO_AUTHORIZE_ONE_PLANNED_PHASE.
+
+## Closed Phase 19 pre-launch dependency exception - 2026-10-06
 Phase18 DONE/DEMO_NO_PAYMENT satisfied. Accepted [amendment](../phases/PHASE-19-GROWTH-V2/SCOPE-AMENDMENT.md):19A reconciliation ->19B all002 through 008 ->19C009. 001 CANCELLED/SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE no longer blocks discovery. 005 retains Phase16 PWA comparison; interactions/corpus maturity apply to later ML/RAG deployment. No seed demand claims. Implementation future separately approved epic; Phase20 unauthorized.
 
-Phase19 prelaunch discovery/portfolio DONE after all seven assessments and009 integrated (PR112–114, CI/cleanup verified). 001 cancellation satisfies the accepted scope exception, not evidence completion. NEXT_ACTION=WAIT_FOR_EXPLICIT_PHASE_20_AUTHORIZATION. No next-phase task graph or implementation epic created.
+Phase19 prelaunch discovery/portfolio DONE after all seven assessments and009 integrated (PR112–114, CI/cleanup verified). 001 cancellation satisfies the accepted scope exception, not evidence completion. At discovery closeout no next-phase graph or implementation epic existed; the current roadmap and completed separately authorized LNG-19-006 initiative supersede that forward-looking snapshot.
 
 ## Historical post-launch dependency snapshot - superseded
 

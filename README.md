@@ -32,6 +32,7 @@ Mục tiêu sản phẩm: xây dựng một nền tảng cộng đồng học v�
 - New phase task template: `templates/PHASE-TASK-TEMPLATE.md`
 - Durable architecture/product decisions: `state/DECISIONS.md`
 - Current machine-readable project flags: `state/PROJECT-STATE.md`
+- Authoritative post-Phase-19 V2 roadmap (planning only): [docs/V2-ROADMAP.md](docs/V2-ROADMAP.md)
 
 Không dựa vào việc Codex “nhớ” một cuộc hội thoại trước. Mỗi coding session phải tái dựng context từ các file trên và source thực tế.
 
