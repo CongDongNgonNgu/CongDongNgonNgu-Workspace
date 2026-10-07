@@ -1,0 +1,12 @@
+﻿{
+    "failedAccessibilityAudits":  [
+
+                                  ],
+    "seo":  1,
+    "bestPractices":  1,
+    "url":  "http://127.0.0.1:4178/library?language=vi",
+    "lighthouseVersion":  "13.4.1",
+    "scope":  "LOCAL_LIBRARY_SNAPSHOT_ONLY",
+    "accessibility":  1,
+    "fetchTime":  "2026-10-07T01:45:58.230Z"
+}
