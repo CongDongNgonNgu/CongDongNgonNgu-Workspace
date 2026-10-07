@@ -33,6 +33,7 @@ Mục tiêu sản phẩm: xây dựng một nền tảng cộng đồng học v�
 - Durable architecture/product decisions: `state/DECISIONS.md`
 - Current machine-readable project flags: `state/PROJECT-STATE.md`
 - Authoritative post-Phase-19 V2 roadmap (planning only): [docs/V2-ROADMAP.md](docs/V2-ROADMAP.md)
+- Phase 23 Language Hub roadmap amendment: [docs/V2-ROADMAP-PHASE-23-LANGUAGE-HUB-AMENDMENT.md](docs/V2-ROADMAP-PHASE-23-LANGUAGE-HUB-AMENDMENT.md)
 - V2 Phase 20–24 planning dossiers: [phases/V2-PLANNING-INDEX.md](phases/V2-PLANNING-INDEX.md)
 
 Không dựa vào việc Codex “nhớ” một cuộc hội thoại trước. Mỗi coding session phải tái dựng context từ các file trên và source thực tế.
@@ -43,6 +44,7 @@ Không dựa vào việc Codex “nhớ” một cuộc hội thoại trước. 
 Read AGENTS.md and the CongDongNgonNgu-Workspace repository.
 Read state/PROJECT-STATE.md, state/DEPENDENCY-GRAPH.md, and docs/engineering/CODEX-WORKING-RULES.md.
 Resume the current project state and determine the next eligible task without redoing completed work.
+Read docs/V2-ROADMAP.md and any linked authoritative roadmap amendment relevant to the selected phase.
 Read the current Phase README/TASKS/ACCEPTANCE/TEST-PLAN/UI-STITCH files as applicable.
 Before editing a target repository, read that repository's AGENTS.md if present; if absent, confirm that and continue under the Workspace baseline. Inspect the real source/tests/config/git state.
 For frontend work, read docs/engineering/FRONTEND-ARCHITECTURE.md and treat architecture conformance as part of acceptance.
