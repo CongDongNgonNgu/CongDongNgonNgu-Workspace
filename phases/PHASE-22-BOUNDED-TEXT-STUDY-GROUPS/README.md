@@ -1,15 +1,15 @@
 # Phase 22 — Bounded Text Study Groups
 
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Dependency:** Phase 20 must exit `GO`  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
 ```text
 PHASE_NUMBER=22
-PHASE_STARTED=NO
-EXECUTION_AUTHORIZED=NO
+PHASE_STARTED=YES
+EXECUTION_AUTHORIZED=YES_OWNER_START_PHASE_22_2026_10_07
 DEPENDENCY_GATE=PHASE_20_GO_REQUIRED
-PLANNING_DOSSIER_ONLY=YES
+PLANNING_DOSSIER_ONLY=NO
 ```
 
 ## Objective
