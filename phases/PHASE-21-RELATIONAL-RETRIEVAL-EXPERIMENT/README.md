@@ -1,14 +1,14 @@
 # Phase 21 — Provenance-Safe Relational Retrieval Experiment
 
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Source candidate:** `LNG-19-008` relational/non-generative slice  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
 ```text
 PHASE_NUMBER=21
-PHASE_STARTED=NO
-EXECUTION_AUTHORIZED=NO
-PLANNING_DOSSIER_ONLY=YES
+PHASE_STARTED=YES
+EXECUTION_AUTHORIZED=YES
+PLANNING_DOSSIER_ONLY=NO
 ```
 
 ## Objective
@@ -31,3 +31,8 @@ Separate owner phase authorization plus reviewer-approved rights/provenance fixt
 Reproducible benchmark/security evidence and `GO`, `DEFER`, or `REJECT`. Phase 23 remains ineligible unless Phase 21 exits `GO` and later receives its own authorization.
 
 See [TASKS.md](TASKS.md), [ACCEPTANCE.md](ACCEPTANCE.md), [TEST-PLAN.md](TEST-PLAN.md), and [BENCHMARK-PROTOCOL.md](BENCHMARK-PROTOCOL.md).
+
+Owner authorized the complete Phase 21 lifecycle on 2026-10-07. Current
+prospective [contract](FROZEN-CONTRACT.md) and [fixtures](fixture-v1.json) are
+under independent review before candidate implementation. Phase 22 remains
+eligible but unauthorized/unstarted; Phase 23–24 remain unauthorized/unstarted.

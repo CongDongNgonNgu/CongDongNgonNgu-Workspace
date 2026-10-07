@@ -1,5 +1,13 @@
 # Dependency Graph
 
+## Authorized Phase 21 graph — 2026-10-07
+
+Owner START_PHASE_21=YES authorizes closed Phase 19/current Library ->
+LNG-21-001 reviewed prospective freeze -> LNG-21-002 isolated comparison ->
+LNG-21-003 reviewed verdict. Phase 23 eligibility requires GO; execution still
+requires new owner authorization. Phase 20 DONE/GO and Phase 22 eligibility
+are preserved. No Phase 22, 23 or 24 task is started by this authorization.
+
 ## Authorized Phase 20 graph — 2026-10-07
 
 Owner `START_PHASE_20=YES`: closed Phase 19 -> LNG-20-001 frozen policy ->
