@@ -1,9 +1,10 @@
 # Phase 21 Tasks
 
-All tasks are `PLANNED`; no experiment has started.
+Owner authorized Phase 21 only on 2026-10-07. Contract preparation has started;
+candidate implementation waits for prospective review and freeze integration.
 
 ## LNG-21-001 — Freeze benchmark, eligibility and relation contract
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Depends on:** explicit Phase 21 authorization; reviewed fixtures/queries  
 **Target repo(s):** Workspace  
 
