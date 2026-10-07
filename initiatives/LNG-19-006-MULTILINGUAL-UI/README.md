@@ -11,7 +11,7 @@ implementation authorization only for this bounded initiative. No user demand is
 
 ```text
 LNG_19_006_IMPLEMENTATION_AUTHORIZED=YES
-LNG_19_006_IMPLEMENTATION_STATUS=READY_FOR_PRODUCTION_AUTHORIZATION
+LNG_19_006_IMPLEMENTATION_STATUS=DONE
 IMPLEMENTATION_COMPLETE_PRE_PRODUCTION=YES
 SUPPORTED_UI_LOCALES_INITIAL=vi,en
 DEFAULT_UI_LOCALE=vi
@@ -25,10 +25,10 @@ EN_COPY_HUMAN_REVIEW=NOT_PERFORMED
 
 | Task | Capability | Canonical state |
 | --- | --- | --- |
-| 006A | Allowlisted typed catalogs, browser preference, fallback, Intl and document semantics | VERIFYING; technical PASS |
-| 006B | Existing application shell and explicit accessible UI language control | VERIFYING; technical PASS |
-| 006C | Complete public Library browse/search/filter/detail/error/accessibility journey | VERIFYING; technical PASS |
-| 006D | Relevant regression, isolated browser acceptance, review and evidence | VERIFYING; pre-production PASS |
+| 006A | Allowlisted typed catalogs, browser preference, fallback, Intl and document semantics | DONE |
+| 006B | Existing application shell and explicit accessible UI language control | DONE |
+| 006C | Complete public Library browse/search/filter/detail/error/accessibility journey | DONE |
+| 006D | Relevant regression, isolated browser acceptance, review and evidence | DONE |
 
 006A -> 006B -> 006C -> 006D auto-continue within this explicit initiative.
 Integration states remain VERIFYING until applicable merge gates are met.
@@ -71,7 +71,7 @@ stress, and widths 320/375/390/412/768/1024/1440. Do not claim browser or produc
 PASS from source inspection. English technical completeness is distinct from
 human linguistic review; absence of a human review does not block TEST acceptance.
 
-## Production integration gate
+## Historical production integration gate — satisfied by explicit owner decision
 
 Read-only authenticated Vercel project `cong-dong-ngon-ngu`, exact Frontend
 repository, production environment settings inspected 2026-10-06: Branch
@@ -93,7 +93,7 @@ No Backend/env/DB/migration/telemetry/provider/payment or production mutation,
 production DB query or Phase 20. Rollback is the exact current production SHA;
 any production rollback itself requires authorization.
 
-## Current handoff — 2026-10-07
+## Historical pre-production handoff — 2026-10-07
 
 Frontend [PR #27](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/pull/27)
 is open at `ed681f034a925c62e91dfed60ca36571f083adc3`; CI and Vercel preview
@@ -102,3 +102,17 @@ and the unmerged Frontend branch is retained pending the exact production merge
 authorization. No production release is claimed. See [evidence](EVIDENCE.md) for
 test counts, reproducible isolated runtime tooling, privacy/security review and
 terminal relay records. English human translation review remains NOT_PERFORMED.
+
+## Current completed implementation — 2026-10-07
+
+Owner explicitly authorized `AUTHORIZE_MERGE_FRONTEND_PR_27_AND_VERCEL_PRODUCTION_DEPLOYMENT=YES`
+for reviewed candidate `ed681f034a925c62e91dfed60ca36571f083adc3`, satisfying the
+preceding gate only for PR #27. Normal merge produced main
+`7cf66654da6419ca5447673e5d3782560856b4bc`, with successful Production deployment,
+post-merge CI, 42 read-only public production smoke checks and live availability
+monitor PASS. Frontend temporary branch was deleted locally/remotely and pruned.
+See [release evidence](EVIDENCE.md#owner-authorized-production-integration--2026-10-07)
+and [production smoke](PRODUCTION-SMOKE.json). No Backend/env/DB/migration,
+provider/payment/telemetry or Phase 20 action. English copy is technically
+complete for this scope; independent human linguistic review remains NOT_PERFORMED.
+No further product initiative or major phase is authorized by this completion.

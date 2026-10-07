@@ -2,6 +2,18 @@
 
 Append durable decisions; do not silently rewrite history.
 
+## DEC-037 — Exact Frontend PR #27 production authorization
+
+Accepted 2026-10-07: the human owner explicitly issued
+`AUTHORIZE_MERGE_FRONTEND_PR_27_AND_VERCEL_PRODUCTION_DEPLOYMENT=YES`
+after reviewing the prepared [LNG-19-006 initiative](../initiatives/LNG-19-006-MULTILINGUAL-UI/README.md).
+This satisfies DEC-036's production gate only for PR #27 and candidate
+`ed681f034a925c62e91dfed60ca36571f083adc3`. Merge/deployment observation,
+read-only public smoke, existing monitoring verification, evidence and normal
+branch cleanup are in scope. It grants no Backend/env/DB/migration/provider,
+payment/telemetry, rollback deployment, unrelated initiative or Phase 20 authority.
+Actual integration and acceptance are recorded in the initiative evidence.
+
 ## DEC-036 — Owner-approved bounded multilingual UI implementation
 
 Accepted 2026-10-06: explicit IMPLEMENT_LNG_19_006=YES authorizes the separate
