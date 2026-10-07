@@ -73,6 +73,17 @@ Workspace engineering policy is the cross-repository baseline. Target-repository
 
 ## 10. Standing global orchestration authorization
 
+### Phase 20 owner environment classification — 2026-10-07
+
+For authorized Phase 20 only, current Render/Vercel are TEST/validation
+environments. Existing TEST rebuilds/deployments caused by authorized commits
+or merges need no further permission. This supersedes historical production
+labels for this bounded work, not the hard stops for actual production, DB
+writes/migrations, paid providers, secrets, security weakening or CI bypass.
+Use legitimate configured CLI/API fallback for already-authorized actions when
+UI is unstable. A test-only adapter does not require manufacturing deployed
+runtime evidence. Any dependency remediation has its own deployment disposition.
+
 The following standing human-owner authorization is persistent for all
 current and future project phases/subphases from Phase 12 onward until the
 human owner explicitly revokes or changes it:

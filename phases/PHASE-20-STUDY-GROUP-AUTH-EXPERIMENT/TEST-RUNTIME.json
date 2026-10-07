@@ -1,0 +1,23 @@
+{
+  "observedDate": "2026-10-07",
+  "target": "OWNER_CLASSIFIED_TEST_RENDER",
+  "deployedSha": "d56fc2c518a617018d6926bf63b482572268a1ef",
+  "deploy": "dep-db2rh5ss728c73acv720",
+  "checks": {
+    "health": 200,
+    "runtimeMode": "production",
+    "nosniff": "PASS",
+    "corsAllowedOrigin": "PASS",
+    "publicCatalog": 200,
+    "payment": {
+      "available": false,
+      "qrAvailable": false,
+      "provider": null
+    },
+    "anonymousMembership": 401,
+    "nonexistentCommunityPost": 404
+  },
+  "result": "PASS",
+  "databaseWrites": 0,
+  "groupRuntimeClaim": "NONE_TEST_ADAPTER_EXCLUDED"
+}
