@@ -2,7 +2,7 @@
 
 ## Current bounded execution addendum — 2026-10-07
 
-Owner START_PHASE_23=YES now authorizes LNG-23-001 through004 for the original Related Resources scope. Status IN_PROGRESS; contract independently APPROVED and VERIFYING integration/CI. Historical planning flags below are superseded only for this authorized journey. Category-completion23B remains PLANNED/outside this run; Phase24 unauthorized/unstarted. See [contract](RELATION-CONTRACT.md) and [freeze review](FREEZE-REVIEW.md). No implementation/runtime PASS is claimed by this addendum.
+Owner START_PHASE_23=YES now authorizes LNG-23-001 through004 for the original Related Resources scope. Status IN_PROGRESS; LNG-23-001 DONE after independent approval, PR135/main CI and verified merged-branch cleanup. LNG-23-002 is IN_PROGRESS;003/004 await acceptance gates. Historical planning flags below are superseded only for this authorized journey. Category-completion23B remains PLANNED/outside this run; Phase24 unauthorized/unstarted. See [contract](RELATION-CONTRACT.md) and [freeze review](FREEZE-REVIEW.md). No implementation/runtime PASS is claimed by this addendum.
 
 
 **Major phase:** Phase 23 — Verified Language Learning Resource Journey  
