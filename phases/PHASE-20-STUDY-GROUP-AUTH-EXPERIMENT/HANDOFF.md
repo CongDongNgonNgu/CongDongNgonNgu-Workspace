@@ -41,7 +41,9 @@ privacy-safe real evidence; synthetic TEST activity cannot establish them.
 
 ## Completion boundary
 
-Verdict integration and its main CI/branch cleanup must pass before canonical
-LNG-20-003/Phase 20 DONE reconciliation. After that, next action is
+Verdict PR #122 merged; PR quality check 112614759957 and main check
+112614870308 PASS at `d6fc313aaf00a75b7d3e934314baaf94c0706576`. Candidate
+ancestry verified, remote/local verdict branch deleted, tracking pruned and
+main synchronized. LNG-20-003/Phase 20 are DONE. Next action is
 WAIT_FOR_OWNER_TO_AUTHORIZE_NEXT_MAJOR_PHASE. Phase 22 eligibility is not
 authorization; do not start or activate any future phase.
