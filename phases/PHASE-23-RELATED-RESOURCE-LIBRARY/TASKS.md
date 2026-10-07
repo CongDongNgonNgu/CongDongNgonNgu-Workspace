@@ -1,9 +1,9 @@
 # Phase 23 Tasks
 
-All tasks are `PLANNED`; Phase 21 `GO` and separate Phase 23 authorization are mandatory.
+Current owner authorization starts the bounded Related Resources scope. Phase21 DONE/GO confirmed; the reviewed relation contract is frozen. Downstream tasks remain PLANNED until their dependencies pass. Broader category-completion23B remains outside this run.
 
 ## LNG-23-001 — Freeze relation projection and eligibility contract
-**Status:** PLANNED  
+**Status:** VERIFYING
 **Depends on:** Phase 21 `GO`; explicit Phase 23 authorization  
 **Target repo(s):** Workspace / Backend / Frontend  
 
