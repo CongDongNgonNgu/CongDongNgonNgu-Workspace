@@ -2,7 +2,7 @@
 
 Owner authorized Phase 21 only on 2026-10-07. Contract preparation has started;
 prospective review/freeze integration is accepted. Observed experiment evidence
-is under integration; the final verdict is reserved to LNG-21-003.
+and final GO verdict are accepted; verdict integration, CI and cleanup PASS.
 
 ## LNG-21-001 — Freeze benchmark, eligibility and relation contract
 **Status:** DONE
@@ -19,7 +19,7 @@ Freeze the resource pool, relation vocabulary, relevance labels, eligibility/pro
 Build only the isolated non-generative relational slice needed to compare against the current lexical baseline. Preserve source-card/citation fallback and abstention; do not activate external AI/vector/graph services.
 
 ## LNG-21-003 — Reconcile benchmark and security verdict
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-21-002 observed results  
 **Target repo(s):** Workspace  
 

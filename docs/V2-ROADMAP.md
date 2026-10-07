@@ -3,7 +3,7 @@
 Current Phase21 addendum — 2026-10-07: the owner authorized Phase21 only, including
 its full experiment lifecycle. [Reviewed GO](../phases/PHASE-21-RELATIONAL-RETRIEVAL-EXPERIMENT/VERDICT.md)
 meets the prospective synthetic contextual-discovery gates; final closeout is
-VERIFYING. Phase23 is technically eligible under its separate inheritance contract,
+DONE. Phase23 is technically eligible under its separate inheritance contract,
 but execution unauthorized/unstarted. Phase20 DONE/GO and Phase22 eligibility are
 preserved; Phase22/23/24 remain unstarted. Older planning/unstarted flags below
 are historical where superseded; no next major phase is automatically authorized.
@@ -163,7 +163,7 @@ it must not claim production release acceptance without actual authorized eviden
   recorded; GO needs the accepted quality criteria and zero known eligibility leaks.
   Otherwise 23 remains ineligible. Future discovery success and citation usefulness
   validation requirements are defined without real-user outcome claims.
-- **STATUS:** VERIFYING
+- **STATUS:** DONE
 
 ## Phase 22
 

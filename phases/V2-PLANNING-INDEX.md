@@ -1,7 +1,7 @@
 # V2 Phase Planning Dossiers
 
 Current Phase21 addendum — 2026-10-07: owner START_PHASE_21=YES authorized only
-the bounded experiment lifecycle. Phase21 reviewed verdict GO; closeout VERIFYING.
+the bounded experiment lifecycle. Phase21 reviewed verdict GO; closeout DONE.
 Phase23 technically eligible with separate inheritance gates, execution unauthorized
 and unstarted. Phase20 DONE/GO, Phase22 eligible but unstarted/unauthorized, and
 Phase24 unstarted are preserved. Earlier creation-time flags below are historical.
@@ -31,7 +31,7 @@ PRODUCTION_MUTATION_AUTHORIZED=NO_BY_THIS_RECORD
 | Phase | Dossier | Planning state | Execution gate |
 |---|---|---|---|
 | 20 | [Scoped Study Group Policy & Authorization Experiment](PHASE-20-STUDY-GROUP-AUTH-EXPERIMENT/README.md) | DONE | Reviewed GO; verdict PR/main CI and cleanup PASS |
-| 21 | [Provenance-Safe Relational Retrieval Experiment](PHASE-21-RELATIONAL-RETRIEVAL-EXPERIMENT/README.md) | VERIFYING | Reviewed GO; final integration/CI/cleanup gates pending |
+| 21 | [Provenance-Safe Relational Retrieval Experiment](PHASE-21-RELATIONAL-RETRIEVAL-EXPERIMENT/README.md) | DONE | Reviewed GO; verdict PR/main CI and cleanup PASS |
 | 22 | [Bounded Text Study Groups](PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/README.md) | PLANNED | Phase 20 `GO` plus separate phase authorization |
 | 23 | [Verified Related-Resource Library Journey](PHASE-23-RELATED-RESOURCE-LIBRARY/README.md) | PLANNED | Phase 21 `GO` plus separate phase authorization |
 | 24 | [Member Onboarding & Language Exchange Localization](PHASE-24-MEMBER-EXCHANGE-LOCALIZATION/README.md) | PLANNED | Separate phase authorization plus approved bounded copy inventory |
