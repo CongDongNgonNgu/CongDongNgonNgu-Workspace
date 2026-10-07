@@ -1,5 +1,24 @@
 # Architecture & Product Decisions
 
+## DEC-038 — Dependency-led post-Phase-19 V2 roadmap (planning only)
+
+**Date:** 2026-10-07. **Status:** ACCEPTED_FOR_PLANNING_ONLY.
+
+**Context:** Phase 19 discovery and the separately authorized bounded vi/en
+shell/Library implementation are DONE. Owner authorizes a future V2 roadmap,
+explicitly forbids starting any new phase, and retains portfolio deferrals.
+
+**Decision:** [V2 roadmap](../docs/V2-ROADMAP.md) is forward planning authority.
+Recommend independent group/retrieval experiments (20/21), gated bounded product
+promotions (22/23), then a distinct onboarding/exchange localization journey (24).
+Priority order is separate from actual technical dependencies. All are PLANNED;
+each execution requires new explicit owner authorization. Do not repeat LNG-19-006.
+
+**Consequences:** Preserve closed discovery/history and current production controls.
+No application branch/task, telemetry, data collection, deployment or provider action
+is authorized. Speech/economy/native/ML re-entry is conditional on defined evidence
+and approvals. Integrate Workspace planning, then STOP awaiting owner selection.
+
 Append durable decisions; do not silently rewrite history.
 
 ## DEC-037 — Exact Frontend PR #27 production authorization
