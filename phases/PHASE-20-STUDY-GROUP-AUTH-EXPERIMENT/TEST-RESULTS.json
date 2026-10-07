@@ -1,0 +1,173 @@
+{
+  "observedDate": "2026-10-07",
+  "environment": "LOCAL_ISOLATED_SYNTHETIC_TEST",
+  "focused": {
+    "passed": 36,
+    "total": 36,
+    "suites": 1
+  },
+  "unit": {
+    "passed": 872,
+    "total": 872,
+    "suites": 151
+  },
+  "e2e": {
+    "passed": 109,
+    "total": 109,
+    "suites": 18
+  },
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 20,
+    "high": 0,
+    "critical": 0,
+    "total": 20
+  },
+  "cases": [
+    {
+      "name": "anonymous read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "nonmember read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "platform role read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "member read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "moderator read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "owner read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "other owner read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "other moderator read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "other member read/write/list/search/count/report/moderation matrix",
+      "result": "passed"
+    },
+    {
+      "name": "does not trust stale client role claims or allow cross-group resource IDs",
+      "result": "passed"
+    },
+    {
+      "name": "rejects unsafe profile/identities and permits authenticated bounded creation only",
+      "result": "passed"
+    },
+    {
+      "name": "accepts exactly once into intended group and does not consume on invalid attempts",
+      "result": "passed"
+    },
+    {
+      "name": "denies malformed invitation uniformly",
+      "result": "passed"
+    },
+    {
+      "name": "denies unknown invitation uniformly",
+      "result": "passed"
+    },
+    {
+      "name": "denies expired invitation uniformly",
+      "result": "passed"
+    },
+    {
+      "name": "denies revoked invitation uniformly",
+      "result": "passed"
+    },
+    {
+      "name": "stores hashes only and owner-only revocation checks group scope",
+      "result": "passed"
+    },
+    {
+      "name": "one-use invite concurrent accept has one winner; same actor=false",
+      "result": "passed"
+    },
+    {
+      "name": "one-use invite concurrent accept has one winner; same actor=true",
+      "result": "passed"
+    },
+    {
+      "name": "invite revoke/accept ordered race is linearizable; revoke first=false",
+      "result": "passed"
+    },
+    {
+      "name": "invite revoke/accept ordered race is linearizable; revoke first=true",
+      "result": "passed"
+    },
+    {
+      "name": "leave immediately revokes stale session across every projection",
+      "result": "passed"
+    },
+    {
+      "name": "remove immediately revokes stale session across every projection",
+      "result": "passed"
+    },
+    {
+      "name": "queued access/removal checks ACL at execution; remove first=false",
+      "result": "passed"
+    },
+    {
+      "name": "queued access/removal checks ACL at execution; remove first=true",
+      "result": "passed"
+    },
+    {
+      "name": "enforces moderator removal limits and prevents owner orphaning",
+      "result": "passed"
+    },
+    {
+      "name": "atomically transfers ownership and revokes old owner powers",
+      "result": "passed"
+    },
+    {
+      "name": "concurrent competing transfers produce one owner and a removed target cannot be promoted",
+      "result": "passed"
+    },
+    {
+      "name": "report resolution is scoped, copies cannot mutate state, hiding revokes ordinary projections",
+      "result": "passed"
+    },
+    {
+      "name": "existing author-private CommunityService stays author-only despite group membership",
+      "result": "passed"
+    },
+    {
+      "name": "uniform unavailable errors reveal no group existence/count/content to outsiders",
+      "result": "passed"
+    },
+    {
+      "name": "cleanup is idempotent and works in failure/finally path",
+      "result": "passed"
+    },
+    {
+      "name": "caps cache at 20 projections across both groups while retaining existing-key access",
+      "result": "passed"
+    },
+    {
+      "name": "allows moderator leave but denies nonmember and anonymous leave",
+      "result": "passed"
+    },
+    {
+      "name": "can promote scoped moderator via ownership transfer and denies old-owner invitation revocation",
+      "result": "passed"
+    },
+    {
+      "name": "denies moderator peer removal in a disposable two-group fixture",
+      "result": "passed"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 Owner START_PHASE_20=YES authorizes execution. No DONE claim before integration gates.
 
 ## LNG-20-001 — Freeze group policy and synthetic experiment contract
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** explicit `START_PHASE_20`; accepted disposable fixture plan  
 **Target repo(s):** Workspace, then Backend only if the authorized experiment requires code  
 
@@ -12,7 +12,7 @@ Freeze role/capability semantics, membership lifecycle, invitation rules, owners
 **Acceptance:** no ambiguous capability remains for owner/moderator/member/platform role; existing author-private semantics remain unchanged; fail-closed behavior is explicit.
 
 ## LNG-20-002 — Run isolated authorization experiment
-**Status:** PLANNED  
+**Status:** VERIFYING
 **Depends on:** LNG-20-001 accepted  
 **Target repo(s):** Backend / Workspace as actually required  
 

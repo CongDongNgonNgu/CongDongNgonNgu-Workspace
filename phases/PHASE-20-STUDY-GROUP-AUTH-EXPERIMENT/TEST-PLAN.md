@@ -1,6 +1,8 @@
 # Phase 20 Test Plan
 
-**State:** prospective; no test result is claimed by this file.
+**State:** frozen contract evaluated in local isolated synthetic TEST.
+Actual results: [EVIDENCE.md](EVIDENCE.md), [TEST-RESULTS.json](TEST-RESULTS.json).
+No deployed study-group API or distributed database proof is claimed.
 
 ## Fixture model
 Use disposable synthetic users and exactly two independent synthetic groups so cross-group isolation can be tested deterministically. Include owner, moderator, member, removed member, nonmember and platform-role actors.
