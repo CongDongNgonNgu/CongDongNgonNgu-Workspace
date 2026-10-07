@@ -2,7 +2,7 @@
 
 ## Authorized Phase 22 graph — 2026-10-07
 
-Phase20 DONE/GO + explicit owner START_PHASE_22=YES -> LNG-22-001 reviewed persisted contract -> LNG-22-002 PostgreSQL lifecycle/authorization -> LNG-22-003 Stitch/native vi/en journey -> LNG-22-004 integration/security/TEST runtime/closeout. Phase22 is IN_PROGRESS; no task DONE yet. Phase21 DONE/GO preserved. Phase23/24 remain unauthorized and unstarted. Payment disabled; production writes prohibited.
+Phase20 DONE/GO + explicit owner START_PHASE_22=YES -> LNG-22-001 reviewed persisted contract -> LNG-22-002 PostgreSQL lifecycle/authorization -> LNG-22-003 Stitch/native vi/en journey -> LNG-22-004 integration/security/TEST runtime/closeout. Phase22 is IN_PROGRESS;001 reviewed contract and002 Backend are DONE after verified PR/main CI and cleanup.003 Frontend is IN_PROGRESS;004 integrated browser/TEST closeout remains pending. Phase21 DONE/GO preserved. Phase23/24 remain unauthorized and unstarted. Payment disabled; production writes prohibited.
 
 
 ## Authorized Phase 21 graph — 2026-10-07

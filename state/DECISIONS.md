@@ -304,3 +304,9 @@ requires separate persisted-domain/HTTP/SQL/projection/cache/UI/runtime and corp
 validation. Curated edge-label coupling and extra anchor context limit conclusions;
 no free-text superiority, human linguistic certification or user value claim.
 No provider/index/migration/UI or production mutation; payment disabled.
+
+## DEC-037 - Bounded Phase22 SQL group authority
+
+2026-10-07. Accepted implementation contract; final runtime acceptance pending. [Frozen contract](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/POLICY-CONTRACT.md) separates group text/history from existing author-private community records. PostgreSQL READ COMMITTED operations lock sorted affected accounts before group rows and derive fresh membership inside each transaction. A deferred group-owner composite FK plus partial unique ACTIVE/OWNER index enforces exactly one valid owner at commit; transfer demotes/promotes and changes pointer atomically. Invitation capability is256-bit opaque with SHA256-only persistence, conditional consume and shared post-lock DB instant; failures roll back membership and consume together. Durable independent rate counters count authenticated attempts without retaining request metadata.
+
+Existing exchange blocks have no global policy and are not reinterpreted. All affected accounts must be ACTIVE; disabled membership capacity and owner-recovery limitations are disclosed. No application hard delete, group cache/notifications/realtime or platform-role override. Synthetic TEST validation does not authorize real private-data rollout; global-block, backup/deletion/retention and abuse ownership require separate review. Phase23/24 remain unauthorized.

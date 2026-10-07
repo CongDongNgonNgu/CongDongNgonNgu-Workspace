@@ -1,7 +1,14 @@
-# Phase 22 UI / Stitch Policy
+# Phase 22 UI / Stitch evidence
 
-**Planning state:** no Stitch run has been performed or claimed.
+Stitch preflight completed on2026-10-07 before Frontend source implementation. Project: projects/16129593133068835350, CongDongNgonNgu.vn — Phase22 Bounded Text Study Groups.
 
-Phase 22 introduces new user-facing group surfaces, so substantial new page/shell visual work must follow the root `AGENTS.md` Stitch MCP policy before implementation. Reuse established design-system primitives, navigation behavior, vi/en locale infrastructure and responsive/a11y conventions.
+| Surface | Reviewed screen |
+| --- | --- |
+| List/create/join | c0d91583bc474df8b5ce0613b363a4f1 |
+| Owner detail | 45986acc7614482aa7178f6f1cbfe2ba |
+| English member mobile | 1e375593fca54c939683204d1a5e6c00 |
+| Invitation/membership/confirmation actions | af51513926e04a53bbf7e03d684633b6 |
 
-Stitch must not decide authorization, privacy or API semantics. Those remain governed by Phase 20/22 contracts. A later implementation record must capture the actual Stitch reference or document why the authorized work was a behavior-preserving reuse that did not require a new design run.
+Actual generated screenshots inspected. Two refinement rounds corrected persistent token display, report placement, invented validation limits and permanent-ban terminology. Implementation uses native components and existing shell/palette; generated HTML is not imported. Frozen authorization/privacy/API contract governs all deviations, including archive denial of every protected operation and acknowledgement-only reports. No notification infrastructure or academic/developer copy is added.
+
+Mobile screenshot780px corresponds to requested390px rendering; desktop returned2560px despite1440px request. These images establish composition only. Seven-width runtime, keyboard/focus/dialog and vi/en acceptance remain pending and must be recorded separately.
