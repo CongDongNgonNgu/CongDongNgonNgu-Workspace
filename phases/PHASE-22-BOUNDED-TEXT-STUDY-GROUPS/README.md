@@ -1,6 +1,6 @@
 # Phase 22 — Bounded Text Study Groups
 
-**Status:** IN_PROGRESS
+**Status:** VERIFYING
 **Dependency:** Phase 20 must exit `GO`  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
@@ -29,6 +29,8 @@ Full lifecycle/security/privacy/runtime acceptance, truthful evidence/handoff an
 
 See [POLICY-CONTRACT.md](POLICY-CONTRACT.md) and [UI-STITCH.md](UI-STITCH.md) in addition to the standard phase files.
 
-## Current verified progress
+## Verified technical closeout
 
-001 contract and002 persisted Backend DONE. BackendPR44/mainCI, realSQL25tests, fullregressions, guardedTEST0027 migration and exactRenderTESTdeployment are verified; deployedsyntheticHTTPlifecyclePASS.003 Frontend candidatePR28/full408tests is under authenticatedbrowser/CI acceptance.004 finalintegration/cleanup/closeout pending; Phase22 notDONE. Syntheticfixtures remain temporarilyforbrowser and exactcleanup is required.
+All four tasks DONE: frozen Phase20 policy inheritance, persisted PostgreSQL Backend, accessible vi/en native Frontend and approved TEST integration. BackendPR44 and FrontendPR28 merged with PR/main CI and branch cleanup. Real SQL25 tests and private regression47 PASS; Frontend408 tests; local browser116 and deployed Vercel117 checks PASS at all seven widths. Render/Vercel exact merged source revisions verified. Four synthetic actors/four groups cleaned with all scoped residual counts0. See [EVIDENCE.md](EVIDENCE.md), [HANDOFF.md](HANDOFF.md) and [VERDICT.md](VERDICT.md).
+
+Technical TEST completion is bounded; real private-data release/global block/backup/deletion safeguards remain held. Production untouched, payment disabled. Phase23/24 remain unauthorized/unstarted. Final closeout PR/main CI and branch cleanup are required before terminal lifecycle completion.

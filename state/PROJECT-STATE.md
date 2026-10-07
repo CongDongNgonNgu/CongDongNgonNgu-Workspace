@@ -2,17 +2,17 @@
 
 ## Authorized Phase 22 execution — 2026-10-07
 
-Owner START_PHASE_22=YES authorizes LNG-22-001 through004, existing TEST paths and normal source-control lifecycle. The Phase22 [implementation contract](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/POLICY-CONTRACT.md) is frozen and integrated; Backend and Frontend implementation/verification are in progress. No final completion gate is claimed. Earlier Phase22 planning flags below are historical.
+Owner START_PHASE_22=YES authorizes LNG-22-001 through004, existing TEST paths and normal source-control lifecycle. The Phase22 [implementation contract](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/POLICY-CONTRACT.md) is frozen and integrated; Backend and Frontend implementation and bounded TEST acceptance are complete; see the [Phase22 handoff](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/HANDOFF.md). Final closeout PR/main CI and branch cleanup must pass before terminal completion. Earlier Phase22 planning flags below are historical.
 
 ```text
 CURRENT_PHASE=22
-PHASE_22_STATUS=IN_PROGRESS
+PHASE_22_STATUS=VERIFYING
 PHASE_22_STARTED=YES
 PHASE_22_EXECUTION_AUTHORIZED=YES
 LNG_22_001=DONE
 LNG_22_002=DONE
-LNG_22_003=IN_PROGRESS
-LNG_22_004=PLANNED
+LNG_22_003=DONE
+LNG_22_004=VERIFYING
 PHASE_20_STATUS=DONE
 PHASE_20_VERDICT=GO
 PHASE_21_STATUS=DONE
@@ -25,7 +25,10 @@ PHASE_24_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_DB_MUTATED=NO
 PRODUCTION_MUTATION_PERFORMED=NO
-NEXT_ACTION=VERIFY_BACKEND_AND_IMPLEMENT_FRONTEND
+PHASE_22_VERDICT=GO_BOUNDED_TECHNICAL_TEST
+REAL_PRIVATE_DATA_RELEASE=UNPROVEN_HELD
+HUMAN_AUTHORIZATION_REQUIRED=NONE_FOR_PHASE22_CLOSEOUT
+NEXT_ACTION=VERIFY_PHASE22_CLOSEOUT_INTEGRATION_AND_BRANCH_CLEANUP
 ```
 
 
