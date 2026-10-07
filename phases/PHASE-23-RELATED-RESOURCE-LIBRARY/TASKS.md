@@ -1,6 +1,6 @@
 # Phase 23 Tasks
 
-Current owner authorization starts the bounded Related Resources scope. Phase21 DONE/GO confirmed; the reviewed relation contract is frozen. Backend implementation is IN_PROGRESS after the merged contract gate; subsequent tasks remain PLANNED until their dependencies pass. Broader category-completion23B remains outside this run.
+Current owner authorization starts the bounded Related Resources scope. Phase21 DONE/GO confirmed; the reviewed relation contract is frozen. Backend implementation and deployed acceptance have passed; LNG-23-002 is DONE and LNG-23-003 is READY. Integration closeout remains PLANNED until the frontend gates pass. Broader category-completion23B remains outside this run.
 
 ## LNG-23-001 — Freeze relation projection and eligibility contract
 **Status:** DONE
@@ -10,14 +10,14 @@ Current owner authorization starts the bounded Related Resources scope. Phase21 
 Promote only the accepted bounded relation vocabulary/benchmark semantics into an implementation contract, including ownership, invalidation, eligibility and fallback.
 
 ## LNG-23-002 — Implement public related-resource projection
-**Status:** IN_PROGRESS
+**Status:** DONE
 **Depends on:** LNG-23-001  
 **Target repo(s):** Backend  
 
 Implement bounded eligible related-resource reads with provenance/license/source-health rechecks, pagination, stale/deletion invalidation and lexical fallback/abstention.
 
 ## LNG-23-003 — Implement related-resource Library journey
-**Status:** PLANNED
+**Status:** READY
 **Depends on:** stable accepted backend contract  
 **Target repo(s):** Frontend  
 
