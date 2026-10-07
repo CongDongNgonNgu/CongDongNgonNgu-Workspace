@@ -1,15 +1,15 @@
 # Phase 20 — Scoped Study Group Policy & Authorization Experiment
 
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Source candidate:** `LNG-19-004`  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`  
 **Planning index:** `../V2-PLANNING-INDEX.md`
 
 ```text
 PHASE_NUMBER=20
-PHASE_STARTED=NO
-EXECUTION_AUTHORIZED=NO
-PLANNING_DOSSIER_ONLY=YES
+PHASE_STARTED=YES
+EXECUTION_AUTHORIZED=YES
+PLANNING_DOSSIER_ONLY=NO
 ```
 
 ## Objective

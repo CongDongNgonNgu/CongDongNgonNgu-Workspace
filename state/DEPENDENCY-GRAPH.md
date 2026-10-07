@@ -1,5 +1,13 @@
 # Dependency Graph
 
+## Authorized Phase 20 graph — 2026-10-07
+
+Owner `START_PHASE_20=YES`: closed Phase 19 -> LNG-20-001 frozen policy ->
+LNG-20-002 observed isolated TEST experiment -> LNG-20-003 reviewed verdict.
+Phase 20 is IN_PROGRESS. Historical planning-only flags below are superseded
+for Phase 20 only. Phase 22 remains blocked until an evidence-backed GO and
+still needs separate owner authorization. Phases 21, 23 and 24 remain unstarted.
+
 ## Current post-Phase-19 planned dependency graph — 2026-10-07
 
 [Authoritative V2 roadmap](../docs/V2-ROADMAP.md) defines phase cards, entry/exit
