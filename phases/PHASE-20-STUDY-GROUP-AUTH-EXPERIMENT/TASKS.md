@@ -21,7 +21,7 @@ Implement only the smallest isolated TEST slice needed to exercise two synthetic
 **Acceptance:** positive/negative matrix, cross-group IDOR, invite replay/race, immediate revocation and relevant list/search/notification/storage-path cases pass with observed evidence.
 
 ## LNG-20-003 — Review experiment and record verdict
-**Status:** READY
+**Status:** VERIFYING
 **Depends on:** LNG-20-002 observed results  
 **Target repo(s):** Workspace  
 
@@ -31,3 +31,6 @@ Reconcile actual evidence, unresolved risks and abuse/retention policy. Record e
 
 ## Completion rule
 Phase 20 is not `DONE` merely because planning files exist. Completion requires started execution, actual experiment evidence, applicable repository/CI gates, and accepted verdict under the project task-state schema.
+
+Final evidence review accepted [GO](VERDICT.md). LNG-20-003 remains VERIFYING
+until the verdict closeout PR, CI, merge, main verification and cleanup pass.

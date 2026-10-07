@@ -3,7 +3,9 @@
 Current execution addendum — 2026-10-07: owner START_PHASE_20=YES starts
 Phase 20 only. [Observed evidence](../phases/PHASE-20-STUDY-GROUP-AUTH-EXPERIMENT/EVIDENCE.md)
 and canonical state supersede initial planning-only/unstarted flags below for
-Phase 20. Other phases remain PLANNED and unauthorized; no automatic next phase.
+Phase 20. Its reviewed verdict is GO; closeout is VERIFYING. Phase 22 is
+technically eligible subject to the inheritance contract and separate owner
+authorization. Other phases remain PLANNED and unauthorized; no automatic next phase.
 
 Owner-approved planning record, 2026-10-07 (Asia/Ho_Chi_Minh).
 `CREATE_FUTURE_V2_ROADMAP=YES`; `START_ANY_NEW_PHASE=NO`.
@@ -121,7 +123,7 @@ it must not claim production release acceptance without actual authorized eviden
   verdict recorded. GO requires no known authorization/revocation leak; DEFER/REJECT
   keeps 22 ineligible until reconciled. Future group usefulness/safe participation
   metrics are defined with denominators but not collected.
-- **STATUS:** IN_PROGRESS
+- **STATUS:** VERIFYING
 
 ## Phase 21
 

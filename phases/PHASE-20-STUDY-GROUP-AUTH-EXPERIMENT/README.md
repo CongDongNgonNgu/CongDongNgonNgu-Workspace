@@ -1,6 +1,6 @@
 # Phase 20 — Scoped Study Group Policy & Authorization Experiment
 
-**Status:** IN_PROGRESS
+**Status:** VERIFYING
 **Source candidate:** `LNG-19-004`  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`  
 **Planning index:** `../V2-PLANNING-INDEX.md`
@@ -37,3 +37,10 @@ Execution requires explicit `START_PHASE_20`, accepted synthetic policy cases, d
 Record actual experiment evidence and a `GO`, `DEFER`, or `REJECT` verdict. `GO` requires zero known authorization/revocation leakage in accepted cases. Phase 22 remains ineligible unless Phase 20 exits `GO` and receives its own later authorization.
 
 See [TASKS.md](TASKS.md), [ACCEPTANCE.md](ACCEPTANCE.md), [TEST-PLAN.md](TEST-PLAN.md), [POLICY-MATRIX.md](POLICY-MATRIX.md), and [THREAT-MODEL.md](THREAT-MODEL.md).
+
+## Reviewed disposition — 2026-10-07
+
+[Verdict](VERDICT.md): GO for the bounded synthetic policy experiment.
+[Evidence](EVIDENCE.md) and [handoff](HANDOFF.md) preserve observed gates and
+unproven persisted/distributed requirements. Final integration is VERIFYING.
+Phase 22 is technically eligible, execution unauthorized and unstarted.
