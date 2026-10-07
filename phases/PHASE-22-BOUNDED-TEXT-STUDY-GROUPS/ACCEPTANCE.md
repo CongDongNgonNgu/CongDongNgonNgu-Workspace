@@ -14,3 +14,7 @@ Prospective acceptance contract.
 - Applicable Backend/Frontend full gates and CI pass with observed evidence.
 
 Technical completion does not claim real-user demand, retention or moderation success. Production release/private persistent data use requires the approvals and backup/retention safeguards active at that time.
+
+## Observed outcome
+
+All prospective technical TEST criteria above PASS within the bounded contract. Real PostgreSQL25 tests prove concurrency/constraints; Phase20/private47 regression tests pass. Native local116 and exact deployed Vercel117 checks pass, vi/en at320/375/390/412/768/1024/1440; keyboard/focus/labels/headings and dialog regression pass. Numeric colour contrast and screen-reader checks were not performed. No group search/notification/cache/projection integration was introduced: those absent surfaces are NOT_APPLICABLE, not tested PASS. List/count/cross-group leakage checks PASS. Guarded synthetic cleanup residual0. See [EVIDENCE.md](EVIDENCE.md) for exact commits, CI and failure recovery. Real private persistent user data and broad release remain held under [HANDOFF.md](HANDOFF.md).
