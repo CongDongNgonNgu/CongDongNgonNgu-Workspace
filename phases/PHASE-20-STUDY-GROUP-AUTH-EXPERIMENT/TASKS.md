@@ -1,9 +1,9 @@
 # Phase 20 Tasks
 
-All tasks are `PLANNED`. None may transition to `READY` or `IN_PROGRESS` solely because this planning dossier exists.
+Owner START_PHASE_20=YES authorizes execution. No DONE claim before integration gates.
 
 ## LNG-20-001 — Freeze group policy and synthetic experiment contract
-**Status:** PLANNED  
+**Status:** VERIFYING
 **Depends on:** explicit `START_PHASE_20`; accepted disposable fixture plan  
 **Target repo(s):** Workspace, then Backend only if the authorized experiment requires code  
 

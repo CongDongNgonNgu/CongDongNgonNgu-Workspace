@@ -1,5 +1,38 @@
 # Project State
 
+## Authorized Phase 20 execution — 2026-10-07
+
+Owner `START_PHASE_20=YES` authorizes only the bounded synthetic TEST
+policy/authorization experiment. This supersedes historical planning-only
+execution flags below for Phase 20 only. Current Render/Vercel are owner-classified
+TEST/validation environments; no production mutation is authorized.
+
+```text
+CURRENT_PHASE=20
+PHASE_20_STATUS=IN_PROGRESS
+PHASE_20_STARTED=YES
+PHASE_20_EXECUTION_AUTHORIZED=YES
+LNG_20_001=IN_PROGRESS
+LNG_20_002=PLANNED
+LNG_20_003=PLANNED
+PHASE_20_VERDICT=PENDING
+PHASE_19_DONE=YES
+LNG_19_006_IMPLEMENTATION=DONE
+PHASE_22_ELIGIBLE=NO_PENDING_PHASE_20_GO
+PHASE_21_STARTED=NO
+PHASE_22_STARTED=NO
+PHASE_23_STARTED=NO
+PHASE_24_STARTED=NO
+PAYMENT_REMAINS_DISABLED=YES
+PRODUCTION_MUTATION_PERFORMED=NO
+NEXT_ACTION=FREEZE_PHASE_20_POLICY_THEN_ISOLATED_TEST_EXPERIMENT
+```
+
+PR #119 is confirmed merged at `17174dfb9498317f22a0cb0a0a0577e0a60745cc`;
+its head `e2d14899e9aaf5e66cac1e24a76f2b67a24d22ca` is an ancestor of fetched
+remote main. Stale remote `docs/v2-phase-planning-dossiers` deleted; local
+branch was absent, remote tracking reference pruned. No unique work lost.
+
 ## Current post-Phase-19 V2 roadmap — 2026-10-07
 
 Owner `CREATE_FUTURE_V2_ROADMAP=YES` authorizes the

@@ -1,4 +1,11 @@
-# Phase 20 Threat Model — Planning
+# Phase 20 Threat Model — Frozen TEST scope
+
+Accepted contract: [POLICY-MATRIX.md](POLICY-MATRIX.md), version 1.
+Local synthetic memory only; no production endpoint or persistent store added.
+Platform override denies. SQL uniqueness/locking/rollback and distributed
+invalidation need separate Phase 22 proof. Transferred ownership revokes old
+owner rights; removal bans reentry; hiding text revokes member projections.
+Unknown and unauthorized IDs/tokens share response. Cleanup runs on failure too.
 
 ## Protected assets
 Membership graph, invitation capability, member-only text, moderation/report records, ownership state and any projections that could reveal private group existence/content.
