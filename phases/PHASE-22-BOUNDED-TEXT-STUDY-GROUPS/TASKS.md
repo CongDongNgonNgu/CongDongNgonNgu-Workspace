@@ -1,16 +1,16 @@
 # Phase 22 Tasks
 
-Owner START_PHASE_22=YES authorized the complete lifecycle on 2026-10-07. Phase20 DONE/GO gate is verified. LNG-22-001 is IN_PROGRESS; dependent tasks remain PLANNED until their gates pass.
+Owner START_PHASE_22=YES authorized the complete lifecycle on 2026-10-07. Phase20 DONE/GO gate is verified. LNG-22-001 is DONE after PR130 reviewed freeze integration and PR/main quality CI; LNG-22-002 is READY. Other dependent tasks remain PLANNED.
 
 ## LNG-22-001 — Freeze implementation contracts
-**Status:** IN_PROGRESS
+**Status:** DONE
 **Depends on:** Phase 20 `GO`; explicit Phase 22 authorization  
 **Target repo(s):** Workspace / Backend / Frontend  
 
 Translate the accepted Phase 20 policy into bounded schema/API/UI contracts, quotas, pagination, retention/deletion and moderation invariants without broadening scope.
 
 ## LNG-22-002 — Implement group lifecycle and authorization backend
-**Status:** PLANNED  
+**Status:** READY
 **Depends on:** LNG-22-001  
 **Target repo(s):** Backend  
 
