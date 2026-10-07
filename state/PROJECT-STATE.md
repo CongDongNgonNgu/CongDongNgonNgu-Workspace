@@ -2,7 +2,7 @@
 
 ## Authorized Phase 22 execution — 2026-10-07
 
-Owner START_PHASE_22=YES authorizes LNG-22-001 through004, existing TEST paths and normal source-control lifecycle. The Phase22 [implementation contract](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/POLICY-CONTRACT.md) is being reviewed before implementation; no completion gate is claimed. Earlier Phase22 planning flags below are historical.
+Owner START_PHASE_22=YES authorizes LNG-22-001 through004, existing TEST paths and normal source-control lifecycle. The Phase22 [implementation contract](../phases/PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/POLICY-CONTRACT.md) is frozen and integrated; Backend and Frontend implementation/verification are in progress. No final completion gate is claimed. Earlier Phase22 planning flags below are historical.
 
 ```text
 CURRENT_PHASE=22
@@ -10,8 +10,8 @@ PHASE_22_STATUS=IN_PROGRESS
 PHASE_22_STARTED=YES
 PHASE_22_EXECUTION_AUTHORIZED=YES
 LNG_22_001=DONE
-LNG_22_002=READY
-LNG_22_003=PLANNED
+LNG_22_002=DONE
+LNG_22_003=IN_PROGRESS
 LNG_22_004=PLANNED
 PHASE_20_STATUS=DONE
 PHASE_20_VERDICT=GO
@@ -25,7 +25,7 @@ PHASE_24_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_DB_MUTATED=NO
 PRODUCTION_MUTATION_PERFORMED=NO
-NEXT_ACTION=LNG_22_002_PERSISTED_BACKEND
+NEXT_ACTION=VERIFY_BACKEND_AND_IMPLEMENT_FRONTEND
 ```
 
 

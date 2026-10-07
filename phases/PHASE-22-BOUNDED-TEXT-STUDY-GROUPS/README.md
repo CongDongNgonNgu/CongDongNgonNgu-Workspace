@@ -28,3 +28,7 @@ Phase 20 `GO`, accepted membership/moderation/retention/abuse policy, reviewed b
 Full lifecycle/security/privacy/runtime acceptance, truthful evidence/handoff and release disposition. Any production release, persistent private user/group data collection or production migration remains separately governed by project hard stops.
 
 See [POLICY-CONTRACT.md](POLICY-CONTRACT.md) and [UI-STITCH.md](UI-STITCH.md) in addition to the standard phase files.
+
+## Current verified progress
+
+001 contract and002 persisted Backend DONE. BackendPR44/mainCI, realSQL25tests, fullregressions, guardedTEST0027 migration and exactRenderTESTdeployment are verified; deployedsyntheticHTTPlifecyclePASS.003 Frontend candidatePR28/full408tests is under authenticatedbrowser/CI acceptance.004 finalintegration/cleanup/closeout pending; Phase22 notDONE. Syntheticfixtures remain temporarilyforbrowser and exactcleanup is required.
