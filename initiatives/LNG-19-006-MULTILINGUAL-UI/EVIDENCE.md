@@ -119,3 +119,60 @@ mutation, Phase 20 or invented demand. ChatGPT responses are workflow guidance,
 never new owner production authorization. Final 006D terminal handoff is to relay
 the merged Workspace result and exact hard stop; no production action may follow
 without a new explicit human decision.
+
+## Owner-authorized production integration — 2026-10-07
+
+This current release record supersedes the historical pre-production hold above.
+The owner explicitly issued
+`AUTHORIZE_MERGE_FRONTEND_PR_27_AND_VERCEL_PRODUCTION_DEPLOYMENT=YES`.
+Re-read current governance; verified clean worktrees, exact PR candidate
+`ed681f034a925c62e91dfed60ca36571f083adc3`, unchanged base, merge eligibility
+and successful required CI before normal merge. No check/protection bypass.
+
+| Release gate | Observed result |
+| --- | --- |
+| Frontend PR #27 | MERGED; main `7cf66654da6419ca5447673e5d3782560856b4bc`; candidate is an ancestor |
+| Vercel Production | GitHub deployment `6899840617`, exact merged SHA, environment Production, status success; domain serves new bundle `/assets/index-BvSdLLkm.js` with working locale control |
+| Post-merge Frontend CI | [37560084998](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/37560084998) PASS; unchanged final source gates (383 tests, build/typecheck/lint/performance/audit) verified on merged revision |
+| Backend direct health | `/api/v1/health` HTTP 200, healthy |
+| Frontend home / proxied health | Home HTTP 200; `/api/v1/health` HTTP 200; public Library GET API HTTP 200 |
+| Production browser smoke | [PRODUCTION-SMOKE.json](PRODUCTION-SMOKE.json): 42 PASS, 0 uncaught JavaScript errors; actual public production API, no fake resource responses |
+| Monitoring | Existing workflow active, configured `*/15 * * * *`; [live run 37560322976](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/actions/runs/37560322976) PASS after deployment; 0 open live bot incidents verified by authoritative marker, no manual incident close |
+| Frontend cleanup | `lng-19-006-multilingual-ui` fully integrated, deleted remotely/locally, refs pruned; main clean/synced |
+
+Public production browser checks cover default vi, both locale switches, real
+resource content/language independence, stable filter/URL/hash, persistence,
+direct detail reload, browser back/forward, mobile menu/keyboard, browse and detail
+at all seven widths, real no-results search, and real not-found safe errors in
+both locales. A fresh isolated Chromium context blocks service workers and all
+non-GET/HEAD/OPTIONS requests; anonymous auth-refresh POSTs were intentionally
+blocked. No sign-in, user/profile/session write, AI analysis, payment or provider
+transaction was attempted. This proves the public production journey, not a
+production authenticated-session test or human language certification; the latter
+session/payment regression evidence remains the earlier isolated TEST/CI suite.
+
+Initial production smoke reached 18 checks before its test locator timed out:
+the card preview label `Sentence` is not the detail's actual resource title.
+The detail GET returned 200 and no JavaScript error occurred. Source/DOM semantics
+confirmed the test assumption; corrected the scratch harness to use the actual
+`h1[lang][dir=auto]` and named metadata aside, then full smoke passed 42 checks.
+No product code was changed or redeployed to mask this harness failure.
+The first unrelated `/health` probe was abandoned; acceptance uses only the
+documented `/api/v1/health` endpoints and the existing live monitor.
+
+Production deployment is YES, explicitly owner-authorized and Frontend-only.
+No production database direct query/write, migration, Backend deployment/restart,
+env/credential/DNS mutation, provider activation, telemetry or real-money action.
+Public GET API reads are included in smoke and must not be described as no
+production API access. Payment remains disabled; monitoring controls unchanged.
+Backend main/production remains `bec4ea4ac58abcbae0eb01c0c58bf7c0fd55bae5`.
+Rollback remains prior Frontend `940e278555b2d33054fb2780d7348ded59ba2c3e`;
+no rollback was necessary or performed, and any rollback deployment requires
+separate authority. No real-user demand or long-term latency/retention claim.
+
+All four capability tasks now meet technical and Frontend integration/release
+gates. LNG_19_006_IMPLEMENTATION_STATUS=DONE; preserve PHASE_19_DONE=YES as the
+historically closed discovery and PHASE_20_STARTED=NO. English human review is
+NOT_PERFORMED. Workspace production-closeout integration follows normal PR/CI,
+post-merge verification and cleanup; final terminal relay reports those actual
+results and requests only the authorized-scope boundary confirmation.
