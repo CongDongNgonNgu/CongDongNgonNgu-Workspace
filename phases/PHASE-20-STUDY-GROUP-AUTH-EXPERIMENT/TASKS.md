@@ -12,7 +12,7 @@ Freeze role/capability semantics, membership lifecycle, invitation rules, owners
 **Acceptance:** no ambiguous capability remains for owner/moderator/member/platform role; existing author-private semantics remain unchanged; fail-closed behavior is explicit.
 
 ## LNG-20-002 — Run isolated authorization experiment
-**Status:** VERIFYING
+**Status:** DONE
 **Depends on:** LNG-20-001 accepted  
 **Target repo(s):** Backend / Workspace as actually required  
 
@@ -21,7 +21,7 @@ Implement only the smallest isolated TEST slice needed to exercise two synthetic
 **Acceptance:** positive/negative matrix, cross-group IDOR, invite replay/race, immediate revocation and relevant list/search/notification/storage-path cases pass with observed evidence.
 
 ## LNG-20-003 — Review experiment and record verdict
-**Status:** PLANNED  
+**Status:** READY
 **Depends on:** LNG-20-002 observed results  
 **Target repo(s):** Workspace  
 

@@ -81,7 +81,15 @@ membership capabilities correctly returned 401, not used as payment evidence.
 Ordinary authorized TEST remediation changes only service build command to
 `npm ci --include=dev && npm run build`, retaining lockfile and installing build
 tools explicitly per [npm documentation](https://docs.npmjs.com/cli/v11/commands/npm-ci/).
-No env/secret/provider/DB mutation. Runtime acceptance pending deployment Live.
+Saved build command persisted; Auto-Deploy remains Off. Retry
+`dep-db2rh5ss728c73acv720` succeeded and Live at exact `d56fc2c` on
+2026-10-07 10:13:25 Asia/Saigon. Build/start logs showed successful Nest startup.
+No env/secret/provider/DB mutation. [Sanitized TEST runtime](TEST-RUNTIME.json)
+records HTTP200 health/status ok/runtime NODE_ENV production, nosniff and allowed
+CORS origin, public catalog HTTP200 payment disabled/QR disabled/provider null,
+anonymous protected membership HTTP401 and nonexistent community post HTTP404.
+Owner classifies this existing target TEST despite its NODE_ENV/dashboard label.
+No group runtime, real demand, latency benchmark or authenticated UAT is claimed.
 Rollback, if startup/smoke fails: redeploy prior verified `bec4ea4`; no schema
 rollback needed. Group adapter remains excluded and is not a deployed feature.
 
@@ -123,4 +131,5 @@ boundary validation. No real collection or product release is authorized here.
 Already delivered text cannot be recalled; fresh server authorization prevents
 new access. Test feasibility alone proves neither demand nor long-term safety.
 
-Final verdict and integration evidence will be reconciled after required CI.
+Experiment acceptance is PASS within the frozen scope. Final verdict review is
+the next same-phase task; no next major phase is authorized.
