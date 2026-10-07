@@ -2,6 +2,20 @@
 
 Append durable decisions; do not silently rewrite history.
 
+## DEC-036 — Owner-approved bounded multilingual UI implementation
+
+Accepted 2026-10-06: explicit IMPLEMENT_LNG_19_006=YES authorizes the separate
+[implementation initiative](../initiatives/LNG-19-006-MULTILINGUAL-UI/README.md)
+with vi/en, browser-only preference and shell/public Library scope. Phase 19
+discovery remains DONE; this is not Phase 20. Use typed internal catalogs/context
+and native Intl instead of adding a localization dependency for two locales.
+Vietnamese is default/fallback; resource content/learning languages/API/routes,
+auth and disabled payment are preserved. English human copy review is not yet
+performed and is distinct from technical acceptance. Read-only Vercel production
+settings confirm main merge triggers deployment: complete safe implementation,
+PR/CI/runtime/evidence first, then require exact Frontend production merge
+authorization. No production mutation is authorized by this decision.
+
 ## DEC-024 - Phase 10E bounded reputation reconciliation
 
 Accepted for Phase 10E / LNG-10-008 on 2026-09-30. Reconciliation is a pure,
