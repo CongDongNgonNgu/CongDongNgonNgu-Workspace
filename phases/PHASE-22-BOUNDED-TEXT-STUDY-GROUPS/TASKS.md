@@ -10,7 +10,7 @@ Owner START_PHASE_22=YES authorized the complete lifecycle on 2026-10-07. Phase2
 Translate the accepted Phase 20 policy into bounded schema/API/UI contracts, quotas, pagination, retention/deletion and moderation invariants without broadening scope.
 
 ## LNG-22-002 — Implement group lifecycle and authorization backend
-**Status:** READY  
+**Status:** READY
 **Depends on:** LNG-22-001  
 **Target repo(s):** Backend  
 
