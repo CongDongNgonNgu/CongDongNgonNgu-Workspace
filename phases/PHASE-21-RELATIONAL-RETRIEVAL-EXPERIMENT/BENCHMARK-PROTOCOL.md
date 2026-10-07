@@ -1,5 +1,11 @@
 # Phase 21 Benchmark Protocol — Planning
 
+Execution addendum 2026-10-07: this original protocol is satisfied by the reviewed
+[frozen contract](FROZEN-CONTRACT.md), [freeze review](FREEZE-REVIEW.md) and original
+[fixture-v1.json](fixture-v1.json), integrated before candidate execution in PR #124.
+Observed full comparison is in [raw results](benchmark-results-v1.json) and
+[evidence](EVIDENCE.md); no post-observation label/config/threshold change occurred.
+
 ## Freeze before execution
 1. Reviewed eligible resource fixture set with provenance/license status.
 2. Bounded relation vocabulary and ownership/update semantics.

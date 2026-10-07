@@ -2,6 +2,11 @@
 
 **State:** prospective; no benchmark result is recorded here.
 
+Execution addendum 2026-10-07: [observed evidence](EVIDENCE.md) records 34 focused,
+872 Backend unit and 143 e2e tests PASS, plus lint/typecheck/build/audit and
+independent review. Original prospective requirements remain unchanged. No
+runtime related endpoint or persistent cache/projection exists in this experiment.
+
 ## Benchmark preparation
 Freeze labeled queries, expected relevant resource set, relation vocabulary, language/type/level filters and the exact eligibility snapshot used for comparison. Exclude private/ineligible material.
 
