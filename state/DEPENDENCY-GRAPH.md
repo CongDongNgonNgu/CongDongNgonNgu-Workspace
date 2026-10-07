@@ -1,5 +1,10 @@
 # Dependency Graph
 
+## Authorized Phase 22 graph — 2026-10-07
+
+Phase20 DONE/GO + explicit owner START_PHASE_22=YES -> LNG-22-001 reviewed persisted contract -> LNG-22-002 PostgreSQL lifecycle/authorization -> LNG-22-003 Stitch/native vi/en journey -> LNG-22-004 integration/security/TEST runtime/closeout. Phase22 is IN_PROGRESS; no task DONE yet. Phase21 DONE/GO preserved. Phase23/24 remain unauthorized and unstarted. Payment disabled; production writes prohibited.
+
+
 ## Authorized Phase 21 graph — 2026-10-07
 
 Owner START_PHASE_21=YES authorizes closed Phase 19/current Library ->

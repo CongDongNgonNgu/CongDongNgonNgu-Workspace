@@ -1,9 +1,9 @@
 # Phase 22 Tasks
 
-All tasks are `PLANNED`. Phase 20 `GO` is a mandatory technical gate and Phase 22 still requires separate owner start authorization.
+Owner START_PHASE_22=YES authorized the complete lifecycle on 2026-10-07. Phase20 DONE/GO gate is verified. LNG-22-001 is IN_PROGRESS; dependent tasks remain PLANNED until their gates pass.
 
 ## LNG-22-001 — Freeze implementation contracts
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Depends on:** Phase 20 `GO`; explicit Phase 22 authorization  
 **Target repo(s):** Workspace / Backend / Frontend  
 
