@@ -2,6 +2,12 @@
 
 Prospective contract only.
 
+Reviewed disposition 2026-10-07: all original acceptance items PASS within the
+synthetic test-only scope, as reconciled in [VERDICT.md](VERDICT.md). Exactly one
+verdict GO. Production cache/projection/runtime coverage remains NOT_APPLICABLE;
+broader semantics, human linguistic certification and real-user value unproven.
+Final completion remains subject to verdict integration/CI/cleanup.
+
 - Lexical baseline and relational candidate use the same frozen eligible resource pool and reviewed query labels.
 - Quality criteria are fixed before comparison; report denominators and uncertainty honestly.
 - `precision@k`, `recall@k`, abstention/support behavior or any accepted replacement metrics are computed only from observed benchmark results.

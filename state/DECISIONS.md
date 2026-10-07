@@ -292,3 +292,15 @@ Accepted by explicit owner Scope Correction on 2026-10-06. [Amendment](../phases
 
 ## DEC-035 - Pre-launch Growth V2 portfolio recommendation
 [Phase19 portfolio](../phases/PHASE-19-GROWTH-V2/PORTFOLIO.md) proposes006 bounded multilingual journey next,004 scoped-membership experiment,008 relational/lexical experiment; defers002 scoring,003 marketplace,005 native and007 ML. Based on owner global-community direction plus inspected technical evidence, not proven demand. Future implementation/experiments require separately approved epic; no Phase20 created or started. Portfolio PR114 integrated with PR/post-merge qualityCI and cleanup verified. Phase19 closes discovery/portfolio only; next major phase needs new owner authorization.
+
+## DEC-036 - Bounded Phase21 contextual retrieval GO
+
+2026-10-07. [Reviewed verdict](../phases/PHASE-21-RELATIONAL-RETRIEVAL-EXPERIMENT/VERDICT.md)
+accepts the deterministic test-only anchor/relation technique against the prospectively
+frozen synthetic contract: recall gain0.25, all quality gates and zero known
+accepted-case safety/provenance violations. Phase23 becomes technically eligible,
+not authorized or started. [Inheritance](../phases/PHASE-21-RELATIONAL-RETRIEVAL-EXPERIMENT/HANDOFF.md)
+requires separate persisted-domain/HTTP/SQL/projection/cache/UI/runtime and corpus
+validation. Curated edge-label coupling and extra anchor context limit conclusions;
+no free-text superiority, human linguistic certification or user value claim.
+No provider/index/migration/UI or production mutation; payment disabled.

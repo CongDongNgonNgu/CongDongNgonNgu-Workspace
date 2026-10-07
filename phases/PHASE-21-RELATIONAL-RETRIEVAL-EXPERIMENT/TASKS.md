@@ -19,7 +19,7 @@ Freeze the resource pool, relation vocabulary, relevance labels, eligibility/pro
 Build only the isolated non-generative relational slice needed to compare against the current lexical baseline. Preserve source-card/citation fallback and abstention; do not activate external AI/vector/graph services.
 
 ## LNG-21-003 — Reconcile benchmark and security verdict
-**Status:** READY
+**Status:** VERIFYING
 **Depends on:** LNG-21-002 observed results  
 **Target repo(s):** Workspace  
 
