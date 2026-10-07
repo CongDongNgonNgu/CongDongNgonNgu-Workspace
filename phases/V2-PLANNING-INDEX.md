@@ -3,7 +3,7 @@
 Current execution addendum — 2026-10-07: owner START_PHASE_20=YES authorizes
 only Phase 20. Its [evidence](PHASE-20-STUDY-GROUP-AUTH-EXPERIMENT/EVIDENCE.md)
 supersedes the original creation-time planning-only flags below for that phase.
-Phase 20 reviewed verdict is GO; closeout is VERIFYING. Phase 22 is technically
+Phase 20 reviewed verdict is GO; Phase 20 is DONE. Phase 22 is technically
 eligible, subject to inherited gates and separate owner authorization.
 Phases 21–24 remain PLANNED, unstarted and without execution authorization.
 
@@ -24,7 +24,7 @@ PRODUCTION_MUTATION_AUTHORIZED=NO_BY_THIS_RECORD
 
 | Phase | Dossier | Planning state | Execution gate |
 |---|---|---|---|
-| 20 | [Scoped Study Group Policy & Authorization Experiment](PHASE-20-STUDY-GROUP-AUTH-EXPERIMENT/README.md) | VERIFYING | Reviewed GO; closeout integration pending |
+| 20 | [Scoped Study Group Policy & Authorization Experiment](PHASE-20-STUDY-GROUP-AUTH-EXPERIMENT/README.md) | DONE | Reviewed GO; verdict PR/main CI and cleanup PASS |
 | 21 | [Provenance-Safe Relational Retrieval Experiment](PHASE-21-RELATIONAL-RETRIEVAL-EXPERIMENT/README.md) | PLANNED | Explicit phase authorization plus frozen reviewed benchmark |
 | 22 | [Bounded Text Study Groups](PHASE-22-BOUNDED-TEXT-STUDY-GROUPS/README.md) | PLANNED | Phase 20 `GO` plus separate phase authorization |
 | 23 | [Verified Related-Resource Library Journey](PHASE-23-RELATED-RESOURCE-LIBRARY/README.md) | PLANNED | Phase 21 `GO` plus separate phase authorization |

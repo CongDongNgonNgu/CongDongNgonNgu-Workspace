@@ -4,7 +4,7 @@ Date: 2026-10-07. Exactly one final verdict: **GO**.
 
 GO accepts the frozen study-group policy as technically viable enough for later
 separately authorized persisted implementation. It does not authorize Phase 22.
-Phase closeout integration remains VERIFYING until its PR/CI/main/cleanup gates pass.
+Phase closeout integration, PR/main CI and merged-branch cleanup passed; Phase 20 is DONE.
 
 ```text
 PHASE_20_VERDICT=GO

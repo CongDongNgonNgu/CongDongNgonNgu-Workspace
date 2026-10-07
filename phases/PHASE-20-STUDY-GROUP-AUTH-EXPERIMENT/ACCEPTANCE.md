@@ -2,7 +2,7 @@
 
 This preserves the original acceptance contract. Observed disposition is
 [PASS within the frozen scope](EVIDENCE.md); final reviewed verdict is
-[GO](VERDICT.md). Integration remains VERIFYING until closeout gates pass.
+[GO](VERDICT.md). Verdict integration, main CI and cleanup passed; Phase 20 is DONE.
 
 ## Required experiment outcomes
 - Deterministic positive and negative authorization matrix is frozen before evaluation.

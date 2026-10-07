@@ -1,6 +1,6 @@
 # Phase 20 — Scoped Study Group Policy & Authorization Experiment
 
-**Status:** VERIFYING
+**Status:** DONE
 **Source candidate:** `LNG-19-004`  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`  
 **Planning index:** `../V2-PLANNING-INDEX.md`
@@ -42,5 +42,5 @@ See [TASKS.md](TASKS.md), [ACCEPTANCE.md](ACCEPTANCE.md), [TEST-PLAN.md](TEST-PL
 
 [Verdict](VERDICT.md): GO for the bounded synthetic policy experiment.
 [Evidence](EVIDENCE.md) and [handoff](HANDOFF.md) preserve observed gates and
-unproven persisted/distributed requirements. Final integration is VERIFYING.
+unproven persisted/distributed requirements. Verdict integration, main CI and merged-branch cleanup passed.
 Phase 22 is technically eligible, execution unauthorized and unstarted.
