@@ -1,6 +1,6 @@
 # Phase 22 — Bounded Text Study Groups
 
-**Status:** VERIFYING
+**Status:** DONE
 **Dependency:** Phase 20 must exit `GO`  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
@@ -33,4 +33,4 @@ See [POLICY-CONTRACT.md](POLICY-CONTRACT.md) and [UI-STITCH.md](UI-STITCH.md) in
 
 All four tasks DONE: frozen Phase20 policy inheritance, persisted PostgreSQL Backend, accessible vi/en native Frontend and approved TEST integration. BackendPR44 and FrontendPR28 merged with PR/main CI and branch cleanup. Real SQL25 tests and private regression47 PASS; Frontend408 tests; local browser116 and deployed Vercel117 checks PASS at all seven widths. Render/Vercel exact merged source revisions verified. Four synthetic actors/four groups cleaned with all scoped residual counts0. See [EVIDENCE.md](EVIDENCE.md), [HANDOFF.md](HANDOFF.md) and [VERDICT.md](VERDICT.md).
 
-Technical TEST completion is bounded; real private-data release/global block/backup/deletion safeguards remain held. Production untouched, payment disabled. Phase23/24 remain unauthorized/unstarted. Final closeout PR/main CI and branch cleanup are required before terminal lifecycle completion.
+Technical TEST completion is bounded; real private-data release/global block/backup/deletion safeguards remain held. Production untouched, payment disabled. Phase23/24 remain unauthorized/unstarted. Workspace closeout PR133 merged reviewed98588444586513952fc7bb8bbd49cf6e9c63347b to c2d7654939b3dc165ba9bda5b5b5d728ad6466a0; PRquality112711318198 and main workflow37596937701 SUCCESS. Source/main trees identical; localmain ff synced; remote/localphase/22-closeout removed and refs pruned after checks. All applicable Phase22 implementation, TEST acceptance, evidence integration and cleanup gates passed. Phase22 and001–004 DONE, bounded technical GO. Final state reconciliation remains under the normal PR/CI/cleanup workflow, with no new feature or later phase.
