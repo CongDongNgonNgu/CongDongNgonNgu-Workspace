@@ -1,7 +1,8 @@
 # Phase 21 Tasks
 
 Owner authorized Phase 21 only on 2026-10-07. Contract preparation has started;
-candidate implementation waits for prospective review and freeze integration.
+prospective review/freeze integration is accepted. Observed experiment evidence
+is under integration; the final verdict is reserved to LNG-21-003.
 
 ## LNG-21-001 — Freeze benchmark, eligibility and relation contract
 **Status:** DONE
@@ -11,14 +12,14 @@ candidate implementation waits for prospective review and freeze integration.
 Freeze the resource pool, relation vocabulary, relevance labels, eligibility/provenance/license rules and prospective quality thresholds before comparing approaches.
 
 ## LNG-21-002 — Run bounded relational retrieval experiment
-**Status:** PLANNED  
+**Status:** DONE
 **Depends on:** LNG-21-001 accepted  
 **Target repo(s):** Backend / Workspace only as actually required  
 
 Build only the isolated non-generative relational slice needed to compare against the current lexical baseline. Preserve source-card/citation fallback and abstention; do not activate external AI/vector/graph services.
 
 ## LNG-21-003 — Reconcile benchmark and security verdict
-**Status:** PLANNED  
+**Status:** READY
 **Depends on:** LNG-21-002 observed results  
 **Target repo(s):** Workspace  
 

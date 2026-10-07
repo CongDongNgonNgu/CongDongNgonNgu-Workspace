@@ -1,0 +1,1006 @@
+{
+  "version": "phase21-v1",
+  "fixtureSha256": "030edc9377c84f44e175fc45c9fc91d53756d5377178163f55823e4f5b7c57f7",
+  "poolVersion": "5c511b772847188fc637d1597736908bba31737a129d2fc998963d8ca743f317",
+  "poolCount": 14,
+  "baselineSha": "d56fc2c518a617018d6926bf63b482572268a1ef",
+  "configuration": {
+    "k": 3,
+    "maxEdges": 64,
+    "maxPool": 32,
+    "maxQueries": 32,
+    "traversalHops": 1,
+    "fallback": "unchanged lexical service when no valid edge remains; invalid anchor abstains"
+  },
+  "thresholds": {
+    "candidateMacroRecallMinimum": 0.8,
+    "macroRecallGainMinimum": 0.2,
+    "returnedPrecisionMinimum": 0.9,
+    "controlRegressionsMaximum": 0,
+    "correctEmptyQueriesRequired": 2,
+    "safetyViolationsMaximum": 0
+  },
+  "lexical": {
+    "queryCount": 14,
+    "positiveQueryCount": 12,
+    "labeledTotal": 13,
+    "returned": 14,
+    "relevantReturned": 10,
+    "precisionSlots": 36,
+    "precisionAt3": 0.2777777777777778,
+    "returnedPrecision": 0.7142857142857143,
+    "recallSum": 9,
+    "macroRecall": 0.75,
+    "reciprocalRankSum": 8,
+    "mrr": 0.6666666666666666,
+    "emptyQueryCount": 2,
+    "correctEmptyQueries": 2,
+    "abstentions": [
+      "q04",
+      "q05",
+      "q13",
+      "q14"
+    ]
+  },
+  "candidate": {
+    "queryCount": 14,
+    "positiveQueryCount": 12,
+    "labeledTotal": 13,
+    "returned": 13,
+    "relevantReturned": 13,
+    "precisionSlots": 36,
+    "precisionAt3": 0.3611111111111111,
+    "returnedPrecision": 1,
+    "recallSum": 12,
+    "macroRecall": 1,
+    "reciprocalRankSum": 12,
+    "mrr": 1,
+    "emptyQueryCount": 2,
+    "correctEmptyQueries": 2,
+    "abstentions": [
+      "q13",
+      "q14"
+    ]
+  },
+  "recallGain": 0.25,
+  "controlCount": 3,
+  "controlRegressions": 0,
+  "canonicalProvenanceComparisons": 13,
+  "provenanceViolations": 0,
+  "qualityThresholdMet": true,
+  "rows": [
+    {
+      "query": {
+        "id": "q01",
+        "q": "greeting",
+        "anchor": "hello",
+        "relation": "SAME_CONCEPT",
+        "language": "en",
+        "expected": [
+          "welcome"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000002"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000004",
+          "00000000-0000-4000-8000-000000000002",
+          "00000000-0000-4000-8000-000000000001"
+        ],
+        "score": {
+          "returned": 3,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 0.5
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000002"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000002",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:welcome",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: welcome",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e01",
+              "type": "SAME_CONCEPT",
+              "reason": "Both illustrate first-meeting greetings",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q02",
+        "q": "salutation",
+        "anchor": "hello",
+        "relation": "SAME_CONCEPT",
+        "language": "fr",
+        "expected": [
+          "bonjour"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000003"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000003"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000003"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000003",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:bonjour",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: bonjour",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e02",
+              "type": "SAME_CONCEPT",
+              "reason": "Parallel salutation concept; not a certified translation",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q03",
+        "q": "completed actions",
+        "anchor": "past",
+        "relation": "PREREQUISITE",
+        "language": "en",
+        "expected": [
+          "present"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000005"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000006"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 0,
+          "labeled": 1,
+          "precisionAt3": 0,
+          "recallAt3": 0,
+          "reciprocalRank": 0
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000005",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:present",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: present",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e03",
+              "type": "PREREQUISITE",
+              "reason": "Fixture learning sequence introduces base verb forms first",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q04",
+        "q": "regular actions",
+        "anchor": "present",
+        "relation": "FOLLOW_UP",
+        "language": "en",
+        "level": "A2",
+        "expected": [
+          "past"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000006"
+      ],
+      "lexical": {
+        "ids": [],
+        "score": {
+          "returned": 0,
+          "relevantReturned": 0,
+          "labeled": 1,
+          "precisionAt3": 0,
+          "recallAt3": 0,
+          "reciprocalRank": 0
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000006"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000006",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:past",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: past",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e04",
+              "type": "FOLLOW_UP",
+              "reason": "Fixture sequence progresses from regular to completed actions",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q05",
+        "q": "completed actions",
+        "anchor": "past",
+        "relation": "FOLLOW_UP",
+        "language": "en",
+        "level": "B1",
+        "expected": [
+          "perfect"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000007"
+      ],
+      "lexical": {
+        "ids": [],
+        "score": {
+          "returned": 0,
+          "relevantReturned": 0,
+          "labeled": 1,
+          "precisionAt3": 0,
+          "recallAt3": 0,
+          "reciprocalRank": 0
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000007"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000007",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:perfect",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: perfect",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e05",
+              "type": "FOLLOW_UP",
+              "reason": "Fixture sequence adds earlier-action connection to now",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q06",
+        "q": "hello",
+        "anchor": "hello",
+        "relation": "DIRECT_TRANSLATION",
+        "language": "vi",
+        "type": "TRANSLATION",
+        "expected": [
+          "hello-vi"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000004"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000004"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000004"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000004",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:hello-vi",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: hello-vi",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e06",
+              "type": "DIRECT_TRANSLATION",
+              "reason": "Explicit sourceText equals the anchor term",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q07",
+        "q": "thanks",
+        "anchor": "thanks",
+        "relation": "DIRECT_TRANSLATION",
+        "language": "vi",
+        "expected": [
+          "thanks-vi"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000012"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000012"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000012"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000012",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:thanks-vi",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: thanks-vi",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e07",
+              "type": "DIRECT_TRANSLATION",
+              "reason": "Explicit sourceText equals the anchor term",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q08",
+        "q": "travel",
+        "anchor": "travel-book",
+        "relation": "COLLECTION_MEMBER",
+        "language": "en",
+        "level": "A2",
+        "expected": [
+          "journey",
+          "ticket"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000008",
+        "00000000-0000-4000-8000-000000000009"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000010",
+          "00000000-0000-4000-8000-000000000009",
+          "00000000-0000-4000-8000-000000000008"
+        ],
+        "score": {
+          "returned": 3,
+          "relevantReturned": 2,
+          "labeled": 2,
+          "precisionAt3": 0.6666666666666666,
+          "recallAt3": 1,
+          "reciprocalRank": 0.5
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000008",
+          "00000000-0000-4000-8000-000000000009"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 2,
+          "relevantReturned": 2,
+          "labeled": 2,
+          "precisionAt3": 0.6666666666666666,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000008",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:journey",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: journey",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e08",
+              "type": "COLLECTION_MEMBER",
+              "reason": "Curated fixture member for travelling vocabulary",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          },
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000009",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:ticket",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: ticket",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e09",
+              "type": "COLLECTION_MEMBER",
+              "reason": "Curated fixture member for station practice",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q09",
+        "q": "railway",
+        "anchor": "journey",
+        "relation": "SAME_CONCEPT",
+        "language": "en",
+        "type": "SENTENCE",
+        "expected": [
+          "ticket"
+        ]
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000009"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000009"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000009"
+        ],
+        "mode": "RELATIONAL",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000009",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:ticket",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: ticket",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": {
+              "id": "e10",
+              "type": "SAME_CONCEPT",
+              "reason": "Shared travelling situation with distinct learning types",
+              "owner": "phase21-reviewed-fixture-v1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q10",
+        "q": "river",
+        "anchor": "river",
+        "relation": "SAME_CONCEPT",
+        "language": "en",
+        "expected": [
+          "river"
+        ],
+        "control": true
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000013"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000013"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000013"
+        ],
+        "mode": "LEXICAL_FALLBACK",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000013",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:river",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: river",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": null
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q11",
+        "q": "pitch",
+        "anchor": "tone",
+        "relation": "SAME_CONCEPT",
+        "language": "vi",
+        "type": "PRONUNCIATION",
+        "expected": [
+          "tone"
+        ],
+        "control": true
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000014"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000014"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000014"
+        ],
+        "mode": "LEXICAL_FALLBACK",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000014",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:tone",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: tone",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": null
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q12",
+        "q": "appreciation",
+        "anchor": "thanks",
+        "relation": "FOLLOW_UP",
+        "language": "en",
+        "expected": [
+          "thanks"
+        ],
+        "control": true
+      },
+      "expected": [
+        "00000000-0000-4000-8000-000000000011"
+      ],
+      "lexical": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000011"
+        ],
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        }
+      },
+      "candidate": {
+        "ids": [
+          "00000000-0000-4000-8000-000000000011"
+        ],
+        "mode": "LEXICAL_FALLBACK",
+        "score": {
+          "returned": 1,
+          "relevantReturned": 1,
+          "labeled": 1,
+          "precisionAt3": 0.3333333333333333,
+          "recallAt3": 1,
+          "reciprocalRank": 1
+        },
+        "sourceCards": [
+          {
+            "resourceId": "00000000-0000-4000-8000-000000000011",
+            "provenance": [
+              {
+                "sourceType": "ORIGINAL_AUTHOR",
+                "sourceId": "phase21:thanks",
+                "sourceUrl": null,
+                "license": {
+                  "licenseKey": "PHASE21-TEST",
+                  "displayName": "Synthetic test permission",
+                  "canonicalUrl": "https://example.invalid/phase21-test-license",
+                  "attributionRequired": true,
+                  "redistributionAllowed": true,
+                  "derivativeConstraints": null
+                },
+                "attribution": "Synthetic Phase21 fixture: thanks",
+                "originalAuthorReference": "Synthetic test curator"
+              }
+            ],
+            "relation": null
+          }
+        ]
+      }
+    },
+    {
+      "query": {
+        "id": "q13",
+        "q": "unlisted astronomical phrase",
+        "anchor": "river",
+        "relation": "DIRECT_TRANSLATION",
+        "language": "en",
+        "expected": []
+      },
+      "expected": [],
+      "lexical": {
+        "ids": [],
+        "score": {
+          "returned": 0,
+          "relevantReturned": 0,
+          "labeled": 0,
+          "precisionAt3": 0,
+          "recallAt3": null,
+          "reciprocalRank": null
+        }
+      },
+      "candidate": {
+        "ids": [],
+        "mode": "LEXICAL_FALLBACK",
+        "score": {
+          "returned": 0,
+          "relevantReturned": 0,
+          "labeled": 0,
+          "precisionAt3": 0,
+          "recallAt3": null,
+          "reciprocalRank": null
+        },
+        "sourceCards": []
+      }
+    },
+    {
+      "query": {
+        "id": "q14",
+        "q": "unlisted botanical phrase",
+        "anchor": "tone",
+        "relation": "PREREQUISITE",
+        "language": "vi",
+        "expected": []
+      },
+      "expected": [],
+      "lexical": {
+        "ids": [],
+        "score": {
+          "returned": 0,
+          "relevantReturned": 0,
+          "labeled": 0,
+          "precisionAt3": 0,
+          "recallAt3": null,
+          "reciprocalRank": null
+        }
+      },
+      "candidate": {
+        "ids": [],
+        "mode": "LEXICAL_FALLBACK",
+        "score": {
+          "returned": 0,
+          "relevantReturned": 0,
+          "labeled": 0,
+          "precisionAt3": 0,
+          "recallAt3": null,
+          "reciprocalRank": null
+        },
+        "sourceCards": []
+      }
+    }
+  ]
+}
