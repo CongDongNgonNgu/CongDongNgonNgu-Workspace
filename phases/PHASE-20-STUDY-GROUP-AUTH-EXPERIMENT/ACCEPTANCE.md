@@ -1,6 +1,8 @@
 # Phase 20 Acceptance
 
-This is a prospective acceptance contract, not completion evidence.
+This preserves the original acceptance contract. Observed disposition is
+[PASS within the frozen scope](EVIDENCE.md); final reviewed verdict is
+[GO](VERDICT.md). Integration remains VERIFYING until closeout gates pass.
 
 ## Required experiment outcomes
 - Deterministic positive and negative authorization matrix is frozen before evaluation.
