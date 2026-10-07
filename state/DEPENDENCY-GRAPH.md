@@ -2,7 +2,7 @@
 
 ## Authorized bounded Phase 23 graph — 2026-10-07
 
-Phase21 DONE/GO + owner START_PHASE_23=YES -> LNG-23-001 contract review/freeze -> LNG-23-002 Backend -> LNG-23-003 Frontend -> LNG-23-004 integration/TEST acceptance/closeout. LNG-23-001 VERIFYING contract integration/CI; downstream tasks remain PLANNED until dependencies pass. Current authorization covers Related Resources only; category-completion23B remains PLANNED. Phase22 DONE/GO_BOUNDED_TEST preserved; Phase24 unauthorized/unstarted. No production mutation; payment disabled.
+Phase21 DONE/GO + owner START_PHASE_23=YES -> LNG-23-001 contract review/freeze -> LNG-23-002 Backend -> LNG-23-003 Frontend -> LNG-23-004 integration/TEST acceptance/closeout. LNG-23-001 DONE: PR135/main CI and remote/local branch cleanup PASS. LNG-23-002 IN_PROGRESS;003/004 remain PLANNED until dependencies pass. Current authorization covers Related Resources only; category-completion23B remains PLANNED. Phase22 DONE/GO_BOUNDED_TEST preserved; Phase24 unauthorized/unstarted. No production mutation; payment disabled.
 
 
 ## Authorized Phase 22 graph — 2026-10-07
