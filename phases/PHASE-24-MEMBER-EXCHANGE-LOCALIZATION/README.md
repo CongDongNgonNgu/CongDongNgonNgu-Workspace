@@ -1,14 +1,14 @@
 # Phase 24 — Member Onboarding & Language Exchange Localization
 
-**Status:** PLANNED  
+**Status:** IN_PROGRESS
 **Foundation:** completed `LNG-19-006` locale infrastructure  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
 ```text
 PHASE_NUMBER=24
-PHASE_STARTED=NO
-EXECUTION_AUTHORIZED=NO
-PLANNING_DOSSIER_ONLY=YES
+PHASE_STARTED=YES
+EXECUTION_AUTHORIZED=YES
+PLANNING_DOSSIER_ONLY=NO
 ```
 
 ## Objective
