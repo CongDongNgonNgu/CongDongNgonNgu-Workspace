@@ -1,9 +1,9 @@
 # Phase 24 Tasks
 
-All tasks are `PLANNED`; completed `LNG-19-006` foundation is reused rather than reimplemented.
+Owner authorized Phase24; copy contract locally frozen, integration pending. Downstream tasks follow this contract; completed `LNG-19-006` foundation is reused rather than reimplemented.
 
 ## LNG-24-001 — Freeze copy inventory, terminology and review ownership
-**Status:** PLANNED  
+**Status:** VERIFYING
 **Depends on:** explicit Phase 24 authorization  
 **Target repo(s):** Workspace / Frontend  
 
