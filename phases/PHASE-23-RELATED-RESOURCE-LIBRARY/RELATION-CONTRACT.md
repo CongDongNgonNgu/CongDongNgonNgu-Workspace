@@ -1,6 +1,6 @@
 # Phase 23 bounded production relation contract
 
-2026-10-07 (Asia/Saigon). Independently approved contract freeze for LNG-23-001 (Workspace integration/CI pending); no implementation or runtime evidence is claimed here.
+2026-10-07 (Asia/Saigon). Independently approved contract freeze for LNG-23-001; historical preparation milestone, subsequently integrated through PR135/main CI. The contract remains unchanged. Actual implementation/acceptance mapping is [handoff](HANDOFF.md), [Backend evidence](BACKEND-EVIDENCE.md), [Frontend evidence](FRONTEND-EVIDENCE.md) and [verdict](VERDICT.md); preparation-time statements are not runtime proof.
 
 ## Owner scope and inheritance
 

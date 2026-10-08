@@ -1,12 +1,16 @@
 # Phase 23 Test Plan
 
-**State:** Backend and Frontend bounded TEST acceptance observed; integrated closeout READY. Earlier pending language below is historical002 evidence.
+**State:** Backend and Frontend bounded TEST acceptance observed; integrated closeout accepted; final Workspace lifecycle verified separately. Earlier pending language below is historical002 evidence.
 
 ## Observed LNG-23-003 gates — 2026-10-08
 
 Frontend PR29/main103f876 quality PASS,97 files/429 tests and focused Library regressions PASS; lint/typecheck/build/performance budget PASS, audit0. Exact Vercel main/alias binding, real Chrome14 vi/en viewport pairs, keyboard/native filters/pagination replacement/empty continuation/canonical target and lexical navigation/uppercase/error/retry/manual hide/delete invalidation PASS. Sampled numeric contrast PASS; screen reader NOT_RUN; actual focus/visibility transition NOT_OBSERVED with separate unit coverage PASS. Fresh UI89-resource scope independently cleaned residualzero; original002 manifest unchanged. See [Frontend evidence](FRONTEND-EVIDENCE.md) and [review](FRONTEND-REVIEW.md) for exact observations and limits.
 
+## Observed LNG-23-004 reconciliation — 2026-10-08
+
+Exact merged source unchanged: Backenda2640cd/Frontend103f876 and their accepted main CI remain current. Independent final source/security/Phase21 criterion mapping APPROVE, GO_BOUNDED_PRODUCT recommended with zero known accepted-case violations only. Actually rerun Phase21 regression34 tests/2 suites PASS and Workspace syntax/12 tests/diff checks PASS. Current public health PASS; paymentfalse/false/null; both unavailable synthetic target routes404. No redundant full suites/redeployment/new fixtures; all valid exact-source full evidence retained. See [verdict](VERDICT.md), [handoff](HANDOFF.md) and [relay](RELAY-EVIDENCE.md). Final closeout PR/main CI/branch cleanup recorded in terminal report after observation.
 ## Backend/projection
+
 Test eligible relation retrieval, filters, pagination, unsupported relation, no-result fallback, source/license status changes, deletion and stale projection/cache invalidation. Re-run Phase 21 leak/quality criteria where applicable.
 
 ## Frontend
