@@ -2,7 +2,7 @@
 
 ## Authorized Phase 24 graph — 2026-10-08
 
-LNG-19-006 DONE + owner START_PHASE_24=YES -> LNG-24-001 source copy/terminology/error/legal freeze -> LNG-24-002 auth/onboarding/profile and LNG-24-003 exchange -> LNG-24-004 actual acceptance/closeout. Contract locally frozen, VERIFYING integration. Prior phases stay closed; historical category-completion23B remains unstarted; no Phase25/new major phase.
+LNG-19-006 DONE + owner START_PHASE_24=YES -> LNG-24-001 source copy/terminology/error/legal freeze -> LNG-24-002 auth/onboarding/profile and LNG-24-003 exchange -> LNG-24-004 actual acceptance/closeout. Contract DONE through WorkspacePR140/exactmainCI/cleanup; 002/003 technical implementation DONE through FrontendPR30/mainCI/exactTEST acceptance;004 BLOCKED_EXTERNAL and Phase24 DEFER pending direct read authorization for mandatory ChatGPT terminal relay. Prior phases stay closed; historical category-completion23B remains unstarted; no Phase25/new major phase.
 
 ## Authorized bounded Phase 23 graph — 2026-10-07
 

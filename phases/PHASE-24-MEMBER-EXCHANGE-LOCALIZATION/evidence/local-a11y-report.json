@@ -1,0 +1,7029 @@
+{
+  "scope": "LOCAL_SYNTHETIC_TEST_ONLY",
+  "liveAuthBackendProof": false,
+  "fullStackProof": false,
+  "screenReaderTested": false,
+  "axeLocales": [
+    "vi",
+    "en"
+  ],
+  "axeWidths": [
+    390,
+    1440
+  ],
+  "targetOrigin": "http://127.0.0.1:50221",
+  "approvedApiOrigin": null,
+  "syntheticApiOrigin": "http://127.0.0.1:50221",
+  "checks": [
+    {
+      "name": "vi-login-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 18,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Địa chỉ email *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Email đã đăng ký tại CongDongNgonNgu.vn"
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Mật khẩu *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Ghi nhớ đăng nhập trên thiết bị này",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-login-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Trang chủ",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 322,
+            "bottom": 50,
+            "width": 254,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 6,
+            "right": 374,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "INPUT",
+          "label": "Địa chỉ email *",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 227.640625,
+            "right": 374,
+            "bottom": 275.640625,
+            "width": 358,
+            "height": 48
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-register-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 27,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Tên hiển thị công khai *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Tên này sẽ xuất hiện khi bạn thảo luận, đặt câu hỏi và đóng góp vào thư viện."
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Địa chỉ email *",
+          "invalid": "false",
+          "describedBy": ":r5:-hint",
+          "description": "Dùng để đăng nhập, bảo mật tài khoản và nhận xác nhận kích hoạt."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Mật khẩu *",
+          "invalid": "false",
+          "describedBy": ":r6:-hint",
+          "description": "Quy chuẩn mật khẩu dễ nhớ & an toàn:Tối thiểu 8 ký tự bất kỳ.Nên kết hợp chữ cái và số để bảo vệ quyền riêng tư tốt hơn."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Xác nhận mật khẩu *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Tôi đã đọc và đồng ý với Quy tắc cộng đồng  và Chính sách bảo mật  của CongDongNgonNgu.vn.",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-register-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Trang chủ",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 322,
+            "bottom": 50,
+            "width": 254,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 6,
+            "right": 374,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "INPUT",
+          "label": "Tên hiển thị công khai *",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 362.390625,
+            "right": 374,
+            "bottom": 410.390625,
+            "width": 358,
+            "height": 48
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-reset-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 28,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 23,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Mật khẩu mới *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Tiêu chuẩn mật khẩu dễ nhớ & an toàn:Tối thiểu 12 ký tự bất kỳ.Nên kết hợp chữ cái và số để bảo vệ quyền riêng tư tốt hơn."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Xác nhận mật khẩu mới *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-reset-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Trang chủ",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 322,
+            "bottom": 50,
+            "width": 254,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 6,
+            "right": 374,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "OL",
+          "label": "Trạng thái khôi phục mật khẩu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 92,
+            "right": 374,
+            "bottom": 128,
+            "width": 358,
+            "height": 36
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "INPUT",
+          "label": "Mật khẩu mới *",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 311.640625,
+            "right": 374,
+            "bottom": 359.640625,
+            "width": 358,
+            "height": 48
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-onboarding-validation-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 29,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Tìm và thêm ngôn ngữ",
+          "invalid": "true",
+          "describedBy": "onboarding-step-error",
+          "description": "Vui lòng chọn ít nhất một ngôn ngữ bạn nói."
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-onboarding-390-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": "onboarding-step-error",
+      "descriptions": [
+        "Vui lòng chọn ít nhất một ngôn ngữ bạn nói."
+      ]
+    },
+    {
+      "name": "vi-onboarding-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Tiếng ViệtTiếng ViệtChọn  làm ngôn ngữ bản ngữ",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 645.109375,
+            "right": 191,
+            "bottom": 708.109375,
+            "width": 175,
+            "height": 63
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-profile-editor-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 68,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Bản ngữ",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đã biết",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đang học",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Mức tự đánh giá A1 · Mới bắt đầuA2 · Sơ cấpB1 · Trung cấpB2 · Trên trung cấpC1 · Cao cấpC2 · Thành thạoBản ngữ",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Hiển thị trên hồ sơ Công khaiRiêng tư",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Bản ngữ",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đã biết",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đang học",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Mức tự đánh giá A1 · Mới bắt đầuA2 · Sơ cấpB1 · Trung cấpB2 · Trên trung cấpC1 · Cao cấpC2 · Thành thạo",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Hiển thị trên hồ sơ Công khaiRiêng tư",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đây là mục tiêu học chính",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Thêm một ngôn ngữ Chọn từ danh sáchTiếng Nhật · 日本語",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Giao tiếp tự tin",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Du lịch",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Công việc",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đọc nội dung",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Kết bạn",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Thi cử",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Nói",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Nghe",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đọc",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Viết",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Ngữ pháp",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Từ vựng",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Sở thích Thêm",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Múi giờ Chưa chọnViệt Nam (UTC+07:00)Trung Quốc (UTC+08:00)Nhật Bản (UTC+09:00)Hàn Quốc (UTC+09:00)Pháp (UTC+01:00)Đức (UTC+01:00)Bờ Đông Hoa Kỳ (UTC-05:00)Bờ Tây Hoa Kỳ (UTC-08:00)",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "NgàyThứ haiThứ baThứ tưThứ nămThứ sáuThứ bảyChủ nhật",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "time",
+          "label": "Bắt đầu",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Kết thúc",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-profile-editor-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 281.5,
+            "top": 248.84375,
+            "right": 353,
+            "bottom": 292.84375,
+            "width": 71.5,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-exchange-browse-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "#offered-language-filter"
+              ]
+            },
+            {
+              "target": [
+                "#wanted-language-filter"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 33,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 59,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "#offered-language-filter"
+          ],
+          [
+            "#wanted-language-filter"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "Họ có thể hỗ trợ",
+          "invalid": null,
+          "describedBy": "offered-language-filter-hint",
+          "description": "Giữ Ctrl hoặc Command để chọn nhiều ngôn ngữ."
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "Họ muốn luyện",
+          "invalid": null,
+          "describedBy": "wanted-language-filter-hint",
+          "description": "Lọc theo điều họ đang muốn học."
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Mục tiêu chung",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Sở thích chung",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Múi giờ và thời gian",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#offered-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#wanted-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        }
+      ]
+    },
+    {
+      "name": "vi-exchange-browse-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtTiếng AnhTiếng Nhật",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 29,
+            "top": 800.265625,
+            "right": 361,
+            "bottom": 920.265625,
+            "width": 332,
+            "height": 120
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-exchange-detail-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 38,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-exchange-detail-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Trang chủ",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 234,
+            "bottom": 50,
+            "width": 166,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Thông báo",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 242,
+            "top": 6,
+            "right": 286,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 286,
+            "top": 6,
+            "right": 330,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tài khoản của TEST Learner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 8,
+            "right": 374,
+            "bottom": 48,
+            "width": 44,
+            "height": 40
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Trang chủ",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 0,
+            "top": 936,
+            "right": 130,
+            "bottom": 992,
+            "width": 130,
+            "height": 56
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 130,
+            "top": 936,
+            "right": 260,
+            "bottom": 992,
+            "width": 130,
+            "height": 56
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Mở menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 260,
+            "top": 936,
+            "right": 390,
+            "bottom": 992,
+            "width": 130,
+            "height": 56
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 81,
+            "right": 101.625,
+            "bottom": 99,
+            "width": 85.625,
+            "height": 18
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-report-dialog-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "._safetyDialogNote_1axu6_401"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 22,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 10,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "._safetyDialogNote_1axu6_401"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Lý do báo cáo *",
+          "invalid": "true",
+          "describedBy": ":r8:-error",
+          "description": "Hãy chọn một lý do để tiếp tục."
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "label": "Ngữ cảnh bổ sung",
+          "invalid": "false",
+          "describedBy": ":r9:-hint",
+          "description": "Không bắt buộc"
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "._safetyDialogNote_1axu6_401"
+          ],
+          "tag": "P",
+          "foreground": "rgb(95, 110, 120)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "ratio": 5.11,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": false
+        }
+      ]
+    },
+    {
+      "name": "vi-report-dialog-390-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": ":r8:-error",
+      "descriptions": [
+        "Hãy chọn một lý do để tiếp tục."
+      ]
+    },
+    {
+      "name": "vi-report-dialog-fit-label-390",
+      "status": "PASS",
+      "left": 16,
+      "right": 374,
+      "top": 201.71875,
+      "bottom": 798.28125,
+      "width": 390,
+      "height": 1000,
+      "labelledBy": ":r7:",
+      "label": "Báo cáo hồ sơ"
+    },
+    {
+      "name": "vi-report-dialog-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 309,
+            "top": 222.71875,
+            "right": 353,
+            "bottom": 266.71875,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-report-dialog-escape-focus-return-390",
+      "status": "PASS",
+      "tag": "BUTTON",
+      "label": "An toàn",
+      "inDialog": false
+    },
+    {
+      "name": "vi-login-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 27,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Địa chỉ email *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Email đã đăng ký tại CongDongNgonNgu.vn"
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Mật khẩu *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Ghi nhớ đăng nhập trên thiết bị này",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-login-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữHọc cùng nhau, từ mọi nơi",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Khám phá",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 535.453125,
+            "top": 14,
+            "right": 656.921875,
+            "bottom": 58,
+            "width": 121.46875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 660.921875,
+            "top": 14,
+            "right": 797.734375,
+            "bottom": 58,
+            "width": 136.8125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thêm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 801.734375,
+            "top": 14,
+            "right": 882.3125,
+            "bottom": 58,
+            "width": 80.578125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(0, 43, 77)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 977.75,
+            "top": 14,
+            "right": 1085.75,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1093.75,
+            "top": 14,
+            "right": 1137.75,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng nhập",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1145.75,
+            "top": 16,
+            "right": 1236.890625,
+            "bottom": 56,
+            "width": 91.140625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng ký",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1244.890625,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 75.109375,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tham gia hoàn toàn miễn phí. Tạo tài khoản mới →",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 132,
+            "top": 691.84375,
+            "right": 571.96875,
+            "bottom": 731.53125,
+            "width": 439.96875,
+            "height": 39.6875
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-register-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 36,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Tên hiển thị công khai *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Tên này sẽ xuất hiện khi bạn thảo luận, đặt câu hỏi và đóng góp vào thư viện."
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Địa chỉ email *",
+          "invalid": "false",
+          "describedBy": ":r5:-hint",
+          "description": "Dùng để đăng nhập, bảo mật tài khoản và nhận xác nhận kích hoạt."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Mật khẩu *",
+          "invalid": "false",
+          "describedBy": ":r6:-hint",
+          "description": "Quy chuẩn mật khẩu dễ nhớ & an toàn:Tối thiểu 8 ký tự bất kỳ.Nên kết hợp chữ cái và số để bảo vệ quyền riêng tư tốt hơn."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Xác nhận mật khẩu *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Tôi đã đọc và đồng ý với Quy tắc cộng đồng  và Chính sách bảo mật  của CongDongNgonNgu.vn.",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-register-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữHọc cùng nhau, từ mọi nơi",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Khám phá",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 535.453125,
+            "top": 14,
+            "right": 656.921875,
+            "bottom": 58,
+            "width": 121.46875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 660.921875,
+            "top": 14,
+            "right": 797.734375,
+            "bottom": 58,
+            "width": 136.8125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thêm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 801.734375,
+            "top": 14,
+            "right": 882.3125,
+            "bottom": 58,
+            "width": 80.578125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(0, 43, 77)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 977.75,
+            "top": 14,
+            "right": 1085.75,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1093.75,
+            "top": 14,
+            "right": 1137.75,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng nhập",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1145.75,
+            "top": 16,
+            "right": 1236.890625,
+            "bottom": 56,
+            "width": 91.140625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng ký",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1244.890625,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 75.109375,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng nhập ngay →",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 251.4375,
+            "top": 770.390625,
+            "right": 380.375,
+            "bottom": 788.390625,
+            "width": 128.9375,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-reset-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 24,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 25,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Mật khẩu mới *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Tiêu chuẩn mật khẩu dễ nhớ & an toàn:Tối thiểu 12 ký tự bất kỳ.Nên kết hợp chữ cái và số để bảo vệ quyền riêng tư tốt hơn."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Xác nhận mật khẩu mới *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-reset-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữHọc cùng nhau, từ mọi nơi",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Khám phá",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 535.453125,
+            "top": 14,
+            "right": 656.921875,
+            "bottom": 58,
+            "width": 121.46875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 660.921875,
+            "top": 14,
+            "right": 797.734375,
+            "bottom": 58,
+            "width": 136.8125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thêm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 801.734375,
+            "top": 14,
+            "right": 882.3125,
+            "bottom": 58,
+            "width": 80.578125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(0, 43, 77)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 977.75,
+            "top": 14,
+            "right": 1085.75,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1093.75,
+            "top": 14,
+            "right": 1137.75,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng nhập",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1145.75,
+            "top": 16,
+            "right": 1236.890625,
+            "bottom": 56,
+            "width": 91.140625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Đăng ký",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1244.890625,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 75.109375,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Quay lại đăng nhập →",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 259.046875,
+            "top": 629.859375,
+            "right": 409.453125,
+            "bottom": 647.859375,
+            "width": 150.40625,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-onboarding-validation-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 29,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 50,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Tìm và thêm ngôn ngữ",
+          "invalid": "true",
+          "describedBy": "onboarding-step-error",
+          "description": "Vui lòng chọn ít nhất một ngôn ngữ bạn nói."
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-onboarding-1440-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": "onboarding-step-error",
+      "descriptions": [
+        "Vui lòng chọn ít nhất một ngôn ngữ bạn nói."
+      ]
+    },
+    {
+      "name": "vi-onboarding-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Tiếng ViệtTiếng ViệtChọn  làm ngôn ngữ bản ngữ",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 628.90625,
+            "right": 468,
+            "bottom": 691.90625,
+            "width": 348,
+            "height": 63
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-profile-editor-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 68,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Bản ngữ",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đã biết",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đang học",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Mức tự đánh giá A1 · Mới bắt đầuA2 · Sơ cấpB1 · Trung cấpB2 · Trên trung cấpC1 · Cao cấpC2 · Thành thạoBản ngữ",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Hiển thị trên hồ sơ Công khaiRiêng tư",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Bản ngữ",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đã biết",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đang học",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Mức tự đánh giá A1 · Mới bắt đầuA2 · Sơ cấpB1 · Trung cấpB2 · Trên trung cấpC1 · Cao cấpC2 · Thành thạo",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Hiển thị trên hồ sơ Công khaiRiêng tư",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đây là mục tiêu học chính",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Thêm một ngôn ngữ Chọn từ danh sáchTiếng Nhật · 日本語",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Giao tiếp tự tin",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Du lịch",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Công việc",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đọc nội dung",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Kết bạn",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Thi cử",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Nói",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Nghe",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Đọc",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Viết",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Ngữ pháp",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Từ vựng",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Sở thích Thêm",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Múi giờ Chưa chọnViệt Nam (UTC+07:00)Trung Quốc (UTC+08:00)Nhật Bản (UTC+09:00)Hàn Quốc (UTC+09:00)Pháp (UTC+01:00)Đức (UTC+01:00)Bờ Đông Hoa Kỳ (UTC-05:00)Bờ Tây Hoa Kỳ (UTC-08:00)",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "NgàyThứ haiThứ baThứ tưThứ nămThứ sáuThứ bảyChủ nhật",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "time",
+          "label": "Bắt đầu",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Kết thúc",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-profile-editor-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1199.5,
+            "top": 276.671875,
+            "right": 1271,
+            "bottom": 320.671875,
+            "width": 71.5,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-exchange-browse-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "#offered-language-filter"
+              ]
+            },
+            {
+              "target": [
+                "#wanted-language-filter"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 32,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 59,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "#offered-language-filter"
+          ],
+          [
+            "#wanted-language-filter"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "Họ có thể hỗ trợ",
+          "invalid": null,
+          "describedBy": "offered-language-filter-hint",
+          "description": "Giữ Ctrl hoặc Command để chọn nhiều ngôn ngữ."
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "Họ muốn luyện",
+          "invalid": null,
+          "describedBy": "wanted-language-filter-hint",
+          "description": "Lọc theo điều họ đang muốn học."
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Mục tiêu chung",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Sở thích chung",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Múi giờ và thời gian",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#offered-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#wanted-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        }
+      ]
+    },
+    {
+      "name": "vi-exchange-browse-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữHọc cùng nhau, từ mọi nơi",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Khám phá",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 486.0625,
+            "top": 14,
+            "right": 607.53125,
+            "bottom": 58,
+            "width": 121.46875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "rgb(253, 138, 66) 0px -3px 0px 0px inset",
+          "rect": {
+            "left": 611.53125,
+            "top": 14,
+            "right": 748.34375,
+            "bottom": 58,
+            "width": 136.8125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thêm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 752.34375,
+            "top": 14,
+            "right": 832.921875,
+            "bottom": 58,
+            "width": 80.578125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(30, 65, 101)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 878.984375,
+            "top": 14,
+            "right": 986.984375,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 994.984375,
+            "top": 14,
+            "right": 1038.984375,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thông báo",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1046.984375,
+            "top": 14,
+            "right": 1090.984375,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tài khoản",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1098.984375,
+            "top": 11,
+            "right": 1223.8125,
+            "bottom": 61,
+            "width": 124.828125,
+            "height": 50
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đăng xuất",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1231.8125,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 88.1875,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Trang chủ",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 145,
+            "right": 189.3125,
+            "bottom": 163,
+            "width": 69.3125,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-exchange-detail-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 38,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-exchange-detail-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Bỏ qua đến nội dung chính",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 247.703125,
+            "bottom": -23.199996948242188,
+            "width": 235.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữHọc cùng nhau, từ mọi nơi",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Khám phá",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 486.0625,
+            "top": 14,
+            "right": 607.53125,
+            "bottom": 58,
+            "width": 121.46875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "rgb(253, 138, 66) 0px -3px 0px 0px inset",
+          "rect": {
+            "left": 611.53125,
+            "top": 14,
+            "right": 748.34375,
+            "bottom": 58,
+            "width": 136.8125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thêm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 752.34375,
+            "top": 14,
+            "right": 832.921875,
+            "bottom": 58,
+            "width": 80.578125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(30, 65, 101)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 878.984375,
+            "top": 14,
+            "right": 986.984375,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tìm kiếm",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 994.984375,
+            "top": 14,
+            "right": 1038.984375,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Thông báo",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1046.984375,
+            "top": 14,
+            "right": 1090.984375,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Tài khoản",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1098.984375,
+            "top": 11,
+            "right": 1223.8125,
+            "bottom": 61,
+            "width": 124.828125,
+            "height": 50
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Đăng xuất",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1231.8125,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 88.1875,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Tìm bạn học",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 145,
+            "right": 205.625,
+            "bottom": 163,
+            "width": 85.625,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-report-dialog-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 11,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Lý do báo cáo *",
+          "invalid": "true",
+          "describedBy": ":r8:-error",
+          "description": "Hãy chọn một lý do để tiếp tục."
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "label": "Ngữ cảnh bổ sung",
+          "invalid": "false",
+          "describedBy": ":r9:-hint",
+          "description": "Không bắt buộc"
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "vi-report-dialog-1440-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": ":r8:-error",
+      "descriptions": [
+        "Hãy chọn một lý do để tiếp tục."
+      ]
+    },
+    {
+      "name": "vi-report-dialog-fit-label-1440",
+      "status": "PASS",
+      "left": 448,
+      "right": 992,
+      "top": 240.5625,
+      "bottom": 759.4375,
+      "width": 1440,
+      "height": 1000,
+      "labelledBy": ":r7:",
+      "label": "Báo cáo hồ sơ"
+    },
+    {
+      "name": "vi-report-dialog-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Đóng",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 927,
+            "top": 261.5625,
+            "right": 971,
+            "bottom": 305.5625,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "vi-report-dialog-escape-focus-return-1440",
+      "status": "PASS",
+      "tag": "BUTTON",
+      "label": "An toàn",
+      "inDialog": false
+    },
+    {
+      "name": "en-login-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 18,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Email address *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Your registered email at CongDongNgonNgu.vn"
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Password *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Remember sign-in on this device",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-login-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 204.234375,
+            "bottom": -23.199996948242188,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Open menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Home",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 322,
+            "bottom": 50,
+            "width": 254,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 6,
+            "right": 374,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "INPUT",
+          "label": "Email address *",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 227.640625,
+            "right": 374,
+            "bottom": 275.640625,
+            "width": 358,
+            "height": 48
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-register-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 27,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Public display name *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "This name appears when you discuss, ask questions and contribute to the library."
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Email address *",
+          "invalid": "false",
+          "describedBy": ":r5:-hint",
+          "description": "Used to sign in, protect your account and receive activation confirmation."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Password *",
+          "invalid": "false",
+          "describedBy": ":r6:-hint",
+          "description": "Memorable and secure password guidelines:At least 8 characters.Consider combining letters and numbers to better protect your privacy."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Confirm password *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "I have read and agree to the Community guidelines  and Privacy policy  of CongDongNgonNgu.vn.",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-register-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 204.234375,
+            "bottom": -23.199996948242188,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Open menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Home",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 322,
+            "bottom": 50,
+            "width": 254,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 6,
+            "right": 374,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "INPUT",
+          "label": "Public display name *",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 340.703125,
+            "right": 374,
+            "bottom": 388.703125,
+            "width": 358,
+            "height": 48
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-reset-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 28,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 23,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "New password *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Memorable and secure password standards:At least 12 characters.Consider combining letters and numbers to better protect your privacy."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Confirm new password *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-reset-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -56.39106750488281,
+            "right": 204.234375,
+            "bottom": -12.391067504882812,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Open menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Home",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 322,
+            "bottom": 50,
+            "width": 254,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 6,
+            "right": 374,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "OL",
+          "label": "Password recovery status",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 92,
+            "right": 374,
+            "bottom": 128,
+            "width": 358,
+            "height": 36
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "INPUT",
+          "label": "New password *",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 311.640625,
+            "right": 374,
+            "bottom": 359.640625,
+            "width": 358,
+            "height": 48
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-onboarding-validation-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 29,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Find and add languages",
+          "invalid": "true",
+          "describedBy": "onboarding-step-error",
+          "description": "Please choose at least one language you speak."
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-onboarding-390-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": "onboarding-step-error",
+      "descriptions": [
+        "Please choose at least one language you speak."
+      ]
+    },
+    {
+      "name": "en-onboarding-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "VietnameseTiếng ViệtChoose  as native language",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 660.203125,
+            "right": 191,
+            "bottom": 723.203125,
+            "width": 175,
+            "height": 63
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-profile-editor-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 68,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Native",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Known",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Learning",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Self-assessed proficiency A1 · BeginnerA2 · ElementaryB1 · IntermediateB2 · Upper intermediateC1 · AdvancedC2 · ProficientNative",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Profile visibility PublicPrivate",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Native",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Known",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Learning",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Self-assessed proficiency A1 · BeginnerA2 · ElementaryB1 · IntermediateB2 · Upper intermediateC1 · AdvancedC2 · Proficient",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Profile visibility PublicPrivate",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "This is my primary learning target",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Add a language Choose from the listJapanese · 日本語",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Confident conversations",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Travel",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Work",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Reading content",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Making friends",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Exams",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Speaking",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Listening",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Reading",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Writing",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Grammar",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Vocabulary",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Interests Add",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Timezone Not selectedVietnam (UTC+07:00)China (UTC+08:00)Japan (UTC+09:00)South Korea (UTC+09:00)France (UTC+01:00)Germany (UTC+01:00)US East Coast (UTC-05:00)US West Coast (UTC-08:00)",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "DayMondayTuesdayWednesdayThursdayFridaySaturdaySunday",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "time",
+          "label": "Start",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "End",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-profile-editor-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Close",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 279.296875,
+            "top": 253.84375,
+            "right": 353,
+            "bottom": 297.84375,
+            "width": 73.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-exchange-browse-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "#offered-language-filter"
+              ]
+            },
+            {
+              "target": [
+                "#wanted-language-filter"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 33,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 59,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "#offered-language-filter"
+          ],
+          [
+            "#wanted-language-filter"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "They can support",
+          "invalid": null,
+          "describedBy": "offered-language-filter-hint",
+          "description": "Hold Ctrl or Command to select multiple languages."
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "They want to practice",
+          "invalid": null,
+          "describedBy": "wanted-language-filter-hint",
+          "description": "Filter by what they want to learn."
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Shared goals",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Shared interests",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Timezone and availability",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#offered-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#wanted-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        }
+      ]
+    },
+    {
+      "name": "en-exchange-browse-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "SELECT",
+          "label": "VietnameseEnglishJapanese",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgba(217, 110, 40, 0.18)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 29,
+            "top": 775.46875,
+            "right": 361,
+            "bottom": 895.46875,
+            "width": 332,
+            "height": 120
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-exchange-detail-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 38,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-exchange-detail-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -56.283843994140625,
+            "right": 204.234375,
+            "bottom": -12.283843994140625,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Open menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 6,
+            "right": 60,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữ, Home",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 68,
+            "top": 6,
+            "right": 234,
+            "bottom": 50,
+            "width": 166,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Notifications",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 242,
+            "top": 6,
+            "right": 286,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 286,
+            "top": 6,
+            "right": 330,
+            "bottom": 50,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Account for TEST Learner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 330,
+            "top": 8,
+            "right": 374,
+            "bottom": 48,
+            "width": 44,
+            "height": 40
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Home",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 0,
+            "top": 936,
+            "right": 130,
+            "bottom": 992,
+            "width": 130,
+            "height": 56
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 130,
+            "top": 936,
+            "right": 260,
+            "bottom": 992,
+            "width": 130,
+            "height": 56
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Open menu",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 260,
+            "top": 936,
+            "right": 390,
+            "bottom": 992,
+            "width": 130,
+            "height": 56
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a learning partner",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 16,
+            "top": 81,
+            "right": 174.953125,
+            "bottom": 99,
+            "width": 158.953125,
+            "height": 18
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-report-dialog-390",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "._safetyDialogNote_1axu6_401"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 22,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 10,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "._safetyDialogNote_1axu6_401"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Report reason *",
+          "invalid": "true",
+          "describedBy": ":r8:-error",
+          "description": "Choose a reason to continue."
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "label": "Additional context",
+          "invalid": "false",
+          "describedBy": ":r9:-hint",
+          "description": "Optional"
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "._safetyDialogNote_1axu6_401"
+          ],
+          "tag": "P",
+          "foreground": "rgb(95, 110, 120)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "ratio": 5.11,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": false
+        }
+      ]
+    },
+    {
+      "name": "en-report-dialog-390-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": ":r8:-error",
+      "descriptions": [
+        "Choose a reason to continue."
+      ]
+    },
+    {
+      "name": "en-report-dialog-fit-label-390",
+      "status": "PASS",
+      "left": 16,
+      "right": 374,
+      "top": 201.71875,
+      "bottom": 798.28125,
+      "width": 390,
+      "height": 1000,
+      "labelledBy": ":r7:",
+      "label": "Report profile"
+    },
+    {
+      "name": "en-report-dialog-390-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Close",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 309,
+            "top": 222.71875,
+            "right": 353,
+            "bottom": 266.71875,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 390,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-report-dialog-escape-focus-return-390",
+      "status": "PASS",
+      "tag": "BUTTON",
+      "label": "Safety",
+      "inDialog": false
+    },
+    {
+      "name": "en-login-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 27,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Email address *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Your registered email at CongDongNgonNgu.vn"
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Password *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Remember sign-in on this device",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-login-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 204.234375,
+            "bottom": -23.199996948242188,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữLearn together, from anywhere",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Explore",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 535.609375,
+            "top": 14,
+            "right": 640.015625,
+            "bottom": 58,
+            "width": 104.40625,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a study partner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 644.015625,
+            "top": 14,
+            "right": 835.546875,
+            "bottom": 58,
+            "width": 191.53125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "More",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 839.546875,
+            "top": 14,
+            "right": 916.34375,
+            "bottom": 58,
+            "width": 76.796875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(0, 43, 77)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1011.953125,
+            "top": 14,
+            "right": 1119.953125,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1127.953125,
+            "top": 14,
+            "right": 1171.953125,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Log in",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1179.953125,
+            "top": 16,
+            "right": 1242.09375,
+            "bottom": 56,
+            "width": 62.140625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Sign up",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1250.09375,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 69.90625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Join for free. Create a new account →",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 247.640625,
+            "top": 745.59375,
+            "right": 507.265625,
+            "bottom": 763.59375,
+            "width": 259.625,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-register-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 28,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 36,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Public display name *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "This name appears when you discuss, ask questions and contribute to the library."
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "label": "Email address *",
+          "invalid": "false",
+          "describedBy": ":r5:-hint",
+          "description": "Used to sign in, protect your account and receive activation confirmation."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Password *",
+          "invalid": "false",
+          "describedBy": ":r6:-hint",
+          "description": "Memorable and secure password guidelines:At least 8 characters.Consider combining letters and numbers to better protect your privacy."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Confirm password *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "I have read and agree to the Community guidelines  and Privacy policy  of CongDongNgonNgu.vn.",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-register-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -56.539398193359375,
+            "right": 204.234375,
+            "bottom": -12.539398193359375,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữLearn together, from anywhere",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Explore",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 535.609375,
+            "top": 14,
+            "right": 640.015625,
+            "bottom": 58,
+            "width": 104.40625,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a study partner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 644.015625,
+            "top": 14,
+            "right": 835.546875,
+            "bottom": 58,
+            "width": 191.53125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "More",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 839.546875,
+            "top": 14,
+            "right": 916.34375,
+            "bottom": 58,
+            "width": 76.796875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(0, 43, 77)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1011.953125,
+            "top": 14,
+            "right": 1119.953125,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1127.953125,
+            "top": 14,
+            "right": 1171.953125,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Log in",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1179.953125,
+            "top": 16,
+            "right": 1242.09375,
+            "bottom": 56,
+            "width": 62.140625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Sign up",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1250.09375,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 69.90625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Sign in now →",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 313.171875,
+            "top": 799.34375,
+            "right": 407.0625,
+            "bottom": 817.34375,
+            "width": 93.890625,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-reset-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 25,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "New password *",
+          "invalid": "false",
+          "describedBy": ":r4:-hint",
+          "description": "Memorable and secure password standards:At least 12 characters.Consider combining letters and numbers to better protect your privacy."
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "label": "Confirm new password *",
+          "invalid": "false",
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-reset-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 204.234375,
+            "bottom": -23.199996948242188,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữLearn together, from anywhere",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Explore",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 535.609375,
+            "top": 14,
+            "right": 640.015625,
+            "bottom": 58,
+            "width": 104.40625,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a study partner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 644.015625,
+            "top": 14,
+            "right": 835.546875,
+            "bottom": 58,
+            "width": 191.53125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "More",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 839.546875,
+            "top": 14,
+            "right": 916.34375,
+            "bottom": 58,
+            "width": 76.796875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(0, 43, 77)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1011.953125,
+            "top": 14,
+            "right": 1119.953125,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1127.953125,
+            "top": 14,
+            "right": 1171.953125,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Log in",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1179.953125,
+            "top": 16,
+            "right": 1242.09375,
+            "bottom": 56,
+            "width": 62.140625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Sign up",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1250.09375,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 69.90625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Back to sign in →",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 336.953125,
+            "top": 611.265625,
+            "right": 453.859375,
+            "bottom": 629.265625,
+            "width": 116.90625,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-onboarding-validation-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 29,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 50,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Find and add languages",
+          "invalid": "true",
+          "describedBy": "onboarding-step-error",
+          "description": "Please choose at least one language you speak."
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-onboarding-1440-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": "onboarding-step-error",
+      "descriptions": [
+        "Please choose at least one language you speak."
+      ]
+    },
+    {
+      "name": "en-onboarding-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "VietnameseTiếng ViệtChoose  as native language",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(156, 69, 0)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 624.734375,
+            "right": 468,
+            "bottom": 687.734375,
+            "width": 348,
+            "height": 63
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-profile-editor-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 27,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 68,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Native",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Known",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Learning",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Self-assessed proficiency A1 · BeginnerA2 · ElementaryB1 · IntermediateB2 · Upper intermediateC1 · AdvancedC2 · ProficientNative",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Profile visibility PublicPrivate",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Native",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Known",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Learning",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Self-assessed proficiency A1 · BeginnerA2 · ElementaryB1 · IntermediateB2 · Upper intermediateC1 · AdvancedC2 · Proficient",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Profile visibility PublicPrivate",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "This is my primary learning target",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Add a language Choose from the listJapanese · 日本語",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Confident conversations",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Travel",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Work",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Reading content",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Making friends",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Exams",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Speaking",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Listening",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Reading",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Writing",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Grammar",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "Vocabulary",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Interests Add",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Timezone Not selectedVietnam (UTC+07:00)China (UTC+08:00)Japan (UTC+09:00)South Korea (UTC+09:00)France (UTC+01:00)Germany (UTC+01:00)US East Coast (UTC-05:00)US West Coast (UTC-08:00)",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "DayMondayTuesdayWednesdayThursdayFridaySaturdaySunday",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "time",
+          "label": "Start",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "End",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-profile-editor-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Close",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1197.296875,
+            "top": 276.671875,
+            "right": 1271,
+            "bottom": 320.671875,
+            "width": 73.703125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-exchange-browse-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "#offered-language-filter"
+              ]
+            },
+            {
+              "target": [
+                "#wanted-language-filter"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 32,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 59,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "#offered-language-filter"
+          ],
+          [
+            "#wanted-language-filter"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "They can support",
+          "invalid": null,
+          "describedBy": "offered-language-filter-hint",
+          "description": "Hold Ctrl or Command to select multiple languages."
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-multiple",
+          "label": "They want to practice",
+          "invalid": null,
+          "describedBy": "wanted-language-filter-hint",
+          "description": "Filter by what they want to learn."
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "A2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "B2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C1",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "label": "C2",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Shared goals",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "label": "Shared interests",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Timezone and availability",
+          "invalid": null,
+          "describedBy": null,
+          "description": ""
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#offered-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "#wanted-language-filter"
+          ],
+          "tag": "SELECT",
+          "foreground": "rgb(24, 50, 76)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "ratio": 12.75,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": true
+        }
+      ]
+    },
+    {
+      "name": "en-exchange-browse-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -56.514373779296875,
+            "right": 204.234375,
+            "bottom": -12.514373779296875,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữLearn together, from anywhere",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Explore",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 481.578125,
+            "top": 14,
+            "right": 585.984375,
+            "bottom": 58,
+            "width": 104.40625,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a study partner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "rgb(253, 138, 66) 0px -3px 0px 0px inset",
+          "rect": {
+            "left": 589.984375,
+            "top": 14,
+            "right": 781.515625,
+            "bottom": 58,
+            "width": 191.53125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "More",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 785.515625,
+            "top": 14,
+            "right": 862.3125,
+            "bottom": 58,
+            "width": 76.796875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(30, 65, 101)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 903.875,
+            "top": 14,
+            "right": 1011.875,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1019.875,
+            "top": 14,
+            "right": 1063.875,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Notifications",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1071.875,
+            "top": 14,
+            "right": 1115.875,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Account",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1123.875,
+            "top": 11,
+            "right": 1240.359375,
+            "bottom": 61,
+            "width": 116.484375,
+            "height": 50
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Log out",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1248.359375,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 71.640625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Home",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 145,
+            "right": 160.203125,
+            "bottom": 163,
+            "width": 40.203125,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-exchange-detail-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 38,
+        "violationNodes": 0,
+        "incompleteTargets": []
+      },
+      "labels": [],
+      "manualIncomplete": []
+    },
+    {
+      "name": "en-exchange-detail-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "A",
+          "label": "Skip to main content",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 12,
+            "top": -67.19999694824219,
+            "right": 204.234375,
+            "bottom": -23.199996948242188,
+            "width": 192.234375,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Cộng đồng ngôn ngữLearn together, from anywhere",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 16,
+            "right": 440,
+            "bottom": 56,
+            "width": 320,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Explore",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 481.578125,
+            "top": 14,
+            "right": 585.984375,
+            "bottom": 58,
+            "width": 104.40625,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a study partner",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "rgb(253, 138, 66) 0px -3px 0px 0px inset",
+          "rect": {
+            "left": 589.984375,
+            "top": 14,
+            "right": 781.515625,
+            "bottom": 58,
+            "width": 191.53125,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "More",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 785.515625,
+            "top": 14,
+            "right": 862.3125,
+            "bottom": 58,
+            "width": 76.796875,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "SELECT",
+          "label": "Tiếng ViệtEnglish",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(30, 65, 101)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 903.875,
+            "top": 14,
+            "right": 1011.875,
+            "bottom": 58,
+            "width": 108,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Search",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1019.875,
+            "top": 14,
+            "right": 1063.875,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Notifications",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1071.875,
+            "top": 14,
+            "right": 1115.875,
+            "bottom": 58,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Account",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1123.875,
+            "top": 11,
+            "right": 1240.359375,
+            "bottom": 61,
+            "width": 116.484375,
+            "height": 50
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Log out",
+          "target": false,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 1248.359375,
+            "top": 16,
+            "right": 1320,
+            "bottom": 56,
+            "width": 71.640625,
+            "height": 40
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "A",
+          "label": "Find a learning partner",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 120,
+            "top": 145,
+            "right": 278.953125,
+            "bottom": 163,
+            "width": 158.953125,
+            "height": 18
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-report-dialog-1440",
+      "status": "PASS",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "._safetyDialogNote_1axu6_401"
+              ]
+            }
+          ]
+        }
+      ],
+      "passes": 22,
+      "colorContrast": {
+        "rule": "color-contrast",
+        "evaluatedPassNodes": 10,
+        "violationNodes": 0,
+        "incompleteTargets": [
+          [
+            "._safetyDialogNote_1axu6_401"
+          ]
+        ]
+      },
+      "labels": [
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "label": "Report reason *",
+          "invalid": "true",
+          "describedBy": ":r8:-error",
+          "description": "Choose a reason to continue."
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "label": "Additional context",
+          "invalid": "false",
+          "describedBy": ":r9:-hint",
+          "description": "Optional"
+        }
+      ],
+      "manualIncomplete": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "._safetyDialogNote_1axu6_401"
+          ],
+          "tag": "P",
+          "foreground": "rgb(95, 110, 120)",
+          "background": [
+            251,
+            252,
+            249
+          ],
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "ratio": 5.11,
+          "minimum": 4.5,
+          "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+          "nativeControl": false
+        }
+      ]
+    },
+    {
+      "name": "en-report-dialog-1440-validation-association",
+      "status": "PASS",
+      "invalid": "true",
+      "describedBy": ":r8:-error",
+      "descriptions": [
+        "Choose a reason to continue."
+      ]
+    },
+    {
+      "name": "en-report-dialog-fit-label-1440",
+      "status": "PASS",
+      "left": 448,
+      "right": 992,
+      "top": 229.71875,
+      "bottom": 770.28125,
+      "width": 1440,
+      "height": 1000,
+      "labelledBy": ":r7:",
+      "label": "Report profile"
+    },
+    {
+      "name": "en-report-dialog-1440-keyboard-tab-focus",
+      "status": "PASS",
+      "transitions": [
+        {
+          "tag": "BUTTON",
+          "label": "Close",
+          "target": true,
+          "focusVisible": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(217, 110, 40)",
+          "boxShadow": "none",
+          "rect": {
+            "left": 927,
+            "top": 250.71875,
+            "right": 971,
+            "bottom": 294.71875,
+            "width": 44,
+            "height": 44
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        }
+      ],
+      "indicated": true,
+      "within": true
+    },
+    {
+      "name": "en-report-dialog-escape-focus-return-1440",
+      "status": "PASS",
+      "tag": "BUTTON",
+      "label": "Safety",
+      "inDialog": false
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "startedAt": "2026-10-08T06:43:35.931Z",
+  "status": "PASS",
+  "manualIncompleteObservations": [
+    {
+      "surface": "vi-exchange-browse-390",
+      "rule": "color-contrast",
+      "target": [
+        "#offered-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "vi-exchange-browse-390",
+      "rule": "color-contrast",
+      "target": [
+        "#wanted-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "vi-report-dialog-390",
+      "rule": "color-contrast",
+      "target": [
+        "._safetyDialogNote_1axu6_401"
+      ],
+      "tag": "P",
+      "foreground": "rgb(95, 110, 120)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "ratio": 5.11,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": false
+    },
+    {
+      "surface": "vi-exchange-browse-1440",
+      "rule": "color-contrast",
+      "target": [
+        "#offered-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "vi-exchange-browse-1440",
+      "rule": "color-contrast",
+      "target": [
+        "#wanted-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "en-exchange-browse-390",
+      "rule": "color-contrast",
+      "target": [
+        "#offered-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "en-exchange-browse-390",
+      "rule": "color-contrast",
+      "target": [
+        "#wanted-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "en-report-dialog-390",
+      "rule": "color-contrast",
+      "target": [
+        "._safetyDialogNote_1axu6_401"
+      ],
+      "tag": "P",
+      "foreground": "rgb(95, 110, 120)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "ratio": 5.11,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": false
+    },
+    {
+      "surface": "en-exchange-browse-1440",
+      "rule": "color-contrast",
+      "target": [
+        "#offered-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "en-exchange-browse-1440",
+      "rule": "color-contrast",
+      "target": [
+        "#wanted-language-filter"
+      ],
+      "tag": "SELECT",
+      "foreground": "rgb(24, 50, 76)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 12.75,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": true
+    },
+    {
+      "surface": "en-report-dialog-1440",
+      "rule": "color-contrast",
+      "target": [
+        "._safetyDialogNote_1axu6_401"
+      ],
+      "tag": "P",
+      "foreground": "rgb(95, 110, 120)",
+      "background": [
+        251,
+        252,
+        249
+      ],
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "ratio": 5.11,
+      "minimum": 4.5,
+      "disposition": "CSS_COLOR_SAMPLE_PASS_NATIVE_RENDERING_NOT_CERTIFIED",
+      "nativeControl": false
+    }
+  ],
+  "contrastSummary": {
+    "locales": [
+      "vi",
+      "en"
+    ],
+    "widths": [
+      390,
+      1440
+    ],
+    "auditedSurfaces": 32,
+    "evaluatedPassNodes": 1171,
+    "violationNodes": 0,
+    "incompleteNodes": [
+      {
+        "surface": "vi-exchange-browse-390",
+        "target": [
+          "#offered-language-filter"
+        ]
+      },
+      {
+        "surface": "vi-exchange-browse-390",
+        "target": [
+          "#wanted-language-filter"
+        ]
+      },
+      {
+        "surface": "vi-report-dialog-390",
+        "target": [
+          "._safetyDialogNote_1axu6_401"
+        ]
+      },
+      {
+        "surface": "vi-exchange-browse-1440",
+        "target": [
+          "#offered-language-filter"
+        ]
+      },
+      {
+        "surface": "vi-exchange-browse-1440",
+        "target": [
+          "#wanted-language-filter"
+        ]
+      },
+      {
+        "surface": "en-exchange-browse-390",
+        "target": [
+          "#offered-language-filter"
+        ]
+      },
+      {
+        "surface": "en-exchange-browse-390",
+        "target": [
+          "#wanted-language-filter"
+        ]
+      },
+      {
+        "surface": "en-report-dialog-390",
+        "target": [
+          "._safetyDialogNote_1axu6_401"
+        ]
+      },
+      {
+        "surface": "en-exchange-browse-1440",
+        "target": [
+          "#offered-language-filter"
+        ]
+      },
+      {
+        "surface": "en-exchange-browse-1440",
+        "target": [
+          "#wanted-language-filter"
+        ]
+      },
+      {
+        "surface": "en-report-dialog-1440",
+        "target": [
+          "._safetyDialogNote_1axu6_401"
+        ]
+      }
+    ],
+    "certification": "INCOMPLETE_MANUAL_CONTRAST_REVIEW_REQUIRED"
+  },
+  "finishedAt": "2026-10-08T06:43:51.004Z"
+}

@@ -1,5 +1,9 @@
 # Post-Phase-19 V2 Roadmap
 
+## Phase24 execution overlay — 2026-10-08
+
+Current owner authorization applies to Phase24 only. Existing historical planning flags below remain their original snapshot. Phase24 implementation and bounded technical acceptance PASS; status BLOCKED_EXTERNAL/verdict DEFER pending direct read authorization for mandatory complete ChatGPT relay response. Tasks001/002/003 DONE for accepted repository work;004 BLOCKED_EXTERNAL. See [Phase24 dossier](../phases/PHASE-24-MEMBER-EXCHANGE-LOCALIZATION/README.md). Historical category23B remains planned/unstarted. No Phase25/new major phase.
+
 Current roadmap maintenance addendum — 2026-10-07: Phase 20 and Phase 21 are
 DONE/GO. Phase 22 and Phase 23 are technically eligible but remain unstarted and
 execution-unauthorized; Phase 24 also remains unstarted and unauthorized. Phase 23

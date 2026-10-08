@@ -1,6 +1,6 @@
 # Phase 24 copy inventory and localization contract
 
-**State:** FROZEN_SOURCE_CONTRACT; implementation/acceptance pending.
+**State:** FROZEN_SOURCE_CONTRACT; bounded implementation/technical acceptance PASS; lifecycle relay pending.
 
 Owner START_PHASE_24=YES authorizes LNG-24-001–004 only. Baseline remote main fetched/pruned on 2026-10-08: Frontend 103f876596c6a2e8c408f2f716ab552a7843872d, Backend a2640cd7d734f088987fb32b89efc5cbf40e954e, Workspace d33a5e8d49e659b33fa7d748f74b8bf581b25496. All clean, only main branches. LNG-19-006 DONE evidence read.
 
@@ -10,7 +10,7 @@ Owner START_PHASE_24=YES authorizes LNG-24-001–004 only. Baseline remote main 
 |---|---|---|---|
 | Auth | Login/Register/ForgotPassword/ResetPassword/VerifyEmail/AuthCallback; AuthBody, PasswordField, ProviderButtons, RecoveryStatusRail, auth-errors | implementation agent/source review, coordinator acceptance | Existing provider capability only; consent checkbox and disabled legal destinations retained |
 | Onboarding/profile | five steps; eight step/context/action components; validation/session hooks; PassportPages and language label utilities | implementation agent/source review, coordinator acceptance | canonical languageCode, role, CEFR, visibility, goals/skills, primary-target flag; no new step/target field |
-| Exchange | PartnerDiscoveryPage browse/filter/cards/meta; BuddyProfilePreviewPage detail/status/safety/report dialogs | implementation agent/source review, coordinator acceptance | Current deterministic browse/actions only; UGC and backend free text unchanged |
+| Exchange | PartnerDiscoveryPage browse/filter/cards/meta; BuddyProfilePreviewPage detail/status/safety/report dialogs | implementation agent/source review, coordinator acceptance | Current deterministic browse/actions only; UGC unchanged; known Backend-generated matching templates localized by bounded allowlist, unknown safe fallback |
 
 ## Terminology freeze
 
@@ -44,8 +44,8 @@ Onboarding/profile load/save and exchange load/action failures use stable catego
 
 ## Copy review / legal boundary
 
-VI_COPY_REVIEW=AGENT_SOURCE_REVIEW_IN_PROGRESS
-EN_COPY_REVIEW=AGENT_SOURCE_REVIEW_IN_PROGRESS
+VI_COPY_REVIEW=AGENT_SOURCE_REVIEW
+EN_COPY_REVIEW=AGENT_SOURCE_REVIEW
 EN_COPY_HUMAN_REVIEW=NO
 HUMAN_LINGUISTIC_CERTIFICATION=NO
 
@@ -54,3 +54,7 @@ No human review is inferred. Registration community-guidelines/privacy consent r
 ## Localization architecture contract
 
 Reuse features/ui-locale UiLocaleProvider, typed catalogs, vi fallback, browser storage congdongngonngu.ui-locale.v1, native Intl and shell switch. Add feature catalogs to existing registry only. No new provider/state/storage/server locale/schema/locale URL. Preserve form values, identity, route/query/history and filters on switch; no extra submit/profile mutation. User-generated text is preserved verbatim; only known canonical UI labels may translate. Payment disabled; no production mutation; Phase23B unstarted; no Phase25.
+
+## Implementation verification checkpoint
+
+Auth208, onboarding/profile230 and exchange155 paired vi/en keys extend existing catalogs. Semantic keys validated without relaxing existing key rules. Source literal classification in SOURCE-COVERAGE.md; independent review in SOURCE-REVIEW.md. Generated exchange reasons are deterministic Backend app chrome (seven allowlisted template classes), translated locally; unknown reason uses safe localized fallback. Member names/interests/custom goal/skill strings remain exact. Canonical report categories/relationship/language/profile/filter codes preserved through explicit maps. Agent vi/en review only; EN_COPY_HUMAN_REVIEW=NO and HUMAN_LINGUISTIC_CERTIFICATION=NO. No provider/legal-policy certification implied.

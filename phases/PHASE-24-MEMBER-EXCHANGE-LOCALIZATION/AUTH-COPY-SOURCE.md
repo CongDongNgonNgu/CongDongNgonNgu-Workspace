@@ -17,11 +17,11 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | ProviderButtons.tsx:24 | G | locale-neutral |
 | ProviderButtons.tsx:25 | Tiếp tục với Google | auth.continue.with.google |
 | ProviderButtons.tsx:26 | Chưa khả dụng | auth.unavailable |
-| RecoveryStatusRail.tsx:4 | 1. Yêu cầu | auth.1.request |
-| RecoveryStatusRail.tsx:5 | 2. Đã gửi | auth.2.sent |
-| RecoveryStatusRail.tsx:6 | 3. Đặt lại mật khẩu | auth.3.reset.password |
-| RecoveryStatusRail.tsx:7 | 4. Liên kết hết hạn | auth.4.expired.link |
-| RecoveryStatusRail.tsx:8 | 5. Hoàn tất | auth.5.complete |
+| RecoveryStatusRail.tsx:4 | 1. Yêu cầu | auth.n1.request |
+| RecoveryStatusRail.tsx:5 | 2. Đã gửi | auth.n2.sent |
+| RecoveryStatusRail.tsx:6 | 3. Đặt lại mật khẩu | auth.n3.reset.password |
+| RecoveryStatusRail.tsx:7 | 4. Liên kết hết hạn | auth.n4.expired.link |
+| RecoveryStatusRail.tsx:8 | 5. Hoàn tất | auth.n5.complete |
 | RecoveryStatusRail.tsx:17 | Trạng thái khôi phục mật khẩu | auth.password.recovery.status |
 | RecoveryStatusRail.tsx:19 | Trạng thái mô phỏng | auth.preview.status |
 | RecoveryStatusRail.tsx:20 | Bước | auth.recovery.step |
@@ -64,16 +64,16 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/AuthCallbackPage.tsx:45 | Không thể liên kết tài khoản | auth.could.not.link.accounts |
 | pages/AuthCallbackPage.tsx:46 | Để bảo vệ quyền riêng tư, chúng tôi không thể hoàn tất liên kết tự động giữa hai phương thức đăng nhập. | auth.to.protect.your.privacy.we.could.not |
 | pages/AuthCallbackPage.tsx:47 | Hãy đăng nhập bằng email và mật khẩu đã thiết lập trước đó, sau đó thử liên kết lại từ trang tài khoản. | auth.sign.in.with.your.existing.email.and |
-| pages/AuthCallbackPage.tsx:50 | Account linking recovery | auth.account.linking.recovery.2 |
+| pages/AuthCallbackPage.tsx:50 | Account linking recovery | auth.account.linking.recovery.n2 |
 | pages/AuthCallbackPage.tsx:51 | Không thể liên kết tài khoản | auth.could.not.link.accounts |
 | pages/AuthCallbackPage.tsx:52 | Để bảo vệ quyền riêng tư, chúng tôi không thể hoàn tất liên kết tự động giữa hai phương thức đăng nhập. | auth.to.protect.your.privacy.we.could.not |
 | pages/AuthCallbackPage.tsx:53 | Hãy đăng nhập bằng email và mật khẩu đã thiết lập trước đó, sau đó thử liên kết lại từ trang tài khoản. | auth.sign.in.with.your.existing.email.and |
-| pages/AuthCallbackPage.tsx:81 | Đăng nhập / 06 | auth.sign.in.06 |
+| pages/AuthCallbackPage.tsx:81 | Đăng nhập / 06 | auth.sign.in.n06 |
 | pages/AuthCallbackPage.tsx:82 | Đang mở không gian của bạn. | auth.opening.your.space |
 | pages/AuthCallbackPage.tsx:83 | Chúng tôi đang kiểm tra phiên đăng nhập an toàn. | auth.we.are.checking.your.secure.signin.session |
 | pages/AuthCallbackPage.tsx:84 | Không gian học tập an toàn | auth.a.safe.learning.space |
 | pages/AuthCallbackPage.tsx:85 | Lấy lại quyền kiểm soát tài khoản | auth.regain.control.of.your.account |
-| pages/AuthCallbackPage.tsx:85 | Đang mở không gian của bạn | auth.opening.your.space.2 |
+| pages/AuthCallbackPage.tsx:85 | Đang mở không gian của bạn | auth.opening.your.space.n2 |
 | pages/AuthCallbackPage.tsx:86 | Mỗi bước xác thực đều được xử lý minh bạch để bảo vệ dữ liệu học tập và những đóng góp ngôn ngữ của cộng đồng. | auth.every.authentication.step.is.handled.transparently.to |
 | pages/AuthCallbackPage.tsx:88 | Bảo vệ dữ liệu cá nhân | auth.protect.personal.data |
 | pages/AuthCallbackPage.tsx:88 | Không tiết lộ thông tin nhạy cảm trong thông báo lỗi. | auth.sensitive.information.is.kept.out.of.error |
@@ -109,7 +109,7 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/ForgotPasswordPage.tsx:65 | Chưa thấy email? | auth.no.email.yet |
 | pages/ForgotPasswordPage.tsx:66 | Vui lòng kiểm tra thư mục Spam/Quảng cáo hoặc hòm thư lọc tự động trước khi gửi lại. | auth.please.check.spam.promotions.and.automated.filters |
 | pages/ForgotPasswordPage.tsx:68 | Gửi lại liên kết ngay | auth.resend.link.now |
-| pages/ForgotPasswordPage.tsx:69 | Quay lại đăng nhập | auth.back.to.sign.in.2 |
+| pages/ForgotPasswordPage.tsx:69 | Quay lại đăng nhập | auth.back.to.sign.in.n2 |
 | pages/ForgotPasswordPage.tsx:75 | Địa chỉ email liên kết | auth.linked.email.address |
 | pages/ForgotPasswordPage.tsx:82 | Chúng tôi sẽ gửi một liên kết bảo mật có thời hạn 30 phút đến hòm thư này. | auth.we.will.send.a.secure.link.valid |
 | pages/ForgotPasswordPage.tsx:86 | Gửi liên kết khôi phục → | auth.send.recovery.link |
@@ -145,7 +145,7 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/LoginPage.tsx:109 | của CongDongNgonNgu.vn. | auth.of.congdongngonnguvn |
 | pages/RegisterPage.tsx:34 | Tên hiển thị cần có ít nhất 2 ký tự. | auth.your.display.name.must.contain.at.least |
 | pages/RegisterPage.tsx:39 | Vui lòng nhập email hợp lệ. | auth.please.enter.a.valid.email.address |
-| pages/RegisterPage.tsx:44 | Mật khẩu cần có ít nhất 8 ký tự. | auth.your.password.must.contain.at.least.8 |
+| pages/RegisterPage.tsx:44 | Mật khẩu cần có ít nhất 8 ký tự. | auth.your.password.must.contain.at.least.n8 |
 | pages/RegisterPage.tsx:49 | Hai mật khẩu chưa khớp. | auth.the.passwords.do.not.match |
 | pages/RegisterPage.tsx:54 | Vui lòng đọc và đồng ý với Quy tắc cộng đồng và Chính sách bảo mật trước khi tiếp tục. | auth.please.read.and.agree.to.the.community |
 | pages/RegisterPage.tsx:72 | Tham gia cùng chúng tôi | auth.join.us |
@@ -172,9 +172,9 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/RegisterPage.tsx:97 | Địa chỉ email | auth.email.address |
 | pages/RegisterPage.tsx:97 | Dùng để đăng nhập, bảo mật tài khoản và nhận xác nhận kích hoạt. | auth.used.to.sign.in.protect.your.account |
 | pages/RegisterPage.tsx:99 | Mật khẩu | auth.password |
-| pages/RegisterPage.tsx:103 | Tối thiểu 8 ký tự an toàn | auth.at.least.8.characters |
+| pages/RegisterPage.tsx:103 | Tối thiểu 8 ký tự an toàn | auth.at.least.n8.characters |
 | pages/RegisterPage.tsx:104 | Quy chuẩn mật khẩu dễ nhớ &amp; an toàn: | auth.memorable.and.secure.password.guidelines |
-| pages/RegisterPage.tsx:104 | Tối thiểu 8 ký tự bất kỳ. | auth.at.least.8.characters.2 |
+| pages/RegisterPage.tsx:104 | Tối thiểu 8 ký tự bất kỳ. | auth.at.least.n8.characters.n2 |
 | pages/RegisterPage.tsx:104 | Nên kết hợp chữ cái và số để bảo vệ quyền riêng tư tốt hơn. | auth.consider.combining.letters.and.numbers.to.better |
 | pages/RegisterPage.tsx:107 | Xác nhận mật khẩu | auth.confirm.password |
 | pages/RegisterPage.tsx:107 | Nhập lại chính xác mật khẩu trên | auth.reenter.the.password.above |
@@ -185,9 +185,9 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/RegisterPage.tsx:110 | của CongDongNgonNgu.vn. | auth.of.congdongngonnguvn |
 | pages/RegisterPage.tsx:113 | Tạo tài khoản thành viên → | auth.create.member.account |
 | pages/RegisterPage.tsx:117 | Đã là thành viên? | auth.already.a.member |
-| pages/RegisterPage.tsx:118 | Đăng nhập ngay | auth.sign.in.now.2 |
+| pages/RegisterPage.tsx:118 | Đăng nhập ngay | auth.sign.in.now.n2 |
 | pages/ResetPasswordPage.tsx:20 | Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn. | auth.the.password.reset.link.is.invalid.or |
-| pages/ResetPasswordPage.tsx:29 | Mật khẩu cần có ít nhất 12 ký tự. | auth.your.password.must.contain.at.least.12 |
+| pages/ResetPasswordPage.tsx:29 | Mật khẩu cần có ít nhất 12 ký tự. | auth.your.password.must.contain.at.least.n12 |
 | pages/ResetPasswordPage.tsx:34 | Hai mật khẩu chưa khớp. | auth.the.passwords.do.not.match |
 | pages/ResetPasswordPage.tsx:51 | Hoàn tất khôi phục | auth.recovery.complete |
 | pages/ResetPasswordPage.tsx:51 | Tạo mật khẩu mới | auth.create.a.new.password |
@@ -218,16 +218,16 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/ResetPasswordPage.tsx:78 | Liên kết đã hết hạn hoặc không hợp lệ | auth.the.link.is.expired.or.invalid |
 | pages/ResetPasswordPage.tsx:79 | Vui lòng gửi lại yêu cầu khôi phục mới để tiếp tục. | auth.please.send.a.new.recovery.request.to |
 | pages/ResetPasswordPage.tsx:81 | Yêu cầu liên kết mới → | auth.request.a.new.link |
-| pages/ResetPasswordPage.tsx:82 | Quay lại đăng nhập | auth.back.to.sign.in.2 |
+| pages/ResetPasswordPage.tsx:82 | Quay lại đăng nhập | auth.back.to.sign.in.n2 |
 | pages/ResetPasswordPage.tsx:88 | Mật khẩu mới | auth.new.password |
 | pages/ResetPasswordPage.tsx:92 | Nhập mật khẩu mới | auth.enter.a.new.password |
 | pages/ResetPasswordPage.tsx:93 | Tiêu chuẩn mật khẩu dễ nhớ &amp; an toàn: | auth.memorable.and.secure.password.standards |
-| pages/ResetPasswordPage.tsx:93 | Tối thiểu 8 ký tự bất kỳ. | auth.at.least.8.characters.2 |
+| pages/ResetPasswordPage.tsx:93 | Tối thiểu 8 ký tự bất kỳ. | auth.at.least.n8.characters.n2 |
 | pages/ResetPasswordPage.tsx:93 | Nên kết hợp chữ cái và số để bảo vệ quyền riêng tư tốt hơn. | auth.consider.combining.letters.and.numbers.to.better |
 | pages/ResetPasswordPage.tsx:96 | Xác nhận mật khẩu mới | auth.confirm.new.password |
 | pages/ResetPasswordPage.tsx:96 | Nhập lại mật khẩu mới | auth.reenter.the.new.password |
 | pages/ResetPasswordPage.tsx:97 | Lưu mật khẩu mới và tiếp tục → | auth.save.new.password.and.continue |
-| pages/ResetPasswordPage.tsx:98 | Quay lại đăng nhập | auth.back.to.sign.in.2 |
+| pages/ResetPasswordPage.tsx:98 | Quay lại đăng nhập | auth.back.to.sign.in.n2 |
 | pages/VerifyEmailPage.tsx:35 | Email đã được xác minh. Bạn có thể đăng nhập ngay bây giờ. | auth.your.email.has.been.verified.you.can |
 | pages/VerifyEmailPage.tsx:47 | Vui lòng nhập email hợp lệ. | auth.please.enter.a.valid.email.address |
 | pages/VerifyEmailPage.tsx:54 | Nếu tài khoản phù hợp, email xác minh mới sẽ được gửi tới bạn. | auth.if.the.account.is.eligible.a.new |
@@ -247,11 +247,13 @@ Routes, disabled legal destinations, consent intent and session semantics are pr
 | pages/VerifyEmailPage.tsx:75 | Đã xác minh? | auth.already.verified |
 | pages/VerifyEmailPage.tsx:75 | Đi tới đăng nhập → | auth.go.to.sign.in |
 | pages/VerifyEmailPage.tsx:76 | Bảo vệ quyền riêng tư | auth.protect.your.privacy |
-| pages/VerifyEmailPage.tsx:77 | Liên kết xác thực chỉ có hiệu lực trong 24 giờ và chỉ được sử dụng một lần. | auth.the.verification.link.is.valid.for.24 |
+| pages/VerifyEmailPage.tsx:77 | Liên kết xác thực chỉ có hiệu lực trong 24 giờ và chỉ được sử dụng một lần. | auth.the.verification.link.is.valid.for.n24 |
 | pages/VerifyEmailPage.tsx:80 | Đang kiểm tra liên kết xác minh… | auth.checking.verification.link |
 | pages/VerifyEmailPage.tsx:83 | Địa chỉ nhận liên kết | auth.link.recipient.address |
-| pages/VerifyEmailPage.tsx:91 | Đi tới đăng nhập | auth.go.to.sign.in.2 |
+| pages/VerifyEmailPage.tsx:91 | Đi tới đăng nhập | auth.go.to.sign.in.n2 |
 | pages/VerifyEmailPage.tsx:95 | Địa chỉ email nhận liên kết | auth.email.address.for.the.link |
-| pages/VerifyEmailPage.tsx:102 | Liên kết xác minh có hiệu lực trong 24 giờ và chỉ dùng một lần. | auth.verification.links.are.valid.for.24.hours |
+| pages/VerifyEmailPage.tsx:102 | Liên kết xác minh có hiệu lực trong 24 giờ và chỉ dùng một lần. | auth.verification.links.are.valid.for.n24.hours |
 | pages/VerifyEmailPage.tsx:105 | Gửi lại email xác minh → | auth.resend.verification.email |
-| pages/VerifyEmailPage.tsx:106 | Quay lại đăng nhập | auth.back.to.sign.in.2 |
+| pages/VerifyEmailPage.tsx:106 | Quay lại đăng nhập | auth.back.to.sign.in.n2 |
+
+Additional ASCII placeholder source inventory: LoginPage.tsx ten@vidu.vn → auth.login.emailPlaceholder; RegisterPage.tsx, ForgotPasswordPage.tsx and VerifyEmailPage.tsx nguoidung@vidu.vn → auth.email.placeholder. These are examples, never submitted data. Final auth catalog208 keys (204 unique primary strings, two parameter/correction entries, two placeholders).

@@ -1,5 +1,9 @@
 # V2 Phase Planning Dossiers
 
+## Phase24 execution overlay — 2026-10-08
+
+Current owner authorization applies to Phase24 only. Existing historical planning flags below remain their original snapshot. Phase24 implementation and bounded technical acceptance PASS; status BLOCKED_EXTERNAL/verdict DEFER pending direct read authorization for mandatory complete ChatGPT relay response. Tasks001/002/003 DONE for accepted repository work;004 BLOCKED_EXTERNAL. See [Phase24 dossier](PHASE-24-MEMBER-EXCHANGE-LOCALIZATION/README.md). Historical category23B remains planned/unstarted. No Phase25/new major phase.
+
 ## Current bounded execution overlay — 2026-10-08
 
 The owner-defined Phase23 Related Resources run (LNG-23-001–004) is accepted DONE/GO_BOUNDED_PRODUCT; see [verdict](PHASE-23-RELATED-RESOURCE-LIBRARY/VERDICT.md), [handoff](PHASE-23-RELATED-RESOURCE-LIBRARY/HANDOFF.md), [Backend evidence](PHASE-23-RELATED-RESOURCE-LIBRARY/BACKEND-EVIDENCE.md) and [Frontend evidence](PHASE-23-RELATED-RESOURCE-LIBRARY/FRONTEND-EVIDENCE.md). Historical planning rows below are retained as their original milestone, superseded only within current authorized scope. Broader23B remains PLANNED/outside this run. Phase24 remains unauthorized/unstarted; prior Phase20/21 DONE/GO and Phase22 DONE/GO_BOUNDED_TEST preserved. Final source-control lifecycle is verified before terminal owner report.
