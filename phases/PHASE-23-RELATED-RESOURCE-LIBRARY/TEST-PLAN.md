@@ -1,6 +1,10 @@
 # Phase 23 Test Plan
 
-**State:** Backend acceptance observed; Frontend/integrated gates pending.
+**State:** Backend and Frontend bounded TEST acceptance observed; integrated closeout READY. Earlier pending language below is historical002 evidence.
+
+## Observed LNG-23-003 gates — 2026-10-08
+
+Frontend PR29/main103f876 quality PASS,97 files/429 tests and focused Library regressions PASS; lint/typecheck/build/performance budget PASS, audit0. Exact Vercel main/alias binding, real Chrome14 vi/en viewport pairs, keyboard/native filters/pagination replacement/empty continuation/canonical target and lexical navigation/uppercase/error/retry/manual hide/delete invalidation PASS. Sampled numeric contrast PASS; screen reader NOT_RUN; actual focus/visibility transition NOT_OBSERVED with separate unit coverage PASS. Fresh UI89-resource scope independently cleaned residualzero; original002 manifest unchanged. See [Frontend evidence](FRONTEND-EVIDENCE.md) and [review](FRONTEND-REVIEW.md) for exact observations and limits.
 
 ## Backend/projection
 Test eligible relation retrieval, filters, pagination, unsupported relation, no-result fallback, source/license status changes, deletion and stale projection/cache invalidation. Re-run Phase 21 leak/quality criteria where applicable.

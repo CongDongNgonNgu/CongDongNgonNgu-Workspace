@@ -1,6 +1,6 @@
 # Phase 23 UI / Stitch evidence
 
-## Current preparation — 2026-10-07
+## Historical preparation — 2026-10-07
 
 Frontend runtime implementation remains held until LNG-23-002 DONE. RED API, freshness/pagination and component tests exist on `feat/phase23-related-library`; expected failures were observed. This preparation is not UI runtime acceptance.
 
@@ -13,7 +13,7 @@ Accepted direction: extend existing Library tokens/components with flat related 
 
 Rejected generated details: fabricated sources/citations, free-form relationship explanations, off-token colors,11px labels and nested source cards. No generated HTML was imported. No eligibility/provenance rule changes or runtime/provider PASS is inferred from Stitch.
 
-Actual browser acceptance at320/375/390/412/768/1024/1440 and vi/en remains pending implementation.
+The preparation-time pending browser requirement was satisfied on2026-10-08 by actual vi/en checks at320/375/390/412/768/1024/1440. See [Frontend evidence](FRONTEND-EVIDENCE.md); Stitch images remain references, not runtime evidence.
 
 ## Historical planning policy
 
