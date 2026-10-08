@@ -1,0 +1,1037 @@
+{
+  "scope": "LOCAL_SYNTHETIC_TEST_ONLY",
+  "externalRequests": [],
+  "pageErrors": [],
+  "checks": [
+    {
+      "name": "vi-browse-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "vi-filters-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "vi-browse-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "vi-filters-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "vi-browse-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "vi-filters-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "vi-browse-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "vi-filters-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "vi-browse-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "vi-browse-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "vi-browse-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "vi-detail-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "vi-empty-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "vi-error-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "vi-localized-loading-recovers",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-search-content-language-stable",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-pagination",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-safe-rate-error",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-safe-missing",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-safe-denied",
+      "status": "PASS"
+    },
+    {
+      "name": "en-browse-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "en-filters-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "en-error-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "en-browse-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "en-filters-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "en-error-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "en-browse-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "en-filters-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "en-error-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "en-browse-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "en-filters-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "en-error-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "en-browse-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "en-error-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "en-browse-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "en-error-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "en-browse-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "en-detail-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "en-empty-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "en-error-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "en-localized-loading-recovers",
+      "status": "PASS"
+    },
+    {
+      "name": "en-search-content-language-stable",
+      "status": "PASS"
+    },
+    {
+      "name": "en-pagination",
+      "status": "PASS"
+    },
+    {
+      "name": "en-safe-rate-error",
+      "status": "PASS"
+    },
+    {
+      "name": "en-safe-missing",
+      "status": "PASS"
+    },
+    {
+      "name": "en-safe-denied",
+      "status": "PASS"
+    },
+    {
+      "name": "default-vi-no-browser-inference",
+      "status": "PASS"
+    },
+    {
+      "name": "switch-route-hash-filter-no-api-mutation-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "reload-persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "direct-detail-url",
+      "status": "PASS"
+    },
+    {
+      "name": "back-forward",
+      "status": "PASS"
+    },
+    {
+      "name": "switch-back-vi-content-unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile-locale-menu",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": [
+        "BUTTON:",
+        "NAV:HomeFind a study partnerLibraryLanguagesCommunityMembershipGetting sta",
+        "SELECT:Tiếng ViệtEnglish"
+      ]
+    },
+    {
+      "name": "mobile-menu-switch-focus-escape",
+      "status": "PASS"
+    },
+    {
+      "name": "desktop-menu-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "long-copy-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "offenders": []
+    },
+    {
+      "name": "long-copy-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "offenders": []
+    },
+    {
+      "name": "long-copy-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "offenders": []
+    },
+    {
+      "name": "long-copy-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "offenders": []
+    },
+    {
+      "name": "long-copy-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "offenders": []
+    },
+    {
+      "name": "long-copy-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "offenders": []
+    },
+    {
+      "name": "long-copy-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "offenders": []
+    },
+    {
+      "name": "invalid-stored-value-fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "authenticated-session-stable-no-refresh-or-write",
+      "status": "PASS"
+    },
+    {
+      "name": "payment-remains-disabled-with-en-shell",
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [
+    "vi-detail-390.png",
+    "vi-detail-1440.png",
+    "vi-browse-1440.png",
+    "en-detail-390.png",
+    "en-detail-1440.png",
+    "en-browse-1440.png",
+    "en-long-copy-1440.png"
+  ],
+  "expectedFixtureHttpErrors": [
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 429
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources/missing",
+      "status": 404
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources/denied",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 503
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources",
+      "status": 429
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources/missing",
+      "status": 404
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/library/resources/denied",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/membership/contribution-credit",
+      "status": 503
+    }
+  ],
+  "startedAt": "2026-10-08T06:43:56.441Z",
+  "status": "PASS",
+  "finishedAt": "2026-10-08T06:44:10.843Z"
+}

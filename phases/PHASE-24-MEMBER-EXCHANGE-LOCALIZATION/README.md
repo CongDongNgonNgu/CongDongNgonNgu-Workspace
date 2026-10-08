@@ -1,6 +1,6 @@
 # Phase 24 — Member Onboarding & Language Exchange Localization
 
-**Status:** IN_PROGRESS
+**Status:** BLOCKED_EXTERNAL — technical acceptance PASS; mandatory relay read pending
 **Foundation:** completed `LNG-19-006` locale infrastructure  
 **Authoritative roadmap:** `../../docs/V2-ROADMAP.md`
 
@@ -27,3 +27,5 @@ Separate Phase 24 owner authorization; bounded copy inventory/terminology; conse
 Catalog completeness, safe error mapping, locale switching/reload, learning-language/session/URL independence, a11y/long-copy/responsive runtime and relevant auth/navigation/exchange regressions pass. English human-review status must be truthful; technical completion is not human certification.
 
 See [COPY-INVENTORY.md](COPY-INVENTORY.md) and [UI-STITCH.md](UI-STITCH.md).
+
+See [VERDICT.md](VERDICT.md), [HANDOFF.md](HANDOFF.md) and [EVIDENCE-INDEX.md](EVIDENCE-INDEX.md) for executed results and exact limits.

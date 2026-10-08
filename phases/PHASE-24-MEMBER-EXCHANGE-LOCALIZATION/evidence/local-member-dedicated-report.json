@@ -1,0 +1,81 @@
+{
+  "scope": "LOCAL_SYNTHETIC_TEST_ONLY",
+  "frontendOrigin": "http://127.0.0.1:53910",
+  "liveAuthBackendProof": false,
+  "dedicatedOnly": true,
+  "apiAdapterRequests": [],
+  "checks": [
+    {
+      "name": "vi-login-logout-reload-ui-preference-session-independence",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-registration-draft-consent-switch-single-submit-canonical",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-neutral-recovery-success-no-double-submit",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-successful-onboarding-canonical-single-patch-after-locale-switch",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-successful-profile-canonical-privacy-patch-after-switch",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-logout-reload-ui-preference-session-independence",
+      "status": "PASS"
+    },
+    {
+      "name": "en-registration-draft-consent-switch-single-submit-canonical",
+      "status": "PASS"
+    },
+    {
+      "name": "en-neutral-recovery-success-no-double-submit",
+      "status": "PASS"
+    },
+    {
+      "name": "en-successful-onboarding-canonical-single-patch-after-locale-switch",
+      "status": "PASS"
+    },
+    {
+      "name": "en-successful-profile-canonical-privacy-patch-after-switch",
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [],
+  "externalRequests": [],
+  "pageErrors": [],
+  "expectedHttpErrors": [
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/auth/refresh",
+      "status": 403
+    }
+  ],
+  "startedAt": "2026-10-08T06:46:25.673Z",
+  "status": "PASS",
+  "finishedAt": "2026-10-08T06:46:33.266Z"
+}

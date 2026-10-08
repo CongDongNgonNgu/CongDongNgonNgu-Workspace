@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-10-08T06:59:04.885Z",
+  "source": "Vercel project overview rendered browser",
+  "providerDeploymentId": "dpl_EAJH8L4uizQY4TmyMKGGrfiNB2df",
+  "providerLink": "https://vercel.com/tdrake11s-projects/cong-dong-ngon-ngu/EAJH8L4uizQY4TmyMKGGrfiNB2df",
+  "origin": "https://cong-dong-ngon-ngu-sigma.vercel.app",
+  "status": "Ready",
+  "branch": "main",
+  "commit": "3c4f50a7d66a0a697c55aaf46e7f2d4906470654",
+  "environmentClassification": "OWNER_AUTHORIZED_TEST_PHASE24",
+  "providerEnvironmentLabel": "Production",
+  "configMutation": false
+}

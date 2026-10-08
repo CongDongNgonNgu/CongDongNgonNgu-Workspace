@@ -1,0 +1,10 @@
+{
+  "observedAt": "2026-10-08T06:42:09.886Z",
+  "source": "GET https://congdongngonngu-back-end.onrender.com/api/v1/membership/catalog",
+  "payment": {
+    "available": false,
+    "qrAvailable": false,
+    "provider": null
+  },
+  "mutation": false
+}
