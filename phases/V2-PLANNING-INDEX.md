@@ -2,7 +2,7 @@
 
 ## Phase24 execution overlay — 2026-10-08
 
-Current owner authorization applies to Phase24 only. Existing historical planning flags below remain their original snapshot. Phase24 implementation and bounded technical acceptance PASS; status BLOCKED_EXTERNAL/verdict DEFER pending direct read authorization for mandatory complete ChatGPT relay response. Tasks001/002/003 DONE for accepted repository work;004 BLOCKED_EXTERNAL. See [Phase24 dossier](PHASE-24-MEMBER-EXCHANGE-LOCALIZATION/README.md). Historical category23B remains planned/unstarted. No Phase25/new major phase.
+Current owner authorization applies to Phase24 only. Existing historical planning flags below remain their original snapshot. Phase24 implementation and bounded technical acceptance PASS; status DONE/verdict GO_BOUNDED_LOCALIZATION after explicit direct read approval and validated same-phase relay recovery. Tasks001–004 DONE; final integration/CI/cleanup/terminal004 acknowledgement recorded in closeout PR/report. See [Phase24 dossier](PHASE-24-MEMBER-EXCHANGE-LOCALIZATION/README.md). Historical category23B remains planned/unstarted. No Phase25/new major phase.
 
 ## Current bounded execution overlay — 2026-10-08
 
