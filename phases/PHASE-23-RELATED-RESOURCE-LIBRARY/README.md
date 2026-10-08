@@ -1,8 +1,10 @@
 # Phase 23A — Verified Related-Resource Library Journey
 
-## Current bounded execution addendum — 2026-10-07
+## Current bounded execution addendum — 2026-10-08
 
-Owner START_PHASE_23=YES now authorizes LNG-23-001 through004 for the original Related Resources scope. Status IN_PROGRESS; LNG-23-001 DONE after independent approval, PR135/main CI and verified merged-branch cleanup. LNG-23-002 DONE after independent review, PR45/main CI, exact Render TEST deployment, public API acceptance and residualzero cleanup;003 READY and004 PLANNED. Historical planning flags below are superseded only for this authorized journey. Category-completion23B remains PLANNED/outside this run; Phase24 unauthorized/unstarted. See [contract](RELATION-CONTRACT.md) and [freeze review](FREEZE-REVIEW.md). See [Backend evidence](BACKEND-EVIDENCE.md) and [review](BACKEND-REVIEW.md); frontend/browser/integrated closeout remains pending.
+LNG-23-003 accepted: Frontend PR29/main103f876 CI, exact Vercel TEST revision, actual bounded browser acceptance and fresh UI residualzero cleanup PASS. See [Frontend evidence](FRONTEND-EVIDENCE.md) and [review](FRONTEND-REVIEW.md). LNG-23-004 is READY. Historical planning text below remains unchanged; the owner's current bounded request defines this run's completion boundary as Related Resources tasks001–004, without executing or claiming category-completion23B.
+
+Owner START_PHASE_23=YES now authorizes LNG-23-001 through004 for the original Related Resources scope. Status IN_PROGRESS; LNG-23-001 DONE after independent approval, PR135/main CI and verified merged-branch cleanup. LNG-23-002 DONE after independent review, PR45/main CI, exact Render TEST deployment, public API acceptance and residualzero cleanup;003 DONE and004 READY. Historical planning flags below are superseded only for this authorized journey. Category-completion23B remains PLANNED/outside this run; Phase24 unauthorized/unstarted. See [contract](RELATION-CONTRACT.md) and [freeze review](FREEZE-REVIEW.md). See [Backend evidence](BACKEND-EVIDENCE.md) and [review](BACKEND-REVIEW.md); frontend/browser acceptance PASS; integrated closeout READY.
 
 
 **Major phase:** Phase 23 — Verified Language Learning Resource Journey  
