@@ -36,3 +36,9 @@ All bounded technical localization gates PASS. Lifecycle remains BLOCKED_EXTERNA
 | Relay | BLOCKED_EXTERNAL;001 sent,complete response unread;002/003/004 terminal relay pending;see RELAY-EVIDENCE.md |
 
 No Backend/schema/dependency/provider/persistence changes. No production DB/payment/financial mutations. Existing unrelated own-profile reputation/progress copy excluded from accepted language controls. Zero mixed-language/raw-key claims apply only within accepted Phase24 surfaces/cases. No Phase25; historical category23B remains planned/unstarted.
+
+## Final relay recovery and acceptance — 2026-10-08
+
+Owner explicitly confirmed direct read of the established project ChatGPT response. Complete CODE_BLOCK_V1 responses001/002/003 were read through the rendered browser, including the previously virtualized001 block. Generation-complete status observed; same project/Phase24, dependencies, no broadening and major-phase STOP validated.001 was not resent.002/003 sanitized DONE handoffs sent once;003 returned bounded004 closeout only. Independent final merged-source/evidence review APPROVE_BOUNDED:593paired keys, existing foundation preserved, canonical/session/form/route and safe error/UGC evidence supported; no missing technical gate/source defect. No application changes since accepted exact-main evidence.
+
+Final verdict GO_BOUNDED_LOCALIZATION; tasks001–004 DONE subject to normal final Workspace PR/mainCI/cleanup verification recorded in that PR/terminal report. Terminal004 acknowledgement is sent/read after repository integration; its exact final SHA/CI/result is recorded in the final PR comment to avoid a self-referential commit. No new major phase authorized or started. Prior pending checkpoints above are historical and superseded by this recovery.

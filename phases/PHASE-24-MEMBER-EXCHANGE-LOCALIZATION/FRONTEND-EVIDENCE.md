@@ -40,3 +40,9 @@ Actual publicTESTbrowserwithoutadapter PASS113checks:vi/en7widths6authscreens/sw
 ## Final deployed member checkpoint
 
 2026-10-08T06:59:04.749Z–07:02:28.199Z: deployed-member-runtime-report.json PASS584checks28screenshots,zero page errors/external requests. Actual Vercel frontend; all member API responses bounded synthetic adapter. No live authenticated Backend proof. This supersedes earlier pending checkpoints above.
+
+## Final relay recovery and acceptance — 2026-10-08
+
+Owner explicitly confirmed direct read of the established project ChatGPT response. Complete CODE_BLOCK_V1 responses001/002/003 were read through the rendered browser, including the previously virtualized001 block. Generation-complete status observed; same project/Phase24, dependencies, no broadening and major-phase STOP validated.001 was not resent.002/003 sanitized DONE handoffs sent once;003 returned bounded004 closeout only. Independent final merged-source/evidence review APPROVE_BOUNDED:593paired keys, existing foundation preserved, canonical/session/form/route and safe error/UGC evidence supported; no missing technical gate/source defect. No application changes since accepted exact-main evidence.
+
+Final verdict GO_BOUNDED_LOCALIZATION; tasks001–004 DONE subject to normal final Workspace PR/mainCI/cleanup verification recorded in that PR/terminal report. Terminal004 acknowledgement is sent/read after repository integration; its exact final SHA/CI/result is recorded in the final PR comment to avoid a self-referential commit. No new major phase authorized or started. Prior pending checkpoints above are historical and superseded by this recovery.
