@@ -1,6 +1,6 @@
 # Phase 26 — Member Connection & Communication
 
-**Status:** IN_PROGRESS — owner authorized complete Phase26 lifecycle; 001 DONE, 002 IN_PROGRESS. Current [contract](CONTRACT.md) and [evidence](EVIDENCE.md) govern execution. Stop after26;27–29 remain unauthorized.
+**Status:** IN_PROGRESS — owner authorized complete Phase26 lifecycle; 001 DONE, 002 VERIFYING (implementation and exact-main TEST HTTP gates passed; evidence integration and terminal relay pending), 003–006 pending. Current [contract](CONTRACT.md) and [evidence](EVIDENCE.md) govern execution. Full exact-main synthetic browser acceptance remains required in006. Stop after26;27–29 remain unauthorized.
 
 ## Objective
 
