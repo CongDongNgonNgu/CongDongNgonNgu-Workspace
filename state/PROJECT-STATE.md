@@ -2,7 +2,7 @@
 
 ## Authorized Phase26 execution — 2026-10-09
 
-Owner complete Phase26 authorization supersedes historical no-auth flags for26 only. Independent contract/security review accepted [Phase26 contract](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/CONTRACT.md). [Evidence/checkpoint](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md) records remote-main and read-only TEST checksum preflight.001 remains VERIFYING until integration/CI/cleanup/relay; implementation not started.
+Owner complete Phase26 authorization supersedes historical no-auth flags for26 only. Independent contract/security review accepted [Phase26 contract](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/CONTRACT.md). [Evidence/checkpoint](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md) records PR149/main CI/cleanup and completed same-phase relay.001 DONE;002 implementation IN_PROGRESS.003–006 remain sequenced after002, no runtime acceptance claimed.
 
 ```text
 CURRENT_PHASE=26
@@ -10,8 +10,8 @@ PHASE_26_EXECUTION_AUTHORIZED=YES
 PHASE_26_STARTED=YES
 PHASE_26_STATUS=IN_PROGRESS
 PHASE_26_VERDICT=NOT_REACHED
-LNG_26_001=VERIFYING
-LNG_26_002=PLANNED
+LNG_26_001=DONE
+LNG_26_002=IN_PROGRESS
 LNG_26_003=PLANNED
 LNG_26_004=PLANNED
 LNG_26_005=PLANNED
@@ -25,7 +25,7 @@ PHASE_29_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_MUTATION_PERFORMED=NO
 REAL_USER_VALUE_PROVEN=NO
-NEXT_ACTION=INTEGRATE_PHASE26_CONTRACT_THEN_EXECUTE_002
+NEXT_ACTION=COMPLETE_PHASE26_002_CONNECTION_PRODUCT_AND_PROOF
 ```
 
 
