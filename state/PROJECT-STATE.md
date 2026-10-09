@@ -2,15 +2,15 @@
 
 ## Authorized Phase25 execution — 2026-10-09
 
-Latest explicit owner START_PHASE_25=YES authorizes the complete bounded Language Hub lifecycle only, superseding earlier planning-only Phase25 flags. Preflight remote mains match supplied baseline; clean worktrees. Reviewed category contract freezes approved canonical paths vs actual inventory and explicit deferrals; all numeric Hub metrics omitted. Source/evidence inventory and independent review accepted locally; integration gates pending. No Backend/schema/DB/content/provider mutation planned; no Phase26–29.
+Latest explicit owner START_PHASE_25=YES authorizes the complete bounded Language Hub lifecycle only, superseding earlier planning-only Phase25 flags. Preflight remote mains match supplied baseline; clean worktrees. Reviewed category contract freezes approved canonical paths vs actual inventory and explicit deferrals; all numeric Hub metrics omitted. Readiness contract integrated through Workspace PR145/main58e074be with CI/cleanup PASS. Core journeys integrated through Frontend PR31/main3a600adc with PR/main CI and cleanup PASS; core evidence integration pending. No Backend/schema/DB/content/provider mutation planned; no Phase26–29.
 
 ```text
 CURRENT_PHASE=25
 PHASE_25_EXECUTION_AUTHORIZED=YES
 PHASE_25_STARTED=YES
 PHASE_25_STATUS=IN_PROGRESS
-LNG_25_001=VERIFYING
-LNG_25_002=PLANNED
+LNG_25_001=DONE
+LNG_25_002=VERIFYING
 LNG_25_003=PLANNED
 LNG_25_004=PLANNED
 PHASE_26_EXECUTION_AUTHORIZED=NO
@@ -24,7 +24,7 @@ PHASE_29_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_MUTATION_PERFORMED=NO
 REAL_USER_VALUE_PROVEN=NO
-NEXT_ACTION=INTEGRATE_PHASE25_READINESS_CONTRACT
+NEXT_ACTION=INTEGRATE_CORE_EVIDENCE_THEN_RELAY_LNG_25_003
 ```
 
 ## Authorized Phase 24 execution — 2026-10-08
