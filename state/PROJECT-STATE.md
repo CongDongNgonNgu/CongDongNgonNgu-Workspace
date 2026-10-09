@@ -1,5 +1,32 @@
 # Project State
 
+## Authorized Phase25 execution — 2026-10-09
+
+Latest explicit owner START_PHASE_25=YES authorizes the complete bounded Language Hub lifecycle only, superseding earlier planning-only Phase25 flags. Preflight remote mains match supplied baseline; clean worktrees. Reviewed category contract freezes approved canonical paths vs actual inventory and explicit deferrals; all numeric Hub metrics omitted. Source/evidence inventory and independent review accepted locally; integration gates pending. No Backend/schema/DB/content/provider mutation planned; no Phase26–29.
+
+```text
+CURRENT_PHASE=25
+PHASE_25_EXECUTION_AUTHORIZED=YES
+PHASE_25_STARTED=YES
+PHASE_25_STATUS=IN_PROGRESS
+LNG_25_001=VERIFYING
+LNG_25_002=PLANNED
+LNG_25_003=PLANNED
+LNG_25_004=PLANNED
+PHASE_26_EXECUTION_AUTHORIZED=NO
+PHASE_26_STARTED=NO
+PHASE_27_EXECUTION_AUTHORIZED=NO
+PHASE_27_STARTED=NO
+PHASE_28_EXECUTION_AUTHORIZED=NO
+PHASE_28_STARTED=NO
+PHASE_29_EXECUTION_AUTHORIZED=NO
+PHASE_29_STARTED=NO
+PAYMENT_REMAINS_DISABLED=YES
+PRODUCTION_MUTATION_PERFORMED=NO
+REAL_USER_VALUE_PROVEN=NO
+NEXT_ACTION=INTEGRATE_PHASE25_READINESS_CONTRACT
+```
+
 ## Authorized Phase 24 execution — 2026-10-08
 
 Owner START_PHASE_24=YES authorizes complete bounded member localization lifecycle only. Current explicit owner authorization supersedes historical Phase24 unauthorized flags. Remote main preflight matched handoff SHAs; all worktrees clean and merged branches absent. Existing LNG-19-006 implementation/evidence and complete Phase24 dossier reviewed. Copy source inventory/terminology/error/legal ownership contract accepted through Workspace PR140; merged main ac281dbdc60648c78d52b70e33bf7cc6a4ad5ba5 and post-merge monitor CI37725078670 passed. Auth/onboarding and exchange implementation accepted through FrontendPR30/main3c4f50a/mainCI37740521543, exact-main VercelTEST and584 deployed member/80a11y/113public checks. Tasks001–004 DONE; explicit direct owner read approval resolved prior relay rejection. Complete001/002/003 code blocks validated; final004 terminal acknowledgement follows final Workspace integration. Final independent review APPROVE_BOUNDED, no missing technical gate. See Phase24 verdict/handoff for boundaries.
