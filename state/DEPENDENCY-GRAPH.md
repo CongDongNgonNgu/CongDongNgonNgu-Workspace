@@ -1,8 +1,12 @@
 # Dependency Graph
 
-## Authorized Phase25 graph — 2026-10-09
+## Phase25 completed graph — 2026-10-09
 
-Closed Phase23/24 plus owner START_PHASE_25=YES -> LNG25-001 inventory/readiness freeze DONE (WorkspacePR145) -> LNG25-002 canonical core paths DONE (FrontendPR31, WorkspacePR146) -> LNG25-003 remaining routes/truthful blockers/metrics VERIFYING (FrontendPR32) -> LNG25-004 exact-main TEST/browser/fresh review/closeout PLANNED. Grammar, pronunciation, practice content dependencies remain held; Community/Q&A bilingual destination readiness remains held. All numeric metrics omitted. Backend/schema/DB unchanged. Only Phase25 is authorized; Phase26–29 not started. Earlier planning/authorization snapshots below remain historical.
+Closed Phase23/24 + owner START_PHASE25=YES → LNG25-001 DONE (WorkspacePR145) → LNG25-002 DONE (FrontendPR31/WorkspacePR146) → LNG25-003 DONE (FrontendPR32/WorkspacePR147) → LNG25-004 DONE (FrontendPR33 focus correction, exact-main TEST, fresh review and final Workspace integration gates). GO_BOUNDED_LANGUAGE_HUB. [Final matrix](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/CATEGORY-READINESS.md) governs held grammar/licensed audio/non-AI/Community/Q&A target-English dependencies. All numeric metrics omitted; Backend/schema/DB unchanged.
+
+STOP at25. Phases26–29 PLANNED, unauthorized/unstarted; sequence25→26→27→28→29 is not authorization. Historical23B intent superseded only in forward execution by25, no separate23B run. Final Workspace SHA/mainCI/cleanup and terminal004 acknowledgement recorded in final PR/report.
+
+## Historical dependency snapshots
 
 ## Authorized Phase 24 graph — 2026-10-08
 

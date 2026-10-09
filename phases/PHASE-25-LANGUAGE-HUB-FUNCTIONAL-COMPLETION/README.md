@@ -1,7 +1,11 @@
 # Phase 25 — Language Hub Functional Completion
 
-**Status:** IN_PROGRESS — explicit owner full Phase25 authorization 2026-10-09
+**Status:** DONE / GO_BOUNDED_LANGUAGE_HUB — final normal Workspace integration gates recorded in closeout PR and terminal report
 **Roadmap:** `../../docs/V3-ROADMAP.md`
+
+[Final matrix](CATEGORY-READINESS.md) · [Acceptance](ACCEPTANCE.md) · [Evidence](EVIDENCE-INDEX.md) · [Verdict](VERDICT.md) · [Handoff](HANDOFF.md)
+
+All four subphases DONE. READY functional paths: Vocabulary/Sentences/Resources/Exchange. Explicit deferrals: Grammar/Pronunciation/Practice and Community/Q&A target English. No populated inventory, real-user value or live authenticated Backend proof claimed. STOP before26–29.
 
 ## Objective
 

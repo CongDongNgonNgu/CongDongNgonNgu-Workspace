@@ -1,10 +1,16 @@
 # V3 Roadmap — Communication, Community Completion & Full-System Validation
 
-**Status:** PLANNED ONLY — NOT EXECUTION AUTHORIZATION  
+**Status:** Phase25 DONE / GO_BOUNDED_LANGUAGE_HUB; Phases26–29 PLANNED / NOT EXECUTION AUTHORIZED
 **Recorded:** 2026-10-09 (Asia/Ho_Chi_Minh)  
 **Predecessor:** Phase 24 DONE / GO_BOUNDED_LOCALIZATION  
 
 This roadmap records the owner-approved forward product direction after reviewing the current Community, member-exchange, Language Hub and bounded Study Group journeys. It does **not** authorize implementation, deployment, production database mutation, provider activation, telemetry expansion, payment activation, secret changes, destructive infrastructure work or any new major phase. Each major phase still requires explicit owner execution authorization.
+
+## Current execution record — 2026-10-09
+
+Explicit owner full Phase25 authorization completed LNG25-001–004. See [Phase25 verdict](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/VERDICT.md). Bounded functional-path acceptance retains explicit source/audio/exercise and Community/Q&A target-English deferrals. No populated content inventory asserted. Historical23B intent superseded by forward Phase25 execution; historical records intact, no separate23B run.
+
+STOP at25. Phases26–29 PLANNED, unauthorized/unstarted. Next action WAIT_FOR_OWNER_TO_AUTHORIZE_PHASE26. Earlier planning-only flags below are historical; the roadmap/index alone never grants execution permission.
 
 ## Product objective
 
@@ -426,7 +432,7 @@ All V3 phases inherit existing project working/security rules and accepted Phase
 - Synthetic TEST/UAT evidence must be distinguished from real-user evidence.
 - Real-user value, product-market fit and human linguistic certification must not be inferred from automated tests.
 
-# Authorization state
+# Historical planning authorization snapshot (superseded for Phase25 only)
 
 ```text
 PHASE_25_EXECUTION_AUTHORIZED=NO
