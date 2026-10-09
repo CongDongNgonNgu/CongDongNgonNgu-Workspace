@@ -101,6 +101,12 @@ Acceptance: existing Exchange regressions; all request transitions/privacy/IDOR 
 
 ## Lifecycle plan
 
+### Connection API transport concretization (002)
+
+Authenticated GET /exchange/connections uses the ordinary success envelope with data {items,nextCursor}; kind is CONNECTED (default), INCOMING or OUTGOING, limit defaults20/max50 and cursor is optional. Each authorized item exposes only connectionId,targetUserId,displayName,state,updatedAt. State is CONNECTED/INCOMING_PENDING/OUTGOING_PENDING. No actor identifier is accepted as authority. Lists omit blocked/ineligible pairs using current locked authorization. Ordering is updatedAt millisecond DESC then connectionId DESC with an exclusive actor/kind-bound AES-GCM cursor; replicas share existing configured signing-secret-derived key material. Rotation/tampering/cross-actor/cross-kind/invalid cursor returns generic400. No plaintext hidden scan identifiers are exposed. Empty items with non-null nextCursor is valid; clients continue bounded pages and deduplicate connectionId.
+
+Absent current request acceptance is invalid409; already-connected duplicate acceptance remains idempotent. New request rechecks current target discoverability; existing acceptance does not require discovery visibility. Request10/hour+60/day and shared transition/block/unblock60/hour/report10/hour apply to authenticated attempts, including failed eligibility/state attempts and idempotent actor retries. Both request windows commit even when one rejects; counters saturate at limit+1. New canonical pair creation1/minute is checked only during an absent-row insert, so existing duplicate/crossed requests do not consume that cooldown.429 uses EXCHANGE_RATE_LIMITED and bounded Retry-After seconds. Actor limits commit independently before pair work; pair cooldown is atomic with creation. Cleanup removes at most100 expired internal counters in a separate SKIP LOCKED statement.0029 adds internal rate infrastructure only, with an explicit code-first rollback requirement; existing friendship schema/domain is reused.
+
 001 audit/freeze/review -> Workspace PR/CI/merge/main verification/cleanup.
 002 extend existing requests/lists/safety with SQL proof + UI/Stitch/tests -> independent Backend/Frontend integration and Workspace evidence.
 003 direct persistence/SSE/read/composer -> SQL/API/realtime/UI verification and normal integration.
