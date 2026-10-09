@@ -1,0 +1,32 @@
+{
+  "source": "scripts/verify-member-locale-runtime.mjs",
+  "sourceSha256": "266ab9670efad3f065f6f87ba74e9e082d4613a0c09aeac7055376efae90f07e",
+  "reason": "Unrelated notification refresh raced total request count. Domain auth/profile/language/exchange requests still asserted unchanged after settled locale switching.",
+  "changes": [
+    {
+      "before": "from './member-locale-fixture-server.mjs'",
+      "after": "from '../../scripts/member-locale-fixture-server.mjs'",
+      "count": 1
+    },
+    {
+      "before": "fixture.requests.length",
+      "after": "fixture.requests.filter(r=>!r.path.includes('/notifications')).length",
+      "count": 8
+    },
+    {
+      "before": "const authenticatedRequests =",
+      "after": "await page.waitForLoadState('networkidle'); const authenticatedRequests =",
+      "count": 1
+    },
+    {
+      "before": "const filterRoute=page.url();",
+      "after": "await page.waitForLoadState('networkidle'); const filterRoute=page.url();",
+      "count": 1
+    },
+    {
+      "before": "if (opened) await page.keyboard.press('Escape');",
+      "after": "if (opened) await page.keyboard.press('Escape'); await page.waitForLoadState('networkidle');",
+      "count": 1
+    }
+  ]
+}

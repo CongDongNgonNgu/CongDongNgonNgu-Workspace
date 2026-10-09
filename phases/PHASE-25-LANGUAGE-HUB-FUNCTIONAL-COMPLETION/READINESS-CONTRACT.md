@@ -1,6 +1,6 @@
 ﻿# Frozen category readiness contract — Phase25A
 
-2026-10-09 Asia/Saigon. Scope: Language Hub navigation to established canonical journeys or intentional in-page deferral; no new learning content. Candidate freeze awaiting independent review and normal integration gates.
+2026-10-09 Asia/Saigon. Scope: Language Hub navigation to established canonical journeys or intentional in-page deferral; no new learning content. Historical pre-implementation freeze: reviewed/merged via PR145. Final authoritative classification and runtime evidence: [category matrix](CATEGORY-READINESS.md) / [acceptance](ACCEPTANCE.md); baseline pending/NOT_RUN rows below remain historical.
 
 ## Classification and content truth
 

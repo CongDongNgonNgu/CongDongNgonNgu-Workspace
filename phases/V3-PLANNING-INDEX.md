@@ -1,12 +1,18 @@
 # V3 Planning Index
 
-**Status:** PLANNED ONLY — NOT EXECUTION AUTHORIZATION  
+**Status:** Phase25 DONE / GO_BOUNDED_LANGUAGE_HUB; Phases26–29 PLANNED / NOT EXECUTION AUTHORIZED
 **Recorded:** 2026-10-09 (Asia/Ho_Chi_Minh)  
 **Predecessor:** Phase 24 DONE / GO_BOUNDED_LOCALIZATION
 
 This index turns `docs/V3-ROADMAP.md` into concrete phase dossiers. It does not authorize implementation. Each major phase still requires explicit owner authorization before execution.
 
-## Planned phases
+## Current execution record — 2026-10-09
+
+Explicit owner full Phase25 authorization completed LNG25-001–004. See [Phase25 verdict](PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/VERDICT.md). Bounded functional-path acceptance retains explicit source/audio/exercise and Community/Q&A target-English deferrals. No populated content inventory asserted. Historical23B intent superseded by forward Phase25 execution; historical records intact, no separate23B run.
+
+STOP at25. Phases26–29 PLANNED, unauthorized/unstarted. Next action WAIT_FOR_OWNER_TO_AUTHORIZE_PHASE26. Earlier planning-only flags below are historical; the roadmap/index alone never grants execution permission.
+
+## Phase dossiers (25 DONE; 26–29 PLANNED)
 
 | Order | Phase | Dossier | Purpose |
 |---|---|---|---|
@@ -24,7 +30,7 @@ This order is intentional: full-system simulation belongs after the user-facing 
 
 ## Historical Phase23B handling
 
-The historical Phase23B category-completion scope remains **PLANNED_UNSTARTED**. Phase 25 is the forward V3 execution home for that product intent if and only if Phase 25 is later authorized. Do not execute both scopes independently or double-count completion.
+Historical Phase23B remains an unexecuted planning record. Its product intent is now superseded by owner-authorized forward Phase25 completion. Do not execute it separately or double-count completion.
 
 ## Common boundaries
 

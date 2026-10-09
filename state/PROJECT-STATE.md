@@ -1,18 +1,31 @@
 # Project State
 
-## Authorized Phase25 execution — 2026-10-09
+## Phase25 closeout — 2026-10-09
 
-Latest explicit owner START_PHASE_25=YES authorizes the complete bounded Language Hub lifecycle only, superseding earlier planning-only Phase25 flags. Preflight remote mains match supplied baseline; clean worktrees. Reviewed category contract freezes approved canonical paths vs actual inventory and explicit deferrals; all numeric Hub metrics omitted. Readiness contract integrated through Workspace PR145/main58e074be with CI/cleanup PASS. Core journeys integrated through Frontend PR31/main3a600adc with PR/main CI and cleanup PASS; core evidence integrated through WorkspacePR146/maina24f66ba/CI37882234170/cleanup PASS. Remaining surfaces FrontendPR32 integrated; post-merge/evidence gates pending. No Backend/schema/DB/content/provider mutation planned; no Phase26–29.
+Current authoritative state supersedes historical checkpoints below. Owner full Phase25 authorization completed inventory/core/remaining routes and exact-main TEST acceptance. See [verdict](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/VERDICT.md), [category matrix](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/CATEGORY-READINESS.md), [acceptance](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/ACCEPTANCE.md) and [handoff](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/HANDOFF.md). DONE takes effect after normal final Workspace PR/mainCI/cleanup recorded in that PR and terminal report. No Backend/schema/DB/content/provider mutation. Historical23B intent is superseded by forward Phase25; no separate23B run.
 
 ```text
 CURRENT_PHASE=25
 PHASE_25_EXECUTION_AUTHORIZED=YES
 PHASE_25_STARTED=YES
-PHASE_25_STATUS=IN_PROGRESS
+PHASE_25_STATUS=DONE
+PHASE_25_VERDICT=GO_BOUNDED_LANGUAGE_HUB
 LNG_25_001=DONE
 LNG_25_002=DONE
-LNG_25_003=VERIFYING
-LNG_25_004=PLANNED
+LNG_25_003=DONE
+LNG_25_004=DONE
+VOCABULARY=READY
+SENTENCES=READY
+RESOURCES=READY
+EXCHANGE=READY
+GRAMMAR=DEFERRED_WITH_BLOCKER
+PRONUNCIATION=DEFERRED_WITH_BLOCKER
+PRACTICE=DEFERRED_WITH_BLOCKER
+COMMUNITY=DEFERRED_WITH_BLOCKER_EN_TARGET_UI_NOT_ACCEPTED
+QA=DEFERRED_WITH_BLOCKER_EN_TARGET_UI_NOT_ACCEPTED
+OVERVIEW_NUMERIC_METRICS=OMITTED
+POPULATED_PER_LANGUAGE_INVENTORY_ASSERTED=NO
+TEST_FIXTURES_ONLY_PROVE_MECHANICS=YES
 PHASE_26_EXECUTION_AUTHORIZED=NO
 PHASE_26_STARTED=NO
 PHASE_27_EXECUTION_AUTHORIZED=NO
@@ -24,8 +37,10 @@ PHASE_29_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_MUTATION_PERFORMED=NO
 REAL_USER_VALUE_PROVEN=NO
-NEXT_ACTION=VERIFY_REMAINING_SURFACES_AND_RELAY_LNG_25_004
+NEXT_ACTION=STOP_WAIT_FOR_OWNER_TO_AUTHORIZE_PHASE_26
 ```
+
+## Historical execution snapshots
 
 ## Authorized Phase 24 execution — 2026-10-08
 

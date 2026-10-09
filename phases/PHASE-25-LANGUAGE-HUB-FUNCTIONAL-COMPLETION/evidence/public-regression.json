@@ -1,0 +1,2716 @@
+{
+  "scope": "DEPLOYED_PUBLIC_TEST_NO_SYNTHETIC_ADAPTER",
+  "targetOrigin": "https://cong-dong-ngon-ngu-sigma.vercel.app",
+  "liveAuthenticatedClaim": false,
+  "accountSubmissionPerformed": false,
+  "privateDataRead": false,
+  "checks": [
+    {
+      "name": "vi-login-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-320",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-320",
+      "status": "PASS"
+    },
+    {
+      "name": "payment-disabled-public-catalog",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-login-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-375",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-375",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-login-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-390",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-390",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-login-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-412",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-412",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-login-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-768",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-768",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-login-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-login-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Đăng nhập",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-register-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Đăng ký tài khoản",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-forgot-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Khôi phục mật khẩu",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-reset-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Liên kết đã hết hạn hoặc không hợp lệ",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-verify-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Xác thực địa chỉ email để tiếp tục",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-callback-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Phiên làm việc đã hết hạn",
+      "locale": "vi"
+    },
+    {
+      "name": "vi-switch-reload-route-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "vi-direct-navigation-back-forward-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-320",
+      "status": "PASS",
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-320",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-320",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-375",
+      "status": "PASS",
+      "viewport": 375,
+      "document": 375,
+      "body": 375,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-375",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-375",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-390",
+      "status": "PASS",
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-390",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-390",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-412",
+      "status": "PASS",
+      "viewport": 412,
+      "document": 412,
+      "body": 412,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-412",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-412",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-768",
+      "status": "PASS",
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-768",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-768",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-1024",
+      "status": "PASS",
+      "viewport": 1024,
+      "document": 1024,
+      "body": 1024,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "en-login-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Sign in",
+      "locale": "en"
+    },
+    {
+      "name": "en-register-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Create an account",
+      "locale": "en"
+    },
+    {
+      "name": "en-forgot-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Password recovery",
+      "locale": "en"
+    },
+    {
+      "name": "en-reset-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "The link is expired or invalid",
+      "locale": "en"
+    },
+    {
+      "name": "en-verify-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Verify your email address to continue",
+      "locale": "en"
+    },
+    {
+      "name": "en-callback-1440",
+      "status": "PASS",
+      "viewport": 1440,
+      "document": 1440,
+      "body": 1440,
+      "heading": "Your session has expired",
+      "locale": "en"
+    },
+    {
+      "name": "en-switch-reload-route-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "en-direct-navigation-back-forward-1440",
+      "status": "PASS"
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/index-yS4J_DCa.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/index-DQeYLb0M.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/LoginPage-Dhovf45f.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/PasswordField-i0cYBQwm.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/FormControls-r68A4ONk.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/FieldShell-ry2YuaAe.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/AuthFeedback-BXS2p0zT.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/TextInput-DwTKbpXw.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/AuthFeedback.module-s7_Um6Vb.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/ProviderButtons-DQJY2VhS.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/ProviderButtons-BC9APMfv.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/PasswordField-PQCwWN2G.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/FormControls.module-D4S6_gAt.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/RegisterPage-CTaUgwyt.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/RecoveryStatusRail-BTQcCYoh.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/AuthFlow-tr4pn3Mx.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/ForgotPasswordPage-DH7ASyuM.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/AuthFlow.module-BuLbmc9Q.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/RecoveryStatusRail-BJJTP04_.css",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/ResetPasswordPage-DHZfDlBR.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/VerifyEmailPage-FCItpDV3.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    },
+    {
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/assets/AuthCallbackPage-tIbJ0jLr.js",
+      "status": 200,
+      "source": "ACTUAL_DEPLOYED_ASSET"
+    }
+  ],
+  "apiResponses": [
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "POST",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/refresh",
+      "status": 403,
+      "source": "ACTUAL_TEST_API"
+    },
+    {
+      "method": "GET",
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/auth/providers",
+      "status": 200,
+      "source": "ACTUAL_TEST_API"
+    }
+  ],
+  "blockedMutations": [],
+  "pageErrors": [],
+  "payment": {
+    "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/membership/catalog",
+    "status": 200,
+    "source": "ACTUAL_PUBLIC_TEST_GET",
+    "available": false,
+    "qrAvailable": false,
+    "provider": null
+  },
+  "status": "PASS"
+}
