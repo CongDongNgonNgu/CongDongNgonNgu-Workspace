@@ -1,5 +1,9 @@
 # Dependency Graph
 
+## Authorized Phase25 graph — 2026-10-09
+
+Closed Phase23/24 plus owner START_PHASE_25=YES -> LNG25-001 inventory/readiness freeze DONE (WorkspacePR145) -> LNG25-002 canonical core paths DONE (FrontendPR31, WorkspacePR146) -> LNG25-003 remaining routes/truthful blockers/metrics VERIFYING (FrontendPR32) -> LNG25-004 exact-main TEST/browser/fresh review/closeout PLANNED. Grammar, pronunciation, practice content dependencies remain held; Community/Q&A bilingual destination readiness remains held. All numeric metrics omitted. Backend/schema/DB unchanged. Only Phase25 is authorized; Phase26–29 not started. Earlier planning/authorization snapshots below remain historical.
+
 ## Authorized Phase 24 graph — 2026-10-08
 
 LNG-19-006 DONE + owner START_PHASE_24=YES -> LNG-24-001 source copy/terminology/error/legal freeze -> LNG-24-002 auth/onboarding/profile and LNG-24-003 exchange -> LNG-24-004 actual acceptance/closeout. Contract DONE through WorkspacePR140/exactmainCI/cleanup; 002/003 technical implementation DONE through FrontendPR30/mainCI/exactTEST acceptance;004 DONE and Phase24 GO_BOUNDED_LOCALIZATION after explicit direct read approval and validated same-phase relay recovery; final Workspace integration and004 acknowledgement recorded in closeout PR/terminal report. Prior phases stay closed; historical category-completion23B remains unstarted; no Phase25/new major phase.
