@@ -1,15 +1,15 @@
 # Phase 25 — Language Hub Functional Completion
 
-**Status:** PLANNED — NOT EXECUTION AUTHORIZATION  
+**Status:** IN_PROGRESS — explicit owner full Phase25 authorization 2026-10-09
 **Roadmap:** `../../docs/V3-ROADMAP.md`
 
 ## Objective
 
 Turn the visible Language Hub from a partially placeholder experience into a coherent learning hub where every category either has a real end-to-end user journey or an explicit evidence-backed blocker/re-entry gate.
 
-This phase is the forward V3 home for the product intent that remained in historical Phase23B. Historical Phase23B remains PLANNED_UNSTARTED until this phase is explicitly authorized; do not execute both independently.
+This phase is the forward V3 home for the product intent that remained in historical Phase23B. Historical Phase23B is inherited by this owner-authorized Phase25 stream and is not executed separately; preserve historical evidence.
 
-## Planned subphases
+## Authorized subphases
 
 ### LNG-25-001 — Category inventory & readiness contract
 - Audit every Language Hub tab and Overview metric against current source/runtime.
