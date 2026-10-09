@@ -1,5 +1,9 @@
 # Dependency Graph
 
+## Authorized Phase26 graph — 2026-10-09
+
+Closed Phase25 plus explicit owner complete Phase26 lifecycle authorization → LNG26-001 DONE (WorkspacePR149, main596f5d768d2a1c0133123dd8d709459a02bdf120, CI and branch cleanup PASS, complete same-phase relay validated) → LNG26-002 IN_PROGRESS (existing Exchange connection product) →003 messaging →004 context →005 safety/group convenience →006 genuine multi-account exact-main TEST acceptance. No chat/context/group implementation during002. Stop after26;27–29 unauthorized/unstarted. Historical Phase25 stop below is superseded for26 only. See [current evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md).
+
 ## Phase25 completed graph — 2026-10-09
 
 Closed Phase23/24 + owner START_PHASE25=YES → LNG25-001 DONE (WorkspacePR145) → LNG25-002 DONE (FrontendPR31/WorkspacePR146) → LNG25-003 DONE (FrontendPR32/WorkspacePR147) → LNG25-004 DONE (FrontendPR33 focus correction, exact-main TEST, fresh review and final Workspace integration gates). GO_BOUNDED_LANGUAGE_HUB. [Final matrix](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/CATEGORY-READINESS.md) governs held grammar/licensed audio/non-AI/Community/Q&A target-English dependencies. All numeric metrics omitted; Backend/schema/DB unchanged.
