@@ -1,5 +1,76 @@
 # Phase26 execution evidence
 
+## Current003 backend savepoints — 2026-10-10
+
+Conversation-list savepoint5ea02249b65b0556496c84ac91ae8c6df3a7802a pushed and
+remote SHA matched. Default20/max50, bounded100 candidate scans, private actor-bound
+cursor preserves PostgreSQL microseconds. Current locked authorization omits
+revoked or reordered candidates. SQL run26 PASS/1 fixture enum type FAIL100.727s;
+explicit enum fixture cast followed by focused1 PASS/26 filtered20.027s. All27 cases
+proved across those runs, including empty-page continuation past100 inaccessible
+rows and observed account-lock wait followed by one-microsecond reorder. Unit26,
+typecheck/build/diff and independent final review PASS. No public schema mutation.
+
+Send savepoint0df7e6a0bd1f4e95de64d377c13ecf2aeef313f0 passed21 isolated SQL
+cases, typecheck/build/diff checks and independent review. Retry with the same
+actor/conversation/clientMessageId and NFC-normalized text returns the original;
+changed text returns409. Sequence, version, message and coalesced identifiers-only
+notification intent commit atomically. Both durable minute/hour budgets commit
+on429 without allocating a sequence. Intent failure rolls everything back. The
+block race was tightened to retain CONNECTED, isolating the block predicate;
+focused race2 PASS after correction. Exact pushed SHA matched remote.
+
+History/read savepoint544bf45ec4ac364c69c28383020c3046dbf4e822 passed24/24
+isolated PostgreSQL tests in73.479s, cursor/validation25 unit tests, typecheck,
+build and diff checks; independent source review approved. Scoped authenticated
+encrypted cursors bound chronological history and catch-up; read positions are
+participant-owned, monotonic and cannot advance beyond an existing message.
+Exact pushed SHA matched remote. Reviewed TEST guard reverified31 public migration
+digests and disabled payment/QR before isolated execution. Public schema unchanged;
+0032/0033 remain unapplied there. HTTP/SSE/UI/runtime/integration gates remain pending.
+003 IN_PROGRESS; none of these increments constitutes terminal completion.
+
+## Current003 start and002 terminal reconciliation — 2026-10-10
+
+002 DONE after Workspace PR151 merged to31bcd0310f8cbcec5b6e92560378cff2dcf5f47f,
+main CI37926688951/job113807207319 PASS and remote/local temporary branch cleanup.
+The sanitized002 terminal was sent to the existing authorized project conversation.
+Completed next CODE_BLOCK_V1 was read in full and validated for CongDongNgonNgu/26/
+LNG-26-003, including final Execute003 and all hard stops. Earlier VERIFYING or
+IN_PROGRESS projections below describe pre-terminal snapshots and are historical.
+
+Three clean local/remote main revisions reverified unchanged: Backend79c7f20cbe908b8f5d6e0c2a48c78b1c3a6ae8b7,
+Frontend3033f1d52ceb4301572b88729f3e113e3b8e34cc, Workspace31bcd0310f8cbcec5b6e92560378cff2dcf5f47f.
+Backend003 working branch feat/phase26-direct-messaging begins with9a746a62f0d12d6de89ed751fae39c69f4971fb5,
+pushed and exact remote SHA verified. Text normalization/Unicode/sequence boundary
+tests22 PASS after missing-module RED; typecheck/build/diff checks PASS. Independent
+source review approved this validation increment and bounded persistence direction.
+This is not implemented chat,003 completion, migration acceptance or runtime proof.
+
+Reviewed fresh read-only TEST preflight verified approved Neon/neondb/public,
+PostgreSQL180006, exact31 baseline/source ledger digests and payment/QR disabled.
+Initial SQL RED used only the generated isolated harness schema and failed on
+missing0032; afterAll cleanup returned without failure. New0032 schema/test work
+was pending review and GREEN proof at that initial historical checkpoint;
+subsequent completed savepoints are recorded above. No003 public migration occurred.
+
+Subsequent schema savepoint83d09bdc00d0171b178dda897c7432691e362052 passed7
+isolated PostgreSQL tests, typecheck/diff and independent review. Rollback race
+test first reproduced lost history (6 PASS/1 FAIL); ACCESS EXCLUSIVE table locks
+before the emptiness check fixed it. Nonempty history refuses downgrade.
+Open/get savepoint1db874c85a9ae478747a72b8794eab160aaa21f2 passed16 SQL cases,
+typecheck/build/diff and independent source review; exact pushed SHA verified.
+Opposite-participant concurrent opens reuse one stable ID; unrelated C denied;
+remove/block/NO_CONTACT/opt-out/disable/private-language/unverified revocations
+deny subsequent get/open while retaining identity. Discovery-off alone permits
+access; fresh eligible connection reuses identity. Fixture initially inherited
+NO_CONTACT and correctly failed; corrected explicit RELATIONSHIP_GATED fixture,
+without weakening authorization. These are SQL repository tests, not HTTP/SSE or
+deployed messaging proof.0032 remains unapplied in public; scoped cleanup passed.
+
+003 IN_PROGRESS;004–006 pending; Phase26 verdict NOT_REACHED. Full actual deployed
+A/B/C browser acceptance remains NOT_RUN and mandatory006. Stop after26.
+
 ## Current verified checkpoint — 2026-10-09, main integration and TEST deployment
 
 002 remains IN_PROGRESS;003–006 remain pending. [Backend PR46](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/46), [Frontend PR34](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/pull/34) and [Workspace PR150](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/150) merged. Their exact main revisions740d86d1f1bf0228a07be1c25f7fb5589bb45b26,3033f1d52ceb4301572b88729f3e113e3b8e34cc and97f3aedbf5896dce30de315c5d14b3f62cb38f3e passed required post-merge CI. All corresponding temporary branches were deleted remotely/locally and pruned after squash tree equality verification.

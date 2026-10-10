@@ -1,8 +1,8 @@
 # Dependency Graph
 
-## Authorized Phase26 graph — 2026-10-09
+## Authorized Phase26 graph — 2026-10-10
 
-Closed Phase25 plus explicit owner complete Phase26 lifecycle authorization → LNG26-001 DONE (WorkspacePR149, main596f5d768d2a1c0133123dd8d709459a02bdf120, CI and branch cleanup PASS, complete same-phase relay validated) → LNG26-002 IN_PROGRESS (existing Exchange connection product) →003 messaging →004 context →005 safety/group convenience →006 genuine multi-account exact-main TEST acceptance. No chat/context/group implementation during002. Stop after26;27–29 unauthorized/unstarted. Historical Phase25 stop below is superseded for26 only. See [current evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md).
+Closed Phase25 plus explicit owner complete Phase26 lifecycle authorization → LNG26-001 DONE (WorkspacePR149, CI/cleanup/relay PASS) → LNG26-002 DONE (BackendPR46/47, FrontendPR34, WorkspacePR150/151, mainCI/exact-main TEST HTTP/cleanup/relay PASS) →003 messaging IN_PROGRESS after complete validated continuation →004 context →005 safety/group convenience →006 genuine multi-account exact-main TEST acceptance. No chat/context/group implementation during002. Stop after26;27–29 unauthorized/unstarted. Historical Phase25 stop below is superseded for26 only. See [current evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md).
 
 ## Phase25 completed graph — 2026-10-09
 

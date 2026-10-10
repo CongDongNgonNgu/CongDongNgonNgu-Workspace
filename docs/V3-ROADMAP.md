@@ -1,12 +1,19 @@
 # V3 Roadmap — Communication, Community Completion & Full-System Validation
 
-**Status:** Phase25 DONE / GO_BOUNDED_LANGUAGE_HUB; Phases26–29 PLANNED / NOT EXECUTION AUTHORIZED
+**Status:** Phase25 DONE / GO_BOUNDED_LANGUAGE_HUB; Phase26 IN_PROGRESS under explicit owner authorization; Phases27–29 PLANNED / NOT EXECUTION AUTHORIZED
 **Recorded:** 2026-10-09 (Asia/Ho_Chi_Minh)  
 **Predecessor:** Phase 24 DONE / GO_BOUNDED_LOCALIZATION  
 
 This roadmap records the owner-approved forward product direction after reviewing the current Community, member-exchange, Language Hub and bounded Study Group journeys. It does **not** authorize implementation, deployment, production database mutation, provider activation, telemetry expansion, payment activation, secret changes, destructive infrastructure work or any new major phase. Each major phase still requires explicit owner execution authorization.
 
-## Current execution record — 2026-10-09
+## Current execution record — 2026-10-10
+
+Current Phase26 owner authorization supersedes the historical Phase25 stop below
+for26 only.001/002 DONE;003 IN_PROGRESS after validated terminal continuation.
+See [Phase26 evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md).
+004–006 remain sequenced; full deployed multi-account browser acceptance remains
+required in006. Stop after26;27–29 unauthorized/unstarted. The earlier25 closeout
+paragraphs remain historical records, not the current execution boundary.
 
 Explicit owner full Phase25 authorization completed LNG25-001–004. See [Phase25 verdict](../phases/PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/VERDICT.md). Bounded functional-path acceptance retains explicit source/audio/exercise and Community/Q&A target-English deferrals. No populated content inventory asserted. Historical23B intent superseded by forward Phase25 execution; historical records intact, no separate23B run.
 
