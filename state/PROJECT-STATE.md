@@ -2,7 +2,7 @@
 
 ## Authorized Phase26 execution — 2026-10-10
 
-Owner complete Phase26 authorization supersedes historical no-auth flags for26 only. Independent contract/security review accepted [Phase26 contract](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/CONTRACT.md). [Evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md) records001–003 integration, exact-main TEST HTTP/SSE acceptance, cleanup and terminal relay.001–003 DONE;004 IN_PROGRESS after complete validated same-phase continuation.005/006 remain sequenced; genuine deployed multi-account browser acceptance remains NOT_RUN and required in006.
+Owner complete Phase26 authorization supersedes historical no-auth flags for26 only. Independent contract/security review accepted [Phase26 contract](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/CONTRACT.md). [Evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md) records001–003 integration, exact-main TEST HTTP/SSE acceptance, cleanup and terminal relay.001–003 DONE;004 VERIFYING after merged-main CI, implementation branch cleanup, TEST migration/deploy and nine actual HTTP/SSE check groups passed. Final evidence integration and terminal relay remain pending.005/006 remain sequenced; genuine deployed multi-account browser acceptance remains NOT_RUN and required in006.
 
 ```text
 CURRENT_PHASE=26
@@ -13,7 +13,7 @@ PHASE_26_VERDICT=NOT_REACHED
 LNG_26_001=DONE
 LNG_26_002=DONE
 LNG_26_003=DONE
-LNG_26_004=IN_PROGRESS
+LNG_26_004=VERIFYING
 LNG_26_005=PLANNED
 LNG_26_006=PLANNED
 PHASE_27_EXECUTION_AUTHORIZED=NO
@@ -25,7 +25,7 @@ PHASE_29_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_MUTATION_PERFORMED=NO
 REAL_USER_VALUE_PROVEN=NO
-NEXT_ACTION=IMPLEMENT_PHASE26_004_CANONICAL_LEARNING_CONTEXT_SHARING
+NEXT_ACTION=FINALIZE_PHASE26_004_EVIDENCE_CI_CLEANUP_AND_TERMINAL_RELAY
 ```
 
 

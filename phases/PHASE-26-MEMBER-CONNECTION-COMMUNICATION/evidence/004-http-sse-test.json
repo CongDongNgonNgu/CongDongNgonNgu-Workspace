@@ -1,0 +1,71 @@
+{
+  "run": "a63acaa6-d62b-4b61-9f2a-c7bfd5bbb400",
+  "backendMain": "4342869c59bbd9a0037e61763c62ff1413273125",
+  "kind": "Actual TEST ordinary MEMBER HTTP + native SSE context sharing; Library publication is seeded fixture, not moderation acceptance; genuine browser acceptance remains006",
+  "conversationIds": [
+    "716d5b10-a1a1-4d76-98f6-2a7933c7a1b7"
+  ],
+  "libraryIds": [
+    "0e14dd0a-4883-4ed9-95c5-12808bbeb210",
+    "aec6bb85-0ccf-474a-8b22-d7bae2bfc920"
+  ],
+  "postIds": [
+    "042ec88b-2647-4432-a5c1-f10218a43f68",
+    "84c2f876-71dd-4cdd-b22c-40fc0fe73566",
+    "dd5cc546-0705-4696-8dd9-77abb02df477"
+  ],
+  "residuals": {
+    "users": 0,
+    "direct_conversations": 0,
+    "direct_messages": 0,
+    "direct_message_notification_intents": 0,
+    "direct_message_stream_leases": 0,
+    "direct_message_rate_limits": 0,
+    "notifications": 0,
+    "exchange_notification_outbox": 0,
+    "auth_sessions": 0,
+    "library_resources": 0,
+    "library_resource_provenance": 0,
+    "community_posts": 0,
+    "library_licenses": 0
+  },
+  "proofs": [
+    {
+      "name": "Exact clean merged main, approved TEST ledger35/digests and payment-disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "Three ordinary native-login MEMBER actors; A/B connected canonical conversation",
+      "result": "PASS"
+    },
+    {
+      "name": "Own synthetic canonical Library vocabulary/sentence seeded; Community sources created through native MEMBER API",
+      "result": "PASS"
+    },
+    {
+      "name": "Both canonical types and four source categories persist reference/note only; stable retry/conflict and native SSE/receiver history",
+      "result": "PASS"
+    },
+    {
+      "name": "Message-scoped current projection; unrelated C and missing message denied",
+      "result": "PASS"
+    },
+    {
+      "name": "Correction-target widening and forged snapshot rejected without message/budget/version mutation",
+      "result": "PASS"
+    },
+    {
+      "name": "Current license/privacy/deletion revokes old history/cards; committed retry generic, new share denied with unchanged counters",
+      "result": "PASS"
+    },
+    {
+      "name": "Current block overrides context retry/read and closes native SSE",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact synthetic identities/content/license/conversations cleaned; zero residuals",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}
