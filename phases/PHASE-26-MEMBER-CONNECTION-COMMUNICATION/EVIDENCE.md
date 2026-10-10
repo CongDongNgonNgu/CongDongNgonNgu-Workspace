@@ -1,5 +1,47 @@
 # Phase26 execution evidence
 
+## Current003 merged TEST runtime acceptance — 2026-10-10
+
+Backend PR48 merged as `dad7674eb60f2dc723e46859adafa4dae90e1d1a`, frontend PR35
+as `1d3e88b7bde3071c145b55ff169d3eced78a7f0e`, evidence PR152 as
+`a2095c2ee42026e448fea54aa80fcbb0483bd46f`. Post-merge quality runs
+38021882662/114124446653,38021902629/114124507174 and
+38021909470/114124528177 respectively passed. Exact remote main SHAs and reviewed
+tree equality were verified; all three merged temporary branches were deleted
+remotely and locally and stale references pruned. Backend's first pre-merge CI
+failure was an existing admin audit test's equal-timestamp/random-UUID ordering;
+a test-only clock correction passed targeted tests and the subsequent full CI.
+
+The reviewed guard applied only0032/0033/0034 to the approved owner TEST database:
+ledger31→34, all LF-normalized migration digests verified, payment disabled.
+Render exact backend main deployment `dep-db4rduh42hec73enhk7g` was observed Live
+in its native dashboard and health returned200. Vercel primary sigma domain was
+Ready on exact frontend main, deployment dashboard key
+`7gfQhW7fFeSKfGMiWNXy4rJx1HoA`. These are existing owner TEST targets.
+
+Independently reviewed bounded native HTTP/SSE acceptance passed with three
+synthetic ACTIVE, verified ordinary MEMBER actors using native login. It proved
+pre-connection denial; canonical concurrent open; server-owned fields; NFC/plain
+text persistence; stable UUID retry and changed-text409; simultaneous sequence
+ordering; exclusive forward/older cursors; participant-owned monotonic read and
+unread; unrelated C denial on all private routes; actor-bound cursor, Origin,
+query-credential and future Last-Event-ID rejection; header reconnect plus REST
+reload without duplicates; discovery-off preservation; NO_CONTACT and disabled
+partner revocation closing active streams; native logout invalidating bearer and
+stream; report preserving access; block/unblock retaining history without
+reconnecting. Exact synthetic identities and wholly synthetic conversation pairs
+were locked/verified before cleanup. All ten recorded residual counts are zero.
+Sanitized machine result: [runtime proof](evidence/003-http-sse-test.json).
+Passwords and bearer tokens remained in memory and are absent from the artifact.
+
+Actual deployed guest browser smoke at390px passed VI/EN copy, no horizontal
+overflow, private-content absence and login navigation retaining the conversation
+returnTo path. This supplements local component QA; it does not establish
+multi-account browser acceptance. Mandatory006 genuine browser proof remains.
+
+003 remains IN_PROGRESS until this evidence integration and terminal relay.
+004–006 remain pending. Earlier pending-deployment statements below are historical.
+
 ## Current003 native messaging UI — 2026-10-10
 
 Frontend savepoint e5b33d50fd06de4d4b745b0d815ebc3299f9ddb9 implements the native
