@@ -1,5 +1,52 @@
 # Phase26 execution evidence
 
+## Current004 foundation and accepted003 terminal — 2026-10-10
+
+003 completed evidence PR153/main `520388112e32ec04dc20d1cae84a1af65c333bac`;
+PR quality38022885836/114127465643 and main quality38022944951/114127646511
+passed. Reviewed branch tree matched remote main; local main fast-forwarded;
+temporary evidence branch deleted remotely/locally and stale references pruned.
+Full sanitized003 terminal was sent through the existing native browser relay.
+The complete returned CODE_BLOCK_V1 through final Execute LNG-26-004 was read
+and validated for project26/subphase004/dependencies/current three main SHAs and
+exclusions. This reconciles the earlier003 IN_PROGRESS snapshot to DONE without
+rewriting its historical work.004 IN_PROGRESS;005/006 pending.
+
+Backend004 payload foundation `1128b418b95827d700a919910a8a13c6a82729cc` passed
+independent review,36 combined boundary tests, typecheck/build/diff checks and
+exact remote branch verification. Only LIBRARY_RESOURCE/COMMUNITY_POST canonical
+UUIDs are accepted; optional/empty note syntax is permitted only with a valid
+reference. Syntax grants no content authorization. Existing text-only send API
+remains unchanged at this savepoint. Initial missing-module RED was observed;
+PowerShell npx policy and an omitted Jest VM flag were runner failures, corrected
+by using the existing native Node/experimental-vm-modules package command.
+
+Resolver savepoint `13fcc7b39609a80d5154ab6b21fc5ff56603c6ac` was independently
+reviewed and pushed, exact remote SHA verified. It delegates current eligibility
+to canonical Library/Community services, additionally requires PUBLIC and
+DISCUSSION/QUESTION for Community (including author-owned private denial), checks
+exact returned identity, and constructs fixed application-relative paths. Current
+Library preview is bounded160 code points; Community derived plain-text preview
+120, independently approved without implying a separate post title. Unavailable
+cards contain only availability; no author/body/stale preview. Only genuine
+Community target-unavailable404 maps to unavailable; infrastructure/other errors
+propagate. Request-local deduplication resolves at most50 unique references
+serially, with no cross-request cache. Resolver13 tests/typecheck/build/diff PASS;
+initial missing-module RED observed. No cross-domain atomicity is claimed.
+
+Reviewed0035 schema proof ran against a generated isolated TEST schema after
+exact approved host/public PostgreSQL18/ledger34/all LF digests/payment-disabled
+preflight. Schema savepoint `ef7c339627a1f38d5cec45381bd1bdd73135f42a` was
+reviewed, pushed and its exact remote branch SHA verified. Nine actual PostgreSQL
+tests passed9.572s, covering paired allowlisted
+references, empty-context-only and text-only/4000 bounds, no snapshot columns or
+target-lifetime coupling, retained-reference downgrade refusal, and successful
+downgrade/re-up preserving text-only messages. Harness cleanup verified schema
+absence. Public ledger remains34;0035 is not publicly applied. Schema tests were
+written before migration implementation; no pre-implementation SQL RED is claimed.
+004 API/send/history wiring, UI/Stitch, integration and runtime remain pending.
+Genuine006 deployed multi-account browser acceptance remains NOT_RUN.
+
 ## Current003 merged TEST runtime acceptance — 2026-10-10
 
 Backend PR48 merged as `dad7674eb60f2dc723e46859adafa4dae90e1d1a`, frontend PR35

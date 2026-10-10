@@ -10,7 +10,10 @@ refined mobile header wrapping. Keyboard focus, growing capped composer, single
 send, preserved older-message scroll and jump/latest following were exercised.
 Fixture files were removed; full frontend565 tests/build/type/performance passed.
 See EVIDENCE.md for observed failures, corrections and evidence limitations.
-Deployed multi-account browser acceptance remains pending;003 is not complete.
+003 subsequently completed integration/exact-main TEST HTTP/SSE acceptance and
+terminal relay (PR153/main CI/cleanup PASS). Genuine deployed multi-account browser
+acceptance remains pending for006.004 share dialog/card design preflight is pending;
+no004 UI implementation is claimed.
 The preflight section below records the state before this implementation.
 
 ## Phase26.003 direct text messaging preflight — 2026-10-10
