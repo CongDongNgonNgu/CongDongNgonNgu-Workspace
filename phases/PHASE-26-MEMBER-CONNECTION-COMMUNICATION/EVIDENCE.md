@@ -1,5 +1,32 @@
 # Phase26 execution evidence
 
+## Current004 PR verification checkpoint
+
+[Backend PR49](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/49)
+at `cb20aaba24bc05297fba1df8c4052cbc74e8f396`,
+[Frontend PR36](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/pull/36)
+at `bc52980e208160adc7af72d0d7c243e6cdc9dcd2` and
+[Workspace PR154](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/154)
+were opened after final combined independent review APPROVE. Required CI and
+integration/runtime gates remain pending; these are not merged-main claims.
+
+Backend final172 suites/1080 unit tests passed20.131s, E2E168 passed24.347s,
+typecheck/build/diff passed. Eleven new canonical-domain regressions use actual
+LibraryService/CommunityService over deterministic memory repositories and verify
+fresh generic unavailable after license inactivity/redistribution denial or
+unknown permission, review rejection, Community privacy/moderation/deletion,
+disabled author and inactive language, including owner and unrelated reads.
+The private Library draft also has unverified state and does not isolate every
+visibility predicate. These tests do not claim PostgreSQL persistence/race proof.
+Current context SQL6 passed28.073s after exact approved TEST/public PostgreSQL18,
+ledger34/all digests and payment-disabled guards. Its generated schema was cleaned;
+public0035 remains unapplied. Backend audit high/critical0 with20 inherited moderate
+findings; frontend audit0. Frontend612 tests and other gates remain as below.
+
+004 remains IN_PROGRESS. Canonical-domain regressions are now complete for this
+bounded increment; CI/merge/main verification/branch cleanup, public TEST0035,
+exact-main deployments/runtime and terminal relay remain pending before005/006.
+
 ## Current004 share source UI savepoint
 
 Frontend `bc52980` adds authenticated, on-demand sharing from canonical Library
