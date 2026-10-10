@@ -1,0 +1,79 @@
+{
+  "run": "f79def76-da79-44c8-83e5-c8435282a86e",
+  "backendMain": "dad7674eb60f2dc723e46859adafa4dae90e1d1a",
+  "kind": "Actual TEST HTTP native ordinary-auth + SSE; genuine browser acceptance still required in006",
+  "conversationIds": [
+    "da758861-af53-4902-8473-3e85d942563c"
+  ],
+  "residuals": {
+    "users": 0,
+    "direct_conversations": 0,
+    "direct_messages": 0,
+    "direct_message_notification_intents": 0,
+    "direct_message_stream_leases": 0,
+    "direct_message_rate_limits": 0,
+    "notifications": 0,
+    "language_exchange_reports": 0,
+    "exchange_notification_outbox": 0,
+    "auth_sessions": 0
+  },
+  "proofs": [
+    {
+      "name": "Exact merged clean main, TEST identity,34 digests and payment-disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "Live health and unauthenticated private list denied",
+      "result": "PASS"
+    },
+    {
+      "name": "Three ordinary native-login MEMBER actors; messaging denied before connection",
+      "result": "PASS"
+    },
+    {
+      "name": "Canonical persisted pair and strict server-owned fields",
+      "result": "PASS"
+    },
+    {
+      "name": "Native SSE minimal hints; NFC text persisted and stable retry/conflict",
+      "result": "PASS"
+    },
+    {
+      "name": "Simultaneous send order, exclusive forward/older cursors and gap-free history",
+      "result": "PASS"
+    },
+    {
+      "name": "Participant-owned monotonic read/unread; no future read",
+      "result": "PASS"
+    },
+    {
+      "name": "Unrelated C denied every private route; cursor/Origin/query-token boundaries",
+      "result": "PASS"
+    },
+    {
+      "name": "Header cursor reconnect plus persisted REST reload without duplicates",
+      "result": "PASS"
+    },
+    {
+      "name": "Discovery off preserves access; NO_CONTACT closes live streams and restoration retains history",
+      "result": "PASS"
+    },
+    {
+      "name": "Current disabled partner denies access/closes stream; synthetic reactivation retains history",
+      "result": "PASS"
+    },
+    {
+      "name": "Original bearer revoked and active SSE closed on native logout",
+      "result": "PASS"
+    },
+    {
+      "name": "Report preserves messaging; block/unblock denies subsequent access without deleting history or reconnecting",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact synthetic actors and cascaded private messaging fixtures cleaned",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}
