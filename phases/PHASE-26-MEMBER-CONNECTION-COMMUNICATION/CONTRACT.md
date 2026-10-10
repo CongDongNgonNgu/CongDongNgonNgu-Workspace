@@ -79,6 +79,20 @@ Commit authorized domain mutation and durable idempotent notification intent in 
 
 ## Learning-context references
 
+004 current-card refresh uses native authenticated
+GET /exchange/conversations/:conversationId/messages/:messageId/context.
+Current pair authorization and locks precede lookup by conversation+message ID
+and canonical per-actor resolution. Missing/foreign message404; text-only null;
+revoked target generic unavailable only. Response contains messageId/context only,
+no raw stored reference, cursor, sequence/version/counter/notification mutation.
+Frontend masks stale loaded cards before periodic/focus/expiry refresh, including
+older pages. Only displayed cards enter a serialized bounded refresh queue;
+offscreen stale cards remain masked. Failed/superseded requests never restore old
+preview/navigation. Actor/conversation lifetime and refresh generation guard results;
+click rechecks current context before using its canonical path. Destination domain
+authorization remains authoritative. This is a bounded current check across
+independent domain pools, not atomic cross-domain revocation or response recall.
+
 Wire references support exactly LIBRARY_RESOURCE and COMMUNITY_POST, with canonical UUID. Vocabulary and Sentence are existing Library subtypes, not new namespaces. Related Resource sharing references its current canonical Library target without copied relation metadata. All current publicly eligible Library resource subtypes resolve through LibraryService.getPublicResource and current provenance/license/source-health/publication checks. Community supports only current PUBLIC ACTIVE DISCUSSION or QUESTION, with active author/language; correction/private/group content excluded. No synthetic persisted Language Hub namespace.
 
 Store canonical reference only, no title/body snapshot. Sender authorization required at send. Recipient preview/open resolves live with exact domain authorization; deleted/private/moderated/inactive/unlicensed source becomes localized unavailable card with no stale title/body. Sharing grants no access. Sender note is immutable user-authored message text. Unsupported kind400; unavailable/private/wrong subtype404. No arbitrary URL fetching. Unconnected/blocked recipients denied.

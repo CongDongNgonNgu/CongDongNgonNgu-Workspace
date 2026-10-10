@@ -1,5 +1,51 @@
 # Phase26 execution evidence
 
+## Current004 send/history integration savepoint
+
+Backend `020fabeb19d2c0343b6b2ffb6ac84b9ff9f079a0` was independently reviewed,
+committed, pushed and its exact remote working-branch SHA verified. Single send
+accepts typed context-only/optional-note payloads through the existing current-pair
+transaction. Complete normalized note/type/id controls retry identity. Identical
+committed retries after source revocation return the original message with a
+fresh generic unavailable card, without budget/sequence/version/intent mutation.
+New unavailable shares fail before budgets; history resolves current actor cards
+with request-local deduplication and no raw references on unavailable cards.
+Canonical service imports introduce no messaging dependency cycle. Independent
+domain pools give bounded current checks, not cross-domain atomicity.
+
+Actual generated-schema PostgreSQL integration5 tests passed24.311s; existing
+messaging SQL regression27 passed106.442s. Public identity/ledger34/all baseline
+digests/payment-disabled guards passed, and generated-schema cleanup was verified.
+Missing resolver fails closed for new shares/retries/history. HTTP/SSE8 tests,
+messaging unit59 tests, typecheck/build/diff checks passed. HTTP uses a clearly
+identified domain boundary fake; SQL integration uses a canonical Library port
+fake and does not establish the Library domain's eligibility implementation.
+The initial integration test observed compile RED before implementation; additional
+fail-closed and transport cases were added afterwards with no new RED claim.
+
+Message-scoped live-card endpoint savepoint
+`0270d81f8ccd133107888a0d10c46775fe67f082` was reviewed/pushed/exact remote verified.
+It checks current pair before conversation+message lookup and returns only
+messageId/context. Text-only null, revoked generic, missing/foreign message404,
+and unrelated actor denial before resolver lookup are covered. No counters or
+conversation sequence/version change. Missing-route HTTP RED was observed before
+implementation; HTTP/SSE9 tests passed6.181s, actual context SQL6 passed34.466s,
+typecheck/build/diff passed. Public ledger remained34. Frontend typed transport,
+mutable projection replacement and encoded/cancellable refresh contract passed
+independent review,30 focused tests, typecheck/build/diff. Initial transport/
+identity failures and missing API method RED were observed before each change.
+An optional-text typecheck failure in the existing composer test fixture was
+corrected to mirror canonical empty-string response text; no production test
+expectations were weakened. Stitch desktop/mobile references were generated,
+downloaded and inspected; see UI-STITCH.md. No native004 UI is implemented yet.
+
+Public TEST remains at ledger34 and deployed003 revisions;0035 has not been applied
+publicly.004 native share UI, current-card frontend refresh queue,
+canonical-domain regressions, complete integration/runtime/CI/cleanup remain pending.
+004 remains IN_PROGRESS and genuine006 deployed multi-account browser proof NOT_RUN.
+This savepoint supersedes the wiring-pending statement in the historical foundation
+section below without claiming complete004 acceptance.
+
 ## Current004 foundation and accepted003 terminal — 2026-10-10
 
 003 completed evidence PR153/main `520388112e32ec04dc20d1cae84a1af65c333bac`;

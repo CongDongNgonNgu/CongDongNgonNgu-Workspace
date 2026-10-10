@@ -1,5 +1,23 @@
 # Phase26 native interface references
 
+## Current004 share dialog references
+
+Generated through Stitch MCP in the same native project/design system before UI
+implementation and downloaded for local image/HTML inspection:
+
+- Desktop: projects/3718538619973058970/screens/dc69169b396747e886483ada42ba1c94.
+- Mobile390: projects/3718538619973058970/screens/a424716454934c949b037d10a5c7f372.
+
+Use the focused partner-select/optional-note dialog with wrapping heading, native
+select, visible4000 limit,44px actions, and balanced mobile footer. Reuse the
+existing Dialog focus/scroll primitives, tokens and component-owned CSS. Generated
+resource background, sample names/content, proficiency badge and companion thread
+are illustrative; do not implement a new background/shell or fabricated metadata.
+Available cards use current canonical projection only; unavailable cards contain
+only a generic label. Actual cards must reauthorize on refresh and open.
+Stitch's contrast/responsiveness claims are not browser acceptance evidence.
+004 native UI/component responsive/keyboard verification remains pending.
+
 ## Current003 implementation and local browser QA — 2026-10-10
 
 Native implementation e5b33d50fd06de4d4b745b0d815ebc3299f9ddb9 follows the clean
