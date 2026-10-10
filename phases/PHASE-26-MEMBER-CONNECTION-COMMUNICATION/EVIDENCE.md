@@ -1,5 +1,29 @@
 # Phase26 execution evidence
 
+## Current003 HTTP, lease and SSE savepoints — 2026-10-10
+
+Backend6ce573e7dc819440c34f5f68480ab0b62e4960f3 pushed and exact remote SHA
+verified. Native bearer/session/CSRF guards, strict DTOs, private caching and the
+existing Origin allowlist protect HTTP routes and fetch SSE. HTTP7 PASS after
+missing-route RED; full unit169 suites/1042 PASS41.533s and e2e23 suites/166
+PASS28.232s; typecheck/build/diff and independent review PASS. Real localhost
+fetch SSE closes after native session revocation. Transport tests override SQL
+repositories and do not establish deployed TEST authorization or browser proof.
+
+Predecessor144205650f69f70b092bde4c9d7204332788eced adds serialized SSE lifecycle,
+minimal version hints and bounded heartbeat; unit6 PASS, combined validation/
+cursor/SSE32 PASS. Lease savepointe412e7e3ec264651d68c1819d4e5d3d3323dd774 adds
+0034 and durable actor-wide capacity/subscribe budgets. Observed lease-row lock
+wait reproduced expired-lease resurrection (RED4 PASS/1 FAIL34.812s); explicit
+row lock before expiry clock fixed it (GREEN5 PASS33.922s). Send budget helper
+regression3 PASS20.879s. Both increments passed independent review, typecheck,
+build and diff checks. SQL ran only in guarded generated isolated schemas;
+public ledger remains31, with0032/0033/0034 unapplied there.
+
+003 remains IN_PROGRESS. Stitch/chat UI, integration, exact-main TEST deployment
+and actual runtime acceptance are pending;004–006 pending. These savepoints do
+not replace mandatory006 genuine multi-account browser acceptance.
+
 ## Current003 backend savepoints — 2026-10-10
 
 Conversation-list savepoint5ea02249b65b0556496c84ac91ae8c6df3a7802a pushed and
