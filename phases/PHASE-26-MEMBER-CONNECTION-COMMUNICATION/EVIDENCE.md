@@ -1,5 +1,223 @@
 # Phase26 execution evidence
 
+## Current004 PR verification checkpoint
+
+[Backend PR49](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/49)
+at `cb20aaba24bc05297fba1df8c4052cbc74e8f396`,
+[Frontend PR36](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/pull/36)
+at `bc52980e208160adc7af72d0d7c243e6cdc9dcd2` and
+[Workspace PR154](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/154)
+were opened after final combined independent review APPROVE. Required CI and
+integration/runtime gates remain pending; these are not merged-main claims.
+
+Backend final172 suites/1080 unit tests passed20.131s, E2E168 passed24.347s,
+typecheck/build/diff passed. Eleven new canonical-domain regressions use actual
+LibraryService/CommunityService over deterministic memory repositories and verify
+fresh generic unavailable after license inactivity/redistribution denial or
+unknown permission, review rejection, Community privacy/moderation/deletion,
+disabled author and inactive language, including owner and unrelated reads.
+The private Library draft also has unverified state and does not isolate every
+visibility predicate. These tests do not claim PostgreSQL persistence/race proof.
+Current context SQL6 passed28.073s after exact approved TEST/public PostgreSQL18,
+ledger34/all digests and payment-disabled guards. Its generated schema was cleaned;
+public0035 remains unapplied. Backend audit high/critical0 with20 inherited moderate
+findings; frontend audit0. Frontend612 tests and other gates remain as below.
+
+004 remains IN_PROGRESS. Canonical-domain regressions are now complete for this
+bounded increment; CI/merge/main verification/branch cleanup, public TEST0035,
+exact-main deployments/runtime and terminal relay remain pending before005/006.
+
+## Current004 share source UI savepoint
+
+Frontend `bc52980` adds authenticated, on-demand sharing from canonical Library
+detail, Related target resources and public/shareable Community Discussion and
+Question cards/detail. Language Hub Vocabulary/Sentence journeys lead through
+the existing filtered Library to canonical detail; no Hub-specific identity or
+collection reference is introduced. Guests do not load private connections.
+Actor/API/source lifetime changes immediately hide the previous dialog, including
+A/B/A transitions. Related actions reference the target resource, not its relation.
+
+This builds on reviewed `943531b` optional-note/connected-partner selection and
+stable retry identity, and `a84adb1` native vi/en share dialog. Empty note is valid
+only with a typed reference; Unicode/4000-character validation remains enforced.
+Selection is limited to current connected partners; submission validates the
+opened partner and complete acknowledgment. Concurrent sends, stale responses and
+unsafe canonical paths are rejected. Generic authorization failures clear selection.
+Success focuses the explicit open-conversation action. Dialog closes dispose its
+owner and abort pending requests. No content snapshot or arbitrary URL is sent.
+
+Independent final review APPROVE. Meaningful RED/GREEN cases covered missing
+positive source actions, mismatched/unknown acknowledgment, success focus and the
+Community descendant-CSS collision. The dialog now portals to document.body,
+preserving React context and native focus handling while isolating host styles.
+Final full frontend123 suites/612 tests passed19.84s; focused16 tests, typecheck
+(configured lint), production build, performance budget and diff checks passed.
+Previous dialog vi/en checks covered actual320/375/390/412/768/1024/1440 viewports.
+
+Actual source-component Chromium QA used fake protected/canonical API ports.
+Community detail390px vi and1440px en screenshots were visually inspected:
+dialog outside .community-detail, no horizontal overflow, controls44px, Escape
+returns focus to entry, and ShiftTab remains inside. Context-only send recorded
+only clientMessageId, empty text, COMMUNITY_POST and the canonical UUID, then
+focused the success action. Library detail, Related, Discussion and Question
+dialogs stayed in bounds with44px buttons at320/1440. A synthetic JSON output
+line initially overflowed320px; after wrapping that disposable harness output,
+all five actual source modes had no horizontal/dialog overflow at320px. Entry
+controls were at least44px, with the longer detail label wrapping to58px.
+No browser console warnings/errors were observed in this source run. Disposable
+fixtures, isolated tab and local server were removed after QA.
+
+This is local component integration proof, not authenticated deployed acceptance.
+The commit is pushed on an unmerged branch. Canonical-domain regressions,
+complete004 CI/integration/TEST migration/deployment/runtime/terminal relay and
+genuine006 browser acceptance remain pending. Public ledger34 and deployed003
+remain unchanged.004 remains IN_PROGRESS. This supersedes earlier source-UI
+pending statements below without claiming004 completion.
+
+## Current004 live-card UI savepoint
+
+Frontend `8da3362398cb409f40a73f87b2d1af14f33dec23` wires the reviewed refresh queue
+into the native conversation timeline. Actor/room ownership, StrictMode disposal,
+focus/visibility/30-second expiry and REST reconciliation invalidate cached cards.
+Only intersecting cards refresh in the background; an explicit open waits for a
+fresh authorized projection and validates the fixed canonical path. Revoked,
+failed or stale cards show generic unavailable text without old preview or ID.
+Same-ID unsubscribe/remount responses are rejected by subscription identity.
+Keyboard focus stays on the card wrapper when its button disappears. Timeline
+resizing follows latest messages or preserves the connected reading anchor;
+programmatic scroll events do not replace that anchor with newly inserted rows.
+
+Independent review approved the final correction. Full frontend119 suites/584 tests,
+typecheck (also the configured lint), production build, performance budget and
+diff checks passed. npm advisory audit returned zero vulnerabilities. Meaningful
+RED/GREEN regressions cover focus masking, subscription replacement
+and prepend plus asynchronous height changes. Local Chromium synthetic component
+QA at actual320/375/390/412/768/1024/1440 viewports in vi/en verified no horizontal
+overflow,44px open buttons, escaped HTML-like long text and latest-gap zero.
+Desktop and390px mobile screenshots were visually inspected. Native browser
+prepend recheck retained the old message at76px before/after/settled; revocation
+removed all open buttons and preview, rendered no raw reference or navigation path
+and did not navigate.
+The disposable harness used a delayed fake canonical API, not authenticated Backend
+or deployed multi-account acceptance; it and the local browser/server were removed
+after QA. One fixture resource404 was observed; no zero-console-error claim.
+
+The commit is pushed on the unmerged working branch. Share dialog and six source
+actions, canonical-domain regressions, complete004 CI/integration/TEST deployment,
+runtime proof and terminal relay remain pending. Public ledger34/deployed003 stay
+unchanged.004 remains IN_PROGRESS; genuine006 browser acceptance remains NOT_RUN.
+This section supersedes the historical UI-wiring-pending statements below.
+
+## Earlier004 frontend refresh queue savepoint
+
+Frontend pure queue `14dee100284300b15f95bd37bdca077dc47b9b1f` passed independent
+review,5 focused queue cases plus30 transport/state/composer cases, typecheck and
+diff checks. It masks all registered cards on invalidation, queues displayed cards
+for background refresh and explicit open rechecks, with at most50 waiting and one
+in-flight request, preserves queued order,
+ignores superseded generations and aborts on actor/conversation lifetime disposal.
+Open rechecks wait for their own fresh response. Review found an offscreen queued
+click could hang; the deferred regression observed RED and the correction settles
+cancelled click waiters with null. Another meaningful RED covered clicks racing
+an older in-flight refresh. Initial missing-module RED and corrected assertion/
+mock type errors are recorded separately from behavior failures.
+This pure queue is not wired into React or production UI yet; actual older-card
+revocation/click/navigation/focus/expiry/actor lifecycle browser proof is pending.
+004 remains IN_PROGRESS; no complete frontend/current-main CI/runtime claim.
+
+## Current004 send/history integration savepoint
+
+Backend `020fabeb19d2c0343b6b2ffb6ac84b9ff9f079a0` was independently reviewed,
+committed, pushed and its exact remote working-branch SHA verified. Single send
+accepts typed context-only/optional-note payloads through the existing current-pair
+transaction. Complete normalized note/type/id controls retry identity. Identical
+committed retries after source revocation return the original message with a
+fresh generic unavailable card, without budget/sequence/version/intent mutation.
+New unavailable shares fail before budgets; history resolves current actor cards
+with request-local deduplication and no raw references on unavailable cards.
+Canonical service imports introduce no messaging dependency cycle. Independent
+domain pools give bounded current checks, not cross-domain atomicity.
+
+Actual generated-schema PostgreSQL integration5 tests passed24.311s; existing
+messaging SQL regression27 passed106.442s. Public identity/ledger34/all baseline
+digests/payment-disabled guards passed, and generated-schema cleanup was verified.
+Missing resolver fails closed for new shares/retries/history. HTTP/SSE8 tests,
+messaging unit59 tests, typecheck/build/diff checks passed. HTTP uses a clearly
+identified domain boundary fake; SQL integration uses a canonical Library port
+fake and does not establish the Library domain's eligibility implementation.
+The initial integration test observed compile RED before implementation; additional
+fail-closed and transport cases were added afterwards with no new RED claim.
+
+Message-scoped live-card endpoint savepoint
+`0270d81f8ccd133107888a0d10c46775fe67f082` was reviewed/pushed/exact remote verified.
+It checks current pair before conversation+message lookup and returns only
+messageId/context. Text-only null, revoked generic, missing/foreign message404,
+and unrelated actor denial before resolver lookup are covered. No counters or
+conversation sequence/version change. Missing-route HTTP RED was observed before
+implementation; HTTP/SSE9 tests passed6.181s, actual context SQL6 passed34.466s,
+typecheck/build/diff passed. Public ledger remained34. Frontend typed transport,
+mutable projection replacement and encoded/cancellable refresh contract passed
+independent review,30 focused tests, typecheck/build/diff. Initial transport/
+identity failures and missing API method RED were observed before each change.
+An optional-text typecheck failure in the existing composer test fixture was
+corrected to mirror canonical empty-string response text; no production test
+expectations were weakened. Stitch desktop/mobile references were generated,
+downloaded and inspected; see UI-STITCH.md. No native004 UI is implemented yet.
+
+Public TEST remains at ledger34 and deployed003 revisions;0035 has not been applied
+publicly.004 native share UI, current-card frontend refresh queue,
+canonical-domain regressions, complete integration/runtime/CI/cleanup remain pending.
+004 remains IN_PROGRESS and genuine006 deployed multi-account browser proof NOT_RUN.
+This savepoint supersedes the wiring-pending statement in the historical foundation
+section below without claiming complete004 acceptance.
+
+## Current004 foundation and accepted003 terminal — 2026-10-10
+
+003 completed evidence PR153/main `520388112e32ec04dc20d1cae84a1af65c333bac`;
+PR quality38022885836/114127465643 and main quality38022944951/114127646511
+passed. Reviewed branch tree matched remote main; local main fast-forwarded;
+temporary evidence branch deleted remotely/locally and stale references pruned.
+Full sanitized003 terminal was sent through the existing native browser relay.
+The complete returned CODE_BLOCK_V1 through final Execute LNG-26-004 was read
+and validated for project26/subphase004/dependencies/current three main SHAs and
+exclusions. This reconciles the earlier003 IN_PROGRESS snapshot to DONE without
+rewriting its historical work.004 IN_PROGRESS;005/006 pending.
+
+Backend004 payload foundation `1128b418b95827d700a919910a8a13c6a82729cc` passed
+independent review,36 combined boundary tests, typecheck/build/diff checks and
+exact remote branch verification. Only LIBRARY_RESOURCE/COMMUNITY_POST canonical
+UUIDs are accepted; optional/empty note syntax is permitted only with a valid
+reference. Syntax grants no content authorization. Existing text-only send API
+remains unchanged at this savepoint. Initial missing-module RED was observed;
+PowerShell npx policy and an omitted Jest VM flag were runner failures, corrected
+by using the existing native Node/experimental-vm-modules package command.
+
+Resolver savepoint `13fcc7b39609a80d5154ab6b21fc5ff56603c6ac` was independently
+reviewed and pushed, exact remote SHA verified. It delegates current eligibility
+to canonical Library/Community services, additionally requires PUBLIC and
+DISCUSSION/QUESTION for Community (including author-owned private denial), checks
+exact returned identity, and constructs fixed application-relative paths. Current
+Library preview is bounded160 code points; Community derived plain-text preview
+120, independently approved without implying a separate post title. Unavailable
+cards contain only availability; no author/body/stale preview. Only genuine
+Community target-unavailable404 maps to unavailable; infrastructure/other errors
+propagate. Request-local deduplication resolves at most50 unique references
+serially, with no cross-request cache. Resolver13 tests/typecheck/build/diff PASS;
+initial missing-module RED observed. No cross-domain atomicity is claimed.
+
+Reviewed0035 schema proof ran against a generated isolated TEST schema after
+exact approved host/public PostgreSQL18/ledger34/all LF digests/payment-disabled
+preflight. Schema savepoint `ef7c339627a1f38d5cec45381bd1bdd73135f42a` was
+reviewed, pushed and its exact remote branch SHA verified. Nine actual PostgreSQL
+tests passed9.572s, covering paired allowlisted
+references, empty-context-only and text-only/4000 bounds, no snapshot columns or
+target-lifetime coupling, retained-reference downgrade refusal, and successful
+downgrade/re-up preserving text-only messages. Harness cleanup verified schema
+absence. Public ledger remains34;0035 is not publicly applied. Schema tests were
+written before migration implementation; no pre-implementation SQL RED is claimed.
+004 API/send/history wiring, UI/Stitch, integration and runtime remain pending.
+Genuine006 deployed multi-account browser acceptance remains NOT_RUN.
+
 ## Current003 merged TEST runtime acceptance — 2026-10-10
 
 Backend PR48 merged as `dad7674eb60f2dc723e46859adafa4dae90e1d1a`, frontend PR35

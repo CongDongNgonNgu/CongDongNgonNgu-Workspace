@@ -1,6 +1,6 @@
 # Phase 26 — Member Connection & Communication
 
-**Status:** IN_PROGRESS — owner authorized complete Phase26 lifecycle; 001/002 DONE, 003 IN_PROGRESS, 004–006 pending.002 evidence PR151/main CI/cleanup and terminal relay completed; complete dependency-valid003 continuation was read and validated. Current [contract](CONTRACT.md) and [evidence](EVIDENCE.md) govern execution. Full exact-main synthetic browser acceptance remains required in006. Stop after26;27–29 remain unauthorized.
+**Status:** IN_PROGRESS — owner authorized complete Phase26 lifecycle; 001–003 DONE, 004 IN_PROGRESS, 005/006 pending.003 evidence PR153/main CI/cleanup and terminal relay completed; complete dependency-valid004 continuation was read and validated. Current [contract](CONTRACT.md) and [evidence](EVIDENCE.md) govern execution. Genuine exact-main synthetic multi-account browser acceptance remains required in006. Stop after26;27–29 remain unauthorized.
 
 ## Objective
 
