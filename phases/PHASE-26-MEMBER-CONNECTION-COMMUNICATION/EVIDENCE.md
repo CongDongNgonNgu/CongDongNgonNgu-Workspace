@@ -1,5 +1,43 @@
 # Phase26 execution evidence
 
+## Current003 native messaging UI — 2026-10-10
+
+Frontend savepoint e5b33d50fd06de4d4b745b0d815ebc3299f9ddb9 implements the native
+conversation list/thread routes, connected-profile entry, plain-text timeline,
+three-line growing composer and VI/EN copy under the existing exchange namespace.
+It composes the previously reviewed history, stable retry, authenticated SSE and
+history-confirmed visible-read hooks (frontend8a69d17 and predecessors).
+
+Independent review found two revocation propagation defects. The first left the
+partner row visible after a thread denial; the second dropped the required list
+refresh behind an in-flight request. Both were reproduced RED before correction.
+The final implementation refreshes on unavailability and coalesces queued refreshes,
+discarding superseded list responses. Hook4 and page6 tests cover ownership,
+ordinary/late denial, empty-page continuation, escaping and stable send retry.
+CTA2 tests verify server-owned navigation and safe failure feedback.
+
+Full frontend116 suites/565 tests PASS39.03s; lint, typecheck, build, performance
+budget and diff checks PASS. Sandboxed npm audit could not reach its endpoint;
+the approved read-only network audit completed with zero vulnerabilities. Source
+review APPROVE; temporary local QA fixture files removed before commit.
+
+Actual Chrome component QA used a synthetic local fixture, not deployed accounts.
+Both locales passed the actual emulated320/375/390/412/768/1024/1440px width matrix:
+no horizontal overflow, textarea inside viewport, mobile single-thread and desktop
+split view. Long-name mobile header was refined after visual inspection. Native
+keyboard typing/Tab/Enter confirmed visible focus, one rendered send, draft clearing,
+scroll preservation while reading older messages, jump-to-latest and bottom-follow.
+Composer grew from96px to192px cap with inner scrolling. Plain HTML-like text
+created no image elements. Console showed only a local favicon404. DevTools fill
+did not update React state; native keyboard typing did and was used for acceptance.
+Screenshots were visually inspected inline; attempted filesystem screenshot export
+was denied by the tool's configured roots, so no saved screenshot is claimed.
+
+003 remains IN_PROGRESS: PR/CI/merge/cleanup, public TEST migrations/deployment,
+ordinary-auth runtime acceptance and terminal relay are still pending. This local
+component QA does not replace mandatory006 genuine multi-account browser proof.
+Earlier entries below are historical savepoints where their pending items differ.
+
 ## Current003 frontend foundation — 2026-10-10
 
 Frontenddf073e2df7cb8216a43adcc826ea0a6349ba1005 pushed and exact remote SHA

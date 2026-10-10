@@ -1,5 +1,18 @@
 # Phase26 native interface references
 
+## Current003 implementation and local browser QA — 2026-10-10
+
+Native implementation e5b33d50fd06de4d4b745b0d815ebc3299f9ddb9 follows the clean
+desktop/mobile references below, using existing tokens and shared primitives.
+Actual Chrome local component QA passed both locales at320/375/390/412/768/1024/
+1440px, with long names and long unbroken plain message text. Visual inspection
+refined mobile header wrapping. Keyboard focus, growing capped composer, single
+send, preserved older-message scroll and jump/latest following were exercised.
+Fixture files were removed; full frontend565 tests/build/type/performance passed.
+See EVIDENCE.md for observed failures, corrections and evidence limitations.
+Deployed multi-account browser acceptance remains pending;003 is not complete.
+The preflight section below records the state before this implementation.
+
 ## Phase26.003 direct text messaging preflight — 2026-10-10
 
 Generated in the same native project/design system and downloaded for actual
