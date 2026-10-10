@@ -1,5 +1,52 @@
 # Phase26 execution evidence
 
+## Current004 share source UI savepoint
+
+Frontend `bc52980` adds authenticated, on-demand sharing from canonical Library
+detail, Related target resources and public/shareable Community Discussion and
+Question cards/detail. Language Hub Vocabulary/Sentence journeys lead through
+the existing filtered Library to canonical detail; no Hub-specific identity or
+collection reference is introduced. Guests do not load private connections.
+Actor/API/source lifetime changes immediately hide the previous dialog, including
+A/B/A transitions. Related actions reference the target resource, not its relation.
+
+This builds on reviewed `943531b` optional-note/connected-partner selection and
+stable retry identity, and `a84adb1` native vi/en share dialog. Empty note is valid
+only with a typed reference; Unicode/4000-character validation remains enforced.
+Selection is limited to current connected partners; submission validates the
+opened partner and complete acknowledgment. Concurrent sends, stale responses and
+unsafe canonical paths are rejected. Generic authorization failures clear selection.
+Success focuses the explicit open-conversation action. Dialog closes dispose its
+owner and abort pending requests. No content snapshot or arbitrary URL is sent.
+
+Independent final review APPROVE. Meaningful RED/GREEN cases covered missing
+positive source actions, mismatched/unknown acknowledgment, success focus and the
+Community descendant-CSS collision. The dialog now portals to document.body,
+preserving React context and native focus handling while isolating host styles.
+Final full frontend123 suites/612 tests passed19.84s; focused16 tests, typecheck
+(configured lint), production build, performance budget and diff checks passed.
+Previous dialog vi/en checks covered actual320/375/390/412/768/1024/1440 viewports.
+
+Actual source-component Chromium QA used fake protected/canonical API ports.
+Community detail390px vi and1440px en screenshots were visually inspected:
+dialog outside .community-detail, no horizontal overflow, controls44px, Escape
+returns focus to entry, and ShiftTab remains inside. Context-only send recorded
+only clientMessageId, empty text, COMMUNITY_POST and the canonical UUID, then
+focused the success action. Library detail, Related, Discussion and Question
+dialogs stayed in bounds with44px buttons at320/1440. A synthetic JSON output
+line initially overflowed320px; after wrapping that disposable harness output,
+all five actual source modes had no horizontal/dialog overflow at320px. Entry
+controls were at least44px, with the longer detail label wrapping to58px.
+No browser console warnings/errors were observed in this source run. Disposable
+fixtures, isolated tab and local server were removed after QA.
+
+This is local component integration proof, not authenticated deployed acceptance.
+The commit is pushed on an unmerged branch. Canonical-domain regressions,
+complete004 CI/integration/TEST migration/deployment/runtime/terminal relay and
+genuine006 browser acceptance remain pending. Public ledger34 and deployed003
+remain unchanged.004 remains IN_PROGRESS. This supersedes earlier source-UI
+pending statements below without claiming004 completion.
+
 ## Current004 live-card UI savepoint
 
 Frontend `8da3362398cb409f40a73f87b2d1af14f33dec23` wires the reviewed refresh queue
