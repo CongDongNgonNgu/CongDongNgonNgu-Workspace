@@ -1,5 +1,22 @@
 # Phase26 execution evidence
 
+## Current004 frontend refresh queue savepoint
+
+Frontend pure queue `14dee100284300b15f95bd37bdca077dc47b9b1f` passed independent
+review,5 focused queue cases plus30 transport/state/composer cases, typecheck and
+diff checks. It masks all registered cards on invalidation, queues displayed cards
+for background refresh and explicit open rechecks, with at most50 waiting and one
+in-flight request, preserves queued order,
+ignores superseded generations and aborts on actor/conversation lifetime disposal.
+Open rechecks wait for their own fresh response. Review found an offscreen queued
+click could hang; the deferred regression observed RED and the correction settles
+cancelled click waiters with null. Another meaningful RED covered clicks racing
+an older in-flight refresh. Initial missing-module RED and corrected assertion/
+mock type errors are recorded separately from behavior failures.
+This pure queue is not wired into React or production UI yet; actual older-card
+revocation/click/navigation/focus/expiry/actor lifecycle browser proof is pending.
+004 remains IN_PROGRESS; no complete frontend/current-main CI/runtime claim.
+
 ## Current004 send/history integration savepoint
 
 Backend `020fabeb19d2c0343b6b2ffb6ac84b9ff9f079a0` was independently reviewed,
