@@ -1,5 +1,26 @@
 # Phase26 execution evidence
 
+## Current003 frontend foundation — 2026-10-10
+
+Frontenddf073e2df7cb8216a43adcc826ea0a6349ba1005 pushed and exact remote SHA
+verified. Predecessord1ffca502e7fdca0162f6ccacfdca4ee88e4e6da supplies protected
+REST contracts, decimal-string bigint reconciliation, NFC/4000-code-point draft
+validation and bounded authenticated fetch SSE parsing/cancellation. Review found
+numeric JSON sequence coercion; regression reproduced it before the string-only
+runtime guard fixed it. Focused foundation20 PASS after missing-module RED.
+
+The history hook adds lifetime ownership, current protected summary/history,
+serialized/coalesced forward catch-up and separate older paging. Send responses
+cannot advance the catch-up cursor and skip gaps. An A/B/A stale-callback test
+first failed, then passed with exact lifetime scope ownership. Hook8 PASS;
+combined28 PASS. Full frontend110 suites/527 PASS31.77s, lint/typecheck/build,
+audit (zero vulnerabilities), diff and independent source review PASS.
+
+Clean desktop/mobile Stitch references were generated/downloaded/visually inspected;
+details and rejected initial output are in UI-STITCH.md. Messaging UI, sending/
+reconnect/visible-read orchestration, browser/runtime and full003 integration are
+still pending. No003 public schema/deployment acceptance is implied.003 IN_PROGRESS.
+
 ## Current003 HTTP, lease and SSE savepoints — 2026-10-10
 
 Backend6ce573e7dc819440c34f5f68480ab0b62e4960f3 pushed and exact remote SHA

@@ -1,4 +1,30 @@
-# Phase26.002 connection management references
+# Phase26 native interface references
+
+## Phase26.003 direct text messaging preflight — 2026-10-10
+
+Generated in the same native project/design system and downloaded for actual
+visual inspection before UI implementation:
+
+- Clean desktop: projects/3718538619973058970/screens/d95a2b6fbfed40e687dbf70b9008f024.
+- Mobile390: projects/3718538619973058970/screens/d5077b4c8bfa473e8095077baeed59da.
+
+Desktop uses a flat list/thread split; mobile shows a single conversation with
+list backlink. Initials, wrapping names, plain chronological text, profile link,
+inline reconnect feedback and a two-to-three-line composer follow native tokens.
+Runtime unread counts may use only the authorized decimal-string API field;
+the clean reference omits count badges. Keep the actual existing shell when
+composing these body references. Sample names/messages/times are design examples,
+not seeded product content or runtime evidence.
+
+The initial desktop553925fbb02344269d551d008225309f was rejected for unsupported
+encryption/security claims and total counts. Edit returned DOM operations but
+downloaded files retained the old claims; the fresh clean desktop above replaces
+it. No end-to-end encryption claim, presence, typing, read receipt, attachment,
+call, AI/translation or contextual-resource UI is authorized by003. Contextual
+sharing remains a later subphase. No messaging UI has been implemented or browser
+accepted at this checkpoint; responsive/keyboard/runtime gates remain pending.
+
+## Phase26.002 connection management references
 
 Existing native Stitch project: [CongDongNgonNgu global shell](https://stitch.withgoogle.com/projects/3718538619973058970), design system assets/16442026920550574436. Be Vietnam Pro; existing navy/orange/neutral tokens and shared UI primitives remain authoritative.
 
