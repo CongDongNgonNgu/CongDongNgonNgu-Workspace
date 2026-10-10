@@ -1,6 +1,40 @@
 # Phase26 execution evidence
 
-## Current004 frontend refresh queue savepoint
+## Current004 live-card UI savepoint
+
+Frontend `8da3362398cb409f40a73f87b2d1af14f33dec23` wires the reviewed refresh queue
+into the native conversation timeline. Actor/room ownership, StrictMode disposal,
+focus/visibility/30-second expiry and REST reconciliation invalidate cached cards.
+Only intersecting cards refresh in the background; an explicit open waits for a
+fresh authorized projection and validates the fixed canonical path. Revoked,
+failed or stale cards show generic unavailable text without old preview or ID.
+Same-ID unsubscribe/remount responses are rejected by subscription identity.
+Keyboard focus stays on the card wrapper when its button disappears. Timeline
+resizing follows latest messages or preserves the connected reading anchor;
+programmatic scroll events do not replace that anchor with newly inserted rows.
+
+Independent review approved the final correction. Full frontend119 suites/584 tests,
+typecheck (also the configured lint), production build, performance budget and
+diff checks passed. npm advisory audit returned zero vulnerabilities. Meaningful
+RED/GREEN regressions cover focus masking, subscription replacement
+and prepend plus asynchronous height changes. Local Chromium synthetic component
+QA at actual320/375/390/412/768/1024/1440 viewports in vi/en verified no horizontal
+overflow,44px open buttons, escaped HTML-like long text and latest-gap zero.
+Desktop and390px mobile screenshots were visually inspected. Native browser
+prepend recheck retained the old message at76px before/after/settled; revocation
+removed all open buttons and preview, rendered no raw reference or navigation path
+and did not navigate.
+The disposable harness used a delayed fake canonical API, not authenticated Backend
+or deployed multi-account acceptance; it and the local browser/server were removed
+after QA. One fixture resource404 was observed; no zero-console-error claim.
+
+The commit is pushed on the unmerged working branch. Share dialog and six source
+actions, canonical-domain regressions, complete004 CI/integration/TEST deployment,
+runtime proof and terminal relay remain pending. Public ledger34/deployed003 stay
+unchanged.004 remains IN_PROGRESS; genuine006 browser acceptance remains NOT_RUN.
+This section supersedes the historical UI-wiring-pending statements below.
+
+## Earlier004 frontend refresh queue savepoint
 
 Frontend pure queue `14dee100284300b15f95bd37bdca077dc47b9b1f` passed independent
 review,5 focused queue cases plus30 transport/state/composer cases, typecheck and
