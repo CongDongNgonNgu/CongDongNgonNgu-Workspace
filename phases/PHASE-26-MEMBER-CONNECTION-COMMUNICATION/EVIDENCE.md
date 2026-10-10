@@ -1,5 +1,49 @@
 # Phase26 execution evidence
 
+## Current004 merged-main TEST runtime acceptance — 2026-10-10
+
+This checkpoint supersedes earlier pending statements below. Backend PR49,
+Frontend PR36 and Workspace PR154 are merged. Exact clean main revisions:
+Backend `4342869c59bbd9a0037e61763c62ff1413273125`,
+Frontend `770a4ffdb1226351cae76f879bf924179877d198`,
+Workspace `6fe9dffcf9b7ef6a95084fd91afe749a3db8860a`.
+Required main CI passed: [Backend38043388602](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/38043388602),
+[Frontend38043398311](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/38043398311),
+[Workspace38043458322](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/actions/runs/38043458322).
+All three implementation branches were deleted remotely and locally after
+squash-tree equality and main CI verification; stale references were pruned.
+
+The independently reviewed exact-main TEST guard applied only0035. PostgreSQL18
+public ledger35/all normalized migration digests passed; payment remains disabled.
+Render TEST `dep-db50rh3bc2fs73dtsvng` is Live at the exact Backend main,
+with native public health200/ok. Vercel TEST deployment
+`BNib3dssPYWtZhDuYs32vNqKQaFm` is Ready/current at the exact Frontend main.
+No provider setting, payment activation or production mutation was performed.
+
+[Sanitized actual HTTP/SSE proof](evidence/004-http-sse-test.json), run
+`a63acaa6-d62b-4b61-9f2a-c7bfd5bbb400`, passed all nine groups. Three ordinary
+native-password-login MEMBER actors exercised A/B request/accept/conversation,
+four canonical Library vocabulary/sentence and Community Discussion/Question
+shares, optional NFC note, same-payload retry, changed-payload conflict, native SSE
+invalidation and fresh receiver history. Message-scoped current projections and
+unrelated C denial passed. Correction-request widening, arbitrary URL and forged
+snapshot were rejected without changing message/version/rate counters.
+Current license deactivation, Community privacy/deletion and blocking produced
+generic unavailable or authorization denial, including committed retries; blocking
+closed native SSE. Strict owned-fixture cleanup left zero residuals in all13
+checked tables, including users, sessions, rooms, messages, notifications, sources
+and the synthetic license. No credentials are included in the artifact.
+
+Library drafts/provenance and Community sources used native MEMBER APIs; public
+VERIFIED Library publication was an explicit SQL fixture, not moderation-flow
+acceptance. This proves actual ordinary-auth HTTP/SSE behavior, not genuine
+multi-account browser acceptance, which remains NOT_RUN and mandatory in006.
+Cross-domain current-content checks are bounded checks, not atomic transactions
+across domains. Backend audit high/critical0 retains20 inherited moderate findings.
+
+004 is VERIFYING while this final evidence PR, main CI/branch cleanup and terminal
+relay are pending.005/006 remain sequenced; Phase26 verdict is NOT_REACHED.
+
 ## Current004 PR verification checkpoint
 
 [Backend PR49](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/49)
