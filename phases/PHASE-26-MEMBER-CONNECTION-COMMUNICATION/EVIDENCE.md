@@ -8,8 +8,10 @@ main CI38044447325 passed. The temporary evidence branch was deleted remotely
 and locally after squash-tree verification, then stale references were pruned.
 The terminal004 report was relayed and the complete005 continuation validated.
 
-005 is IN_PROGRESS; no005 PR, public0036 migration or deployment yet. Backend
-local increment `b258d09` implements generic durable direct-message notices.
+005 is IN_PROGRESS. Backend PR50 and Frontend PR37 are merged; Workspace PR156
+(initial evidence head `a9bb1a6`) remains open. Public TEST ledger remains
+36 after the reviewed additive0036 rollout;005 deployment/runtime acceptance remains pending.
+Backend increment `b258d09` implements generic durable direct-message notices.
 Sends and advancing conversation reads dirty queue generations atomically;
 notification materialization and acknowledgement share a transaction. Retries
 preserve newer generations and back off bounded failed work. Current REST/count/
@@ -30,18 +32,58 @@ transaction. Native group SQL27 and new HTTP8 cases passed, including ownership/
 block lock-wait races, no implicit access, strict validation and CSRF. Required
 inherited Phase22 SQL19 and HTTP6 regressions also passed in isolated schemas.
 
-Current local Backend head is `c474f710eeac24aabcd48c90e2a06764fa58e08c`;
-typecheck/build passed and audit high/critical0 retains20 inherited moderate
-findings. Frontend local notification increment
-`bf77ef8af4d3210b79b4c8a8be11b1a192c0f14f` passed41 focused tests, typecheck,
-configured lint and build. Neither head is pushed at this checkpoint. Further
-notification chrome localization and the group picker remain in progress.
+Backend PR50 old head `c474f710eeac24aabcd48c90e2a06764fa58e08c` failed
+[CI38194128471](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/38194128471),
+job114632958322: the legacy connection SQL fixture omitted0032, so the shared
+unread-count query could not resolve direct_conversations. Other preceding
+functional gates passed; that job skipped audit after the SQL failure.
+Fixture-only repair `6d3541dad68a41e4b234f9fe65d0cdad62e4b3f7` adds0032 to the
+fixture without changing production code or migrations. The existing connection
+SQL57 cases then passed in164.388 seconds, including the failed privacy/count
+regressions and cleanup. Typecheck,14 focused notification unit tests and diff
+checks passed. Guarded read-only preflights before/after confirmed PostgreSQL18,
+public35 matching checksums and payment disabled. Total isolated SQL proof is
+170 cases (prior113 plus connection57). Backend PR50 merged as
+`0f426b5345a38ab445b2a557fa848466187ffbe3`; required
+[main CI38195061092](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/38195061092),
+job114635778665 passed. Its temporary branch was deleted remotely and locally
+after squash-tree equality and main CI verification. Local audit high/critical0
+retains20 inherited moderate findings.
 
-Frontend generic notification tests and the connected-partner picker are being
-integrated against the approved Stitch references. Full integration gates,
-browser checks, exact-main TEST rollout/runtime, final evidence and cleanup
-remain pending.006 genuine multi-account browser acceptance is NOT_RUN and
-mandatory; Phase26 verdict remains NOT_REACHED.27–29 remain unstarted.
+Frontend PR37 latest head `55d3cf45a856f8aeb6342198f0d083101381cc6b` includes generic
+notices `bf77ef8`, independently approved connected-group UI `d28e54c`, and
+notification chrome localization `4596e06` and the mobile CSS correction.
+Required [PR CI38194930621](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/38194930621),
+job114635384876 passed. Latest full run639 tests passed;
+subsequent notification/catalog45 tests include the new deterministic time
+metadata regression. Typecheck, configured lint, build, performance and audit0 passed.
+Language switching translates existing errors/live announcements without
+reloading account data. PR37 merged as `cc163d7f26648337c8d35c7416f0268776f4cf7b`;
+required [main CI38198975508](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/38198975508),
+job114647888181 passed, as did Vercel checks. Squash-tree equality was verified,
+and the temporary branch was deleted remotely and locally.
+
+Actual local Chrome synthetic-API picker checks passed in VI/EN at320,375,390,
+412,768,1024 and1440 widths. Native keyboard issuance worked; Escape removed the
+raw secret from the DOM. Redacted notifications showed no link or private
+fields. Picker, issued-code dialog, notification page, bell and preferences
+passed VI/EN layout metrics at all seven widths; no horizontal overflow was
+observed. Preference footer buttons remain 44px after the 320px label-wrap fix.
+Empty/error/deferred states and discarded late issuance after closure plus
+ownership loss passed. The [sanitized UI proof](evidence/005-local-ui-proof.json)
+records these bounded local observations, not deployed multi-account proof.
+Temporary fixture files and browser tabs were removed after verification.
+The exact Backend main0f426b5 migration preflight verified approved TEST direct
+endpoint, PostgreSQL180006/public/neondb, strict TLS, payment disabled and all35
+normalized ledger/source digests. Reviewed0036 SHA256
+`5aea8df577c0becf94ef335d30c2b85ec551c1c2f522f99dc310e03e078dfe35`
+was applied with its ledger insert in one transaction under the native runner
+lock on a stable direct connection. Final ledger36/all digests matched, with no
+pending migrations. No unrelated migration or downgrade ran.
+Workspace main integration, exact-main TEST
+rollout/runtime and final evidence remain pending.006 genuine multi-account browser acceptance
+is NOT_RUN and mandatory; Phase26 verdict remains NOT_REACHED.27–29 remain
+unauthorized and unstarted.
 
 ## Current004 merged-main TEST runtime acceptance — 2026-10-10
 
