@@ -1,0 +1,609 @@
+{
+  "kind": "local synthetic API browser UI verification; NOT deployed006 acceptance",
+  "frontendHead": "55d3cf45a856f8aeb6342198f0d083101381cc6b",
+  "widths": [
+    320,
+    375,
+    390,
+    412,
+    768,
+    1024,
+    1440
+  ],
+  "checks": {
+    "keyboardRadioSelection": true,
+    "keyboardIssuance": true,
+    "shiftTabTrap": true,
+    "escapeReturnFocus": true,
+    "escapeErasesCodeFields": true,
+    "closedPendingListDiscarded": true,
+    "closedPendingIssueAfterOwnershipLossDiscarded": true,
+    "emptyCreateDisabled": true,
+    "genericErrorNoRawDetail": true,
+    "redactedNoConversationLink": true,
+    "noPrivateSentinelVisible": true,
+    "consoleErrorsWarnings": 0
+  },
+  "metrics": {
+    "GroupVi": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":16,\"right\":304,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":231},{\"height\":44,\"width\":231},{\"height\":44,\"width\":231}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":16,\"right\":359,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":286},{\"height\":51.59375,\"width\":137},{\"height\":51.59375,\"width\":137}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":16,\"right\":374,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":301},{\"height\":51.59375,\"width\":144.5},{\"height\":51.59375,\"width\":144.5}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":16,\"right\":396,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":323},{\"height\":51.59375,\"width\":155.5},{\"height\":51.59375,\"width\":155.5}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":112,\"right\":656,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":487},{\"height\":44,\"width\":141.5625},{\"height\":44,\"width\":175.078125}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":240,\"right\":784,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":487},{\"height\":44,\"width\":141.5625},{\"height\":44,\"width\":175.078125}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"vi\",\"pageOverflow\":false,\"left\":448,\"right\":992,\"dialogHorizontalOverflow\":false,\"buttons\":[{\"height\":44,\"width\":44},{\"height\":44,\"width\":487},{\"height\":44,\"width\":141.5625},{\"height\":44,\"width\":175.078125}],\"focusInside\":true}\n```"
+          }
+        ]
+      }
+    ],
+    "GroupEn": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"en\",\"pageOverflow\":false,\"left\":16,\"right\":304,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"en\",\"pageOverflow\":false,\"left\":16,\"right\":359,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":68.390625,\"disabled\":false},{\"height\":68.390625,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"en\",\"pageOverflow\":false,\"left\":16,\"right\":374,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":51.59375,\"disabled\":false},{\"height\":51.59375,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"en\",\"pageOverflow\":false,\"left\":16,\"right\":396,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":51.59375,\"disabled\":false},{\"height\":51.59375,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"en\",\"pageOverflow\":false,\"left\":112,\"right\":656,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"en\",\"pageOverflow\":false,\"left\":240,\"right\":784,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"en\",\"pageOverflow\":false,\"left\":448,\"right\":992,\"dialogOverflow\":false,\"buttons\":[{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":false},{\"height\":44,\"disabled\":true}],\"focusInside\":true}\n```"
+          }
+        ]
+      }
+    ],
+    "IssuedVi": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"vi\",\"overflow\":false,\"pageOverflow\":false,\"readonly\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      }
+    ],
+    "IssuedEn": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":16,\"right\":304,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":16,\"right\":359,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":16,\"right\":374,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":16,\"right\":396,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":112,\"right\":656,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":240,\"right\":784,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"en\",\"dialogOverflow\":false,\"pageOverflow\":false,\"left\":448,\"right\":992,\"readonlyFields\":true,\"focusInside\":true}\n```"
+          }
+        ]
+      }
+    ],
+    "NotificationVi": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"vi\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      }
+    ],
+    "NotificationEn": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"en\",\"pageOverflow\":false,\"privateSentinel\":false,\"links\":[\"/exchange/conversations/60000000-0000-4000-8000-000000000001\",\"/exchange/conversations/60000000-0000-4000-8000-000000000001\"],\"alert\":null}\n```"
+          }
+        ]
+      }
+    ],
+    "PreferencesVi": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"vi\",\"overflow\":false,\"buttons\":[{\"height\":44,\"label\":\"\"},{\"height\":44,\"label\":\"Hủy\"},{\"height\":44,\"label\":\"Lưu tùy chọn\"}],\"focusInside\":true}\n```"
+          }
+        ]
+      }
+    ],
+    "PreferencesEn": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"en\",\"overflow\":false,\"buttons\":[{\"label\":\"\",\"whiteSpace\":\"normal\",\"width\":44,\"height\":44},{\"label\":\"Cancel\",\"whiteSpace\":\"nowrap\",\"width\":83.3125,\"height\":44},{\"label\":\"Save preferences\",\"whiteSpace\":\"nowrap\",\"width\":155.453125,\"height\":44}],\"focusInside\":true}\n```"
+          }
+        ]
+      }
+    ],
+    "BellVi": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"vi\",\"left\":16,\"right\":289,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"vi\",\"left\":16,\"right\":344,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"vi\",\"left\":16,\"right\":359,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"vi\",\"left\":16,\"right\":381,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"vi\",\"left\":305,\"right\":737,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"vi\",\"left\":561,\"right\":993,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"vi\",\"left\":840.5,\"right\":1272.5,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      }
+    ],
+    "BellEn": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"lang\":\"en\",\"left\":16,\"right\":289,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"lang\":\"en\",\"left\":16,\"right\":344,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"lang\":\"en\",\"left\":16,\"right\":359,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"lang\":\"en\",\"left\":16,\"right\":381,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"lang\":\"en\",\"left\":305,\"right\":737,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"lang\":\"en\",\"left\":561,\"right\":993,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"lang\":\"en\",\"left\":840.5,\"right\":1272.5,\"panelOverflow\":false,\"pageOverflow\":false,\"privateSentinel\":false}\n```"
+          }
+        ]
+      }
+    ]
+  }
+}

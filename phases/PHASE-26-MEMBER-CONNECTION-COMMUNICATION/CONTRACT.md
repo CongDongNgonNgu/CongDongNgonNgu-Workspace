@@ -121,6 +121,26 @@ Authenticated GET /exchange/connections uses the ordinary success envelope with 
 
 Absent current request acceptance is invalid409; already-connected duplicate acceptance remains idempotent. New request rechecks current target discoverability; existing acceptance does not require discovery visibility. Request10/hour+60/day and shared transition/block/unblock60/hour/report10/hour apply to authenticated attempts, including failed eligibility/state attempts and idempotent actor retries. Both request windows commit even when one rejects; counters saturate at limit+1. New canonical pair creation1/minute is checked only during an absent-row insert, so existing duplicate/crossed requests do not consume that cooldown.429 uses EXCHANGE_RATE_LIMITED and bounded Retry-After seconds. Actor limits commit independently before pair work; pair cooldown is atomic with creation. Cleanup removes at most100 expired internal counters in a separate SKIP LOCKED statement.0029 adds internal rate infrastructure only, with an explicit code-first rollback requirement; existing friendship schema/domain is reused.
 
+### Direct-message notification delivery concretization (005)
+
+0036 preserves all existing notification types and adds DIRECT_MESSAGE plus
+processed_generation/attempts/available_at to retained0033 intents. A send or
+advancing conversation read atomically increments generation and resets retry
+delay; processed_generation never exceeds generation. A stable first incoming
+unread message ID/time identifies the generic coalesced episode. No message text,
+context metadata, request note or partner profile enters the notification.
+Ordered account→pair→conversation→intent locks precede same-client notification
+claim and generation acknowledgement. Replays preserve notification READ state;
+local hints follow commit. Failed work retries with bounded5–300-second backoff
+using the actual attempted generation, so one failed batch cannot starve later
+work. REST/count/replay/live projections independently check current eligibility,
+connection, blocks, first-unread identity and channel preferences. Conversation
+read state remains authoritative and independent of notification READ state.
+
+Stop incompatible workers/producers before downgrade.0036 down refuses retained
+DIRECT_MESSAGE notices or pending generations under exclusive locks; no deletion
+or concurrent runtime downgrade safety is implied by isolated roundtrip proof.
+
 ### Connection notification delivery concretization (002)
 
 Request and accepted/crossed-connection transitions capture identifiers-only intent in the canonical connection transaction (0030). The worker leases at most20 available rows with30-second tokens and SKIP LOCKED; processing revalidates ordered accounts, canonical pair and lease under one transaction. Notification/read-state persistence uses that same client; queue completion commits before local realtime publication. Failed materialization rolls back notification and handled state, retains the already committed connection, and retries with bounded5–300-second delay. A superseded lease cannot process or complete another worker's row. Memory mode captures before domain mutation and shares versioned eligibility stores; an asynchronous eligibility change retries instead of delivering a stale actor.

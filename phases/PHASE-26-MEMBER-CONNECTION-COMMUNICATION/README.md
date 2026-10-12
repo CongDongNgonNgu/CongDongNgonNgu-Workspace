@@ -1,6 +1,6 @@
 # Phase 26 — Member Connection & Communication
 
-**Status:** IN_PROGRESS — owner authorized complete Phase26 lifecycle; 001–003 DONE, 004 VERIFYING, 005/006 pending.004 implementation PR49/36/154, main CI, branch cleanup, TEST migration/deploy and nine HTTP/SSE check groups passed; final evidence integration and terminal relay remain pending. Current [contract](CONTRACT.md) and [evidence](EVIDENCE.md) govern execution. Genuine exact-main synthetic multi-account browser acceptance remains required in006. Stop after26;27–29 remain unauthorized.
+**Status:** IN_PROGRESS — owner authorized complete Phase26 lifecycle;001–004 DONE,005 IN_PROGRESS,006 pending. Backend PR50 and Frontend PR37 are merged with main CI and branch cleanup passed;170 isolated SQL cases and639 Frontend tests passed. Local seven-width VI/EN UI proof is recorded. Reviewed TEST0036 migration is applied with ledger36 and all checksums verified; exact-main Backend deploy is underway. Workspace PR156 remains open. TEST runtime acceptance and final evidence remain pending. Current [contract](CONTRACT.md) and [evidence](EVIDENCE.md) govern execution. Genuine exact-main multi-account browser acceptance remains required in006. Stop after26;27–29 remain unauthorized and unstarted.
 
 ## Objective
 
