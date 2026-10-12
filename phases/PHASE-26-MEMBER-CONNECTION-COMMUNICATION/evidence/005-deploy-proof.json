@@ -1,0 +1,8 @@
+{
+  "scope": "owner-authorized TEST deployment; not Phase006 browser acceptance",
+  "backend": { "main": "0f426b5345a38ab445b2a557fa848466187ffbe3", "deployment": "dep-db6533flot8c738t4khg", "service": "srv-dahnerh594qs73fp3420", "status": "Deploy succeeded | Live", "deployedAt": "2026-10-12 10:18:37 GMT+7", "url": "https://congdongngonngu-back-end.onrender.com", "healthStatus": 200, "health": "ok" },
+  "frontend": { "main": "cc163d7f26648337c8d35c7416f0268776f4cf7b", "deployment": "2UzCngbrBSTLXBpyvA9FwBAys2hL", "status": "Ready", "url": "https://cong-dong-ngon-ngu-sigma.vercel.app" },
+  "database": { "ledgerCount": 36, "pending": [], "allNormalizedDigestsMatch": true, "tlsVerified": true, "paymentDisabled": true, "migration": "0036_phase26_message_notifications.sql", "digest": "5aea8df577c0becf94ef335d30c2b85ec551c1c2f522f99dc310e03e078dfe35" },
+  "runtimeAcceptance": "NOT_RUN",
+  "phase006": "NOT_RUN"
+}
