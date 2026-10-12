@@ -1,5 +1,48 @@
 # Phase26 execution evidence
 
+## Current005 implementation checkpoint — 2026-10-12
+
+004 is DONE. Its final evidence PR155 merged as
+`2b08d49583029e0222574df7ff7569776ffef2f5`; required PR CI38044411146 and
+main CI38044447325 passed. The temporary evidence branch was deleted remotely
+and locally after squash-tree verification, then stale references were pruned.
+The terminal004 report was relayed and the complete005 continuation validated.
+
+005 is IN_PROGRESS; no005 PR, public0036 migration or deployment yet. Backend
+local increment `b258d09` implements generic durable direct-message notices.
+Sends and advancing conversation reads dirty queue generations atomically;
+notification materialization and acknowledgement share a transaction. Retries
+preserve newer generations and back off bounded failed work. Current REST/count/
+SSE projection checks first-unread identity, eligibility, blocks and preferences.
+Notification READ state remains independent of conversation read position.
+
+Actual guarded isolated PostgreSQL proof passed: worker18, migration2,
+existing messaging27 and context6 cases. Worker tests cover two independent
+pools, rollback after a real insert, retry fairness and current redaction/counts.
+Source review approved the increment. Backend176 suites/1099 unit tests and
+23 suites/168 E2E tests passed after the shared eligibility extraction. These
+are local and isolated TEST results, not deployed005/browser acceptance.
+
+Connected-partner group convenience retains the native hashed24-hour one-use
+unbound bearer, shared invitation budgets/caps and manual acceptance. Current
+eligibility and owner checks use account→pair→group locks in the same supplied
+transaction. Native group SQL27 and new HTTP8 cases passed, including ownership/
+block lock-wait races, no implicit access, strict validation and CSRF. Required
+inherited Phase22 SQL19 and HTTP6 regressions also passed in isolated schemas.
+
+Current local Backend head is `c474f710eeac24aabcd48c90e2a06764fa58e08c`;
+typecheck/build passed and audit high/critical0 retains20 inherited moderate
+findings. Frontend local notification increment
+`bf77ef8af4d3210b79b4c8a8be11b1a192c0f14f` passed41 focused tests, typecheck,
+configured lint and build. Neither head is pushed at this checkpoint. Further
+notification chrome localization and the group picker remain in progress.
+
+Frontend generic notification tests and the connected-partner picker are being
+integrated against the approved Stitch references. Full integration gates,
+browser checks, exact-main TEST rollout/runtime, final evidence and cleanup
+remain pending.006 genuine multi-account browser acceptance is NOT_RUN and
+mandatory; Phase26 verdict remains NOT_REACHED.27–29 remain unstarted.
+
 ## Current004 merged-main TEST runtime acceptance — 2026-10-10
 
 This checkpoint supersedes earlier pending statements below. Backend PR49,
@@ -41,8 +84,8 @@ multi-account browser acceptance, which remains NOT_RUN and mandatory in006.
 Cross-domain current-content checks are bounded checks, not atomic transactions
 across domains. Backend audit high/critical0 retains20 inherited moderate findings.
 
-004 is VERIFYING while this final evidence PR, main CI/branch cleanup and terminal
-relay are pending.005/006 remain sequenced; Phase26 verdict is NOT_REACHED.
+This historical004 checkpoint predates the completed PR155/CI/cleanup/terminal
+integration recorded above.005/006 remain sequenced; verdict is NOT_REACHED.
 
 ## Current004 PR verification checkpoint
 

@@ -1,5 +1,21 @@
 # Phase26 native interface references
 
+## Current005 connected-partner invitation picker
+
+Generated through native Stitch MCP in the existing project3718538619973058970
+and design system assets/16442026920550574436 before picker implementation:
+
+- Desktop: screens/24b9a4eb02864dff871cd74d06cdebc0.
+- Mobile390: screens/7c9bfff23930424f8d25ff006c785aff.
+
+Both screenshots were downloaded and visually inspected. Reuse native Dialog,
+44px controls and component-owned CSS: current owned group, explicit connected
+partner selection, bounded list, then existing IssuedInvitationDialog once.
+Keep the concise out-of-chat delivery/manual acceptance guidance. Omit generated
+state annotations and implementation notes from product UI. No token appears
+in the picker, URL, chat, notification or persisted browser state. Actual seven-
+width VI/EN browser verification remains pending.
+
 ## Current004 share dialog references
 
 Generated through Stitch MCP in the same native project/design system before UI
