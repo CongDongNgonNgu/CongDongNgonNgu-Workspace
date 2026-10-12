@@ -1,0 +1,77 @@
+{
+  "run": "0b766b42-5f26-479d-a413-6a56e4fe3fd9",
+  "backendMain": "0f426b5345a38ab445b2a557fa848466187ffbe3",
+  "kind": "Actual ordinary MEMBER TEST HTTP/SSE safety; coordinator must verify Live deployment SHA separately; browser006 NOT_RUN",
+  "groupIds": [
+    "96d91c5e-e28a-4f5e-b557-ada23d42ad5b"
+  ],
+  "conversationIds": [
+    "0783276e-4f7d-4f05-b397-88d7cc6a2b1b"
+  ],
+  "residuals": {
+    "users": 0,
+    "auth_sessions": 0,
+    "notifications": 0,
+    "notification_read_states": 0,
+    "notification_preferences": 0,
+    "direct_conversations": 0,
+    "direct_messages": 0,
+    "direct_message_notification_intents": 0,
+    "direct_message_stream_leases": 0,
+    "direct_message_rate_limits": 0,
+    "study_groups": 0,
+    "study_group_memberships": 0,
+    "study_group_invitations": 0,
+    "study_group_texts": 0,
+    "study_group_reports": 0,
+    "study_group_rate_limits": 0,
+    "exchange_notification_outbox": 0,
+    "exchange_action_rate_limits": 0,
+    "language_exchange_reports": 0,
+    "language_exchange_blocks": 0,
+    "language_exchange_connections": 0
+  },
+  "proofs": [
+    {
+      "name": "Exact approved clean merged main, direct TEST public PG180006 ledger36/digests, strict TLS and disabled payment",
+      "result": "PASS"
+    },
+    {
+      "name": "Ordinary verified native-login A/B/C, A/B CONNECTED canonical conversation",
+      "result": "PASS"
+    },
+    {
+      "name": "Generic durable coalesced DM notice, READ preserved on replay/send, independent chat unread, partial read generation and canonical SSE replay",
+      "result": "PASS"
+    },
+    {
+      "name": "Current SSE preference disables replay/live in bounded500ms observation after durable drain while generic in-app REST remains available",
+      "result": "PASS"
+    },
+    {
+      "name": "SSE re-enabled plus new unread episode produces positive live generic DM event matching durable REST notice",
+      "result": "PASS"
+    },
+    {
+      "name": "Current group owner+CONNECTED issuance, 256-bit hash and24h lifetime, no implicit group read, explicit manual unbound C acceptance, one-use replay and no token notice",
+      "result": "PASS"
+    },
+    {
+      "name": "Report does not auto-block; current block redacts REST/count/SSE and denies new invitation while existing group memberships remain unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "Reconnect waits for native60s pair creation window without changing rate counters",
+      "result": "PASS"
+    },
+    {
+      "name": "Reconnect restores current generic projection; disconnect redacts/count-denies without deleting chat or existing group membership",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact synthetic identities/groups/private data/session/counter cleanup; bounded residual checks all zero",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

@@ -1,6 +1,6 @@
 # Phase26 execution evidence
 
-## Current005 implementation checkpoint — 2026-10-12
+## Current005 merged-main TEST safety acceptance — 2026-10-12
 
 004 is DONE. Its final evidence PR155 merged as
 `2b08d49583029e0222574df7ff7569776ffef2f5`; required PR CI38044411146 and
@@ -8,9 +8,11 @@ main CI38044447325 passed. The temporary evidence branch was deleted remotely
 and locally after squash-tree verification, then stale references were pruned.
 The terminal004 report was relayed and the complete005 continuation validated.
 
-005 is IN_PROGRESS. Backend PR50 and Frontend PR37 are merged; Workspace PR156
-(initial evidence head `a9bb1a6`) remains open. Public TEST ledger remains
-36 after the reviewed additive0036 rollout;005 deployment/runtime acceptance remains pending.
+005 is VERIFYING. Backend PR50, Frontend PR37 and intermediate Workspace PR156
+are merged with required main CI and temporary branch cleanup passed. Public
+TEST ledger36/all checksums and exact-main deployment provenance are verified;
+native005 HTTP/SSE acceptance passed. Final runtime evidence PR/main CI/branch
+cleanup and terminal relay remain pending.006 browser acceptance is NOT_RUN.
 Backend increment `b258d09` implements generic durable direct-message notices.
 Sends and advancing conversation reads dirty queue generations atomically;
 notification materialization and acknowledgement share a transaction. Retries
@@ -80,9 +82,45 @@ normalized ledger/source digests. Reviewed0036 SHA256
 was applied with its ledger insert in one transaction under the native runner
 lock on a stable direct connection. Final ledger36/all digests matched, with no
 pending migrations. No unrelated migration or downgrade ran.
-Workspace main integration, exact-main TEST
-rollout/runtime and final evidence remain pending.006 genuine multi-account browser acceptance
-is NOT_RUN and mandatory; Phase26 verdict remains NOT_REACHED.27–29 remain
+Workspace PR156 merged as `b77993f3175593599b012e568afda12edf4c9021`;
+main CI38199451413/job114649366792 passed and its temporary branch was deleted
+remotely and locally after squash-tree verification. Exact-main TEST deployments
+are [verified](evidence/005-deploy-proof.json): Backend0f426b5 Render
+dep-db6533flot8c738t4khg Live at2026-10-12 10:18:37 GMT+7 with health200/ok;
+Frontendcc163d7 Vercel2UzCngbrBSTLXBpyvA9FwBAys2hL Ready/current primary domain.
+
+The [first native HTTP/SSE attempt](evidence/005-http-sse-first-attempt.json)
+passed generic coalescing, notification/chat-read separation, partial-read
+generation, canonical replay, positive live delivery, current preference checks,
+group issuance/manual unbound acceptance and block/report privacy. It stopped at
+reconnection because the unchanged durable pair creation limit returned429
+inside its one-minute window. This is a fixture timing failure, not a passed
+acceptance run. All21 owned-fixture residual checks were zero and the recovery
+manifest was removed. The helper was corrected to read only the exact fixture
+pair's PAIR_MINUTE reset_at against database time, with bounded waits in at most
+one-second chunks. No rate counter, production limit or application code changed.
+
+The [complete native rerun](evidence/005-http-sse-test.json), run
+`0b766b42-5f26-479d-a413-6a56e4fe3fd9`, passed all10 proof groups with ordinary
+verified MEMBER A/B/C using native authentication. It proves generic durable
+coalescing, notification READ replay preservation, independent conversation
+unread and partial-read generations, persisted SSE replay and positive live
+delivery; current SSE preference suppression is explicitly a bounded500ms
+observation after durable drain. Native connected-owner invitation issuance
+preserved digest-only256-bit tokens/24-hour expiry, no implicit private group
+access, manual unbound C acceptance and one-use replay denial. Report did not
+auto-block; block/reconnect/disconnect produced current private notification
+projections and retained existing group membership and message history.
+Reconnection waited for the native pair cooldown without modifying it.
+All21 owned-fixture residual counts were zero; streams were stopped and the
+fixture manifest removed. Artifacts contain no credentials or raw tokens.
+
+Independent005 acceptance review approved the bounded implementation/runtime
+scope, reusing observed1099 unit/168 E2E/170 isolated SQL tests,639 Frontend
+tests,70 local VI/EN width metrics and applicable gates. This does not replace
+006 genuine deployed multi-account browser acceptance, which remains NOT_RUN
+and mandatory. Final evidence integration/CI/cleanup and005 terminal relay
+remain pending; Phase26 verdict remains NOT_REACHED.27–29 remain
 unauthorized and unstarted.
 
 ## Current004 merged-main TEST runtime acceptance — 2026-10-10

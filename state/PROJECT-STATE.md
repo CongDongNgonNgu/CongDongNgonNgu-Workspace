@@ -2,7 +2,7 @@
 
 ## Authorized Phase26 execution — 2026-10-12
 
-Owner complete Phase26 authorization covers001–006.001–004 DONE after final004 evidence PR155/main CI/branch cleanup and terminal relay.005 IN_PROGRESS: local notification and connected-group SQL/HTTP increments verified; frontend/integration/TEST rollout pending. [Current evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md) distinguishes local proof from deployed acceptance.006 genuine deployed multi-account browser acceptance remains NOT_RUN and mandatory.
+Owner complete Phase26 authorization covers001–006.001–004 DONE.005 VERIFYING: implementation/intermediate evidence PR50/37/156, main CI and branch cleanup passed; TEST0036 ledger36, exact-main deployments and native10-group HTTP/SSE safety rerun passed with21 residual counts zero. Final005 runtime evidence PR/main CI/cleanup and terminal relay remain pending. [Current evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md) retains the first cooldown-timing failure and separates local UI/native HTTP proof from006 genuine deployed multi-account browser acceptance, which remains NOT_RUN and mandatory.
 
 ```text
 CURRENT_PHASE=26
@@ -14,7 +14,7 @@ LNG_26_001=DONE
 LNG_26_002=DONE
 LNG_26_003=DONE
 LNG_26_004=DONE
-LNG_26_005=IN_PROGRESS
+LNG_26_005=VERIFYING
 LNG_26_006=PLANNED
 PHASE_27_EXECUTION_AUTHORIZED=NO
 PHASE_27_STARTED=NO
@@ -25,7 +25,7 @@ PHASE_29_STARTED=NO
 PAYMENT_REMAINS_DISABLED=YES
 PRODUCTION_MUTATION_PERFORMED=NO
 REAL_USER_VALUE_PROVEN=NO
-NEXT_ACTION=COMPLETE_PHASE26_005_INTEGRATION_AND_TEST_ACCEPTANCE
+NEXT_ACTION=FINALIZE_PHASE26_005_RUNTIME_EVIDENCE_CI_CLEANUP_AND_TERMINAL_RELAY
 ```
 
 
