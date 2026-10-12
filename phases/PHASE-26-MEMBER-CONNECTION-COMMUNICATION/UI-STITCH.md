@@ -1,5 +1,10 @@
 # Phase26 native interface references
 
+## Final006 deployed verification - 2026-10-12
+
+Existing approved native components retained; no redesign/new Stitch in006.196 valid metrics:14 surfaces x2locales x7widths;7 invalidated incoming-list observations excluded and repeated correctly. Native mobile chat/manual join, keyboard/focus/Escape/secret clear and bounded DOM audit passed. Desktop/mobile screenshots inspected inline, no savedPNG claim. Axe/manual screenreader NOT_RUN. See [acceptance](ACCEPTANCE.md) and [metrics](evidence/006-ui-metrics-run8.json). Historical pending statements below retain original checkpoint scope.
+
+
 ## Current005 connected-partner invitation picker
 
 Generated through native Stitch MCP in the existing project3718538619973058970

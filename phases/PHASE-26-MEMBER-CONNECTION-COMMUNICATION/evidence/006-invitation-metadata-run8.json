@@ -1,0 +1,11 @@
+{
+  "run": "f43c008f-9997-484e-9f2e-201a136efb95",
+  "operation": "READ_ONLY_INVITATION_METADATA",
+  "result": "PASS",
+  "invitations": 2,
+  "hashed_only": true,
+  "ttl24h": true,
+  "accepted_by_b": 1,
+  "foreign_accepts": 0,
+  "rawTokenOrHashSelected": false
+}

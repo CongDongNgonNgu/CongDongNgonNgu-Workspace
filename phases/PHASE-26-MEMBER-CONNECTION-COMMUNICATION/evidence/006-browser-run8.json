@@ -1,0 +1,165 @@
+{
+  "run": "f43c008f-9997-484e-9f2e-201a136efb95",
+  "status": "BROWSER_ACCEPTANCE_COMPLETED_PENDING_FINAL_REVIEW_AND_INTEGRATION",
+  "verdict": "DEFER_PENDING_INDEPENDENT_REVIEW",
+  "backendMain": "0f426b5345a38ab445b2a557fa848466187ffbe3",
+  "frontendMain": "cc163d7f26648337c8d35c7416f0268776f4cf7b",
+  "nativeABCLogin": "PASS_CORRECT_LABELS_DISTINCT_CONTEXTS_5_6_7",
+  "conversation": "1b0d1e2b-babe-41eb-a540-ae440a350e42",
+  "nativeRequestAccept": "A_EN_REQUEST_B_INCOMING_ACCEPT_UI",
+  "nativeShare": "LIBRARY_VOCABULARY_PICKER_B_NOTE_SEND_NATIVE",
+  "negativeMatrix": [
+    {
+      "actor": "A",
+      "method": "POST",
+      "route": "/exchange/conversations/1b0d1e2b-babe-41eb-a540-ae440a350e42/messages",
+      "expected": 400,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":400,\"success\":false,\"code\":\"HTTP_400\"}}\r\n"
+    },
+    {
+      "actor": "A",
+      "method": "POST",
+      "route": "/exchange/conversations/1b0d1e2b-babe-41eb-a540-ae440a350e42/read",
+      "expected": 400,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":400,\"success\":false,\"code\":\"MESSAGE_INVAL\r\n\u001b[23;80HLID_READ\"}}\r\n"
+    },
+    {
+      "actor": "A",
+      "method": "POST",
+      "route": "/exchange/conversations/1b0d1e2b-babe-41eb-a540-ae440a350e42/messages",
+      "expected": 400,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":400,\"success\":false,\"code\":\"HTTP_400\"}}\r\n"
+    },
+    {
+      "actor": "A",
+      "method": "POST",
+      "route": "/exchange/conversations/1b0d1e2b-babe-41eb-a540-ae440a350e42/messages",
+      "expected": 404,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":404,\"success\":false,\"code\":\"MESSAGE_CONTE\r\n\u001b[23;80HEXT_UNAVAILABLE\"}}\r\n"
+    },
+    {
+      "actor": "C",
+      "method": "POST",
+      "route": "/exchange/relationships/998ef0fb-d20a-49c5-bb93-138a37a6526d/accept",
+      "expected": 409,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":409,\"success\":false,\"code\":\"EXCHANGE_CONN\r\n\u001b[23;80HNECTION_ACTION_INVALID\"}}\r\n"
+    },
+    {
+      "actor": "A",
+      "method": "GET",
+      "route": "/exchange/conversations/1b0d1e2b-babe-41eb-a540-ae440a350e42/stream",
+      "expected": 400,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":400,\"success\":false,\"code\":\"MESSAGE_INVAL\r\n\u001b[23;80HLID_STREAM_CURSOR\"}}\r\n"
+    },
+    {
+      "actor": "A",
+      "method": "GET",
+      "route": "/exchange/conversations/7bafbb94-11cd-4433-9f6c-19c9a6b85d4a/messages",
+      "expected": 404,
+      "output": "{\"action\":\"request\",\"result\":{\"status\":404,\"success\":false,\"code\":\"CONVERSATION_\r\n\u001b[23;80H_UNAVAILABLE\"}}\r\n"
+    }
+  ],
+  "additionalNegatives": {
+    "privateCommunity": "B_SEND_404_MESSAGE_CONTEXT_UNAVAILABLE",
+    "foreignNotification": "C_READ_B_NOTICE_404_NOTIFICATION_NOT_FOUND",
+    "validSourceAfter": "A_200",
+    "foreignActorAfterBefore": "B_BOTH_400_MESSAGE_INVALID_CURSOR"
+  },
+  "group": {
+    "picker14": "PASS",
+    "issued14": "PASS_ONE_ISSUANCE_PER_LOCALE_TWO_INVITATIONS_TOTAL",
+    "explicitCopy": "VI_NATIVE_3TAB_ENTER_UI_COPIED",
+    "manualAccept14": "PASS",
+    "mobileJoin": "B_390x844_UUID_CTRLV_TAB_ENTER_NATIVE_JOIN_MEMBER",
+    "metadataProof": "phase26-006-invitation-metadata-run8.json",
+    "keyboardTrap": "SHIFT_TAB_TAB_INSIDE_ISSUED_DIALOG",
+    "escape": "SECRET_INPUT_REMOVED_FOCUS_RETURNED_TRIGGER"
+  },
+  "mobileChat": "B_EN_390_KEYBOARD_COMPOSER_TAB_ENTER_A_HISTORY_PRESENT_ORDERED",
+  "revocation": {
+    "initialDeniedCommand": "NOT_EXECUTED_MISSING_ID_SCOPE_UNCLEAR_AUTO_REVIEW",
+    "sourceOwnershipChecked": true,
+    "exactIdRetry": "APPROVED_APPLIED_OWNED_FIXTURE_ONLY",
+    "UI": "NATIVE_OPEN_GENERIC_UNAVAILABLE"
+  },
+  "uiMetricsFile": "phase26-006-ui-metrics-run8.json",
+  "validMeasurements": 196,
+  "remaining": [
+    "Workspace-closeout-PR-CI-merge-cleanup-sync-terminal-relay"
+  ],
+  "cleanup": "PASS_ALL27_ZERO",
+  "rawAuthHeadersBodies": "NOT_INSPECTED",
+  "rawInviteTokenOrClipboard": "NOT_READ_OR_EXPORTED",
+  "invalidatedMeasurements": 7,
+  "blockedRead": {
+    "nativeAblock": true,
+    "BvalidRead": "404_CONVERSATION_UNAVAILABLE",
+    "BactiveUI": {
+      "composer": false,
+      "oldMessage": false,
+      "genericUnavailable": true
+    }
+  },
+  "notificationUnread": "NATIVE_A_NOTICE_READ_CHAT_LIST_STILL_ONE_UNREAD_THEN_OPEN_CHAT_ZERO",
+  "accessibility": {
+    "limitedDomAudit": "NO_DUPLICATE_IDS_NO_UNLABELLED_VISIBLE_CONTROLS_ONE_H1_LANG_EN",
+    "timeline": "ROLE_LOG_ARIA_LIVE_POLITE_OL_CANONICAL_ORDER",
+    "composer": "VISIBLE_ASSOCIATED_MESSAGE_LABEL_NATIVE_TAB_ENTER_SEND",
+    "modal": "ISSUED_AND_REPORT_TAB_TRAP_ESCAPE_SECRET_CLEAR_TRIGGER_RESTORE",
+    "mobileReachability": "390X844_NATIVE_PAGEUP_TEXTAREA_Y290_SEND_Y425_BOTH_CENTER_HIT_OWN_TRUE",
+    "axe": "NOT_RUN_TOOL_NOT_INSTALLED",
+    "screenReader": "NOT_RUN"
+  },
+  "rateSmoke": {
+    "request": "NATIVE_REQUEST_ACCEPT_PASS_RUN7_REAL_COOLDOWN_OBSERVED_WAITED",
+    "messages": "FOUR_NATIVE_PERSISTED_MESSAGES_NO_SPAM",
+    "stream": "NATIVE_200_ACTIVE_A_B_STREAMS",
+    "exhaustion": "REUSE_UNCHANGED_003_005_ACTUAL_SQL_BOUNDARY_TESTS_NO_COUNTER_MUTATION"
+  },
+  "browserAudit": {
+    "A": "NO_CONSOLE_ERRORS_NO_FAILED_FETCH_XHR_STREAMS200",
+    "B": "THREE_401_CONSOLE_RESOURCE_ERRORS_NATIVE_REFRESH201_RETRIES200",
+    "BrequestIds": {
+      "expired": [
+        467,
+        468,
+        469
+      ],
+      "refresh": 470,
+      "recovered": [
+        472,
+        473,
+        474
+      ]
+    },
+    "C": "INITIAL_GUEST_REFRESH403_AND_THREE_IDLE_TOKEN_EXPIRY401_EACH_REFRESH201_RECOVERED304_STREAM200",
+    "CrequestIds": {
+      "guest": 22,
+      "login": 27,
+      "expired": [
+        64,
+        99,
+        134
+      ],
+      "refresh": [
+        65,
+        100,
+        135
+      ]
+    },
+    "unexpectedUnresolvedErrors": 0,
+    "rawConsoleZeroClaim": false,
+    "source": "src/features/auth/auth-api.ts:155-169 native requestWithAuth one401 refresh retry",
+    "window": "PRESERVED_LAST_THREE_NAVIGATIONS_SAFE_URL_STATUS_METADATA_ONLY",
+    "screenshots": "DESKTOP_AND_MOBILE_INSPECTED_INLINE_NO_SAVED_PNG_CONNECTOR_FILEPATH_ACCESS_DENIED"
+  },
+  "multiTab": "NOT_RUN_OPTIONAL_SAME_ACTOR_DUPLICATE_TAB_NOT_PROVISIONED_ISOLATED_ACTOR_CONTEXTS_USED",
+  "backForward": "NOT_RUN_OPTIONAL_ROUTE_FLOW_AND_RELOAD_COVERED",
+  "cleanupFile": "phase26-006-cleanup-f43c008f-9997-484e-9f2e-201a136efb95.json",
+  "runner": {
+    "session": 52168,
+    "exitCode": 0,
+    "manifestAbsent": true
+  },
+  "independentFinalReview": "APPROVE_BOUNDED_TECHNICAL_ACCEPTANCE_CONDITIONAL_ON_LIFECYCLE_37_POINTS"
+}

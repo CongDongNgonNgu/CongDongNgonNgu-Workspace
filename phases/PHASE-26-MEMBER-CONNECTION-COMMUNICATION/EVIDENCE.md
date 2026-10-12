@@ -1,5 +1,14 @@
 # Phase26 execution evidence
 
+## Current006 final acceptance - 2026-10-12
+
+[Acceptance](ACCEPTANCE.md), [indexed proof](EVIDENCE-INDEX.md), [37-point review](FINAL-REVIEW.md), [verdict](VERDICT.md) and [handoff](HANDOFF.md) supersede stale status projections below while retaining original scope/failures.005 DONE: PR157 merged mainad3075fde4074b07cfa34c17d71bd69ff6339015, quality38200504648 PASS, cleanup/terminal continuation accepted.006 genuine native deployed synthetic A/B/C proof completed across cleaned runs1/7/8 on unchanged exact BE0f426b5/FEcc163d7.196 valid VI/EN seven-width observations; all27 cleanup residuals0, final manifest absent/runner exit0. Independent review approves bounded technical acceptance conditional on final lifecycle. Overall DONE/GO effective after final Workspace PR/mainCI/cleanup/sync/terminal relay recorded in PR/report; otherwise VERIFYING.
+
+No006 product code/schema/deployment/configuration change. Existing exact-source gates reused transparently. Raw console401 recovered via native refresh, guest403 expected; unexpected unresolved failures0, no raw-console-zero claim. Axe/manual screenreader and optional same-actor multitab/back-forward NOT_RUN. No real-user value, production traffic,27-29, paid/AI/voice/video/payment/production scope.
+
+## Historical execution checkpoints
+
+
 ## Current005 merged-main TEST safety acceptance — 2026-10-12
 
 004 is DONE. Its final evidence PR155 merged as

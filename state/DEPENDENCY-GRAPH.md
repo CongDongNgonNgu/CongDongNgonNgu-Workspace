@@ -1,8 +1,8 @@
 # Dependency Graph
 
-## Authorized Phase26 graph — 2026-10-12
+## Phase26 closeout graph - 2026-10-12
 
-Closed Phase25 plus explicit owner complete Phase26 lifecycle authorization → LNG26-001 DONE (WorkspacePR149, CI/cleanup/relay PASS) → LNG26-002 DONE (BackendPR46/47, FrontendPR34, WorkspacePR150/151, mainCI/exact-main TEST HTTP/cleanup/relay PASS) →003 messaging DONE (BackendPR48, FrontendPR35, WorkspacePR152/153, mainCI/exact-main TEST HTTP/SSE/cleanup/relay PASS) →004 context DONE (PR49/36/154/155/mainCI/cleanup/TEST35/exact-main deploy/HTTP-SSE9/terminal relay PASS) →005 safety/group convenience VERIFYING (PR50/37/156/mainCI/cleanup, TEST36/exact-main deploy/native HTTP-SSE10/21 residuals zero PASS; final runtime evidence integration/CI/cleanup/terminal relay pending) →006 genuine multi-account exact-main TEST browser acceptance NOT_RUN. No chat/context/group implementation during002. Stop after26;27–29 unauthorized/unstarted. Historical Phase25 stop below is superseded for26 only. See [current evidence](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/EVIDENCE.md).
+Closed25 + owner complete26 authorization ->001-004 DONE ->005 DONE (BackendPR50/FrontendPR37/WorkspacePR156/157/mainCI/cleanup/validated006 continuation) ->006 genuine exact-main TEST native A/B/C PASS, independent37-point review,196 valid metrics,27 residual tables0 -> final Workspace PR/mainCI/cleanup/sync/terminal relay -> Phase26 DONE/GO_BOUNDED_COMMUNICATION. Before final integration overall VERIFYING. [Acceptance](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/ACCEPTANCE.md) and [verdict](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/VERDICT.md) govern limits. STOP after26;27-29 unauthorized/unstarted. No production/payment/provider action or real-user-value inference. Historical25 stop superseded only for authorized26.
 
 ## Phase25 completed graph — 2026-10-09
 

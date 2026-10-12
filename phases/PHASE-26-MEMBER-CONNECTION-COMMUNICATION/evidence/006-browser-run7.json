@@ -1,0 +1,87 @@
+{
+  "run": "6c6caf82-faeb-48e2-979a-08802d3e3416",
+  "status": "PARTIAL_CHECKPOINT_REVIEWER_QUOTA_LIMIT",
+  "verdict": "DEFER",
+  "backendMain": "0f426b5345a38ab445b2a557fa848466187ffbe3",
+  "frontendMain": "cc163d7f26648337c8d35c7416f0268776f4cf7b",
+  "reviewer": { "actual": "auto_review", "ownerSelected": true, "dummyFormAndSyntheticABCLogin": "EXECUTED_WITHOUT_REVIEWER_429", "routingChanged": false },
+  "nativeLogin": { "A": "PASS_CONTEXT_phase26-r7-A", "B": "PASS_CONTEXT_phase26-r7-B", "C": "PASS_CONTEXT_phase26-r7-C", "labels": "ALL_THREE_OBSERVED", "sessionInjection": false },
+  "conversation": "86af83e3-aa9c-4ebb-b10d-27e5f8651040",
+  "group": "05b5c3e3-1811-44e2-92c6-ed7377becb55",
+  "nativeConnection": "A_REQUEST_B_INCOMING_ACCEPT_B_CONNECTED_LIST_PASS",
+  "nativeGroupInvite": {
+    "ownerConnectedPicker": "B_OBSERVED_SELECTED_NATIVE_RADIO",
+    "issue": "ONCE_NATIVE_BUTTON",
+    "copy": "EXPLICIT_NATIVE_KEYBOARD_ENTER_ON_COPY_BUTTON_UI_COPIED",
+    "BbeforeJoin": "404_GROUP_UNAVAILABLE",
+    "BmanualAccept": "GROUP_UUID_ENTERED_TOKEN_CTRL_V_NATIVE_JOIN_SUCCESS_MEMBER_UI",
+    "CusedTokenReplay": "SAME_CLIPBOARD_CTRL_V_NATIVE_JOIN_DENIED_GENERIC_UNAVAILABLE",
+    "tokenReadOrExport": false,
+    "BmemberIssue": "404_GROUP_UNAVAILABLE_VALID_PARTNER_DTO",
+    "CnonmemberIssue": "404_GROUP_UNAVAILABLE_VALID_PARTNER_DTO",
+    "moderatorIssue": "A_NATIVE_MEMBER_TAB_PROMOTE_CONFIRM_B_MODERATOR_404_GROUP_UNAVAILABLE_THEN_NATIVE_DEMOTE_CONFIRM_MEMBER",
+    "hashAtRestAnd24HourCurrentRun": "NOT_INSPECTED_YET",
+    "escape": "DIALOG_REMOVED_SECRET_INPUT_REMOVED_FOCUS_RESTORED_TO_INVITE_TRIGGER"
+  },
+  "nativeChat": "A_MARKER_B_REPLY_DELIVERED_TO_A_WITHOUT_RELOAD",
+  "nativeReport": "OTHER_REASON_SYNTHETIC_NOTE_ACCEPTED_UI_RELATIONSHIP_API_REMAINS_CONNECTED",
+  "communityRevocation": {
+    "source": "NATIVE_DISCUSSION_SHARE_PICKER_B_NOTE_SEND_B_REALTIME_CARD",
+    "ownedHelper": "COMMUNITY_PRIVATE_APPLIED",
+    "Bopen": "GENERIC_UNAVAILABLE_NO_OLD_TITLE_OR_OPEN_BUTTON",
+    "historyAfterReconnect": "UNAVAILABLE_CARD_REMAINS"
+  },
+  "nativeBlock": {
+    "action": "A_NATIVE_MENU_CONFIRM_BLOCK",
+    "BactiveChat": "STALE_HISTORY_AND_COMPOSER_REMOVED_GENERIC_UNAVAILABLE",
+    "BhistorySendContextStream": "404_CONVERSATION_UNAVAILABLE",
+    "groupMembership": "B_GET_GROUP_200_ROLE_MEMBER",
+    "unblockAlone": "NATIVE_CONFIRM_NONE_NO_RESTORE_B_HISTORY_404",
+    "readAfterUnblockBeforeAccept": "VALID_SEQUENCE_DTO_404",
+    "deliberateReconnect": "NATIVE_A_REQUEST_B_ACCEPT_OPEN_SAME_CONVERSATION_ORIGINAL_HISTORY",
+    "clockOrCounterMutation": false
+  },
+  "nativeRemove": {
+    "action": "A_NATIVE_DISCONNECT",
+    "BsendAndRead": "404_CONVERSATION_UNAVAILABLE_VALID_DTOS",
+    "deliberateReconnect": "NATIVE_A_REQUEST_B_ACCEPT_OPEN_SAME_CONVERSATION_ORIGINAL_HISTORY",
+    "clockOrCounterMutation": false
+  },
+  "unrelatedC": { "detail": 404, "historyPage": 404, "send": 404, "read": 404, "stream": 404, "context": 404, "privateGroup": 404 },
+  "eligibility": {
+    "exception": "REVIEWED_B_ONE_FIELD_SUPPORTIVE_API_ONLY",
+    "NO_CONTACT": "A_HISTORY_404",
+    "exchangeOptInFalse": "A_DETAIL_404",
+    "restored": "RELATIONSHIP_GATED_OPTIN_TRUE_NATIVE_HISTORY_AND_COMPOSER_AVAILABLE"
+  },
+  "nativeLogout": {
+    "activeChatLogout": "POST_LOGOUT_201_GUEST_CHAT_LOGIN_REQUIRED_NO_COMPOSER",
+    "streams": "RESOURCE_TIMING_BOTH_CHAT_AND_NOTIFICATION_STREAMS_RESPONSE_END_NONZERO_AFTER_LOGOUT",
+    "relogin": "NATIVE_EMAIL_PASSWORD_SAME_A_LABEL_HISTORY_AND_COMPOSER_RESTORED",
+    "guestProtectedAPINegative": "NO_AUTH_GET_CONVERSATION_401_AUTH_UNAUTHORIZED_SUPPORTIVE_API"
+  },
+  "honestFailedProbes": [
+    "Initial connect click at narrow viewport opened search; closed it and retried desktop, request then observed pending.",
+    "Member invite first used invalid targetUserId DTO:400; then expected403 incorrectly:actual404; valid partnerUserId expected404 repeated and passed.",
+    "Read probe first used messageId DTO:400; corrected sequence DTO denied404 while disconnected.",
+    "Report select first used enum text OTHER unsupported by browser fill; validation displayed; selected actual visible Other label and submitted successfully."
+  ],
+  "rawAuthenticatedRequestHeadersBodies": "NOT_INSPECTED",
+  "foreignCursor": {
+    "source": "NATIVE_A_REQUEST_C_ACCEPT_AT_ACTUAL390_MOBILE_C_OPEN_AND_SEND_KEYBOARD",
+    "conversation": "5f589e29-eda8-4eb5-956c-41a5a4cd914f",
+    "sameActorSameConversationBefore": "200_VALID_CURSOR_CONTROL",
+    "sameActorForeignConversationBefore": "400_MESSAGE_INVALID_CURSOR",
+    "sameActorForeignConversationAfter": "400_MESSAGE_INVALID_CURSOR",
+    "sourceAfterControl": "NOT_RUN"
+  },
+  "mobileObservation": "Window resize390 returned actual innerWidth500; device emulation390x844 confirmed actual390. Tool click on low button could hit fixed bottom navigation; native PageDown exposed button and click accepted C. No product defect conclusion from tool click alone.",
+  "quotaInterruption": {
+    "message": "Automatic approval review failed: You've hit your usage limit; try again at6:26PM as displayed by tool, timezone not verified",
+    "notExecuted": "A forged sender message negative; all later probes in that batch were not started",
+    "safetyDetermination": "REVIEW_FAILURE_NOT_UNSAFE_ACTION",
+    "cleanupSeparatelyApproved": true
+  },
+  "remaining": ["current invitation metadata/hash/expiry proof", "remaining forged-input guessedUUID notification request LastEventID unsupportedcontext matrix", "sourceAfter cursor control", "bounded rate smoke", "VI_EN_7_width_all_critical_surfaces", "mobile full flows and keyboard/audit", "final console/network audit", "independent37point final review AFTER_full_browser_proof", "Workspace closeout PR_CI_merge_cleanup_sync_terminal_relay"],
+  "cleanup": { "result": "PASS", "residualTables": 27, "allZero": true, "proof": "phase26-006-cleanup-6c6caf82-faeb-48e2-979a-08802d3e3416.json", "manifest": "ABSENT", "runner3374": "CLEAN_EXIT_CODE_0" }
+}
