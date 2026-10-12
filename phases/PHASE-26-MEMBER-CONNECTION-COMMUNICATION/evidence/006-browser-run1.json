@@ -1,0 +1,299 @@
+{
+  "run": "9e489097-5167-4ed3-8665-c2698c0322f9",
+  "status": "PAUSED_RUNTIME_REVIEW_LIMIT",
+  "backendMain": "0f426b5345a38ab445b2a557fa848466187ffbe3",
+  "frontendMain": "cc163d7f26648337c8d35c7416f0268776f4cf7b",
+  "fixtureSession": null,
+  "observations": [
+    {
+      "step": "DISTINCT_NATIVE_BROWSER_LOGIN",
+      "result": "PASS",
+      "actors": [
+        {
+          "label": "A",
+          "pageId": 2,
+          "context": "phase26-006-A",
+          "viewport": "1440x1000",
+          "account": "Synthetic Phase26 browser A"
+        },
+        {
+          "label": "B",
+          "pageId": 3,
+          "context": "phase26-006-B",
+          "viewport": "390x900",
+          "account": "Synthetic Phase26 browser B"
+        },
+        {
+          "label": "C",
+          "pageId": 4,
+          "context": "phase26-006-C",
+          "viewport": "1024x900",
+          "account": "Synthetic Phase26 browser C"
+        }
+      ],
+      "method": "Native email/password UI login; distinct isolated contexts; no session injection or API mocking"
+    },
+    {
+      "step": "GUEST_BOOTSTRAP",
+      "result": "EXPECTED",
+      "route": "POST /api/v1/auth/refresh",
+      "status": 403,
+      "providersStatus": 200
+    },
+    {
+      "step": "NATIVE_REQUEST_ACCEPT",
+      "result": "PASS",
+      "details": "A viewed B canonical Exchange public preview, clicked Connect and saw outgoing request; B Incoming rendered A and accepted; B Connected list rendered A; A refreshed profile rendered Connected and Message. A Bell displayed accepted notification with generic connection copy."
+    },
+    {
+      "step": "NATIVE_BIDIRECTIONAL_REALTIME",
+      "result": "PASS",
+      "conversationId": "c1e257f9-2e92-4748-9a2c-4018e238f744",
+      "messageCount": 3,
+      "details": "B profile Message opened same stable conversation as A. With both native chats open, A002 appeared on B without refresh, B003 appeared on A without refresh; rendered order001,002,003; browser GET conversation/stream200 and authorized catch-up/read200.",
+      "stream": {
+        "browserRequestId": 96,
+        "browserFetchStreamStatus": 200,
+        "requestDetails": "NOT_INSPECTED_AUTO_REVIEW_REJECTED_CREDENTIAL_RISK",
+        "payloadShapeProof": "Reuse unchanged exact-main source and accepted005 HTTP/SSE proof; current browser raw stream body NOT_INSPECTED"
+      },
+      "mobileObservation": "390px profile Message initially under fixed quick navigation; native PageDown exposed button and click opened correct chat. No DOM mutation used."
+    },
+    {
+      "step": "BOUNDED_NEAR_CONCURRENT_AND_RELOAD",
+      "result": "PASS",
+      "messageCount": 5,
+      "details": "Parallel native Send clicks A004/B005; both rendered same order001,002,003,004,005, no duplicates. Native page reload of both retained identical five messages and composers."
+    },
+    {
+      "step": "UNRELATED_C_BROWSER_ROUTE",
+      "result": "PASS",
+      "details": "C own isolated authenticated context opened exact A/B conversation; UI generic unavailable, empty conversation list, no messages/composer."
+    },
+    {
+      "step": "OFFLINE_CATCHUP",
+      "result": "PASS",
+      "details": "A network Offline via native DevTools; B remained online and native sent006. A displayed offline/generic retry, no protected log. Network restored; A recovered all six messages without page reload or duplicates. Retry click attempted after recovery found noninteractive stale retry (no action)."
+    },
+    {
+      "step": "UNREAD_AND_GENERIC_NOTIFICATION_SEPARATION",
+      "result": "PASS",
+      "details": "A left chat; B native sent007. A Bell rendered generic new-DM copy with canonical conversation route, no message body/context. A marked that notice READ. Reloaded native conversation list still displayed 1 tin chưa đọc; supportive API head7/read6/unread1 confirmed no chat read side effect. A opened conversation to mark chat read. Conversation list before reload was stale while already open; no claim of live list polling."
+    },
+    {
+      "step": "NATIVE_SOURCE_SHARING_VOCABULARY_SENTENCE_DISCUSSION",
+      "result": "PASS",
+      "details": "A used actual source Share→connected B selector→note→Send for Vocabulary008 VI, Sentence009 EN, PUBLIC Discussion010 EN share UI. B native cards rendered canonical source titles and Open buttons; each Open reached exact canonical Library/Community resource. Community destination remains inherited VI; no target-page EN claim. Library publication fixture setup explicitly not moderation proof.",
+      "sourceIds": [
+        "41dcc320-8435-491a-9fc5-0c4102c3308d",
+        "916546ab-372e-423e-93a9-aa940fd40776",
+        "5b93f1c4-d324-4d8a-9cfe-1b5091aac62e"
+      ]
+    },
+    {
+      "step": "OWNED_LIBRARY_REVOCATION_BROWSER_REFETCH",
+      "result": "PASS",
+      "details": "Strict owned license-disable transaction succeeded. B native reload rendered two unavailable Library cards; no vocabulary/sentence title remained, user notes retained. Separate Community-private supportive helper attempt401 due expired bootstrap bearer; mutation NOT_APPLIED, not product authorization proof."
+    },
+    {
+      "step": "GROUP_PRE_JOIN_BOUNDARY",
+      "result": "PASS",
+      "details": "Current connected B and unrelated C each opened A-owned group route and saw generic group/invitation unavailable. A owner group UI opened connected partner picker and listed B. No invitation has been issued and no browser join yet."
+    },
+    {
+      "step": "GROUP_PICKER_EN_SEVEN_WIDTHS",
+      "result": "PASS",
+      "metrics": [
+        {
+          "width": 320,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 231,
+              "height": 44
+            },
+            {
+              "label": "Create invitation code",
+              "width": 231,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 137,
+              "height": 68.390625
+            },
+            {
+              "label": "Create invitation code",
+              "width": 137,
+              "height": 68.390625
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 152,
+              "height": 51.59375
+            },
+            {
+              "label": "Create invitation code",
+              "width": 152,
+              "height": 51.59375
+            }
+          ]
+        },
+        {
+          "width": 412,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 163,
+              "height": 51.59375
+            },
+            {
+              "label": "Create invitation code",
+              "width": 163,
+              "height": 51.59375
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 121.375,
+              "height": 44
+            },
+            {
+              "label": "Create invitation code",
+              "width": 190.640625,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "width": 1024,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 121.375,
+              "height": 44
+            },
+            {
+              "label": "Create invitation code",
+              "width": 190.640625,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "documentOverflow": false,
+          "dialogOverflow": false,
+          "dialogTitle": "Invite a connected partner",
+          "focusLabel": "Close dialog",
+          "buttons": [
+            {
+              "label": "Close dialog",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Close dialog",
+              "width": 121.375,
+              "height": 44
+            },
+            {
+              "label": "Create invitation code",
+              "width": 190.640625,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "GROUP_KEYBOARD_ATTEMPT",
+      "result": "NOT_RUN",
+      "details": "Automatic approval review failed429 for Tab and Space; neither executed. Read-only DOM confirmed Close dialog retains focus, B radio unchecked. No token issued."
+    }
+  ],
+  "remaining": "Finish native group issue/Copy→B manual paste/join, safety/report/block/remove/reconnect/eligibility, bounded authenticated attacks, logout, VI/EN seven-width critical surface matrix/a11y/console, final independent review, evidence/docs PR CI merge cleanup and verdict. Preserve all prior001–005 gates.",
+  "cleanup": {
+    "result": "PASS",
+    "proof": "phase26-006-cleanup-9e489097-5167-4ed3-8665-c2698c0322f9.json",
+    "allRecordedResiduals": 0,
+    "manifestAbsent": true,
+    "runnerPid24856": "STOPPED_VERIFIED",
+    "credentials": "Synthetic password removed from private functions store; actor credentials erased by cleanup"
+  },
+  "resumptionNotes": [
+    "No006 fixtures remain; prior native browser proof retained. Provision a new bounded synthetic run for remaining journeys.",
+    "Before next run, fix fixture bearer expiry via native re-login or refresh inside helper; current old helper bearer401 was a preparation limitation.",
+    "Use raw PTY only, require READY privateInput:true, prepare fail-closed isTTY/isRaw guard; explicit cleanup before terminating; Ctrl+C/Ctrl+D raw do not terminate.",
+    "Do not use get_network_request for authenticated request details; auto-review rejected credential retrieval. Use safe URL/status metadata and unchanged exact-main accepted SSE proof.",
+    "Read full validated006 continuation at native relay if needed; do not claim current progress as final006 acceptance."
+  ]
+}

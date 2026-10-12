@@ -1,6 +1,6 @@
 # Phase26 communication contract
 
-Status: ACCEPTED — independent security/architecture review approved the final contract on 2026-10-09; implementation/runtime gates remain unproven.
+Status: ACCEPTED;001-006 bounded technical acceptance and fresh37-point review PASS on2026-10-12. Final DONE/GO effective after closeout PR/mainCI/cleanup/sync/relay. Frozen requirements below preserved; see ACCEPTANCE.md and VERDICT.md for evidence/limits.
 Recorded: 2026-10-09 (Asia/Saigon).
 Owner authorizes LNG-26-001 through006 and their normal PR/CI/merge/TEST lifecycle. Stop after26. No production writes, payment, paid realtime, voice/video, AI translation/coaching or Phase27–29.
 

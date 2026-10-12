@@ -1,0 +1,33 @@
+{
+  "run": "6c6caf82-faeb-48e2-979a-08802d3e3416",
+  "result": "PASS",
+  "residuals": {
+    "users": 0,
+    "auth_sessions": 0,
+    "notifications": 0,
+    "notification_read_states": 0,
+    "notification_preferences": 0,
+    "direct_conversations": 0,
+    "direct_messages": 0,
+    "direct_message_notification_intents": 0,
+    "direct_message_stream_leases": 0,
+    "direct_message_rate_limits": 0,
+    "study_groups": 0,
+    "study_group_memberships": 0,
+    "study_group_invitations": 0,
+    "study_group_texts": 0,
+    "study_group_reports": 0,
+    "study_group_rate_limits": 0,
+    "exchange_notification_outbox": 0,
+    "exchange_action_rate_limits": 0,
+    "language_exchange_reports": 0,
+    "language_exchange_blocks": 0,
+    "language_exchange_connections": 0,
+    "library_resources": 0,
+    "library_resource_provenance": 0,
+    "community_posts": 0,
+    "library_resource_relations": 0,
+    "library_collection_members": 0,
+    "library_licenses": 0
+  }
+}
