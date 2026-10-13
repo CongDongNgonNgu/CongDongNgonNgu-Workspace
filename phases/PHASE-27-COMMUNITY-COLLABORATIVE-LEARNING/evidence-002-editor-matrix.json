@@ -1,0 +1,708 @@
+{
+  "backend": "41781d9869cbb378c746ee0f3c63559b03284358",
+  "frontend": "d89b1cb5947bb500369d3c8386c9b5453ddbedef",
+  "run": "dac7b3fe-03da-481b-9fcd-e4a6ad74c514",
+  "scope": "native authenticated question/correction detail and editor layout, not complete Phase27 acceptance",
+  "metrics": [
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 249,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 167.171875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 304,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 167.171875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 319,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 167.171875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 341,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 167.171875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 96.0625,
+          "right": 588.78125,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 107.03125,
+          "right": 194.140625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 111.4375,
+          "right": 525.5625,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 114.71875,
+          "right": 522.28125,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "vi",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 114,
+          "right": 862,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 116,
+          "right": 860,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 249,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 186.1875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 304,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 186.1875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 319,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 186.1875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 341,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 186.1875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 96.0625,
+          "right": 587.40625,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 107.03125,
+          "right": 213.15625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 111.4375,
+          "right": 525.5625,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 114.71875,
+          "right": 522.28125,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "path": "/community/posts/bd7b8416-4d51-4177-9e31-17308f685f06",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 114,
+          "right": 862,
+          "overflow": "auto",
+          "codePoints": 1519
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 116,
+          "right": 860,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 249,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 185.671875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 304,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 185.671875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 319,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 185.671875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 341,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 185.671875,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 96.0625,
+          "right": 656.9375,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 107.03125,
+          "right": 212.640625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 111.4375,
+          "right": 525.5625,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 114.71875,
+          "right": 522.28125,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 114,
+          "right": 862,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 116,
+          "right": 860,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Community post"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 249,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 166.65625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 304,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 166.65625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 319,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 166.65625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 56,
+          "right": 341,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 66,
+          "right": 166.65625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 96.0625,
+          "right": 656.9375,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 107.03125,
+          "right": 193.625,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 111.4375,
+          "right": 525.5625,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 114.71875,
+          "right": 522.28125,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "vi",
+      "path": "/community/posts/94ad922a-97e4-4efe-8e9e-fffd65400f7d",
+      "editors": [
+        {
+          "rows": 3,
+          "height": 240,
+          "left": 114,
+          "right": 862,
+          "overflow": "auto",
+          "codePoints": 938
+        },
+        {
+          "rows": 4,
+          "height": 122,
+          "left": 116,
+          "right": 860,
+          "overflow": "auto",
+          "codePoints": 0
+        }
+      ],
+      "heading": "Bài viết cộng đồng"
+    }
+  ]
+}
