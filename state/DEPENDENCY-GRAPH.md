@@ -1,5 +1,10 @@
 # Dependency Graph
 
+## Owner-authorized Phase27 graph - 2026-10-13
+
+Closed26 -> authorized27-001 source audit/contract/fresh24-point review -> Workspace PR/mainCI/cleanup/sync ->001 DONE ->002 READY;003-006 PLANNED. Current explicit boundary STOP after001; standing same-phase authorization does not start002 here. [Frozen contract](../phases/PHASE-27-COMMUNITY-COLLABORATIVE-LEARNING/CONTRACT.md) selects option A and private-only groups. Earlier roadmap letter labels/planning authorization snapshots are superseded for27 only. Phase28/29 unauthorized/unstarted; no production/payment/provider/AI/voice/video.
+
+
 ## Phase26 closeout graph - 2026-10-12
 
 Closed25 + owner complete26 authorization ->001-004 DONE ->005 DONE (BackendPR50/FrontendPR37/WorkspacePR156/157/mainCI/cleanup/validated006 continuation) ->006 genuine exact-main TEST native A/B/C PASS, independent37-point review,196 valid metrics,27 residual tables0 -> final Workspace PR/mainCI/cleanup/sync/terminal relay -> Phase26 DONE/GO_BOUNDED_COMMUNICATION. Before final integration overall VERIFYING. [Acceptance](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/ACCEPTANCE.md) and [verdict](../phases/PHASE-26-MEMBER-CONNECTION-COMMUNICATION/VERDICT.md) govern limits. STOP after26;27-29 unauthorized/unstarted. No production/payment/provider action or real-user-value inference. Historical25 stop superseded only for authorized26.

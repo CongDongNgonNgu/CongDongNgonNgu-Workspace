@@ -1,6 +1,10 @@
 # Phase 27 — Community & Collaborative Learning Completion
 
-**Status:** PLANNED — NOT EXECUTION AUTHORIZATION
+**Status:** IN_PROGRESS / verdict NOT_REACHED. Owner authorized001-006 on2026-10-13; this continuation executes001 only.001 DONE/002 READY effective after final Workspace PR/mainCI/cleanup/sync recorded in PR/terminal report; before then001 VERIFYING.
+
+## Current freeze
+
+[Contract](CONTRACT.md), [source audit](SOURCE-AUDIT.md), [threat model](THREAT-MODEL.md), [test plan](TEST-PLAN.md), [evidence/review](EVIDENCE.md), [task states](TASKS.md). Eight source-defined types; option A: no structured-response replies, collapsed general discussion secondary. Group domain remains private/invite-only; public/request discovery and group replies/reactions deferred. Existing Community/Q&A target English remains unaccepted. Prior planning candidates below are narrowed by this freeze. No product code/schema change in001.
 
 ## Objective
 
@@ -24,7 +28,7 @@ For QUESTION/CORRECTION_REQUEST:
 - compact answer editor: initial 2–3 rows, auto-grow to bounded max height, then internal scroll;
 - optional explanation may be collapsed behind `Thêm giải thích`;
 - preserve useful/accepted-answer semantics;
-- add one-level discussion/reply under structured answers if contract/security review approves;
+- preserve existing general discussion collapsed as secondary; no structured-response reply API (option A);
 - no infinite Reddit-style nesting.
 
 ### LNG-27-003 — Community search & filters
@@ -45,7 +49,7 @@ Reuse Phase22 groups; do not create a second group system.
 Add bounded collaboration as approved:
 - group realtime text conversation or approved message stream;
 - unread/navigation;
-- reply/reaction if bounded;
+- flat group text; reply/reaction deferred by001;
 - share authorized Language Hub/Library/Community content into a group;
 - invite connected partners through the existing owner-only invitation policy;
 - preserve owner/moderator/member and revocation invariants.
@@ -60,9 +64,9 @@ Existing private Phase22 groups must never become publicly searchable by default
 
 ### LNG-27-006 — Collaborative runtime/browser acceptance
 Synthetic multi-user scenarios:
-- question -> answer -> reply under answer;
+- question -> answer -> collapsed secondary general discussion;
 - discussion -> comment -> one-level reply;
-- correction request -> proposal -> discussion;
+- correction request -> proposal -> collapsed secondary general discussion;
 - search/filter/pagination combinations;
 - create/join/invite group;
 - group message/share learning content;
@@ -89,6 +93,10 @@ Synthetic multi-user scenarios:
 - automatic public exposure of private groups;
 - full-system simulation (Phase28);
 - payment/production activation.
+
+## Current continuation boundary
+
+STOP after LNG-27-001. Standing later Phase27 authorization persists, but002-006 are not started here.005 retains private-only group visibility and verifies discovery/join deferral; it does not authorize public exposure. Phase28/29 unauthorized/unstarted.
 
 ## Exit verdict
 
