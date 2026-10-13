@@ -18,3 +18,5 @@ Final savepoint: frontend PR39 field validation association and PR40 mobile menu
 
 
 Independent final evidence review accepted the affected Community/Q&A technical EN target: question/correction detail, editors and request forms in VI/EN, plus scoped feed/discussion proof. COMMUNITY_QA_EN_TARGET_UI=ACCEPTED_BOUNDED supersedes only the corresponding Phase25 target hold. It does not establish whole-site translation quality, screen-reader coverage, full WCAG conformance, real-user value or production readiness. Matrix records retain their actual revisions and coverage; later CSS-only fixes preserve earlier source acceptance.
+
+Final independent review APPROVE was source/evidence review of sanitized coordinator native records, not independent live browser execution. Current summary labels corrected to VERIFYING; historical savepoints retained.
