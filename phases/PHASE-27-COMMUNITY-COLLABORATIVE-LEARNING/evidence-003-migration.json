@@ -1,0 +1,10 @@
+{
+  "mode": "apply",
+  "target": "APPROVED_TEST",
+  "clientTls": true,
+  "postgresVersion": 180006,
+  "filename": "0037_phase27_community_search.sql",
+  "fileHash": "42f8fd0d568bf7d4957c280a26737bd055b5d4cc033134b2aeeb9fb2529ffd99",
+  "ledgerCount": 37,
+  "ledgerDigest": "dcdd5548bbf4ffb70df88409a95236424f9eb9541a6e1e2286381c41bfde07e3"
+}

@@ -8,4 +8,4 @@
 4. 005: verify existing PRIVATE_INVITE_ONLY semantics, owner invitations, negative nonmember discovery/access and explicit deferred alternatives; integrate evidence.
 5. 006: positively identified approved TEST exact-main deployments, ordinary synthetic A/B/C browser journeys, seven-width VI/EN and accessibility matrix, negative tests, exact fixture cleanup, fresh independent final review, repository/main CI and branch cleanup. Only then final verdict.
 
-Progress: 001 DONE; 002 VERIFYING (Workspace lifecycle pending); 003-006 PLANNED. No current runtime/test/deployment PASS is claimed by this plan. Hard human gates follow the continuation request. Screen reader NOT_RUN unless actually exercised.
+Progress: 001 DONE; 002 DONE; 003 VERIFYING (Workspace lifecycle pending); 004-006 PLANNED. No current runtime/test/deployment PASS is claimed by this plan. Hard human gates follow the continuation request. Screen reader NOT_RUN unless actually exercised.

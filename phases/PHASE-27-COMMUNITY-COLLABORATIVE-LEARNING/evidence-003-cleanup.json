@@ -1,0 +1,18 @@
+{
+  "runId": "26aaa208-5e10-40d2-9622-7e7aae5d239c",
+  "deleted": {
+    "community_reactions": 1,
+    "notification_read_states": 1,
+    "notifications": 1,
+    "phase06_contribution_events": 2,
+    "community_structured_response_acceptances": 1,
+    "community_saved_posts": 3,
+    "user_profiles": 3,
+    "auth_sessions": 11,
+    "user_roles": 3,
+    "community_structured_responses": 1,
+    "community_posts": 23,
+    "users": 3
+  },
+  "residualRows": 0
+}
