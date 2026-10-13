@@ -1,0 +1,21 @@
+{
+  "runId": "dac7b3fe-03da-481b-9fcd-e4a6ad74c514",
+  "deleted": {
+    "community_correction_requests": 1,
+    "community_reports": 1,
+    "notification_read_states": 5,
+    "notifications": 5,
+    "phase06_contribution_events": 9,
+    "community_structured_response_votes": 1,
+    "community_structured_response_acceptances": 4,
+    "community_reactions": 1,
+    "community_comments": 2,
+    "user_profiles": 3,
+    "auth_sessions": 308,
+    "user_roles": 3,
+    "community_structured_responses": 3,
+    "community_posts": 2,
+    "users": 3
+  },
+  "residualRows": 0
+}

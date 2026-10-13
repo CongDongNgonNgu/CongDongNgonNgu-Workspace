@@ -1,0 +1,846 @@
+{
+  "frontend": "d89b1cb5947bb500369d3c8386c9b5453ddbedef",
+  "scope": "authenticated request forms bounds in vi/en; no duplicate fixture submissions",
+  "metrics": [
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 272
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 33,
+          "right": 163.390625
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 327
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 33,
+          "right": 195
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 342
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 33,
+          "right": 203.609375
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 364
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 33,
+          "right": 216.25
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 49,
+          "right": 368.5
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 49,
+          "right": 191.625
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 49,
+          "right": 325.65625
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 49,
+          "right": 191.625
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "vi",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "Câu hoặc đoạn văn bản cần sửa *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 137.5,
+          "right": 493.828125
+        }
+      ],
+      "submit": [
+        {
+          "text": "Gửi yêu cầu sửa",
+          "left": 137.5,
+          "right": 280.125
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 272
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 33,
+          "right": 163.390625
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 327
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 33,
+          "right": 195
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 342
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 33,
+          "right": 203.609375
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 364
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 33,
+          "right": 216.25
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "CEFR level ",
+          "left": 49,
+          "right": 368.5
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 49,
+          "right": 251.46875
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "CEFR level ",
+          "left": 49,
+          "right": 325.65625
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 49,
+          "right": 228.828125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "path": "/community/ask/correction",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "Sentence or text to correct *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "CEFR level ",
+          "left": 137.5,
+          "right": 493.828125
+        }
+      ],
+      "submit": [
+        {
+          "text": "Send correction request",
+          "left": 137.5,
+          "right": 339.96875
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "Question text *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 272
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 141.59375,
+          "right": 272
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "Question text *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 327
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 165,
+          "right": 327
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "Question text *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 342
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 171.375,
+          "right": 342
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "Question text *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "CEFR level ",
+          "left": 33,
+          "right": 364
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 180.734375,
+          "right": 364
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "Question text *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "CEFR level ",
+          "left": 49,
+          "right": 368.5
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 574.734375,
+          "right": 704
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "Question text *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "CEFR level ",
+          "left": 49,
+          "right": 325.65625
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 523.734375,
+          "right": 618.328125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Target language *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "Question text *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "CEFR level ",
+          "left": 137.5,
+          "right": 493.828125
+        }
+      ],
+      "submit": [
+        {
+          "text": "Post question",
+          "left": 736.890625,
+          "right": 866.15625
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 33,
+          "right": 272
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 272
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 141.59375,
+          "right": 272
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 33,
+          "right": 327
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 327
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 165,
+          "right": 327
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 33,
+          "right": 342
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 342
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 171.375,
+          "right": 342
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 33,
+          "right": 364
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 33,
+          "right": 364
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 180.734375,
+          "right": 364
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 49,
+          "right": 704
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 49,
+          "right": 368.5
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 578.265625,
+          "right": 704
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 49,
+          "right": 618.328125
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 49,
+          "right": 325.65625
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 507.8125,
+          "right": 618.328125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "vi",
+      "path": "/community/ask/question",
+      "formControls": [
+        {
+          "name": "Ngôn ngữ mục tiêu *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "Nội dung câu hỏi *",
+          "left": 137.5,
+          "right": 866.15625
+        },
+        {
+          "name": "Trình độ CEFR ",
+          "left": 137.5,
+          "right": 493.828125
+        }
+      ],
+      "submit": [
+        {
+          "text": "Đăng câu hỏi",
+          "left": 740.421875,
+          "right": 866.15625
+        }
+      ]
+    }
+  ]
+}

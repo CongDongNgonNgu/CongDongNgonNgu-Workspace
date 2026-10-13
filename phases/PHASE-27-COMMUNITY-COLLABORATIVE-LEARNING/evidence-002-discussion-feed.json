@@ -1,0 +1,526 @@
+{
+  "frontend": "a742802a8e722f84cbb8871766bea777647af1fd",
+  "scope": "open additional discussion vi/en and feed EN, earlier feedVI measurement",
+  "discussion": [
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 66,
+          "right": 239
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 131.53125,
+          "right": 239
+        },
+        {
+          "name": "Trả lời",
+          "left": 63,
+          "right": 102.703125
+        },
+        {
+          "name": "",
+          "left": 210,
+          "right": 242
+        },
+        {
+          "name": "",
+          "left": 197,
+          "right": 229
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 66,
+          "right": 294
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 184.265625,
+          "right": 294
+        },
+        {
+          "name": "Trả lời",
+          "left": 63,
+          "right": 102.703125
+        },
+        {
+          "name": "",
+          "left": 265,
+          "right": 297
+        },
+        {
+          "name": "",
+          "left": 252,
+          "right": 284
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 66,
+          "right": 309
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 199.265625,
+          "right": 309
+        },
+        {
+          "name": "Trả lời",
+          "left": 63,
+          "right": 102.703125
+        },
+        {
+          "name": "",
+          "left": 280,
+          "right": 312
+        },
+        {
+          "name": "",
+          "left": 267,
+          "right": 299
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 66,
+          "right": 331
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 221.265625,
+          "right": 331
+        },
+        {
+          "name": "Trả lời",
+          "left": 63,
+          "right": 102.703125
+        },
+        {
+          "name": "",
+          "left": 302,
+          "right": 334
+        },
+        {
+          "name": "",
+          "left": 289,
+          "right": 321
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 107.03125,
+          "right": 635.765625
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 526.03125,
+          "right": 635.765625
+        },
+        {
+          "name": "Trả lời",
+          "left": 108.03125,
+          "right": 147.734375
+        },
+        {
+          "name": "",
+          "left": 602.765625,
+          "right": 634.765625
+        },
+        {
+          "name": "",
+          "left": 587.765625,
+          "right": 619.765625
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 114.71875,
+          "right": 522.28125
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 412.546875,
+          "right": 522.28125
+        },
+        {
+          "name": "Trả lời",
+          "left": 115.71875,
+          "right": 155.421875
+        },
+        {
+          "name": "",
+          "left": 489.28125,
+          "right": 521.28125
+        },
+        {
+          "name": "",
+          "left": 474.28125,
+          "right": 506.28125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "vi",
+      "open": true,
+      "controls": [
+        {
+          "name": "Chia sẻ suy nghĩ của bạn",
+          "left": 116,
+          "right": 860
+        },
+        {
+          "name": "Gửi bình luận",
+          "left": 750.265625,
+          "right": 860
+        },
+        {
+          "name": "Trả lời",
+          "left": 117,
+          "right": 156.703125
+        },
+        {
+          "name": "",
+          "left": 827,
+          "right": 859
+        },
+        {
+          "name": "",
+          "left": 812,
+          "right": 844
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 66,
+          "right": 239
+        },
+        {
+          "name": "Send comment",
+          "left": 131.53125,
+          "right": 239
+        },
+        {
+          "name": "Reply",
+          "left": 63,
+          "right": 98.53125
+        },
+        {
+          "name": "",
+          "left": 210,
+          "right": 242
+        },
+        {
+          "name": "",
+          "left": 197,
+          "right": 229
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 66,
+          "right": 294
+        },
+        {
+          "name": "Send comment",
+          "left": 170.421875,
+          "right": 294
+        },
+        {
+          "name": "Reply",
+          "left": 63,
+          "right": 98.53125
+        },
+        {
+          "name": "",
+          "left": 265,
+          "right": 297
+        },
+        {
+          "name": "",
+          "left": 252,
+          "right": 284
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 66,
+          "right": 309
+        },
+        {
+          "name": "Send comment",
+          "left": 185.421875,
+          "right": 309
+        },
+        {
+          "name": "Reply",
+          "left": 63,
+          "right": 98.53125
+        },
+        {
+          "name": "",
+          "left": 280,
+          "right": 312
+        },
+        {
+          "name": "",
+          "left": 267,
+          "right": 299
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 66,
+          "right": 331
+        },
+        {
+          "name": "Send comment",
+          "left": 207.421875,
+          "right": 331
+        },
+        {
+          "name": "Reply",
+          "left": 63,
+          "right": 98.53125
+        },
+        {
+          "name": "",
+          "left": 302,
+          "right": 334
+        },
+        {
+          "name": "",
+          "left": 289,
+          "right": 321
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 107.03125,
+          "right": 645.96875
+        },
+        {
+          "name": "Send comment",
+          "left": 522.390625,
+          "right": 645.96875
+        },
+        {
+          "name": "Reply",
+          "left": 108.03125,
+          "right": 143.5625
+        },
+        {
+          "name": "",
+          "left": 612.96875,
+          "right": 644.96875
+        },
+        {
+          "name": "",
+          "left": 597.96875,
+          "right": 629.96875
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 114.71875,
+          "right": 522.28125
+        },
+        {
+          "name": "Send comment",
+          "left": 398.703125,
+          "right": 522.28125
+        },
+        {
+          "name": "Reply",
+          "left": 115.71875,
+          "right": 151.25
+        },
+        {
+          "name": "",
+          "left": 489.28125,
+          "right": 521.28125
+        },
+        {
+          "name": "",
+          "left": 474.28125,
+          "right": 506.28125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "open": true,
+      "controls": [
+        {
+          "name": "Share your thoughts",
+          "left": 116,
+          "right": 860
+        },
+        {
+          "name": "Send comment",
+          "left": 736.421875,
+          "right": 860
+        },
+        {
+          "name": "Reply",
+          "left": 117,
+          "right": 152.53125
+        },
+        {
+          "name": "",
+          "left": 827,
+          "right": 859
+        },
+        {
+          "name": "",
+          "left": 812,
+          "right": 844
+        }
+      ]
+    }
+  ],
+  "feedEn": [
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    },
+    {
+      "width": 375,
+      "scrollWidth": 360,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    },
+    {
+      "width": 412,
+      "scrollWidth": 397,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "path": "/community",
+      "heading": "Learn together. Share your voice.",
+      "filterLabel": "By language"
+    }
+  ]
+}
