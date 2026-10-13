@@ -1,0 +1,150 @@
+{
+  "runId": "26aaa208-5e10-40d2-9622-7e7aae5d239c",
+  "backend": "c9c9d136cf28bca9edb1210768a3274615f4d2c5",
+  "tests": [
+    {
+      "name": "language-en",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 21,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "type-resource-topic-ja",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 1,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "literal-wildcards",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 21,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "unanswered",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 20,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "answered",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 1,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "accepted",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 1,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "saved-public-only",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 1,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "saved-other-actor",
+      "actor": "B",
+      "status": 200,
+      "code": null,
+      "count": 0,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "useful",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 22,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "page1",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 2,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "page2",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 2,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "cursor-tamper",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR"
+    },
+    {
+      "name": "cursor-query-scope",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR"
+    },
+    {
+      "name": "cursor-sort-scope",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR"
+    },
+    {
+      "name": "cursor-limit-scope",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR"
+    },
+    {
+      "name": "saved-page1",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "count": 1,
+      "onlyOwnedPublic": true
+    },
+    {
+      "name": "saved-cursor-actor",
+      "actor": "B",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR"
+    },
+    {
+      "name": "incompatible-question-type",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_SEARCH_INVALID"
+    },
+    {
+      "name": "unsupported-sort",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_SEARCH_INVALID"
+    },
+    {
+      "name": "unsafe-legacy-cursor",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR"
+    }
+  ]
+}

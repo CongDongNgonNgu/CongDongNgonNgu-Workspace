@@ -1,0 +1,275 @@
+{
+  "scope": "synthetic isolated approved TEST; not production or real-user latency",
+  "fixturePosts": 10000,
+  "sqlCasesPassed": 18,
+  "isolatedSchemaCleanupVerifiedByHarness": true,
+  "cases": [
+    "NEWEST",
+    "short q a",
+    "common q",
+    "no-match q",
+    "rare q",
+    "USEFUL50",
+    "combined accepted/saved/useful",
+    "QUESTION topic grammar50",
+    "USEFUL before cursor"
+  ],
+  "records": [
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 0,
+      "executionMs": 34.231,
+      "planningMs": 0.367,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 296,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 1,
+      "executionMs": 34.734,
+      "planningMs": 0.409,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 296,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 2,
+      "executionMs": 37.637,
+      "planningMs": 0.41,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 296,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 3,
+      "executionMs": 3.611,
+      "planningMs": 0.404,
+      "indexes": [
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 193,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 4,
+      "executionMs": 3.511,
+      "planningMs": 0.373,
+      "indexes": [
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 200,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 5,
+      "executionMs": 68.025,
+      "planningMs": 0.362,
+      "indexes": [
+        "languages_pkey",
+        "community_reactions_post_idx",
+        "community_comments_post_idx"
+      ],
+      "sharedHits": 23003,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 6,
+      "executionMs": 71.957,
+      "planningMs": 1.618,
+      "indexes": [
+        "users_pkey",
+        "community_posts_pkey",
+        "languages_pkey",
+        "community_structured_responses_parent_idx",
+        "community_reactions_post_idx",
+        "community_response_acceptance_response_idx",
+        "community_comments_post_idx",
+        "community_reactions_pkey",
+        "community_saved_posts_pkey"
+      ],
+      "sharedHits": 74784,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 7,
+      "executionMs": 14.776,
+      "planningMs": 0.38,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 5923,
+      "sharedReads": 0
+    },
+    {
+      "phase": "BEFORE_INDEXES",
+      "case": 8,
+      "executionMs": 89.882,
+      "planningMs": 0.452,
+      "indexes": [
+        "community_posts_author_idx",
+        "community_posts_language_feed_idx",
+        "community_reactions_post_idx",
+        "community_comments_post_idx"
+      ],
+      "sharedHits": 45840,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 0,
+      "executionMs": 33.355,
+      "planningMs": 0.594,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 296,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 1,
+      "executionMs": 36.596,
+      "planningMs": 0.471,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 296,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 2,
+      "executionMs": 37.082,
+      "planningMs": 0.461,
+      "indexes": [
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 296,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 3,
+      "executionMs": 0.109,
+      "planningMs": 0.411,
+      "indexes": [
+        "community_posts_search_content_trgm_idx",
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 25,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 4,
+      "executionMs": 0.193,
+      "planningMs": 0.407,
+      "indexes": [
+        "community_posts_search_content_trgm_idx",
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 40,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 5,
+      "executionMs": 59.78,
+      "planningMs": 0.424,
+      "indexes": [
+        "languages_pkey",
+        "community_reactions_post_idx",
+        "community_comments_post_idx"
+      ],
+      "sharedHits": 23003,
+      "sharedReads": 0
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 6,
+      "executionMs": 74.365,
+      "planningMs": 1.642,
+      "indexes": [
+        "users_pkey",
+        "community_posts_pkey",
+        "languages_pkey",
+        "community_answers_search_eligible_idx",
+        "community_reactions_post_idx",
+        "community_response_acceptance_response_idx",
+        "community_comments_post_idx",
+        "community_reactions_pkey",
+        "community_saved_posts_pkey"
+      ],
+      "sharedHits": 77499,
+      "sharedReads": 29
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 7,
+      "executionMs": 13.872,
+      "planningMs": 0.414,
+      "indexes": [
+        "community_posts_search_type_topic_idx",
+        "languages_pkey",
+        "community_comments_post_idx",
+        "community_reactions_post_idx"
+      ],
+      "sharedHits": 5923,
+      "sharedReads": 23
+    },
+    {
+      "phase": "AFTER_INDEXES",
+      "case": 8,
+      "executionMs": 101.247,
+      "planningMs": 0.448,
+      "indexes": [
+        "community_posts_search_content_trgm_idx",
+        "community_posts_author_idx",
+        "community_reactions_post_idx",
+        "community_comments_post_idx"
+      ],
+      "sharedHits": 45903,
+      "sharedReads": 0
+    },
+    {
+      "phase": "COMPLETE_SERVICE_PAGE",
+      "limit": 50,
+      "items": 50,
+      "roundTrips": 8,
+      "elapsedMs": 529.0311000000002
+    }
+  ]
+}

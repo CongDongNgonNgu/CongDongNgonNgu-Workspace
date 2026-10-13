@@ -1,6 +1,6 @@
 # LNG-27-002 bounded acceptance
 
-Status: VERIFYING on 2026-10-13. Product integration, native acceptance and exact fixture cleanup passed. Workspace integration remains the final 002 gate. Phase27 verdict remains NOT_REACHED.
+Status: DONE on 2026-10-13. Product integration, bounded native acceptance, exact fixture cleanup and WorkspacePR160/mainCI/remote-local branch cleanup passed. See final lifecycle in REVIEW-002.md. Phase27 verdict remains NOT_REACHED.
 
 Backend main: 41781d9869cbb378c746ee0f3c63559b03284358. Frontend primary implementation: d89b1cb5947bb500369d3c8386c9b5453ddbedef; validation remediation: a742802a8e722f84cbb8871766bea777647af1fd; final mobile remediation: 80e138a3f8f8564fbb1fa7ffd21296daebe509c7 (main CI and exact provider Ready verified).
 
@@ -23,7 +23,7 @@ Deployed denials: own-response helpful403; unrelated requester acceptance403; cr
 
 ## Review and integration
 
-Independent backend and frontend reviews approved. Frontend review first reproduced locale-switch draft loss, duplicate React sibling keys, raw type metadata and empty-state spacing; all were repaired and independently rerun. Further field-association and mobile/long-topic issues were addressed through reviewed PR39/40. PR51 backend and frontend PR38/39/40 are merged with required main CI and remote/local branch cleanup verified. PR40 aggregate reviewed tree equals merged main; its individual commits are not claimed patch-equivalent after squash. Main CI38351036676/job115143255035 passed. Native logged-in Vercel dashboard showed deployment3VxJBvWciT1jp9Qyo5We9pYT7q6M Ready with full source80e138a3f8f8564fbb1fa7ffd21296daebe509c7. Backend Render dep-db6pc4nf3r2c73c07r60 Live and health200 were verified for41781d9869cbb378c746ee0f3c63559b03284358. Workspace is not yet integrated.
+Independent backend and frontend reviews approved. Frontend review first reproduced locale-switch draft loss, duplicate React sibling keys, raw type metadata and empty-state spacing; all were repaired and independently rerun. Further field-association and mobile/long-topic issues were addressed through reviewed PR39/40. PR51 backend and frontend PR38/39/40 are merged with required main CI and remote/local branch cleanup verified. PR40 aggregate reviewed tree equals merged main; its individual commits are not claimed patch-equivalent after squash. Main CI38351036676/job115143255035 passed. Native logged-in Vercel dashboard showed deployment3VxJBvWciT1jp9Qyo5We9pYT7q6M Ready with full source80e138a3f8f8564fbb1fa7ffd21296daebe509c7. Backend Render dep-db6pc4nf3r2c73c07r60 Live and health200 were verified for41781d9869cbb378c746ee0f3c63559b03284358. Workspace final lifecycle subsequently completed throughPR160; see REVIEW-002.md.
 
 ## Limits
 

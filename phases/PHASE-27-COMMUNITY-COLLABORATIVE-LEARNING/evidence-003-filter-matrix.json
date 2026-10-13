@@ -1,0 +1,125 @@
+{
+  "frontend": "2ee837896b6e21f85446ac72ee3ce22017d81d77",
+  "backend": "c9c9d136cf28bca9edb1210768a3274615f4d2c5",
+  "scope": "native expanded filter controls; guest/public search pagination",
+  "matrices": [
+    {
+      "locale": "vi",
+      "width": 320,
+      "scrollWidth": 305,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "vi",
+      "width": 375,
+      "scrollWidth": 360,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "vi",
+      "width": 390,
+      "scrollWidth": 375,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "vi",
+      "width": 412,
+      "scrollWidth": 397,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "vi",
+      "width": 768,
+      "scrollWidth": 753,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "vi",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "vi",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "scrollWidth": 305,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "scrollWidth": 360,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "scrollWidth": 375,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 412,
+      "scrollWidth": 397,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "scrollWidth": 753,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "disclosureOpen": true,
+      "controls": 11,
+      "overflow": []
+    }
+  ],
+  "nativePagination": {
+    "firstPage": 20,
+    "afterLoadMore": 22,
+    "unique": 22,
+    "privateAbsent": true
+  }
+}
