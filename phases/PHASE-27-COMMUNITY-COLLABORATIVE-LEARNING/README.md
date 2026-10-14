@@ -1,3 +1,9 @@
+# Phase27 final selected-contract acceptance
+
+Technical verdict GO_BOUNDED_COLLABORATION; independent review APPROVE; all fixture cleanup residual0. Completion is conditional on the final Workspace lifecycle documented in [FINAL-CLOSEOUT.md](FINAL-CLOSEOUT.md). [006 acceptance](ACCEPTANCE-006.md) records exact source/deployment/evidence/limits.001–005 DONE;006 DONE after final Workspace merge/mainCI/branch cleanup/sync. No Phase28/29.
+
+## Historical001 audit and planning snapshot — superseded for current completion state
+
 # Phase 27 — Community & Collaborative Learning Completion
 
 **Status:** IN_PROGRESS / verdict NOT_REACHED. Owner authorized001-006 on2026-10-13; this continuation executes001 only.001 DONE/002 READY effective after final Workspace PR/mainCI/cleanup/sync recorded in PR/terminal report; before then001 VERIFYING.

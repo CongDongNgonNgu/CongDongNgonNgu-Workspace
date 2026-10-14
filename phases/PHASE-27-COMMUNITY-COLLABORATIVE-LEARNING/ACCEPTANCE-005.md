@@ -1,6 +1,6 @@
 ﻿# Phase27 private visibility acceptance (005)
 
-2026-10-14 Asia/Saigon. **Status: VERIFIED_PENDING_WORKSPACE_LIFECYCLE.** The fixed-private source/runtime target passed the bounded observations below. Exact-owned cleanup passed; Workspace integration/branch-cleanup gates remain pending; this is not005 DONE or the final Phase27 verdict. The common Workspace lifecycle records004/005 closure together after their shared gates.
+2026-10-14 Asia/Saigon. **Status: DONE.** The fixed-private source/runtime target passed the bounded observations below. Exact-owned cleanup passed; Workspace integration/branch-cleanup gates remain pending; this is not005 DONE or the final Phase27 verdict. The common Workspace lifecycle records004/005 closure together after their shared gates.
 
 ## Product and integration
 
@@ -30,12 +30,16 @@ Native Lighthouse on the final B group view reported accessibility100,40 passed 
 | Owner/moderator/member privilege boundaries | Passed selected source/HTTP/API cases |
 | Production mutation or public backfill | NO |
 
-## Remaining closure gates
+## Historical pre-integration closure checkpoint
 
 Exact-owned runtime cleanup PASS:7 texts,2 invitations,11 group-rate rows,2 direct-rate rows,4 memberships,2 groups,1 owned Community post,3 profiles,110 sessions,3 role rows and3 synthetic users deleted. ResidualRows=0; manifest CLEANED and temporary runtime controller stop accepted. Existing prior Library fixture and unrelated TEST rows were not mutated. See [cleanup evidence](evidence-004-005-cleanup.json). Workspace independent review/PR/merge/main-CI/branch cleanup/sync **PENDING**. The common004/005 Workspace closeout and eventual006 full independent review/runtime closeout remain separate gates. Do not turn bounded product observations into005 DONE before those required Workspace lifecycle gates.
 
 Inherited same-cookie multi-tab refresh and Library-revocation/native-test distinctions remain documented in [004 limitations](KNOWN-LIMITATIONS-004.md). No real-user usability, production scale or exhaustive security claim. Continue006 automatically once005 closes; no Phase28/29, production/provider/payment/AI/voice/video scope.
 
-## Current closure projection
+## Historical pre-integration projection
 
 004/005 share the pending Workspace closeout PR because004 final native accessibility acceptance required the bounded005 frontend follow-up.005 source clarification proceeded alongside004 final verification; it did not create a second group domain or broaden discovery. Both remain VERIFIED_PENDING_WORKSPACE_LIFECYCLE,006 PLANNED, Phase27 verdict NOT_REACHED. Workspace syntax check,12 monitor tests and diff check PASS; required Workspace PR/main CI, merge verification, temporary branch cleanup and sync are still pending.
+
+## Verified lifecycle closure
+
+2026-10-14 Workspace PR162 reviewed candidate8612208, merged as55783af5bf2e11c1fd34a349ce88c4d5ef88bd64 with exact reviewed-tree verification. Main CI38506681884 / job115665683824 PASS. Remote/local temporary branch deleted, stale refs pruned and Workspace main clean/synchronized before creating docs/phase27-final-acceptance. Combined004/005 closure is complete; no pending product/runtime/cleanup gate remains for those subphases.006 is now IN_PROGRESS and Phase27 verdict remains NOT_REACHED.

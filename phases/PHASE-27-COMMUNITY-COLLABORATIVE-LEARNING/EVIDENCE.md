@@ -1,12 +1,16 @@
-# Current004/005 evidence - 2026-10-14
+# Final Phase27 closeout projection
 
-Status: VERIFIED_PENDING_WORKSPACE_LIFECYCLE for004/005;006 PLANNED; Phase27 verdict NOT_REACHED. [004 acceptance](ACCEPTANCE-004.md) and [005 acceptance](ACCEPTANCE-005.md) record exact reviewed/main source, required product CI, TEST deployments, bounded native/API checks and independent source reviews.
+See [FINAL-CLOSEOUT.md](FINAL-CLOSEOUT.md), [006 acceptance](ACCEPTANCE-006.md) and [006 independent review](REVIEW-006.md). Technical acceptance/review/cleanup complete; final Workspace lifecycle remains the explicit completion gate. Earlier projections are historical.
+
+# Closed004/005 evidence and active006 - 2026-10-14
+
+Status:004/005 DONE;006 IN_PROGRESS; Phase27 verdict NOT_REACHED. [004 acceptance](ACCEPTANCE-004.md) and [005 acceptance](ACCEPTANCE-005.md) record exact reviewed/main source, required product CI, TEST deployments, bounded native/API checks and independent source reviews.
 
 Exact-owned runtime cleanup PASS:7 texts,2 invitations,11 group-rate rows,2 direct-rate rows,4 memberships,2 groups,1 owned Community post,3 profiles,110 sessions,3 role rows and3 synthetic users deleted. ResidualRows=0; manifest CLEANED and temporary runtime controller stop accepted. Existing prior Library fixture and unrelated TEST rows were not mutated. See [cleanup evidence](evidence-004-005-cleanup.json).
 
 Native005 forms:28 create/join/VI/EN/seven-width combinations passed; labels/controls/no overflow, initial Close focus/Escape/return focus passed in both locales. [Form evidence](evidence-005-forms-native.json). API00421checks and00532checks passed; current JSON cleanup fields updated by coordinator. Screen reader NOT_RUN. Inherited same-cookie multi-tab and Library native/SQL distinctions remain documented.
 
-004/005 share the pending Workspace closeout PR because004 final native accessibility acceptance required the bounded005 frontend follow-up.005 source clarification proceeded alongside004 final verification; it did not create a second group domain or broaden discovery. Both remain VERIFIED_PENDING_WORKSPACE_LIFECYCLE,006 PLANNED, Phase27 verdict NOT_REACHED. Workspace syntax check,12 monitor tests and diff check PASS; required Workspace PR/main CI, merge verification, temporary branch cleanup and sync are still pending.
+2026-10-14 Workspace PR162 reviewed candidate8612208, merged as55783af5bf2e11c1fd34a349ce88c4d5ef88bd64 with exact reviewed-tree verification. Main CI38506681884 / job115665683824 PASS. Remote/local temporary branch deleted, stale refs pruned and Workspace main clean/synchronized before creating docs/phase27-final-acceptance. Combined004/005 closure is complete; no pending product/runtime/cleanup gate remains for those subphases.006 is now IN_PROGRESS and Phase27 verdict remains NOT_REACHED. Workspace syntax check,12 monitor tests and diff check PASS.
 
 ## Historical001 evidence below
 

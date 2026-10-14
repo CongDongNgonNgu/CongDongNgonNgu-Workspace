@@ -1,0 +1,1472 @@
+{
+  "status": "VERIFIED_PENDING_WORKSPACE_LIFECYCLE",
+  "runId": "64a866f0-a2b1-4f1a-a7f2-efd796edf621",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "frontendMain": "fde1131a717d94569bb6a6c89f1a1021673215a3",
+  "interactionInitialFrontend": "ff261bf5f8cb686b15e2e0767740aff405fd5cab",
+  "vercel": "CCa6eCELhbxEc6eWadWh8rWcNwbo",
+  "vercelNativeReadyCurrentDomainFullSha": true,
+  "nativeChecks": {
+    "discussionCreatedThroughModal": "PASS",
+    "discussionCommentAndOneLevelReply": "PASS",
+    "noDepthTwoReplyControl": "PASS",
+    "questionHumanAnswerExplanationHelpfulRequesterAccept": "PASS",
+    "questionSecondaryCommentReplySeparateFromAnswer": "PASS",
+    "correctionHumanProposalDiffExplanationRequesterAccept": "PASS",
+    "correctionSecondaryComment": "PASS",
+    "fiveAdditionalCommentPrimaryTypesNoStructuredEditor": "PASS",
+    "groupCreateOwnerManualInvitationExplicitAcceptance": "PASS",
+    "groupRealtimeUnicodeUnreadRead": "PASS",
+    "offlineCatchup": {
+      "senderCommittedWhileRecipientOffline": true,
+      "recipientSawBeforeRestore": false,
+      "recipientCaughtUpAfterRestore": true
+    },
+    "libraryCanonicalCardCurrentPublicReference": "PASS_NATIVE_PRIOR_PUBLIC_FIXTURE_READ_ONLY",
+    "communityCanonicalCardCurrentTargetPrivateRevocation": "PASS_NO_OLD_PREVIEW",
+    "unrelatedCGenericGroupDenial": "PASS",
+    "exchangeBlock": {
+      "ownerExplicitlyApprovedSyntheticBPreferences": true,
+      "profileUnavailableAfterNativeBlock": true,
+      "BGroupMembershipRetained": true,
+      "BGroupSendAfterBlock": true,
+      "nativeUnblockThenIndependentGroupRemoval": true
+    },
+    "groupRemovalPurgesBView": "PASS",
+    "nativeCommunityReport": {
+      "ordinaryCReportSubmitted": true,
+      "postDidNotAutoHide": true,
+      "privilegedModeration": "NOT_RUN_REUSED_PRIOR_SQL_CONTRACT_PROOF"
+    },
+    "groupArchiveOwnListEmpty": "PASS",
+    "groupArchiveExactVisibleEmptyText": "You have not joined a group yet."
+  },
+  "searchNativeStates": [
+    {
+      "name": "unanswered",
+      "count": 0,
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/community?q=Phase27+final&languageCode=en&topic=phase27-final&postType=QUESTION&responseState=UNANSWERED",
+      "status": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Question · Exact topic: phase27-final · Unanswered",
+        "No matching posts\n\nTry another phrase or reset the filters."
+      ],
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "answered",
+      "count": 1,
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/community?q=Phase27+final&languageCode=en&topic=phase27-final&postType=QUESTION&responseState=ANSWERED",
+      "status": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Question · Exact topic: phase27-final · Answered"
+      ],
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "accepted",
+      "count": 1,
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/community?q=Phase27+final&languageCode=en&topic=phase27-final&postType=QUESTION&responseState=ACCEPTED",
+      "status": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Question · Exact topic: phase27-final · Accepted answer"
+      ],
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "saved",
+      "count": 2,
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/community?q=Phase27+final&languageCode=en&topic=phase27-final&savedByMe=true",
+      "status": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final · Only posts I saved"
+      ],
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "useful",
+      "count": 20,
+      "url": "https://cong-dong-ngon-ngu-sigma.vercel.app/community?q=Phase27+final&languageCode=en&topic=phase27-final&sort=USEFUL",
+      "status": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final · Most helpful"
+      ],
+      "expected": 20,
+      "pass": true
+    }
+  ],
+  "searchNativePagination": {
+    "first": 20,
+    "afterLoadMore": 21,
+    "scope": "Phase27 final/langen/topicphase27-final before owned canonical target privatization"
+  },
+  "matrix": [
+    {
+      "surface": "correction",
+      "width": 320,
+      "scroll": 305,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 193,
+          "right": 249,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 173,
+          "right": 239,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 375,
+      "scroll": 360,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 248,
+          "right": 304,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 228,
+          "right": 294,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 390,
+      "scroll": 375,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 263,
+          "right": 319,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 243,
+          "right": 309,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 412,
+      "scroll": 397,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 285,
+          "right": 341,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 265,
+          "right": 331,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 768,
+      "scroll": 753,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 509.734375,
+          "right": 605.796875,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 538.9375,
+          "right": 645.96875,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 414.125,
+          "right": 525.5625,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 407.5625,
+          "right": 522.28125,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "en",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Community post"
+        },
+        {
+          "tag": "H2",
+          "text": "Correction proposal"
+        },
+        {
+          "tag": "H3",
+          "text": "Original"
+        },
+        {
+          "tag": "H3",
+          "text": "Suggested correction"
+        },
+        {
+          "tag": "H3",
+          "text": "Share your perspective"
+        },
+        {
+          "tag": "H2",
+          "text": "Discussion and contributions"
+        },
+        {
+          "tag": "H2",
+          "text": "Read carefully, ask clearly, learn together."
+        }
+      ],
+      "editors": [
+        {
+          "label": "Suggested correction *",
+          "width": 748,
+          "right": 862,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "width": 744,
+          "right": 860,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 320,
+      "scroll": 305,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 193,
+          "right": 249,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 173,
+          "right": 239,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 375,
+      "scroll": 360,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 248,
+          "right": 304,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 228,
+          "right": 294,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 390,
+      "scroll": 375,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 263,
+          "right": 319,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 243,
+          "right": 309,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 412,
+      "scroll": 397,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 285,
+          "right": 341,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 265,
+          "right": 331,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 768,
+      "scroll": 753,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 509.734375,
+          "right": 605.796875,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 489.484375,
+          "right": 596.515625,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 414.125,
+          "right": 525.5625,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 407.5625,
+          "right": 522.28125,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "correction",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Bản sửa đề xuất *",
+          "width": 748,
+          "right": 862,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "width": 744,
+          "right": 860,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "accepted": true
+    },
+    {
+      "surface": "question",
+      "width": 320,
+      "scroll": 305,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 249,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 239,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 375,
+      "scroll": 360,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 304,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 294,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 390,
+      "scroll": 375,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 319,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 309,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 412,
+      "scroll": 397,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 341,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 331,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 768,
+      "scroll": 753,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 656.9375,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 645.96875,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 525.5625,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 522.28125,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "vi",
+      "editors": [
+        {
+          "label": "Câu trả lời *",
+          "right": 862,
+          "height": 98
+        },
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 860,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 320,
+      "scroll": 305,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 249,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 239,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 375,
+      "scroll": 360,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 304,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 294,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 390,
+      "scroll": 375,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 319,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 309,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 412,
+      "scroll": 397,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 341,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 331,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 768,
+      "scroll": 753,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 656.9375,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 645.96875,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 525.5625,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 522.28125,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "question",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "en",
+      "editors": [
+        {
+          "label": "Answer *",
+          "right": 862,
+          "height": 98
+        },
+        {
+          "label": "Share your thoughts",
+          "right": 860,
+          "height": 122
+        }
+      ],
+      "actions": true,
+      "questionOccurrences": 1
+    },
+    {
+      "surface": "feed-filter",
+      "width": 320,
+      "scroll": 305,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 375,
+      "scroll": 360,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 390,
+      "scroll": 375,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 412,
+      "scroll": 397,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 768,
+      "scroll": 753,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "en",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Applied filters: Search community posts: “Phase27 final” · By language: English · Exact topic: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 320,
+      "scroll": 305,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 375,
+      "scroll": 360,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 390,
+      "scroll": 375,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 412,
+      "scroll": 397,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 768,
+      "scroll": 753,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "feed-filter",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "vi",
+      "labels": true,
+      "controlsFit": true,
+      "articles": 20,
+      "filterSummary": [
+        "Bộ lọc đang áp dụng: Tìm bài viết cộng đồng: “Phase27 final” · Theo ngôn ngữ: English · Chủ đề chính xác: phase27-final"
+      ]
+    },
+    {
+      "surface": "discussion",
+      "width": 320,
+      "scroll": 305,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 256
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 375,
+      "scroll": 360,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 311
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 390,
+      "scroll": 375,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 326
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 412,
+      "scroll": 397,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 348
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 768,
+      "scroll": 753,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 662.96875
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 539.28125
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "vi",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Chia sẻ suy nghĩ của bạn",
+          "right": 877
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 320,
+      "scroll": 305,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 256
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 375,
+      "scroll": 360,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 311
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 390,
+      "scroll": 375,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 326
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 412,
+      "scroll": 397,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 348
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 768,
+      "scroll": 753,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 662.96875
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 539.28125
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "discussion",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "en",
+      "commentVisible": true,
+      "replyVisible": true,
+      "replyButtons": 1,
+      "editors": [
+        {
+          "label": "Share your thoughts",
+          "right": 877
+        }
+      ],
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 320,
+      "scroll": 305,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 375,
+      "scroll": 360,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 390,
+      "scroll": 375,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 412,
+      "scroll": 397,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 768,
+      "scroll": 753,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "vi",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 320,
+      "scroll": 305,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 375,
+      "scroll": 360,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 390,
+      "scroll": 375,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 412,
+      "scroll": 397,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 768,
+      "scroll": 753,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    },
+    {
+      "surface": "group",
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "en",
+      "privateLabel": true,
+      "unavailableCard": true,
+      "longUnicode": true,
+      "actions": true
+    }
+  ],
+  "editorCap": {
+    "editor": [
+      {
+        "rows": 3,
+        "height": 240,
+        "overflow": "auto",
+        "unicodeCount": 2430,
+        "scrollHeight": 792
+      }
+    ],
+    "focus": "TEXTAREA"
+  },
+  "lighthouse": {
+    "correctionDesktopVI": {
+      "accessibility": 100,
+      "passed": 39,
+      "failed": 0
+    },
+    "correctionMobileEN": {
+      "accessibility": 100,
+      "passed": 39,
+      "failed": 0
+    },
+    "feedDesktopEN": {
+      "accessibility": 100,
+      "passed": 41,
+      "failed": 0
+    }
+  },
+  "screenReader": "NOT_RUN",
+  "fixtureCleanup": "PASS_RESIDUAL_ROWS_0",
+  "limits": [
+    "Synthetic TEST only; real-user usability/value not inferred",
+    "Library native revocation not performed; isolated SQL proof reused",
+    "Inherited same-cookie multi-tab refresh limitation remains bounded as documented",
+    "Some unchanged interaction and authorization cases reuse prior002-005 proof with revision attribution"
+  ],
+  "independentFinalReview": "APPROVE_BOUNDED_SOURCE_EVIDENCE"
+}

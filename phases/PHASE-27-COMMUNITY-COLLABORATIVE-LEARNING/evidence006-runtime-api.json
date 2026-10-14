@@ -1,0 +1,220 @@
+{
+  "runId": "64a866f0-a2b1-4f1a-a7f2-efd796edf621",
+  "backendMainSHA": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "frontendSHA": "ff261bf5f8cb686b15e2e0767740aff405fd5cab",
+  "result": "PASS_WITH_DOCUMENTED_NOT_RUN",
+  "tests": [
+    {
+      "name": "depth-two-denied",
+      "actor": "C",
+      "status": 400,
+      "code": "COMMUNITY_COMMENT_DEPTH_EXCEEDED",
+      "pass": true
+    },
+    {
+      "name": "self-helpful-denied",
+      "actor": "B",
+      "status": 403,
+      "code": "CORRECTIONS_SELF_VOTE",
+      "pass": true
+    },
+    {
+      "name": "nonrequester-accept-denied",
+      "actor": "C",
+      "status": 403,
+      "code": "CORRECTIONS_ACCEPT_FORBIDDEN",
+      "pass": true
+    },
+    {
+      "name": "native-response-prerequisites",
+      "pass": true
+    },
+    {
+      "name": "combined-search-21",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-DISCUSSION",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-QUESTION",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-CORRECTION_REQUEST",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-RESOURCE",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-LEARNING_JOURNAL",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-CULTURE",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-PRONUNCIATION_REQUEST",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "post-type-CHALLENGE",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "literal-no-match",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "other-active-language",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "other-topic",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "current-question-UNANSWERED",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "current-question-ANSWERED",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "current-question-ACCEPTED",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "before-answer-and-accept-transitions",
+      "result": "NOT_RUN_ALREADY_COMPLETED_NATIVELY"
+    },
+    {
+      "name": "pagination-first-NEWEST",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "pagination-next-NEWEST",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "pagination-first-USEFUL",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "pagination-next-USEFUL",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "save-owned-discussion",
+      "actor": "A",
+      "status": 201,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "save-owned-question",
+      "actor": "A",
+      "status": 201,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "saved-actor-cursor",
+      "actor": "A",
+      "status": 200,
+      "code": null,
+      "pass": true
+    },
+    {
+      "name": "saved-cursor-foreign-actor",
+      "actor": "B",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR",
+      "pass": true
+    },
+    {
+      "name": "saved-cursor-tampered",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR",
+      "pass": true
+    },
+    {
+      "name": "saved-cursor-changed-filter",
+      "actor": "A",
+      "status": 400,
+      "code": "COMMUNITY_INVALID_CURSOR",
+      "pass": true
+    },
+    {
+      "name": "anonymous-saved-denied",
+      "status": 401,
+      "code": "COMMUNITY_AUTH_REQUIRED",
+      "pass": true
+    }
+  ],
+  "fixtureCleanup": "PASS_RESIDUAL_ROWS_0",
+  "productionMutated": false
+}
