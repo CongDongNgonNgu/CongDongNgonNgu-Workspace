@@ -1,0 +1,184 @@
+{
+  "runId": "64a866f0-a2b1-4f1a-a7f2-efd796edf621",
+  "backendMainSHA": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "result": "PASS",
+  "tests": [
+    {
+      "actor": "B",
+      "name": "empty-current-membership-list",
+      "status": 200,
+      "total": 0,
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "get-detail",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "get/members",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "get/texts",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "get/invitations",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "get/reports",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "get/stream",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "sync",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "send",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "context",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "read",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "B",
+      "name": "report",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "empty-current-membership-list",
+      "status": 200,
+      "total": 0,
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "get-detail",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "get/members",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "get/texts",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "get/invitations",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "get/reports",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "get/stream",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "sync",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "send",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "context",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "read",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "actor": "C",
+      "name": "report",
+      "status": 404,
+      "code": "GROUP_UNAVAILABLE",
+      "pass": true
+    },
+    {
+      "name": "unblocked-before-removal-independent-domain-state",
+      "membershipCount": 2,
+      "activeExchangeBlockCount": 0,
+      "removedMemberVerified": true,
+      "pass": true
+    }
+  ],
+  "fixtureCleanup": "PASS_RESIDUAL_ROWS_0",
+  "productionMutated": false
+}

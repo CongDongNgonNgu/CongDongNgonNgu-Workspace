@@ -1,6 +1,6 @@
 ﻿# Phase27 group collaboration acceptance (004)
 
-2026-10-14 Asia/Saigon. **Status: VERIFIED_PENDING_WORKSPACE_LIFECYCLE.** Bounded product/runtime observations and exact-owned fixture cleanup passed; Workspace review/PR/main-CI/branch-cleanup gates remain pending. This is not004 DONE or a final Phase27 verdict. Root coordinator supplied the latest native observations and updated the saved JSON cleanup fields.
+2026-10-14 Asia/Saigon. **Status: DONE.** Bounded product/runtime observations and exact-owned fixture cleanup passed; Workspace review/PR/main-CI/branch-cleanup gates remain pending. This is not004 DONE or a final Phase27 verdict. Root coordinator supplied the latest native observations and updated the saved JSON cleanup fields.
 
 ## Integrated source and TEST deployment
 
@@ -32,7 +32,7 @@ Earlier local/source/isolated SQL gates are recorded in [review journal](REVIEW-
 
 Paired VI/EN native checks at320,375,390,412,768,1024,1440 found no horizontal overflow in accepted group views, including multiline/long Unicode/URL-like text. Labels and polite status regions were observed. Earlier Lighthouse snapshot92 exposed inactive `aria-controls` pointing at unmounted panels and Leave-button contrast2.22:1. PR44 corrected both. Final deployed B group snapshot: Lighthouse accessibility100,40 passed audits/zero failures; measured text RGB(104,44,0) on RGB(253,138,66) contrast4.56:1. These are bounded automated/native observations, not complete WCAG or screen-reader certification.
 
-## Limitations and remaining gates
+## Limitations and historical pre-integration checkpoint
 
 [Known limitations](KNOWN-LIMITATIONS-004.md) retain the inherited same-cookie multi-tab refresh limitation, separate from accepted one-tab-per-actor and same-tab canonical opening journeys. Library revocation has isolated SQL proof only; native Library opening used an existing public prior fixture without mutating it. Native canonical revocation used an exactly owned Community post. Screen reader NOT_RUN. No real-user value, production scalability or universal authorization proof is claimed.
 
@@ -40,6 +40,10 @@ Current product findings are remediated and bounded source reviews approved. Fin
 
 No production mutation, provider/payment/AI/voice/video expansion or Phase28/29. After all pending004 gates pass, record004 DONE and proceed automatically through005/006 under existing authorization.
 
-## Current closure projection
+## Historical pre-integration projection
 
 004/005 share the pending Workspace closeout PR because004 final native accessibility acceptance required the bounded005 frontend follow-up.005 source clarification proceeded alongside004 final verification; it did not create a second group domain or broaden discovery. Both remain VERIFIED_PENDING_WORKSPACE_LIFECYCLE,006 PLANNED, Phase27 verdict NOT_REACHED. Workspace syntax check,12 monitor tests and diff check PASS; required Workspace PR/main CI, merge verification, temporary branch cleanup and sync are still pending.
+
+## Verified lifecycle closure
+
+2026-10-14 Workspace PR162 reviewed candidate8612208, merged as55783af5bf2e11c1fd34a349ce88c4d5ef88bd64 with exact reviewed-tree verification. Main CI38506681884 / job115665683824 PASS. Remote/local temporary branch deleted, stale refs pruned and Workspace main clean/synchronized before creating docs/phase27-final-acceptance. Combined004/005 closure is complete; no pending product/runtime/cleanup gate remains for those subphases.006 is now IN_PROGRESS and Phase27 verdict remains NOT_REACHED.

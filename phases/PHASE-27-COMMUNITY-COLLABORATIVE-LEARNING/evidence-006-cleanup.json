@@ -1,0 +1,33 @@
+{
+  "runId": "64a866f0-a2b1-4f1a-a7f2-efd796edf621",
+  "deleted": {
+    "study_group_texts": 7,
+    "study_group_invitations": 1,
+    "community_correction_requests": 1,
+    "community_reports": 1,
+    "language_exchange_languages": 2,
+    "language_exchange_preferences": 1,
+    "user_languages": 2,
+    "direct_message_rate_limits": 2,
+    "exchange_action_rate_limits": 1,
+    "study_group_rate_limits": 9,
+    "study_group_memberships": 2,
+    "study_groups": 1,
+    "notification_read_states": 6,
+    "notifications": 6,
+    "phase06_contribution_events": 4,
+    "community_structured_response_votes": 1,
+    "community_structured_response_acceptances": 2,
+    "community_saved_posts": 2,
+    "community_comments": 5,
+    "user_profiles": 3,
+    "auth_sessions": 52,
+    "user_roles": 3,
+    "community_structured_responses": 2,
+    "community_posts": 22,
+    "users": 3
+  },
+  "residualRows": 0,
+  "state": "CLEANED",
+  "productionMutated": false
+}
