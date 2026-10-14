@@ -1,0 +1,9 @@
+{
+  "runId": "6c138be8-f797-4f0a-85f2-f2e3173aa105",
+  "state": "CLEANED",
+  "guard": "EXACT_APPROVED_TEST_TLS_LEDGER38_AND_SYNTHETIC_ACTOR_OWNERSHIP",
+  "deleted": {"study_group_texts":7,"study_group_invitations":2,"direct_message_rate_limits":2,"study_group_rate_limits":11,"study_group_memberships":4,"study_groups":2,"community_posts":1,"user_profiles":3,"auth_sessions":110,"user_roles":3,"users":3},
+  "residualRows": 0,
+  "libraryPriorFixtureMutated": false,
+  "productionMutated": false
+}

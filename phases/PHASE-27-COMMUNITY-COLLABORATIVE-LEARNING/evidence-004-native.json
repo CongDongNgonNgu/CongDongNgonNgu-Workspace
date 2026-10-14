@@ -1,0 +1,165 @@
+{
+  "status": "VERIFIED_PENDING_WORKSPACE_LIFECYCLE",
+  "backendMain": "bcca2f0e1cbc2d08198c0ca01e2021db7311d438",
+  "frontendMain": "428bba6cb60c3e9040b7b7be8de370f09feb4638",
+  "fixtureRun": "6c138be8-f797-4f0a-85f2-f2e3173aa105",
+  "checks": {
+    "nativeLibrarySameTabOpen": "PASS",
+    "nativeCommunityShareCatchupOpen": "PASS",
+    "ownedCommunitySoftDeleteCardMask": "PASS",
+    "nativeHideReconciliationKeepsDraft": "PASS",
+    "nativeMemberPromotionRestoresHiddenHistory": "PASS",
+    "nativeDemotionPurgesHiddenTextAndPendingPrivilegedDialog": "PASS",
+    "unreadOwnHiddenExcluded": "PASS",
+    "nativeSessionRevocation": "PASS",
+    "nativeRemoval": "PASS",
+    "nativeArchive": "PASS"
+  },
+  "matrix": {
+    "vi": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"scroll\":305,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":32,\"y\":88.96875,\"width\":241,\"height\":90,\"top\":88.96875,\"right\":273,\"bottom\":178.96875,\"left\":32},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"scroll\":360,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":32,\"y\":88.765625,\"width\":296,\"height\":90,\"top\":88.765625,\"right\":328,\"bottom\":178.765625,\"left\":32},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"scroll\":375,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":32,\"y\":89.375,\"width\":311,\"height\":90,\"top\":89.375,\"right\":343,\"bottom\":179.375,\"left\":32},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"scroll\":397,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":32,\"y\":88.78125,\"width\":333,\"height\":90,\"top\":88.78125,\"right\":365,\"bottom\":178.78125,\"left\":32},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"scroll\":753,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":48,\"y\":-29.8125,\"width\":657,\"height\":90,\"top\":-29.8125,\"right\":705,\"bottom\":60.1875,\"left\":48},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"scroll\":1009,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":48,\"y\":-30.40625,\"width\":864,\"height\":90,\"top\":-30.40625,\"right\":912,\"bottom\":59.59375,\"left\":48},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"scroll\":1425,\"lang\":\"vi\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"textarea\":{\"x\":136.5,\"y\":-30.40625,\"width\":864,\"height\":90,\"top\":-30.40625,\"right\":1000.5,\"bottom\":59.59375,\"left\":136.5},\"labels\":true,\"status\":\"polite\"}\n```"
+          }
+        ]
+      }
+    ],
+    "en": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":320,\"scroll\":305,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":375,\"scroll\":360,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":390,\"scroll\":375,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":412,\"scroll\":397,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":768,\"scroll\":753,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1024,\"scroll\":1009,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "text": "Script ran on page and returned:\n```json\n{\"width\":1440,\"scroll\":1425,\"lang\":\"en\",\"draft\":\"Unsent draft giữ nguyên sau hide 日本語 😀 6c138be8\",\"labels\":true,\"status\":\"polite\",\"main\":\"Community / My study groups\\nPhase27 group 6c138be8 日本語 😀\\n\\nSynthetic TEST only. Nhóm riêng tư để kiểm chứng cộng tác, không dùng dữ liệu người thật.\\n\\nMember\\nLea\"}\n```"
+          }
+        ]
+      }
+    ]
+  },
+  "accessibility": {
+    "keyboardAndLabels": "PARTIAL_PASS",
+    "lighthouseSnapshot": {
+      "accessibility": 92,
+      "bestPractices": 100,
+      "seo": 100,
+      "blockingFindings": [
+        "inactive aria-controls target absent",
+        "Leave group contrast 2.22:1"
+      ],
+      "remediation": "PASS_FE_ff261bf5f8cb686b15e2e0767740aff405fd5cab_NATIVE_100_40_PASS_0_FAIL"
+    },
+    "screenReader": "NOT_RUN"
+  },
+  "cleanup": "PASS_RESIDUAL_ROWS_0",
+  "limits": [
+    "Synthetic TEST actors only",
+    "Library current public prior fixture read only; revocation proved in isolated SQL",
+    "Inherited same-cookie multi-tab session rotation deferred as documented"
+  ],
+  "finalAccessibilityFrontendMain": "ff261bf5f8cb686b15e2e0767740aff405fd5cab",
+  "checkpointScope": "Baseline native interaction on428bba6; final accessibility remediation and recheck onff261bf, see evidence-005-native.json",
+  "encodingCorrection": {
+    "cause": "PowerShell 5 default-encoding read during JSON metadata updates corrupted non-ASCII capture strings",
+    "restoration": "Matrix restored byte-for-byte from retained original native tool responses; no guessed text or new test execution",
+    "restoredAt": "2026-10-14",
+    "originalSnapshotStatuses": "IN_PROGRESS before runtime completion",
+    "currentClosure": "ACCEPTANCE-004.md"
+  }
+}

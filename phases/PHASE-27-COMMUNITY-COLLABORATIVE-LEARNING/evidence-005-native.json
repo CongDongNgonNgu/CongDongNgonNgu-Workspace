@@ -1,0 +1,219 @@
+{
+  "status": "VERIFIED_PENDING_WORKSPACE_LIFECYCLE",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "frontendMain": "ff261bf5f8cb686b15e2e0767740aff405fd5cab",
+  "renderDeployment": "dep-db7eg6o473hc73d3ep60",
+  "renderLiveDuration": "1m05s",
+  "vercelDeployment": "FuBFKaG49XmUkUM3D8YUMCsKK4pH",
+  "vercelReadyCurrentDomain": true,
+  "fixtureRun": "6c138be8-f797-4f0a-85f2-f2e3173aa105",
+  "group": "3f6d013a-d610-49e6-ac58-1862247e46f4",
+  "native": {
+    "createFixedPrivacyVI": "PASS",
+    "manualInviteExplicitAcceptEN": "PASS",
+    "detailPrivacyVIEN": "PASS",
+    "longUnicodeUrlRealtimeUnread": "PASS",
+    "outsiderOwnListNoMetadata": "PASS"
+  },
+  "matrix": {
+    "vi": [
+      {
+        "width": 320,
+        "scroll": 305,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 375,
+        "scroll": 360,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 390,
+        "scroll": 375,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 412,
+        "scroll": 397,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 768,
+        "scroll": 753,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 1024,
+        "scroll": 1009,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 1440,
+        "scroll": 1425,
+        "lang": "vi",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Đã kết nối · 1 văn bản chưa đọc"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      }
+    ],
+    "en": [
+      {
+        "width": 320,
+        "scroll": 305,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 375,
+        "scroll": 360,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 390,
+        "scroll": 375,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 412,
+        "scroll": 397,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 768,
+        "scroll": 753,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 1024,
+        "scroll": 1009,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      },
+      {
+        "width": 1440,
+        "scroll": 1425,
+        "lang": "en",
+        "longTextVisible": true,
+        "unread": [
+          "",
+          "Connected · 1 unread texts"
+        ],
+        "privateLabel": true,
+        "editorHeight": 90
+      }
+    ]
+  },
+  "accessibility": {
+    "lighthouse": {
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "agenticBrowsing": 100,
+      "passed": 40,
+      "failed": 0,
+      "mode": "snapshot",
+      "device": "desktop",
+      "surface": "member group empty"
+    },
+    "leaveButtonComputed": {
+      "foreground": "rgb(104, 44, 0)",
+      "background": "rgb(253, 138, 66)",
+      "contrast": 4.56
+    },
+    "screenReader": "NOT_RUN"
+  },
+  "formMatrix": "PASS_28_COMBINATIONS_SEE_evidence-005-forms-native.json",
+  "fixtureCleanup": "PASS_RESIDUAL_ROWS_0",
+  "branchCleanup": "PASS_BOTH_PRODUCT_REPOSITORIES",
+  "encodingCorrection": {
+    "cause": "PowerShell default-encoding metadata rewrite",
+    "restoration": "Matrix restored from retained original native tool responses",
+    "currentClosure": "ACCEPTANCE-005.md"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "APPLIED_ON_OWNER_APPROVED_TEST",
+  "target": "OWNER_APPROVED_TEST",
+  "backendMainSha": "bcca2f0e1cbc2d08198c0ca01e2021db7311d438",
+  "reviewedTreeMatchesRemoteMain": true,
+  "filename": "0038_phase27_group_collaboration.sql",
+  "normalizedSha256": "a0f88301068898f850d103f124ad5521bbb221c03f885ed347322f4f968ca29e",
+  "preflight": {
+    "result": "PASS",
+    "clientTls": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 37,
+    "ledgerDigest": "dcdd5548bbf4ffb70df88409a95236424f9eb9541a6e1e2286381c41bfde07e3"
+  },
+  "mainCi": "PASS: 38390944273/job/115274290947",
+  "after": {
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428"
+  },
+  "publicMigrationApplied": true,
+  "renderDeployment": "dep-db71fd59fdbs73enarq0",
+  "renderState": "DEPLOY_SUCCEEDED_LIVE",
+  "renderExactMainVerified": true,
+  "renderDuration": "1m11s",
+  "backendHealth": { "httpStatus": 200, "status": "ok" },
+  "productionMutated": false
+}
