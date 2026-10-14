@@ -1,0 +1,228 @@
+{
+    "runId":  "6c138be8-f797-4f0a-85f2-f2e3173aa105",
+    "backendMainSha":  "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+    "deploymentProof":  "EXTERNAL_ROOT_GATE",
+    "result":  "PASS",
+    "tests":  [
+                  {
+                      "name":  "unauthenticated",
+                      "status":  401,
+                      "code":  "AUTH_UNAUTHORIZED",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unauthenticated/3f6d013a-d610-49e6-ac58-1862247e46f4",
+                      "status":  401,
+                      "code":  "AUTH_UNAUTHORIZED",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unauthenticated/3f6d013a-d610-49e6-ac58-1862247e46f4/members",
+                      "status":  401,
+                      "code":  "AUTH_UNAUTHORIZED",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unauthenticated/3f6d013a-d610-49e6-ac58-1862247e46f4/texts",
+                      "status":  401,
+                      "code":  "AUTH_UNAUTHORIZED",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unauthenticated/3f6d013a-d610-49e6-ac58-1862247e46f4/stream",
+                      "status":  401,
+                      "code":  "AUTH_UNAUTHORIZED",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "owner-private-detail",
+                      "actor":  "A",
+                      "status":  200,
+                      "code":  null,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "owner-private-list",
+                      "actor":  "A",
+                      "status":  200,
+                      "code":  null,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-empty-membership-list",
+                      "actor":  "C",
+                      "status":  200,
+                      "code":  null,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-real-id",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-nonexistent-id",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider/members",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider/invitations",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider/texts",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider/reports",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider/stream",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-sync",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-send",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-context",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-read",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "outsider-report",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unsupported-discovery-q",
+                      "actor":  "C",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unsupported-discovery-search",
+                      "actor":  "C",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unsupported-discovery-languageCode",
+                      "actor":  "C",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unsupported-discovery-topic",
+                      "actor":  "C",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "unsupported-discovery-visibility",
+                      "actor":  "C",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "injected-create-PUBLIC_JOINABLE",
+                      "actor":  "A",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "injected-create-PUBLIC_REQUEST_TO_JOIN",
+                      "actor":  "A",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "member-cannot-invite",
+                      "actor":  "B",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "member-cannot-archive",
+                      "actor":  "B",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "member-cannot-self-elevate",
+                      "actor":  "B",
+                      "status":  400,
+                      "code":  "HTTP_400",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "member-cannot-promote-self",
+                      "actor":  "B",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "member-cannot-transfer-ownership",
+                      "actor":  "B",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE",
+                      "pass":  true
+                  }
+              ],
+    "fixtureCleanup":  "PASS_RESIDUAL_ROWS_0",
+    "productionMutated":  false
+}

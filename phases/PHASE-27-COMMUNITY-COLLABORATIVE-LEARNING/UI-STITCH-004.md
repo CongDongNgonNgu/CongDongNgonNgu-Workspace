@@ -1,0 +1,5 @@
+#004 private group design review
+
+Stitch project10625997709031324983. Desktop297286d414814d46860555def6f431c7 screenshotaf2a1280ea6945f285761b40ab78487e; mobile6a0ff9642a9540788e678233079be990 screenshot09ee0b614b0c497da64fcd25a11f05bf. Bothimages downloaded/visuallyreviewed before visual implementation, root filesoutside repos.
+
+Keepflattext/currentcanonicalcards+genericunavailable,compact3row240editor,connection/unread/explcitmarkread,normalresponsive singlecolumnmobile withexistingtokens/components. Reject generated ordinaryMEMBERcopy-invite controls (owneronly), onlinepresence/typing/latency42ms/onlinecounts, pinnedresources/newtools/navigation/leaderboard, fakelevels/rolemetrics. GeneratedFIFOrolling20retention is false: current cap20 returnsfull, noautomaticoldtext deletion. RetainnormaltextareaEnternewline andexplicitSend; generatedEnter-sendnotaccepted. Selectedlocalealone, no bilinguallabelnoise. Source/nativeacceptance remainsseparate; concept is notproof ofroles/currentACL or responsiveaccessibility.

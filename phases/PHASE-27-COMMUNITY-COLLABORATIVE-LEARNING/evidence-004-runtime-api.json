@@ -1,0 +1,133 @@
+{
+    "runId":  "6c138be8-f797-4f0a-85f2-f2e3173aa105",
+    "backendMainSha":  "bcca2f0e1cbc2d08198c0ca01e2021db7311d438",
+    "state":  "API_NATIVE_PASS_PENDING_WORKSPACE_LIFECYCLE",
+    "tests":  [
+                  {
+                      "name":  "retry-original",
+                      "actor":  "A",
+                      "status":  201,
+                      "code":  null
+                  },
+                  {
+                      "name":  "retry-identical",
+                      "actor":  "A",
+                      "status":  201,
+                      "code":  null
+                  },
+                  {
+                      "name":  "idempotent-same-ack",
+                      "pass":  true
+                  },
+                  {
+                      "name":  "retry-conflict",
+                      "actor":  "A",
+                      "status":  409,
+                      "code":  "GROUP_SEND_CONFLICT"
+                  },
+                  {
+                      "name":  "owner-current-sync",
+                      "actor":  "A",
+                      "status":  200,
+                      "code":  null
+                  },
+                  {
+                      "name":  "cursor-actor-scope",
+                      "actor":  "B",
+                      "status":  400,
+                      "code":  "GROUP_INVALID_CURSOR"
+                  },
+                  {
+                      "name":  "cursor-limit-scope",
+                      "actor":  "A",
+                      "status":  400,
+                      "code":  "GROUP_INVALID_CURSOR"
+                  },
+                  {
+                      "name":  "cursor-tamper",
+                      "actor":  "A",
+                      "status":  400,
+                      "code":  "GROUP_INVALID_CURSOR"
+                  },
+                  {
+                      "name":  "outsider-get-detail",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-get/members",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-get/texts",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-get/invitations",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-get/reports",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-sync",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-context",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-read",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "outsider-report",
+                      "actor":  "C",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "member-cannot-invite",
+                      "actor":  "B",
+                      "status":  404,
+                      "code":  "GROUP_UNAVAILABLE"
+                  },
+                  {
+                      "name":  "current-library-context",
+                      "actor":  "B",
+                      "status":  200,
+                      "code":  null
+                  },
+                  {
+                      "name":  "observed-read",
+                      "actor":  "A",
+                      "status":  200,
+                      "code":  null
+                  },
+                  {
+                      "name":  "monotonic-read",
+                      "actor":  "A",
+                      "status":  200,
+                      "code":  null
+                  }
+              ],
+    "fixtureCleanup":  "PASS_RESIDUAL_ROWS_0",
+    "productionMutated":  false
+}

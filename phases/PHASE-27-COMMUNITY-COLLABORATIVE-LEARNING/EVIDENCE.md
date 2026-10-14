@@ -1,3 +1,15 @@
+# Current004/005 evidence - 2026-10-14
+
+Status: VERIFIED_PENDING_WORKSPACE_LIFECYCLE for004/005;006 PLANNED; Phase27 verdict NOT_REACHED. [004 acceptance](ACCEPTANCE-004.md) and [005 acceptance](ACCEPTANCE-005.md) record exact reviewed/main source, required product CI, TEST deployments, bounded native/API checks and independent source reviews.
+
+Exact-owned runtime cleanup PASS:7 texts,2 invitations,11 group-rate rows,2 direct-rate rows,4 memberships,2 groups,1 owned Community post,3 profiles,110 sessions,3 role rows and3 synthetic users deleted. ResidualRows=0; manifest CLEANED and temporary runtime controller stop accepted. Existing prior Library fixture and unrelated TEST rows were not mutated. See [cleanup evidence](evidence-004-005-cleanup.json).
+
+Native005 forms:28 create/join/VI/EN/seven-width combinations passed; labels/controls/no overflow, initial Close focus/Escape/return focus passed in both locales. [Form evidence](evidence-005-forms-native.json). API00421checks and00532checks passed; current JSON cleanup fields updated by coordinator. Screen reader NOT_RUN. Inherited same-cookie multi-tab and Library native/SQL distinctions remain documented.
+
+004/005 share the pending Workspace closeout PR because004 final native accessibility acceptance required the bounded005 frontend follow-up.005 source clarification proceeded alongside004 final verification; it did not create a second group domain or broaden discovery. Both remain VERIFIED_PENDING_WORKSPACE_LIFECYCLE,006 PLANNED, Phase27 verdict NOT_REACHED. Workspace syntax check,12 monitor tests and diff check PASS; required Workspace PR/main CI, merge verification, temporary branch cleanup and sync are still pending.
+
+## Historical001 evidence below
+
 # LNG-27-001 evidence and handoff
 
 2026-10-13 Asia/Saigon. Audit/contract only; Backend/Frontend source unchanged. Current remote/local baseline matches all supplied heads; no reset/delta inheritance needed. Actual findings and decisions are [source audit](SOURCE-AUDIT.md) / [contract](CONTRACT.md); later risks/gates [threat model](THREAT-MODEL.md) / [acceptance plan](TEST-PLAN.md).
@@ -92,3 +104,6 @@ IndependentnativescopefoundmobileCSShidentirepostoptions/report/editdelete row. 
 
 
 002 lifecycle completed2026-10-13: WorkspacePR160 merged ascb128f07104dde0b2179a36393bcd72bb30f6514, exactheadCI38352979408/job115149356365 andmainCI38353034041/job115149517656 PASS. Reviewed aggregate tree equals remote main. Remote/local docs/phase27-002-evidence deleted, refs pruned, clean localmain synchronized. Product and Workspace gates now satisfied: LNG-27-002=DONE. LNG-27-003=IN_PROGRESS under existing automatic continuation authorization; Phase27 verdict remains NOT_REACHED.
+
+
+003 lifecycle complete2026-10-13: WorkspacePR161 merged68c017ad91c188b06449735b2683ef76e1c98eb3; exactheadCI38363573080/job115183261153 andmainCI38363644966/job115183497345 PASS. Aggregate reviewedtreeequalsmain; remote/localdocs/phase27-003-evidence deleted, pruned, syncedmain clean.003DONE;004IN_PROGRESS underexistingauthorization. No Phase28/29; verdictNOT_REACHED.

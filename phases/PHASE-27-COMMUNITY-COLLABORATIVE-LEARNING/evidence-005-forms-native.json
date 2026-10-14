@@ -1,0 +1,966 @@
+{
+  "frontendMain": "ff261bf5f8cb686b15e2e0767740aff405fd5cab",
+  "result": "PASS",
+  "join": [
+    {
+      "width": 320,
+      "scroll": 305,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 241,
+          "right": 273
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 241,
+          "right": 273
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 221.484375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scroll": 360,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 296,
+          "right": 328
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 296,
+          "right": 328
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 221.484375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scroll": 375,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 311,
+          "right": 343
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 311,
+          "right": 343
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 221.484375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scroll": 397,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 333,
+          "right": 365
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 333,
+          "right": 365
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 221.484375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scroll": 753,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 237.484375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 237.484375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "vi",
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm.",
+      "inputs": [
+        {
+          "label": "Mã nhóm *",
+          "required": true,
+          "width": 576,
+          "right": 712.5
+        },
+        {
+          "label": "Mã mời bí mật *",
+          "required": true,
+          "width": 576,
+          "right": 712.5
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Gia nhập bằng mã mời",
+          "right": 325.984375,
+          "width": 189.484375
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "scroll": 305,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 241,
+          "right": 273
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 241,
+          "right": 273
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 197.796875,
+          "width": 165.796875
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "scroll": 360,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 296,
+          "right": 328
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 296,
+          "right": 328
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 197.796875,
+          "width": 165.796875
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scroll": 375,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 311,
+          "right": 343
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 311,
+          "right": 343
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 197.796875,
+          "width": 165.796875
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "scroll": 397,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 333,
+          "right": 365
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 333,
+          "right": 365
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 197.796875,
+          "width": 165.796875
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scroll": 753,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 213.796875,
+          "width": 165.796875
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scroll": 1009,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 576,
+          "right": 624
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 213.796875,
+          "width": 165.796875
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scroll": 1425,
+      "lang": "en",
+      "main": "Community / My study groups\nJoin with invitation\n\nOnly current members can read group content. Author-private posts remain author-only.\n\nGroup ID *\nSecret invitation token *\n\nPaste the group ID and invitation token issued by the owner, then select Join with invitation to explicitly accept and join this private group. Each invitation is single-use and expires after 24 hours. A group ID alone does not grant access.\n\nJoin with invitation\n\nUp to 2 owned groups; 20 members, invitations, texts and reports per group.",
+      "inputs": [
+        {
+          "label": "Group ID *",
+          "required": true,
+          "width": 576,
+          "right": 712.5
+        },
+        {
+          "label": "Secret invitation token *",
+          "required": true,
+          "width": 576,
+          "right": 712.5
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Join with invitation",
+          "right": 302.296875,
+          "width": 165.796875
+        }
+      ]
+    }
+  ],
+  "create": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "lang": "vi",
+      "dialog": {
+        "x": 16,
+        "y": 139.515625,
+        "width": 288,
+        "height": 620.96875,
+        "top": 139.515625,
+        "right": 304,
+        "bottom": 760.484375,
+        "left": 16
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 283,
+          "width": 246
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 283,
+          "width": 246
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 283,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 140.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "lang": "vi",
+      "dialog": {
+        "x": 16,
+        "y": 151.90625,
+        "width": 343,
+        "height": 596.171875,
+        "top": 151.90625,
+        "right": 359,
+        "bottom": 748.078125,
+        "left": 16
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 338,
+          "width": 301
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 338,
+          "width": 301
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 338,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 140.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "lang": "vi",
+      "dialog": {
+        "x": 16,
+        "y": 151.90625,
+        "width": 358,
+        "height": 596.171875,
+        "top": 151.90625,
+        "right": 374,
+        "bottom": 748.078125,
+        "left": 16
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 353,
+          "width": 316
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 353,
+          "width": 316
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 353,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 140.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 412,
+      "scroll": 412,
+      "lang": "vi",
+      "dialog": {
+        "x": 16,
+        "y": 164.3125,
+        "width": 380,
+        "height": 571.375,
+        "top": 164.3125,
+        "right": 396,
+        "bottom": 735.6875,
+        "left": 16
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 375,
+          "width": 338
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 375,
+          "width": 338
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 375,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 140.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "lang": "vi",
+      "dialog": {
+        "x": 112,
+        "y": 176.703125,
+        "width": 544,
+        "height": 546.578125,
+        "top": 176.703125,
+        "right": 656,
+        "bottom": 723.28125,
+        "left": 112
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 635,
+          "width": 502
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 635,
+          "width": 502
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 635,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 236.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "lang": "vi",
+      "dialog": {
+        "x": 240,
+        "y": 176.703125,
+        "width": 544,
+        "height": 546.578125,
+        "top": 176.703125,
+        "right": 784,
+        "bottom": 723.28125,
+        "left": 240
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 763,
+          "width": 502
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 763,
+          "width": 502
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 763,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 364.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "lang": "vi",
+      "dialog": {
+        "x": 448,
+        "y": 176.703125,
+        "width": 544,
+        "height": 546.578125,
+        "top": 176.703125,
+        "right": 992,
+        "bottom": 723.28125,
+        "left": 448
+      },
+      "copy": "Tên nhóm *\n\nTối đa 120 ký tự.\n\nMô tả (không bắt buộc)\n\nTối đa 500 ký tự.\n\nNhóm luôn riêng tư, chỉ tham gia qua lời mời. Chỉ chủ nhóm cấp mã mời; người nhận phải chủ động chấp nhận để gia nhập. Chỉ có mã nhóm không cấp quyền truy cập.\n\nTạo nhóm",
+      "inputs": [
+        {
+          "label": "Tên nhóm *",
+          "right": 971,
+          "width": 502
+        },
+        {
+          "label": "Mô tả (không bắt buộc) ",
+          "right": 971,
+          "width": 502
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 971,
+          "width": 44
+        },
+        {
+          "text": "Tạo nhóm",
+          "right": 572.296875,
+          "width": 103.296875
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "lang": "en",
+      "dialog": {
+        "x": 16,
+        "y": 139.515625,
+        "width": 288,
+        "height": 620.96875,
+        "top": 139.515625,
+        "right": 304,
+        "bottom": 760.484375,
+        "left": 16
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 283,
+          "width": 246
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 283,
+          "width": 246
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 283,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 163.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "lang": "en",
+      "dialog": {
+        "x": 16,
+        "y": 151.90625,
+        "width": 343,
+        "height": 596.171875,
+        "top": 151.90625,
+        "right": 359,
+        "bottom": 748.078125,
+        "left": 16
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 338,
+          "width": 301
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 338,
+          "width": 301
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 338,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 163.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "lang": "en",
+      "dialog": {
+        "x": 16,
+        "y": 151.90625,
+        "width": 358,
+        "height": 596.171875,
+        "top": 151.90625,
+        "right": 374,
+        "bottom": 748.078125,
+        "left": 16
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 353,
+          "width": 316
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 353,
+          "width": 316
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 353,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 163.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 412,
+      "scroll": 412,
+      "lang": "en",
+      "dialog": {
+        "x": 16,
+        "y": 164.3125,
+        "width": 380,
+        "height": 571.375,
+        "top": 164.3125,
+        "right": 396,
+        "bottom": 735.6875,
+        "left": 16
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 375,
+          "width": 338
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 375,
+          "width": 338
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 375,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 163.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "lang": "en",
+      "dialog": {
+        "x": 112,
+        "y": 176.703125,
+        "width": 544,
+        "height": 546.578125,
+        "top": 176.703125,
+        "right": 656,
+        "bottom": 723.28125,
+        "left": 112
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 635,
+          "width": 502
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 635,
+          "width": 502
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 635,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 259.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "lang": "en",
+      "dialog": {
+        "x": 240,
+        "y": 176.703125,
+        "width": 544,
+        "height": 546.578125,
+        "top": 176.703125,
+        "right": 784,
+        "bottom": 723.28125,
+        "left": 240
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 763,
+          "width": 502
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 763,
+          "width": 502
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 763,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 387.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "lang": "en",
+      "dialog": {
+        "x": 448,
+        "y": 176.703125,
+        "width": 544,
+        "height": 546.578125,
+        "top": 176.703125,
+        "right": 992,
+        "bottom": 723.28125,
+        "left": 448
+      },
+      "copy": "Group name *\n\nUp to 120 characters.\n\nDescription (optional)\n\nUp to 500 characters.\n\nGroups are always private and invitation only. Only the owner can issue invitations; recipients must explicitly accept to join. A group ID alone does not grant access.\n\nCreate group",
+      "inputs": [
+        {
+          "label": "Group name *",
+          "right": 971,
+          "width": 502
+        },
+        {
+          "label": "Description (optional) ",
+          "right": 971,
+          "width": 502
+        }
+      ],
+      "buttons": [
+        {
+          "text": "",
+          "right": 971,
+          "width": 44
+        },
+        {
+          "text": "Create group",
+          "right": 595.578125,
+          "width": 126.578125
+        }
+      ],
+      "focusInside": true
+    }
+  ],
+  "keyboard": {
+    "initialCloseFocus": true,
+    "escapeCloses": true,
+    "returnsToCreateButtonVIEN": true
+  },
+  "screenReader": "NOT_RUN"
+}
