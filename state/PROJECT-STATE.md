@@ -1,3 +1,7 @@
+# Phase28 active execution - 2026-10-16
+
+Owner authorizes complete Phase28 only; post-Phase27 roadmap unchanged. LNG-28-001 VERIFYING: deployed/source audit, capability freeze, Stitch and independent review complete; integration gates pending.002-005 PLANNED. PHASE_28_STATUS=IN_PROGRESS; PHASE_28_VERDICT=NOT_REACHED. Prior projections below historical. No Phase29/35/36 started. No production/payment mutation. See Phase28 dossier.
+
 # Phase27 final closeout — 2026-10-14
 
 001–005 DONE.006 technical acceptance and independent final review APPROVE; selected verdict GO_BOUNDED_COLLABORATION. Final fixture cleanup residual0.006/Phase27 DONE is effective only after this final Workspace PR merge/mainCI/exact-tree/remote-local branch-cleanup/sync gates pass. Until then: VERIFIED_PENDING_WORKSPACE_LIFECYCLE. Final PR terminal report records the resulting main SHA and actual gate outcome.
