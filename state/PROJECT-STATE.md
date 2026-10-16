@@ -1,6 +1,6 @@
 # Phase28 active execution - 2026-10-16
 
-Owner authorizes complete Phase28 only; post-Phase27 roadmap unchanged. LNG-28-001 VERIFYING: deployed/source audit, capability freeze, Stitch and independent review complete; integration gates pending.002-005 PLANNED. PHASE_28_STATUS=IN_PROGRESS; PHASE_28_VERDICT=NOT_REACHED. Prior projections below historical. No Phase29/35/36 started. No production/payment mutation. See Phase28 dossier.
+Owner authorizes complete Phase28 only; post-Phase27 roadmap unchanged. LNG-28-001 VERIFYING_PENDING_REQUIRED_RELAY: deployed/source audit, capability freeze, Stitch, independent review and PR164/mainCI/exact-tree/branch cleanup passed. Automatic approval review denied private coordinator-thread access; exact-thread approval or explicit relay waiver pending. See Phase28 LIFECYCLE-001.md.002-005 PLANNED/unstarted. PHASE_28_STATUS=BLOCKED_EXTERNAL; PHASE_28_VERDICT=NOT_REACHED. Prior projections below historical. No Phase29/35/36 started. No production/payment mutation. See Phase28 dossier.
 
 # Phase27 final closeout — 2026-10-14
 
