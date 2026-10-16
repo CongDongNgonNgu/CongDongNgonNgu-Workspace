@@ -1,49 +1,45 @@
-# V3 Planning Index
+# V3 Planning Index — Post-Phase27 Product Refinement
 
-## Current Phase27 authorization - 2026-10-13
+**Recorded:** 2026-10-16 (Asia/Ho_Chi_Minh)
 
-Owner authorized27-001 through006; current continuation001 ONLY. [Freeze](PHASE-27-COMMUNITY-COLLABORATIVE-LEARNING/CONTRACT.md) governs actual eight-type inventory, one-primary response, option A, server-backed search and private-only group scope.001 DONE/002 READY effective after final Workspace lifecycle recorded in PR/terminal report;003-006 PLANNED. Overall27 IN_PROGRESS/verdict NOT_REACHED. No002-006 implementation in this continuation;28/29 unauthorized/unstarted. Earlier planning-only27 labels below are historical and superseded by this explicit owner authorization.
+## Current state
 
+- Phase27: **DONE / GO_BOUNDED_COLLABORATION**.
+- Phase28: **READY / NOT STARTED** — next implementation target.
+- Phases29–34: **PLANNED / NOT STARTED**.
+- Phase35: **PLANNED / NOT STARTED** — renumbered from former Phase28 Full-System Simulation.
+- Phase36: **PLANNED / NOT STARTED** — renumbered from former Phase29 Pre-Launch Hardening.
 
-**Status:** Phase25 DONE / GO_BOUNDED_LANGUAGE_HUB; Phase26 GO_BOUNDED_COMMUNICATION / DONE after final closeout lifecycle; Phases27–29 PLANNED / NOT EXECUTION AUTHORIZED
-**Recorded:** 2026-10-09 (Asia/Ho_Chi_Minh)  
-**Predecessor:** Phase 24 DONE / GO_BOUNDED_LOCALIZATION
+## Renumbering decision
 
-This index turns `docs/V3-ROADMAP.md` into concrete phase dossiers. It does not authorize implementation. Each major phase still requires explicit owner authorization before execution.
+The owner requested that product/UX work discovered during manual TEST review be completed before full-system simulation and launch hardening. Therefore:
 
-## Current execution record - 2026-10-12
+- old `PHASE-28-CODEX-FULL-SYSTEM-SIMULATION` → `PHASE-35-CODEX-FULL-SYSTEM-SIMULATION`;
+- old `PHASE-29-PRE-LAUNCH-HARDENING` → `PHASE-36-PRE-LAUNCH-HARDENING`.
 
-Phase26 authorized001-006 technical acceptance passed: genuine native synthetic A/B/C, current authorization/safety/manual group invitation,196 valid VI/EN seven-width observations, independent37-point review and27-table cleanup0. [Verdict](PHASE-26-MEMBER-CONNECTION-COMMUNICATION/VERDICT.md) GO_BOUNDED_COMMUNICATION; DONE effective after final Workspace PR/mainCI/cleanup/sync/relay recorded in closeout PR/report. Before then lifecycle VERIFYING. STOP after26;27-29 unauthorized/unstarted. Earlier25 paragraphs retain historical truth. No real-user value/production launch inference.
-
-Explicit owner full Phase25 authorization completed LNG25-001–004. See [Phase25 verdict](PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/VERDICT.md). Bounded functional-path acceptance retains explicit source/audio/exercise and Community/Q&A target-English deferrals. No populated content inventory asserted. Historical23B intent superseded by forward Phase25 execution; historical records intact, no separate23B run.
-
-STOP at25. Phases26–29 PLANNED, unauthorized/unstarted. Next action WAIT_FOR_OWNER_TO_AUTHORIZE_PHASE26. Earlier planning-only flags below are historical; the roadmap/index alone never grants execution permission.
-
-## Phase dossiers (25 DONE;26 closeout;27–29 PLANNED)
-
-| Order | Phase | Dossier | Purpose |
-|---|---|---|---|
-| 1 | 25 | [Language Hub Functional Completion](PHASE-25-LANGUAGE-HUB-FUNCTIONAL-COMPLETION/README.md) | Remove visible dead ends and complete real learning-category journeys or explicit evidence-backed blockers |
-| 2 | 26 | [Member Connection & Communication](PHASE-26-MEMBER-CONNECTION-COMMUNICATION/README.md) | Find partner → connect → chat 1:1 → share learning context → ask for help |
-| 3 | 27 | [Community & Collaborative Learning Completion](PHASE-27-COMMUNITY-COLLABORATIVE-LEARNING/README.md) | Search/filter Community, simplify discussion/answer UX, structured-answer replies, group collaboration/realtime |
-| 4 | 28 | [Codex Full-System User Simulation](PHASE-28-CODEX-FULL-SYSTEM-SIMULATION/README.md) | Multi-account, multi-persona, vi/en, responsive, realtime, failure/reconnect end-to-end validation |
-| 5 | 29 | [Pre-Launch Hardening](PHASE-29-PRE-LAUNCH-HARDENING/README.md) | Security, observability, performance, accessibility, recovery and operational readiness |
+No historical Phase27 evidence is rewritten by this decision.
 
 ## Dependency order
 
-`25 -> 26 -> 27 -> 28 -> 29`
+`27 → 28 → 29 → 30 → 31 → 32 → 33 → 34 → 35 → 36`
 
-This order is intentional: full-system simulation belongs after the user-facing communication and collaboration loops exist.
-
-## Historical Phase23B handling
-
-Historical Phase23B remains an unexecuted planning record. Its product intent is now superseded by owner-authorized forward Phase25 completion. Do not execute it separately or double-count completion.
+| Order | Phase | Dossier | Purpose |
+|---|---:|---|---|
+| 1 | 28 | [Community Experience & Content Hierarchy](PHASE-28-COMMUNITY-EXPERIENCE-CONTENT-HIERARCHY/README.md) | Social-learning Community UX refinement |
+| 2 | 29 | [Groups & Messaging Social UX](PHASE-29-GROUPS-MESSAGING-SOCIAL-UX/README.md) | Discoverable groups/messages and coherent social communication UX |
+| 3 | 30 | [Rich Media & Attachments Platform](PHASE-30-RICH-MEDIA-ATTACHMENTS/README.md) | Shared secure attachment/media infrastructure |
+| 4 | 31 | [Learning Journey, Reputation & Shareable Progress](PHASE-31-LEARNING-JOURNEY-SHAREABLE-PROGRESS/README.md) | Motivating truthful progress and achievements |
+| 5 | 32 | [Profile & Language Passport Polish](PHASE-32-PROFILE-LANGUAGE-PASSPORT-POLISH/README.md) | Identity/profile/avatar/account-nav refinement |
+| 6 | 33 | [Language Hub 2.0 & Proficiency Frameworks](PHASE-33-LANGUAGE-HUB-2-PROFICIENCY/README.md) | Language-specific hubs/resources/proficiency models |
+| 7 | 34 | [Cross-Surface UX Consistency & Accessibility Sweep](PHASE-34-UX-CONSISTENCY-ACCESSIBILITY/README.md) | Final cross-product UX/a11y integration |
+| 8 | 35 | [Codex Full-System User Simulation](PHASE-35-CODEX-FULL-SYSTEM-SIMULATION/README.md) | Multi-account synthetic E2E validation |
+| 9 | 36 | [Pre-Launch Hardening](PHASE-36-PRE-LAUNCH-HARDENING/README.md) | Release-readiness hardening |
 
 ## Common boundaries
 
-- Payment remains disabled unless separately authorized.
-- No production DB mutation, production migration, DNS/infrastructure change, production secret change or real-money action is authorized by this planning record.
-- No real-user-value claim may be inferred from synthetic/Codex testing.
-- Phase 22 private-group authorization and Phase 23 public-resource eligibility/provenance/license contracts must not be weakened.
-- Phase 24 localization architecture must be reused, not reimplemented.
-- No Phase 30 or later roadmap is authorized here.
+Payment/provider activation, production DB mutation, production secret changes, destructive infrastructure work and public launch remain separately controlled. No phase may claim real-user value or production readiness from synthetic evidence alone.
+
+## Next action
+
+`NEXT_MAJOR_PHASE=28`
+`NEXT_ACTION=EXECUTE_PHASE_28_ONLY`

@@ -22,7 +22,24 @@
 | 17 | Security & Privacy Hardening | 16 |
 | 18 | UAT & Production | 17 |
 | 19 | Growth V2 | 18 |
+| 20 | Scoped Study Group Policy & Authorization Experiment | 19 |
+| 21 | Provenance-Safe Relational Retrieval Experiment | 20 |
+| 22 | Bounded Text Study Groups | 20 |
+| 23 | Verified Related-Resource Library Journey | 21 |
+| 24 | Member Onboarding & Language Exchange Localization | 23 |
+| 25 | Language Hub Functional Completion | 24 |
+| 26 | Member Connection & Communication | 25 |
+| 27 | Community & Collaborative Learning Completion | 26 |
+| 28 | Community Experience & Content Hierarchy | 27 |
+| 29 | Groups & Messaging Social UX | 28 |
+| 30 | Rich Media & Attachments Platform | 29 |
+| 31 | Learning Journey, Reputation & Shareable Progress | 30 |
+| 32 | Profile & Language Passport Polish | 31 |
+| 33 | Language Hub 2.0 & Proficiency Frameworks | 32 |
+| 34 | Cross-Surface UX Consistency & Accessibility Sweep | 33 |
+| 35 | Codex Full-System User Simulation | 34 |
+| 36 | Pre-Launch Hardening | 35 |
 
-Each phase has `README.md`, `TASKS.md`, `ACCEPTANCE.md`, `TEST-PLAN.md`, `HANDOFF.md`. UI-heavy phases also have `UI-STITCH.md` and must use Stitch MCP before substantial UI implementation.
+Each implementation phase should maintain `README.md`, `TASKS.md`, `ACCEPTANCE.md`, `TEST-PLAN.md`, `HANDOFF.md`. UI-heavy phases also maintain `UI-STITCH.md` and use Stitch MCP before substantial UI implementation.
 
 Codex selects only eligible tasks and updates `state/PROJECT-STATE.md` plus phase handoff after verified work. Task IDs use `LNG-<phase>-<sequence>`.
