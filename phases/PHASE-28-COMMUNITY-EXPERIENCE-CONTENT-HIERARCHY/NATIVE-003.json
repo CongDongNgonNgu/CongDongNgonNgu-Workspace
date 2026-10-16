@@ -1,0 +1,44 @@
+{
+  "frontendMain": "df0c01f1e3a23900c7b1fe296e9b8864e37048bf",
+  "deployment": "H53Y8mMzecmcjFyMXXxN8JfovRrq",
+  "readyCurrentExactSourceAndSigmaAlias": true,
+  "locales": [
+    "vi",
+    "en"
+  ],
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "detailTypes": [
+    "DISCUSSION",
+    "QUESTION",
+    "CORRECTION_REQUEST"
+  ],
+  "detailObservations": 18,
+  "feedObservations": 6,
+  "allActualWidthsVerified": true,
+  "noHorizontalOverflow": true,
+  "sharedActionHeight": 44,
+  "contentFontByWidth": {
+    "390": 18,
+    "768": 18,
+    "1440": 22
+  },
+  "accessibleHeadingClip": "inset(50%)",
+  "sidebarAfterPrimaryOnSmallWidths": true,
+  "feedCards": 20,
+  "feedActionsContained": true,
+  "actionTextContrast": 9.66,
+  "focusContrast": 3.11,
+  "focus": "rgb(217,110,40) solid 3px",
+  "mutations": 0,
+  "fixturesCreated": 0,
+  "limitations": [
+    "Other five types require native fixture coverage004/005.",
+    "Existing historical UAT copy read-only, not final natural-content acceptance.",
+    "Stale-tab viewport attempts discarded; fresh tab used for valid responsive rows.",
+    "Bounded smoke only; full seven-width/accessibility acceptance not run."
+  ]
+}
