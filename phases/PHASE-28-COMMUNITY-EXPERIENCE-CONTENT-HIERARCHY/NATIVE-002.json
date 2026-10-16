@@ -1,0 +1,190 @@
+{
+  "source": "Native Chrome deployed TEST DOM observations, summarized from 28 discovery, 14 Explore and 20 routing records",
+  "frontendMain": "904f842938e2c079c2a74fc20ba44bf0e77c8f5d",
+  "locales": [
+    "vi",
+    "en"
+  ],
+  "widths": [
+    320,
+    375,
+    390,
+    412,
+    768,
+    1024,
+    1440
+  ],
+  "discovery": [
+    {
+      "width": 320,
+      "client": 305,
+      "scroll": 305,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    },
+    {
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    },
+    {
+      "width": 390,
+      "client": 375,
+      "scroll": 375,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    },
+    {
+      "width": 412,
+      "client": 397,
+      "scroll": 397,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    },
+    {
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    },
+    {
+      "width": 1024,
+      "client": 1009,
+      "scroll": 1009,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    },
+    {
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "controlsContained": true,
+      "controlHeights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "collapsedAndExpanded": true,
+      "ariaMatchesOpen": true
+    }
+  ],
+  "exploreBeforeRemediation": {
+    "allWidthsNoOverflow": true,
+    "allCtasContained": true,
+    "communityLanguageContributionPartnerHeight": 44,
+    "membershipHeight": 21
+  },
+  "routing": {
+    "widths": [
+      390,
+      1440
+    ],
+    "locales": [
+      "vi",
+      "en"
+    ],
+    "destinations": [
+      "/community",
+      "/languages",
+      "/exchange",
+      "/membership"
+    ],
+    "clickRefreshBackForward": true,
+    "directUrl": true,
+    "communityLanguageCardClickBackForward": true
+  },
+  "search": {
+    "draftDoesNotApply": true,
+    "submitUrl": "/community?q=coffee",
+    "refreshRetainsQuery": true,
+    "noResultClearRestores": "/community"
+  },
+  "limitations": [
+    "Discovery only; feed/detail/structured interactions await subphases003/004/005.",
+    "Closed-details descendant rectangles are not visibility evidence; AX tree and native open/aria state checked separately.",
+    "Existing historical Home prose and Language/Membership destination headings still Vietnamese in English locale.",
+    "No unrelated historical TEST fixture modified."
+  ],
+  "remediation": {
+    "frontendMain": "5389c66a7854defc433f10241228e4c89e92c737",
+    "deployment": "GABGDEzn4zuz3V3AoUhZ8DiCLXFB",
+    "ready": true,
+    "exactSourceVerified": true,
+    "locales": [
+      "vi",
+      "en"
+    ],
+    "widths": [
+      320,
+      375,
+      390,
+      412,
+      768,
+      1024,
+      1440
+    ],
+    "membershipHeight": 44,
+    "noOverflow": true,
+    "filterFocus": "rgb(217, 110, 40) solid 3px"
+  }
+}

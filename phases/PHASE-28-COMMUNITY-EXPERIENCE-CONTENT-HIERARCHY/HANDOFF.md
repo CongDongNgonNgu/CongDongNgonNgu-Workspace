@@ -22,3 +22,5 @@ Full Phase28-only authorization active. LNG-28-001 audit/capability freeze/Stitc
 ## Current lifecycle/relay checkpoint
 
 Audit PR164/main44bb72b and mainCI38845746098 passed; exact reviewed-tree equality and remote/local branch cleanup verified. See LIFECYCLE-001.md.001 remains VERIFYING_PENDING_REQUIRED_RELAY; phase BLOCKED_EXTERNAL on automatic browser approval rejection for exact private coordinator thread. Owner exact-thread access approval or explicit relay waiver needed; no source-control permission missing.002-005 unstarted, no Phase29+ work. Earlier pending PR/Stitch/review snapshots above are historical.
+
+LNG-28-002 product gates verified: FE PR46/47 merged, main5389c66, exact Vercel TEST Ready, bounded VI/EN seven-width discovery and CTA routing checks pass after focus/touch remediation. Independent source/evidence reviews APPROVE. Backend unchanged. Final Workspace lifecycle pending; then relay002 and continue003 under existing TASKS boundaries. Whole Phase28 acceptance remains005.
