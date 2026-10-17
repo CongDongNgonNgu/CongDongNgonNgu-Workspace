@@ -1,6 +1,14 @@
+# Phase28 accepted closeout — 2026-10-17
+
+PHASE_28_STATUS=DONE; PHASE_28_VERDICT=GO_COMMUNITY_UX. LNG_28_001=DONE; LNG_28_002=DONE; LNG_28_003=DONE; LNG_28_004=DONE; LNG_28_005=DONE. NEXT_READY_PHASE=29; NEXT_ACTION=STOP_BEFORE_PHASE_29. Phase29 READY / NOT STARTED; Phase30–36 remain unstarted. Scope/order unchanged. See Phase28 EVIDENCE-005.md, NATIVE-005.json, FIXTURE-CLEANUP-005.json and LIFECYCLE-005.md. Bounded synthetic-only TEST acceptance; no actual partner-send, formal WCAG, real-user value/usability or production traffic claim. No production DB/payment/provider mutation.
+
+This accepted publication supersedes all historical checkpoints below. DONE is gated on the final closeout PR/main CI, exact-tree verification and temporary-branch cleanup; the terminal report records the resulting Workspace SHA.
+
+## Historical checkpoints
+
 # Phase28 current authorized dependency graph - 2026-10-16
 
-Closed27 ->28-001 audit/contract/Stitch/review/integration ->002 discovery/routing ->003 cards/detail ->004 structured UX ->005 acceptance/closeout ->STOP. Phase29-36 unstarted. Current001/002/003 DONE;004 VERIFYING;005 PLANNED. V3 roadmap authoritative; historical snapshots below do not override current owner authorization.
+Closed27 ->28-001 audit/contract/Stitch/review/integration ->002 discovery/routing ->003 cards/detail ->004 structured UX ->005 acceptance/closeout ->STOP. Phase29-36 unstarted. Current001/002/003 DONE;004 DONE;005 IN_PROGRESS. V3 roadmap authoritative; historical snapshots below do not override current owner authorization.
 
 # Dependency Graph
 

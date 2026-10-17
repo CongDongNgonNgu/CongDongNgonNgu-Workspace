@@ -1,6 +1,6 @@
 # Phase 28 — Community Experience & Content Hierarchy
 
-**Status:** READY — NOT STARTED
+**Status:** DONE / GO_COMMUNITY_UX
 
 ## Objective
 
@@ -52,3 +52,7 @@ A separate general discussion surface may remain only if it adds unique value; i
 ## Exit verdict
 
 `GO_COMMUNITY_UX` / `REMEDIATE_AND_RETEST` / `REJECT`
+
+## Accepted closeout
+
+LNG-28-001 through005 complete; see [EVIDENCE-005.md](EVIDENCE-005.md), [NATIVE-005.json](NATIVE-005.json), [FIXTURE-CLEANUP-005.json](FIXTURE-CLEANUP-005.json) and [LIFECYCLE-005.md](LIFECYCLE-005.md). Final source FE b159717 / BE b3be9e2; synthetic-only bounded acceptance. NEXT_READY_PHASE=29; STOP. No Phase29 implementation.

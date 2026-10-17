@@ -1,6 +1,6 @@
 # Phase 29 — Groups & Messaging Social UX
 
-**Status:** PLANNED — NOT STARTED
+**Status:** READY — NOT STARTED
 
 ## Objective
 

@@ -1,0 +1,276 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 28,
+  "observedAt": "2026-10-17",
+  "frontendMain": "b15971778dbf4bd0c836e8f3e25de8d8758682e1",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "deployment": {
+    "frontend": "28D4VPsZGV6KGQm9XTR3zvawZgDU",
+    "status": "Ready",
+    "alias": "https://cong-dong-ngon-ngu-sigma.vercel.app",
+    "backend": "dep-db7eg6o473hc73d3ep60",
+    "backendStatus": "Live",
+    "exactSourceProof": "Vercel current deployment source full SHA and Render last-successful-commit link read on overview pages; no secret panel"
+  },
+  "method": "Native Chrome CUA UI actions, DOM-backed read-only measurements and visual mobile correction inspection. Summaries of observed rows, not raw exported screenshots or formal certification.",
+  "matrix": {
+    "guestFeed": {
+      "rows": 28,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "clippedActionRows": 0,
+      "minMeasuredButtonOrSummaryPx": 44,
+      "maxFooterGapPx": 0,
+      "structuredReplyButtons": 0,
+      "accordionAriaOrIconMismatches": 0
+    },
+    "guestDetails": {
+      "rows": 112,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "clippedActionRows": 0,
+      "minMeasuredButtonOrSummaryPx": 44,
+      "maxFooterGapPx": 0,
+      "structuredReplyButtons": 0,
+      "accordionAriaOrIconMismatches": 0
+    },
+    "memberFeed": {
+      "rows": 28,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "clippedActionRows": 0,
+      "minMeasuredButtonOrSummaryPx": 44,
+      "maxFooterGapPx": 0,
+      "structuredReplyButtons": 0,
+      "accordionAriaOrIconMismatches": 0
+    },
+    "memberDetails": {
+      "rows": 112,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "clippedActionRows": 0,
+      "minMeasuredButtonOrSummaryPx": 44,
+      "maxFooterGapPx": 0,
+      "structuredReplyButtons": 0,
+      "accordionAriaOrIconMismatches": 0
+    },
+    "supportedTypes": [
+      "DISCUSSION",
+      "QUESTION",
+      "CORRECTION_REQUEST",
+      "RESOURCE",
+      "LEARNING_JOURNAL",
+      "CULTURE",
+      "PRONUNCIATION_REQUEST",
+      "CHALLENGE"
+    ],
+    "guestIdentityConfirmedRows": 112,
+    "canonicalOriginalOccurrencesPerCorrectionRow": 1,
+    "partnerShareVisibleTypes": [
+      "DISCUSSION",
+      "QUESTION"
+    ],
+    "noResult": {
+      "rows": 14,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "maxFooterGapPx": 0
+    },
+    "explore": {
+      "rows": 14,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "maxFooterGapPx": 0
+    },
+    "unavailable": {
+      "rows": 14,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "locales": [
+        "en",
+        "vi"
+      ],
+      "overflowRows": 0,
+      "maxFooterGapPx": 0,
+      "mainHeightAt390Px": 167.109375
+    }
+  },
+  "navigation": {
+    "cases": 16,
+    "widths": [
+      390,
+      1440
+    ],
+    "locales": [
+      "vi",
+      "en"
+    ],
+    "destinations": [
+      "/community",
+      "/languages",
+      "/exchange",
+      "/membership"
+    ],
+    "clickRefreshBackForward": "PASS",
+    "directUrls": "PASS via detail/type matrix and Explore destinations",
+    "communityLanguageDiscovery": "Existing002 native click proof retained; final feed link present"
+  },
+  "search": {
+    "draftBeforeApplyCards": 8,
+    "appliedCoffeeCards": 1,
+    "queryPersistedOnRefresh": true,
+    "refreshInput": "coffee",
+    "noResultPhrase": "a quiet blue teapot beside the moon",
+    "noResultCards": 0,
+    "resetPath": "/community",
+    "serverProof": "SERVER-SEARCH-005.json"
+  },
+  "flows": {
+    "postHelpfulAndSave": "Selected states and count persisted after refresh",
+    "discussion": "One native root and one native depth-one reply persisted; child had zero Reply controls",
+    "correction": "Native proposal and explanation persisted after refresh; requester acceptance persisted; original/context unchanged after post edit; distinct additional note collapsed and keyboard-opened",
+    "question": "Structured seeded answer accepted by requester and persisted after refresh; no competing primary generic composer",
+    "publicShare": "The shared link is ready; Open shared link matched exact owned canonical post",
+    "report": "Native OTHER report submitted, dialog closed; guarded cleanup confirmed exactly one community_reports row",
+    "partnerShare": {
+      "modalLocale": "en",
+      "rows": 7,
+      "widths": [
+        320,
+        375,
+        390,
+        412,
+        768,
+        1024,
+        1440
+      ],
+      "overflowRows": 0,
+      "dialogOverflowRows": 0,
+      "sendDisabledWithoutConnection": true,
+      "escapeReturnedFocusToTrigger": true,
+      "actualSend": "NOT_RUN_NO_ELIGIBLE_CONNECTION",
+      "authorization": "Unchanged Phase26 backend send/read/open rechecks inherited from reviewed source/contracts and existing tests; no native send claim"
+    }
+  },
+  "accessibility": {
+    "keyboard": "Enter/Space on native summary; aria-expanded and SVG; Escape dialog close and focus return observed",
+    "focus": "3px solid rgb(217,110,40) observed on focused disclosure",
+    "chevronExpandedTransform": "matrix(-1,0,0,-1,0,0)",
+    "comparison": "Semantic del/ins and text labels distinguish changes",
+    "contrast": {
+      "actionTextRgb": [
+        30,
+        65,
+        101
+      ],
+      "defaultBackgroundRgb": [
+        244,
+        246,
+        242
+      ],
+      "selectedBackgroundRgb": [
+        226,
+        237,
+        242
+      ],
+      "defaultRatio": 9.66,
+      "selectedRatio": 8.82,
+      "scope": "Measured representative social-action states only"
+    },
+    "automatedAxe": "NOT_RUN",
+    "screenReader": "NOT_RUN",
+    "formalWcagCertification": false
+  },
+  "excludedEvidence": [
+    "All pre-remediation005 rows",
+    "Initial viewport/loading-transient measurements",
+    "Initial fresh-tab authorization-hydration-ambiguous rows; explicitly logged out and reran guest matrix"
+  ],
+  "limitations": [
+    "No eligible connected partner: actual share/send not exercised",
+    "Share modal native seven-width matrix was EN; VI labels/close semantics covered by component/localization tests and earlier phase evidence",
+    "No offline network emulation or screen-reader study",
+    "Explore legacy editorial prose remains Vietnamese in EN outside the changed localized CTA/navigation scope",
+    "Synthetic actors only; no real-user usability/value or production traffic claims"
+  ],
+  "productionMutated": false
+}

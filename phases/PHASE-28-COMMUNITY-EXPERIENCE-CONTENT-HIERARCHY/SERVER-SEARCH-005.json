@@ -1,0 +1,51 @@
+{
+  "target": "OWNER_APPROVED_TEST",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "method": "Direct anonymous GET to deployed backend; no frontend filtering",
+  "allTypes": [
+    "CHALLENGE",
+    "CORRECTION_REQUEST",
+    "CULTURE",
+    "DISCUSSION",
+    "LEARNING_JOURNAL",
+    "PRONUNCIATION_REQUEST",
+    "QUESTION",
+    "RESOURCE"
+  ],
+  "pagination": {
+    "pages": [
+      {
+        "count": 2,
+        "hasNext": true
+      },
+      {
+        "count": 2,
+        "hasNext": true
+      },
+      {
+        "count": 2,
+        "hasNext": true
+      },
+      {
+        "count": 2,
+        "hasNext": false
+      }
+    ],
+    "uniqueOwnedIds": 8,
+    "duplicates": 0
+  },
+  "keyword": {
+    "q": "coffee",
+    "count": 1,
+    "type": "QUESTION"
+  },
+  "responseState": {
+    "answered": 1,
+    "unanswered": 0
+  },
+  "savedWithoutAuthentication": 401,
+  "deletedOwnedPost": 404,
+  "cursorScopeReplay": 400,
+  "credentialsIncluded": false,
+  "productionMutated": false
+}
