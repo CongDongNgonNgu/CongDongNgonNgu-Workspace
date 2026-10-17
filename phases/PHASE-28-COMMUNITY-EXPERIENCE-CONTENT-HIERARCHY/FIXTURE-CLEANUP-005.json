@@ -1,0 +1,128 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 28,
+  "scope": "005",
+  "runId": "1bb7d386-fe6f-4cfc-89d5-1383c8344526",
+  "state": "CLEANED",
+  "actors": [
+    {
+      "key": "requester",
+      "id": "958ce1d3-17f4-4619-a0d1-fa4b4bc47957"
+    },
+    {
+      "key": "contributor",
+      "id": "611f78b1-0358-4d35-83a7-77e43e8d3743"
+    },
+    {
+      "key": "observer",
+      "id": "3d588a1f-2049-4f7e-8e35-5f25a6d30341"
+    }
+  ],
+  "created": [
+    {
+      "kind": "DISCUSSION",
+      "id": "48c9e362-460f-4b98-919a-42dfa30444ee"
+    },
+    {
+      "kind": "QUESTION",
+      "id": "02757afc-d9f6-4f2d-939a-c5313e3d6f99"
+    },
+    {
+      "kind": "CORRECTION_REQUEST",
+      "id": "bcd5d868-ad9a-405c-94b4-47fc66d572d9"
+    },
+    {
+      "kind": "QA_ANSWER",
+      "id": "6fde051e-6088-45fb-af50-d43198b10356"
+    },
+    {
+      "kind": "CORRECTION_PROPOSAL",
+      "id": "ebd38993-c0a9-4a38-af98-c13999c729c7"
+    },
+    {
+      "kind": "COMMENT",
+      "id": "5ee837df-89ce-422e-b74c-4387810b033f"
+    },
+    {
+      "kind": "REPLY",
+      "id": "45a21cac-e765-4c40-b9c8-0ea2b0026046"
+    },
+    {
+      "kind": "RESOURCE",
+      "id": "a249768b-849e-440e-85bd-53cc99bad3ef"
+    },
+    {
+      "kind": "LEARNING_JOURNAL",
+      "id": "a47cecae-1ea0-44a5-8474-d1703b1acb86"
+    },
+    {
+      "kind": "CULTURE",
+      "id": "620398ab-2b97-4ec5-92bc-d9061ed819b4"
+    },
+    {
+      "kind": "PRONUNCIATION_REQUEST",
+      "id": "f27e4d36-b944-4742-9ac2-8887ce556055"
+    },
+    {
+      "kind": "CHALLENGE",
+      "id": "ff991fca-7e86-466c-b5e7-a863b69e4861"
+    }
+  ],
+  "preflight": {
+    "target": "OWNER_APPROVED_TEST",
+    "clientTlsVerified": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+    "ledgerPerFileMatchesExactBackendMain": true,
+    "productionMutated": false
+  },
+  "cleanup": {
+    "deleted": {
+      "user_roles": 3,
+      "auth_sessions": 1273,
+      "community_reports": 1,
+      "community_comments": 4,
+      "community_reactions": 1,
+      "community_saved_posts": 1,
+      "community_correction_requests": 1,
+      "phase06_contribution_events": 5,
+      "community_structured_response_acceptances": 2,
+      "community_structured_response_votes": 1,
+      "community_structured_responses": 3,
+      "community_posts": 8,
+      "notification_read_states": 5,
+      "notifications": 5,
+      "users": 3
+    },
+    "residual": {
+      "users": 0,
+      "user_roles": 0,
+      "auth_sessions": 0,
+      "community_posts": 0,
+      "community_comments": 0,
+      "community_reactions": 0,
+      "community_saved_posts": 0,
+      "community_reports": 0,
+      "community_correction_requests": 0,
+      "community_structured_responses": 0,
+      "community_structured_response_acceptances": 0,
+      "community_structured_response_votes": 0,
+      "phase06_contribution_events": 0,
+      "notifications": 0,
+      "notification_read_states": 0
+    },
+    "residualRows": 0,
+    "proof": {
+      "target": "OWNER_APPROVED_TEST",
+      "clientTlsVerified": true,
+      "postgresVersion": 180006,
+      "ledgerCount": 38,
+      "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+      "ledgerPerFileMatchesExactBackendMain": true,
+      "productionMutated": false
+    },
+    "productionMutated": false
+  },
+  "credentialsIncluded": false
+}

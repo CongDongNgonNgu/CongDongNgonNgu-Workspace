@@ -5,8 +5,9 @@
 ## Current state
 
 - Phase27: **DONE / GO_BOUNDED_COLLABORATION**.
-- Phase28: **READY / NOT STARTED** — next implementation target.
-- Phases29–34: **PLANNED / NOT STARTED**.
+- Phase28: **DONE / GO_COMMUNITY_UX** — see Phase28 final evidence and lifecycle.
+- Phase29: **READY / NOT STARTED** — no implementation authorized in this run.
+- Phases30–34: **PLANNED / NOT STARTED**.
 - Phase35: **PLANNED / NOT STARTED** — renumbered from former Phase28 Full-System Simulation.
 - Phase36: **PLANNED / NOT STARTED** — renumbered from former Phase29 Pre-Launch Hardening.
 
@@ -41,5 +42,6 @@ Payment/provider activation, production DB mutation, production secret changes, 
 
 ## Next action
 
-`NEXT_MAJOR_PHASE=28`
-`NEXT_ACTION=EXECUTE_PHASE_28_ONLY`
+`NEXT_MAJOR_PHASE=29`
+`NEXT_READY_PHASE=29`
+`NEXT_ACTION=STOP_BEFORE_PHASE_29`

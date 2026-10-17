@@ -25,7 +25,7 @@ Detailed historical planning for Phases25–27 remains preserved in their phase 
 
 ## Execution policy
 
-This roadmap defines dependency and scope. It does not make later phases run concurrently. Execute one phase to full lifecycle closure before starting the next. Phase28 is the next implementation target; Phases29–36 remain unstarted until their dependency is closed and the project orchestration rules allow continuation.
+This roadmap defines dependency and scope. It does not make later phases run concurrently. Execute one phase to full lifecycle closure before starting the next. Phase28 is DONE / GO_COMMUNITY_UX (see its final evidence/lifecycle). Phase29 is READY / NOT STARTED; Phases30–36 remain planned and unstarted. This run stops before Phase29; later execution requires its own authorized scope.
 
 ## Cross-phase invariants
 
