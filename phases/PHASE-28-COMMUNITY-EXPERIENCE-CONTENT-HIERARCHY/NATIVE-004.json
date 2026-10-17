@@ -1,0 +1,306 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 28,
+  "subphase": "LNG-28-004",
+  "date": "2026-10-17",
+  "target": "OWNER_APPROVED_TEST",
+  "frontendMain": "9162cd7edb05b7d31f4df11f638497e89e593e28",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "deployment": "pCS5C6DbkuxiTCqoY3XWiTip3YRV",
+  "records": "Summaries of observed deployed browser DOM measurements; not replayed or inferred from source",
+  "rows": [
+    {
+      "type": "CORRECTION_REQUEST",
+      "locale": "en",
+      "requestedWidth": 390,
+      "actualWidth": 390,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 1,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 5
+      }
+    },
+    {
+      "type": "CORRECTION_REQUEST",
+      "locale": "en",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 1,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 5
+      }
+    },
+    {
+      "type": "CORRECTION_REQUEST",
+      "locale": "en",
+      "requestedWidth": 1440,
+      "actualWidth": 1440,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 1,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 5
+      }
+    },
+    {
+      "type": "CORRECTION_REQUEST",
+      "locale": "vi",
+      "requestedWidth": 390,
+      "actualWidth": 390,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 1,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 5
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "CORRECTION_REQUEST",
+      "locale": "vi",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 1,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 5
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "CORRECTION_REQUEST",
+      "locale": "vi",
+      "requestedWidth": 1440,
+      "actualWidth": 1440,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 1,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 5
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "QUESTION",
+      "locale": "en",
+      "requestedWidth": 390,
+      "actualWidth": 390,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 2
+      }
+    },
+    {
+      "type": "QUESTION",
+      "locale": "en",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 2
+      }
+    },
+    {
+      "type": "QUESTION",
+      "locale": "en",
+      "requestedWidth": 1440,
+      "actualWidth": 1440,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 2
+      }
+    },
+    {
+      "type": "QUESTION",
+      "locale": "vi",
+      "requestedWidth": 390,
+      "actualWidth": 390,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 2
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "QUESTION",
+      "locale": "vi",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 2
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "QUESTION",
+      "locale": "vi",
+      "requestedWidth": 1440,
+      "actualWidth": 1440,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 2
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "DISCUSSION",
+      "locale": "en",
+      "requestedWidth": 390,
+      "actualWidth": 390,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 1
+      }
+    },
+    {
+      "type": "DISCUSSION",
+      "locale": "en",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 1
+      }
+    },
+    {
+      "type": "DISCUSSION",
+      "locale": "en",
+      "requestedWidth": 1440,
+      "actualWidth": 1440,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "structuredReplyButtons": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 1
+      }
+    },
+    {
+      "type": "DISCUSSION",
+      "locale": "vi",
+      "requestedWidth": 390,
+      "actualWidth": 390,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 1
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "DISCUSSION",
+      "locale": "vi",
+      "requestedWidth": 768,
+      "actualWidth": 768,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 1
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    },
+    {
+      "type": "DISCUSSION",
+      "locale": "vi",
+      "requestedWidth": 1440,
+      "actualWidth": 1440,
+      "horizontalOverflow": false,
+      "canonicalOriginalOccurrences": 0,
+      "mainDisclosures": {
+        "allCanonicalSvg": true,
+        "allAriaExpanded": "false",
+        "allHeightPx": 44,
+        "count": 1
+      },
+      "structuredReplySurface": "ABSENT_IN_VI_ACCESSIBILITY_INSPECTION"
+    }
+  ],
+  "flows": {
+    "normalRequesterLogin": "PASS_ACTOR_IDENTITY_OBSERVED",
+    "normalContributorLogin": "PASS_ACTOR_IDENTITY_OBSERVED",
+    "proposalHelpful": "PASS_SELECTED_AND_REFRESH_PERSISTED",
+    "requesterAcceptCorrection": "PASS_REFRESH_PERSISTED",
+    "requesterAcceptAnswer": "PASS_ACCEPTED_STATE_OBSERVED",
+    "canonicalOriginalAfterPostEdit": "PASS_ORIGINAL_ONCE_CONTEXT_UNCHANGED_ADDITIONAL_NOTE_DISCLOSURE",
+    "nativeContributorProposal": "PASS_NEW_CORRECTION_AND_EXPLANATION_REFRESH_PERSISTED",
+    "ownResponseHelpfulAndAcceptance": "ABSENT_AS_SERVER_CAPABILITIES_REQUIRE",
+    "discussionOneLevelReply": "PASS_NATIVE_REPLY_REFRESH_PERSISTED_CHILD_HAS_NO_REPLY_BUTTON",
+    "discussionPrimaryComposer": "PASS_SINGLE_PRIMARY",
+    "structuredReplySurface": "ABSENT",
+    "generalDiscussion": "SECONDARY_INITIALLY_COLLAPSED_EXPLICITLY_OPENABLE",
+    "keyboardDisclosure": "PASS_ENTER_SPACE_ARIA_SVG_ROTATION_MATRIX_MINUS1_FOCUS_VISIBLE_SOLID_3PX",
+    "naturalCopy": "PASS_OWNED_LEARNING_TEXT_NO_UAT_PLACEHOLDERS"
+  },
+  "discardedMeasurements": "Initial partial-loading measurements and stale viewport attempts excluded; wait for response content and assert actual innerWidth on accepted rows",
+  "limits": [
+    "Bounded 390/768/1440 three-type check; full seven-width integration belongs to005",
+    "No formal WCAG or real-user usability claim",
+    "Existing unrelated historical TEST data not modified",
+    "Numeric response-reply selector matched English labels only; VI absence is accessibility/source inspection, not that numeric selector."
+  ]
+}

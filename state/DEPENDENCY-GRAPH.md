@@ -1,6 +1,6 @@
 # Phase28 current authorized dependency graph - 2026-10-16
 
-Closed27 ->28-001 audit/contract/Stitch/review/integration ->002 discovery/routing ->003 cards/detail ->004 structured UX ->005 acceptance/closeout ->STOP. Phase29-36 unstarted. Current001/002 DONE;003 VERIFYING pending Workspace lifecycle;004-005 PLANNED. V3 roadmap authoritative; historical snapshots below do not override current owner authorization.
+Closed27 ->28-001 audit/contract/Stitch/review/integration ->002 discovery/routing ->003 cards/detail ->004 structured UX ->005 acceptance/closeout ->STOP. Phase29-36 unstarted. Current001/002/003 DONE;004 VERIFYING;005 PLANNED. V3 roadmap authoritative; historical snapshots below do not override current owner authorization.
 
 # Dependency Graph
 
