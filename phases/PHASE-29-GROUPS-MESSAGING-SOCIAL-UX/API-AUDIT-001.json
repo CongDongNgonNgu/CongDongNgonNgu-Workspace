@@ -1,0 +1,156 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "001",
+  "runId": "339a1f17-e69f-4efb-93a8-eab0ff608204",
+  "frontend": "b15971778dbf4bd0c836e8f3e25de8d8758682e1",
+  "backend": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "checks": [
+    {
+      "key": "owner",
+      "kind": "group",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "owner",
+      "kind": "members",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "owner",
+      "kind": "invitations",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "owner",
+      "kind": "direct",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "moderator",
+      "kind": "group",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "moderator",
+      "kind": "members",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "moderator",
+      "kind": "invitations",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "moderator",
+      "kind": "direct",
+      "outcome": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE"
+    },
+    {
+      "key": "member",
+      "kind": "group",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "member",
+      "kind": "members",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "member",
+      "kind": "invitations",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "member",
+      "kind": "direct",
+      "outcome": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE"
+    },
+    {
+      "key": "invited",
+      "kind": "group",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "invited",
+      "kind": "members",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "invited",
+      "kind": "invitations",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "invited",
+      "kind": "direct",
+      "outcome": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE"
+    },
+    {
+      "key": "nonmember",
+      "kind": "group",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "nonmember",
+      "kind": "members",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "nonmember",
+      "kind": "invitations",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "nonmember",
+      "kind": "direct",
+      "outcome": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE"
+    },
+    {
+      "key": "connected",
+      "kind": "group",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "connected",
+      "kind": "members",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "connected",
+      "kind": "invitations",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "connected",
+      "kind": "direct",
+      "outcome": "ALLOWED"
+    },
+    {
+      "key": "revoked",
+      "kind": "group",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "revoked",
+      "kind": "members",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "revoked",
+      "kind": "invitations",
+      "outcome": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "key": "revoked",
+      "kind": "direct",
+      "outcome": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE"
+    }
+  ],
+  "caseCount": 28,
+  "unexpectedAllows": 0,
+  "mismatches": 0,
+  "crossGroupIsolation": "NOT_RUN_ONE_GROUP_AUDIT",
+  "crossConversationIsolation": "NOT_RUN_ONE_CONVERSATION_AUDIT",
+  "syntheticOnly": true
+}

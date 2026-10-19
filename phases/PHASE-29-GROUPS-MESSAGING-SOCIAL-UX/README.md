@@ -1,6 +1,6 @@
 # Phase 29 — Groups & Messaging Social UX
 
-**Status:** READY — NOT STARTED
+**Status:** IN_PROGRESS — LNG-29-001 audit/design; owner-authorized chain001–006, stop after Phase29
 
 ## Objective
 
