@@ -6,7 +6,7 @@
 
 - Phase27: **DONE / GO_BOUNDED_COLLABORATION**.
 - Phase28: **DONE / GO_COMMUNITY_UX** — see Phase28 final evidence and lifecycle.
-- Phase29: **IN_PROGRESS / LNG-29-001** — owner authorizes001–006 through Phase29 closeout; product implementation awaits001 gates.
+- Phase29: **IN_PROGRESS / LNG-29-002; LNG-29-001 DONE** — owner authorizes001–006 through Phase29 closeout; 001 publication/terminal relay accepted;002 is VERIFYING: product/Frontend/native gates complete; Workspace publication/relay pending.
 - Phases30–34: **PLANNED / NOT STARTED**.
 - Phase35: **PLANNED / NOT STARTED** — renumbered from former Phase28 Full-System Simulation.
 - Phase36: **PLANNED / NOT STARTED** — renumbered from former Phase29 Pre-Launch Hardening.
@@ -44,4 +44,4 @@ Payment/provider activation, production DB mutation, production secret changes, 
 
 `NEXT_MAJOR_PHASE=29`
 `NEXT_READY_PHASE=29`
-`NEXT_ACTION=COMPLETE_LNG_29_001_THEN_CHAIN_THROUGH_006_STOP_AFTER_PHASE29`
+`NEXT_ACTION=COMPLETE_LNG_29_002_THEN_CHAIN_THROUGH_006_STOP_AFTER_PHASE29`

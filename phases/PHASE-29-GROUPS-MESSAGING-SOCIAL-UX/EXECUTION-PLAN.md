@@ -2,7 +2,7 @@
 
 Owner authorization: 2026-10-19 Asia/Saigon. Execute existing TASKS.md 001 -> 002 -> 003 -> 004 -> 005 -> 006; stop after Phase29 closeout. Historical planning-only stop statements are superseded for Phase29 only. No Phase30+, attachments, production mutation or security weakening.
 
-## Baseline
+## Historical001 starting baseline
 
 Fetched/pruned all three remotes. Clean local main equals remote main:
 - Frontend b15971778dbf4bd0c836e8f3e25de8d8758682e1
@@ -15,8 +15,8 @@ No AI-DOS manifest or project-local skill roots found in Workspace/Frontend. Exi
 
 | Task | Scope / acceptance | Verification | Dependency / state |
 |---|---|---|---|
-|001|Source + TEST audit, capability/permission/route freeze, verifiable benchmarks, separate desktop/mobile Stitch designs + refinement and independent review|Source citations; native audit; Workspace syntax/tests/diff; independent evidence/design review; PR/CI/merge/main/cleanup/relay|Phase28 DONE; IN_PROGRESS|
-|002|Promote Groups/Messages in authenticated shell, account, Community; stable routes and exclusive active states; safe guest entries|Focused navigation/dropdown/route tests; full FE gates/performance/audit; VI/EN widths; independent review; exact TEST + complete lifecycle|001 DONE; PLANNED|
+|001|Source + TEST audit, capability/permission/route freeze, verifiable benchmarks, separate desktop/mobile Stitch designs + refinement and independent review|Source citations; native audit; Workspace syntax/tests/diff; independent evidence/design review; PR/CI/merge/main/cleanup/relay|Phase28 DONE; DONE via PR170/mainCI/cleanup/accepted relay|
+|002|Promote Groups/Messages in authenticated shell, account, Community; stable routes and exclusive active states; safe guest entries|Focused navigation/dropdown/route tests; full FE gates/performance/audit; VI/EN widths; independent review; exact TEST + complete lifecycle|001 DONE; VERIFYING; product/Frontend/native gates complete; Workspace publication/relay pending|
 |003|Private group list/create/home/member/invite/role UX; learning-purpose description guidance|Owner/moderator/member/invited/nonmember/revoked source/API/native tests; full affected gates; exact TEST; lifecycle|002 DONE; PLANNED|
 |004|Direct inbox/thread/composer/history/read/realtime/offline/context UX; normal connected synthetic partner send|Meaningful targeted tests + full gates; exact TEST cross-user send/persist/reload/reconnect; lifecycle|003 DONE; PLANNED|
 |005|Audit separate group-conversation contract; implement only safely supported capability or record evidenced hold; preserve Study Group discussion|Cross-conversation/group authorization, truthful unsupported-action behavior, independent review/full lifecycle|004 DONE; PLANNED|

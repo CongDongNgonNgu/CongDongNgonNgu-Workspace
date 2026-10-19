@@ -1,6 +1,6 @@
 # LNG-29-001 audit evidence
 
-Date2026-10-19 Asia/Saigon. Current lifecycle: VERIFYING pending final Workspace publication. Independent aggregate design review APPROVE_WITH_RECORDED_EXCLUSIONS; independent final evidence review APPROVE after precision remediation. Phase29 verdict NOT_REACHED. Product source unchanged; no Phase30+.
+Date2026-10-19 Asia/Saigon. Current lifecycle: DONE; verified publication and terminal relay supersede historical draft checkpoints below. Independent aggregate design review APPROVE_WITH_RECORDED_EXCLUSIONS; independent final evidence review APPROVE after precision remediation. Phase29 verdict NOT_REACHED. Product source unchanged; no Phase30+.
 
 ## Baseline and authority
 
@@ -24,7 +24,7 @@ Native owner list/create dialog/home/members/invitation metadata and direct empt
 
 Exact-owned cleanup completed after browser streams released. FIXTURE-CLEANUP-001.json equals the CLEANED local manifest:21 tables,85 selected rows,residualRows0. Strict verified TLS/PostgreSQL180006/exact38 migration checksums; productionMutated=false. Independent fixture security review APPROVE after crash recovery remediation;15 no-DB tests/syntax PASS. Unrelated historical TEST data untouched. Local helper source remains outside product repositories; no Backend/frontend code or schema change.
 
-## Verification and publication gate
+## Historical verification and publication checkpoint (superseded)
 
 Workspace monitor syntax +12 tests/current diff check passed during audit. Final JSON/link/state/diff checks and independent evidence/design remediation/review must run on final candidate before commit. PR CI/main CI/merge/reviewed-tree equality/branch cleanup/terminal relay remain NOT_RUN at this draft checkpoint. No product tests or build claimed (product source unchanged).
 
@@ -43,4 +43,10 @@ Synthetic technical audit only; no real-user value/usability/production-readines
 - [Native audit and limits](NATIVE-AUDIT-001.md), [28-case API audit](API-AUDIT-001.json) and [exact-owned cleanup](FIXTURE-CLEANUP-001.json)
 - [Publication lifecycle](LIFECYCLE-001.md) and [audit/downstream verification plan](TEST-PLAN-001.md)
 
-Final local Workspace checks: monitor syntax and12tests PASS;40 unique Stitch IDs/selected references/JSON/state/secret-pattern checks PASS; API28/cleanup21tables85rows/residual0 consistency PASS. Independent final evidence review APPROVE; thirteen linked artifacts and all relative dossier Markdown links PASS. Publication gates pending.
+Historical pre-publication local Workspace checks: monitor syntax and12tests PASS;40 unique Stitch IDs/selected references/JSON/state/secret-pattern checks PASS; API28/cleanup21tables85rows/residual0 consistency PASS. Independent final evidence review APPROVE; thirteen linked artifacts and all relative dossier Markdown links PASS. Publication gates pending.
+
+## Verified publication and accepted continuation
+
+LNG-29-001=DONE. Workspace PR170 merged reviewed candidate f8bfddc1697df6943ef609dadb77e3d2208814bc to main21751c3736acce96be323d46e3e1dbeebb8c6bf4. Reviewed/main trees both089fad91a4eb2ffd3330d6382c5e55d8b7dcff05; equality diff exit0. PR CI39209478306 and exact-main CI39209516716 Monitor quality SUCCESS. Temporary docs/phase29-001-social-ux-audit deleted remote/local, refs pruned and clean synchronized main verified. FE/BE source remains unchanged.
+
+The sanitized terminal report was sent to the existing authorized coordinator conversation; terminal review ACCEPT confirmed001 DONE. Complete continuation received/copied and validated for CongDongNgonNgu/Phase29/current002/chain002-006/stop after29/no30 without authority expansion. See [actual lifecycle record](LIFECYCLE-001.md) for source, response completeness and digest. LNG-29-002=IN_PROGRESS; Phase29 verdict remains NOT_REACHED. No002 gates passed by implication.

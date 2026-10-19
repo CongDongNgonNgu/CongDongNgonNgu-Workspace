@@ -1,0 +1,15 @@
+# Independent LNG-29-002 evidence review
+
+Recorded2026-10-19 Asia/Saigon. Verdict: APPROVE for Workspace publication candidate. LNG-29-001 DONE is supported by its recorded publication and accepted terminal relay; LNG-29-002 remains VERIFYING pending Workspace publication/terminal relay.003-006 remain unstarted; no Phase30+ authorization inferred.
+
+Reviewed the Workspace diff and new002 evidence, initial failed native artifact, final native artifact, cleanup proof and local CLEANED manifest. Earlier source reviews approved the navigation and overlay candidate after correcting menu semantics; header-fit remediation was separately reviewed. Final native measurements are coordinator-produced artifacts inspected by this reviewer, not an independent browser rerun.
+
+Artifact consistency independently checked:32 unique rows cover authenticated/guest VI/EN at320/375/390/412/768/1024/1440 plus authenticated1025/1100. Recorded interactive overlap count0 and horizontal overflow count0. Initial failed EN header evidence remains REMEDIATE_AND_RETEST on the earlier revision. Final artifact references FE3bbf7bc545b614d3b5cc1b3fc8b06992e62dd17f; local clean FE HEAD/tree independently match that revision/e8e5b34d7f57d14be08c48e816ce043b3ee1e3e0. Workspace001 main21751c3736acce96be323d46e3e1dbeebb8c6bf4/tree089fad91a4eb2ffd3330d6382c5e55d8b7dcff05 also match local Git objects. Recorded CI/provider/terminal outcomes were reviewed as coordinator evidence; no external status rerun is claimed here.
+
+Cleanup JSON exactly matches the local CLEANED manifest:3 tables,28 selected/deleted rows (7 users,7 roles,14 sessions), residual0. No group/conversation/message/connection domain acceptance is claimed for002. No broad cross-resource security leak count is inferred from navigation measurements. Native backdrop/text zoom/axe/screen-reader/formal WCAG/real-user usability remain NOT_RUN or explicitly unclaimed.
+
+Current-projection precision findings were remediated with coordinator agreement: roadmap/index/plan/contract/README/handoff and evidence opening now distinguish completed product/Frontend/native gates from pending Workspace publication/relay. Historical execution checkpoints remain labeled as such. No scope, routes, numbering or product behavior changed in this editorial remediation.
+
+Independent local verification: monitor syntax and12 unit tests PASS; all dossier JSON parses; relative Markdown links resolve; state/artifact consistency and secret-pattern scan PASS. Previously independently verified overlay10 tests and final header8 tests PASS. No DB/API writes or fresh runtime actions performed during this evidence review. Publication PR/main CI/merge/branch cleanup/terminal relay remain pending and must be recorded only after execution.
+
+Final addition reviewed: [LIFECYCLE-002.md](LIFECYCLE-002.md) accurately separates the two completed Frontend publication/remediation transactions from the remaining Workspace publication/terminal relay. It preserves the initial native failure and bounded final acceptance without future success claims. APPROVE unchanged; repeated dossier relative-link check found0 broken links.

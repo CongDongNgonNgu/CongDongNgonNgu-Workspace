@@ -1,0 +1,28 @@
+{
+  "selectedCounts": {
+    "users": 7,
+    "user_roles": 7,
+    "auth_sessions": 14
+  },
+  "deleted": {
+    "user_roles": 7,
+    "auth_sessions": 14,
+    "users": 7
+  },
+  "residual": {
+    "users": 0,
+    "user_roles": 0,
+    "auth_sessions": 0
+  },
+  "residualRows": 0,
+  "proof": {
+    "target": "OWNER_APPROVED_TEST",
+    "clientTlsVerified": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+    "ledgerPerFileMatchesExactBackendMain": true,
+    "productionMutated": false
+  },
+  "productionMutated": false
+}
