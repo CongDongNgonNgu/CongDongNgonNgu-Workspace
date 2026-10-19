@@ -25,7 +25,7 @@ Detailed historical planning for Phases25–27 remains preserved in their phase 
 
 ## Execution policy
 
-This roadmap defines dependency and scope. It does not make later phases run concurrently. Execute one phase to full lifecycle closure before starting the next. Phase28 is DONE / GO_COMMUNITY_UX (see its final evidence/lifecycle). Phase29 is IN_PROGRESS under the owner-authorized001–006 chain dated2026-10-19; Phases30–36 remain planned and unstarted. This run stops after Phase29 closeout and must not start Phase30+.
+This roadmap defines dependency and scope. It does not make later phases run concurrently. Execute one phase to full lifecycle closure before starting the next. Phase28 is DONE / GO_COMMUNITY_UX (see its final evidence/lifecycle). Phase29 is IN_PROGRESS:001 DONE after verified publication/terminal relay;002 navigation/discovery VERIFYING (product/Frontend/native gates complete; Workspace publication/relay pending) under the owner-authorized001–006 chain dated2026-10-19; Phases30–36 remain planned and unstarted. This run stops after Phase29 closeout and must not start Phase30+.
 
 ## Cross-phase invariants
 

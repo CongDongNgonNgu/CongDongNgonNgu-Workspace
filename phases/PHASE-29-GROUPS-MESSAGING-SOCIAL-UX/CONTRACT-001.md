@@ -1,6 +1,6 @@
 # Phase29 information architecture and permission contract (001)
 
-Recorded 2026-10-19 Asia/Saigon. Proposed frozen contract for independent001 review; implementation awaits001 lifecycle gates.
+Recorded 2026-10-19 Asia/Saigon. Accepted frozen contract published with001 DONE;002 is VERIFYING after product/Frontend/native gates; Workspace publication/relay remains pending. Historical proposed/review status is superseded by verified LIFECYCLE-001.md.
 
 ## Routes and entry points
 

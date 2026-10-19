@@ -1,0 +1,677 @@
+{
+  "checkpoint": "INITIAL_EXACT_MAIN_NATIVE_FINDING",
+  "frontendMain": "bbfd7aa6789e1974a203dfe891bfc0142fd071ba",
+  "deployment": "BtRy3MAki2dJj5y1PHPmBp6guzti",
+  "result": "REMEDIATE_AND_RETEST",
+  "finding": "EN navigation More overlaps locale control; flex containers shrink below child content. Initial header box-only intersection check missed overflowing children; screenshot and item rects prove failure.",
+  "authenticatedEN": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Quick navigation",
+          "rect": {
+            "x": 0,
+            "y": 831,
+            "w": 320,
+            "h": 69
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 0,
+              "y": 836,
+              "w": 80,
+              "h": 56
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 80,
+              "y": 836,
+              "w": 80,
+              "h": 56
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 160,
+              "y": 836,
+              "w": 80,
+              "h": 56
+            },
+            {
+              "text": "Open menu",
+              "href": null,
+              "active": null,
+              "x": 240,
+              "y": 836,
+              "w": 80,
+              "h": 56
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [],
+      "overlaps": []
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Quick navigation",
+          "rect": {
+            "x": 0,
+            "y": 831,
+            "w": 375,
+            "h": 69
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 0,
+              "y": 836,
+              "w": 93.75,
+              "h": 56
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 93.75,
+              "y": 836,
+              "w": 93.75,
+              "h": 56
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 187.5,
+              "y": 836,
+              "w": 93.75,
+              "h": 56
+            },
+            {
+              "text": "Open menu",
+              "href": null,
+              "active": null,
+              "x": 281.25,
+              "y": 836,
+              "w": 93.75,
+              "h": 56
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [],
+      "overlaps": []
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Quick navigation",
+          "rect": {
+            "x": 0,
+            "y": 831,
+            "w": 390,
+            "h": 69
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 0,
+              "y": 836,
+              "w": 97.5,
+              "h": 56
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 97.5,
+              "y": 836,
+              "w": 97.5,
+              "h": 56
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 195,
+              "y": 836,
+              "w": 97.5,
+              "h": 56
+            },
+            {
+              "text": "Open menu",
+              "href": null,
+              "active": null,
+              "x": 292.5,
+              "y": 836,
+              "w": 97.5,
+              "h": 56
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [],
+      "overlaps": []
+    },
+    {
+      "width": 412,
+      "scrollWidth": 412,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Quick navigation",
+          "rect": {
+            "x": 0,
+            "y": 831,
+            "w": 412,
+            "h": 69
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 0,
+              "y": 836,
+              "w": 103,
+              "h": 56
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 103,
+              "y": 836,
+              "w": 103,
+              "h": 56
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 206,
+              "y": 836,
+              "w": 103,
+              "h": 56
+            },
+            {
+              "text": "Open menu",
+              "href": null,
+              "active": null,
+              "x": 309,
+              "y": 836,
+              "w": 103,
+              "h": 56
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [],
+      "overlaps": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Primary navigation",
+          "rect": {
+            "x": 24,
+            "y": 74,
+            "w": 705,
+            "h": 44
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 83.609375,
+              "y": 74,
+              "w": 92,
+              "h": 44
+            },
+            {
+              "text": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "x": 179.609375,
+              "y": 74,
+              "w": 155.125,
+              "h": 44
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 338.734375,
+              "y": 74,
+              "w": 125.265625,
+              "h": 44
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 468,
+              "y": 74,
+              "w": 120.578125,
+              "h": 44
+            },
+            {
+              "text": "More",
+              "href": null,
+              "active": null,
+              "x": 592.578125,
+              "y": 74,
+              "w": 76.796875,
+              "h": 44
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [
+        {
+          "class": "_brand_lri0e_4",
+          "x": 24,
+          "y": 13,
+          "w": 248.875,
+          "h": 40
+        },
+        {
+          "class": "_desktopNav_lri0e_9",
+          "x": 24,
+          "y": 74,
+          "w": 705,
+          "h": 44
+        },
+        {
+          "class": "_headerActions_lri0e_15",
+          "x": 288.875,
+          "y": 8,
+          "w": 440.125,
+          "h": 50
+        }
+      ],
+      "overlaps": []
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Primary navigation",
+          "rect": {
+            "x": 24,
+            "y": 74,
+            "w": 961,
+            "h": 44
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 211.609375,
+              "y": 74,
+              "w": 92,
+              "h": 44
+            },
+            {
+              "text": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "x": 307.609375,
+              "y": 74,
+              "w": 155.125,
+              "h": 44
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 466.734375,
+              "y": 74,
+              "w": 125.265625,
+              "h": 44
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 596,
+              "y": 74,
+              "w": 120.578125,
+              "h": 44
+            },
+            {
+              "text": "More",
+              "href": null,
+              "active": null,
+              "x": 720.578125,
+              "y": 74,
+              "w": 76.796875,
+              "h": 44
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [
+        {
+          "class": "_brand_lri0e_4",
+          "x": 24,
+          "y": 13,
+          "w": 504.875,
+          "h": 40
+        },
+        {
+          "class": "_desktopNav_lri0e_9",
+          "x": 24,
+          "y": 74,
+          "w": 961,
+          "h": 44
+        },
+        {
+          "class": "_headerActions_lri0e_15",
+          "x": 544.875,
+          "y": 8,
+          "w": 440.125,
+          "h": 50
+        }
+      ],
+      "overlaps": []
+    },
+    {
+      "width": 1025,
+      "scrollWidth": 1010,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Primary navigation",
+          "rect": {
+            "x": 261.109375,
+            "y": 14,
+            "w": 404.765625,
+            "h": 44
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 261.109375,
+              "y": 14,
+              "w": 92,
+              "h": 44
+            },
+            {
+              "text": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "x": 357.109375,
+              "y": 14,
+              "w": 155.125,
+              "h": 44
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 516.234375,
+              "y": 14,
+              "w": 125.265625,
+              "h": 44
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 645.5,
+              "y": 14,
+              "w": 120.578125,
+              "h": 44
+            },
+            {
+              "text": "More",
+              "href": null,
+              "active": null,
+              "x": 770.078125,
+              "y": 14,
+              "w": 76.796875,
+              "h": 44
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [
+        {
+          "class": "_brand_lri0e_4",
+          "x": 24,
+          "y": 16,
+          "w": 221.109375,
+          "h": 40
+        },
+        {
+          "class": "_desktopNav_lri0e_9",
+          "x": 261.109375,
+          "y": 14,
+          "w": 404.765625,
+          "h": 44
+        },
+        {
+          "class": "_headerActions_lri0e_15",
+          "x": 681.875,
+          "y": 11,
+          "w": 304.125,
+          "h": 50
+        }
+      ],
+      "overlaps": []
+    },
+    {
+      "width": 1100,
+      "scrollWidth": 1085,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Primary navigation",
+          "rect": {
+            "x": 278.953125,
+            "y": 14,
+            "w": 437.390625,
+            "h": 44
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 278.953125,
+              "y": 14,
+              "w": 92,
+              "h": 44
+            },
+            {
+              "text": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "x": 374.953125,
+              "y": 14,
+              "w": 155.125,
+              "h": 44
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 534.078125,
+              "y": 14,
+              "w": 125.265625,
+              "h": 44
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 663.34375,
+              "y": 14,
+              "w": 120.578125,
+              "h": 44
+            },
+            {
+              "text": "More",
+              "href": null,
+              "active": null,
+              "x": 787.921875,
+              "y": 14,
+              "w": 76.796875,
+              "h": 44
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [
+        {
+          "class": "_brand_lri0e_4",
+          "x": 24,
+          "y": 16,
+          "w": 238.953125,
+          "h": 40
+        },
+        {
+          "class": "_desktopNav_lri0e_9",
+          "x": 278.953125,
+          "y": 14,
+          "w": 437.390625,
+          "h": 44
+        },
+        {
+          "class": "_headerActions_lri0e_15",
+          "x": 732.34375,
+          "y": 11,
+          "w": 328.65625,
+          "h": 50
+        }
+      ],
+      "overlaps": []
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "locale": "en",
+      "path": "/",
+      "navs": [
+        {
+          "label": "Primary navigation",
+          "rect": {
+            "x": 406.203125,
+            "y": 14,
+            "w": 508.34375,
+            "h": 44
+          },
+          "items": [
+            {
+              "text": "Home",
+              "href": "/",
+              "active": "page",
+              "x": 406.203125,
+              "y": 14,
+              "w": 92,
+              "h": 44
+            },
+            {
+              "text": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "x": 502.203125,
+              "y": 14,
+              "w": 155.125,
+              "h": 44
+            },
+            {
+              "text": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "x": 661.328125,
+              "y": 14,
+              "w": 125.265625,
+              "h": 44
+            },
+            {
+              "text": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "x": 790.59375,
+              "y": 14,
+              "w": 120.578125,
+              "h": 44
+            },
+            {
+              "text": "More",
+              "href": null,
+              "active": null,
+              "x": 915.171875,
+              "y": 14,
+              "w": 76.796875,
+              "h": 44
+            }
+          ]
+        }
+      ],
+      "headerBoxes": [
+        {
+          "class": "_brand_lri0e_4",
+          "x": 112.5,
+          "y": 16,
+          "w": 277.703125,
+          "h": 40
+        },
+        {
+          "class": "_desktopNav_lri0e_9",
+          "x": 406.203125,
+          "y": 14,
+          "w": 508.34375,
+          "h": 44
+        },
+        {
+          "class": "_headerActions_lri0e_15",
+          "x": 930.546875,
+          "y": 11,
+          "w": 381.953125,
+          "h": 50
+        }
+      ],
+      "overlaps": []
+    }
+  ]
+}

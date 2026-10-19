@@ -1,0 +1,1461 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "002",
+  "frontendMain": "3bbf7bc545b614d3b5cc1b3fc8b06992e62dd17f",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "vercelDeployment": "BT9cCSMZNMWZomvu2GpELzBtzq6d",
+  "testAlias": "https://cong-dong-ngon-ngu-sigma.vercel.app",
+  "syntheticOnly": true,
+  "productionMutated": false,
+  "result": "PASS_BOUNDED_NAVIGATION",
+  "rows": [
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 320,
+      "scrollWidth": 320,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 80,
+              "height": 56
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 80,
+              "height": 56
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 80,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 80,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 375,
+      "scrollWidth": 375,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 93.75,
+              "height": 56
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 93.75,
+              "height": 56
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 93.75,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 93.75,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 390,
+      "scrollWidth": 390,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 97.5,
+              "height": 56
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 97.5,
+              "height": 56
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 97.5,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 97.5,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 412,
+      "scrollWidth": 412,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 103,
+              "height": 56
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 103,
+              "height": 56
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 103,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 103,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 768,
+      "scrollWidth": 753,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 92,
+              "height": 44
+            },
+            {
+              "label": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "width": 155.125,
+              "height": 44
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 125.265625,
+              "height": 44
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 120.578125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 92,
+              "height": 44
+            },
+            {
+              "label": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "width": 155.125,
+              "height": 44
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 125.265625,
+              "height": 44
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 120.578125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 1025,
+      "scrollWidth": 1010,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 92,
+              "height": 44
+            },
+            {
+              "label": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "width": 155.125,
+              "height": 44
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 125.265625,
+              "height": 44
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 120.578125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 1100,
+      "scrollWidth": 1085,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 92,
+              "height": 44
+            },
+            {
+              "label": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "width": 155.125,
+              "height": 44
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 125.265625,
+              "height": 44
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 120.578125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "en",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": "page",
+              "width": 92,
+              "height": 44
+            },
+            {
+              "label": "Study partners",
+              "href": "/exchange",
+              "active": null,
+              "width": 155.125,
+              "height": 44
+            },
+            {
+              "label": "My Groups",
+              "href": "/community/groups",
+              "active": null,
+              "width": 125.265625,
+              "height": 44
+            },
+            {
+              "label": "Messages",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 120.578125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 320,
+      "scrollWidth": 320,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 80,
+              "height": 56
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 80,
+              "height": 56
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 80,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 80,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 375,
+      "scrollWidth": 375,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 93.75,
+              "height": 56
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 93.75,
+              "height": 56
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 93.75,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 93.75,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 390,
+      "scrollWidth": 390,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 97.5,
+              "height": 56
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 97.5,
+              "height": 56
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 97.5,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 97.5,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 412,
+      "scrollWidth": 412,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 103,
+              "height": 56
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 103,
+              "height": 56
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 103,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 103,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 768,
+      "scrollWidth": 753,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 120.265625,
+              "height": 44
+            },
+            {
+              "label": "Bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 108.234375,
+              "height": 44
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 143.515625,
+              "height": 44
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 110.203125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 120.265625,
+              "height": 44
+            },
+            {
+              "label": "Bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 108.234375,
+              "height": 44
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 143.515625,
+              "height": 44
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 110.203125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 1025,
+      "scrollWidth": 1010,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 120.265625,
+              "height": 44
+            },
+            {
+              "label": "Bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 108.234375,
+              "height": 44
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 143.515625,
+              "height": 44
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 110.203125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 1100,
+      "scrollWidth": 1085,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 120.265625,
+              "height": 44
+            },
+            {
+              "label": "Bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 108.234375,
+              "height": 44
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 143.515625,
+              "height": 44
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 110.203125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "authenticated",
+      "locale": "vi",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "path": "/",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": "page",
+              "width": 120.265625,
+              "height": 44
+            },
+            {
+              "label": "Bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 108.234375,
+              "height": 44
+            },
+            {
+              "label": "Nhóm của tôi",
+              "href": "/community/groups",
+              "active": null,
+              "width": 143.515625,
+              "height": 44
+            },
+            {
+              "label": "Tin nhắn",
+              "href": "/exchange/conversations",
+              "active": null,
+              "width": 110.203125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 320,
+      "scrollWidth": 320,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": null,
+              "width": 106.65625,
+              "height": 56
+            },
+            {
+              "label": "Search",
+              "href": null,
+              "active": null,
+              "width": 106.671875,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 106.65625,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 375,
+      "scrollWidth": 375,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": null,
+              "width": 125,
+              "height": 56
+            },
+            {
+              "label": "Search",
+              "href": null,
+              "active": null,
+              "width": 125,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 125,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 390,
+      "scrollWidth": 390,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": null,
+              "width": 130,
+              "height": 56
+            },
+            {
+              "label": "Search",
+              "href": null,
+              "active": null,
+              "width": 130,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 130,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 412,
+      "scrollWidth": 412,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Quick navigation",
+          "items": [
+            {
+              "label": "Home",
+              "href": "/",
+              "active": null,
+              "width": 137.328125,
+              "height": 56
+            },
+            {
+              "label": "Search",
+              "href": null,
+              "active": null,
+              "width": 137.328125,
+              "height": 56
+            },
+            {
+              "label": "Open menu",
+              "href": null,
+              "active": null,
+              "width": 137.328125,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 768,
+      "scrollWidth": 768,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Explore",
+              "href": "/",
+              "active": null,
+              "width": 104.40625,
+              "height": 44
+            },
+            {
+              "label": "Find a study partner",
+              "href": "/exchange",
+              "active": null,
+              "width": 191.53125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Explore",
+              "href": "/",
+              "active": null,
+              "width": 104.40625,
+              "height": 44
+            },
+            {
+              "label": "Find a study partner",
+              "href": "/exchange",
+              "active": null,
+              "width": 191.53125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "en",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Primary navigation",
+          "items": [
+            {
+              "label": "Explore",
+              "href": "/",
+              "active": null,
+              "width": 104.40625,
+              "height": 44
+            },
+            {
+              "label": "Find a study partner",
+              "href": "/exchange",
+              "active": null,
+              "width": 191.53125,
+              "height": 44
+            },
+            {
+              "label": "More",
+              "href": null,
+              "active": null,
+              "width": 76.796875,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 320,
+      "scrollWidth": 320,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": null,
+              "width": 106.65625,
+              "height": 56
+            },
+            {
+              "label": "Tìm kiếm",
+              "href": null,
+              "active": null,
+              "width": 106.671875,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 106.65625,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 375,
+      "scrollWidth": 375,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": null,
+              "width": 125,
+              "height": 56
+            },
+            {
+              "label": "Tìm kiếm",
+              "href": null,
+              "active": null,
+              "width": 125,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 125,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 390,
+      "scrollWidth": 390,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": null,
+              "width": 130,
+              "height": 56
+            },
+            {
+              "label": "Tìm kiếm",
+              "href": null,
+              "active": null,
+              "width": 130,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 130,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 412,
+      "scrollWidth": 412,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng nhanh",
+          "items": [
+            {
+              "label": "Trang chủ",
+              "href": "/",
+              "active": null,
+              "width": 137.328125,
+              "height": 56
+            },
+            {
+              "label": "Tìm kiếm",
+              "href": null,
+              "active": null,
+              "width": 137.328125,
+              "height": 56
+            },
+            {
+              "label": "Mở menu",
+              "href": null,
+              "active": null,
+              "width": 137.328125,
+              "height": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 768,
+      "scrollWidth": 768,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Khám phá",
+              "href": "/",
+              "active": null,
+              "width": 121.46875,
+              "height": 44
+            },
+            {
+              "label": "Tìm bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 136.8125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Khám phá",
+              "href": "/",
+              "active": null,
+              "width": 121.46875,
+              "height": 44
+            },
+            {
+              "label": "Tìm bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 136.8125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audience": "guest",
+      "locale": "vi",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "path": "/exchange/conversations",
+      "controlOverlaps": [],
+      "navigation": [
+        {
+          "label": "Điều hướng chính",
+          "items": [
+            {
+              "label": "Khám phá",
+              "href": "/",
+              "active": null,
+              "width": 121.46875,
+              "height": 44
+            },
+            {
+              "label": "Tìm bạn học",
+              "href": "/exchange",
+              "active": null,
+              "width": 136.8125,
+              "height": 44
+            },
+            {
+              "label": "Thêm",
+              "href": null,
+              "active": null,
+              "width": 80.578125,
+              "height": 44
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "account": {
+    "escapeClosed": true,
+    "escapeFocusReturned": true,
+    "outsideClosed": true,
+    "shortcuts": [
+      "My Groups",
+      "Messages",
+      "Language passport",
+      "Membership"
+    ],
+    "revision": "3bbf7bc545b614d3b5cc1b3fc8b06992e62dd17f"
+  },
+  "drawer": {
+    "initialCloseFocus": true,
+    "reverseWrapToLogout": true,
+    "forwardWrapToClose": true,
+    "escapeCloseReturn": true,
+    "scrollLock": true,
+    "width": 320,
+    "locale": "vi"
+  },
+  "additional": {
+    "moreKeyboardArrowFocus": "Library",
+    "focusOutline": "solid 3px",
+    "communityVIEN": true,
+    "mobileDrawerRouteCloses": true,
+    "route": "/exchange/conversations",
+    "groupParentExclusive": true,
+    "revision": "3bbf7bc545b614d3b5cc1b3fc8b06992e62dd17f",
+    "nativeBackdrop": "NOT_RUN_UNIT_PASS"
+  },
+  "guestBoundary": {
+    "logoutClearsOverlaysAndSocialEntries": true,
+    "groupDirectLoginGate": true,
+    "messagesDirectLoginGate": true,
+    "privateDirectory": false
+  },
+  "contrast": {
+    "title": 10.200837251303836,
+    "helper": 5.11360997929437
+  },
+  "history": [
+    {
+      "step": "clickMessages",
+      "path": "/exchange/conversations",
+      "query": "",
+      "hash": "",
+      "active": [
+        "/exchange/conversations"
+      ],
+      "main": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\n\nChưa có hội thoại. Mở hồ sơ một bạn học đã kết nối để bắt đầu.\n\nChọn một hội thoại để tiếp tục trao đổi."
+    },
+    {
+      "step": "back",
+      "path": "/community/groups",
+      "query": "",
+      "hash": "",
+      "active": [
+        "/community/groups"
+      ],
+      "main": "Cộng đồng / Nhóm học của tôi\nNhóm học của tôi\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nBạn chưa tham gia nhóm nào.\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm."
+    },
+    {
+      "step": "forward",
+      "path": "/exchange/conversations",
+      "query": "",
+      "hash": "",
+      "active": [
+        "/exchange/conversations"
+      ],
+      "main": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\n\nChưa có hội thoại. Mở hồ sơ một bạn học đã kết nối để bắt đầu.\n\nChọn một hội thoại để tiếp tục trao đổi."
+    },
+    {
+      "step": "reload",
+      "path": "/exchange/conversations",
+      "query": "",
+      "hash": "",
+      "active": [
+        "/exchange/conversations"
+      ],
+      "main": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\n\nChưa có hội thoại. Mở hồ sơ một bạn học đã kết nối để bắt đầu.\n\nChọn một hội thoại để tiếp tục trao đổi."
+    },
+    {
+      "step": "directInvitationQueryHash",
+      "path": "/community/groups/invitations",
+      "query": "?from=navigation",
+      "hash": "#accept",
+      "active": [
+        "/community/groups"
+      ],
+      "main": "Cộng đồng / Nhóm học của tôi\nGia nhập bằng mã mời\n\nChỉ thành viên hiện tại xem được nội dung nhóm. Bài viết riêng tư của tác giả vẫn chỉ dành cho tác giả.\n\nMã nhóm *\nMã mời bí mật *\n\nDán mã nhóm và mã mời do chủ nhóm cấp, rồi chọn gia nhập để chủ động chấp nhận lời mời vào nhóm riêng tư. Mã mời dùng một lần, hết hạn sau 24 giờ. Chỉ có mã nhóm không cấp quyền truy cập.\n\nGia nhập bằng mã mời\n\nTối đa 2 nhóm sở hữu; 20 thành viên, mã mời, văn bản và báo cáo mỗi nhóm."
+    }
+  ],
+  "limitations": [
+    "Native backdrop click NOT_RUN; unit regression PASS.",
+    "No axe/screen-reader/formal WCAG or real-user usability claim.",
+    "No group membership/domain journeys or message sending claimed for002; these belong003/004/006.",
+    "Text zoom acceptance NOT_RUN; natural VI/EN wrapping and seven-width checks completed."
+  ]
+}
