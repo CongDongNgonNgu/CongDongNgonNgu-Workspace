@@ -1,0 +1,9 @@
+# LNG-29-005 lifecycle checkpoint
+
+Recorded 2026-10-20 Asia/Saigon. Current status VERIFYING: source-contract audit and explicit independent group-conversation UNSUPPORTED/HELD disposition complete; Workspace publication and terminal relay pending. 001-004 DONE, 006 PLANNED; Phase29 verdict NOT_REACHED. Stop after Phase29; no Phase30+.
+
+[005 evidence](EVIDENCE-005.md) distinguishes the supported private Study Group collaboration and canonical direct pair from the absent independent multi-party conversation. No product/schema/API/route/fixture change was made. Root affected Frontend focus gate passed 31 tests/3 files; existing Backend group-collaboration/static migration-contract tests passed 2 suites/6 tests in 27.028 seconds, without any database migration or schema mutation. Independent source-contract audit supports the hold; source inspection is not runtime isolation PASS. New native flows and fixture cleanup are NOT_RUN/not applicable to this documentation-only disposition. Full Backend build/security suites are NOT_RUN/not required for unchanged executable source; focused Backend tests passed as recorded above; 006 runtime isolation and explicit leak measurements remain pending.
+
+Accepted source baseline remains Frontend main 5b7b41b85604801055b463111f808a504bf579b5, Backend main b3be9e28c6c4596ded3ed35726c57846ec8870da and Workspace main 21ed0d928ccba76b529fb84d81746af10e45d990. The current Workspace feature branch contains only authorized evidence/projection changes.
+
+Remaining: independent documentary review -> Workspace syntax/monitor tests/diff -> commit/push/PR CI -> merge and exact reviewed/main tree comparison -> main CI -> temporary branch deletion locally/remotely and pruning -> sanitized terminal relay -> complete validated same-phase 006 continuation. No future PR/CI/merge/branch cleanup/relay acceptance or 005 DONE is claimed.
