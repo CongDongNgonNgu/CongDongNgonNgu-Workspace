@@ -1,0 +1,30 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "003",
+  "scope": "LOCAL_ONLY_REVIEWED_TEST_TOOLING",
+  "files": [
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-runtime-fixtures.cjs",
+      "sha256": "683e67155dc534cbd3c067e608a33522942aef316a1f83b39c9f81bdecb930d4"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-runtime-fixtures.test.cjs",
+      "sha256": "2a9fdde38d24ea20958c2626e236188caebdeecc80e1c469afe180b125f5c751"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-003-api-audit.cjs",
+      "sha256": "8cdda5afbd94b1745d1177fa981bb203f1561b983cc7c012e0f1d7a18bfd9aa9"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-003-api-audit.test.cjs",
+      "sha256": "ca9b35aeb9a44933efb3d5c4d0db1c3baaf01f7bac990252f0d55603dc28631d"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-003-api-acceptance.cjs",
+      "sha256": "40311c4194d501e45b91e6abb5afd4bec9926199984fae87007b6ac7d29fbbe6"
+    }
+  ],
+  "review": "Independent security/contract APPROVE; fixture helper15 tests and API runner7 tests passed; runtime outcomes recorded separately",
+  "credentialsIncluded": false
+}
