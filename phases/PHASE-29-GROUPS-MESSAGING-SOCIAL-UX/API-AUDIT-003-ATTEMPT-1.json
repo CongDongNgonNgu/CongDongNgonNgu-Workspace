@@ -1,0 +1,11 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "003",
+  "verdict": "REMEDIATE_AND_RETEST",
+  "code": "ACCEPTANCE_EXECUTION_FAILED",
+  "runtimeAcceptance": "INTERRUPTED",
+  "runId": "0e4b76f2-6006-45cc-9355-2ddd53d57f5e",
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false
+}

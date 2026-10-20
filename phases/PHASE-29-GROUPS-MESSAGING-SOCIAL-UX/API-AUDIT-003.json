@@ -1,0 +1,523 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "003",
+  "cases": [
+    {
+      "id": "owner-group-home",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-member-list",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-invite-metadata",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-my-groups-scope",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "moderator-group-home",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "moderator-member-list",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "moderator-invite-metadata",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "moderator-my-groups-scope",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "member-group-home",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "member-member-list",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "member-invite-metadata",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-my-groups-scope",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "invited-group-home",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "invited-member-list",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "invited-invite-metadata",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "invited-my-groups-scope",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "nonmember-group-home",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "nonmember-member-list",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "nonmember-invite-metadata",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "nonmember-my-groups-scope",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "revoked-group-home",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "revoked-member-list",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "revoked-invite-metadata",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "revoked-my-groups-scope",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "moderator-cannot-issue-invite",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-cannot-issue-invite",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "moderator-cannot-promote-member",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-cannot-self-promote",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-cannot-remove-moderator",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "moderator-cannot-remove-owner",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "moderator-cannot-remove-self",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-cannot-transfer-owner",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "owner-must-transfer-before-leave",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "nonmember-cannot-write-text",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "revoked-cannot-write-text",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-unicode-text-send",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-unicode-text-persisted",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "member-unicode-text-persisted",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "invited-manual-accept",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "one-use-token-replay-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "invited-access-after-accept",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-issues-revocation-test-invite",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-revokes-unused-invite",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "revoked-invite-redemption-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "owner-issues-ban-rule-test-invite",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "removed-member-cannot-rejoin",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "denied-removed-member-did-not-consume-invite",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-promotes-accepted-member",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "moderator-cannot-remove-peer",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "owner-demotes-moderator",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "moderator-removes-ordinary-member",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "removed-invited-user-access-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "member-leave",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "left-member-home-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "left-member-list-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "owner-issues-left-member-rejoin-invite",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "left-member-may-explicitly-rejoin",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "owner-transfers-to-existing-moderator",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "new-owner-authority-projected",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "former-owner-demoted",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "exactly-one-owner-after-transfer",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "former-owner-cannot-issue-invite",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "new-owner-cannot-leave",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    },
+    {
+      "id": "former-owner-may-leave-after-transfer",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED"
+    },
+    {
+      "id": "former-owner-access-revoked-after-leave",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE"
+    }
+  ],
+  "total": 65,
+  "passed": 65,
+  "failed": 0,
+  "notRun": 0,
+  "contractMismatches": 0,
+  "unexpectedAllows": 0,
+  "leakCounts": {
+    "unauthorizedProtectedResponses": 0,
+    "crossGroup": "NOT_RUN",
+    "crossConversation": "NOT_RUN"
+  },
+  "runtimeAcceptance": "EXECUTED",
+  "verdict": "PASS_BOUNDED_API",
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "cleanup": "REQUIRED_BY_CALLER",
+  "transitionsRequested": true,
+  "nativeFixtureReuse": "USE_FRESH_FIXTURE_OR_ACCOUNT_FOR_CHANGED_ROLES",
+  "runId": "ef4dabd9-5c0f-4571-845e-3f43616775ff",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "preflight": {
+    "target": "OWNER_APPROVED_TEST",
+    "clientTlsVerified": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+    "ledgerPerFileMatchesExactBackendMain": true,
+    "productionMutated": false
+  }
+}

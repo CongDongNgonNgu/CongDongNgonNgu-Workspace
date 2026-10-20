@@ -1,0 +1,409 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "003",
+  "frontendMain": "367e8c473013fa322b5f53b6514a5a0327dc287b",
+  "reviewedTree": "6072e1f0383997ac29848876623861df82a737e6",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "deployment": "qqwiKAaFj759MsyGFpQwPxRVndfR",
+  "runId": "848b6ccc-0365-4345-a90b-cf61421b229b",
+  "performedBy": "root using isolated Chrome DevTools contexts",
+  "verdict": "PASS_BOUNDED_NATIVE_STUDY_GROUP_FLOWS",
+  "flows": [
+    "normal synthetic owner and invited logins",
+    "private list and generic denied view before acceptance",
+    "desktop native create; optional description not entered into React state by fill tool, retained as tooling observation",
+    "mobile320 native create using keyboard; full VI/EN learning description persisted",
+    "native issue secret displayed once; manually transferred only in memory to invited normal accept form; secret discarded",
+    "member sees discussion and member tab without management controls",
+    "native VI/EN Unicode discussion send, actual author/time and exact body after reload",
+    "owner assigns moderator in confirmation dialog; refreshed recipient shows moderator role and reports without owner invite controls",
+    "native ownership transfer, previous owner becomes member then leaves; direct URL generic denied after leave",
+    "native second invitation acceptance, owner remove confirmation, recipient live view immediately generic denied and remains denied after reload",
+    "native invitation revoke; history shows Used/Revoked metadata, no secret input",
+    "native back/forward and refresh canonical group routes",
+    "create dialog Shift+Tab wraps from close to submit, visible3pxfocus; Escape dismissal"
+  ],
+  "metrics": [
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 320,
+      "scrollWidth": 320,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 375,
+      "scrollWidth": 375,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 412,
+      "scrollWidth": 412,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 768,
+      "scrollWidth": 753,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "index",
+      "path": "/community/groups",
+      "lang": "vi",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi",
+        "Everyday Vietnamese and English"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 320,
+      "scrollWidth": 320,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 375,
+      "scrollWidth": 375,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 412,
+      "scrollWidth": 412,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "loading-checkpoint",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 768,
+      "scrollWidth": 768,
+      "dialog": false,
+      "headings": [
+        "Nhóm học của tôi"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "vi",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 320,
+      "scrollWidth": 320,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 320,
+      "scrollWidth": 320,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 375,
+      "scrollWidth": 375,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 375,
+      "scrollWidth": 375,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 412,
+      "scrollWidth": 412,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 412,
+      "scrollWidth": 412,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "home",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 768,
+      "scrollWidth": 753,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 768,
+      "scrollWidth": 753,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    },
+    {
+      "surface": "members",
+      "path": "/community/groups/1eb0af83-ebf7-4696-ab60-8f0de3814ed6",
+      "lang": "en",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "dialog": false,
+      "headings": [
+        "Cùng luyện Việt–Anh · Everyday conversations",
+        "Group members"
+      ],
+      "overflow": []
+    }
+  ],
+  "metricNotes": [
+    "Each emulate may reload or preserve selected tab. Actual surface derived from observed headings, not intended label.",
+    "VI768home row captured loading and is not a loaded-home PASS.",
+    "This is bounded003 acceptance; complete seven-width VI/EN surface/state matrix remains006.",
+    "Mobile320 click attempt on below-fold Group members hit fixed Messages navigation; not counted as member action PASS. Desktop actual member action subsequently verified. Mobile touch scrolling coverage remains006."
+  ],
+  "toolingFindings": [
+    "fill_form/fill textarea set DOM value without React change; keyboard type_text works and was used for native persisted description and text.",
+    "Child agent Chrome DevTools profile conflict: independent native child review NOT_RUN. Independent source/API review completed separately."
+  ],
+  "leakCounts": {
+    "observedNativeDeniedViewsLeakingProtectedContent": 0,
+    "crossGroupIsolation": "NOT_RUN",
+    "crossConversationIsolation": "NOT_RUN"
+  },
+  "notRun": [
+    "exhaustive006 integration/security/multi-resource isolation",
+    "screen reader/axe/fullWCAG certification",
+    "independent child native browser run"
+  ],
+  "screenshots": "desktop1440 and mobile390 visually inspected in-memory; no screenshot file claimed",
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "cleanup": "SUCCESS_EXACT_OWNED_RESIDUAL_0",
+  "cleanupEvidence": "FIXTURE-CLEANUP-003-NATIVE.json"
+}

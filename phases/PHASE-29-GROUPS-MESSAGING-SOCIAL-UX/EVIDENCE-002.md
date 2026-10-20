@@ -1,3 +1,7 @@
+# Current disposition: LNG-29-002 DONE
+
+Verified Workspace PR171 publication/CI/tree/cleanup and complete accepted terminal continuation are recorded in [LIFECYCLE-002.md](LIFECYCLE-002.md). Following IN_PROGRESS/VERIFYING sections are preserved historical execution checkpoints.003 is now eligible and active; no acceptance of003 inferred.
+
 # LNG-29-002 execution checkpoint
 
 Recorded2026-10-19 Asia/Saigon. LNG-29-001=DONE; LNG-29-002=VERIFYING; product/Frontend/native gates complete, Workspace publication/terminal relay pending. Scope/order remain [TASKS.md](TASKS.md); Phase29 verdict NOT_REACHED.003-006 unstarted; stop after29/no30.

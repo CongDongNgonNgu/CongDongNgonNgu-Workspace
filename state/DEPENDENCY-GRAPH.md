@@ -1,5 +1,11 @@
 # Phase29 current execution projection - 2026-10-19
 
+CURRENT_PHASE=29; CURRENT_SUBPHASE=LNG-29-003; PHASE_29_STATUS=IN_PROGRESS; LNG_29_001=DONE; LNG_29_002=DONE; LNG_29_003=VERIFYING; LNG_29_004..006=PLANNED. Verified002publication/mainCI/tree/cleanup/accepted complete terminalrelay in LIFECYCLE-002.md. Current003 privateStudyGroupUX only; Phase30+NOT_STARTED. Earlierprojectionsbelowarehistoricalcheckpoints.
+
+Current acceptance: 003 VERIFYING: product gates, Frontend publication, bounded API/native acceptance and exact-owned cleanup complete; Workspace publication/CI/merge/branch cleanup/terminal relay pending.004-006 PLANNED; Phase29 verdict NOT_REACHED; stop after29/no30.
+
+# Phase29 current execution projection - 2026-10-19
+
 CURRENT_PHASE=29; CURRENT_SUBPHASE=LNG-29-002; PHASE_29_STATUS=IN_PROGRESS; LNG_29_001=DONE; LNG_29_002=VERIFYING; LNG_29_003..006=PLANNED. PR170/main CI/tree equality/branch cleanup and complete terminal relay verified; see Phase29 LIFECYCLE-001.md. Current implementation scope002 navigation only. Phase30+ NOT_STARTED. Earlier projections below are historical checkpoints.
 
 # Phase29 authorized execution - 2026-10-19
