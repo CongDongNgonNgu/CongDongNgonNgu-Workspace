@@ -1,0 +1,47 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "004",
+  "scope": "LOCAL_ONLY_REVIEWED_TEST_TOOLING",
+  "files": [
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase28-runtime-fixtures.cjs",
+      "sha256": "b9389ae444aaf6ae269595ff22ee460cf206fa265e6163b10eb65b1b96fd4408"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-runtime-fixtures.cjs",
+      "sha256": "f90f895485cfbe3ae4353414799f3e5af9eb62206da403967f5117bac84da77e"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-runtime-fixtures.test.cjs",
+      "sha256": "a5ae056c8fdbe904aeb1673ef4afad83ef2342e8f28609e956d2716c15497fe2"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-004-api-audit.cjs",
+      "sha256": "94ba280d6f2acf3df1010787d549ebdacaff840a9b6d9753d0550910ff60a292"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-004-api-audit.test.cjs",
+      "sha256": "59be8a7f384405c59b697d9d5e47d487da73c9947eef3ffa549b85c48e845b0c"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-004-api-acceptance.cjs",
+      "sha256": "68f618b9e65303e3afcd5f76ac51e5d318157bd7f7364cdd17f4e6c7f47c7f39"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-004-api-acceptance.test.cjs",
+      "sha256": "7c3cff6a411129b9667deb19ddf969287cabd514ca7e9c0af1ce005200101322"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-004-history-seed.cjs",
+      "sha256": "9ded41ac3258cc063d5bb8690342bf5e6be2d34aeb0185c794d796c95eda2643"
+    },
+    {
+      "path": "D:/Work/CongDongNgonNgu/phase29-004-history-seed.test.cjs",
+      "sha256": "3978cac0fb4271f9c77c385a627d50e3b7cb4f3aff5c1b2f4e0758f1beaed79a"
+    }
+  ],
+  "review": "Independent final helper, canonical-denial delta, 51-case audit and wrapper source/security review APPROVE; independent 30 current offline tests and three syntax checks PASS. Runtime acceptance is separate.",
+  "credentialsIncluded": false,
+  "historySeedReview": "Independent fixture-specific normal API history-seed review APPROVE; 6 offline tests and both syntax checks PASS. Root runtime/native results are separate."
+}

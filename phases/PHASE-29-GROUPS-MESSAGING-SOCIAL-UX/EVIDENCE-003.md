@@ -1,3 +1,7 @@
+# Current accepted outcome - 2026-10-20
+
+LNG-29-003 DONE. Frontend and Workspace publication, applicable CI, exact reviewed/main trees, exact-owned cleanup, temporary branch cleanup and terminal relay completed. See [final lifecycle](LIFECYCLE-003.md). LNG-29-004 is IN_PROGRESS; 005-006 remain PLANNED; Phase29 verdict NOT_REACHED. All earlier VERIFYING/failed-attempt records below remain historical evidence.
+
 # LNG-29-003 Study Group execution checkpoint
 
 Current checkpoint: 003 VERIFYING: product gates, Frontend publication, bounded API/native acceptance and exact-owned cleanup complete; Workspace publication/CI/merge/branch cleanup/terminal relay pending.004-006 PLANNED; Phase29 verdict NOT_REACHED; stop after29/no30. Earlier checkpoint paragraphs below are historical and superseded by final bounded acceptance recorded at the end.

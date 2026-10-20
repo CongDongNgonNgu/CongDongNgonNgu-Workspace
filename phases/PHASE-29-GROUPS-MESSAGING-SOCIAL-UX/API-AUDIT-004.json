@@ -1,0 +1,529 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "004",
+  "cases": [
+    {
+      "id": "owner-canonical-partner",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "partner-canonical-owner",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "canonical-pair-reopen",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "member-public-language-profile-eligible",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "member-exchange-eligible-without-connection",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "member-cannot-open-without-connection",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "member-cannot-read-room",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "member-cannot-read-history",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "member-cannot-send",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "member-cannot-mark-read",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "nonmember-cannot-open-without-connection",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "nonmember-cannot-read-room",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "nonmember-cannot-read-history",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "nonmember-cannot-send",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "nonmember-cannot-mark-read",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "revoked-cannot-open-without-connection",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "revoked-cannot-read-room",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "revoked-cannot-read-history",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "revoked-cannot-send",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "revoked-cannot-mark-read",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "unicode-send",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "idempotent-retry-same-message",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "owner-unicode-persisted",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "connected-unicode-persisted",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "partner-unread-authoritative",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "partner-mark-read",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "partner-read-persists",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "public-owned-learning-post-create",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "private-owned-learning-post-create",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "unsupported-owned-learning-post-create",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "public-context-normal-send",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "partner-context-resolve",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "private-context-send-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_MESSAGE_CONTEXT_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "unsupported-type-context-send-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_MESSAGE_CONTEXT_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "nonparticipant-context-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "owner-revokes-context-visibility",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "revoked-context-resolves-unavailable",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "history-rechecks-revoked-context",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "terminal-block",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "owner-revoked-room-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "owner-revoked-history-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "owner-revoked-send-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "owner-revoked-context-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "owner-revoked-inbox-omits-room",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "connected-revoked-room-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "connected-revoked-history-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "connected-revoked-send-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "connected-revoked-context-denied",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "connected-revoked-inbox-omits-room",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "unblock-does-not-reconnect",
+      "expected": "ALLOW",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "ALLOWED",
+      "responseDataPresent": false
+    },
+    {
+      "id": "unblocked-pair-still-denied",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    }
+  ],
+  "total": 51,
+  "passed": 51,
+  "failed": 0,
+  "notRun": 0,
+  "unexpectedAllows": 0,
+  "contractMismatches": 0,
+  "leakCounts": {
+    "unauthorizedProtectedResponses": 0,
+    "unverifiedDenialMessages": 0,
+    "crossConversation": "NOT_RUN",
+    "crossGroup": "NOT_RUN"
+  },
+  "verdict": "PASS_BOUNDED_API",
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "cleanup": "EXECUTED",
+  "terminalMode": "block",
+  "transitionsRequested": true,
+  "nativeFixtureReuse": "USE_FRESH_FIXTURE",
+  "realtime": "NOT_RUN_API_AUDIT",
+  "pagination": "NOT_RUN_API_AUDIT",
+  "runId": "2edcf2ae-ee37-4db2-8988-594873608719",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "preflight": {
+    "target": "OWNER_APPROVED_TEST",
+    "clientTlsVerified": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+    "ledgerPerFileMatchesExactBackendMain": true,
+    "productionMutated": false
+  },
+  "cleanupResidual": 0
+}
