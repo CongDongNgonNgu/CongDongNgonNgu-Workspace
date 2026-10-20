@@ -6,7 +6,7 @@
 
 - Phase27: **DONE / GO_BOUNDED_COLLABORATION**.
 - Phase28: **DONE / GO_COMMUNITY_UX** — see Phase28 final evidence and lifecycle.
-- Phase29: **IN_PROGRESS / LNG-29-004; LNG-29-001 through 003 DONE** - owner chain 001-006 through closeout; 003 publication, main CI, exact tree, cleanup and terminal relay accepted; 004 messaging experience VERIFYING after product/API/native/cleanup; Workspace publication/relay pending.
+- Phase29: **IN_PROGRESS / LNG-29-005; LNG-29-001 through 004 DONE** - 005 audited capability disposition VERIFYING with Workspace publication/relay pending; 006 PLANNED.
 - Phases30–34: **PLANNED / NOT STARTED**.
 - Phase35: **PLANNED / NOT STARTED** — renumbered from former Phase28 Full-System Simulation.
 - Phase36: **PLANNED / NOT STARTED** — renumbered from former Phase29 Pre-Launch Hardening.
@@ -44,4 +44,4 @@ Payment/provider activation, production DB mutation, production secret changes, 
 
 `NEXT_MAJOR_PHASE=29`
 `NEXT_READY_PHASE=29`
-`NEXT_ACTION=COMPLETE_LNG_29_004_THEN_CHAIN_THROUGH_006_STOP_AFTER_PHASE29`
+`NEXT_ACTION=COMPLETE_LNG_29_005_THEN_CHAIN_THROUGH_006_STOP_AFTER_PHASE29`

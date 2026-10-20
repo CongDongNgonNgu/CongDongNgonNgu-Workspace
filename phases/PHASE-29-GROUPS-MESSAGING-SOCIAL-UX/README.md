@@ -1,6 +1,6 @@
 # Phase 29 — Groups & Messaging Social UX
 
-**Status:** IN_PROGRESS - LNG-29-001 through 003 DONE; LNG-29-004 messaging experience VERIFYING; stop after Phase29
+**Status:** IN_PROGRESS - LNG-29-001 through 004 DONE; LNG-29-005 group-conversation disposition VERIFYING; stop after Phase29
 
 ## Objective
 
@@ -28,4 +28,4 @@ Existing Phase22 private groups remain private. Public discovery/join semantics 
 
 ## Current execution checkpoint
 
-001-003 DONE after verified publication, exact-tree/main CI checks, branch cleanup and accepted terminal relays. 004 VERIFYING: product publication, bounded API/native acceptance and exact-owned cleanup complete; Workspace publication and terminal relay pending. 005-006 PLANNED. Phase29 remains IN_PROGRESS with verdict NOT_REACHED. Stop after Phase29; do not start Phase30+. See [003 lifecycle](LIFECYCLE-003.md), [independent evidence review](REVIEW-EVIDENCE-003.md) and [004 execution evidence](EVIDENCE-004.md).
+001-004 DONE after verified publication, main CI, exact-tree checks, temporary branch cleanup and accepted terminal continuations. 005 VERIFYING: independent group-conversation capability audit/disposition complete; Workspace publication and terminal relay pending. 006 PLANNED. Phase29 remains IN_PROGRESS with verdict NOT_REACHED. Stop after Phase29; no Phase30+. See [005 disposition](EVIDENCE-005.md) and [lifecycle](LIFECYCLE-005.md).
