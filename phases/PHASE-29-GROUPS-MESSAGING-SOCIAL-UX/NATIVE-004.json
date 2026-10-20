@@ -1,0 +1,319 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "004",
+  "status": "PASS_BOUNDED_NATIVE",
+  "runId": "bd1ec7e2-4109-4ac2-9086-a436d4497b3a",
+  "frontendMain": "5b7b41b85604801055b463111f808a504bf579b5",
+  "reviewedTree": "9a3cb9ce92346f9edbf3ed0c27446c06a3e9cc5a",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "deployment": "EVNk2ibqLYfQBj4NRcutCQmXkvk5",
+  "actors": "Exact-owned synthetic owner and connected partner, normal UI login in isolated Chrome DevTools contexts",
+  "observedFlows": [
+    "inbox actual participant/updatedAt and empty direct-thread learning prompt",
+    "native owner Unicode multiline text send",
+    "recipient inbox showed actual1unread before opening",
+    "recipient received exact text/author/time and sent native multiline Unicode reply through explicit Send button via keyboard",
+    "owner reply appeared without navigation/refresh; recipient refresh preserved both messages",
+    "pair information showed current actor/authorized partner only; Shift+Tab trap/Escape return to trigger with visible3pxfocus",
+    "normal Community Share with learning partner dialog selected actual eligible connected partner and sent note/context; successstatus then OpenConversation canonical route",
+    "recipient received context preview/category/language, card persisted after refresh; native OpenContent resolved exact owned canonical Communitypost; back/refresh returnedthread",
+    "offline global status and generic inbox/thread error observed; draft created online survived outage and automatic online recovery; stale Retry click did not execute",
+    "reviewed seed created28normalAPI learning messages; recipient reload showed30messages then native OlderMessages loaded31 unique ordered messages and removed exhausted button",
+    "recovered draft native send persisted as sequence32; recipient live display updated to32 without refresh",
+    "English desktop info544px at1440; Vietnamese mobile info358px at390 and288px at320x600, no horizontal overflow and all three dialog links/buttons44px high",
+    "normal owned block transition while both info dialogs open: backend4/4strict404generic protected-read denials; native both locales removed dialog/identity/history/composer and showed unavailable alert; inbox omitted pair",
+    "owner normal logout clicked; both clients navigated blank and emulation reset before guarded cleanup"
+  ],
+  "measurementsVI": [
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 320,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 966,
+        "bottom": 1062,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 890,
+        "bottom": 986,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 890,
+        "bottom": 986,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 412,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 890,
+        "bottom": 986,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 731,
+        "bottom": 827,
+        "height": 96
+      },
+      "fixedNavTop": null
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 731,
+        "bottom": 827,
+        "height": 96
+      },
+      "fixedNavTop": null
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 731,
+        "bottom": 827,
+        "height": 96
+      },
+      "fixedNavTop": null
+    }
+  ],
+  "mobileComposerFocus": {
+    "width": 390,
+    "height": 900,
+    "afterNativeReplyTypingAndTab": {
+      "active": "Send message",
+      "top": 428.375,
+      "bottom": 472.375,
+      "hitTarget": "Send message",
+      "focusOutlinePx": 3,
+      "scrollY": 477
+    },
+    "notes": "Normal document flow; keyboard focus scrolls explicit Send clear of fixed navigation. Info dialog additionally verified320x600 emulated viewport; hardware software keyboard not run."
+  },
+  "pending": [
+    "Workspace independent evidence review/publication/terminal relay",
+    "Full integration surface/state/contrast matrix reserved006"
+  ],
+  "notRun": [
+    "cross-group/cross-conversation isolation reserved006",
+    "hardware software-keyboard emulation",
+    "independent child native execution",
+    "formal WCAG/screen-reader/axe",
+    "actual failed offline send: composer unavailable after polling error; stale clicks were tool failures",
+    "protocol-specific SSE network trace",
+    "full hardware keyboard/touch/WCAG acceptance"
+  ],
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "cleanup": "CLEANED_RESIDUAL_ZERO",
+  "measurementsEN": [
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 320,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 646,
+        "bottom": 742,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 646,
+        "bottom": 742,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 646,
+        "bottom": 742,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 412,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 590,
+        "bottom": 686,
+        "height": 96
+      },
+      "fixedNavTop": 831
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 731,
+        "bottom": 827,
+        "height": 96
+      },
+      "fixedNavTop": null
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 731,
+        "bottom": 827,
+        "height": 96
+      },
+      "fixedNavTop": null
+    },
+    {
+      "path": "/exchange/conversations/ad857e62-0acf-4108-be6c-0474912fc097",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "loaded": true,
+      "messageCount": 3,
+      "dialog": false,
+      "overflow": [],
+      "composer": {
+        "top": 731,
+        "bottom": 827,
+        "height": 96
+      },
+      "fixedNavTop": null
+    }
+  ],
+  "readObservation": {
+    "lastReadSequence": "31",
+    "unreadCount": "1",
+    "note": "Observed before terminal block after sequence32. Hidden/inactive recipient retained1unread; initial native inbox1unread and normal opening/read observed earlier. No fake partner receipt."
+  },
+  "historyPagination": {
+    "initial": 3,
+    "normalApiSeed": 28,
+    "defaultReloadPage": 30,
+    "afterNativeLoadOlder": 31,
+    "duplicatesObserved": 0,
+    "finalNativeSendTotal": 32
+  },
+  "leakCounts": {
+    "terminalUnauthorizedProtectedResponses": 0,
+    "unverifiedDenialMessages": 0,
+    "crossGroup": "NOT_RUN_RESERVED_006",
+    "crossConversation": "NOT_RUN_RESERVED_006"
+  },
+  "cleanupArtifact": "FIXTURE-CLEANUP-004-NATIVE.json"
+}

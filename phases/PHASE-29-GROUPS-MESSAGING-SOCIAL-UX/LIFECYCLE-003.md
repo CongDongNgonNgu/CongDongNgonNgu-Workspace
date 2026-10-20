@@ -1,6 +1,6 @@
 # LNG-29-003 lifecycle checkpoint
 
-Current status (2026-10-20 Asia/Saigon): LNG-29-003 VERIFYING. Bounded source/API/native acceptance and exact-owned cleanup are complete; Workspace publication, CI, merge, branch cleanup and terminal relay remain pending. The opening checkpoint paragraphs below are historical; the final bounded acceptance section and [independent evidence review](REVIEW-EVIDENCE-003.md) supersede their pending-native statements.
+Current status (2026-10-20 Asia/Saigon): LNG-29-003 DONE after verified Workspace publication, main CI, exact-tree comparison, temporary branch cleanup and accepted terminal relay. LNG-29-004 is IN_PROGRESS; 005-006 remain PLANNED. Earlier checkpoints below are historical. Stop after Phase29; no Phase30+.
 
 ## Historical checkpoint
 
@@ -17,3 +17,15 @@ Remaining gates: complete current native role/journey/VI-EN/responsive/accessibi
 ## Bounded native acceptance and current publication gate
 
 Root native run848b6ccc-0365-4345-a90b-cf61421b229b completed bounded PASS;19-table99-row exact-owned cleanup matches CLEANED manifest, residual0. NATIVE-003.json contains28 measured frames with0recorded horizontal/child overflow; VI768 loading checkpoint is not loaded-home PASS and EN preserved member-tab frames are not relabeled home. Complete006 matrix and independent child browser run remain NOT_RUN. 003 VERIFYING: product gates, Frontend publication, bounded API/native acceptance and exact-owned cleanup complete; Workspace publication/CI/merge/branch cleanup/terminal relay pending.004-006 PLANNED; Phase29 verdict NOT_REACHED; stop after29/no30. See [independent artifact review](REVIEW-EVIDENCE-003.md). Reviewer checked artifacts/manifest locally; native execution was performed by root. No003DONE or future Workspace success claimed.
+
+## Verified Workspace publication
+
+Workspace PR172 merged candidate be79b380ccba433b2b1fd3bba97b7a587b4b39a4 to main 6b257589dc0b0c0cd2048934eaab812bc67d491c. Both have reviewed tree 987020bbc7cb0768e083cadcab66fa22366baa35; exact diff is empty. PR CI39354083901 and main CI39354137494 completed successfully. The temporary evidence branch was deleted remotely and locally, refs pruned, and clean main synchronized. Frontend and Backend remote main remain the accepted revisions above.
+
+The sanitized terminal report was submitted to the confirmed project conversation on 2026-10-20 Asia/Saigon. A complete validated continuation response is still pending at this checkpoint; no relay acceptance is claimed yet. Historical pre-publication checkpoints above remain preserved.
+
+## Accepted terminal relay and automatic 004 continuation
+
+The coordinator confirmed the authorized project conversation at https://chatgpt.com/g/g-p-6a9c0b8b6a1881919d83df217325f15a-congdongngonngu/c/6ad18ad0-30ec-83ec-8008-dd3afdd77fa3 and submitted the sanitized terminal report on 2026-10-20 Asia/Saigon. The completed response accepted LNG-29-003 DONE. The entire latest orchestration code block was copied after generation completed: 7915 characters, 7923 UTF8 bytes, SHA256 2d2563570a307a9e3d389bd827fd57c6e0b6db41a5691c7cdc36157e9261783d.
+
+The coordinator validated CongDongNgonNgu, Phase29, the dependency-valid 004 -> 005 -> 006 chain and the stop after Phase29. The response does not expand frozen authorization or introduce a new group domain, public discovery, attachments, fabricated state or production authority. This completes the previously pending relay gate and supersedes the prior pending-response checkpoint. LNG-29-003 is DONE; proceed automatically with 004 under the existing owner authorization.
