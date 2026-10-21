@@ -1,0 +1,132 @@
+{
+  "scope": "SYNTHETIC_PROCESSOR_FEASIBILITY_NOT_PRODUCT_ACCEPTANCE",
+  "platform": "linux",
+  "node": "v24.18.0",
+  "recordedAt": "2026-10-21T06:44:59.985Z",
+  "candidateLimits": {
+    "inputBytes": 8388608,
+    "width": 1280,
+    "height": 720,
+    "pixels": 921600,
+    "durationSeconds": 15,
+    "frameRate": 30,
+    "videoStreams": 1,
+    "audioStreams": 1,
+    "audioChannels": 2
+  },
+  "results": [
+    {
+      "label": "360p5s",
+      "inputBytes": 757309,
+      "normalizedBytes": 757309,
+      "thumbnailBytes": 7482,
+      "metadata": {
+        "durationSeconds": 5,
+        "width": 640,
+        "height": 360,
+        "rate": 24,
+        "audioStreams": 0
+      },
+      "stages": [
+        {
+          "name": "probe-360p5s",
+          "status": 0,
+          "wallMs": 103.52680899999996,
+          "benchmark": []
+        },
+        {
+          "name": "decode-360p5s",
+          "status": 0,
+          "wallMs": 794.678969,
+          "benchmark": [
+            "bench: utime=0.049s stime=0.009s rtime=0.506s",
+            "bench: maxrss=41548KiB"
+          ]
+        },
+        {
+          "name": "normalize-360p5s",
+          "status": 0,
+          "wallMs": 198.7040119999997,
+          "benchmark": [
+            "bench: utime=0.001s stime=0.001s rtime=0.002s",
+            "bench: maxrss=39444KiB"
+          ]
+        },
+        {
+          "name": "thumbnail-360p5s",
+          "status": 0,
+          "wallMs": 200.2447870000001,
+          "benchmark": [
+            "bench: utime=0.001s stime=0.004s rtime=0.004s",
+            "bench: maxrss=45588KiB"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "truncated-360p5s",
+      "rejected": true
+    },
+    {
+      "label": "720p15s",
+      "inputBytes": 2249574,
+      "normalizedBytes": 2249574,
+      "thumbnailBytes": 6940,
+      "metadata": {
+        "durationSeconds": 15,
+        "width": 1280,
+        "height": 720,
+        "rate": 24,
+        "audioStreams": 1
+      },
+      "stages": [
+        {
+          "name": "probe-720p15s",
+          "status": 0,
+          "wallMs": 200.31986699999834,
+          "benchmark": []
+        },
+        {
+          "name": "decode-720p15s",
+          "status": 0,
+          "wallMs": 4297.041716,
+          "benchmark": [
+            "bench: utime=0.395s stime=0.013s rtime=4.097s",
+            "bench: maxrss=46884KiB"
+          ]
+        },
+        {
+          "name": "normalize-720p15s",
+          "status": 0,
+          "wallMs": 297.9367539999985,
+          "benchmark": [
+            "bench: utime=0.003s stime=0.006s rtime=0.006s",
+            "bench: maxrss=42024KiB"
+          ]
+        },
+        {
+          "name": "thumbnail-720p15s",
+          "status": 0,
+          "wallMs": 299.96288800000184,
+          "benchmark": [
+            "bench: utime=0.007s stime=0.004s rtime=0.099s",
+            "bench: maxrss=49108KiB"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "truncated-720p15s",
+      "rejected": true
+    }
+  ],
+  "version": "ffmpeg version n9.0.2-29-g6dfaba896f-20261020 Copyright (c) 2000-2026 the FFmpeg developers",
+  "limitations": [
+    "No product upload or authorization implementation.",
+    "Windows/local timings are not deployed Render or Linux cgroup proof.",
+    "MP4 H264/AAC only; this is not complete codec/container/adversarial acceptance.",
+    "FFmpeg maxrss can be unavailable on Windows; Linux measurement required.",
+    "Processing is sequential; shared API/processor interference is unmeasured."
+  ],
+  "assertionsPassed": true
+}
