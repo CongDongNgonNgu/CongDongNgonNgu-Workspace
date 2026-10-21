@@ -1,3 +1,9 @@
+# Phase30 authorized dependency graph - 2026-10-21
+
+Closed29 -> authorized30-001 audit/design/provider/limits freeze (BLOCKED_EXTERNAL: BLOCKER-30-001) ->001 Workspace lifecycle ->002 backend ->003 Stitch/shared UI ->004 Community ->005 private groups/direct pairs ->006 exact TEST security/runtime acceptance -> Phase30 closeout ->STOP.002-006 PLANNED; Phase31+ unstarted. See Phase30 EVIDENCE-001.md. Owner authorization supersedes historical stop-before30 statements only within current scope. No downstream implementation bypasses001 storage/privacy evidence and reviewed numeric limits.
+
+## Historical checkpoints
+
 # Phase29 actual accepted closeout - 2026-10-21
 
 CURRENT_PHASE=29; LNG_29_001=DONE; LNG_29_002=DONE; LNG_29_003=DONE; LNG_29_004=DONE; LNG_29_005=DONE; LNG_29_006=DONE; PHASE_29_STATUS=DONE; PHASE_29_VERDICT=GO_SOCIAL_COMMUNICATION_UX. PR175 main362cf39b3af5cede7c052673ed3c3024bc9777b8/tree equality/PR-main CI/temporary branch cleanup and completed terminal ACCEPT verified. All exact-owned fixture residuals0; independent multiparty group conversation HELD/UNSUPPORTED. Final receipt publication pending; no future receipt PR/SHA/CI outcome claimed. PHASE_30_STATUS=READY_PLANNING_ONLY; PHASE_30_IMPLEMENTED=NO; NEXT_ACTION=PUBLISH_VERIFIED_PHASE29_CLOSEOUT_RECEIPT_THEN_STOP. Phase30+NOT_STARTED. See Phase29 CLOSEOUT.md and TERMINAL-ACCEPTANCE-006.txt. Earlier conditional checkpoints are superseded historical evidence.

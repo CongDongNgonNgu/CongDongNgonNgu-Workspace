@@ -1,5 +1,10 @@
 # Blockers
 
+## BLOCKER-30-001 - OPEN / BLOCKED_EXTERNAL - 2026-10-21
+
+Phase30-001 cannot freeze: configured R2 supports historical backups, but current TEST media bucket public-access/scope/capacity and bounded processor limits are unverified. Existing Cloudflare dashboard requires sign-in; no authenticated control-plane evidence available. See [audit and recovery](../phases/PHASE-30-RICH-MEDIA-ATTACHMENTS/EVIDENCE-001.md). Owner signs in to existing account or identifies approved accessible evidence source. Do not activate provider/billing/new credentials, expose media, treat Render ephemeral disk as durable, or start002-006. Current verdict REMEDIATE_AND_RETEST; no architecture/runtime/security PASS. Historical blockers below remain preserved.
+
+
 ## Current Phase 19 blocker reconciliation - 2026-10-06
 BLOCKER-19-001=CLOSED_BY_OWNER_SCOPE_SUPERSESSION, not evidence received.
 001 CANCELLED/SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE; missing metrics EXPECTED_PRE_LAUNCH. Current discovery requires no observation/source approval; future production/provider/payment/data/next-phase gates remain. Old seven-field observation owner gate superseded, recommendations unapplied.
