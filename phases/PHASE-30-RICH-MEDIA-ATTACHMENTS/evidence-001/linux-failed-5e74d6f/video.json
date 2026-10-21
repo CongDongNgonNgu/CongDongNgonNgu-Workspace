@@ -1,0 +1,263 @@
+{
+  "scope": "SYNTHETIC_PROCESSOR_FEASIBILITY_NOT_PRODUCT_ACCEPTANCE",
+  "platform": "linux",
+  "node": "v24.18.0",
+  "recordedAt": "2026-10-21T07:20:18.836Z",
+  "candidateLimits": {
+    "inputBytes": 3145728,
+    "width": 1280,
+    "height": 720,
+    "pixels": 921600,
+    "durationSeconds": 15,
+    "frameRate": 24,
+    "videoStreams": 1,
+    "audioStreams": 1,
+    "audioChannels": 2,
+    "pipelineDeadlineMs": 15000
+  },
+  "results": [
+    {
+      "label": "360p5s",
+      "inputBytes": 753768,
+      "normalizedBytes": 753591,
+      "thumbnailBytes": 7476,
+      "metadata": {
+        "durationSeconds": 5,
+        "width": 640,
+        "height": 360,
+        "rate": 24,
+        "profile": "Constrained Baseline",
+        "audioStreams": 0
+      },
+      "containerSyntheticTagsStripped": true,
+      "seiCounts": {
+        "source": 1,
+        "normalized": 0
+      },
+      "pipelineWallMs": 1402.141431,
+      "stages": [
+        {
+          "name": "probe-360p5s",
+          "status": 0,
+          "wallMs": 104.22293300000001,
+          "benchmark": []
+        },
+        {
+          "name": "decode-360p5s",
+          "status": 0,
+          "wallMs": 499.46346900000003,
+          "benchmark": [
+            "bench: utime=0.031s stime=0.006s rtime=0.305s",
+            "bench: maxrss=40212KiB"
+          ]
+        },
+        {
+          "name": "normalize-360p5s",
+          "status": 0,
+          "wallMs": 195.09020799999985,
+          "benchmark": [
+            "bench: utime=0.002s stime=0.001s rtime=0.002s",
+            "bench: maxrss=39668KiB"
+          ]
+        },
+        {
+          "name": "probe-normalized-360p5s",
+          "status": 0,
+          "wallMs": 102.89324799999986,
+          "benchmark": []
+        },
+        {
+          "name": "nal-source-360p5s",
+          "status": 0,
+          "wallMs": 192.31718,
+          "benchmark": []
+        },
+        {
+          "name": "nal-normalized-360p5s",
+          "status": 0,
+          "wallMs": 106.29840100000001,
+          "benchmark": []
+        },
+        {
+          "name": "thumbnail-360p5s",
+          "status": 0,
+          "wallMs": 107.31709899999987,
+          "benchmark": [
+            "bench: utime=0.002s stime=0.002s rtime=0.003s",
+            "bench: maxrss=43604KiB"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "truncated-360p5s",
+      "rejected": true
+    },
+    {
+      "label": "720p15s",
+      "inputBytes": 2260459,
+      "normalizedBytes": 2260282,
+      "thumbnailBytes": 6953,
+      "metadata": {
+        "durationSeconds": 15,
+        "width": 1280,
+        "height": 720,
+        "rate": 24,
+        "profile": "Constrained Baseline",
+        "audioStreams": 1
+      },
+      "containerSyntheticTagsStripped": true,
+      "seiCounts": {
+        "source": 1,
+        "normalized": 0
+      },
+      "pipelineWallMs": 3902.660887,
+      "stages": [
+        {
+          "name": "probe-720p15s",
+          "status": 0,
+          "wallMs": 104.99649000000136,
+          "benchmark": []
+        },
+        {
+          "name": "decode-720p15s",
+          "status": 0,
+          "wallMs": 2701.0320030000003,
+          "benchmark": [
+            "bench: utime=0.238s stime=0.018s rtime=2.504s",
+            "bench: maxrss=50276KiB"
+          ]
+        },
+        {
+          "name": "normalize-720p15s",
+          "status": 0,
+          "wallMs": 295.4016879999999,
+          "benchmark": [
+            "bench: utime=0.004s stime=0.004s rtime=0.100s",
+            "bench: maxrss=42200KiB"
+          ]
+        },
+        {
+          "name": "probe-normalized-720p15s",
+          "status": 0,
+          "wallMs": 103.73846299999968,
+          "benchmark": []
+        },
+        {
+          "name": "nal-source-720p15s",
+          "status": 0,
+          "wallMs": 197.90760000000046,
+          "benchmark": []
+        },
+        {
+          "name": "nal-normalized-720p15s",
+          "status": 0,
+          "wallMs": 198.8716209999984,
+          "benchmark": []
+        },
+        {
+          "name": "thumbnail-720p15s",
+          "status": 0,
+          "wallMs": 201.5571119999986,
+          "benchmark": [
+            "bench: utime=0.008s stime=0.001s rtime=0.096s",
+            "bench: maxrss=49444KiB"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "truncated-720p15s",
+      "rejected": true
+    },
+    {
+      "label": "720p15s-complex",
+      "inputBytes": 2918996,
+      "normalizedBytes": 2917853,
+      "thumbnailBytes": 7263,
+      "metadata": {
+        "durationSeconds": 15,
+        "width": 1280,
+        "height": 720,
+        "rate": 24,
+        "profile": "Constrained Baseline",
+        "audioStreams": 1
+      },
+      "containerSyntheticTagsStripped": true,
+      "seiCounts": {
+        "source": 22,
+        "normalized": 0
+      },
+      "pipelineWallMs": 4795.812128000001,
+      "stages": [
+        {
+          "name": "probe-720p15s-complex",
+          "status": 0,
+          "wallMs": 200.97514200000296,
+          "benchmark": []
+        },
+        {
+          "name": "decode-720p15s-complex",
+          "status": 0,
+          "wallMs": 3299.1829839999955,
+          "benchmark": [
+            "bench: utime=0.291s stime=0.017s rtime=3.097s",
+            "bench: maxrss=49644KiB"
+          ]
+        },
+        {
+          "name": "normalize-720p15s-complex",
+          "status": 0,
+          "wallMs": 395.15808500000276,
+          "benchmark": [
+            "bench: utime=0.007s stime=0.004s rtime=0.101s",
+            "bench: maxrss=42680KiB"
+          ]
+        },
+        {
+          "name": "probe-normalized-720p15s-complex",
+          "status": 0,
+          "wallMs": 197.07849500000157,
+          "benchmark": []
+        },
+        {
+          "name": "nal-source-720p15s-complex",
+          "status": 0,
+          "wallMs": 199.07390699999814,
+          "benchmark": []
+        },
+        {
+          "name": "nal-normalized-720p15s-complex",
+          "status": 0,
+          "wallMs": 201.22291699999914,
+          "benchmark": []
+        },
+        {
+          "name": "thumbnail-720p15s-complex",
+          "status": 0,
+          "wallMs": 296.30353200000536,
+          "benchmark": [
+            "bench: utime=0.008s stime=0.003s rtime=0.097s",
+            "bench: maxrss=49504KiB"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "truncated-720p15s-complex",
+      "rejected": true
+    }
+  ],
+  "version": "ffmpeg version n9.0.2-29-g6dfaba896f-20261020 Copyright (c) 2000-2026 the FFmpeg developers",
+  "limitations": [
+    "No product upload or authorization implementation.",
+    "Windows/local timings are not deployed Render or Linux cgroup proof.",
+    "Synthetic title/comment/location tags and H264 SEI removal only: no all-metadata or polyglot-safety guarantee.",
+    "SEI removal may discard captions/HDR/user data; only constrained-baseline yuv420p TEST fixtures are approved by this experiment.",
+    "MP4 H264 constrained-baseline/AAC LC only; this is not complete codec/container/adversarial acceptance.",
+    "The15second wall deadline covers probe/decode/remux/metadata+NAL checks/thumbnail, excluding fixture generation and corruption probes.",
+    "FFmpeg maxrss can be unavailable on Windows; Linux measurement required.",
+    "Processing is sequential; shared API/processor interference is unmeasured."
+  ],
+  "assertionsPassed": true
+}
