@@ -1,0 +1,44 @@
+{
+  "sourceHead": "e9ce5445da0d74692db472e5d329ff19d8ed47bd",
+  "runId": 39562013664,
+  "conclusion": "SUCCESS_CONSTRAINED_SYNTHETIC_NOT_RENDER",
+  "artifactId": 12328651278,
+  "archiveSha256": "4fe050a1de4b12ebd10d5602a0d78e945c3d3637f262333e250a972fc3ca62ee",
+  "files": [
+    {
+      "name": "budget.json",
+      "bytes": 5065,
+      "sha256": "85cb0b55581f89b86c116594772ad4e0cb5733b530453f2010985114ad7a4679"
+    },
+    {
+      "name": "document.json",
+      "bytes": 5644,
+      "sha256": "95876c8d27e1075f5d512d0f780ee406e124d587c61dea2fd524a44e20e3831b"
+    },
+    {
+      "name": "image.json",
+      "bytes": 20866,
+      "sha256": "33bbcd63d78220d5d517730ce491dcd41c54dab176352b70b5d5b1bbbc26d0fa"
+    },
+    {
+      "name": "memory-regression.json",
+      "bytes": 842,
+      "sha256": "7e8748baa53f722fa2be756d28203518299b16e6c263c824393996d972a7370b"
+    },
+    {
+      "name": "node-image-digest.json",
+      "bytes": 81,
+      "sha256": "f0d0cc28b71c633516012add0892a871bc38d0794224e750fc9f18e24e077c86"
+    },
+    {
+      "name": "preflight.json",
+      "bytes": 104,
+      "sha256": "1c2d51259770a14491832b6c39a0b37b21caec5a1c2383d419920d45abdb815b"
+    },
+    {
+      "name": "video.json",
+      "bytes": 7330,
+      "sha256": "e82e68b5fbb01e5d995e558893ccd1c1c8d9986762be4daa427d896688555ffc"
+    }
+  ]
+}

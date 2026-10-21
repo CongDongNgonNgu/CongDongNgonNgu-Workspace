@@ -1,0 +1,24 @@
+{
+  "scope": "LINUX_HEAVY_PARENT_TRIVIAL_EXEC_DIAGNOSTIC",
+  "recordedAt": "2026-10-21T07:27:08.148Z",
+  "kernelVersion": "7.0.0-1017-azure",
+  "node": "v24.18.0",
+  "allocationBytes": 167772160,
+  "elapsedMs": 1402.413459,
+  "parent": {
+    "linuxVmHwmKiB": 212000,
+    "rawRusageMaxRssKiB": 211684
+  },
+  "child": {
+    "linuxVmHwmKiB": 47188,
+    "rawRusageMaxRssKiB": 168416
+  },
+  "inheritanceReproduced": false,
+  "interpretation": "INHERITANCE_NOT_REPRODUCED_ON_THIS_RUN",
+  "assertionsPassed": true,
+  "limitations": [
+    "Diagnostic reproduction is not required or guaranteed across kernel/spawn implementations.",
+    "Linux proc accounting is an approximation, not a hard per-worker memory cap.",
+    "This separate process exits before media runs; cgroup memory.peak still includes this intentional diagnostic allocation."
+  ]
+}

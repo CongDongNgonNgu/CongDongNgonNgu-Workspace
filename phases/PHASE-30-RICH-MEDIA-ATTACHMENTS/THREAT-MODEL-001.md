@@ -1,6 +1,6 @@
 # LNG-30-001 threat model and adversarial plan
 
-2026-10-21. PROPOSED / NOT_FROZEN; none of these cases was executed as Phase30 runtime acceptance. Trust boundaries: untrusted browser/file -> authenticated API -> transactional domain ACL -> quarantined storage -> bounded parser/derivatives -> authorized response. Provider bytes/metadata are untrusted input too.
+2026-10-21. FROZEN_DESIGN_ACCEPTANCE_PLAN under CONTRACT-001.md; none of these cases was executed as Phase30 runtime acceptance. Trust boundaries: untrusted browser/file -> authenticated API -> transactional domain ACL -> quarantined storage -> bounded parser/derivatives -> authorized response. Provider bytes/metadata are untrusted input too.
 
 | Threat | Required control and negative proof |
 |---|---|
@@ -34,7 +34,8 @@ CROSS_GROUP_ATTACHMENT_LEAKS=NOT_RUN
 CROSS_CONVERSATION_ATTACHMENT_LEAKS=NOT_RUN
 REVOKED_ATTACHMENT_LEAKS=NOT_RUN
 UNEXPECTED_AUTHORIZATION_ALLOWS=NOT_RUN
-STORAGE_FIXTURE_RESIDUAL=NOT_CHECKED_NO_PHASE30_FIXTURE_CREATED
-DB_FIXTURE_RESIDUAL=NOT_CHECKED_NO_PHASE30_FIXTURE_CREATED
+STORAGE_FIXTURE_RESIDUAL=0_OBSERVED_EXACT_OWNED_PROBE_AT_2026_10_21T02_00_08_599Z_ONLY
+DB_FIXTURE_RESIDUAL=NOT_RUN_NO_PHASE30_DB_MUTATION
 
 Historical Phase29 zeros do not count as Phase30 attachment results. Security PASS requires zero leaks from executed probes, never a default counter. Formal WCAG, malware-free files, real-user usability and production readiness are not implied by synthetic tests.
+Processor feasibility is separately executed in EVIDENCE-001-EXPANDED.md; it does not populate runtime leak counts. Guarded object-probe residual applies only to its exact64byte owned fixture, not later product fixtures or a database check. TXT knownforeignheader/type-spoofing negatives remain mandatory002;14processor structural cases are not full signature validation.

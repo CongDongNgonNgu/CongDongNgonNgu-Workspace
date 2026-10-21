@@ -1,0 +1,205 @@
+{
+  "scope": "LINUX_CGROUP_SYNTHETIC_FEASIBILITY_NOT_RENDER_DEPLOYMENT",
+  "recordedAt": "2026-10-21T07:27:06.443Z",
+  "node": "v24.18.0",
+  "assertionsPassed": true,
+  "limitations": [
+    "No actual Render runtime or shared-API concurrency measurement.",
+    "Synthetic fixtures are not a complete adversarial corpus.",
+    "Candidate format/size/duration limits still require independent contract review.",
+    "FFmpeg LGPL build provenance/archives remain pinned in the workflow; no redistribution to clients.",
+    "Linux VmHWM reflects current exec address space, with kernel accounting limitations; rusage can inherit earlier high water.",
+    "192MiB is a measured acceptance threshold, not an OS-enforced per-worker cap; cgroup pressure is not free-headroom proof."
+  ],
+  "cpuMax": "10000 100000",
+  "memoryMax": "536870912",
+  "swapMax": "0",
+  "documentMaxRssKiB": 47476,
+  "imageRawRusageKiB": [
+    {
+      "name": "jpeg-1000000-pixels",
+      "processMaxRssKiB": 78720
+    },
+    {
+      "name": "png-1000000-pixels",
+      "processMaxRssKiB": 79268
+    },
+    {
+      "name": "webp-1000000-pixels",
+      "processMaxRssKiB": 88452
+    },
+    {
+      "name": "jpeg-3000000-pixels",
+      "processMaxRssKiB": 92192
+    },
+    {
+      "name": "jpeg-truncated-half",
+      "processMaxRssKiB": 79660
+    },
+    {
+      "name": "png-3000000-pixels",
+      "processMaxRssKiB": 95416
+    },
+    {
+      "name": "png-truncated-half",
+      "processMaxRssKiB": 81616
+    },
+    {
+      "name": "webp-3000000-pixels",
+      "processMaxRssKiB": 122424
+    },
+    {
+      "name": "webp-truncated-half",
+      "processMaxRssKiB": 69840
+    },
+    {
+      "name": "jpeg-4000000-pixels-oversize-rejection",
+      "processMaxRssKiB": 70256
+    },
+    {
+      "name": "png-4000000-pixels-oversize-rejection",
+      "processMaxRssKiB": 74624
+    },
+    {
+      "name": "webp-4000000-pixels-oversize-rejection",
+      "processMaxRssKiB": 70104
+    },
+    {
+      "name": "corrupt-random-bytes",
+      "processMaxRssKiB": 70064
+    },
+    {
+      "name": "oversized-pixels-2000x1501",
+      "processMaxRssKiB": 69916
+    },
+    {
+      "name": "oversized-dimension-3000x1000",
+      "processMaxRssKiB": 69968
+    },
+    {
+      "name": "oversized-bytes",
+      "processMaxRssKiB": 77404
+    },
+    {
+      "name": "two-frame-gif",
+      "processMaxRssKiB": 70036
+    },
+    {
+      "name": "jpeg-3000000-noise-near-byte-limit",
+      "processMaxRssKiB": 139604
+    },
+    {
+      "name": "jpeg-4000000-noise-oversize-rejection",
+      "processMaxRssKiB": 77100
+    },
+    {
+      "name": "webp-3000000-noise-near-byte-limit",
+      "processMaxRssKiB": 168904
+    },
+    {
+      "name": "webp-4000000-noise-oversize-rejection",
+      "processMaxRssKiB": 77456
+    },
+    {
+      "name": "jpeg-exif-gps-xmp",
+      "processMaxRssKiB": 78148
+    }
+  ],
+  "imageMaxRssKiB": 168904,
+  "imageLinuxVmHwmKiB": [
+    {
+      "name": "jpeg-1000000-pixels",
+      "linuxVmHwmKiB": 78720
+    },
+    {
+      "name": "png-1000000-pixels",
+      "linuxVmHwmKiB": 79268
+    },
+    {
+      "name": "webp-1000000-pixels",
+      "linuxVmHwmKiB": 88744
+    },
+    {
+      "name": "jpeg-3000000-pixels",
+      "linuxVmHwmKiB": 92192
+    },
+    {
+      "name": "jpeg-truncated-half",
+      "linuxVmHwmKiB": 79660
+    },
+    {
+      "name": "png-3000000-pixels",
+      "linuxVmHwmKiB": 95416
+    },
+    {
+      "name": "png-truncated-half",
+      "linuxVmHwmKiB": 81616
+    },
+    {
+      "name": "webp-3000000-pixels",
+      "linuxVmHwmKiB": 122796
+    },
+    {
+      "name": "webp-truncated-half",
+      "linuxVmHwmKiB": 70164
+    },
+    {
+      "name": "jpeg-4000000-pixels-oversize-rejection",
+      "linuxVmHwmKiB": 70572
+    },
+    {
+      "name": "png-4000000-pixels-oversize-rejection",
+      "linuxVmHwmKiB": 75012
+    },
+    {
+      "name": "webp-4000000-pixels-oversize-rejection",
+      "linuxVmHwmKiB": 70264
+    },
+    {
+      "name": "corrupt-random-bytes",
+      "linuxVmHwmKiB": 70340
+    },
+    {
+      "name": "oversized-pixels-2000x1501",
+      "linuxVmHwmKiB": 70288
+    },
+    {
+      "name": "oversized-dimension-3000x1000",
+      "linuxVmHwmKiB": 70288
+    },
+    {
+      "name": "oversized-bytes",
+      "linuxVmHwmKiB": 77672
+    },
+    {
+      "name": "two-frame-gif",
+      "linuxVmHwmKiB": 70192
+    },
+    {
+      "name": "jpeg-3000000-noise-near-byte-limit",
+      "linuxVmHwmKiB": 139604
+    },
+    {
+      "name": "jpeg-4000000-noise-oversize-rejection",
+      "linuxVmHwmKiB": 77476
+    },
+    {
+      "name": "webp-3000000-noise-near-byte-limit",
+      "linuxVmHwmKiB": 168904
+    },
+    {
+      "name": "webp-4000000-noise-oversize-rejection",
+      "linuxVmHwmKiB": 77672
+    },
+    {
+      "name": "jpeg-exif-gps-xmp",
+      "linuxVmHwmKiB": 78148
+    }
+  ],
+  "imageMemoryMetric": "LINUX_PROC_STATUS_VMHWM_CURRENT_EXEC",
+  "imageMaxLinuxVmHwmKiB": 168904,
+  "videoMaxRssKiB": 49580,
+  "memoryPeak": "430428160",
+  "memoryEvents": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+  "finishedAt": "2026-10-21T07:30:55.743Z"
+}

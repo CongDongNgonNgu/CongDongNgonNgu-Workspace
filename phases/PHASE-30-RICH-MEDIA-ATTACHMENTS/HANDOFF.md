@@ -1,6 +1,8 @@
-# Current recovery handoff - 2026-10-21
+# Current001 publication handoff - 2026-10-21
 
-LNG_30_001=IN_PROGRESS; PHASE_30_STATUS=IN_PROGRESS; ARCHITECTURE_FROZEN=NO;002-006PLANNED_NOT_STARTED. Current owner-authenticated Cloudflare privacy/scope evidence and independent exact-owned storage probe/cleanup resolve the no-access component. See EVIDENCE-001-RECOVERY.md. No need to sign in again. Remaining work: constrained processor measurement, reviewed resource/file limits, full contract freeze and normal001 lifecycle. No002 until freeze and001 completion gates. New experiment is credential-free synthetic evidence, not product implementation or Render acceptance. NEXT_ACTION=MEASURE_REVIEW_AND_FREEZE_001_BEFORE_002. All prior owner scope/hard stops apply; Phase31+ excluded.
+LNG_30_001=VERIFYING; PHASE_30_STATUS=IN_PROGRESS; PHASE_30_VERDICT=REMEDIATE_AND_RETEST; ARCHITECTURE_REVIEW=APPROVED_CONDITIONAL_TEST;002-006PLANNED_NOT_STARTED. Contract/architecture/capability/threat selections received complementary independent review after successful narrowed3MP constrained Linux measurement. See CONTRACT-001.md, REVIEW-001-FREEZE.md and EVIDENCE-001-EXPANDED.md. Existing private projectR2 verified, exact-owned64byte probe/cleanup observed0; backupnamespace untouched; anonymousS3HTTP400 remainsINCONCLUSIVE. No account/newbucket/token/paidprovider owner action required.
+
+Remaining001 gates: final Workspace publication/PRCI/merge/mainCI/reviewed-tree equality/temporarybranchcleanup and lifecycle receipt, then required terminal relay/validated002 continuation. No002 before001 DONE. ActualRender transport/processor availability/watchdog/headroom and complete validator/authorization tests remain002 enablement gates, not proven by cgroups. Only deterministic synthetic media; no productionDB/storage/payment orPhase31. NEXT_ACTION=COMPLETE001_PUBLICATION_LIFECYCLE_THEN_AUTOMATIC002.
 
 ## Historical no-access handoff (superseded by new evidence above)
 # Phase30 handoff - 2026-10-21

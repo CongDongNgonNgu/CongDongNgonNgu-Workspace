@@ -1,6 +1,6 @@
 # Independent freeze review ledger
 
-Status REVIEW_PENDING. No architecture freeze approval claimed yet. The exact candidate CONTRACT-001.md, expanded experiments and successful raw CI artifacts must be reviewed before status changes.
+Status APPROVED_CONDITIONAL_TEST_ARCHITECTURE / PUBLICATION_PENDING. Exact selected contract and corrected raw artifacts received the complementary independent approvals below;001 DONE and002 entry still require Workspace publication/main/tree/cleanup.
 
 Review001 source reviewer identified missing TXT constrained orchestration, ambiguous image whole-chain deadline, incomplete quota/lease lock ordering and unspecified MP4 allowlist. Corrected: TXT/selftests/RSS artifacts wired; image10s per stage/30s child stated; actor/IP/deployment/processing row order explicit with separate short rate transactions; exact narrow MP4 brands/box/dref/NAL policy specified. Equivalent resource measurements explicitly replace actualRender-before-design sequencing only for architecture policy; actualRender enablement gates stay mandatory/defaultdisabled.
 
@@ -15,3 +15,9 @@ Architecture clarifications from independent source/domain/storage reviews are i
 ## Narrowed resource candidate
 
 The corrected run exposed a genuine200132KiB WebPVmHWM breach. Original failures/diagnosticfalse retained. Pixel policy narrowed to3MP, no192MiB/512MiB threshold increase. /root/review_001 independently approved narrowed candidate CI execution and checked three artifact manifests,5guards and diff.22localWindowscases passed including five former4MP inputs rejected; exact3MP gradient/noise/boundary/temp cleanup results remain local until actual Linux retest. Phase-local evidence -text scope independently accepted; no measurements rewritten. Final freeze still pending new raw results/review/lifecycle.
+
+## Final complementary independent approvals
+
+/root/storage_audit: APPROVE corrected conditional architecture freeze, no remaining reviewed findings; scope is independent image implementation/raw evidence/contract/storage policy, not its own runner/video authorship. /root/domain_audit: APPROVE architecture/domain/API/runner and bounded video evidence, previous findings resolved; excludes its own image implementation, independently covered by the storage reviewer. Together these cover selected architecture/security/API/source/resource evidence. Original reviewer001 source approvals remain valid on their reviewed scopes; no unavailable-agent approval is fabricated.
+
+Final approvals explicitly preserve:3MP rather than failed4MP, noisyWebP timeout rejection, rawdiagnosticfalse,14TXTstructuralcases notforeign-header proof, same-parentCommunity retain/reorder vs newly added never-bound files, signed-private-URL exclusion/fresh ACL, currentconnectionUUID draft fence, hidden-parent read+write removal, heldPDF/unsupported types and mandatory actualRender enablement.001 publication/CI/main/tree/branch cleanup remain pending; no deployed media/security/real-user usability or production claim.

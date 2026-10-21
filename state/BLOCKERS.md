@@ -1,8 +1,9 @@
 # Blockers
 
-## BLOCKER-30-001 - ACCOUNT_ACCESS_RESOLVED /001 FREEZE_PENDING - 2026-10-21
+## BLOCKER-30-001 - DESIGN_DEPENDENCIES_VERIFIED /001 PUBLICATION_PENDING - 2026-10-21
 
-New authenticated Cloudflare evidence resolves the previous no-access component: project bucket r2.dev disabled/no customdomains and scoped ObjectReadWrite token verified read-only. Exact-owned64byte synthetic probe approved independently and executed with checksum/delete/exactHEAD404/run-prefix residual0; backup inventory unchanged. No provider/config/credential/billing mutation. See [new recovery evidence](../phases/PHASE-30-RICH-MEDIA-ATTACHMENTS/EVIDENCE-001-RECOVERY.md).001 IN_PROGRESS; numeric formats/limits and actual processor/runtime/contract freeze remain unapproved. Continue bounded experiments/review, not another account-login request.002-006 remain unstarted. The original no-access evidence is historical in EVIDENCE-001.md; no unexecuted media/security/runtime or DB-cleanup PASS claimed.
+OriginalCloudflareaccess component resolved by owner-authenticatedread-only privacy/scope evidence. ExistingprivateprojectR2 exactowned64byte probe and observedcleanup0 executed; backups preserved. Narrowed3MP resourcepolicy passed constrainedLinux and complementaryindependentarchitecture/source/securityreview. No newbucket/token/provider/billing/owneraction is needed for boundedsyntheticTEST.001 VERIFYING untilfinalWorkspaceCI/main/tree/cleanup/receipt;002-006unstarted. See Phase30 EVIDENCE-001-RECOVERY.md/EVIDENCE-001-EXPANDED.md/REVIEW-001-FREEZE.md. Fullvalidator/runtimeACL/actualRenderheadroom/UXacceptance remainunexecuted and mandatory002+. No securityleak orDBresidual zero invented.
+
 ## Current Phase 19 blocker reconciliation - 2026-10-06
 BLOCKER-19-001=CLOSED_BY_OWNER_SCOPE_SUPERSESSION, not evidence received.
 001 CANCELLED/SUPERSEDED_BY_OWNER_PRE_LAUNCH_SCOPE; missing metrics EXPECTED_PRE_LAUNCH. Current discovery requires no observation/source approval; future production/provider/payment/data/next-phase gates remain. Old seven-field observation owner gate superseded, recommendations unapplied.
