@@ -1,6 +1,6 @@
 # LNG-30-001 attachment contract candidate
 
-2026-10-21. FROZEN_CONDITIONAL_TEST_CONTRACT / DEPLOYED_ENABLEMENT_NOT_ACCEPTED. This completes specific decisions missing from ARCHITECTURE-001.md; it does not replace original TASKS, Phase22-29 contracts or PR177 audit evidence. Independent complementary architecture/security review approved this contract. LNG-30-001 remains VERIFYING until publication/main/tree/branch-cleanup gates pass; only then may002 implement the disabled foundation. Actual Render enablement and runtime acceptance remain separate mandatory gates.
+2026-10-21. FROZEN_CONDITIONAL_TEST_CONTRACT / DEPLOYED_ENABLEMENT_NOT_ACCEPTED. This completes specific decisions missing from ARCHITECTURE-001.md; it does not replace original TASKS, Phase22-29 contracts or PR177 audit evidence. Independent complementary architecture/security review approved this contract. LNG-30-001 architecture publication/main/tree/branch-cleanup gates passed in PR179 as recorded in LIFECYCLE-001.md; finish the receipt/terminal-relay gates before002 implements the disabled foundation. Actual Render enablement and runtime acceptance remain separate mandatory gates.
 
 ## Evidence and explicit resource decision
 
@@ -99,4 +99,4 @@ Required004-006 remain original acceptance plus threat-model inventory: separate
 
 ## Freeze approval and effective entry gate
 
-ARCHITECTURE_FROZEN=YES. Independent /root/storage_audit approves image source/raw/contract; independent /root/domain_audit approves architecture/domain/API/runner/video. Authorships are complementary and disclosed in REVIEW-001-FREEZE.md; neither approves its own implementation as independent review. All previous findings remediated; no remaining architecture finding. LNG_30_001=VERIFYING pending Workspace publication/main CI/reviewed-tree equality/merged temporary-branch cleanup. LNG_30_002..006=PLANNED_NOT_STARTED until the001 lifecycle receipt. This is design approval, not deployed attachment safety or product acceptance.
+ARCHITECTURE_FROZEN=YES. Independent /root/storage_audit approves image source/raw/contract; independent /root/domain_audit approves architecture/domain/API/runner/video. Authorships are complementary and disclosed in REVIEW-001-FREEZE.md; neither approves its own implementation as independent review. All previous findings remediated; no remaining architecture finding. LNG_30_001=DONE after verified PR179 lifecycle; LNG_30_002=READY_NOT_STARTED and003-006 PLANNED_NOT_STARTED. Receipt publication/cleanup and terminal-relay gates still precede002 implementation. This is design approval, not deployed attachment safety or product acceptance.

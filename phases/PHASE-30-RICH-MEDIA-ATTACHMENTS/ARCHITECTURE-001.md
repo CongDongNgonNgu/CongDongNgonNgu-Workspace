@@ -58,4 +58,4 @@ Additive migration in002 after001 DONE only: attachment/binding/cleanup/rate tab
 
 Private account/bucket/scope settings, exact-owned durable object/cleanup evidence, narrowed constrained processor measurements and independent full architecture review passed at design scope; see EVIDENCE-001-RECOVERY.md/EVIDENCE-001-EXPANDED.md/REVIEW-001-FREEZE.md. The documented conditional resource decision preserves actual Render enablement gates in002.
 
-ARCHITECTURE_FROZEN=YES; LNG_30_001=VERIFYING pending Workspace PR/main CI/tree/cleanup lifecycle;002-006 PLANNED_NOT_STARTED until001 DONE. No product feature, full validator, deployed media path or security leak acceptance is claimed.
+ARCHITECTURE_FROZEN=YES; LNG_30_001=DONE after verified PR179 lifecycle;002 READY_NOT_STARTED pending receipt/relay,003-006 PLANNED_NOT_STARTED. See LIFECYCLE-001.md. No product feature, full validator, deployed media path or security leak acceptance is claimed.
