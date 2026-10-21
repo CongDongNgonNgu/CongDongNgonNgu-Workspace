@@ -1,0 +1,3 @@
+const test=require('node:test');const assert=require('node:assert/strict');
+const {validateBudget}=require('./run-constrained.cjs');
+test('accepts only an enforced Render-equivalent CPU/memory sandbox',()=>{assert.doesNotThrow(()=>validateBudget('10000 100000','536870912','0'));for(const values of [['max 100000','536870912','0'],['100000 100000','536870912','0'],['10000 100000','max','0'],['10000 100000','1073741824','0'],['10000 100000','536870912','536870912']])assert.throws(()=>validateBudget(...values));});

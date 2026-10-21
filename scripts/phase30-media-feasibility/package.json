@@ -1,0 +1,7 @@
+{
+  "name": "phase30-media-feasibility",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Synthetic architecture experiments only; not an attachment service",
+  "dependencies": { "sharp": "0.35.5" }
+}

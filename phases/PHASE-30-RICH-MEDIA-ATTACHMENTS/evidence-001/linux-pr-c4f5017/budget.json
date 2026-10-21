@@ -1,0 +1,19 @@
+{
+  "scope": "LINUX_CGROUP_SYNTHETIC_FEASIBILITY_NOT_RENDER_DEPLOYMENT",
+  "recordedAt": "2026-10-21T06:45:25.091Z",
+  "node": "v24.18.0",
+  "cpuMax": "10000 100000",
+  "memoryMax": "536870912",
+  "swapMax": "0",
+  "memoryPeak": "177577984",
+  "memoryEvents": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+  "imageMaxRssKiB": 139320,
+  "videoMaxRssKiB": 49108,
+  "assertionsPassed": true,
+  "limitations": [
+    "No actual Render runtime or shared-API concurrency measurement.",
+    "Synthetic fixtures are not a complete adversarial corpus.",
+    "Candidate format/size/duration limits still require independent contract review.",
+    "FFmpeg LGPL build provenance/archives remain pinned in the workflow; no redistribution to clients."
+  ]
+}

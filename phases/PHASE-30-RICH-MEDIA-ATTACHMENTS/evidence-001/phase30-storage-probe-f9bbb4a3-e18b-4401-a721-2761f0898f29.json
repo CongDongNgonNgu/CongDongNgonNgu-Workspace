@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "classification": "APPROVED_TEST_SYNTHETIC",
+  "run": "f9bbb4a3-e18b-4401-a721-2761f0898f29",
+  "key": "phase30-probe/f9bbb4a3-e18b-4401-a721-2761f0898f29/58dde394-7c9e-40f8-be72-bb1f63bc074b",
+  "bytes": 64,
+  "operationBudget": 16,
+  "operations": 9,
+  "createdAt": "2026-10-21T02:00:05.056Z",
+  "state": "CLEANED",
+  "results": {
+    "put": "PASS",
+    "head": "PASS",
+    "readChecksum": "PASS",
+    "anonymousS3Http": 400,
+    "anonymousS3": "INCONCLUSIVE",
+    "anonymousScope": "S3_ENDPOINT_ONLY_CONTROL_PLANE_PRIVACY_SEPARATE",
+    "sha256": "122b5873af23ba11b45c60054263df2a92342425149dfb0606f10de75f4da932",
+    "delete": "PASS",
+    "exactHeadAfterDelete": "NOT_FOUND",
+    "storageResidual": 0,
+    "residualObservedAt": "2026-10-21T02:00:08.599Z",
+    "cleanup": "PASS_OBSERVED_AT_TIME"
+  },
+  "finishedAt": "2026-10-21T02:00:08.599Z"
+}

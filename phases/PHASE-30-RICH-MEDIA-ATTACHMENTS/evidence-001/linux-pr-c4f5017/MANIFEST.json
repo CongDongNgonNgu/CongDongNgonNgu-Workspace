@@ -1,0 +1,33 @@
+{
+  "sourceHead": "c4f501769fd79cad6b91be726ebd31b7c74972c3",
+  "runId": 39557247747,
+  "artifactId": 12325119416,
+  "archiveSha256": "c55172211e6ac8ec092689805856e56bcee8ecf09efefae13ab81ae116d22179",
+  "files": [
+    {
+      "name": "budget.json",
+      "bytes": 758,
+      "sha256": "15b791a825fe2c5a11d56eca29ed38a2f86a85916c9fa371bbbb758146fe58b2"
+    },
+    {
+      "name": "image.json",
+      "bytes": 8694,
+      "sha256": "4564ce00090cad74ffe1da41bd9aedf8a298453d72ad6af64b5b11e5c2051ffe"
+    },
+    {
+      "name": "node-image-digest.json",
+      "bytes": 81,
+      "sha256": "f0d0cc28b71c633516012add0892a871bc38d0794224e750fc9f18e24e077c86"
+    },
+    {
+      "name": "preflight.json",
+      "bytes": 104,
+      "sha256": "1c2d51259770a14491832b6c39a0b37b21caec5a1c2383d419920d45abdb815b"
+    },
+    {
+      "name": "video.json",
+      "bytes": 3520,
+      "sha256": "680721534268b27c4a86306d46681698c3308569141f100f5f5dd42b8231b1b8"
+    }
+  ]
+}
