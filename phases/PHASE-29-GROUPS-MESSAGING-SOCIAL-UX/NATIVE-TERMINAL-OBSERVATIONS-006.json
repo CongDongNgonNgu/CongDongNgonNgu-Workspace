@@ -1,0 +1,54 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "runId": "1a33141b-3811-4b51-9427-a4b140294f05",
+  "recorded": "2026-10-20 Asia/Saigon",
+  "status": "COORDINATOR_REPORTED_NATIVE_CHECKPOINT",
+  "reportedBy": "root",
+  "recordedBy": "messaging_004_fixtures",
+  "independentBrowserObservation": false,
+  "source": "Coordinator message following separately executed native observations; final measured evidence and exact deployment binding remain in coordinator-owned NATIVE-006.json",
+  "apiProofReferences": [
+    "NATIVE-TERMINAL-006-history-read.json",
+    "NATIVE-TERMINAL-006-context-private.json",
+    "NATIVE-TERMINAL-006-block-pair.json",
+    "NATIVE-TERMINAL-006-remove-member.json"
+  ],
+  "observations": {
+    "contextPrivacy": {
+      "recipientCurrentContextAvailability": "UNAVAILABLE",
+      "previewVisible": false,
+      "openActionVisible": false
+    },
+    "blockedConversation": {
+      "informationDialogWasOpenBeforeBlock": true,
+      "informationDialogClosedAfterBlock": true,
+      "coordinatorReportedMessageLogCountAfterBlock": 0,
+      "conversationOmittedFromInbox": true
+    },
+    "actorTransition": {
+      "normalUiLogoutActor": "Hoa Le",
+      "normalUiLoginActor": "An Pham",
+      "sameBrowserContext": true,
+      "unauthorizedGroup2Denied": true,
+      "cachedOwnerGroupNameVisibleInDeniedGroup2": false
+    },
+    "removedMember": {
+      "group1MemberPresentationVisibleBeforeRemoval": true,
+      "normalApiRemoval": true,
+      "liveGenericUnavailableAfterRemoval": true,
+      "groupNameVisibleAfterRemoval": false,
+      "composerCountAfterRemoval": 0
+    }
+  },
+  "limits": {
+    "apiResultsAreSeparateFromNativeObservations": true,
+    "rawBrowserSnapshotsCopiedByThisAgent": false,
+    "nativeFixtureStillOpenAtCheckpoint": true,
+    "nativeCleanup": "PENDING_COORDINATOR",
+    "phase29Verdict": "NOT_REACHED_BY_THIS_CHECKPOINT",
+    "productionMutated": false,
+    "credentialsLogged": false
+  }
+}

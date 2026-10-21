@@ -1,0 +1,24 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "verdict": "REMEDIATE_AND_RETEST",
+  "code": "ACCEPTANCE_EXECUTION_FAILED",
+  "stage": "normal-api-setup",
+  "runtimeAcceptance": "INTERRUPTED",
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "runId": "d0cb1baf-f755-402f-8cd1-bebcabd73126",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "preflight": {
+    "target": "OWNER_APPROVED_TEST",
+    "clientTlsVerified": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+    "ledgerPerFileMatchesExactBackendMain": true,
+    "productionMutated": false
+  },
+  "cleanup": "EXECUTED",
+  "cleanupResidual": 0
+}

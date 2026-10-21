@@ -1,0 +1,68 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "recorded": "2026-10-20 Asia/Saigon",
+  "runId": "1a33141b-3811-4b51-9427-a4b140294f05",
+  "conversationId": "ce6e008d-698d-4d28-8a55-491625977f1c",
+  "status": "PASS_BOUNDED_NORMAL_API_HISTORY_SEED",
+  "execution": {
+    "performedBy": "root",
+    "coordinatorReportedCliExitCode": 0,
+    "method": "NORMAL_AUTHORIZED_API_SENDS",
+    "initialMessageCount": 3,
+    "additionalMessages": 28,
+    "expectedTotalMessages": 31,
+    "latestHistoryPageCount": 30,
+    "olderPageAvailable": true,
+    "source": "Coordinator execution report plus completed plan produced only after reviewed seed persistence assertions"
+  },
+  "localArtifactInspection": {
+    "performedBy": "messaging_004_fixtures",
+    "liveApiOrBrowserActions": false,
+    "planFile": "phase29-006-history-seed-plan-1a33141b-3811-4b51-9427-a4b140294f05.json",
+    "planSha256": "0ae91ddc107a8226f0a661f8138a903e123f4f1103751504c3559dc5313db9ef",
+    "planStatus": "COMPLETE",
+    "plannedMessages": 28,
+    "acknowledgedMessages": 28,
+    "distinctClientMessageIds": 28,
+    "distinctAcknowledgedMessageIds": 28,
+    "firstAcknowledgedSequence": "4",
+    "lastAcknowledgedSequence": "31",
+    "guardedPlanValidation": "PASS",
+    "secretPatternMatches": {
+      "bearer": 0,
+      "jwt": 0,
+      "connectionUri": 0,
+      "disposablePassword": 0,
+      "privateKey": 0,
+      "credentialField": 0
+    },
+    "rawPlanCopiedToWorkspace": false
+  },
+  "tooling": {
+    "fingerprints": {
+      "phase29-006-history-seed.cjs": "7143ca14fb8a84e983d2b99820923462c290d486f46d4474b1500fff747cab46",
+      "phase29-006-history-seed.test.cjs": "b34d225bc70d3b6d388677be79ae6d2fa17ae31ba225f16ac419defb1987b95b"
+    },
+    "offlineTests": 6,
+    "offlineResult": "PASS",
+    "syntaxChecks": 2,
+    "syntaxResult": "PASS",
+    "mechanicalCloneOf": "phase29-004-history-seed.cjs",
+    "reverseSubstitutionReproducesOriginalSourceSha256": "9ded41ac3258cc063d5bb8690342bf5e6be2d34aeb0185c794d796c95eda2643",
+    "reverseSubstitutionReproducesOriginalTestSha256": "3978cac0fb4271f9c77c385a627d50e3b7cb4f3aff5c1b2f4e0758f1beaed79a",
+    "independentPreliveReviewer": "messaging_004_review",
+    "independentPreliveVerdict": "APPROVE",
+    "reviewScope": "Source guards, six offline tests, two syntax checks and exact mechanical clone proof; no independent live execution"
+  },
+  "limits": {
+    "nativeLoadOlderButton": "SEPARATE_ROOT_NATIVE_VALIDATION",
+    "nativeFixtureCleanup": "SEPARATE_ROOT_OWNED_CLEANUP_PENDING",
+    "fixtureStateAtArtifactInspection": "OPEN",
+    "independentLiveExecution": false,
+    "phase29Verdict": "NOT_REACHED_BY_THIS_ARTIFACT",
+    "productionMutated": false,
+    "credentialsLogged": false
+  }
+}

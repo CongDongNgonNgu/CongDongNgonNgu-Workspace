@@ -1,6 +1,6 @@
 # Phase 29 — Groups & Messaging Social UX
 
-**Status:** IN_PROGRESS - LNG-29-001 through 004 DONE; LNG-29-005 group-conversation disposition VERIFYING; stop after Phase29
+**Status:** VERIFIED_PENDING_WORKSPACE_LIFECYCLE - final technical acceptance approved; conditional DONE / GO_SOCIAL_COMMUNICATION_UX, effective only after final Workspace lifecycle
 
 ## Objective
 
@@ -28,4 +28,4 @@ Existing Phase22 private groups remain private. Public discovery/join semantics 
 
 ## Current execution checkpoint
 
-001-004 DONE after verified publication, main CI, exact-tree checks, temporary branch cleanup and accepted terminal continuations. 005 VERIFYING: independent group-conversation capability audit/disposition complete; Workspace publication and terminal relay pending. 006 PLANNED. Phase29 remains IN_PROGRESS with verdict NOT_REACHED. Stop after Phase29; no Phase30+. See [005 disposition](EVIDENCE-005.md) and [lifecycle](LIFECYCLE-005.md).
+Final technical acceptance and independent source/runtime reviews APPROVE. Selected verdict GO_SOCIAL_COMMUNICATION_UX. LNG-29-006/Phase29 DONE is conditional and becomes effective only after this final Workspace PR merge, exact reviewed/main tree verification, successful main CI, remote/local temporary branch cleanup and terminal relay. Until then: VERIFYING / VERIFIED_PENDING_WORKSPACE_LIFECYCLE. The terminal report records the actual resulting Workspace main SHA and gate outcomes. Stop after Phase29; Phase30+ is not started. See [final acceptance](EVIDENCE-006.md), [handoff](HANDOFF.md) and [lifecycle](LIFECYCLE-006.md).
