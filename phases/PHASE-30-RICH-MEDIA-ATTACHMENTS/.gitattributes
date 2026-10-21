@@ -1,0 +1,2 @@
+# Preserve exact downloaded evidence bytes across Windows checkouts.
+evidence-001/** -text

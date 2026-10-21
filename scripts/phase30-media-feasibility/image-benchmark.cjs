@@ -9,7 +9,8 @@ const sharp = require('sharp');
 sharp.cache(false);
 sharp.concurrency(1);
 const MAX_BYTES = Number(process.env.IMAGE_MAX_BYTES || 4 * 1024 * 1024);
-const MAX_PIXELS = Number(process.env.IMAGE_MAX_PIXELS || 4000000);
+const MAX_PIXELS = Number(process.env.IMAGE_MAX_PIXELS || 3000000);
+const MAX_EDGE = 2000;
 const TIMEOUT_MS = Number(process.env.IMAGE_CASE_TIMEOUT_MS || 30000);
 for (const n of [MAX_BYTES, MAX_PIXELS, TIMEOUT_MS]) assert(Number.isSafeInteger(n) && n > 0);
 const output = process.env.IMAGE_RESULT_PATH || path.join(require('node:os').tmpdir(), 'phase30-image-results.json');
@@ -17,11 +18,14 @@ function fail(code) { const e = new Error(code); e.code = code; throw e; }
 function validateMetadata(m) {
   if ((m.pages || 1) !== 1) fail('MULTIFRAME');
   if (!['jpeg', 'png', 'webp'].includes(m.format)) fail('FORMAT');
+  if (m.width > MAX_EDGE || m.height > MAX_EDGE) fail('DIMENSIONS');
   if (!Number.isSafeInteger(m.width) || !Number.isSafeInteger(m.height) || m.width < 1 || m.height < 1 || m.width * m.height > MAX_PIXELS) fail('PIXELS');
 }
 function guards() {
   for (const format of ['jpeg', 'png', 'webp']) validateMetadata({ format, width: 1000, height: 1000 });
-  assert.throws(() => validateMetadata({ format: 'png', width: 2001, height: 2000 }), /PIXELS/);
+  validateMetadata({ format: 'png', width: 2000, height: 1500 });
+  assert.throws(() => validateMetadata({ format: 'png', width: 2000, height: 1501 }), /PIXELS/);
+  assert.throws(() => validateMetadata({ format: 'png', width: 3000, height: 1000 }), /DIMENSIONS/);
   assert.throws(() => validateMetadata({ format: 'gif', width: 1, height: 1, pages: 2 }), /MULTIFRAME/);
   assert.throws(() => validateMetadata({ format: 'svg', width: 1, height: 1 }), /FORMAT/);
   assert.throws(() => validateMetadata({ format: 'png', width: NaN, height: 1 }), /PIXELS/);
@@ -37,6 +41,7 @@ function parseVmHwm(status) {
 }
 function assertStageDuration(elapsedMs) { if (elapsedMs > 10000) fail('PROCESSING_TIMEOUT'); }
 async function selfTest() {
+  guards();
   assert.equal(parseVmHwm('Name:\tnode\nVmHWM:\t 12345 kB\nVmRSS:\t 123 kB\n'), 12345);
   for (const value of ['', 'VmHWM: 0 kB\n', 'VmHWM: -1 kB\n', 'VmHWM: 1 MB\n', 'VmHWM: 1.5 kB\n', 'VmHWM: Infinity kB\n', 'VmHWM: 9007199254740992 kB\n', 'VmHWM: 1 kB\nVmHWM: 2 kB\n']) {
     assert.throws(() => parseVmHwm(value));
@@ -90,13 +95,13 @@ async function worker() {
     cpuUserMs: cpu.user / 1000, cpuSystemMs: cpu.system / 1000, rssBeforeBytes: rssBefore, rssAfterBytes: memory.rss,
     peakSampledRssBytes: Math.max(peakSampledRss, memory.rss), processMaxRssKiB: process.resourceUsage().maxRSS }));
 }
-async function fixture(size, format) {
-  const raw = Buffer.alloc(size * size * 3);
-  for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) {
-    const i = (y * size + x) * 3;
+async function fixture(width, height, format) {
+  const raw = Buffer.alloc(width * height * 3);
+  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+    const i = (y * width + x) * 3;
     raw[i] = (x + y) % 256; raw[i + 1] = (x >> 3) % 256; raw[i + 2] = (y >> 3) % 256;
   }
-  return sharp(raw, { raw: { width: size, height: size, channels: 3 } }).toFormat(format).toBuffer();
+  return sharp(raw, { raw: { width, height, channels: 3 } }).toFormat(format).toBuffer();
 }
 // Detect an actual TIFF GPSInfo IFD pointer, not just any EXIF payload.
 function hasGps(exif) {
@@ -113,8 +118,8 @@ function hasGps(exif) {
   }
   return false;
 }
-async function noiseFixture(format) {
-  const raw = Buffer.alloc(2000 * 2000 * 3);
+async function noiseFixture(format, width, height) {
+  const raw = Buffer.alloc(width * height * 3);
   let state = 0x12345678;
   for (let i = 0; i < raw.length; i++) {
     state ^= state << 13; state ^= state >>> 17; state ^= state << 5; raw[i] = state & 255;
@@ -122,7 +127,7 @@ async function noiseFixture(format) {
   let best = null;
   // Bounded quality search; never pad encoded bytes to claim near-limit decoding.
   for (const quality of [100, 98, 96, 94, 92, 90, 88, 86]) {
-    const input = await sharp(raw, { raw: { width: 2000, height: 2000, channels: 3 } }).toFormat(format, { quality }).toBuffer();
+    const input = await sharp(raw, { raw: { width, height, channels: 3 } }).toFormat(format, { quality }).toBuffer();
     if (input.length <= MAX_BYTES && (!best || input.length > best.input.length)) best = { input, quality };
     if (best && best.input.length >= MAX_BYTES * 0.85) break;
   }
@@ -155,27 +160,32 @@ async function generateCorpus(ownedDir) {
   guards();
   assert.equal(sharp.versions.sharp, '0.35.5', 'Pinned sharp version required');
   const cases = [];
-  for (const size of [1000, 2000]) for (const format of ['jpeg', 'png', 'webp']) {
-    const input = await fixture(size, format);
-    cases.push({ name: `${format}-${size * size}-pixels`, input, expected: true });
-    if (size === 2000) cases.push({ name: `${format}-truncated-half`, input: input.subarray(0, Math.floor(input.length / 2)), expected: false });
+  for (const [width, height] of [[1000, 1000], [2000, 1500], [2000, 2000]]) for (const format of ['jpeg', 'png', 'webp']) {
+    const input = await fixture(width, height, format);
+    const oversizeRejection = width * height > MAX_PIXELS;
+    cases.push({ name: `${format}-${width * height}-pixels${oversizeRejection ? '-oversize-rejection' : ''}`, input, expected: !oversizeRejection });
+    if (width === 2000 && height === 1500) cases.push({ name: `${format}-truncated-half`, input: input.subarray(0, Math.floor(input.length / 2)), expected: false });
   }
   cases.push({ name: 'corrupt-random-bytes', input: Buffer.from('deterministic synthetic corrupt image input'), expected: false });
-  const oversized = await sharp({ create: { width: 2001, height: 2000, channels: 3, background: '#123456' } }).png().toBuffer();
-  cases.push({ name: 'oversized-pixels', input: oversized, expected: false });
+  const oversized = await sharp({ create: { width: 2000, height: 1501, channels: 3, background: '#123456' } }).png().toBuffer();
+  cases.push({ name: 'oversized-pixels-2000x1501', input: oversized, expected: false });
+  const oversizedDimension = await sharp({ create: { width: 3000, height: 1000, channels: 3, background: '#123456' } }).png().toBuffer();
+  cases.push({ name: 'oversized-dimension-3000x1000', input: oversizedDimension, expected: false });
   cases.push({ name: 'oversized-bytes', input: Buffer.alloc(MAX_BYTES + 1, 0x41), expected: false });
   // Two deterministic 1x1 GIF frames: header/global palette, GCE + image repeated, trailer.
   const gifHeader = '47494638396101000100800000000000ffffff';
   const frame = '21f90400000000002c0000000001000100000202440100';
   cases.push({ name: 'two-frame-gif', input: Buffer.from(gifHeader + frame + frame + '3b', 'hex'), expected: false });
   for (const format of ['jpeg', 'webp']) {
-    const candidate = await noiseFixture(format);
-    cases.push({ name: format + '-4000000-noise-near-byte-limit', ...candidate, expected: true, complexityProbe: true });
+    const candidate = await noiseFixture(format, 2000, 1500);
+    cases.push({ name: format + '-3000000-noise-near-byte-limit', ...candidate, expected: true, complexityProbe: true });
+    const formerCandidate = await noiseFixture(format, 2000, 2000);
+    cases.push({ name: format + '-4000000-noise-oversize-rejection', ...formerCandidate, expected: false });
   }
   cases.push({ name: 'jpeg-exif-gps-xmp', input: await metadataFixture(), expected: true, suppliedMetadata: true });
 
   ownedDirectory(ownedDir, os.tmpdir());
-  assert.equal(cases.length, 16, 'EXACT_CORPUS_CASES_REQUIRED');
+  assert.equal(cases.length, 22, 'EXACT_CORPUS_CASES_REQUIRED');
   let corpusBytes = 0;
   const manifest = cases.map((item, index) => {
     const { input, ...metadata } = item;
@@ -211,7 +221,7 @@ async function main() {
     const manifestPath = path.join(ownedDir, 'manifest.json');
     assert(fs.statSync(manifestPath).size <= 64 * 1024, 'MANIFEST_BYTE_CAP');
     const cases = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-    assert.equal(cases.length, 16, 'EXACT_CORPUS_CASES_REQUIRED');
+    assert.equal(cases.length, 22, 'EXACT_CORPUS_CASES_REQUIRED');
     let measuredCorpusBytes = 0;
     for (const [index, item] of cases.entries()) {
       assert.equal(item.filename, 'case-' + String(index).padStart(2, '0') + '.bin');
@@ -252,7 +262,7 @@ async function main() {
     report = { scope: 'LOCAL_SYNTHETIC_PROCESSOR_FEASIBILITY_ONLY', recordedAt: new Date().toISOString(),
       platform: process.platform, arch: process.arch, node: process.version, versions: sharp.versions,
       measurementIsolation: { parentMaxRssBeforeWorkersKiB, ...generation, corpusMaxBytes: CORPUS_MAX_BYTES, tempMaxBytes: TEMP_MAX_BYTES, generatorExitedBeforeWorkers: true },
-      candidateLimits: { maxInputBytes: MAX_BYTES, maxInputPixels: MAX_PIXELS, thumbnailMaxEdge: 320, processingTimeoutSeconds: 10, outerCaseTimeoutMs: TIMEOUT_MS },
+      candidateLimits: { maxInputBytes: MAX_BYTES, maxInputPixels: MAX_PIXELS, maxInputEdge: MAX_EDGE, thumbnailMaxEdge: 320, processingTimeoutSeconds: 10, outerCaseTimeoutMs: TIMEOUT_MS },
       configuration: { cache: false, concurrency: 1, failOn: 'warning', singleFrame: true, isolatedChildPerCase: true },
       limitations: ['Candidate limits are not approved product limits.', 'Deterministic noise, gradients, supplied metadata and solid-color fixtures are not a comprehensive adversarial corpus.', 'No deployed Linux/Render, parallel load or storage acceptance is demonstrated.', 'Raw maxRSS is retained and may inherit pre-exec high-water on Linux; linuxVmHwmKiB reads current-address-space VmHWM only on Linux. Both cover startup/input ingestion; 2ms RSS sampling can miss peaks.', 'Decoder/library safety and complete polyglot rejection are not certified by these probes.', 'Worker timeout stops a child process; application isolation/resource policy is not implemented.'],
       assertionsPassed: true, results };

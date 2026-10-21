@@ -11,3 +11,13 @@ Independent review identified Linux exec/getrusage semantics as a plausible meas
 Video component assertions completed before the resource-gate failure: three valid constrained-baseline24fps clips, including complex2,918,996B input, supplied container tag/H264SEI removal, actual thumbnails and three half-truncation rejections. Whole measured valid pipelines1.90s/5.79s/6.70s. TXT component14strictUTF8/control/BOM/byte cases passed. These are executed component observations within a failed overall run, not product safety, full MP4 framing, runtime ACL or Render acceptance.
 
 Corrected run/raw artifact review remains pending. No real-user media, provider/credential/billing/production mutation or application implementation occurred.
+
+## Corrected measurement exposed a real4MP resource failure
+
+Corrected candidate5e74d6f9f3a22c6b00c04e22ed8d39fc903a7d71: Monitor39561061878 SUCCESS; media39561061892/job119092158618 FAILED IMAGE_WORKER_VMHWM_BUDGET. [Seven raw JSON files and manifest](evidence-001/linux-failed-5e74d6f/MANIFEST.json), artifact12328135450/archive129fe0f9f0821fc3b939ef95c245d44fc5e6c3ba4849466492d10e28698f4768 verified. Failure-finally retained aggregate peak356503552B and actual oom/oom_kill/oom_group_kill0; these do not constitute overall resource PASS. No decoder192MiB threshold was raised. No actual Render execution occurred.
+
+Noise WebP current-exec VmHWM200132KiB exceeded196608KiB(192MiB); noiseJPEG161040KiB and other cases lower. A genuine per-worker policy breach remains after correcting measurement, so the proposed image pixel ceiling is narrowed to3,000,000 while preserving4MiB byte/2000px dimension/deadline budgets. Exact3MP/high-entropy corpus and Linux retest are required; no extrapolated PASS. Original4MP results stay historical unchanged.
+
+The separate diagnostic recorded kernel6.17.0-1022-azure, parentVmHWM213632KiB, trivial-childVmHWM47200KiB/rawrusage168436KiB. Its configured inheritanceReproduced boolean was false; do not claim a successful reproduction. The raw distinction and source explanation remain available independently.
+
+Evidence checkout check found Windows CRLF conversion made working-file hashes differ although committed Git blobs still matched every retained manifest. A phase-local .gitattributes now preserves evidence-001 bytes without text conversion; only proven line-ending conversions were restored from matching Git blobs, no substantive edits overwritten. Both raw manifests and workflow YAML then verified. This is evidence-byte hygiene, not alteration of measurements.

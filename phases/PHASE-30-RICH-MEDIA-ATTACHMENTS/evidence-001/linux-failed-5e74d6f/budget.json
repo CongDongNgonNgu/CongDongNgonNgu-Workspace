@@ -1,0 +1,156 @@
+{
+  "scope": "LINUX_CGROUP_SYNTHETIC_FEASIBILITY_NOT_RENDER_DEPLOYMENT",
+  "recordedAt": "2026-10-21T07:18:58.338Z",
+  "node": "v24.18.0",
+  "assertionsPassed": false,
+  "limitations": [
+    "No actual Render runtime or shared-API concurrency measurement.",
+    "Synthetic fixtures are not a complete adversarial corpus.",
+    "Candidate format/size/duration limits still require independent contract review.",
+    "FFmpeg LGPL build provenance/archives remain pinned in the workflow; no redistribution to clients.",
+    "Linux VmHWM reflects current exec address space, with kernel accounting limitations; rusage can inherit earlier high water.",
+    "192MiB is a measured acceptance threshold, not an OS-enforced per-worker cap; cgroup pressure is not free-headroom proof."
+  ],
+  "cpuMax": "10000 100000",
+  "memoryMax": "536870912",
+  "swapMax": "0",
+  "documentMaxRssKiB": 49436,
+  "imageRawRusageKiB": [
+    {
+      "name": "jpeg-1000000-pixels",
+      "processMaxRssKiB": 80276
+    },
+    {
+      "name": "png-1000000-pixels",
+      "processMaxRssKiB": 81116
+    },
+    {
+      "name": "webp-1000000-pixels",
+      "processMaxRssKiB": 90196
+    },
+    {
+      "name": "jpeg-4000000-pixels",
+      "processMaxRssKiB": 99512
+    },
+    {
+      "name": "jpeg-truncated-half",
+      "processMaxRssKiB": 83648
+    },
+    {
+      "name": "png-4000000-pixels",
+      "processMaxRssKiB": 103476
+    },
+    {
+      "name": "png-truncated-half",
+      "processMaxRssKiB": 85244
+    },
+    {
+      "name": "webp-4000000-pixels",
+      "processMaxRssKiB": 139752
+    },
+    {
+      "name": "webp-truncated-half",
+      "processMaxRssKiB": 71732
+    },
+    {
+      "name": "corrupt-random-bytes",
+      "processMaxRssKiB": 71340
+    },
+    {
+      "name": "oversized-pixels",
+      "processMaxRssKiB": 71548
+    },
+    {
+      "name": "oversized-bytes",
+      "processMaxRssKiB": 79248
+    },
+    {
+      "name": "two-frame-gif",
+      "processMaxRssKiB": 71404
+    },
+    {
+      "name": "jpeg-4000000-noise-near-byte-limit",
+      "processMaxRssKiB": 161040
+    },
+    {
+      "name": "webp-4000000-noise-near-byte-limit",
+      "processMaxRssKiB": 200132
+    },
+    {
+      "name": "jpeg-exif-gps-xmp",
+      "processMaxRssKiB": 80208
+    }
+  ],
+  "imageMaxRssKiB": 200132,
+  "imageLinuxVmHwmKiB": [
+    {
+      "name": "jpeg-1000000-pixels",
+      "linuxVmHwmKiB": 80276
+    },
+    {
+      "name": "png-1000000-pixels",
+      "linuxVmHwmKiB": 81116
+    },
+    {
+      "name": "webp-1000000-pixels",
+      "linuxVmHwmKiB": 90536
+    },
+    {
+      "name": "jpeg-4000000-pixels",
+      "linuxVmHwmKiB": 99512
+    },
+    {
+      "name": "jpeg-truncated-half",
+      "linuxVmHwmKiB": 83648
+    },
+    {
+      "name": "png-4000000-pixels",
+      "linuxVmHwmKiB": 103476
+    },
+    {
+      "name": "png-truncated-half",
+      "linuxVmHwmKiB": 85244
+    },
+    {
+      "name": "webp-4000000-pixels",
+      "linuxVmHwmKiB": 140144
+    },
+    {
+      "name": "webp-truncated-half",
+      "linuxVmHwmKiB": 71864
+    },
+    {
+      "name": "corrupt-random-bytes",
+      "linuxVmHwmKiB": 71760
+    },
+    {
+      "name": "oversized-pixels",
+      "linuxVmHwmKiB": 71956
+    },
+    {
+      "name": "oversized-bytes",
+      "linuxVmHwmKiB": 79612
+    },
+    {
+      "name": "two-frame-gif",
+      "linuxVmHwmKiB": 71620
+    },
+    {
+      "name": "jpeg-4000000-noise-near-byte-limit",
+      "linuxVmHwmKiB": 161040
+    },
+    {
+      "name": "webp-4000000-noise-near-byte-limit",
+      "linuxVmHwmKiB": 200132
+    },
+    {
+      "name": "jpeg-exif-gps-xmp",
+      "linuxVmHwmKiB": 80208
+    }
+  ],
+  "imageMemoryMetric": "LINUX_PROC_STATUS_VMHWM_CURRENT_EXEC",
+  "failureCode": "IMAGE_WORKER_VMHWM_BUDGET",
+  "memoryPeak": "356503552",
+  "memoryEvents": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+  "finishedAt": "2026-10-21T07:20:57.737Z"
+}
