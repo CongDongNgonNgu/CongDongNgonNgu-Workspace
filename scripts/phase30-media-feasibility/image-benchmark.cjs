@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 // Local synthetic processor feasibility only. No storage, credentials or application changes.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -12,7 +12,7 @@ const MAX_BYTES = Number(process.env.IMAGE_MAX_BYTES || 4 * 1024 * 1024);
 const MAX_PIXELS = Number(process.env.IMAGE_MAX_PIXELS || 4000000);
 const TIMEOUT_MS = Number(process.env.IMAGE_CASE_TIMEOUT_MS || 30000);
 for (const n of [MAX_BYTES, MAX_PIXELS, TIMEOUT_MS]) assert(Number.isSafeInteger(n) && n > 0);
-const output = process.env.IMAGE_RESULT_PATH || path.join(__dirname, 'image-benchmark-results.json');
+const output = process.env.IMAGE_RESULT_PATH || path.join(require('node:os').tmpdir(), 'phase30-image-results.json');
 function fail(code) { const e = new Error(code); e.code = code; throw e; }
 function validateMetadata(m) {
   if ((m.pages || 1) !== 1) fail('MULTIFRAME');
@@ -40,14 +40,15 @@ async function worker() {
     if (input.length > MAX_BYTES) fail('BYTES');
     const options = { failOn: 'warning', limitInputPixels: MAX_PIXELS, sequentialRead: true, animated: false };
     const metadata = await sharp(input, options).metadata();
-    details = { format: metadata.format, width: metadata.width, height: metadata.height, pixels: metadata.width * metadata.height, pages: metadata.pages || 1 };
+    details = { format: metadata.format, width: metadata.width, height: metadata.height, pixels: metadata.width * metadata.height, pages: metadata.pages || 1, inputHasExif: !!metadata.exif, inputHasXmp: !!metadata.xmp, inputHasGps: hasGps(metadata.exif) };
     validateMetadata(metadata);
     // Auto-orient then reencode strips input metadata; no withMetadata/keepMetadata.
     const normalized = await sharp(input, options).rotate().toColourspace('srgb').webp({ quality: 80 }).timeout({ seconds: 10 }).toBuffer();
     const thumb = await sharp(normalized, options).resize({ width: 320, height: 320, fit: 'inside', withoutEnlargement: true }).webp({ quality: 70 }).timeout({ seconds: 10 }).toBuffer();
     const resultMetadata = await sharp(normalized, options).metadata();
+    const thumbMetadata = await sharp(thumb, options).metadata();
     details = { ...details, normalizedBytes: normalized.length, thumbnailBytes: thumb.length,
-      normalizedMetadataStripped: !resultMetadata.exif && !resultMetadata.icc && !resultMetadata.xmp };
+      normalizedMetadataStripped: !resultMetadata.exif && !resultMetadata.icc && !resultMetadata.xmp, thumbnailMetadataStripped: !thumbMetadata.exif && !thumbMetadata.icc && !thumbMetadata.xmp, thumbnailWidth: thumbMetadata.width, thumbnailHeight: thumbMetadata.height };
     details.accepted = true;
   } catch (e) {
     details = { ...details, accepted: false, rejection: e.code || 'DECODER_REJECTED', reason: String(e.message).slice(0, 240) };
@@ -68,6 +69,47 @@ async function fixture(size, format) {
   }
   return sharp(raw, { raw: { width: size, height: size, channels: 3 } }).toFormat(format).toBuffer();
 }
+// Detect an actual TIFF GPSInfo IFD pointer, not just any EXIF payload.
+function hasGps(exif) {
+  if (!exif || exif.length < 14 || exif.subarray(0, 6).toString('binary') !== 'Exif\0\0') return false;
+  const tiff = exif.subarray(6), little = tiff.subarray(0, 2).toString() === 'II';
+  const u16 = offset => little ? tiff.readUInt16LE(offset) : tiff.readUInt16BE(offset);
+  const u32 = offset => little ? tiff.readUInt32LE(offset) : tiff.readUInt32BE(offset);
+  const offset = u32(4); if (offset + 2 > tiff.length) return false;
+  const count = u16(offset);
+  for (let i = 0; i < count; i++) {
+    const entry = offset + 2 + i * 12;
+    if (entry + 12 > tiff.length) return false;
+    if (u16(entry) === 0x8825 && u32(entry + 8) > 0) return true;
+  }
+  return false;
+}
+async function noiseFixture(format) {
+  const raw = Buffer.alloc(2000 * 2000 * 3);
+  let state = 0x12345678;
+  for (let i = 0; i < raw.length; i++) {
+    state ^= state << 13; state ^= state >>> 17; state ^= state << 5; raw[i] = state & 255;
+  }
+  let best = null;
+  // Bounded quality search; never pad encoded bytes to claim near-limit decoding.
+  for (const quality of [100, 98, 96, 94, 92, 90, 88, 86]) {
+    const input = await sharp(raw, { raw: { width: 2000, height: 2000, channels: 3 } }).toFormat(format, { quality }).toBuffer();
+    if (input.length <= MAX_BYTES && (!best || input.length > best.input.length)) best = { input, quality };
+    if (best && best.input.length >= MAX_BYTES * 0.85) break;
+  }
+  assert(best && best.input.length >= MAX_BYTES * 0.75, format + ': bounded near-limit fixture unavailable');
+  return best;
+}
+async function metadataFixture() {
+  const input = await sharp({ create: { width: 1000, height: 1000, channels: 3, background: '#456789' } })
+    .withExif({ IFD0: { Artist: 'SYNTHETIC PHASE30', Copyright: 'SYNTHETIC ONLY' },
+      IFD3: { GPSLatitudeRef: 'N', GPSLatitude: '10/1 0/1 0/1', GPSLongitudeRef: 'E', GPSLongitude: '106/1 0/1 0/1' } })
+    .withXmp('<x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" dc:description="SYNTHETIC PHASE30 METADATA PROBE"/></rdf:RDF></x:xmpmeta>')
+    .jpeg().toBuffer();
+  const metadata = await sharp(input).metadata();
+  assert(metadata.exif && metadata.xmp && hasGps(metadata.exif), 'Fixture must carry EXIF, GPS pointer and XMP');
+  return input;
+}
 async function main() {
   guards();
   assert.equal(sharp.versions.sharp, '0.35.5', 'Pinned sharp version required');
@@ -85,21 +127,32 @@ async function main() {
   const gifHeader = '47494638396101000100800000000000ffffff';
   const frame = '21f90400000000002c0000000001000100000202440100';
   cases.push({ name: 'two-frame-gif', input: Buffer.from(gifHeader + frame + frame + '3b', 'hex'), expected: false });
+  for (const format of ['jpeg', 'webp']) {
+    const candidate = await noiseFixture(format);
+    cases.push({ name: format + '-4000000-noise-near-byte-limit', ...candidate, expected: true, complexityProbe: true });
+  }
+  cases.push({ name: 'jpeg-exif-gps-xmp', input: await metadataFixture(), expected: true, suppliedMetadata: true });
   const results = [];
   for (const c of cases) {
     const run = spawnSync(process.execPath, [__filename, '--worker'], { input: c.input, encoding: 'utf8', timeout: TIMEOUT_MS, maxBuffer: 1024 * 1024, windowsHide: true });
     assert.ifError(run.error);
     assert.equal(run.status, 0, `${c.name}: ${run.stderr}`);
     const result = JSON.parse(run.stdout);
-    assert.equal(result.accepted, c.expected, `Unexpected outcome: ${c.name}`);
-    if (c.expected) { assert.equal(result.normalizedMetadataStripped, true); assert(result.thumbnailBytes > 0); }
-    results.push({ name: c.name, expectedAccepted: c.expected, ...result });
+    // A valid complex image may fail closed under the processing deadline; this is never successful normalization.
+    const timedOut = !result.accepted && /timeout|timed out|time limit/i.test(result.reason || '');
+    if (!(c.complexityProbe && timedOut)) assert.equal(result.accepted, c.expected, 'Unexpected outcome: ' + c.name);
+    if (result.accepted) {
+      assert.equal(result.normalizedMetadataStripped, true); assert.equal(result.thumbnailMetadataStripped, true);
+      assert(result.thumbnailBytes > 0 && result.thumbnailWidth <= 320 && result.thumbnailHeight <= 320);
+    }
+    if (c.suppliedMetadata) assert(result.inputHasExif && result.inputHasXmp && result.inputHasGps);
+    results.push({ name: c.name, expectedAccepted: c.expected, complexityProbe: !!c.complexityProbe, fixtureQuality: c.quality ?? null, safeComplexityTimeout: !!(c.complexityProbe && timedOut), ...result });
   }
   const report = { scope: 'LOCAL_SYNTHETIC_PROCESSOR_FEASIBILITY_ONLY', recordedAt: new Date().toISOString(),
     platform: process.platform, arch: process.arch, node: process.version, versions: sharp.versions,
     candidateLimits: { maxInputBytes: MAX_BYTES, maxInputPixels: MAX_PIXELS, thumbnailMaxEdge: 320, processingTimeoutSeconds: 10, outerCaseTimeoutMs: TIMEOUT_MS },
     configuration: { cache: false, concurrency: 1, failOn: 'warning', singleFrame: true, isolatedChildPerCase: true },
-    limitations: ['Candidate limits are not approved product limits.', 'Synthetic gradients and solid-color fixtures are not a comprehensive adversarial corpus.', 'No deployed Linux/Render, parallel load or storage acceptance is demonstrated.', 'maxRSS covers process startup/input ingestion; 2ms RSS sampling can miss peaks.', 'Decoder/library safety and complete polyglot rejection are not certified by these probes.', 'Worker timeout stops a child process; application isolation/resource policy is not implemented.'],
+    limitations: ['Candidate limits are not approved product limits.', 'Deterministic noise, gradients, supplied metadata and solid-color fixtures are not a comprehensive adversarial corpus.', 'No deployed Linux/Render, parallel load or storage acceptance is demonstrated.', 'maxRSS covers process startup/input ingestion; 2ms RSS sampling can miss peaks.', 'Decoder/library safety and complete polyglot rejection are not certified by these probes.', 'Worker timeout stops a child process; application isolation/resource policy is not implemented.'],
     assertionsPassed: true, results };
   fs.writeFileSync(output, JSON.stringify(report, null, 2) + '\n');
   process.stdout.write(JSON.stringify({ output, cases: results.length, results: results.map(({ name, accepted, wallMs, cpuUserMs, cpuSystemMs, processMaxRssKiB, rejection }) => ({ name, accepted, wallMs, cpuUserMs, cpuSystemMs, processMaxRssKiB, rejection })) }, null, 2) + '\n');

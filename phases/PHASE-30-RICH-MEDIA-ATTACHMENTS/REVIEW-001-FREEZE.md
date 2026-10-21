@@ -1,0 +1,7 @@
+# Independent freeze review ledger
+
+Status REVIEW_PENDING. No architecture freeze approval claimed yet. The exact candidate CONTRACT-001.md, expanded experiments and successful raw CI artifacts must be reviewed before status changes.
+
+Review001 source reviewer identified missing TXT constrained orchestration, ambiguous image whole-chain deadline, incomplete quota/lease lock ordering and unspecified MP4 allowlist. Corrected: TXT/selftests/RSS artifacts wired; image10s per stage/30s child stated; actor/IP/deployment/processing row order explicit with separate short rate transactions; exact narrow MP4 brands/box/dref/NAL policy specified. Equivalent resource measurements explicitly replace actualRender-before-design sequencing only for architecture policy; actualRender enablement gates stay mandatory/defaultdisabled.
+
+Domain reviewer identified incorrect inherited Library provenance eligibility on Community RESOURCE. Corrected: existing Community rules remain; canonical Library references/promotion independently preserve Phase23. Required body/text or context remains unchanged; no attachment-only messages. Repeated/embedded BOM boundary case went RED then GREEN after explicit rejection;14TXT cases now planned in constrained experiment. Expanded image/video scripts passed local Windows synthetic probes, not Render proof. Final independent review and exact constrained results remain pending.

@@ -48,7 +48,7 @@ jobs:
           docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 0.1 --memory 512m --memory-swap 512m --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
             -v "$GITHUB_WORKSPACE:/work:ro" -v "$RUNNER_TEMP/phase30-ffmpeg:/processors:ro" -v "$RUNNER_TEMP/phase30-evidence:/evidence:rw" \
             -e NODE_OPTIONS=--max-old-space-size=64 -e FFMPEG_PATH=/processors/bin/ffmpeg -e FFPROBE_PATH=/processors/bin/ffprobe \
-            -e IMAGE_RESULT_PATH=/evidence/image.json -e VIDEO_RESULT_PATH=/evidence/video.json -e VIDEO_FIXTURE_DIR=/tmp/video \
+            -e DOCUMENT_RESULT_PATH=/evidence/document.json -e IMAGE_RESULT_PATH=/evidence/image.json -e VIDEO_RESULT_PATH=/evidence/video.json -e VIDEO_FIXTURE_DIR=/tmp/video \
             -w /work/scripts/phase30-media-feasibility node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d node run-constrained.cjs
       - name: Retain sanitized synthetic measurements
         if: always()
