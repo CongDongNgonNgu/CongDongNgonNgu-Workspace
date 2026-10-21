@@ -1,0 +1,405 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "supplement": "STREAM_AUTHORIZATION_DENIALS",
+  "setup": [
+    {
+      "id": "moderator-eligible-profile",
+      "status": "PASS"
+    },
+    {
+      "id": "moderator-eligible-preferences",
+      "status": "PASS"
+    },
+    {
+      "id": "nonmember-eligible-profile",
+      "status": "PASS"
+    },
+    {
+      "id": "nonmember-eligible-preferences",
+      "status": "PASS"
+    },
+    {
+      "id": "pair-B-normal-request",
+      "status": "PASS"
+    },
+    {
+      "id": "pair-B-normal-accept",
+      "status": "PASS"
+    },
+    {
+      "id": "pair-B-normal-conversation",
+      "status": "PASS"
+    },
+    {
+      "id": "group-B-private-create",
+      "status": "PASS"
+    },
+    {
+      "id": "group-B-natural-member-invite",
+      "status": "PASS"
+    },
+    {
+      "id": "group-B-natural-member-accept",
+      "status": "PASS"
+    },
+    {
+      "id": "normal-stream-client-login-owner",
+      "status": "PASS"
+    },
+    {
+      "id": "normal-stream-client-login-connected",
+      "status": "PASS"
+    },
+    {
+      "id": "normal-stream-client-login-moderator",
+      "status": "PASS"
+    },
+    {
+      "id": "normal-stream-client-login-nonmember",
+      "status": "PASS"
+    },
+    {
+      "id": "normal-stream-client-login-member",
+      "status": "PASS"
+    },
+    {
+      "id": "normal-stream-client-login-revoked",
+      "status": "PASS"
+    },
+    {
+      "id": "owner-removes-A-member",
+      "status": "PASS"
+    },
+    {
+      "id": "owner-removes-B-member",
+      "status": "PASS"
+    },
+    {
+      "id": "pair-A-normal-block",
+      "status": "PASS"
+    },
+    {
+      "id": "pair-B-normal-disconnect",
+      "status": "PASS"
+    }
+  ],
+  "denials": [
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "A-owner-cannot-stream-B"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "B-owner-cannot-stream-A"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "A-moderator-cannot-stream-B"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "B-member-cannot-stream-A"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "A-owner-cannot-stream-room-B"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "B-sender-cannot-stream-room-A"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "A-partner-cannot-stream-room-B"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "B-partner-cannot-stream-room-A"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 401,
+      "eventStream": false,
+      "code": "AUTH_UNAUTHORIZED",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "anonymous-group-A"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 401,
+      "eventStream": false,
+      "code": "AUTH_UNAUTHORIZED",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "anonymous-group-B"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 401,
+      "eventStream": false,
+      "code": "AUTH_UNAUTHORIZED",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "anonymous-room-A"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 401,
+      "eventStream": false,
+      "code": "AUTH_UNAUTHORIZED",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "anonymous-room-B"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "previously-removed-A-member-denied"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "newly-removed-A-member-denied"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "group",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "newly-removed-B-member-denied"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "blocked-pair-A-owner-denied"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "blocked-pair-A-connected-denied"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "disconnected-pair-B-moderator-denied"
+    },
+    {
+      "expected": "DENY",
+      "resourceKind": "conversation",
+      "anonymous": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "leak": false,
+      "httpStatus": 404,
+      "eventStream": false,
+      "code": "CONVERSATION_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true,
+      "responseDataPresent": false,
+      "id": "disconnected-pair-B-nonmember-denied"
+    }
+  ],
+  "denialTotal": 19,
+  "denialPassed": 19,
+  "failed": 0,
+  "notRun": 0,
+  "unexpectedAllows": 0,
+  "leakCounts": {
+    "protectedStreamResponses": 0,
+    "crossGroup": 0,
+    "crossConversation": 0,
+    "unauthenticated": 0,
+    "unverifiedDenialResponses": 0
+  },
+  "verdict": "PASS_BOUNDED_STREAM_DENIALS",
+  "authorizedStreamContent": "NOT_RUN_DENIAL_ONLY_AUDIT",
+  "reconnect": "NOT_RUN_DENIAL_ONLY_AUDIT",
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "cleanup": "EXECUTED",
+  "runId": "ce54a846-4d69-434d-b82c-9fc8f0de645c",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "preflight": {
+    "target": "OWNER_APPROVED_TEST",
+    "clientTlsVerified": true,
+    "postgresVersion": 180006,
+    "ledgerCount": 38,
+    "ledgerDigest": "7c9dd1152a6f45e4d9109df45da44f3c510635ab4594e2ed98f00fedc19c1428",
+    "ledgerPerFileMatchesExactBackendMain": true,
+    "productionMutated": false
+  },
+  "cleanupResidual": 0
+}

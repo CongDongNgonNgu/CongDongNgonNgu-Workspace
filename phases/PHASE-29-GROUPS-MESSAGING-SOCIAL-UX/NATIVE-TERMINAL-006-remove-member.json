@@ -1,0 +1,65 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "runId": "1a33141b-3811-4b51-9427-a4b140294f05",
+  "stage": "remove-member",
+  "status": "PASS_BOUNDED_STAGE",
+  "credentialsLogged": false,
+  "fixtureCleanup": "DEFERRED_TO_COORDINATOR_NATIVE_CLOSEOUT",
+  "memberId": "ee3c77dd-ef6e-4177-b5c2-7a0f3ddbc4e9",
+  "cases": [
+    {
+      "id": "removed-member-home",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "removed-member-list",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "removed-member-texts",
+      "expected": "DENY",
+      "protectedRead": true,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    },
+    {
+      "id": "removed-member-send",
+      "expected": "DENY",
+      "protectedRead": false,
+      "status": "PASS",
+      "observed": "DENIED",
+      "responseDataPresent": false,
+      "code": "RUNTIME_API_404_GROUP_UNAVAILABLE",
+      "failureEnvelopeValid": true,
+      "failureMessageMatchesCode": true
+    }
+  ],
+  "failed": 0,
+  "notRun": 0,
+  "unexpectedAllows": 0,
+  "leakCounts": {
+    "protectedResponses": 0,
+    "unverifiedDenialMessages": 0
+  },
+  "sourceSha256": "301eb836dfae8400debf32130501f5859ccf4ca9d5c9dea614ec75c3532c93a5"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "runId": "1a33141b-3811-4b51-9427-a4b140294f05",
+  "stage": "context-private",
+  "status": "PASS_BOUNDED_STAGE",
+  "credentialsLogged": false,
+  "fixtureCleanup": "DEFERRED_TO_COORDINATOR_NATIVE_CLOSEOUT",
+  "messageCount": 32,
+  "distinctMessageIds": 32,
+  "firstSequence": "1",
+  "lastSequence": "32",
+  "retryOccurrences": 1,
+  "contextMessageId": "2e36be9d-2941-4e5f-b1e0-f11cca9fee6c",
+  "postVisibility": "PRIVATE",
+  "recipientContext": "UNAVAILABLE",
+  "sourceSha256": "301eb836dfae8400debf32130501f5859ccf4ca9d5c9dea614ec75c3532c93a5"
+}

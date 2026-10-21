@@ -1,0 +1,93 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "recorded": "2026-10-20 Asia/Saigon",
+  "reviewer": "messaging_004_review",
+  "scope": "Local TEST tooling fingerprints; no credentials or environment contents",
+  "files": [
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase28-runtime-fixtures.cjs",
+      "sha256": "b9389ae444aaf6ae269595ff22ee460cf206fa265e6163b10eb65b1b96fd4408"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-runtime-fixtures.cjs",
+      "sha256": "f90f895485cfbe3ae4353414799f3e5af9eb62206da403967f5117bac84da77e"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-runtime-fixtures.test.cjs",
+      "sha256": "a5ae056c8fdbe904aeb1673ef4afad83ef2342e8f28609e956d2716c15497fe2"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-004-api-audit.cjs",
+      "sha256": "94ba280d6f2acf3df1010787d549ebdacaff840a9b6d9753d0550910ff60a292"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-api-audit.cjs",
+      "sha256": "83db7a8fe03b7c1e541794cab0037e93b4142c82a76719bc6f64a8ebf7f7c864"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-api-audit.test.cjs",
+      "sha256": "ab2dda37b2994b30e8f2fa1f3f40400139b120a14736da79aeaee15f1f959634"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-api-acceptance.cjs",
+      "sha256": "92c413812d6b4acfea5f143b5e369d2345da48a2c70992ea6262bbde4a7c34a2"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-api-acceptance.test.cjs",
+      "sha256": "78638acb96549a219f8890a487226d48229d39791bdb449eff3b51c40036e108"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-stream-audit.cjs",
+      "sha256": "ffc420978a60de9b17bf3e4b6f571cc7d38c1d334f92dbf83a5a0e4f68ac1ac9"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-stream-audit.test.cjs",
+      "sha256": "1448e64449576acaaf527e0fd25e7ad8ab4265a254e2520c299c820c4b369e31"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-stream-acceptance.cjs",
+      "sha256": "4be458bf6e1d17fe56e1b0d1c0532999bddb06321e944ddf7000e4e50b69ccc4"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-stream-acceptance.test.cjs",
+      "sha256": "e7702bf72e8945a30331f99232f61182d048fa6e22a319847de4393c151af738"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-history-seed.cjs",
+      "sha256": "7143ca14fb8a84e983d2b99820923462c290d486f46d4474b1500fff747cab46"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-history-seed.test.cjs",
+      "sha256": "b34d225bc70d3b6d388677be79ae6d2fa17ae31ba225f16ac419defb1987b95b"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-native-terminal.cjs",
+      "sha256": "301eb836dfae8400debf32130501f5859ccf4ca9d5c9dea614ec75c3532c93a5"
+    },
+    {
+      "path": "D:\\Work\\CongDongNgonNgu\\phase29-006-native-terminal.test.cjs",
+      "sha256": "66258ee6b48490cfa6eb5f70206ac65f2d535877e05fd1eda42e4e2f58cf8312"
+    }
+  ],
+  "historySeedReview": {
+    "reviewer": "messaging_004_review",
+    "verdict": "APPROVE_PRELIVE_SOURCE_OFFLINE",
+    "evidence": "HISTORY-REVIEW-006.md",
+    "runtimeEvidence": "HISTORY-SEED-006.json",
+    "independentLiveExecution": false
+  },
+  "nativeTerminalReview": {
+    "reviewer": "messaging_004_review",
+    "verdict": "APPROVE_PRELIVE_SOURCE_OFFLINE",
+    "evidence": "TERMINAL-REVIEW-006.md",
+    "runtimeArtifacts": [
+      "NATIVE-TERMINAL-006-history-read.json",
+      "NATIVE-TERMINAL-006-context-private.json",
+      "NATIVE-TERMINAL-006-block-pair.json",
+      "NATIVE-TERMINAL-006-remove-member.json"
+    ],
+    "independentLiveExecution": false
+  }
+}

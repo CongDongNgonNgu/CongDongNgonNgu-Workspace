@@ -1,0 +1,4204 @@
+{
+  "project": "CongDongNgonNgu",
+  "phase": 29,
+  "subphase": "006",
+  "status": "PASS_BOUNDED_NATIVE",
+  "runId": "1a33141b-3811-4b51-9427-a4b140294f05",
+  "frontendMain": "5b7b41b85604801055b463111f808a504bf579b5",
+  "backendMain": "b3be9e28c6c4596ded3ed35726c57846ec8870da",
+  "actors": "exact-owned synthetic owner Linh, invited/then moderator/owner Hoa, connected partner Minh via normal UI login; seven roles separately API-audited",
+  "frames": [
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 320,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 16,
+          "y": 146.53125,
+          "width": 288,
+          "height": 606.9375,
+          "top": 146.53125,
+          "right": 304,
+          "bottom": 753.46875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 16,
+          "y": 146.53125,
+          "width": 343,
+          "height": 606.9375,
+          "top": 146.53125,
+          "right": 359,
+          "bottom": 753.46875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 16,
+          "y": 146.53125,
+          "width": 358,
+          "height": 606.9375,
+          "top": 146.53125,
+          "right": 374,
+          "bottom": 753.46875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 412,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 16,
+          "y": 157.375,
+          "width": 380,
+          "height": 585.25,
+          "top": 157.375,
+          "right": 396,
+          "bottom": 742.625,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 112,
+          "y": 168.21875,
+          "width": 544,
+          "height": 563.5625,
+          "top": 168.21875,
+          "right": 656,
+          "bottom": 731.78125,
+          "left": 112
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 240,
+          "y": 168.21875,
+          "width": 544,
+          "height": 563.5625,
+          "top": 168.21875,
+          "right": 784,
+          "bottom": 731.78125,
+          "left": 240
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "Nhóm học của tôi",
+      "dialog": {
+        "name": "Tạo nhóm",
+        "rect": {
+          "x": 448,
+          "y": 168.21875,
+          "width": 544,
+          "height": 563.5625,
+          "top": 168.21875,
+          "right": 992,
+          "bottom": 731.78125,
+          "left": 448
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nKhông gian cùng bạn bè luyện ngôn ngữ và theo đuổi mục tiêu học tập.\n\nTạo nhóm\nGia nhập bằng mã mời\n\nRiêng tư · Chỉ qua lời mời\n\nChủ nhóm\nRiêng tư · Chỉ qua lời mời\nEveryday Vietnamese and English\n\nWe practise eve",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-index"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 320,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 16,
+          "y": 131.890625,
+          "width": 288,
+          "height": 636.21875,
+          "top": 131.890625,
+          "right": 304,
+          "bottom": 768.109375,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 16,
+          "y": 146.53125,
+          "width": 343,
+          "height": 606.9375,
+          "top": 146.53125,
+          "right": 359,
+          "bottom": 753.46875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 16,
+          "y": 146.53125,
+          "width": 358,
+          "height": 606.9375,
+          "top": 146.53125,
+          "right": 374,
+          "bottom": 753.46875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 412,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 16,
+          "y": 146.53125,
+          "width": 380,
+          "height": 606.9375,
+          "top": 146.53125,
+          "right": 396,
+          "bottom": 753.46875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 112,
+          "y": 168.21875,
+          "width": 544,
+          "height": 563.5625,
+          "top": 168.21875,
+          "right": 656,
+          "bottom": 731.78125,
+          "left": 112
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 240,
+          "y": 168.21875,
+          "width": 544,
+          "height": 563.5625,
+          "top": 168.21875,
+          "right": 784,
+          "bottom": 731.78125,
+          "left": 240
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "My study groups",
+      "dialog": {
+        "name": "Create group",
+        "rect": {
+          "x": 448,
+          "y": 168.21875,
+          "width": 544,
+          "height": 563.5625,
+          "top": 168.21875,
+          "right": 992,
+          "bottom": 731.78125,
+          "left": 448
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nA place to practise languages and work towards your learning goals together.\n\nCreate group\nJoin with invitation\n\nPrivate · Invitation only\n\nOwner\nPrivate · Invitation only\nEveryday Vietnamese and English\n\nWe practis",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "create-group-dialog"
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [
+        [
+          "Home",
+          "Archive group"
+        ],
+        [
+          "My Groups",
+          "Archive group"
+        ],
+        [
+          "Messages",
+          "Archive group"
+        ],
+        [
+          "Open menu",
+          "Archive group"
+        ]
+      ],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion",
+      "measurementNote": "Initial selector included nested StudyGroup content header. It reported a normal document-flow Archive action intersecting fixed bottom navigation at this scroll position, not top-site-header overlap. Retained raw result; later first-site-header-only measurements and native focus checks are separate."
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion"
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion"
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion"
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion"
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion"
+    },
+    {
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Connected · 0 unread texts"
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "messageCount": 0,
+      "surface": "new-group-empty-discussion"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Group members"
+      ],
+      "pressed": [
+        "Group members"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-group-members"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Invitation history"
+      ],
+      "pressed": [
+        "Invitations"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-invitations-metadata"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [
+        "Reports"
+      ],
+      "pressed": [
+        "Reports"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Community\n/\nMy study groups\nPrivate · Invitation only\nOwner\n\nLearning together\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTop",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "owner-reports-empty"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [
+        "Thảo luận"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        "",
+        "Đã kết nối · 0 văn bản chưa đọc"
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "messageCount": 2,
+      "surface": "group-long-unicode-discussion",
+      "requestedSurface": "owner-group-members",
+      "classificationNote": "Actual selected tab is Discussion; this frame is not member-panel coverage."
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Lịch sử lời mời"
+      ],
+      "pressed": [
+        "Mã mời"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-invitations-metadata",
+      "expectedPanel": "Lịch sử lời mời",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Báo cáo"
+      ],
+      "pressed": [
+        "Báo cáo"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-reports-empty",
+      "expectedPanel": "Báo cáo",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [
+        "Thành viên nhóm"
+      ],
+      "pressed": [
+        "Thành viên nhóm"
+      ],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Cùng luyện tiếng Việt và English mỗi ngày 🌱",
+      "dialog": null,
+      "loading": [
+        ""
+      ],
+      "alerts": [],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nRiêng tư · Chỉ qua lời mời\nChủ nhóm\n\nHọc cùng nhau\n\nCùng luyện tiếng Việt và English mỗi ngày 🌱\n\nNgôn ngữ: tiếng Việt và English A2. Mục tiêu: mỗi tuần luyện một cuộc hội thoại ngắn, đặt câu hỏi thân thiện và lắng nghe bạn học.\nTo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "owner-group-members",
+      "expectedPanel": "Thành viên nhóm",
+      "expectedPanelMatched": true
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "Nhóm học của tôi",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "Nhóm hoặc mã mời không khả dụng. Thử lại"
+      ],
+      "mainText": "Cộng đồng\n/\nNhóm học của tôi\nNhóm học của tôi\n\nNhóm hoặc mã mời không khả dụng. \nThử lại",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Nhóm của tôi"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/community/groups/f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "My study groups",
+      "dialog": null,
+      "loading": [],
+      "alerts": [
+        "The group or invitation is unavailable. Retry"
+      ],
+      "mainText": "Community\n/\nMy study groups\nMy study groups\n\nThe group or invitation is unavailable. \nRetry",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "My Groups"
+      ],
+      "surface": "left-group-unavailable",
+      "privateNameVisible": false
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM\n\nChoose a conversation to keep learning together.",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM\n\nChoose a conversation to keep learning together.",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 2:25 PM\n\nChoose a conversation to keep learning together.",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26\n\nChọn một hội thoại để tiếp tục trao đổi.",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26\n\nChọn một hội thoại để tiếp tục trao đổi.",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 14:25 20/10/26\n\nChọn một hội thoại để tiếp tục trao đổi.",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "surface": "messaging-inbox",
+      "actualPartnerVisible": true
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yêu thích. 🌱\nWhat kind of story would you recommend",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yêu thích. 🌱\nWhat kind of story would you recommend",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [
+        "Loading messages…",
+        "Loading messages…"
+      ],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\n\nLoading messages…\n\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yêu thích. 🌱\nWhat kind of story",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yêu thích. 🌱\nWhat kind of story would you recommend",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 7:34 PM\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yê",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 7:34 PM\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yê",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 7:34 PM\nMV\nMinh Vu\nView profile\nConversation information\nYou\n\nChào Minh! Hôm nay mình muốn luyện cách hỏi về một cuốn sách yê",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 320,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 16,
+          "y": 202.96875,
+          "width": 288,
+          "height": 494.0625,
+          "top": 202.96875,
+          "right": 304,
+          "bottom": 697.03125,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your learning partner.\n\nLN\nLinh Nguyen\nYou\nMV\nMinh Vu\n",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 16,
+          "y": 230.96875,
+          "width": 343,
+          "height": 438.0625,
+          "top": 230.96875,
+          "right": 359,
+          "bottom": 669.03125,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your learning partner.\n\nLN\nLinh Nguyen\nYou\nMV\nMinh Vu\n",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 16,
+          "y": 230.96875,
+          "width": 358,
+          "height": 438.0625,
+          "top": 230.96875,
+          "right": 374,
+          "bottom": 669.03125,
+          "left": 16
+        }
+      },
+      "loading": [
+        "Loading messages…",
+        "Loading messages…"
+      ],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\n\nLoading messages…\n\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your learning partner.\n\nLN\nLinh Ng",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 412,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 16,
+          "y": 241.8125,
+          "width": 380,
+          "height": 416.375,
+          "top": 241.8125,
+          "right": 396,
+          "bottom": 658.1875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your learning partner.\n\nLN\nLinh Nguyen\nYou\nMV\nMinh Vu\n",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 112,
+          "y": 259.8125,
+          "width": 544,
+          "height": 380.375,
+          "top": 259.8125,
+          "right": 656,
+          "bottom": 640.1875,
+          "left": 112
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 7:34 PM\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 240,
+          "y": 259.8125,
+          "width": 544,
+          "height": 380.375,
+          "top": 259.8125,
+          "right": 784,
+          "bottom": 640.1875,
+          "left": 240
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 7:34 PM\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Message list",
+        "Conversation information"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "Messages",
+      "dialog": {
+        "name": "Conversation information",
+        "rect": {
+          "x": 448,
+          "y": 259.8125,
+          "width": 544,
+          "height": 380.375,
+          "top": 259.8125,
+          "right": 992,
+          "bottom": 640.1875,
+          "left": 448
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n← Message list\nMessage list\nMV\nMinh Vu\nUpdated 10/20/26, 7:34 PM\nMV\nMinh Vu\nView profile\nConversation information\nConversation information\n\nA direct conversation between you and your",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Messages"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 320,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 16,
+          "y": 230.96875,
+          "width": 288,
+          "height": 438.0625,
+          "top": 230.96875,
+          "right": 304,
+          "bottom": 669.03125,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen\nBạn\nMV\nMinh Vu\nXem hồ sơ\nBạn học của bạn\n\nChia sẻ nội",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 16,
+          "y": 249.8125,
+          "width": 343,
+          "height": 400.375,
+          "top": 249.8125,
+          "right": 359,
+          "bottom": 650.1875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen\nBạn\nMV\nMinh Vu\nXem hồ sơ\nBạn học của bạn\n\nChia sẻ nội",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 390,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 16,
+          "y": 249.8125,
+          "width": 358,
+          "height": 400.375,
+          "top": 249.8125,
+          "right": 374,
+          "bottom": 650.1875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen\nBạn\nMV\nMinh Vu\nXem hồ sơ\nBạn học của bạn\n\nChia sẻ nội",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 412,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 16,
+          "y": 249.8125,
+          "width": 380,
+          "height": 400.375,
+          "top": 249.8125,
+          "right": 396,
+          "bottom": 650.1875,
+          "left": 16
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen\nBạn\nMV\nMinh Vu\nXem hồ sơ\nBạn học của bạn\n\nChia sẻ nội",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 112,
+          "y": 259.8125,
+          "width": 544,
+          "height": 380.375,
+          "top": 259.8125,
+          "right": 656,
+          "bottom": 640.1875,
+          "left": 112
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 19:34 20/10/26\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 240,
+          "y": 259.8125,
+          "width": 544,
+          "height": 380.375,
+          "top": 259.8125,
+          "right": 784,
+          "bottom": 640.1875,
+          "left": 240
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 19:34 20/10/26\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn",
+        "Thông tin hội thoại"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "Tin nhắn",
+      "dialog": {
+        "name": "Thông tin hội thoại",
+        "rect": {
+          "x": 448,
+          "y": 259.8125,
+          "width": 544,
+          "height": 380.375,
+          "top": 259.8125,
+          "right": 992,
+          "bottom": 640.1875,
+          "left": 448
+        }
+      },
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nDanh sách tin nhắn\nMV\nMinh Vu\nCập nhật 19:34 20/10/26\nMV\nMinh Vu\nXem hồ sơ\nThông tin hội thoại\nThông tin hội thoại\n\nCuộc trò chuyện trực tiếp giữa bạn và bạn học.\n\nLN\nLinh Nguyen",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 31,
+      "surface": "conversation-information"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let’s each write a short example and practise one friendly fo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let’s each write a short example and practise one friendly fo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let’s each write a short example and practise one friendly fo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let’s each write a short example and practise one friendly fo",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 753,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nDanh sách tin nhắn\nLN\nLinh Nguyen\nCập nhật 19:40 20/10/26\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1009,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nDanh sách tin nhắn\nLN\nLinh Nguyen\nCập nhật 19:40 20/10/26\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [
+        "Danh sách tin nhắn"
+      ],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n← Danh sách tin nhắn\nDanh sách tin nhắn\nLN\nLinh Nguyen\nCập nhật 19:40 20/10/26\nLN\nLinh Nguyen\nXem hồ sơ\nThông tin hội thoại\nTin nhắn trước đó\nLinh Nguyen\n\nCùng luyện câu hỏi trong bài này nhé. 🌱 Let",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [
+        "Tin nhắn"
+      ],
+      "messageCount": 30,
+      "surface": "loaded-direct-long-unicode-history"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "Tin nhắn",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Tin nhắn\n\nTrao đổi cùng bạn học đã kết nối.\n\nBạn học của bạn\n\nĐăng nhập để xem tin nhắn của bạn.\n\nĐăng nhập",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "scrollWidth": 305,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 375,
+      "height": 900,
+      "scrollWidth": 360,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "scrollWidth": 375,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 412,
+      "height": 900,
+      "scrollWidth": 397,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 1024,
+      "height": 900,
+      "scrollWidth": 1024,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    },
+    {
+      "panelHeadings": [],
+      "pressed": [],
+      "path": "/exchange/conversations/ce6e008d-698d-4d28-8a55-491625977f1c",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "heading": "Messages",
+      "dialog": null,
+      "loading": [],
+      "alerts": [],
+      "mainText": "Messages\n\nKeep learning with your connected partners.\n\nYour learning partners\n\nSign in to see your messages.\n\nSign in",
+      "overflow": [],
+      "headerOverlap": [],
+      "active": [],
+      "surface": "guest-direct-sign-in-boundary"
+    }
+  ],
+  "observed": [
+    "owner normal UI login and authorized index",
+    "VI create dialog Escape closed and returned focus to Create with3px outline",
+    "320x600 mobile/touch native create persisted full VI/EN name/description; Shift+Tab wrapped to explicit Create with3pxfocus and dialog withinviewport",
+    "invited actor normal UI login saw only generic unavailable before invitation; owner native-issued one-use secret captured ephemerally/no token logging, dismissed; native manual groupID+secret acceptance becameMember",
+    "invited member native Unicode3line text; owner received actual1unread, clickedMarkRead, native reply; recipient receivedreply withoutrefresh; actual API ownerreadSequence1/unread0/texts2",
+    "native owner AssignModerator confirmed; recipient reload showedModerator withReports but noinvite/archive/ownercontrols",
+    "native ownership transfer confirmed; formerowner roleMember/ownercontrolsremoved, recipient becameOwner",
+    "first stale Leave target navigatedHome and is NOTPASS; fresh active-page snapshot retargeted actualLeave then nativeconfirm returnedindex omittinggroup; directURL nowgenericunavailable/no privatecontent",
+    "Owner native DM seq1 long VI/EN Unicode via keyboard Send; connected recipient inbox actual1unread, opened/read on390x600mobile; native reply seq2 received owner without refresh and persisted recipient refresh.",
+    "Native390x600 Send focus3px,44pxheight, hit-testSend; actual quick-navigation top531 and buttonbottom526.39. Earlier firstnavTop0 selected wrongnavigation, corrected by actual quicknav.",
+    "Native owned Community post normal ShareWithPartner selected actual eligible Minh only; note sent success and recipient live context seq3 Available; OpenConversation canonicalroute. No newDM eligibility bypass.",
+    "Reviewed normalAPIhistory seed28messages seq4..31; recipient refresh30messages then native OlderMessages returned31 and removed exhaustedbutton. Owner livecount31.",
+    "Offscreen context after reload masked generic unavailable withoutresolverGET; clicking ordinary message text scrolls log into view; fresh resolver GET200 then current Available/OpenContent. This is viewport-driven authorization refresh, not deniedcontent.",
+    "Conversation information VI/EN7widths each nohorizontaloverflow; desktopShiftTab wrapped to YourLearningPartners link2pxoutline; Escapeclosed and focusreturn3pxoutline.",
+    "Native offline attempted Send by Enter on focused enabledbutton. POST failed ERR_INTERNET_DISCONNECTED; offline status and generic thread/inbox erroralerts, contentmasked. Restoredonline and explicitthreadRetry restored30latest and exactdraft with unconfirmedsame-clientID warning. Native RetrySend succeeded, cleared draft and warning, appended one text; recipient freshdirectURL shows persistedretrytext. Exactunique32 APIverification pending.",
+    "One stale page6 text UID click hit Groupsnavigation; no context-openclaim for thatattempt. Root reselectedpage4 fresh target and actualvisiblecontextAvailableverified.",
+    "Native recipient OpenContent rechecked access and opened exactowned Community post; browserBack restoredcanonicalconversation with30latest. SubsequentprivacyPRIVATE madevisiblecardUNAVAILABLE,nopreview/noOpen; backendexactUNAVAILABLE confirmed.",
+    "Native mobile320x600 informationdialog288x438.06atx16y80.97withinviewport, close44x44; ShiftTab/Escapeoperated. Mobilemenu304x600, ShiftTabwrappedLogout3pxoutline, links48pxheight; Groupsclickclosedmodal androuteactive; Back returnedcanonicalDM30latest, ForwardGroups.",
+    "Reviewed terminalhistory32distinctorderedseq1..32,retrytextoccurrences1. Reviewedblock4strict404denials/remove4strict404denials, protectedresponseleaks0/unverifieddenialmessages0. Native recipientinformationdialogautoclosed/history0/inboxemptyafterblock.",
+    "NormalUIlogoutHoa/loginAn samecontext; Group2genericunavailable/nocachedprivategroupname. Group1actualMember withname/composer/emptytext visible; reviewedAPIownerremoval causedlivegenericunavailable/groupnamefalse/composer0.",
+    "Guest groups showedsign-inonly/noauthorizedgroupname. Guest directcanonicalURL showedsign-inonly/nohistory/participant; VIEN7widthseach0horizontaloverflow.",
+    "Corrected local evidence serialization PowerShellarraywrapper and implicitencoding from retained originalmeasurements; finalframesflat161, Unicodepreserved,no replacementcharacters. ProductUIunaffected. EarlierVI31thread7frameswerenotretainedbyinmemorystore; reranactualVIrecipient30latestat7widths, separatelyEN31thread7framespreserved.",
+    "Owner and An normal native logout observed; browser context pages closed across turn before connected logout could be verified. Native clients now absent; guarded cleanup removed all86 owned auth_sessions and all exact-owned dependent records with residual0."
+  ],
+  "limitations": [
+    "Desktop browser viewport emulation; physical hardware/software keyboard not run",
+    "Initial locale select attempt used option value en unsupported by automation; visible English selection succeeded",
+    "One VI member-requested measurement batch actually preserved Discussion; actual surface classification retained, fresh member-panel batch rerun with per-width selected-panel assertions",
+    "Initial header overlap selector included nested StudyGroup content header; raw4 Archive-vs-fixedNav intersections retained at normal scroll position; later first-site-header-only frames separate"
+  ],
+  "cleanup": {
+    "state": "CLEANED",
+    "artifact": "FIXTURE-CLEANUP-006-NATIVE.json",
+    "residualRows": 0,
+    "selectedRows": 199,
+    "tables": 22
+  },
+  "notRun": [
+    "formal WCAG/axe/screenreader certification",
+    "physical device/software keyboard testing",
+    "authorized SSE payload/Last-Event-ID protocol trace; observed HTTP200 stream and live UI/retry recovery separately",
+    "native UI session for every one of seven roles; independent API audit covers all seven",
+    "real-user usability and production readiness",
+    "full seven-width EN long-group discussion state; EN empty group and member/invite/report states measured separately"
+  ],
+  "credentialsLogged": false,
+  "rawInvitationTokensIncluded": false,
+  "nativeCreatedGroup": "f4abb9ab-62fa-4a4e-b753-1e389435b7be",
+  "contrast": [
+    {
+      "surface": "thread heading",
+      "fg": [
+        24,
+        50,
+        76
+      ],
+      "bg": [
+        244,
+        246,
+        242
+      ],
+      "ratio": 12.07
+    },
+    {
+      "surface": "thread link",
+      "fg": [
+        30,
+        65,
+        101
+      ],
+      "bg": [
+        244,
+        246,
+        242
+      ],
+      "ratio": 9.66
+    },
+    {
+      "surface": "composer label",
+      "fg": [
+        24,
+        50,
+        76
+      ],
+      "bg": [
+        251,
+        252,
+        249
+      ],
+      "ratio": 12.75
+    },
+    {
+      "surface": "information button",
+      "fg": [
+        30,
+        65,
+        101
+      ],
+      "bg": [
+        251,
+        252,
+        249
+      ],
+      "ratio": 10.2
+    }
+  ],
+  "independentReview": "REVIEW-FINAL-RUNTIME-006.md"
+}

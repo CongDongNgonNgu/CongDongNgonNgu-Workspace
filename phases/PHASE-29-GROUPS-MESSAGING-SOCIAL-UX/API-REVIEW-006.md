@@ -1,0 +1,39 @@
+# Independent LNG-29-006 tooling and bounded API artifact review
+
+Recorded 2026-10-20 Asia/Saigon. Verdict: APPROVE for the local fingerprints in [FIXTURE-TOOLING-006.json](FIXTURE-TOOLING-006.json) and the bounded API artifacts reviewed below. This is independent source/offline/artifact inspection of root execution, not a second live API run. No live browser, API, database or fixture operation was performed by this reviewer.
+
+## Source and offline review
+
+The scope006 runner retains the reviewed exact-owned fixture helper, fixed TEST host/database, verified TLS, exact clean Backend main and 38-file ledger checks. Normal API login and connected-pair/group creation preserve authorization. Requests restrict methods/routes and path/body UUIDs to exact-owned actors and remembered resources. Anonymous probes use only exact-owned protected GET routes on the fixed TEST API origin, credentials omitted and redirects rejected. Raw responses, authentication bearers and fresh invitation tokens are not written into audit records.
+
+Two disjoint direct pairs and two private Study Groups are established before isolation checks. A later explicit invitation creates dual Study Group membership, allowing parent/child ID mismatch checks without granting direct conversation access. Terminal membership changes and block/disconnect follow isolation/read/context checks. The resource plan fits existing quotas. Any failed case halts later requests as NOT_RUN. Strict expected generic codes, canonical messages, failure-envelope structure and absence of protected data are required for denial PASS. Unexpected protected responses and unverified denial messages are separately counted.
+
+The wrapper closes runtime memory and attempts guarded cleanup in finally. Exactly one fresh prepared scope006 manifest may be recovered; ambiguity fails closed. Unique per-run artifacts use exclusive writes. Missing/failed/nonzero cleanup forces remediation. The canonical Study Group reference correction changes only human-facing text to /community/groups/; reversing that single string reproduces the prior reviewed audit fingerprint. API endpoints remain study-groups/.
+
+Independently ran all four new syntax checks and seven offline tests, all PASS; the offline model covers 194 planned cases. Offline results do not establish deployed behavior. Shared helper and inherited evaluateCase source were inspected; their prior review remains recorded in API-REVIEW-004.md. No additional live execution was performed.
+
+## Actual root API execution independently inspected
+
+First attempt d0cb1baf-f755-402f-8cd1-bebcabd73126 was INTERRUPTED at normal-api-setup with sanitized ACCEPTANCE_EXECUTION_FAILED. Its cause remains unknown; no 194-case result exists and no case PASS is inferred. [Attempt audit](API-AUDIT-006-ATTEMPT-1.json) and [attempt cleanup](FIXTURE-CLEANUP-006-ATTEMPT-1.json) are preserved. Its local manifest is CLEANED; 14 selected rows across two tables and all residuals zero match the cleanup artifact exactly.
+
+Fresh run db70b151-7c58-4da7-a4a1-7d79b40808db produced [API-AUDIT-006.json](API-AUDIT-006.json) and [FIXTURE-CLEANUP-006-API.json](FIXTURE-CLEANUP-006-API.json). Independently parsed the JSON, checked 194 unique case IDs and 194 PASS, zero failed/NOT_RUN/unexpected allows, 104 strict expected denials and 84 protected-read denials. All five recorded phases are present: resource setup, isolated resources, dual membership, terminal membership and terminal direct revocation. Recorded resource counts are exactly two private groups and two direct conversations.
+
+Explicit bounded API leak counts: unauthorized protected responses 0; cross-group 0; cross-conversation 0; unauthenticated 0; unverified denial messages 0. Separately derived from actual terminal cases: revoked/left protected-response leaks 0 across 17 protected denials (five membership-removal/leave probes and twelve direct block/disconnect probes). These counts cover the executed assertions only.
+
+The final local manifest is CLEANED. Its cleanup object equals the published artifact after excluding the artifact runId wrapper: 124 selected rows across 22 tables, every per-table residual and total residual zero. Cascaded child rows are included in selected/residual counts; direct DELETE counts alone are not the total. Both attempts' four Workspace artifact copies match their unique local originals byte for byte. Both preflight/cleanup proofs retain verified TLS, PostgreSQL180006, exact 38-file ledger digest and unchanged Backend b3be9e28c6c4596ded3ed35726c57846ec8870da. Targeted JWT/bearer, connection-URI, private-key and disposable-credential scans found zero matches in those sanitized artifacts.
+
+## Limits and pending work
+
+Realtime remains NOT_RUN_API_AUDIT; direct-message cursor-query testing remains NOT_RUN_HELPER_UNCHANGED. Independent multiparty group conversation remains HELD_NO_AUTHORITATIVE_DOMAIN. No unsupported group-chat flow is promoted to PASS. Full native integration, responsive/accessibility acceptance, source gates, Workspace publication/CI/main/cleanup/relay and final Phase29 verdict are separate coordinator gates and are not certified here.
+
+The separately owned native fixture is outside this API cleanup proof. Its cleanup and residual verification must be recorded independently; this review neither accesses nor cleans it. LNG-29-006 is not declared DONE by this review. No real-user usability, formal WCAG or production-readiness claim is made.
+
+## Independent supplemental stream-denial review
+
+Verdict: APPROVE for the four supplemental fingerprints now added to the tooling registry. Independently inspected fixed-origin exact-owned stream GET guards, normal own-actor login and private in-memory bearer map, anonymous credential omission, immediate cancellation and leak classification of any unexpected 2xx, bounded 8192-byte error body and 15-second request deadline, strict canonical denial envelopes, failure halting, normal resource/relationship transitions, unique artifacts and finally cleanup/recovery. Ten offline tests and two runtime syntax checks independently PASS. Backend communication/hint-stream.service.ts awaits reauthorization/acquire/poll before returning the Observable; both stream repositories preserve their respective membership/pair checks. No live action was performed by this reviewer.
+
+Root subsequently executed supplemental run ce54a846-4d69-434d-b82c-9fc8f0de645c, process exit0. Independently parsed [STREAM-AUDIT-006.json](STREAM-AUDIT-006.json) and [FIXTURE-CLEANUP-006-STREAM.json](FIXTURE-CLEANUP-006-STREAM.json): all 20 normal setup/login/terminal actions and all 19 unique strict stream-denial probes PASS, with zero failures/NOT_RUN/unexpected allows. Nine probes target private group streams and ten target direct streams; four are truly unauthenticated. All responses are expected 401 or 404 with canonical generic messages, strict envelopes, no response data and no 2xx. Recorded protected-stream, cross-group, cross-conversation, unauthenticated and unverified-denial leak counts are each zero. Two private groups and two direct conversations are present in exact-owned cleanup.
+
+The local manifest is CLEANED; its cleanup object exactly matches the artifact excluding the runId wrapper: 95 selected rows across 17 tables, all per-table and total residuals zero. Artifact copies preserve the local originals byte for byte. All four frozen source hashes remain unchanged. Targeted bearer/JWT, connection-URI, private-key and disposable-credential scans found zero matches.
+
+This is root live execution independently inspected, not independent live execution. Authorized stream content and reconnect remain NOT_RUN_DENIAL_ONLY_AUDIT. These stream-denial results supplement the 194-case REST audit; they do not certify an authorized SSE payload/reconnect or the separate live native fixture cleanup. Native work and final lifecycle remain separate gates.
