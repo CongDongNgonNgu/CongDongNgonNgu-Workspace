@@ -1,0 +1,60 @@
+name: Phase30 media feasibility
+on:
+  pull_request:
+    paths:
+      - 'scripts/phase30-media-feasibility/**'
+      - '.github/workflows/phase30-media-feasibility.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/phase30-media-feasibility/**'
+      - '.github/workflows/phase30-media-feasibility.yml'
+permissions:
+  contents: read
+concurrency:
+  group: phase30-media-feasibility-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  constrained-processors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install isolated pinned experiment dependencies
+        working-directory: scripts/phase30-media-feasibility
+        run: npm ci --no-fund --no-audit
+      - name: Resource guard unit test
+        working-directory: scripts/phase30-media-feasibility
+        run: node --test run-constrained.test.cjs
+      - name: Dependency security gate
+        working-directory: scripts/phase30-media-feasibility
+        run: npm audit --audit-level=high
+      - name: Prepare pinned Linux processor and resource sandbox
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/phase30-ffmpeg" "$RUNNER_TEMP/phase30-evidence"
+          curl --fail --location --connect-timeout 15 --max-time 180 --output "$RUNNER_TEMP/phase30-ffmpeg.tar.xz" 'https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-10-20-13-08/ffmpeg-n9.0.2-29-g6dfaba896f-linux64-lgpl-9.0.tar.xz'
+          printf '%s  %s\n' '5ae5939260c72671383f0a0d8785695bfe06c94c27d4daac2e63eb8576417927' "$RUNNER_TEMP/phase30-ffmpeg.tar.xz" | sha256sum --check --strict
+          tar -xJf "$RUNNER_TEMP/phase30-ffmpeg.tar.xz" --strip-components=1 -C "$RUNNER_TEMP/phase30-ffmpeg"
+          docker pull node:24.18.0-bookworm-slim
+          docker image inspect node:24.18.0-bookworm-slim --format '{{json .RepoDigests}}' > "$RUNNER_TEMP/phase30-evidence/node-image-digest.json"
+      - name: Measure processors at 0.1 CPU and 512 MiB without network
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --read-only --cpus 0.1 --memory 512m --memory-swap 512m --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
+            -v "$GITHUB_WORKSPACE:/work:ro" -v "$RUNNER_TEMP/phase30-ffmpeg:/processors:ro" -v "$RUNNER_TEMP/phase30-evidence:/evidence:rw" \
+            -e NODE_OPTIONS=--max-old-space-size=64 -e FFMPEG_PATH=/processors/bin/ffmpeg -e FFPROBE_PATH=/processors/bin/ffprobe \
+            -e IMAGE_RESULT_PATH=/evidence/image.json -e VIDEO_RESULT_PATH=/evidence/video.json -e VIDEO_FIXTURE_DIR=/tmp/video \
+            -w /work/scripts/phase30-media-feasibility node:24.18.0-bookworm-slim node run-constrained.cjs
+      - name: Retain sanitized synthetic measurements
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: phase30-media-feasibility
+          path: ${{ runner.temp }}/phase30-evidence/
+          if-no-files-found: error
+          retention-days: 7

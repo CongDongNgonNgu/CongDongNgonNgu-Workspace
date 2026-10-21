@@ -1,0 +1,29 @@
+# LNG-30-001 new storage and processor recovery evidence
+
+2026-10-21 Asia/Saigon. PR177/main28bac1b60c6846e33a53675fd6a93b8cfac69993 remains the completed initial documentary publication. Its historical no-access observation is superseded only by the new evidence below. Original TASKS/roadmap unchanged; architecture NOT_FROZEN,002-006 unstarted. No repeated audit or unchanged blocker publication.
+
+## Current read-only account evidence
+
+Owner personally authenticated the previously handed-off Cloudflare session. Codex performed no sign-in/terms acceptance/credential creation. Existing project bucket congdongngonngu: Public Access Disabled, r2.dev public development URL disabled, no custom domains, no CORS, no bucket-lock rules. Default multipart-abort lifecycle7days exists; this is not an application orphan cleanup policy. Existing active account token CongDongNgonNgu applies to this bucket only with Object Read & Write. No credential values were revealed. No bucket/provider/token/billing settings changed. Inventory before/after probe:2retained objects467.88KB under backups/. Other-project bucket was not inspected/mutated. Current account storage2.37MB and billable usage$0 observed; neither is a hard cost ceiling or approved media quota.
+
+Independent storage review approved a tiny exact-owned TEST probe using the existing approved provider after explicit privacy/scope/backup-separation review. A separate media bucket is preferable for rollout blast-radius isolation but not an invented prerequisite for this limited probe. Prefix separation is an application safety guard, not IAM isolation; the bucket-scoped token can affect retained backups if misused.
+
+## Executed guarded object probe
+
+Script limits: one64-byte deterministic synthetic object, random phase30-probe/runUUID/objectUUID key,16-operation maximum, SDK maxAttempts1,10s calls/stream deadline, exact bucket/key/ownership guards, collision-safe IfNoneMatch, manifest beforePUT, metadata-owned delete only, no backup reads/writes/purge/policy change. Local guard tests went RED before implementation and GREEN6/6 after review corrections. Independent review fixed anonymous-status overclaim and stream-consumption deadline before approving execution.
+
+[Owned manifest](evidence-001/phase30-storage-probe-f9bbb4a3-e18b-4401-a721-2761f0898f29.json):9operations; PUT/HEAD/authenticatedGET/checksum/DELETE PASS. Exact post-delete HEAD404 and run-prefix list0 independently verified storage residual0 at2026-10-21T02:00:08.599Z. No interruptedPUT occurred. This proves observed exact-owned cleanup, not absence of every unrelated object or future delayed-write guarantee. Anonymous S3HTTP400 is INCONCLUSIVE, never authorization-denial PASS. Current control-plane disabled r2.dev/no customdomain evidence separately establishes those public access paths are disabled. No signed private URL was created. DB was not touched; no DB fixture residual probe was run.
+
+STORAGE_PRIVATE_ACCESS=CONTROL_PLANE_PUBLIC_PATHS_DISABLED; STORAGE_DURABILITY=PASS_BOUNDED_PUT_HEAD_READ_CHECKSUM; STORAGE_PERMISSION_SCOPE=PROJECT_BUCKET_OBJECT_READ_WRITE_NOT_PREFIX_IAM_ISOLATION; STORAGE_CAPACITY=CURRENT_USAGE_OBSERVED_NO_HARD_BILLING_CEILING; STORAGE_OBJECT_PROBE=PASS_BOUNDED; STORAGE_OBJECT_CLEANUP=PASS_EXACT_OWNED_OBSERVED_AT_TIME; STORAGE_OBJECT_RESIDUAL=0_EXECUTED.
+
+## Processor experiment, not product acceptance
+
+Pinned sharp0.35.5 local isolated install: npm audit0vulnerabilities. [Windows image results](evidence-001/image-local-windows.json) contain13asserted valid/rejection cases with1MP/4MP JPEG/PNG/WebP, warning-sensitive decode, single-frame/pixel/byte checks, metadata-stripping normalizedWebP and actual320pxthumbnail.4MP observed216-239ms and90-117MiB maximumRSS on localWindows. This is not Render evidence or approved limits.
+
+Pinned BtbN LGPL FFmpeg n9.0.2-29-g6dfaba896f Windows archive SHA256e7bca5e004c2d13bcb374c3a4bd30c4588b08607a4b1a01369341a4f9678dff3 verified before execution. [Video results](evidence-001/video-local-windows.json): deterministic5sec360p and15sec720p H264, optionalAAC, full-decode/remux/thumbnail and half-truncation rejection passed.15sec720p decode~288ms/maxRSS24916KiB locally; not approved deployed throughput. PDF inspection remains unmeasured/HELD.
+
+New [isolated experiment](../../scripts/phase30-media-feasibility/README.md) and credential-free path-scoped CI measure Linux at0.1CPU/512MiB/noSwap/networknone/read-only mounts with cgroup/RSS/deadline/OOM assertions. Official references: [GitHub container resource options](https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container), [sharp input limits](https://sharp.pixelplumbing.com/api-constructor/), [FFmpeg distributor](https://ffmpeg.org/download.html), [R2 pricing/free allowance](https://developers.cloudflare.com/r2/pricing/). Linux results pending, NOT_RUN until actual CI. No image/video/document limits are approved by this publication.
+
+## Current disposition
+
+Account-access component of BLOCKER-30-001 RESOLVED_BY_OWNER_AUTHENTICATED_SESSION.001 IN_PROGRESS: remaining processor/budget/limit/full-contract review and freeze/lifecycle gates are ordinary work, not a request to sign in again. Phase status IN_PROGRESS; selected recovery verdict remains REMEDIATE_AND_RETEST until freeze/acceptance.002-006 PLANNED_NOT_STARTED. Continue only decision-relevant measurements/review; no new media provider/billing/production changes. Independent final architecture freeze review remains NOT_RUN.

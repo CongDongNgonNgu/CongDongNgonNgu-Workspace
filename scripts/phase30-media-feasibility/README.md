@@ -1,0 +1,14 @@
+# Phase30 processor feasibility experiment
+
+Architecture evidence only. This is not an attachment implementation, malware scanner, approved format/limit contract or deployed Render acceptance.
+
+Dependencies: sharp0.35.5 pinned by package-lock. The workflow downloads checksum-pinned BtbN FFmpeg n9.0.2-29-g6dfaba896f LGPL archives. BtbN is linked by https://ffmpeg.org/download.html; archive provenance is https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-10-20-13-08. The build disables GPL/nonfree components; retain upstream license/source notices when packaging any later runtime binary. No binary is committed or delivered to a browser. Legal/codec patent or malware-free certification is not claimed.
+
+Local guard: `node --test run-constrained.test.cjs`. Image experiment: `npm ci` then `node image-benchmark.cjs`; explicitly set FFMPEG_PATH and FFPROBE_PATH to verified local executables before `node video-benchmark.cjs`. All inputs are generated synthetic gradients/test patterns; no uploads, storage, credentials, user media or remote fetch exists in benchmark scripts. Files/results default beside scripts locally; CI paths point to disposable/evidence mounts.
+
+Existing GitHub Actions runs a Linux Docker container with0.1CPU,512MiB RAM,no swap,128pids,64MiB temporary filesystem,read-only source/processor mounts,capabilities dropped,no-new-privileges and no network. Only fixture/evidence mounts are writable. It checks actual cgroup limits, process RSS, timeouts and OOM state. Fixture generation/dependency acquisition happens in the experiment, not a user-facing app. Dependency installation and pinned binary download happen before the network-isolated processing run; no provider or billing configuration is changed.
+
+Candidates under investigation: JPEG/PNG/WebP input<=4MiB/4MP, single-frame normalization and thumbnail; MP4 H264 yuv420p with optional bounded AAC,<=8MiB/1280x720/15seconds/30fps, complete decode + metadata-stripping remux + actual thumbnail. Rejection cases include corruption/truncation/oversize/animated images. These numbers are experimental inputs, not approved product limits. PDF and other document parsers are not measured; do not approve them from this experiment.
+
+Cgroup-equivalent measurements are not actual Render deployment, API concurrency, database authorization, storage integration, full adversarial safety or end-to-end acceptance. The workflow must fail if resource enforcement/measurements are missing. Raw artifacts and exact run SHA are required before independent architecture/limit review. No001DONE or002entry follows merely from this experiment passing.
+The192MiB per-worker RSS check is a measured acceptance threshold, not an OS memory limit for each worker. The container512MiB ceiling is enforced by cgroups; Node heap64MiB is separate from native decoder memory. The experiment fails if either actual budget enforcement or recorded measurements are missing.

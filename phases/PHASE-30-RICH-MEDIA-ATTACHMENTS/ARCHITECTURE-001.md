@@ -62,4 +62,4 @@ Additive migration after001 freeze only: attachment/binding/cleanup/rate tables 
 4. Reviewed typed API/state/transaction/capability/error and removal contracts plus adversarial plan.
 5. Independent source/security review, remediations and Workspace PR/main CI/tree/cleanup lifecycle.
 
-Until all pass: ARCHITECTURE_FROZEN=NO; LNG_30_001=BLOCKED_EXTERNAL; LNG_30_002..006=PLANNED.
+Current recovery: account-access/private-settings and exact-owned storage probe gates have new evidence in EVIDENCE-001-RECOVERY.md. Until remaining processor/limits/contracts/review/lifecycle gates pass: ARCHITECTURE_FROZEN=NO; LNG_30_001=IN_PROGRESS; LNG_30_002..006=PLANNED.
