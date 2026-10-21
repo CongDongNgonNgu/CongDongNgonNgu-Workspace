@@ -39,17 +39,17 @@ jobs:
           curl --fail --location --connect-timeout 15 --max-time 180 --output "$RUNNER_TEMP/phase30-ffmpeg.tar.xz" 'https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-10-20-13-08/ffmpeg-n9.0.2-29-g6dfaba896f-linux64-lgpl-9.0.tar.xz'
           printf '%s  %s\n' '5ae5939260c72671383f0a0d8785695bfe06c94c27d4daac2e63eb8576417927' "$RUNNER_TEMP/phase30-ffmpeg.tar.xz" | sha256sum --check --strict
           tar -xJf "$RUNNER_TEMP/phase30-ffmpeg.tar.xz" --strip-components=1 -C "$RUNNER_TEMP/phase30-ffmpeg"
-          docker pull node:24.18.0-bookworm-slim
-          docker image inspect node:24.18.0-bookworm-slim --format '{{json .RepoDigests}}' > "$RUNNER_TEMP/phase30-evidence/node-image-digest.json"
+          docker pull node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
+          docker image inspect node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d --format '{{json .RepoDigests}}' > "$RUNNER_TEMP/phase30-evidence/node-image-digest.json"
       - name: Measure processors at 0.1 CPU and 512 MiB without network
         shell: bash
         run: |
           set -euo pipefail
-          docker run --rm --network none --read-only --cpus 0.1 --memory 512m --memory-swap 512m --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
+          docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 0.1 --memory 512m --memory-swap 512m --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
             -v "$GITHUB_WORKSPACE:/work:ro" -v "$RUNNER_TEMP/phase30-ffmpeg:/processors:ro" -v "$RUNNER_TEMP/phase30-evidence:/evidence:rw" \
             -e NODE_OPTIONS=--max-old-space-size=64 -e FFMPEG_PATH=/processors/bin/ffmpeg -e FFPROBE_PATH=/processors/bin/ffprobe \
             -e IMAGE_RESULT_PATH=/evidence/image.json -e VIDEO_RESULT_PATH=/evidence/video.json -e VIDEO_FIXTURE_DIR=/tmp/video \
-            -w /work/scripts/phase30-media-feasibility node:24.18.0-bookworm-slim node run-constrained.cjs
+            -w /work/scripts/phase30-media-feasibility node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d node run-constrained.cjs
       - name: Retain sanitized synthetic measurements
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

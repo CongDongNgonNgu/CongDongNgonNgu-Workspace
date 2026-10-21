@@ -4,6 +4,7 @@ function validateBudget(cpu,memory,swap){const [quota,period]=cpu.trim().split(/
 function main(){
  const read=name=>fs.readFileSync('/sys/fs/cgroup/'+name,'utf8').trim();
  const cpu=read('cpu.max'),memory=read('memory.max'),swap=read('memory.swap.max');validateBudget(cpu,memory,swap);
+ fs.writeFileSync('/evidence/preflight.json',JSON.stringify({uid:process.getuid(),cpuMax:cpu,memoryMax:memory,swapMax:swap,evidenceWriteVerified:true})+'\n');
  const run=script=>{const result=spawnSync(process.execPath,[path.join(__dirname,script)],{encoding:'utf8',timeout:480000,maxBuffer:256*1024,windowsHide:true});assert.ifError(result.error);process.stdout.write(result.stdout);process.stderr.write(result.stderr);assert.equal(result.status,0,script+' failed');};
  run('image-benchmark.cjs');run('video-benchmark.cjs');
  const image=JSON.parse(fs.readFileSync(process.env.IMAGE_RESULT_PATH,'utf8')),video=JSON.parse(fs.readFileSync(process.env.VIDEO_RESULT_PATH,'utf8'));
