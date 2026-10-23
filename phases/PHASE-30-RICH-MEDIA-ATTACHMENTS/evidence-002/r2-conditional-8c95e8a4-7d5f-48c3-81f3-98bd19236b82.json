@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "classification": "APPROVED_TEST_SYNTHETIC",
+  "attachmentId": "8c95e8a4-7d5f-48c3-81f3-98bd19236b82",
+  "attemptId": "a24f2103-ab5e-4219-9ac3-8a1807d7b990",
+  "objectId": "c60ed54c-db77-42d3-8466-db1c1c60e0c7",
+  "key": "attachments/test/v1/8c95e8a4-7d5f-48c3-81f3-98bd19236b82/a24f2103-ab5e-4219-9ac3-8a1807d7b990/source/c60ed54c-db77-42d3-8466-db1c1c60e0c7",
+  "bytes": 64,
+  "sha256": "d33bfd0e073749f1a425c178b211fceb14b1380f5a16edcd8a3e03d677da1a29",
+  "operations": 8,
+  "operationBudget": 16,
+  "createdAt": "2026-10-21T12:14:39.729Z",
+  "results": {
+    "conditionalDelete": "NOT_ENFORCED",
+    "cleanup": "PASS_OBSERVED",
+    "residual": 0,
+    "observedEtag": "\"5970d9841a228bc3abfab3ef14eaded2\"",
+    "wrongEtagStatus": 204,
+    "failure": "CONDITIONAL_DELETE_NOT_ENFORCED",
+    "residualObservedAt": "2026-10-21T12:14:42.706Z"
+  },
+  "finishedAt": "2026-10-21T12:14:42.706Z"
+}

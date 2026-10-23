@@ -1,0 +1,78 @@
+{
+  "project": "CongDongNgonNgu",
+  "majorPhase": 30,
+  "subphase": "LNG-30-002",
+  "status": "IN_PROGRESS",
+  "backendBranch": "feat/phase30-002-shared-attachments",
+  "backendSourceHead": "bc1dee8a3b57265b59990499abf24d49d7ea5f8b",
+  "attachmentFormatsEnabled": false,
+  "sharedTestMigrationApplied": false,
+  "deployedRuntimeAccepted": false,
+  "checks": {
+    "unitPrior": {
+      "suites": 200,
+      "tests": 1350,
+      "status": "PASS",
+      "seconds": 72.698,
+      "native": "REQUIRED_PINNED_WINDOWS"
+    },
+    "unitAffected": {
+      "suites": 3,
+      "tests": 66,
+      "status": "PASS",
+      "seconds": 15.824
+    },
+    "sqlAggregatePrior": {
+      "suites": 10,
+      "tests": 108,
+      "status": "PASS",
+      "seconds": 339.674
+    },
+    "sqlSchemaAffected": {
+      "tests": 16,
+      "status": "PASS",
+      "seconds": 31.098
+    },
+    "sqlLifecycleAffected": {
+      "tests": 12,
+      "status": "PASS",
+      "seconds": 50.408
+    },
+    "e2e": {
+      "suites": 23,
+      "tests": 168,
+      "status": "PASS",
+      "seconds": 37.04
+    },
+    "typecheck": "PASS",
+    "dependencyAuditFullVulnerabilities": 0,
+    "dependencyAuditRuntimeVulnerabilities": 0,
+    "connectionGuardTests": 5,
+    "workspaceOfflineMonitorTests": 12,
+    "unitExactCommit": {
+      "suites": 201,
+      "tests": 1358,
+      "status": "PASS",
+      "seconds": 66.302,
+      "native": "REQUIRED_PINNED_WINDOWS"
+    },
+    "buildExactCommit": "PASS"
+  },
+  "pending": [
+    "independent review of latest root changes",
+    "service/controller/module upload/finalize/read/delete composition",
+    "moderation and failure orchestration",
+    "unknown/uncertain orphan reconciliation and retained-record purge",
+    "Linux CI native execution",
+    "exact Render packaging/resources/transport/API interference",
+    "PR/mainCI/reviewed-tree/cleanup lifecycle",
+    "deployed owned DB and storage fixture cleanup"
+  ],
+  "leakCounts": "NOT_RUN",
+  "productionDbMutated": false,
+  "productionStorageActivated": false,
+  "paymentActivated": false,
+  "phase31Implemented": false,
+  "backendRemoteBranchHead": "bc1dee8a3b57265b59990499abf24d49d7ea5f8b",
+  "backendWorkingTreeClean": true
+}
