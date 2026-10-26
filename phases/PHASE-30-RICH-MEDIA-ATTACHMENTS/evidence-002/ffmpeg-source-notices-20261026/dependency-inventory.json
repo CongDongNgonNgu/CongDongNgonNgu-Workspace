@@ -1,0 +1,2364 @@
+{
+  "classification": "BOUNDED_STATIC_RECIPE_AND_BINARY_INVENTORY_NOT_COMPLETE_CORRESPONDING_SOURCE_OR_RUNTIME_PROOF",
+  "revision": "63ac3265b0789ea16c7b1f8351cd2ad195a28722",
+  "sourceFilesVerified": 150,
+  "recipeScriptCount": 134,
+  "binaryEnabledFlags": [
+    "--enable-version3",
+    "--enable-iconv",
+    "--enable-zlib",
+    "--enable-libxml2",
+    "--enable-libsoxr",
+    "--enable-openssl",
+    "--enable-libvmaf",
+    "--enable-fontconfig",
+    "--enable-libharfbuzz",
+    "--enable-libfreetype",
+    "--enable-libfribidi",
+    "--enable-lcms2",
+    "--enable-vulkan",
+    "--enable-libdav1d",
+    "--enable-libvorbis",
+    "--enable-librav1e",
+    "--enable-librsvg",
+    "--enable-libxcb",
+    "--enable-xlib",
+    "--enable-libpulse",
+    "--enable-gmp",
+    "--enable-lzma",
+    "--enable-liblcevc-dec",
+    "--enable-opencl",
+    "--enable-amf",
+    "--enable-libaom",
+    "--enable-chromaprint",
+    "--enable-ffnvcodec",
+    "--enable-cuda-llvm",
+    "--enable-libgme",
+    "--enable-libkvazaar",
+    "--enable-libaribb24",
+    "--enable-libaribcaption",
+    "--enable-libass",
+    "--enable-libbluray",
+    "--enable-libjxl",
+    "--enable-libmp3lame",
+    "--enable-libopus",
+    "--enable-libplacebo",
+    "--enable-librist",
+    "--enable-libssh",
+    "--enable-libtheora",
+    "--enable-libvpx",
+    "--enable-libwebp",
+    "--enable-libzmq",
+    "--enable-lv2",
+    "--enable-libvpl",
+    "--enable-openal",
+    "--enable-liboapv",
+    "--enable-libopencore-amrnb",
+    "--enable-libopencore-amrwb",
+    "--enable-libopenh264",
+    "--enable-libopenjpeg",
+    "--enable-libopenmpt",
+    "--enable-sdl2",
+    "--enable-libsnappy",
+    "--enable-libsrt",
+    "--enable-libsvtav1",
+    "--enable-libtwolame",
+    "--enable-libuavs3d",
+    "--enable-libdrm",
+    "--enable-vaapi",
+    "--enable-vapoursynth",
+    "--enable-libvvenc",
+    "--enable-libzimg",
+    "--enable-libzvbi"
+  ],
+  "binaryDisabledFlags": [
+    "--disable-debug",
+    "--disable-avisynth",
+    "--disable-libdavs2",
+    "--disable-libdvdread",
+    "--disable-libdvdnav",
+    "--disable-libfdk-aac",
+    "--disable-frei0r",
+    "--disable-librubberband",
+    "--disable-schannel",
+    "--disable-libvidstab",
+    "--disable-whisper",
+    "--disable-libx264",
+    "--disable-libx265",
+    "--disable-libxavs2",
+    "--disable-libxvid"
+  ],
+  "externalPatchFiles": [
+    {
+      "path": "patches/aom/0001-Fall-back-to-built-in-vmaf-model-on-load-failure.patch",
+      "gitBlobSha": "fa42e62794379b04bf2c6d8f76c73b78245bc4f1",
+      "bytes": 714,
+      "sha256": "c3b757903be9b98b52b23ac40f7c49dd562cd999b5151890d19dfaf82f40ddb0"
+    },
+    {
+      "path": "patches/aribb24/17.patch",
+      "gitBlobSha": "5961b2ec9aa592710f9a55ffc8422a02204c51fd",
+      "bytes": 6204,
+      "sha256": "1a4fc77f677a6ff87d024e3a218186160b23620c84dbd791ec5c425de0a8e6c2"
+    },
+    {
+      "path": "patches/aribb24/13.patch",
+      "gitBlobSha": "30d17ba54b55987d4e9340861425b4d004942371",
+      "bytes": 713,
+      "sha256": "4812661f1c77ec06a5a12548f166ac8646d4c7c1574848a005f0578f3d8cfc7c"
+    },
+    {
+      "path": "patches/aribb24/12.patch",
+      "gitBlobSha": "c55bf234363e5bf9d17da9f481339c91288922c6",
+      "bytes": 1511,
+      "sha256": "9059639e9577b123ac4ab3b53771e947b791c42d07b0444cf90e82f563d6d261"
+    }
+  ],
+  "recipeInventory": [
+    {
+      "path": "scripts.d/10-mingw-std-threads.sh",
+      "gitBlobSha": "84109a5c6f49bf822b3d426e1e7e002752f65d17",
+      "sha256": "44b29b0a71465615b40deeb9cd853039234868699cf4c6b85453560aba8dc212",
+      "source": {
+        "REPO": "https://github.com/meganz/mingw-std-threads.git",
+        "COMMIT": "c931bac289dd431f1dd30fc4a5d1a7be36668073"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == win* ]] || return -1\n    return 0",
+      "dependencies": "return 0",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/10-mingw.sh",
+      "gitBlobSha": "5176bf6531a4d425588325f1a7beaae4b75d13f6",
+      "sha256": "e2385614af0b2a4fd9393f318c9463d585d33ced403140f49e18165fd60d71fc",
+      "source": {
+        "REPO": "https://git.code.sf.net/p/mingw-w64/mingw-w64.git",
+        "COMMIT": "57b595039040eaa15bece85b7cc71d952281b269"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == win* ]] || return -1\n    return 0",
+      "dependencies": "return 0",
+      "configure": "echo --disable-w32threads --enable-pthreads",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo \"retry-tool sh -c \\\"rm -rf mingw && git clone '$SCRIPT_REPO' mingw\\\" && cd mingw && git checkout \\\"$SCRIPT_COMMIT\\\"\""
+      ]
+    },
+    {
+      "path": "scripts.d/10-xorg-macros.sh",
+      "gitBlobSha": "1bf5e963d98ec7206bb89cd229129fd4ba82a5fc",
+      "sha256": "933dd1096b6b9f1b32fcc7d172a528df316cf0119ce0abc6f121d0501566436e",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/util/macros.git",
+        "COMMIT": "ea1e15a4909ac8b03b2c5a08ac3810b385985157"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": "return 0",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/20-libiconv.sh",
+      "gitBlobSha": "1661ed8f1186fb85dd815b337831b03c1d335397",
+      "sha256": "b473cb6160679b422e6fa79e43f61ea09692e0926208a463bdd52babea2561e9",
+      "source": {
+        "REPO": "https://git.savannah.gnu.org/git/libiconv.git",
+        "COMMIT": "1df3087ba8110c7f3ed3eb5f8869b814dbbe00b0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-iconv",
+      "matchingBinaryFlags": [
+        "--enable-iconv"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"retry-tool sh -c \\\"rm -rf iconv && git clone '$SCRIPT_MIRROR' iconv\\\" && git -C iconv checkout \\\"$SCRIPT_COMMIT\\\"\"",
+        "    echo \"cd iconv && retry-tool sh -c \\\"rm -rf gnulib && git clone --filter=blob:none '$SCRIPT_MIRROR2' gnulib\\\" && git -C gnulib checkout \\\"$SCRIPT_COMMIT2\\\" && rm -rf gnulib/.git\""
+      ]
+    },
+    {
+      "path": "scripts.d/15-base.sh",
+      "gitBlobSha": "a22f4fce5d3d07e800fa04ce30a217f39c77ec20",
+      "sha256": "2e418d514d75752ef44ad4e44ddb469e21037f752cf207b8c60d613c6834de47",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo mingw\n    echo mingw-std-threads\n    echo xorg-macros",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/20-zlib.sh",
+      "gitBlobSha": "1cd5659fe7068530b2ff812b3764b51b5eec6dca",
+      "sha256": "81dcdb6c62de9190d65659316ee93b4167e5fb298bac9c396b4d0e2f63feeea0",
+      "source": {
+        "REPO": "https://github.com/madler/zlib.git",
+        "COMMIT": "767c4c947852e143f582c85f14cf573411df1b35"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-zlib",
+      "matchingBinaryFlags": [
+        "--enable-zlib"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/25-fftw3.sh",
+      "gitBlobSha": "21498117853bb2315f1cb832400c4949e955655c",
+      "sha256": "0807086b7235186b580d18eb644292af47d139e917c2a56bb71d2bba5d0ceaf0",
+      "source": {
+        "REPO": "https://github.com/FFTW/fftw3.git",
+        "COMMIT": "93ed4c786934aec9946f8dda4b4e3eb08f8be41c"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/-libs nums/-use-ocamlfind -package num/' genfft/Makefile.am",
+        "    sed -i 's/windows.h/process.h/' configure.ac"
+      ]
+    },
+    {
+      "path": "scripts.d/25-fribidi.sh",
+      "gitBlobSha": "02d96b5467fec962a4facad078bf1f52c21febff",
+      "sha256": "8c49596458e13a33ffd24dccf93fcb17304b8b0929e5a1457fab55ba9e26c1cd",
+      "source": {
+        "REPO": "https://github.com/fribidi/fribidi.git",
+        "COMMIT": "4c914a92e94a9fe4f30ae83a1130099841566448"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libfribidi",
+      "matchingBinaryFlags": [
+        "--enable-libfribidi"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/Cflags:/Cflags: -DFRIBIDI_LIB_STATIC/' \"$FFBUILD_DESTPREFIX\"/lib/pkgconfig/fribidi.pc"
+      ]
+    },
+    {
+      "path": "scripts.d/25-libogg.sh",
+      "gitBlobSha": "141bfe97034461aeedcb27749605ee458ecd5b3f",
+      "sha256": "f72086b3d86824174bacb8ee4fd4f966c9e13fd8a8242821f429252c77b6e585",
+      "source": {
+        "REPO": "https://github.com/xiph/ogg.git",
+        "COMMIT": "06a5e0262cdc28aa4ae6797627a783b5010440f0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/25-gmp.sh",
+      "gitBlobSha": "ca1ab11d041dc5c8c32505a1a3171510298ded54",
+      "sha256": "a2cda3073037327150433491b49e47dec51a1c0f388c17ebf0729800a29c29f9",
+      "source": {
+        "REPO": "https://github.com/BtbN/gmplib.git",
+        "COMMIT": "763b40df71c0f4d5f5d7b33dc55038c8c9377ecf"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-gmp",
+      "matchingBinaryFlags": [
+        "--enable-gmp"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/25-libxml2.sh",
+      "gitBlobSha": "c72b9bf2c08a12453cb7a27f3dd031c5da7d8af9",
+      "sha256": "ea2c9ccf748f3c3f7fd3e6391b58db5826918f48cb56511772f972eb2f5d3243",
+      "source": {
+        "REPO": "https://github.com/GNOME/libxml2.git",
+        "COMMIT": "91586dc6742ab335682235120363f6e126eea5e2"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libiconv",
+      "configure": "echo --enable-libxml2",
+      "matchingBinaryFlags": [
+        "--enable-libxml2"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/25-libpng.sh",
+      "gitBlobSha": "3e91a0f808a4a452ef2988d1926b3fd0b339d919",
+      "sha256": "76c8781840bf7e6c8494b2c73ae8281522ae4393208177a46d3c9da551f41e3f",
+      "source": {
+        "REPO": "https://github.com/glennrp/libpng.git",
+        "COMMIT": "964b4135949703b705fc760fc3fb546b86e5ab47"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo zlib",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/25-openssl.sh",
+      "gitBlobSha": "a0a4880d8429df823b5e24a358709693738c1376",
+      "sha256": "3f3c98c999d7069a98f311a9bfca1a39215fd54a6db447cb362ccfbfe1c41f7c",
+      "source": {
+        "REPO": "https://github.com/openssl/openssl.git",
+        "COMMIT": "openssl-3.6.4"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo zlib",
+      "configure": "[[ $TARGET == win* ]] && return 0\n    echo --enable-openssl",
+      "matchingBinaryFlags": [
+        "--enable-openssl"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth=1\"",
+        "    sed -i -e \"/^CFLAGS=/s|=.*|=${CFLAGS}|\" -e \"/^LDFLAGS=/s|=[[:space:]]*$|=${LDFLAGS}|\" Makefile"
+      ]
+    },
+    {
+      "path": "scripts.d/25-xz.sh",
+      "gitBlobSha": "1753fb279d81bade9c67c61a412a1a6a8db34394",
+      "sha256": "d1a2b40d4f446809827ef03f06a2a34817af7af3dcbce6f5afb580b3df1c55fd",
+      "source": {
+        "REPO": "https://github.com/tukaani-project/xz.git",
+        "COMMIT": "3b1efb04d17c3a9ef7f473d73af13f1531428ffe"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libiconv",
+      "configure": "echo --enable-lzma",
+      "matchingBinaryFlags": [
+        "--enable-lzma"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-fonts/35-fontconfig.sh",
+      "gitBlobSha": "139b8b550b5f254016c36cf4e4a2f7d9b618c52a",
+      "sha256": "e2d5932f39e0ea8fcec8c63a8bb69c78acb9b7e55eeef5bca4a375ee1cd7be38",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/fontconfig/fontconfig.git",
+        "COMMIT": "bd8f7b597de96761750d0365abb49b19d2f8d5c3"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libxml2\n    echo libiconv",
+      "configure": "echo --enable-fontconfig",
+      "matchingBinaryFlags": [
+        "--enable-fontconfig"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-brotli.sh",
+      "gitBlobSha": "7511ac560767e7ab3f2cf3495b2d29ec594c083a",
+      "sha256": "1bedcbd813c9bc6e73653b256932f51a6e25f04b937060665107c02205507e05",
+      "source": {
+        "REPO": "https://github.com/google/brotli.git",
+        "COMMIT": "a3abcbee0d945e51dddeec81e647ffe0cde182c2"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-fonts/25-freetype.sh",
+      "gitBlobSha": "a35ca604206270acd2d309ea11d9ce9dc3417a87",
+      "sha256": "b2e5f13d420e45deae0f5ecd5ddd168228512d178b76d9ba08b3990df5d92205",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/freetype/freetype.git",
+        "COMMIT": "d333439633039de426f943f28a2926c7f97b5ae5"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-lcms2.sh",
+      "gitBlobSha": "48273c7f55e0b3a6f3181574b9a5453071edba34",
+      "sha256": "da662f8712aef2e6bc4f5e8bbdabf241c041abadfac76f6471f53d65ecbb25bc",
+      "source": {
+        "REPO": "https://github.com/mm2/Little-CMS.git",
+        "COMMIT": "35cef8775e0ab46f0dda0b46aae1e69d27524432"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) >= 501 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-lcms2",
+      "matchingBinaryFlags": [
+        "--enable-lcms2"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-fonts/45-harfbuzz.sh",
+      "gitBlobSha": "52b62377b450ba88a1a90a753c71645a584ae5ed",
+      "sha256": "03b3650e78e01b6f090e1acc898a5faf8627d39ab6dddda9753adb165ef98101",
+      "source": {
+        "REPO": "https://github.com/harfbuzz/harfbuzz.git",
+        "COMMIT": "b3bab62307017934dd7f532c52a696fefb12b3ad"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "(( $(ffbuild_ffver) > 600 )) || return 0\n    echo --enable-libharfbuzz",
+      "matchingBinaryFlags": [
+        "--enable-libharfbuzz"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-libudfread.sh",
+      "gitBlobSha": "78aba92c7905b2505b1583f8c16f33063aafd1f9",
+      "sha256": "55d2af80b7dda6b8fbca52e2cc8262791b1ffdb09ef6a990117b93c11b1f2339",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/libudfread.git",
+        "COMMIT": "b0bc6957e7e07d5f35391f210596d9eb71cffdd9"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/-DUDFREAD_API_EXPORT/-DUDFREAD_API_EXPORT_DISABLED/g' src/meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/45-libsamplerate.sh",
+      "gitBlobSha": "c1c78c018e70c73b0d69cb5c608fdc5df56e1785",
+      "sha256": "628de3f8d1f8f71a375bf743f103e5583802f946cf82a2d1474e125f6891dc1f",
+      "source": {
+        "REPO": "https://github.com/libsndfile/libsamplerate.git",
+        "COMMIT": "0844c208f683527c08ea8a80acc13b398aa9c8bf"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-libffi.sh",
+      "gitBlobSha": "fcc32fa5606ecf18a2d40e1e335ed9c00fa2dae6",
+      "sha256": "5fc711e7944537d0255c1a059f3d7cc8dea58f9b17331e8e62a4c1ee6f9a459a",
+      "source": {
+        "REPO": "https://github.com/libffi/libffi.git",
+        "COMMIT": "bc553867367246d140cd156f060bd0409f57f157"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-fonts/50-freetype.sh",
+      "gitBlobSha": "ddca0aab4a87d627cf87996482847f502a7a50a4",
+      "sha256": "dec1e6a8d50ba00bdd61187055658e842b86e14fc3cb4d588fede8dc096b96ad",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/freetype/freetype.git",
+        "COMMIT": "d333439633039de426f943f28a2926c7f97b5ae5"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libfreetype",
+      "matchingBinaryFlags": [
+        "--enable-libfreetype"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-libvorbis.sh",
+      "gitBlobSha": "1d716ec1b1c65e6fd39a64b1e393fcf64d4ee8d3",
+      "sha256": "96a4e7735c0d442d62a4859d8e46db735b57c09d5a4440361e35d064e1220a90",
+      "source": {
+        "REPO": "https://github.com/xiph/vorbis.git",
+        "COMMIT": "1b75110b5a2754ba1931d82dd83cb822b266a21d"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libogg",
+      "configure": "echo --enable-libvorbis",
+      "matchingBinaryFlags": [
+        "--enable-libvorbis"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-pixman.sh",
+      "gitBlobSha": "b38e7f9d1a2ba2476ca8da45b358989a6d11bb0f",
+      "sha256": "565b6f1b8e109cdf99d8186af6bdfe5f7df1331504918960f797854bf9d53363",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/pixman/pixman.git",
+        "COMMIT": "96c04d1b87934dc4b9396197a2dff737698ab310"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-libunibreak.sh",
+      "gitBlobSha": "92f9566393df428a2c30d0f1b38fd344ae5c7dae",
+      "sha256": "6fa03018e8c5e462424673340734e20a36b9efef3b3083b5ddebd072502cc79f",
+      "source": {
+        "REPO": "https://github.com/adah1972/libunibreak.git",
+        "COMMIT": "28a2756b864c343f438cd22537d49d394d4666a5"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-opencl.sh",
+      "gitBlobSha": "7412f5106b2f00d44c402d4cb6575f81df161871",
+      "sha256": "4b1dceba0208348a4a38f011a9b779b8a728dc13303773d19c31b389ef57294b",
+      "source": {
+        "REPO": "https://github.com/KhronosGroup/OpenCL-Headers.git",
+        "COMMIT": "e6060189f4ebe8b52d885c37af71b9a50c272154"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-opencl",
+      "matchingBinaryFlags": [
+        "--enable-opencl"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-pulseaudio.sh",
+      "gitBlobSha": "76d87724344f56dd3ecc2ea8f5bb44d8f7d3fde5",
+      "sha256": "0f04e9090dacea4eefd77e97622645eda80f51118c58489551812252d1e8e597",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git",
+        "COMMIT": "77d25a1e613095bdf87a1d13b65e7c330565077a"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == linux* ]] || return 1\n    return 0",
+      "dependencies": "echo base\n    echo libiconv\n    echo libsamplerate\n    echo soxr\n    echo openssl",
+      "configure": "echo --enable-libpulse",
+      "matchingBinaryFlags": [
+        "--enable-libpulse"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git clone --filter=blob:none \\\"$SCRIPT_REPO\\\" . && git checkout \\\"$SCRIPT_COMMIT\\\"\""
+      ]
+    },
+    {
+      "path": "scripts.d/45-pcre2.sh",
+      "gitBlobSha": "39ff555392b3115ee7590443b7ae814243b660fe",
+      "sha256": "de90058846290e156f8fc303464111ff97c3fc48749ee0fa6e2f1ebcd5924324",
+      "source": {
+        "REPO": "https://github.com/PCRE2Project/pcre2.git",
+        "COMMIT": "09eb19dc1102b34e7557408f33318364cb97d2b0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/20-libxau.sh",
+      "gitBlobSha": "c156488e361c89b380127b84129ac3aeed2ed078",
+      "sha256": "d17a219799559adca1cc47cf87d3f6d2c1e9fee837aefa9a3aaf7faf3d804245",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxau.git",
+        "COMMIT": "be1daeb909f1d678e7859ac1555e90b4e768d5c4"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-vmaf.sh",
+      "gitBlobSha": "72b33926a10a740c872e1370c50a0240eed4c805",
+      "sha256": "0bd50c0e08e35b9a8326904f51e8f44468abd78e5fc3da6ee4a3e91d788e5e4d",
+      "source": {
+        "REPO": "https://github.com/Netflix/vmaf.git",
+        "COMMIT": "86da14d0306a138fd3f01319860b905169746516"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "(( $(ffbuild_ffver) >= 501 )) || return 0\n    echo --enable-libvmaf",
+      "matchingBinaryFlags": [
+        "--enable-libvmaf"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i -E 's/([^.>:_[:alnum:]])swap\\(/\\1libsvm_swap(/g' libvmaf/src/svm.cpp",
+        "    sed -i -E 's/([^.>:_[:alnum:]])min\\(/\\1libsvm_min(/g' libvmaf/src/svm.cpp",
+        "    sed -i -E 's/([^.>:_[:alnum:]])max\\(/\\1libsvm_max(/g' libvmaf/src/svm.cpp",
+        "    sed -i 's/Libs.private:/Libs.private: -lstdc++/; t; $ a Libs.private: -lstdc++' \"$FFBUILD_DESTPREFIX\"/lib/pkgconfig/libvmaf.pc"
+      ]
+    },
+    {
+      "path": "scripts.d/45-x11/30-libxcb.sh",
+      "gitBlobSha": "41e80392c6b9c2debd94e4e9d2e9bfd54441af61",
+      "sha256": "441e8209547ea43cdde2d57f905bfe4344f8dfd793f3409b239b24b52dc2ea01",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxcb.git",
+        "COMMIT": "d4e07bab5729c7d7cc3d2b95568cd9a661a53c4f"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libxcb",
+      "matchingBinaryFlags": [
+        "--enable-libxcb"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/10-xcbproto.sh",
+      "gitBlobSha": "d2b628a30a8647f25c244333cee5827c8974a1ab",
+      "sha256": "acfc9ca92025c4b3a138b7026143227be349335e5e3d0adfe1f09b67e06e554c",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/proto/xcbproto.git",
+        "COMMIT": "cf7e2581b613802f2f8ec2a4b50a6a20aad4bf52"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/10-xproto.sh",
+      "gitBlobSha": "ddce4d5a10d1c71c2872d133ba03aa92a70b25c3",
+      "sha256": "98aa96417643e476f4c0bfea1c1c227e84236cabfa7a2156b0315fc45508eeac",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/proto/xorgproto.git",
+        "COMMIT": "fd86fbff46eb7ab8e193c12b8a529e90bae31835"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/40-libx11.sh",
+      "gitBlobSha": "871ded4547e9af9d025ed57fb3572228ac6a6435",
+      "sha256": "488d246934a74ae9a2eb0632b1688fac808f0dfe760922cd6a8c486a4523b3dc",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libx11.git",
+        "COMMIT": "13f9b8de400335f4b86bb0672da02f8166c0e796"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxext.sh",
+      "gitBlobSha": "2550696c06a9af4dbde0c1e32985fbbf9b2195c0",
+      "sha256": "9645cba0af2654aca242f7614488a311d181601cf00c5cb208327088f6fa305f",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxext.git",
+        "COMMIT": "508f8adca2540ff8926ac8456cb1c553a8caae76"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxfixes.sh",
+      "gitBlobSha": "981479baaa624dd21102bd010aca228f1add869e",
+      "sha256": "73547e6e578f04af825b72f7f1a045ae7a000a54b8c6578eea119dee38b18c45",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxfixes.git",
+        "COMMIT": "55bb2d1d57d43e0595ce45393f26eb433d75a7cc"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxi.sh",
+      "gitBlobSha": "7e984020fedefc132eac49c54e8f6f438808ed29",
+      "sha256": "95781f77d39532679a2fe1cc9fe51464ca31060adeac757f155039582d51c26e",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxi.git",
+        "COMMIT": "3a0adabd16d8bf19c772061ad67f25c51281edf3"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxinerama.sh",
+      "gitBlobSha": "57932a751c58caac7a453900d9350b3465c88402",
+      "sha256": "96fe9952805a9a1a311d5970cd4d12de8814bd24d0256d7ca28beb908a23e1c0",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxinerama.git",
+        "COMMIT": "d7162b962710bc724b41cabab4e7cea303c4b541"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/10-xtrans.sh",
+      "gitBlobSha": "1195be91bc95040c3d1053d249a59ad8fbac4bc3",
+      "sha256": "2afe1a0fe979ecba3eaa16073c02cd532b510186b71986bf585f948517dcaf78",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxtrans.git",
+        "COMMIT": "79f6b0bfe2170496e8c37626043d009f4cd3f1e1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxscrnsaver.sh",
+      "gitBlobSha": "1b490c483c9b7b936bbe16bdb0625ae43d26a3ad",
+      "sha256": "761a34dff03b11676ed3d9dcf39e8959746b2ad2a631bc2afcac55598947142b",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver.git",
+        "COMMIT": "3f753e7a4050db083474444ae91cc17a849eaa4d"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxrender.sh",
+      "gitBlobSha": "f578a7aa4cf74af344e8cbdbaf64da45ccc40cc3",
+      "sha256": "533a8c30a9fd63734b8bbeff94898b59d3b5fd30d4c9255453df0e8b2743a33e",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxrender.git",
+        "COMMIT": "f32afe9f877ae032c6bc9c27b17b7978b1b4c856"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/50-libxxf86vm.sh",
+      "gitBlobSha": "6520459e13ac0747dc594f7300fc02a11c3dc202",
+      "sha256": "05802fe0722248708057f3f8376fa779eb5f10e8721bf7296aa56b412f9d7b31",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm.git",
+        "COMMIT": "c76fde6bffcc87e5dd98d8196bb01a299bdc3236"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/60-libxv.sh",
+      "gitBlobSha": "a59c40f432060ebc7227bb84c55224d3e3a1f60d",
+      "sha256": "429373b447abd8a1c5da6f223e5d00cf1b4fd18b568de2188c35fe3c49abc991",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxv.git",
+        "COMMIT": "f315ec50fcad9bdbaed46c3e78dc5e7fe209f933"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    [[ $ADDINS_STR == *4.4* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-xlib",
+      "matchingBinaryFlags": [
+        "--enable-xlib"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/60-libglvnd.sh",
+      "gitBlobSha": "ca4a846abbcc84e849293b8c97ba07e36878cb5d",
+      "sha256": "01b9826e399a9269912d3601ecc360407f6b4e0fdae7f53686ed07e33234c07f",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/glvnd/libglvnd.git",
+        "COMMIT": "c046a760d845416e98ac4128757b2b356c47fdaa"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-xxhash.sh",
+      "gitBlobSha": "89d14d3cb14d9cb5cb31ce417d0d079d954d5cb9",
+      "sha256": "bc856e2d5c4bd8e584d56b87700c648d300d2a071f75de20194e5382a45a1ade",
+      "source": {
+        "REPO": "https://github.com/Cyan4973/xxHash.git",
+        "COMMIT": "680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/99-finalize.sh",
+      "gitBlobSha": "88c9818775a1ac5314b46011e53e2004339d2ee0",
+      "sha256": "51d5311ee5a279db229b9044e5e21149b7aa2222904d6aaafff1d92bd4bf143e",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/60-libxcursor.sh",
+      "gitBlobSha": "fc49119236c3462eb99f7113a96b213c18704e9b",
+      "sha256": "16821a2401c58a462db2285b665bb99fdaa75fdbf50fae9b72f70610f6f9369a",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxcursor.git",
+        "COMMIT": "15efad7ccd035f5d1ddc8d437e047569d1775fa7"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-zstd.sh",
+      "gitBlobSha": "8fa37803a9daf59ba9f819b5c607956b5167316d",
+      "sha256": "1d3d0fe2f66c556d69e27527b96dd666f76e1f8c6b91bddc2f5548914dd26f74",
+      "source": {
+        "REPO": "https://github.com/facebook/zstd.git",
+        "COMMIT": "01b7154f1172432f8abe9b3bb9909e14a1176b7d"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/LANGUAGES C /LANGUAGES C CXX /' build/cmake/CMakeLists.txt"
+      ]
+    },
+    {
+      "path": "scripts.d/47-vulkan/40-vulkan-headers.sh",
+      "gitBlobSha": "7ffc62ca56fd169105933279837d6d5559088ad2",
+      "sha256": "8b0a77bb900c3c9b3e45933b9c3d163f177ec7476a567382ed9a5a8266f62ba8",
+      "source": {
+        "REPO": "https://github.com/KhronosGroup/Vulkan-Headers.git",
+        "COMMIT": "v1.4.363"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/47-vulkan/45-vulkan-loader.sh",
+      "gitBlobSha": "dbec50449b4758a14b15a9164fc363d49ffe024b",
+      "sha256": "aa5952f71db713a236a01a561640960ee6e98753f1da40b481deb8cb6ef0e265",
+      "source": {
+        "REPO": "https://github.com/BtbN/Vulkan-Shim-Loader.git",
+        "COMMIT": "65b3936528cd92eb4ea3de485d03f858a3850484"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-vulkan",
+      "matchingBinaryFlags": [
+        "--enable-vulkan"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/45-x11/60-libxrandr.sh",
+      "gitBlobSha": "e32626f7db685c7ed1c09f6843a7478c57b604f5",
+      "sha256": "e133962118fc7b8e000fe9aa7ce003b51a5a318977808c86cdf0bc02efb9ffe4",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libxrandr.git",
+        "COMMIT": "8a4ba1974bcf07057cf891128d86ae1ab5303574"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/47-vulkan/50-shaderc.sh",
+      "gitBlobSha": "534c570b1f2315c7f21c73d39794dcaacc879a7a",
+      "sha256": "67641d3b85cb0425e08b31eb72d9e5d93bff189e5eea53d65b8a1646700b3451",
+      "source": {
+        "REPO": "https://github.com/google/shaderc.git",
+        "COMMIT": "a8abeb0b8a9d4b11e3d59ca9f4550b8213e733ab"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "(( $(ffbuild_ffver) < 900 )) || return 0\n    echo --enable-libshaderc",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/47-vulkan/55-spirv-cross.sh",
+      "gitBlobSha": "bdd8e8491968bc5a2d7b5323edb403c0b8049a4c",
+      "sha256": "72aba05e85bd714c5bdd435691a6c9e905f6e31231cc22f4fe14b06e8db7d065",
+      "source": {
+        "REPO": "https://github.com/KhronosGroup/SPIRV-Cross.git",
+        "COMMIT": "aa217aeb6c9f0ace7a0ab233b28807edf45eb165"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    VER_PCH=\"$(grep 'set(spirv-cross-abi-patch' CMakeLists.txt | sed -re 's/.* ([0-9]+)\\)/\\1/')\""
+      ]
+    },
+    {
+      "path": "scripts.d/47-vulkan/99-enable.sh",
+      "gitBlobSha": "8216e7665ccc87ccaba0c0c278a2fe29e330e450",
+      "sha256": "cdd4ff0ef66e99ca076b4b12a63ea090b9cc88baae639980584c2032257e60ef",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-amf.sh",
+      "gitBlobSha": "7cd884ec97c36c2c0f67d9bee5193e4167e1db80",
+      "sha256": "54f6103e4dcca2d2b22b8248716fd774c981ce6ee2b3394e9ed07e629d82b30b",
+      "source": {
+        "REPO": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git",
+        "COMMIT": "6277e353fd625121a8f627b1d0540323ef372a49"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-amf",
+      "matchingBinaryFlags": [
+        "--enable-amf"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-avisynth.sh",
+      "gitBlobSha": "dff8274c1cc5d9fbbbccbe4fda1571fdd23db308",
+      "sha256": "dd5685dbb9be432e764380a8ac1ca88c829baa77fcaacf10932040ec44439d0a",
+      "source": {
+        "REPO": "https://github.com/AviSynth/AviSynthPlus.git",
+        "COMMIT": "5c82777b374bdef16e13007a11e77d735ac1e4eb"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-avisynth",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-chromaprint.sh",
+      "gitBlobSha": "74cf89d9431a94673502a4c424595cfcb315aadf",
+      "sha256": "18f0d650b2f6442f374dd8b1a2fa000a15ab88ecbf021a0a3f5a32750c0992b6",
+      "source": {
+        "REPO": "https://github.com/acoustid/chromaprint.git",
+        "COMMIT": "aed8eba2202dd9d7b3b0a56c77904cc805490d72"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) >= 600 )) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo fftw3",
+      "configure": "echo --enable-chromaprint",
+      "matchingBinaryFlags": [
+        "--enable-chromaprint"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-dav1d.sh",
+      "gitBlobSha": "3ffb2237732b0f122772b7716d98b54b50723612",
+      "sha256": "ab393955968f5364e4e2e67adfb9aedae2f95120f2e199488bcbc147201e09e2",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/dav1d.git",
+        "COMMIT": "9711965b60bb692ae24004659acf61f5c7d9ed61"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) >= 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libdav1d",
+      "matchingBinaryFlags": [
+        "--enable-libdav1d"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-davs2.sh",
+      "gitBlobSha": "ac7daf844b9db7e0f1fcc3a8a42a4a8709f508f6",
+      "sha256": "dff0e5e8bf46f349f2ac92bb097122114c4e4c56b4b1b363891a1c81e154bb1e",
+      "source": {
+        "REPO": "https://github.com/pkuvcl/davs2.git",
+        "COMMIT": "b41cf117452e2d73d827f02d3e30aa20f1c721ac"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    [[ $TARGET == win32 ]] && return -1\n    # davs2 aarch64 support is broken\n    [[ $TARGET == *arm64 ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libdavs2",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i -e 's/EGIB/bss/g' -e 's/naidnePF/bss/g' configure"
+      ]
+    },
+    {
+      "path": "scripts.d/50-dvd/30-libdvdcss.sh",
+      "gitBlobSha": "664a541c1b12c363c738d61ef7c57f04d76d5cc3",
+      "sha256": "4a630a8652729cfd0db0e5f38e46d9e146c399aca7c7b99c98f8ef535ca6f0bd",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/libdvdcss.git",
+        "COMMIT": "811ce97a1d4d1c9d936f4b2707f533a9ef768251"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    (( $(ffbuild_ffver) >= 700 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/SUPPORT_ATTRIBUTE_VISIBILITY_DEFAULT/SUPPORT_ATTRIBUTE_VISIBILITY_DEFAULT_DISABLED/g' meson.build",
+        "    sed -i 's/-DLIBDVDCSS_EXPORTS/-DLIBDVDCSS_EXPORTS_DISABLED/g' src/meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/50-aom.sh",
+      "gitBlobSha": "7b93c85a08ce30b0dcaf7ffdbb6f0bb92d827c7e",
+      "sha256": "3f72c32a7d72a7dd10c1cda6702ddad6e0008a886cdd44113cf96108d7b20368",
+      "source": {
+        "REPO": "https://aomedia.googlesource.com/aom",
+        "COMMIT": "b4ce2cd097b00921b0327bfb5f07b5f8361ade99"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == winarm64 ]] && return -1\n    return 0",
+      "dependencies": "echo base\n    echo vmaf",
+      "configure": "echo --enable-libaom",
+      "matchingBinaryFlags": [
+        "--enable-libaom"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    to_df \"RUN --mount=src=${SELF},dst=/stage.sh --mount=src=${SELFCACHE},dst=/cache.tar.xz --mount=src=patches/aom,dst=/patches run_stage /stage.sh\"",
+        "    for patch in /patches/*.patch; do",
+        "        echo \"Applying $patch\"",
+        "        git am < \"$patch\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-dvd/40-libdvdread.sh",
+      "gitBlobSha": "f642327aa2abe608affa41f965449ab8d3b4980e",
+      "sha256": "21e9ff625778d9bfcb04c257282eb0da884d7a9fbae59db578a3f51128b4ce75",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/libdvdread.git",
+        "COMMIT": "0f30df53125b564ef45903714403ce0a1e6c5e9e"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    (( $(ffbuild_ffver) >= 700 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libdvdread",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/-DDVDREAD_API_EXPORT/-DDVDREAD_API_EXPORT_DISABLED/g' src/meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/50-dvd/50-libdvdnav.sh",
+      "gitBlobSha": "0f57b1f8ee4ad3c77983271f09c34ca793d02e3f",
+      "sha256": "061a9df5a304e938beaaad70fd227a8ea6dab9718b7be74ea410d38e43ba9ab2",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/libdvdnav.git",
+        "COMMIT": "8147ccd35e5aae4afdd21171cf7b6b4d8f179d28"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    (( $(ffbuild_ffver) >= 700 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libdvdnav",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/SUPPORT_ATTRIBUTE_VISIBILITY_DEFAULT/SUPPORT_ATTRIBUTE_VISIBILITY_DEFAULT_DISABLED/g' meson.build",
+        "    sed -i 's/-DLIBDVDCSS_EXPORTS/-DLIBDVDCSS_EXPORTS_DISABLED/g' src/meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/50-frei0r.sh",
+      "gitBlobSha": "f2d2a133386680e0dd622a4eefe76c90417ce8ee",
+      "sha256": "da65c7904e078d5cc22fd8dd0311e1a1e5401b3b0c18e9f35de96a55e0fb235b",
+      "source": {
+        "REPO": "https://github.com/dyne/frei0r.git",
+        "COMMIT": "4c95b2a02b2d03c71d5f6d7980d16c99acfd5a5f"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    (( $(ffbuild_ffver) >= 500 )) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo x11",
+      "configure": "echo --enable-frei0r",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-fdk-aac.sh",
+      "gitBlobSha": "25827637f620d5e79fe11a6cc401779539f30483",
+      "sha256": "8dd0296be21cf405b8f302bc13e880c647c1647407d44683971675cb2a692c60",
+      "source": {
+        "REPO": "https://github.com/mstorsjo/fdk-aac.git",
+        "COMMIT": "7c83d08002332b2730c845eec3497e6bf585dd28"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == nonfree* ]] || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libfdk-aac",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-ffnvcodec.sh",
+      "gitBlobSha": "0fe3eac2d37902ec8f2c12a66772682dfbbedf20",
+      "sha256": "d3e4c922288a83e4cc7dc6dfb06c84fdb164d8515f9cdfab18e6bdfc3855f2e3",
+      "source": {
+        "REPO": "https://github.com/FFmpeg/nv-codec-headers.git",
+        "COMMIT": "eddcea9e27f6b772057c9b3f87de2cc1737faffc"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == winarm64 ]] && (( $(ffbuild_ffver) <= 801 )) && return -1\n    (( $(ffbuild_ffver) >= 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-ffnvcodec --enable-cuda-llvm",
+      "matchingBinaryFlags": [
+        "--enable-ffnvcodec",
+        "--enable-cuda-llvm"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-gme.sh",
+      "gitBlobSha": "0492feecf0fe6709a3e3b3ef87d7ff52e1edf882",
+      "sha256": "a98435e63c57e920be8d90e1c07d215352f9a97639a44696cf8de7120a41b7db",
+      "source": {
+        "REPO": "https://github.com/libgme/game-music-emu.git",
+        "COMMIT": "f68963b1de0633149b05732113d3c3113c6f63a1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libgme",
+      "matchingBinaryFlags": [
+        "--enable-libgme"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libaribcaption.sh",
+      "gitBlobSha": "30337c749a56bc899e3b687b1633ee28722137b1",
+      "sha256": "bdc45a086a105d789ef80da7c0eed9bc70e76c15bcb7fb5ef5376bfb18249f6c",
+      "source": {
+        "REPO": "https://github.com/xqq/libaribcaption.git",
+        "COMMIT": "c64c23b8905ba514b87c9789269e9f66f949ffe0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 600 )) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo fonts\n    echo openssl",
+      "configure": "echo --enable-libaribcaption",
+      "matchingBinaryFlags": [
+        "--enable-libaribcaption"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libaribb24.sh",
+      "gitBlobSha": "dbcdc3aa8e72341f9ddb8e6c54b22b725068772b",
+      "sha256": "819af96814ebaf3612d3e50367e47d892848b22d0a71befe06b481902b9e957b",
+      "source": {
+        "REPO": "https://github.com/nkoriyama/aribb24.git",
+        "COMMIT": "5e9be272f96e00f15a2f3c5f8ba7e124862aec38"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libpng",
+      "configure": "echo --enable-libaribb24",
+      "matchingBinaryFlags": [
+        "--enable-libaribb24"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    to_df \"RUN --mount=src=${SELF},dst=/stage.sh --mount=src=${SELFCACHE},dst=/cache.tar.xz --mount=src=patches/aribb24,dst=/patches run_stage /stage.sh\"",
+        "    for patch in /patches/*.patch; do",
+        "        echo \"Applying $patch\"",
+        "        git am < \"$patch\"",
+        "    sed -i 's/1.0.3/1.0.4/' configure.ac"
+      ]
+    },
+    {
+      "path": "scripts.d/50-lcevcdec.sh",
+      "gitBlobSha": "960607c70d2a4c0c348bccdbd3a9e21d06f2e664",
+      "sha256": "7990627bf8194f34c0e8a6aac0b00a919a7d8b7099ffa07b5304b13383d7c44d",
+      "source": {
+        "REPO": "https://github.com/v-novaltd/LCEVCdec.git",
+        "COMMIT": "17804ac54db8fbb42717f3275b1e73f3c0b067d3"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) >= 800 )) || return -1\n    [[ $TARGET != winarm* ]] || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-liblcevc-dec",
+      "matchingBinaryFlags": [
+        "--enable-liblcevc-dec"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-kvazaar.sh",
+      "gitBlobSha": "108a76c351ed35060fd051f82d12406b5b9c86b8",
+      "sha256": "e1eba6170c3fb3f6d676b6d306fb503064a7c71e1038f5f09811276a76e08f3e",
+      "source": {
+        "REPO": "https://github.com/ultravideo/kvazaar.git",
+        "COMMIT": "2b06691bb5844404c0e703f12a5d7b0fee914ec7"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libkvazaar",
+      "matchingBinaryFlags": [
+        "--enable-libkvazaar"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libass.sh",
+      "gitBlobSha": "709348ae0d94d41d4c1e1629c9f12e9ec43650da",
+      "sha256": "e6419cade66532faefe04c652526bafe945963e16552ad4d976dd33f9b13490d",
+      "source": {
+        "REPO": "https://github.com/libass/libass.git",
+        "COMMIT": "f61db567e6593df3470e91594bcd4ad2d0473aff"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo fonts\n    echo fribidi\n    echo libiconv\n    echo libunibreak",
+      "configure": "echo --enable-libass",
+      "matchingBinaryFlags": [
+        "--enable-libass"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libcurl/40-libpsl.sh",
+      "gitBlobSha": "c966b1d7501272024d50f848376259b3bf356e63",
+      "sha256": "ef9ffd5427922ca194932fbbb0b1cf1fb7d63d506732e4550bc75453d971d48b",
+      "source": {
+        "REPO": "https://github.com/rockdaboot/libpsl.git",
+        "COMMIT": "a629c831d09011f76974d931be7f6167be90673e"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libbluray.sh",
+      "gitBlobSha": "ea36525d882729e42aaab6d2aa24dbb55897023b",
+      "sha256": "cf610f2531dc559f63857a9c4544658ad464321723236417ba550cf64a2debcf",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/libbluray.git",
+        "COMMIT": "a24f4fad4d62893de647abc8671397747b2359dd"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libxml2\n    echo fonts\n    echo libudfread",
+      "configure": "echo --enable-libbluray",
+      "matchingBinaryFlags": [
+        "--enable-libbluray"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/-DBLURAY_API_EXPORT/-DBLURAY_API_EXPORT_DISABLED/g' src/meson.build",
+        "    sed -i \"/'ssp'/d\" meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/50-libcurl/40-nghttp2.sh",
+      "gitBlobSha": "3f7234ad0fb0576bd8d561d074c34017d6654fed",
+      "sha256": "6f85b318a2c8f53bdb0a98d6bc2da399c1ab09eb38bfcdac31edf8a4b1d4ec29",
+      "source": {
+        "REPO": "https://github.com/nghttp2/nghttp2.git",
+        "COMMIT": "19d06e62185d93d2398d85241cdbb460349bfe44"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libcurl/40-ngtcp2.sh",
+      "gitBlobSha": "6ed94dd06c387df65a8d3d7447650fc8a08f1c02",
+      "sha256": "7181d883f54d471df1788ae6886a66b1ec85ef470ac4904047ff8c0d6b8b081c",
+      "source": {
+        "REPO": "https://github.com/ngtcp2/ngtcp2.git",
+        "COMMIT": "a4925d70647b75286b28c37be260de3729c2de3d"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo openssl",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libcurl/40-nghttp3.sh",
+      "gitBlobSha": "46fc44ec97bf85f19cd97056f833a97e720f8073",
+      "sha256": "568d668f04e117732398e8683669372605930a89604dce31378d588ef924cb96",
+      "source": {
+        "REPO": "https://github.com/ngtcp2/nghttp3.git",
+        "COMMIT": "2304973e5a0c8b1fa4bb380b47945a000357f87f"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth=1 lib/sfparse\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-libcurl/50-libcurl.sh",
+      "gitBlobSha": "b6a768d82b005ea4a2bf0a0c4ffe95688de0f283",
+      "sha256": "84f08b2edbe25d85a00bbf57c768b491624d769e8b1b62d5563466ff983ad76d",
+      "source": {
+        "REPO": "https://github.com/curl/curl.git",
+        "COMMIT": "4c67658f953751de9e66bb5f9729af821a641341"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) <= 900 )) && return -1\n    return 0",
+      "dependencies": "echo base\n    echo zlib\n    echo brotli\n    echo zstd\n    echo openssl",
+      "configure": "echo --enable-libcurl",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "SCRIPT_REPO=\"https://github.com/curl/curl.git\"",
+        "    cat \"$FFBUILD_DESTPREFIX\"/lib/pkgconfig/libcurl.pc",
+        "    echo --enable-libcurl"
+      ]
+    },
+    {
+      "path": "scripts.d/50-libjxl/50-libjxl.sh",
+      "gitBlobSha": "ca0ea1b511bc9798e8fd201538568b00d701d57f",
+      "sha256": "2b7436518fdf2ede885f69b166c9604dc53779c674f46111a7deea23f3138461",
+      "source": {
+        "REPO": "https://github.com/libjxl/libjxl.git",
+        "COMMIT": "b87738951c1254cd8cccaa6d47712ba735da56d8"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 600 )) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo brotli\n    echo lcms2",
+      "configure": "echo --enable-libjxl",
+      "matchingBinaryFlags": [
+        "--enable-libjxl"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth 1 --recommend-shallow third_party/highway\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-libmp3lame.sh",
+      "gitBlobSha": "69ec4c2e438b372433973cf243aab5febc25c5e9",
+      "sha256": "a524cd3b9a40444fb554164f5a5dd466ca616ad2cf6756c28164787e012d982f",
+      "source": {
+        "REPO": "https://svn.code.sf.net/p/lame/svn/trunk/lame",
+        "REV": "6835"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libiconv",
+      "configure": "echo --enable-libmp3lame",
+      "matchingBinaryFlags": [
+        "--enable-libmp3lame"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libopus.sh",
+      "gitBlobSha": "b54c8d3ee866ebd2ba4114dda120a0cfbbe8ad1a",
+      "sha256": "098f4436197ad0502b13ffd211347b03ec575c1ab36a02cecff431d68cd6aeb4",
+      "source": {
+        "REPO": "https://github.com/xiph/opus.git",
+        "COMMIT": "503d81b138d76621aae4b12786e90de48aa8db3a"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libopus",
+      "matchingBinaryFlags": [
+        "--enable-libopus"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libplacebo.sh",
+      "gitBlobSha": "706c9cf54344607414a37a3de811c239fdbee5b9",
+      "sha256": "7f6f86a2818a1c0dec2248adc794198089bdee603c24b137eff4454c5aa82778",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/libplacebo.git",
+        "COMMIT": "1937beef3a2f508266c68efea1491e3fc4600e04"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 600 )) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo vulkan\n    echo lcms2\n    echo xxhash",
+      "configure": "echo --enable-libplacebo",
+      "matchingBinaryFlags": [
+        "--enable-libplacebo"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth=1 --filter=blob:none\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-librsvg/10-glib.sh",
+      "gitBlobSha": "268e3ad36b4f113de9a106e1c316d05ab6c4d69a",
+      "sha256": "2d426dfff98693d5fc25a725e5221afc704e8d9dd2842c85745b4d11209ccc3d",
+      "source": {
+        "REPO": "https://github.com/GNOME/glib.git",
+        "COMMIT": "5a124d1e66a6c2dc56989303b4d6d4781c2952ed"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo zlib\n    echo libiconv\n    echo pcre2\n    echo libffi",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth=1\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-librist/40-mbedtls.sh",
+      "gitBlobSha": "d27a1b50c74e67d1e990c803374d2b36866ea9d2",
+      "sha256": "ff89b4a5de49c845d776e8f30e0e823dfe2f504ddaacf0a4646f7d12461ff74a",
+      "source": {
+        "REPO": "https://github.com/ARMmbed/mbedtls.git",
+        "COMMIT": "v4.2.0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth=1\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-librist/50-librist.sh",
+      "gitBlobSha": "6ac0db7046e89c277eb3cef10fd2752f9d7fcdcc",
+      "sha256": "b7a8fe792abca18fff7ac48d1223767985a14f7b284839e536eb3d6662c63532",
+      "source": {
+        "REPO": "https://code.videolan.org/rist/librist.git",
+        "COMMIT": "4f45ef8f78983892d52ccd52d9f675435b23738f"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) >= 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-librist",
+      "matchingBinaryFlags": [
+        "--enable-librist"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-librsvg/30-pango.sh",
+      "gitBlobSha": "ea8c510c939f7cb434ee4dd307ce958b396bbdac",
+      "sha256": "f93e19badbc87cfef3fcf169f8c92896aedb4d214333d91a00872cabed8f2f43",
+      "source": {
+        "REPO": "https://github.com/GNOME/pango.git",
+        "COMMIT": "8e74c27c113c98664b77272d16b14bbce542c184"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo fribidi\n    echo fonts",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i \"/^\\s*'-Werror=unused-but-set-variable'.*$/d\" meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/50-librsvg/99-librsvg.sh",
+      "gitBlobSha": "7b514e589b599b8d2782ce6c9d7e5cdc146ba29d",
+      "sha256": "520281a8fd738006adcb16ff3e0487653ab9c78862ac51000fc61dfb15d31aa2",
+      "source": {
+        "REPO": "https://github.com/GNOME/librsvg.git",
+        "COMMIT": "7612431eb02dc009319094f8513d63c1faaecfb4"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) >= 404 )) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo libxml2\n    echo dav1d\n    echo fonts",
+      "configure": "echo --enable-librsvg",
+      "matchingBinaryFlags": [
+        "--enable-librsvg"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo 'mkdir .cargo && CARGO_HOME=\"$(mktemp -d)\" cargo vendor --versioned-dirs > .cargo/config.toml'",
+        "    sed -i -e \"/'PKG_CONFIG_ALL_STATIC'/d\" -e \"/'SYSTEM_DEPS_LINK'/d\" meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/47-vulkan/60-spirv-headers.sh",
+      "gitBlobSha": "65957a5b37a306b8c813a1f194a361a67de6f7ca",
+      "sha256": "2ee7c7d2d2553ebda78b54d5d30aa12f7a34d55494e4ad2d4cb1a9cfbb4415a7",
+      "source": {
+        "REPO": "https://github.com/KhronosGroup/SPIRV-Headers.git",
+        "COMMIT": "2b7475f6d664efbad4d4315c94ecec9640831e5b"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libssh.sh",
+      "gitBlobSha": "0d41441630acaaea7b8b3beb1d1486063bcb9d0e",
+      "sha256": "508dd2a6fbd0a18b201e9364ba6f82524b36ce06976c258c1476d9c7f4b7c973",
+      "source": {
+        "REPO": "https://gitlab.com/libssh/libssh-mirror.git",
+        "COMMIT": "76e0a8639e61436c28d877586f65a7707edc6ee5"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo zlib\n    echo openssl",
+      "configure": "echo --enable-libssh",
+      "matchingBinaryFlags": [
+        "--enable-libssh"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libtheora.sh",
+      "gitBlobSha": "919eb92bc724b2aa1317f969144e1fa91339f71a",
+      "sha256": "cd093a82eb271d465092c498567cdbef724dbf99165dda1fec0179ce5a60c089",
+      "source": {
+        "REPO": "https://github.com/xiph/theora.git",
+        "COMMIT": "28fd5ec77f0ad0e07a371cef1047828116f6bd8a"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libogg",
+      "configure": "echo --enable-libtheora",
+      "matchingBinaryFlags": [
+        "--enable-libtheora"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-librsvg/20-cairo.sh",
+      "gitBlobSha": "d56ccf20531eac8015ba59188fe1ae8e985155c5",
+      "sha256": "6d658d45d259e3a7c588c24c091d214d929d4a8b6e4e18773be51d5f45523c4c",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/cairo/cairo.git",
+        "COMMIT": "74755964edef651691d5cd36ff140108298e4e6e"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo zlib\n    echo libpng\n    echo pixman\n    echo fonts",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/__attribute__((__visibility__(\"default\")))//' src/cairo.h"
+      ]
+    },
+    {
+      "path": "scripts.d/50-libvpx.sh",
+      "gitBlobSha": "6424d8aada6650f5eab24e9aa702ccac012ef1fc",
+      "sha256": "ee1f76e2ab8c9b40076b554fd3e378a4e5136cf54da6af8642d5539f2d949760",
+      "source": {
+        "REPO": "https://chromium.googlesource.com/webm/libvpx",
+        "COMMIT": "5e680f30801d03c21078f8c4b772464752516211"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == winarm64 ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libvpx",
+      "matchingBinaryFlags": [
+        "--enable-libvpx"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-lilv/96-serd.sh",
+      "gitBlobSha": "fa39952160d41683616edc90e1bdd6ccaf5a08da",
+      "sha256": "455e9f16e778caef9ea8febb5433a684204db22b7f5a13244406069627ffa831",
+      "source": {
+        "REPO": "https://github.com/drobilla/serd.git",
+        "COMMIT": "b6053bb2a4533e6a8e3821c1061f140d5e666938"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libzmq.sh",
+      "gitBlobSha": "879a39eeeb156409567e82015bb50848b3d5fcfb",
+      "sha256": "6d664155f794f62f7069385f26bbf2bc725ba648e5c4becef5648b48c0203e8a",
+      "source": {
+        "REPO": "https://github.com/zeromq/libzmq.git",
+        "COMMIT": "46493370217ac135246617fa2f6ac819d8b61bfc"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libzmq",
+      "matchingBinaryFlags": [
+        "--enable-libzmq"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-lilv/96-lv2.sh",
+      "gitBlobSha": "10d0a2ed5d3f1c90e26395a341187b891007a657",
+      "sha256": "4863872ffd75697aaf8ee39ac79dce745c03289b15dcef2339cdf6e053c42f68",
+      "source": {
+        "REPO": "https://github.com/lv2/lv2.git",
+        "COMMIT": "3c57dae600a5ad8d05acd53ee3490f7d91cb7be6"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-libwebp.sh",
+      "gitBlobSha": "a359b0ee26e23ce70bb85402554d01b80a2a9ba5",
+      "sha256": "98f5850fc66c7ea510991cd7b088a314163cf3faa58ab0880b5ed93a065865d3",
+      "source": {
+        "REPO": "https://chromium.googlesource.com/webm/libwebp",
+        "COMMIT": "5c168cd23b1872969c38e34b01b04dcf29849288"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libwebp",
+      "matchingBinaryFlags": [
+        "--enable-libwebp"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i '/libanim_util/d' examples/Makefile.am"
+      ]
+    },
+    {
+      "path": "scripts.d/50-lilv/96-zix.sh",
+      "gitBlobSha": "e3c7c2a3dbb57a8b8599fa549322d76bf02cfa88",
+      "sha256": "afc07c6e7b5b5f92042cb3f445ed145357a48d3402c60985b136e66182c45f27",
+      "source": {
+        "REPO": "https://github.com/drobilla/zix.git",
+        "COMMIT": "17d632393f5addb6fa24dda2927b96515407cca7"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-lilv/97-sord.sh",
+      "gitBlobSha": "d99939956e8ae6aa999135f46f821f0e4da4fb31",
+      "sha256": "2271dbcfb70c67890aa5a9f5c0392046496ee05b2f23b1780dfbc09e28d5dcf9",
+      "source": {
+        "REPO": "https://github.com/drobilla/sord.git",
+        "COMMIT": "4b5232bb91e7f2f1b84df384494d073fabbcd312"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-openal.sh",
+      "gitBlobSha": "2262289335c5b0e952b9e160c755ad77adf52f85",
+      "sha256": "ae20aff1759411ebf19f178c599c4aa44a4bc69f78ec62614037c0db055de798",
+      "source": {
+        "REPO": "https://github.com/kcat/openal-soft.git",
+        "COMMIT": "c89b8cf7bba4822f230c69f0a6696a52e5322dca"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 501 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-openal",
+      "matchingBinaryFlags": [
+        "--enable-openal"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-lilv/99-lilv.sh",
+      "gitBlobSha": "cbff7ee8620653334687df6ed17cc38bf4e72656",
+      "sha256": "9e46c337c276393545a12fa099ba468185a8f120ce0569fbc64ec687bc082acf",
+      "source": {
+        "REPO": "https://github.com/lv2/lilv.git",
+        "COMMIT": "4b8f30055fa5cb4134a2eb45fc1555bc04289314"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-lv2",
+      "matchingBinaryFlags": [
+        "--enable-lv2"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-onevpl.sh",
+      "gitBlobSha": "1dbba196df34e9d25291919f143cade3c89b9fbc",
+      "sha256": "46cf258ffa89c85f146419874eb425504cce7b17fd1976dd6ac0115e6e31b12e",
+      "source": {
+        "REPO": "https://github.com/intel/libvpl.git",
+        "COMMIT": "674d015bcb294bc39fa276e99a652ea045423e82"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == *arm64 ]] && return -1\n    (( $(ffbuild_ffver) >= 600 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libvpl",
+      "matchingBinaryFlags": [
+        "--enable-libvpl"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/^#if _MSC_VER < 1400$/#if defined(_MSC_VER) \\&\\& _MSC_VER < 1400/' libvpl/src/windows/mfx_dispatcher_defs.h"
+      ]
+    },
+    {
+      "path": "scripts.d/50-openapv.sh",
+      "gitBlobSha": "d4fca2043ab34de568f7e0e65e7165470a222b47",
+      "sha256": "196330e1aea843cf2073bd49301da3dc1399895376f65b403bd05db0634654c9",
+      "source": {
+        "REPO": "https://github.com/AcademySoftwareFoundation/openapv.git",
+        "COMMIT": "a58ce739be0dfb083643d929aee8f0e0ba9bdf63"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "(( $(ffbuild_ffver) > 701 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-liboapv",
+      "matchingBinaryFlags": [
+        "--enable-liboapv"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-openjpeg.sh",
+      "gitBlobSha": "5066eda5341f8e528c2229df0feff6e3a2810755",
+      "sha256": "d901cd8495f1a6d67a93c3aca6cba02373a0147cd65fd3a21a05ca2b368138b1",
+      "source": {
+        "REPO": "https://github.com/uclouvain/openjpeg.git",
+        "COMMIT": "8314119b067c0fc77834731168daaebd379fdb12"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libopenjpeg",
+      "matchingBinaryFlags": [
+        "--enable-libopenjpeg"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-openmpt.sh",
+      "gitBlobSha": "e24eccd8ab0fadee53523fa0e1289d5530276a9c",
+      "sha256": "cb313f9a4b9b6613ad30d82b5db00b5fe6fceae8c75578fbb334cf3898aae035",
+      "source": {
+        "REPO": "https://github.com/OpenMPT/openmpt.git",
+        "COMMIT": "f83cedb0cd5446e4dfaa83ac97e3087107e26767"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == winarm64 ]] && return -1\n    return 0",
+      "dependencies": "echo base\n    echo zlib\n    echo libogg\n    echo libvorbis",
+      "configure": "echo --enable-libopenmpt",
+      "matchingBinaryFlags": [
+        "--enable-libopenmpt"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-opencore-amr.sh",
+      "gitBlobSha": "5d6bef1e769538c0c63e9a83435dc68a69e280ab",
+      "sha256": "574666d18051057ca5bb5064e034332dfd0fc9d9575a41a17d7b079ff3154d00",
+      "source": {
+        "REPO": "https://git.code.sf.net/p/opencore-amr/code",
+        "COMMIT": "7dba8c32238418ce0b316a852b2224df586ca896"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libopencore-amrnb --enable-libopencore-amrwb",
+      "matchingBinaryFlags": [
+        "--enable-libopencore-amrnb",
+        "--enable-libopencore-amrwb"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-rav1e.sh",
+      "gitBlobSha": "ad90c941df009acdebaf33129093d766836f3e35",
+      "sha256": "a3a92819459530d94e97423b94560d2ea58fb06b1a944c8124f4f0c46eaaa421",
+      "source": {
+        "REPO": "https://github.com/xiph/rav1e.git",
+        "COMMIT": "31435de9d76fddd38f6dcc31d4014574cebb2092"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == win32 ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-librav1e",
+      "matchingBinaryFlags": [
+        "--enable-librav1e"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-openh264.sh",
+      "gitBlobSha": "dbda135af5f9981eb76265daa39aec7b244fc3d5",
+      "sha256": "db1ebae112ff1ab962af0228907592acc80b8dbcf3561051a37c1678f1bd04f4",
+      "source": {
+        "REPO": "https://github.com/cisco/openh264.git",
+        "COMMIT": "8b2d28faade10d74d99ac80e199aef664c9c5a3b"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libopenh264",
+      "matchingBinaryFlags": [
+        "--enable-libopenh264"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-rubberband.sh",
+      "gitBlobSha": "e4982b19474bd2daac2fcd5d62a2e5181e3d9a29",
+      "sha256": "18ed41389704bf882ae6e6c532ec6d622e609a82261e20ebe35209f339fcb8ba",
+      "source": {
+        "REPO": "https://github.com/breakfastquay/rubberband.git",
+        "COMMIT": "e4296ac80b1170018a110bc326fd0d45a0eb27d6"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    return 0",
+      "dependencies": "echo base\n    echo fftw3\n    echo libsamplerate",
+      "configure": "echo --enable-librubberband",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-lilv/98-sratom.sh",
+      "gitBlobSha": "99838620475afaaad84c51f9878a6cabbd924ea2",
+      "sha256": "70897a779e9a3a24998fa3a5ccaf4aeee21a551ed3be9e14acf00770b9d8bd1b",
+      "source": {
+        "REPO": "https://github.com/lv2/sratom.git",
+        "COMMIT": "9e8ee84eed502e6030ce8bb49694fd28542b08fc"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-sdl.sh",
+      "gitBlobSha": "5aede811c9dad2519ab55621ca277ccf867a3038",
+      "sha256": "82f547842ef8c456e54f1397f006373f138439fa39232154b71847e4bed65070",
+      "source": {
+        "REPO": "https://github.com/libsdl-org/SDL.git",
+        "COMMIT": "b90ac95029d801c5abc59472ba8e2200dff31e1e",
+        "BRANCH": "SDL2"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libiconv\n    echo x11\n    echo pulseaudio\n    echo libsamplerate",
+      "configure": "echo --enable-sdl2",
+      "matchingBinaryFlags": [
+        "--enable-sdl2"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-schannel.sh",
+      "gitBlobSha": "351358c4977e4e28e721f290a5b61a33c7df3fa0",
+      "sha256": "1a815e5fd18665cd59ef40789cc24212c4663e6b09dac8a685272790b0ed2945",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == win* ]]",
+      "dependencies": null,
+      "configure": "echo --enable-schannel",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-soxr.sh",
+      "gitBlobSha": "651d88fe04b6253c2fc53137b54908e5ea203994",
+      "sha256": "333ca3a3331c67fc9468ca81affdbae90385b138a9e91f5b3ad2122f42a8f0f9",
+      "source": {
+        "REPO": "https://git.code.sf.net/p/soxr/code",
+        "COMMIT": "945b592b70470e29f917f4de89b4281fbbd540c0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libsoxr",
+      "matchingBinaryFlags": [
+        "--enable-libsoxr"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i 's/VERSION 3.1 /VERSION 3.1...3.10 /g' CMakeLists.txt",
+        "    sed -i 's/NOT WIN32/1/g' src/CMakeLists.txt"
+      ]
+    },
+    {
+      "path": "scripts.d/50-snappy.sh",
+      "gitBlobSha": "a55c365fb28e1cb3f37fbbb1a65f7a051d477519",
+      "sha256": "86a6e62bec3f4f7b308b6807e4e7b6c626be12f15ffe96025b7d5f6fb4ee2059",
+      "source": {
+        "REPO": "https://github.com/google/snappy.git",
+        "COMMIT": "9c28114a38866f6deeaa826db918293bc28ae410"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libsnappy",
+      "matchingBinaryFlags": [
+        "--enable-libsnappy"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-srt.sh",
+      "gitBlobSha": "90b54ff7a11c19856e0b02699a8336f8752cc45c",
+      "sha256": "da7eaf285c7ee0521d9e39145dc29dff9c024c6842dcaab15d94ce01729a6bea",
+      "source": {
+        "REPO": "https://github.com/Haivision/srt.git",
+        "COMMIT": "ff8ab25c57aece5b7351defe36dacc94fc28527f"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo openssl",
+      "configure": "echo --enable-libsrt",
+      "matchingBinaryFlags": [
+        "--enable-libsrt"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-svtav1.sh",
+      "gitBlobSha": "41326856f58f11e13182a5ecff7f8d01481aee9f",
+      "sha256": "9b07a09cb92d8d0f5a99e9e6800203eaab212e55f283bc78fd3f0c76066d0fe9",
+      "source": {
+        "REPO": "https://gitlab.com/AOMediaCodec/SVT-AV1.git",
+        "COMMIT": "5ed9ffbcb5086da23f30fe9bc5b00145358462da"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == win32 ]] && return -1\n    (( $(ffbuild_ffver) > 700 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libsvtav1",
+      "matchingBinaryFlags": [
+        "--enable-libsvtav1"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git clone \\\"$SCRIPT_REPO\\\" . && git checkout \\\"$SCRIPT_COMMIT\\\"\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-uavs3d.sh",
+      "gitBlobSha": "8205b051c4aff1f7e7cfc8249a5499a6d82a8ef5",
+      "sha256": "3cde849cac8a4fe08df4951840bd40c27592c82e665065f1b7fd506bef71868e",
+      "source": {
+        "REPO": "https://github.com/uavs3/uavs3d.git",
+        "COMMIT": "0e20d2c291853f196c68922a264bcd8471d75b68"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET == win32 ]] && return -1\n    [[ $TARGET == winarm64 ]] && return -1\n    (( $(ffbuild_ffver) >= 404 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libuavs3d",
+      "matchingBinaryFlags": [
+        "--enable-libuavs3d"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git clone \\\"$SCRIPT_REPO\\\" . && git checkout \\\"$SCRIPT_COMMIT\\\"\""
+      ]
+    },
+    {
+      "path": "scripts.d/50-vaapi/50-libva.sh",
+      "gitBlobSha": "b94868291191b250dd3dc4aeab872b98e2328283",
+      "sha256": "db3842f1157b867dad72581e82e231698d8c31ac1ed943fd3edb2c3bf5d61ca6",
+      "source": {
+        "REPO": "https://github.com/intel/libva.git",
+        "COMMIT": "6b07f7100512817f736967e899b8c26313c20623"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $ADDINS_STR == *4.4* && $TARGET == win* ]] && return -1\n    [[ $ADDINS_STR == *5.0* && $TARGET == win* ]] && return -1\n    [[ $ADDINS_STR == *5.1* && $TARGET == win* ]] && return -1\n    [[ $ADDINS_STR == *6.0* && $TARGET == win* ]] && return -1\n    return 0",
+      "dependencies": "echo base\n    echo x11",
+      "configure": "echo --enable-vaapi",
+      "matchingBinaryFlags": [
+        "--enable-vaapi"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i \"s/shared_library/library/g\" va/meson.build"
+      ]
+    },
+    {
+      "path": "scripts.d/50-vaapi/30-libpciaccess.sh",
+      "gitBlobSha": "636c075722a8cee5f1d084df00670ac80d2ac57e",
+      "sha256": "d46f13dbc1396a21be7294b5c18d615f8ebbf161a2b3947d0e80a80ae001946a",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/xorg/lib/libpciaccess.git",
+        "COMMIT": "38e6f15f839fba2c49982e7ad61cde681fd5d4d6"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": "echo base\n    echo zlib",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-twolame.sh",
+      "gitBlobSha": "11a80792fad34d1a19b5d8666e4fd79ee169a219",
+      "sha256": "ac47c5d2b47a0faf34bf2e032db75754c6d9ed6cce7c3f69f8ed64a7e95698d3",
+      "source": {
+        "REPO": "https://github.com/njh/twolame.git",
+        "COMMIT": "6fced852d4d5cfad58cf9dbe3ea619b08e87d398"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libtwolame",
+      "matchingBinaryFlags": [
+        "--enable-libtwolame"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    sed -i -e 's|/autogen-get-version.pl|/autogen-get-version-mock.pl|g' ./autogen.sh",
+        "    sed -i 's/Cflags:/Cflags: -DLIBTWOLAME_STATIC/' \"$FFBUILD_DESTPREFIX\"/lib/pkgconfig/twolame.pc"
+      ]
+    },
+    {
+      "path": "scripts.d/50-vaapi/99-finalize.sh",
+      "gitBlobSha": "315f9a7895cd903871002ddc0f1ecb126060b8b1",
+      "sha256": "f53ab88accece6bf1c3e43a1efb3e23cd01dfd4e7ea3e1b96eab277e9184802e",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-vaapi/40-libdrm.sh",
+      "gitBlobSha": "5d0f2472b6549e117626386a6b76ab1e737742d7",
+      "sha256": "87f86eed075bb148108e80fb4a89e628485c4d5cec29a5f187a6cc28c22f75c4",
+      "source": {
+        "REPO": "https://gitlab.freedesktop.org/mesa/drm.git",
+        "COMMIT": "b97cbde15c5c3abfe44d78e8f57139e50f612fec"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != linux* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libdrm",
+      "matchingBinaryFlags": [
+        "--enable-libdrm"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-vapoursynth.sh",
+      "gitBlobSha": "dd878f440c10ae6bdb841ad53692af762a993aa3",
+      "sha256": "b6f3714d9e7192ff031a3834f4a3a0cc90c7c16dd1966b59a898679aec015955",
+      "source": {
+        "REPO": "https://github.com/vapoursynth/vapoursynth.git",
+        "COMMIT": "R80"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "# Older FFmpeg links the VSScript library instead of loading it at runtime\n    (( $(ffbuild_ffver) >= 701 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-vapoursynth",
+      "matchingBinaryFlags": [
+        "--enable-vapoursynth"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-vidstab.sh",
+      "gitBlobSha": "dba2de48bb8773fc7b5ad8ab7a97decf964fb841",
+      "sha256": "d857de89e32b1bb71b3c4f6034ee165414a8c645f0c585edbeb77cb63d792c96",
+      "source": {
+        "REPO": "https://github.com/georgmartius/vid.stab.git",
+        "COMMIT": "e2445c4081658318223762a696eb1c645c2d7168"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libvidstab",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-x264.sh",
+      "gitBlobSha": "8691a099669e4f311c882c6ee84877d718c63147",
+      "sha256": "37b598e715823c03347bd3ba782f829bf5e289c47cf350eae8042c2263dabfaa",
+      "source": {
+        "REPO": "https://code.videolan.org/videolan/x264.git",
+        "COMMIT": "0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libx264",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-vvenc.sh",
+      "gitBlobSha": "850b1339578b37ef280771e62e0ef814e65806ca",
+      "sha256": "d020ea668a258fc7e512093dfb71c36c7f69d77817e22181ec5c8be04bc00a00",
+      "source": {
+        "REPO": "https://github.com/fraunhoferhhi/vvenc.git",
+        "COMMIT": "b1cfb2ad495af6ae4cc214b7a060e8b4166c4629"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != *32 ]] || return -1\n    (( $(ffbuild_ffver) > 700 )) || return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libvvenc",
+      "matchingBinaryFlags": [
+        "--enable-libvvenc"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/50-whisper.sh",
+      "gitBlobSha": "728d7c1c3fa2972ad3b16ed2b00f32c09babe2c0",
+      "sha256": "9f201ce8e06f46d2850214e3fc6cbfd3a003c8553a9e2d1e0019fc826f4e8cf4",
+      "source": {
+        "REPO": "https://github.com/ggml-org/whisper.cpp.git",
+        "COMMIT": "a44e07845931421bb6f3447ce0010ed9dc76a118"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $TARGET != *32 ]] || return -1\n    (( $(ffbuild_ffver) >= 800 )) || return -1\n    return -1",
+      "dependencies": "echo base\n    echo vulkan\n    echo opencl",
+      "configure": "echo --enable-whisper",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i -e 's/^\\(Libs:\\).*$/\\1 -L${libdir} -lwhisper/' \"$FFBUILD_DESTPREFIX\"/lib/pkgconfig/whisper.pc"
+      ]
+    },
+    {
+      "path": "scripts.d/50-x265.sh",
+      "gitBlobSha": "4dfea436cfdf35e70f1fda22fe1fcfecfc085249",
+      "sha256": "8e596eb3b1ceada9a4449fd2e2f5e3883ff44b949b98c580c2fdab68f3e9739d",
+      "source": {
+        "REPO": "https://github.com/Multicorewareinc/x265.git",
+        "COMMIT": "020d7054dbecfd3be8e62efe33ff8a305d41856e"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libx265",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git clone --filter=blob:none \\\"$SCRIPT_REPO\\\" . && git checkout \\\"$SCRIPT_COMMIT\\\"\"",
+        "    sed -i '1i#include <cstdint>' source/dynamicHDR10/json11/json11.cpp"
+      ]
+    },
+    {
+      "path": "scripts.d/50-xavs2.sh",
+      "gitBlobSha": "283e37521506db90109f40c61e7c686cbe22ae09",
+      "sha256": "aec8c0ded25b8a6116e6cfddaec86591cca268b376554efd8bd44842c6e0fc80",
+      "source": {
+        "REPO": "https://github.com/pkuvcl/xavs2.git",
+        "COMMIT": "eae1e8b9d12468059bdd7dee893508e470fa83d8"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    [[ $TARGET == win32 ]] && return -1\n    # xavs2 aarch64 support is broken\n    [[ $TARGET == *arm64 ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libxavs2",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git clone \\\"$SCRIPT_REPO\\\" . && git checkout \\\"$SCRIPT_COMMIT\\\"\"",
+        "    sed -i -e 's/EGIB/bss/g' -e 's/naidnePF/bss/g' configure"
+      ]
+    },
+    {
+      "path": "scripts.d/50-xvid.sh",
+      "gitBlobSha": "79fe8f6a043b42a1f2cba3eadc479fb1b93d9ddc",
+      "sha256": "b138072e0e59e7aa6df2f0fdc1d2aacf9776eb3631681516815f7ba4e6997bd8",
+      "source": {
+        "REPO": "https://svn.xvid.org/trunk/xvidcore",
+        "REV": "2204"
+      },
+      "staticPredicate": "INELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "[[ $VARIANT == lgpl* ]] && return -1\n    return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libxvid",
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    sed -i\\"
+      ]
+    },
+    {
+      "path": "scripts.d/50-zimg.sh",
+      "gitBlobSha": "264aeb9105d3f5d8cb43327c4eedb814ddbaab0f",
+      "sha256": "fe5d823c95d90ca14a5e44fe7b83800661d9c44aea6ba87431c4f9238204f407",
+      "source": {
+        "REPO": "https://github.com/sekrit-twc/zimg.git",
+        "COMMIT": "67e0603271c080e22c8429856dd4a8a56587e61e"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": null,
+      "configure": "echo --enable-libzimg",
+      "matchingBinaryFlags": [
+        "--enable-libzimg"
+      ],
+      "modificationAndExtraFetchLines": [
+        "    echo \"git submodule update --init --recursive --depth=1\"",
+        "    sed -i '1i #include <exception>' src/zimg/api/zimg.cpp"
+      ]
+    },
+    {
+      "path": "scripts.d/zz-final.sh",
+      "gitBlobSha": "871cfe044257bc06e4724a0840225d4b5809e195",
+      "sha256": "c332bf3fb7503c78211557149c01fd7880fd9011486fd6c33c8b1d428ab40a68",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo libiconv\n    echo zlib\n    echo fribidi\n    echo gmp\n    echo libxml2\n    echo openssl\n    echo xz\n    echo fonts\n    echo lcevcdec\n    echo lcms2\n    echo libvorbis\n    echo opencl\n    echo pulseaudio\n    echo vmaf\n    echo x11\n    echo vulkan\n    echo amf\n    echo aom\n    echo avisynth\n    echo chromaprint\n    echo dav1d\n    echo davs2\n    echo dvd\n    echo fdk-aac\n    echo ffnvcodec\n    echo frei0r\n    echo gme\n    echo kvazaar\n    echo libaribb24\n    echo libaribcaption\n    echo libass\n    echo libbluray\n    echo libcurl\n    echo libjxl\n    echo libmp3lame\n    echo libopus\n    echo libplacebo\n    echo libpng\n    echo librist\n    echo librsvg\n    echo libssh\n    echo libtheora\n    echo libvpx\n    echo libwebp\n    echo libzmq\n    echo lilv\n    echo onevpl\n    echo openal\n    echo openapv\n    echo opencore-amr\n    echo openh264\n    echo openjpeg\n    echo openmpt\n    echo rav1e\n    echo rubberband\n    echo rustdedup\n    echo schannel\n    echo sdl\n    echo snappy\n    echo soxr\n    echo srt\n    echo svtav1\n    echo twolame\n    echo uavs3d\n    echo vaapi\n    echo vapoursynth\n    echo vidstab\n    echo vvenc\n    echo whisper\n    echo x264\n    echo x265\n    echo xavs2\n    echo xvid\n    echo zimg\n    echo zvbi",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    echo libcurl",
+        "    echo rustdedup"
+      ]
+    },
+    {
+      "path": "scripts.d/50-zvbi.sh",
+      "gitBlobSha": "f046de07ac2d32b72d00868c09537d96e06ba19f",
+      "sha256": "9485f71ed9884e3d0e5f6187195bc14910e6dddcf8b63a3914f1d6fb8b7a5558",
+      "source": {
+        "REPO": "https://github.com/zapping-vbi/zvbi",
+        "COMMIT": "d3a5ee9f2b047bf16cd1ee5ccf6ec05ee75409d0"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "return 0",
+      "dependencies": "echo base\n    echo libiconv",
+      "configure": "echo --enable-libzvbi",
+      "matchingBinaryFlags": [
+        "--enable-libzvbi"
+      ],
+      "modificationAndExtraFetchLines": []
+    },
+    {
+      "path": "scripts.d/55-rustdedup.sh",
+      "gitBlobSha": "7b7511618cdad6e8a09948208a1da8f04dfcca10",
+      "sha256": "48d9367d97c79b176e3c176b69f69d65f1a665f0942b7372d74b39d8b9a3377c",
+      "source": {
+        "SKIP": "1"
+      },
+      "staticPredicate": "ELIGIBLE_BY_REVIEWED_LINUX64_LGPL_9_0_PREDICATE",
+      "predicate": "( source scripts.d/50-rav1e.sh && ffbuild_enabled ) || return -1\n    ( source scripts.d/50-librsvg/99-librsvg.sh && ffbuild_enabled ) || return -1\n    return 0",
+      "dependencies": "echo base\n    echo rav1e\n    echo librsvg",
+      "configure": null,
+      "matchingBinaryFlags": [],
+      "modificationAndExtraFetchLines": [
+        "    # Only patch rust objects, since they're guaranteed to not exist multiple times"
+      ]
+    }
+  ],
+  "missing": [
+    "Exact corresponding FFmpeg source at complete resolved commit and all included file-level notices",
+    "All linked dependency sources at pinned revisions, patches and recursively pinned submodules",
+    "Rust/Cargo, wrap/download and generated dependency closure including build-time fetches",
+    "Exact linked/transitive and system-library exception inventory and reproducible build/relink information",
+    "Resolution of enabled static Chromaprint -> FFTW GPLv2 source/license conflict under no-GPL contract",
+    "Independent source/notice completeness review; no format activation clearance"
+  ]
+}

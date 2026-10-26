@@ -1,0 +1,6 @@
+# Preserve primary evidence bytes; raw records are not project source.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+recipe/** -diff
+FFTW-COPYING.GPL2 -diff
+Chromaprint-LICENSE.md -diff
+archive-LICENSE.txt -diff

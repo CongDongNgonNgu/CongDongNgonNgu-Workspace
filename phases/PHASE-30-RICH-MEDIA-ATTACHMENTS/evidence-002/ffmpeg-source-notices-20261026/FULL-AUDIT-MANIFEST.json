@@ -1,0 +1,833 @@
+{
+  "classification": "READ_ONLY_RESEARCH_VIDEO_ACTIVATION_AND_REDISTRIBUTION_CLEARANCE_HELD",
+  "binaryExecuted": false,
+  "sourceBuilt": false,
+  "providerChanges": false,
+  "files": [
+    {
+      "file": "archive-general.html",
+      "bytes": 129043,
+      "sha256": "0da20102efcc3435badffbe91d57672d3e41e459dc7122d583def2778be970dd"
+    },
+    {
+      "file": "archive-LICENSE.txt",
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "file": "archive-members.txt",
+      "bytes": 8432,
+      "sha256": "dea93c0935182b8c31fafb095913b2fbe1b18ffc50975326fbe827cda5b65d80"
+    },
+    {
+      "file": "artifact-inventory.json",
+      "bytes": 2857,
+      "sha256": "0184365afcb552209455ff64a3d9c571a203db2fac4a712c0f35e259821fdde7"
+    },
+    {
+      "file": "Chromaprint-LICENSE.md",
+      "bytes": 1802,
+      "sha256": "8639f54fe58fcf0c1d50bfacad192d6074945b81a0475dd150a476bf6802c668"
+    },
+    {
+      "file": "dependency-inventory.json",
+      "bytes": 99505,
+      "sha256": "afaeea3b0a2486db9341f8b85e3aa427d113676d4261e6742dee35ac9cb6335c"
+    },
+    {
+      "file": "download-receipt.json",
+      "bytes": 217,
+      "sha256": "d3ad7634c3642f5e9e92740eb68849bc15f7a3ca1ce2ef30e7dabea892fcd9d9"
+    },
+    {
+      "file": "download.cjs",
+      "bytes": 1728,
+      "sha256": "0badab91f584c819cb4f09b46e0ca5620f1348524855f5c1bdaef975e6b3ac69"
+    },
+    {
+      "file": "ffmpeg-n9.0.2-29-g6dfaba896f-linux64-lgpl-9.0.tar.xz",
+      "bytes": 137943568,
+      "sha256": "5ae5939260c72671383f0a0d8785695bfe06c94c27d4daac2e63eb8576417927"
+    },
+    {
+      "file": "FFTW-COPYING.GPL2",
+      "bytes": 18003,
+      "sha256": "fd3cd02174ea64172c4a7294475611eac1271ca50336437c77a6cb351933cb77"
+    },
+    {
+      "file": "inspect.cjs",
+      "bytes": 2533,
+      "sha256": "b036bfb4bc3eab0f5c2072c7458948335682bf3f47c006640ebd1b4aaa5b205c"
+    },
+    {
+      "file": "OWNERSHIP.json",
+      "bytes": 189,
+      "sha256": "271b90927b25cca901147102f71de27b6c657dd0305ac83899fdb5137b1caf27"
+    },
+    {
+      "file": "recipe/.github/workflows/build.yml",
+      "bytes": 15916,
+      "sha256": "8498bc5d055112c0827db6a0b595935adc0abd6574d893177fc00201984b6fcd"
+    },
+    {
+      "file": "recipe/addins/9.0.sh",
+      "bytes": 37,
+      "sha256": "087b0d3fee50e6d0a6723559028bcbd198e097492009c118ae3054c0a265b8e6"
+    },
+    {
+      "file": "recipe/build.sh",
+      "bytes": 3018,
+      "sha256": "76d3d01f72aba007d91b91be3d99acfbf23e0cadaa8d18e6bd2d9b306ab74a4d"
+    },
+    {
+      "file": "recipe/generate.sh",
+      "bytes": 6831,
+      "sha256": "a3c8d18841acbdae3ab958b20f051bca45a3d33e458311109d40484aa7573d70"
+    },
+    {
+      "file": "recipe/images/base-linux64/ct-ng-config",
+      "bytes": 31189,
+      "sha256": "c894cbd3843c8aa23a134d0294cbfc008c0d5184ab6cbe72cb2a0d7b07c2fb14"
+    },
+    {
+      "file": "recipe/images/base-linux64/Dockerfile",
+      "bytes": 3131,
+      "sha256": "b32970690b267cd191feefc7c51c093c7564c4f509d5826ea1490826d6ce3291"
+    },
+    {
+      "file": "recipe/patches/aom/0001-Fall-back-to-built-in-vmaf-model-on-load-failure.patch",
+      "bytes": 714,
+      "sha256": "c3b757903be9b98b52b23ac40f7c49dd562cd999b5151890d19dfaf82f40ddb0"
+    },
+    {
+      "file": "recipe/patches/aribb24/12.patch",
+      "bytes": 1511,
+      "sha256": "9059639e9577b123ac4ab3b53771e947b791c42d07b0444cf90e82f563d6d261"
+    },
+    {
+      "file": "recipe/patches/aribb24/13.patch",
+      "bytes": 713,
+      "sha256": "4812661f1c77ec06a5a12548f166ac8646d4c7c1574848a005f0578f3d8cfc7c"
+    },
+    {
+      "file": "recipe/patches/aribb24/17.patch",
+      "bytes": 6204,
+      "sha256": "1a4fc77f677a6ff87d024e3a218186160b23620c84dbd791ec5c425de0a8e6c2"
+    },
+    {
+      "file": "recipe/scripts.d/10-mingw-std-threads.sh",
+      "bytes": 354,
+      "sha256": "44b29b0a71465615b40deeb9cd853039234868699cf4c6b85453560aba8dc212"
+    },
+    {
+      "file": "recipe/scripts.d/10-mingw.sh",
+      "bytes": 3294,
+      "sha256": "e2385614af0b2a4fd9393f318c9463d585d33ced403140f49e18165fd60d71fc"
+    },
+    {
+      "file": "recipe/scripts.d/10-xorg-macros.sh",
+      "bytes": 614,
+      "sha256": "933dd1096b6b9f1b32fcc7d172a528df316cf0119ce0abc6f121d0501566436e"
+    },
+    {
+      "file": "recipe/scripts.d/15-base.sh",
+      "bytes": 387,
+      "sha256": "2e418d514d75752ef44ad4e44ddb469e21037f752cf207b8c60d613c6834de47"
+    },
+    {
+      "file": "recipe/scripts.d/20-libiconv.sh",
+      "bytes": 1352,
+      "sha256": "b473cb6160679b422e6fa79e43f61ea09692e0926208a463bdd52babea2561e9"
+    },
+    {
+      "file": "recipe/scripts.d/20-zlib.sh",
+      "bytes": 454,
+      "sha256": "81dcdb6c62de9190d65659316ee93b4167e5fb298bac9c396b4d0e2f63feeea0"
+    },
+    {
+      "file": "recipe/scripts.d/25-fftw3.sh",
+      "bytes": 1058,
+      "sha256": "0807086b7235186b580d18eb644292af47d139e917c2a56bb71d2bba5d0ceaf0"
+    },
+    {
+      "file": "recipe/scripts.d/25-fribidi.sh",
+      "bytes": 893,
+      "sha256": "8c49596458e13a33ffd24dccf93fcb17304b8b0929e5a1457fab55ba9e26c1cd"
+    },
+    {
+      "file": "recipe/scripts.d/25-gmp.sh",
+      "bytes": 743,
+      "sha256": "a2cda3073037327150433491b49e47dec51a1c0f388c17ebf0729800a29c29f9"
+    },
+    {
+      "file": "recipe/scripts.d/25-libogg.sh",
+      "bytes": 610,
+      "sha256": "f72086b3d86824174bacb8ee4fd4f966c9e13fd8a8242821f429252c77b6e585"
+    },
+    {
+      "file": "recipe/scripts.d/25-libpng.sh",
+      "bytes": 726,
+      "sha256": "76c8781840bf7e6c8494b2c73ae8281522ae4393208177a46d3c9da551f41e3f"
+    },
+    {
+      "file": "recipe/scripts.d/25-libxml2.sh",
+      "bytes": 798,
+      "sha256": "ea2c9ccf748f3c3f7fd3e6391b58db5826918f48cb56511772f972eb2f5d3243"
+    },
+    {
+      "file": "recipe/scripts.d/25-openssl.sh",
+      "bytes": 2139,
+      "sha256": "3f3c98c999d7069a98f311a9bfca1a39215fd54a6db447cb362ccfbfe1c41f7c"
+    },
+    {
+      "file": "recipe/scripts.d/25-xz.sh",
+      "bytes": 831,
+      "sha256": "d1a2b40d4f446809827ef03f06a2a34817af7af3dcbce6f5afb580b3df1c55fd"
+    },
+    {
+      "file": "recipe/scripts.d/45-brotli.sh",
+      "bytes": 490,
+      "sha256": "1bedcbd813c9bc6e73653b256932f51a6e25f04b937060665107c02205507e05"
+    },
+    {
+      "file": "recipe/scripts.d/45-fonts/25-freetype.sh",
+      "bytes": 639,
+      "sha256": "b2e5f13d420e45deae0f5ecd5ddd168228512d178b76d9ba08b3990df5d92205"
+    },
+    {
+      "file": "recipe/scripts.d/45-fonts/35-fontconfig.sh",
+      "bytes": 1182,
+      "sha256": "e2d5932f39e0ea8fcec8c63a8bb69c78acb9b7e55eeef5bca4a375ee1cd7be38"
+    },
+    {
+      "file": "recipe/scripts.d/45-fonts/45-harfbuzz.sh",
+      "bytes": 1127,
+      "sha256": "03b3650e78e01b6f090e1acc898a5faf8627d39ab6dddda9753adb165ef98101"
+    },
+    {
+      "file": "recipe/scripts.d/45-fonts/50-freetype.sh",
+      "bytes": 814,
+      "sha256": "dec1e6a8d50ba00bdd61187055658e842b86e14fc3cb4d588fede8dc096b96ad"
+    },
+    {
+      "file": "recipe/scripts.d/45-lcms2.sh",
+      "bytes": 902,
+      "sha256": "da662f8712aef2e6bc4f5e8bbdabf241c041abadfac76f6471f53d65ecbb25bc"
+    },
+    {
+      "file": "recipe/scripts.d/45-libffi.sh",
+      "bytes": 675,
+      "sha256": "5fc711e7944537d0255c1a059f3d7cc8dea58f9b17331e8e62a4c1ee6f9a459a"
+    },
+    {
+      "file": "recipe/scripts.d/45-libsamplerate.sh",
+      "bytes": 519,
+      "sha256": "628de3f8d1f8f71a375bf743f103e5583802f946cf82a2d1474e125f6891dc1f"
+    },
+    {
+      "file": "recipe/scripts.d/45-libudfread.sh",
+      "bytes": 879,
+      "sha256": "55d2af80b7dda6b8fbca52e2cc8262791b1ffdb09ef6a990117b93c11b1f2339"
+    },
+    {
+      "file": "recipe/scripts.d/45-libunibreak.sh",
+      "bytes": 626,
+      "sha256": "6fa03018e8c5e462424673340734e20a36b9efef3b3083b5ddebd072502cc79f"
+    },
+    {
+      "file": "recipe/scripts.d/45-libvorbis.sh",
+      "bytes": 782,
+      "sha256": "96a4e7735c0d442d62a4859d8e46db735b57c09d5a4440361e35d064e1220a90"
+    },
+    {
+      "file": "recipe/scripts.d/45-opencl.sh",
+      "bytes": 1979,
+      "sha256": "4b1dceba0208348a4a38f011a9b779b8a728dc13303773d19c31b389ef57294b"
+    },
+    {
+      "file": "recipe/scripts.d/45-pcre2.sh",
+      "bytes": 868,
+      "sha256": "de90058846290e156f8fc303464111ff97c3fc48749ee0fa6e2f1ebcd5924324"
+    },
+    {
+      "file": "recipe/scripts.d/45-pixman.sh",
+      "bytes": 759,
+      "sha256": "565b6f1b8e109cdf99d8186af6bdfe5f7df1331504918960f797854bf9d53363"
+    },
+    {
+      "file": "recipe/scripts.d/45-pulseaudio.sh",
+      "bytes": 1737,
+      "sha256": "0f04e9090dacea4eefd77e97622645eda80f51118c58489551812252d1e8e597"
+    },
+    {
+      "file": "recipe/scripts.d/45-vmaf.sh",
+      "bytes": 1610,
+      "sha256": "0bd50c0e08e35b9a8326904f51e8f44468abd78e5fc3da6ee4a3e91d788e5e4d"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/10-xcbproto.sh",
+      "bytes": 588,
+      "sha256": "acfc9ca92025c4b3a138b7026143227be349335e5e3d0adfe1f09b67e06e554c"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/10-xproto.sh",
+      "bytes": 589,
+      "sha256": "98aa96417643e476f4c0bfea1c1c227e84236cabfa7a2156b0315fc45508eeac"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/10-xtrans.sh",
+      "bytes": 728,
+      "sha256": "2afe1a0fe979ecba3eaa16073c02cd532b510186b71986bf585f948517dcaf78"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/20-libxau.sh",
+      "bytes": 834,
+      "sha256": "d17a219799559adca1cc47cf87d3f6d2c1e9fee837aefa9a3aaf7faf3d804245"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/30-libxcb.sh",
+      "bytes": 1010,
+      "sha256": "441e8209547ea43cdde2d57f905bfe4344f8dfd793f3409b239b24b52dc2ea01"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/40-libx11.sh",
+      "bytes": 1242,
+      "sha256": "488d246934a74ae9a2eb0632b1688fac808f0dfe760922cd6a8c486a4523b3dc"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxext.sh",
+      "bytes": 1066,
+      "sha256": "9645cba0af2654aca242f7614488a311d181601cf00c5cb208327088f6fa305f"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxfixes.sh",
+      "bytes": 846,
+      "sha256": "73547e6e578f04af825b72f7f1a045ae7a000a54b8c6578eea119dee38b18c45"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxi.sh",
+      "bytes": 948,
+      "sha256": "95781f77d39532679a2fe1cc9fe51464ca31060adeac757f155039582d51c26e"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxinerama.sh",
+      "bytes": 972,
+      "sha256": "96fe9952805a9a1a311d5970cd4d12de8814bd24d0256d7ca28beb908a23e1c0"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxrender.sh",
+      "bytes": 968,
+      "sha256": "533a8c30a9fd63734b8bbeff94898b59d3b5fd30d4c9255453df0e8b2743a33e"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxscrnsaver.sh",
+      "bytes": 959,
+      "sha256": "761a34dff03b11676ed3d9dcf39e8959746b2ad2a631bc2afcac55598947142b"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/50-libxxf86vm.sh",
+      "bytes": 968,
+      "sha256": "05802fe0722248708057f3f8376fa779eb5f10e8721bf7296aa56b412f9d7b31"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/60-libglvnd.sh",
+      "bytes": 1181,
+      "sha256": "01b9826e399a9269912d3601ecc360407f6b4e0fdae7f53686ed07e33234c07f"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/60-libxcursor.sh",
+      "bytes": 850,
+      "sha256": "16821a2401c58a462db2285b665bb99fdaa75fdbf50fae9b72f70610f6f9369a"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/60-libxrandr.sh",
+      "bytes": 964,
+      "sha256": "e133962118fc7b8e000fe9aa7ce003b51a5a318977808c86cdf0bc02efb9ffe4"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/60-libxv.sh",
+      "bytes": 1114,
+      "sha256": "429373b447abd8a1c5da6f223e5d00cf1b4fd18b568de2188c35fe3c49abc991"
+    },
+    {
+      "file": "recipe/scripts.d/45-x11/99-finalize.sh",
+      "bytes": 511,
+      "sha256": "51d5311ee5a279db229b9044e5e21149b7aa2222904d6aaafff1d92bd4bf143e"
+    },
+    {
+      "file": "recipe/scripts.d/45-xxhash.sh",
+      "bytes": 533,
+      "sha256": "bc856e2d5c4bd8e584d56b87700c648d300d2a071f75de20194e5382a45a1ade"
+    },
+    {
+      "file": "recipe/scripts.d/45-zstd.sh",
+      "bytes": 758,
+      "sha256": "1d3d0fe2f66c556d69e27527b96dd666f76e1f8c6b91bddc2f5548914dd26f74"
+    },
+    {
+      "file": "recipe/scripts.d/47-vulkan/40-vulkan-headers.sh",
+      "bytes": 575,
+      "sha256": "8b0a77bb900c3c9b3e45933b9c3d163f177ec7476a567382ed9a5a8266f62ba8"
+    },
+    {
+      "file": "recipe/scripts.d/47-vulkan/45-vulkan-loader.sh",
+      "bytes": 892,
+      "sha256": "aa5952f71db713a236a01a561640960ee6e98753f1da40b481deb8cb6ef0e265"
+    },
+    {
+      "file": "recipe/scripts.d/47-vulkan/50-shaderc.sh",
+      "bytes": 2263,
+      "sha256": "67641d3b85cb0425e08b31eb72d9e5d93bff189e5eea53d65b8a1646700b3451"
+    },
+    {
+      "file": "recipe/scripts.d/47-vulkan/55-spirv-cross.sh",
+      "bytes": 1482,
+      "sha256": "72aba05e85bd714c5bdd435691a6c9e905f6e31231cc22f4fe14b06e8db7d065"
+    },
+    {
+      "file": "recipe/scripts.d/47-vulkan/60-spirv-headers.sh",
+      "bytes": 555,
+      "sha256": "2ee7c7d2d2553ebda78b54d5d30aa12f7a34d55494e4ad2d4cb1a9cfbb4415a7"
+    },
+    {
+      "file": "recipe/scripts.d/47-vulkan/99-enable.sh",
+      "bytes": 542,
+      "sha256": "cdd4ff0ef66e99ca076b4b12a63ea090b9cc88baae639980584c2032257e60ef"
+    },
+    {
+      "file": "recipe/scripts.d/50-amf.sh",
+      "bytes": 474,
+      "sha256": "54f6103e4dcca2d2b22b8248716fd774c981ce6ee2b3394e9ed07e629d82b30b"
+    },
+    {
+      "file": "recipe/scripts.d/50-aom.sh",
+      "bytes": 1183,
+      "sha256": "3f72c32a7d72a7dd10c1cda6702ddad6e0008a886cdd44113cf96108d7b20368"
+    },
+    {
+      "file": "recipe/scripts.d/50-avisynth.sh",
+      "bytes": 708,
+      "sha256": "dd5685dbb9be432e764380a8ac1ca88c829baa77fcaacf10932040ec44439d0a"
+    },
+    {
+      "file": "recipe/scripts.d/50-chromaprint.sh",
+      "bytes": 907,
+      "sha256": "18f0d650b2f6442f374dd8b1a2fa000a15ab88ecbf021a0a3f5a32750c0992b6"
+    },
+    {
+      "file": "recipe/scripts.d/50-dav1d.sh",
+      "bytes": 824,
+      "sha256": "ab393955968f5364e4e2e67adfb9aedae2f95120f2e199488bcbc147201e09e2"
+    },
+    {
+      "file": "recipe/scripts.d/50-davs2.sh",
+      "bytes": 1171,
+      "sha256": "dff0e5e8bf46f349f2ac92bb097122114c4e4c56b4b1b363891a1c81e154bb1e"
+    },
+    {
+      "file": "recipe/scripts.d/50-dvd/30-libdvdcss.sh",
+      "bytes": 1127,
+      "sha256": "4a630a8652729cfd0db0e5f38e46d9e146c399aca7c7b99c98f8ef535ca6f0bd"
+    },
+    {
+      "file": "recipe/scripts.d/50-dvd/40-libdvdread.sh",
+      "bytes": 1364,
+      "sha256": "21e9ff625778d9bfcb04c257282eb0da884d7a9fbae59db578a3f51128b4ce75"
+    },
+    {
+      "file": "recipe/scripts.d/50-dvd/50-libdvdnav.sh",
+      "bytes": 1187,
+      "sha256": "061a9df5a304e938beaaad70fd227a8ea6dab9718b7be74ea410d38e43ba9ab2"
+    },
+    {
+      "file": "recipe/scripts.d/50-fdk-aac.sh",
+      "bytes": 799,
+      "sha256": "8dd0296be21cf405b8f302bc13e880c647c1647407d44683971675cb2a692c60"
+    },
+    {
+      "file": "recipe/scripts.d/50-ffnvcodec.sh",
+      "bytes": 1247,
+      "sha256": "d3e4c922288a83e4cc7dc6dfb06c84fdb164d8515f9cdfab18e6bdfc3855f2e3"
+    },
+    {
+      "file": "recipe/scripts.d/50-frei0r.sh",
+      "bytes": 1100,
+      "sha256": "da65c7904e078d5cc22fd8dd0311e1a1e5401b3b0c18e9f35de96a55e0fb235b"
+    },
+    {
+      "file": "recipe/scripts.d/50-gme.sh",
+      "bytes": 598,
+      "sha256": "a98435e63c57e920be8d90e1c07d215352f9a97639a44696cf8de7120a41b7db"
+    },
+    {
+      "file": "recipe/scripts.d/50-kvazaar.sh",
+      "bytes": 911,
+      "sha256": "e1eba6170c3fb3f6d676b6d306fb503064a7c71e1038f5f09811276a76e08f3e"
+    },
+    {
+      "file": "recipe/scripts.d/50-lcevcdec.sh",
+      "bytes": 983,
+      "sha256": "7990627bf8194f34c0e8a6aac0b00a919a7d8b7099ffa07b5304b13383d7c44d"
+    },
+    {
+      "file": "recipe/scripts.d/50-libaribb24.sh",
+      "bytes": 1238,
+      "sha256": "819af96814ebaf3612d3e50367e47d892848b22d0a71befe06b481902b9e957b"
+    },
+    {
+      "file": "recipe/scripts.d/50-libaribcaption.sh",
+      "bytes": 1068,
+      "sha256": "bdc45a086a105d789ef80da7c0eed9bc70e76c15bcb7fb5ef5376bfb18249f6c"
+    },
+    {
+      "file": "recipe/scripts.d/50-libass.sh",
+      "bytes": 1229,
+      "sha256": "e6419cade66532faefe04c652526bafe945963e16552ad4d976dd33f9b13490d"
+    },
+    {
+      "file": "recipe/scripts.d/50-libbluray.sh",
+      "bytes": 1380,
+      "sha256": "cf610f2531dc559f63857a9c4544658ad464321723236417ba550cf64a2debcf"
+    },
+    {
+      "file": "recipe/scripts.d/50-libcurl/40-libpsl.sh",
+      "bytes": 938,
+      "sha256": "ef9ffd5427922ca194932fbbb0b1cf1fb7d63d506732e4550bc75453d971d48b"
+    },
+    {
+      "file": "recipe/scripts.d/50-libcurl/40-nghttp2.sh",
+      "bytes": 636,
+      "sha256": "6f85b318a2c8f53bdb0a98d6bc2da399c1ab09eb38bfcdac31edf8a4b1d4ec29"
+    },
+    {
+      "file": "recipe/scripts.d/50-libcurl/40-nghttp3.sh",
+      "bytes": 732,
+      "sha256": "568d668f04e117732398e8683669372605930a89604dce31378d588ef924cb96"
+    },
+    {
+      "file": "recipe/scripts.d/50-libcurl/40-ngtcp2.sh",
+      "bytes": 884,
+      "sha256": "7181d883f54d471df1788ae6886a66b1ec85ef470ac4904047ff8c0d6b8b081c"
+    },
+    {
+      "file": "recipe/scripts.d/50-libcurl/50-libcurl.sh",
+      "bytes": 2192,
+      "sha256": "84f08b2edbe25d85a00bbf57c768b491624d769e8b1b62d5563466ff983ad76d"
+    },
+    {
+      "file": "recipe/scripts.d/50-libjxl/50-libjxl.sh",
+      "bytes": 2428,
+      "sha256": "2b7436518fdf2ede885f69b166c9604dc53779c674f46111a7deea23f3138461"
+    },
+    {
+      "file": "recipe/scripts.d/50-libmp3lame.sh",
+      "bytes": 984,
+      "sha256": "a524cd3b9a40444fb554164f5a5dd466ca616ad2cf6756c28164787e012d982f"
+    },
+    {
+      "file": "recipe/scripts.d/50-libopus.sh",
+      "bytes": 957,
+      "sha256": "098f4436197ad0502b13ffd211347b03ec575c1ab36a02cecff431d68cd6aeb4"
+    },
+    {
+      "file": "recipe/scripts.d/50-libplacebo.sh",
+      "bytes": 1541,
+      "sha256": "7f6f86a2818a1c0dec2248adc794198089bdee603c24b137eff4454c5aa82778"
+    },
+    {
+      "file": "recipe/scripts.d/50-librist/40-mbedtls.sh",
+      "bytes": 943,
+      "sha256": "ff89b4a5de49c845d776e8f30e0e823dfe2f504ddaacf0a4646f7d12461ff74a"
+    },
+    {
+      "file": "recipe/scripts.d/50-librist/50-librist.sh",
+      "bytes": 1123,
+      "sha256": "b7a8fe792abca18fff7ac48d1223767985a14f7b284839e536eb3d6662c63532"
+    },
+    {
+      "file": "recipe/scripts.d/50-librsvg/10-glib.sh",
+      "bytes": 1567,
+      "sha256": "2d426dfff98693d5fc25a725e5221afc704e8d9dd2842c85745b4d11209ccc3d"
+    },
+    {
+      "file": "recipe/scripts.d/50-librsvg/20-cairo.sh",
+      "bytes": 1489,
+      "sha256": "6d658d45d259e3a7c588c24c091d214d929d4a8b6e4e18773be51d5f45523c4c"
+    },
+    {
+      "file": "recipe/scripts.d/50-librsvg/30-pango.sh",
+      "bytes": 1159,
+      "sha256": "f93e19badbc87cfef3fcf169f8c92896aedb4d214333d91a00872cabed8f2f43"
+    },
+    {
+      "file": "recipe/scripts.d/50-librsvg/99-librsvg.sh",
+      "bytes": 1432,
+      "sha256": "520281a8fd738006adcb16ff3e0487653ab9c78862ac51000fc61dfb15d31aa2"
+    },
+    {
+      "file": "recipe/scripts.d/50-libssh.sh",
+      "bytes": 1381,
+      "sha256": "508dd2a6fbd0a18b201e9364ba6f82524b36ce06976c258c1476d9c7f4b7c973"
+    },
+    {
+      "file": "recipe/scripts.d/50-libtheora.sh",
+      "bytes": 1000,
+      "sha256": "cd093a82eb271d465092c498567cdbef724dbf99165dda1fec0179ce5a60c089"
+    },
+    {
+      "file": "recipe/scripts.d/50-libvpx.sh",
+      "bytes": 1615,
+      "sha256": "ee1f76e2ab8c9b40076b554fd3e378a4e5136cf54da6af8642d5539f2d949760"
+    },
+    {
+      "file": "recipe/scripts.d/50-libwebp.sh",
+      "bytes": 1075,
+      "sha256": "98f5850fc66c7ea510991cd7b088a314163cf3faa58ab0880b5ed93a065865d3"
+    },
+    {
+      "file": "recipe/scripts.d/50-libzmq.sh",
+      "bytes": 1094,
+      "sha256": "6d664155f794f62f7069385f26bbf2bc725ba648e5c4becef5648b48c0203e8a"
+    },
+    {
+      "file": "recipe/scripts.d/50-lilv/96-lv2.sh",
+      "bytes": 689,
+      "sha256": "4863872ffd75697aaf8ee39ac79dce745c03289b15dcef2339cdf6e053c42f68"
+    },
+    {
+      "file": "recipe/scripts.d/50-lilv/96-serd.sh",
+      "bytes": 692,
+      "sha256": "455e9f16e778caef9ea8febb5433a684204db22b7f5a13244406069627ffa831"
+    },
+    {
+      "file": "recipe/scripts.d/50-lilv/96-zix.sh",
+      "bytes": 725,
+      "sha256": "afc07c6e7b5b5f92042cb3f445ed145357a48d3402c60985b136e66182c45f27"
+    },
+    {
+      "file": "recipe/scripts.d/50-lilv/97-sord.sh",
+      "bytes": 692,
+      "sha256": "2271dbcfb70c67890aa5a9f5c0392046496ee05b2f23b1780dfbc09e28d5dcf9"
+    },
+    {
+      "file": "recipe/scripts.d/50-lilv/98-sratom.sh",
+      "bytes": 664,
+      "sha256": "70897a779e9a3a24998fa3a5ccaf4aeee21a551ed3be9e14acf00770b9d8bd1b"
+    },
+    {
+      "file": "recipe/scripts.d/50-lilv/99-lilv.sh",
+      "bytes": 815,
+      "sha256": "9e46c337c276393545a12fa099ba468185a8f120ce0569fbc64ec687bc082acf"
+    },
+    {
+      "file": "recipe/scripts.d/50-onevpl.sh",
+      "bytes": 1217,
+      "sha256": "46cf258ffa89c85f146419874eb425504cce7b17fd1976dd6ac0115e6e31b12e"
+    },
+    {
+      "file": "recipe/scripts.d/50-openal.sh",
+      "bytes": 951,
+      "sha256": "ae20aff1759411ebf19f178c599c4aa44a4bc69f78ec62614037c0db055de798"
+    },
+    {
+      "file": "recipe/scripts.d/50-openapv.sh",
+      "bytes": 1218,
+      "sha256": "196330e1aea843cf2073bd49301da3dc1399895376f65b403bd05db0634654c9"
+    },
+    {
+      "file": "recipe/scripts.d/50-opencore-amr.sh",
+      "bytes": 892,
+      "sha256": "574666d18051057ca5bb5064e034332dfd0fc9d9575a41a17d7b079ff3154d00"
+    },
+    {
+      "file": "recipe/scripts.d/50-openh264.sh",
+      "bytes": 1255,
+      "sha256": "db1ebae112ff1ab962af0228907592acc80b8dbcf3561051a37c1678f1bd04f4"
+    },
+    {
+      "file": "recipe/scripts.d/50-openjpeg.sh",
+      "bytes": 633,
+      "sha256": "d901cd8495f1a6d67a93c3aca6cba02373a0147cd65fd3a21a05ca2b368138b1"
+    },
+    {
+      "file": "recipe/scripts.d/50-openmpt.sh",
+      "bytes": 1721,
+      "sha256": "cb313f9a4b9b6613ad30d82b5db00b5fe6fceae8c75578fbb334cf3898aae035"
+    },
+    {
+      "file": "recipe/scripts.d/50-rav1e.sh",
+      "bytes": 1469,
+      "sha256": "a3a92819459530d94e97423b94560d2ea58fb06b1a944c8124f4f0c46eaaa421"
+    },
+    {
+      "file": "recipe/scripts.d/50-rubberband.sh",
+      "bytes": 914,
+      "sha256": "18ed41389704bf882ae6e6c532ec6d622e609a82261e20ebe35209f339fcb8ba"
+    },
+    {
+      "file": "recipe/scripts.d/50-schannel.sh",
+      "bytes": 378,
+      "sha256": "1a815e5fd18665cd59ef40789cc24212c4663e6b09dac8a685272790b0ed2945"
+    },
+    {
+      "file": "recipe/scripts.d/50-sdl.sh",
+      "bytes": 1987,
+      "sha256": "82f547842ef8c456e54f1397f006373f138439fa39232154b71847e4bed65070"
+    },
+    {
+      "file": "recipe/scripts.d/50-snappy.sh",
+      "bytes": 694,
+      "sha256": "86a6e62bec3f4f7b308b6807e4e7b6c626be12f15ffe96025b7d5f6fb4ee2059"
+    },
+    {
+      "file": "recipe/scripts.d/50-soxr.sh",
+      "bytes": 1097,
+      "sha256": "333ca3a3331c67fc9468ca81affdbae90385b138a9e91f5b3ad2122f42a8f0f9"
+    },
+    {
+      "file": "recipe/scripts.d/50-srt.sh",
+      "bytes": 783,
+      "sha256": "da7eaf285c7ee0521d9e39145dc29dff9c024c6842dcaab15d94ce01729a6bea"
+    },
+    {
+      "file": "recipe/scripts.d/50-svtav1.sh",
+      "bytes": 863,
+      "sha256": "9b07a09cb92d8d0f5a99e9e6800203eaab212e55f283bc78fd3f0c76066d0fe9"
+    },
+    {
+      "file": "recipe/scripts.d/50-twolame.sh",
+      "bytes": 1173,
+      "sha256": "ac47c5d2b47a0faf34bf2e032db75754c6d9ed6cce7c3f69f8ed64a7e95698d3"
+    },
+    {
+      "file": "recipe/scripts.d/50-uavs3d.sh",
+      "bytes": 893,
+      "sha256": "3cde849cac8a4fe08df4951840bd40c27592c82e665065f1b7fd506bef71868e"
+    },
+    {
+      "file": "recipe/scripts.d/50-vaapi/30-libpciaccess.sh",
+      "bytes": 1007,
+      "sha256": "d46f13dbc1396a21be7294b5c18d615f8ebbf161a2b3947d0e80a80ae001946a"
+    },
+    {
+      "file": "recipe/scripts.d/50-vaapi/40-libdrm.sh",
+      "bytes": 1226,
+      "sha256": "87f86eed075bb148108e80fb4a89e628485c4d5cec29a5f187a6cc28c22f75c4"
+    },
+    {
+      "file": "recipe/scripts.d/50-vaapi/50-libva.sh",
+      "bytes": 2680,
+      "sha256": "db3842f1157b867dad72581e82e231698d8c31ac1ed943fd3edb2c3bf5d61ca6"
+    },
+    {
+      "file": "recipe/scripts.d/50-vaapi/99-finalize.sh",
+      "bytes": 309,
+      "sha256": "f53ab88accece6bf1c3e43a1efb3e23cd01dfd4e7ea3e1b96eab277e9184802e"
+    },
+    {
+      "file": "recipe/scripts.d/50-vapoursynth.sh",
+      "bytes": 856,
+      "sha256": "b6f3714d9e7192ff031a3834f4a3a0cc90c7c16dd1966b59a898679aec015955"
+    },
+    {
+      "file": "recipe/scripts.d/50-vidstab.sh",
+      "bytes": 898,
+      "sha256": "d857de89e32b1bb71b3c4f6034ee165414a8c645f0c585edbeb77cb63d792c96"
+    },
+    {
+      "file": "recipe/scripts.d/50-vvenc.sh",
+      "bytes": 1353,
+      "sha256": "d020ea668a258fc7e512093dfb71c36c7f69d77817e22181ec5c8be04bc00a00"
+    },
+    {
+      "file": "recipe/scripts.d/50-whisper.sh",
+      "bytes": 1650,
+      "sha256": "9f201ce8e06f46d2850214e3fc6cbfd3a003c8553a9e2d1e0019fc826f4e8cf4"
+    },
+    {
+      "file": "recipe/scripts.d/50-x264.sh",
+      "bytes": 920,
+      "sha256": "37b598e715823c03347bd3ba782f829bf5e289c47cf350eae8042c2263dabfaa"
+    },
+    {
+      "file": "recipe/scripts.d/50-x265.sh",
+      "bytes": 2103,
+      "sha256": "8e596eb3b1ceada9a4449fd2e2f5e3883ff44b949b98c580c2fdab68f3e9739d"
+    },
+    {
+      "file": "recipe/scripts.d/50-xavs2.sh",
+      "bytes": 1474,
+      "sha256": "aec8c0ded25b8a6116e6cfddaec86591cca268b376554efd8bd44842c6e0fc80"
+    },
+    {
+      "file": "recipe/scripts.d/50-xvid.sh",
+      "bytes": 1250,
+      "sha256": "b138072e0e59e7aa6df2f0fdc1d2aacf9776eb3631681516815f7ba4e6997bd8"
+    },
+    {
+      "file": "recipe/scripts.d/50-zimg.sh",
+      "bytes": 884,
+      "sha256": "fe5d823c95d90ca14a5e44fe7b83800661d9c44aea6ba87431c4f9238204f407"
+    },
+    {
+      "file": "recipe/scripts.d/50-zvbi.sh",
+      "bytes": 979,
+      "sha256": "9485f71ed9884e3d0e5f6187195bc14910e6dddcf8b63a3914f1d6fb8b7a5558"
+    },
+    {
+      "file": "recipe/scripts.d/55-rustdedup.sh",
+      "bytes": 1889,
+      "sha256": "48d9367d97c79b176e3c176b69f69d65f1a665f0942b7372d74b39d8b9a3377c"
+    },
+    {
+      "file": "recipe/scripts.d/zz-final.sh",
+      "bytes": 1556,
+      "sha256": "c332bf3fb7503c78211557149c01fd7880fd9011486fd6c33c8b1d428ab40a68"
+    },
+    {
+      "file": "recipe/util/dl_functions.sh",
+      "bytes": 140,
+      "sha256": "8a3e73feda582156646708b321f25f9dcb5934a7541b5fae588274e92c038dd3"
+    },
+    {
+      "file": "recipe/util/run_stage.sh",
+      "bytes": 2201,
+      "sha256": "99de8aa4f18cd7d8fb90b36ddd040ae6b383b3814a87b693d884e99f12150fc5"
+    },
+    {
+      "file": "recipe/util/vars.sh",
+      "bytes": 2281,
+      "sha256": "c59a32026e25822fcbf12ea8ff9815078c7fbe83622b704298c09517553447ad"
+    },
+    {
+      "file": "recipe/variants/defaults-lgpl.sh",
+      "bytes": 141,
+      "sha256": "34fddfb560691429eb86d44d60a4957b5193b64371c12bc454ee5284f68a2366"
+    },
+    {
+      "file": "recipe/variants/linux-install-static.sh",
+      "bytes": 331,
+      "sha256": "0dce12079fb7098e274243e0de484d8443c230ff742a9fd605ce9149bc4941f4"
+    },
+    {
+      "file": "recipe/variants/linux64-lgpl.sh",
+      "bytes": 123,
+      "sha256": "ccdc1ef78245a346faa180e0b3ba0b939956b1497644e8c5646b54abfe36c007"
+    },
+    {
+      "file": "REPORT.md",
+      "bytes": 8343,
+      "sha256": "8215ce9f27d74d0808f37f505bccbdacb563e2c92811bc924d32dbfc2b363501"
+    },
+    {
+      "file": "source-snapshot.json",
+      "bytes": 245291,
+      "sha256": "8c423abe077e184ef45e66e126d1364aad5a40f9a0467abf601b877519025f5f"
+    },
+    {
+      "file": "summarize.cjs",
+      "bytes": 3619,
+      "sha256": "4fdc1107e0a1bf28b7afc66b8a97d71ce64cabc9f1248ce4c63208e2a8ccc744"
+    }
+  ]
+}

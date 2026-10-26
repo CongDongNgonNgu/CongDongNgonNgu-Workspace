@@ -1,0 +1,197 @@
+{
+  "repository": "CongDongNgonNgu/CongDongNgonNgu-Back-End",
+  "revision": "4f7974d7e65315398c71a645187ce3e577668eef",
+  "tree": "1544630275d320c7a0982a7cbd05f0cda422df1d",
+  "run": 40283524596,
+  "jobs": {
+    "jobs": [
+      {
+        "id": 121441850695,
+        "name": "quality",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 40283524596,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Initialize containers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Check out source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Set up Node.js",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Lint",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Type check",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Native packaging and TEST target guards",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Package checksum-pinned TEST native processors",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Unit tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Bounded native video repeatability",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "End-to-end tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "Build",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "PostgreSQL18 study-group transaction proof",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "PostgreSQL18 reviewed Library relation proof",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Prepare ephemeral PostgreSQL18 baseline extensions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "PostgreSQL18 connection transactions and notification privacy",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          },
+          {
+            "name": "PostgreSQL18 Community acceptance and notification privacy",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18
+          },
+          {
+            "name": "Attachment TEST connection guards",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          },
+          {
+            "name": "PostgreSQL18 attachment ownership and lifecycle proof",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20
+          },
+          {
+            "name": "Security audit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          },
+          {
+            "name": "Post Set up Node.js",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 40
+          },
+          {
+            "name": "Post Check out source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 41
+          },
+          {
+            "name": "Stop containers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 42
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 43
+          }
+        ]
+      }
+    ]
+  },
+  "selectedLogLines": [
+    "2026-10-26T07:04:36.7102290Z found 0 vulnerabilities",
+    "2026-10-26T07:04:56.9111345Z PINNED_TIME_RUNTIME={\"platform\":\"linux\",\"arch\":\"x64\",\"glibcVersion\":\"2.43\",\"peakRssBytes\":46718976}",
+    "2026-10-26T07:04:56.9111702Z PINNED_PROCESSOR_BUILD=VERIFIED",
+    "2026-10-26T07:05:35.0701983Z Test Suites: 220 passed, 220 total",
+    "2026-10-26T07:05:35.0702262Z Tests:       1565 passed, 1565 total",
+    "2026-10-26T07:05:42.5592256Z Test Suites: 1 passed, 1 total",
+    "2026-10-26T07:05:42.5592530Z Tests:       8 passed, 8 total",
+    "2026-10-26T07:05:49.8452029Z Test Suites: 1 passed, 1 total",
+    "2026-10-26T07:05:49.8452275Z Tests:       8 passed, 8 total",
+    "2026-10-26T07:05:57.0489814Z Test Suites: 1 passed, 1 total",
+    "2026-10-26T07:05:57.0489979Z Tests:       8 passed, 8 total",
+    "2026-10-26T07:06:15.9024794Z Test Suites: 24 passed, 24 total",
+    "2026-10-26T07:06:15.9025136Z Tests:       180 passed, 180 total",
+    "2026-10-26T07:06:33.2382815Z Test Suites: 2 passed, 2 total",
+    "2026-10-26T07:06:33.2383085Z Tests:       26 passed, 26 total",
+    "2026-10-26T07:06:38.4885600Z Test Suites: 1 passed, 1 total",
+    "2026-10-26T07:06:38.4885904Z Tests:       6 passed, 6 total",
+    "2026-10-26T07:07:04.9285349Z Test Suites: 10 passed, 10 total",
+    "2026-10-26T07:07:04.9285665Z Tests:       162 passed, 162 total",
+    "2026-10-26T07:07:17.4065726Z Test Suites: 3 passed, 3 total",
+    "2026-10-26T07:07:17.4066102Z Tests:       44 passed, 44 total",
+    "2026-10-26T07:07:50.3413417Z Test Suites: 17 passed, 17 total",
+    "2026-10-26T07:07:50.3414003Z Tests:       200 passed, 200 total",
+    "2026-10-26T07:07:51.0193287Z found 0 vulnerabilities"
+  ],
+  "scope": "LINUX_CI_NOT_RENDER_OR_PRIVATE_PROVIDER_ACCEPTANCE"
+}
