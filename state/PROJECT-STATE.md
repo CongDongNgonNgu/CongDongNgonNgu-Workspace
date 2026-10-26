@@ -1,4 +1,12 @@
-# Phase30 current implementation - 2026-10-23
+# Phase30 current implementation - 2026-10-26
+
+Remediation diagnostic PR56@925eda5e2a5cc3748e07496ee7092f2dbde39e48:21 focused tests PASS, CI147/run40259712439 IN_PROGRESS when observed; fixed ESRCH/EIO vocabulary only, no actual CI errno/root cause inferred. LIFECYCLE-002.md is the latest source lifecycle record.
+
+Latest publication: Backend PR55 MERGED, remote main05a14631908e0c3a62bb31c196177d4e24ab6587, reviewed tree872681cef57a58c47758eba5dc0b85beca52cfb6 equal. PR CI145 SUCCESS; main CI146/run40259126437 FAILED in native repetition2/3 with SUPERVISOR/NATIVE_MEMORY/EXCEPTION. Deployment stopped; separate fix branch investigates without weakening checks or blind reruns. Full affected17 SQL suites previously passed across6/78 and11/122 commands; source review accepted conditional disabled scope. Fresh read-only TEST preflight found38 migrations through0038 and no attachment tables. Exact TEST migration/deployment/enablement and final fixture cleanup remain pending. See LIFECYCLE-002.md. This supersedes the earlier current-checkpoint statements below without erasing historical failures.
+
+Continuation from preserved work: three remote mains fetched/pruned and unchanged; Backend draft PR55 head bd071a56decd3cfcb2a617065b2eff2f182f8c66. Linux CI142 passed all source/SQL/native gates but failed new dependency advisories; compatible patches now audited locally at0 vulnerabilities. CI143 again failed native process-memory observation; bounded repeatability was skipped. New local composition passes218unit suites/1515tests with required pinned Windows native processors and180E2E tests; build passed. Affected isolated TEST SQL run remains in progress. These are source checkpoints, not002 completion or deployed acceptance. All attachment flags remain false; no003/Phase31 entry. Details in EVIDENCE-002.md.
+
+Continuation: all three remote mains reverified unchanged. Backend draft PR55 is open at bc1dee8; Linux CI40072664067 running when recorded. Local HTTP/services/replay/ingress/reconciliation/retention changes remain unpushed and disabled. Independently reviewed UNSENT design is approved for implementation only; source and deployed acceptance remain open. See EVIDENCE-002.md and CONTRACT-002-UNSENT-AMENDMENT.md. No002 DONE or003 entry inferred.
 
 CURRENT_PHASE=30; CURRENT_SUBPHASE=LNG-30-002; PHASE_30_STATUS=IN_PROGRESS; PHASE_30_VERDICT=NOT_REACHED; LNG_30_001=DONE; LNG_30_002=IN_PROGRESS; LNG_30_003..006=PLANNED_NOT_STARTED; ARCHITECTURE_FROZEN=YES; BLOCKER_30_001=RESOLVED; ATTACHMENTS_ENABLED_DEFAULT=false; PHASE_31_IMPLEMENTED=NO; NEXT_ACTION=COMPLETE002_VERIFIED_GATES_THEN003. Existing owner authorization001->006 remains active, stop afterPhase30. Original TASKS/V3 unchanged.
 
