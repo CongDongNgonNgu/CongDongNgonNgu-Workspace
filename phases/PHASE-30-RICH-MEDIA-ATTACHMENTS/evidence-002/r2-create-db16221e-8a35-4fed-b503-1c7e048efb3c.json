@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "classification": "APPROVED_TEST_SYNTHETIC",
+  "attachmentId": "db16221e-8a35-4fed-b503-1c7e048efb3c",
+  "attemptId": "ca635cd1-0c57-46b8-b49c-e85e3183026b",
+  "objectId": "b99f4dff-ef99-45c3-b814-d9669ff25280",
+  "key": "attachments/test/v1/db16221e-8a35-4fed-b503-1c7e048efb3c/ca635cd1-0c57-46b8-b49c-e85e3183026b/source/b99f4dff-ef99-45c3-b814-d9669ff25280",
+  "bytes": 64,
+  "sha256": "a4bffaea5f16b8e09c73c5395b10f8d50882905909dbd8e11753b82c4954eacd",
+  "probeOnlyOverwriteSha256": "32067710e9307b460c4981ae09dcebff000434d363ce26b619e4d42bc279ecaa",
+  "operations": 11,
+  "operationBudget": 16,
+  "createdAt": "2026-10-22T01:27:19.659Z",
+  "results": {
+    "conditionalCreate": "PASS_OVERWRITE_DENIED_PERSISTED_UNCHANGED",
+    "conditionalGet": "PASS_WRONG_DENIED_CORRECT_CHECKSUM",
+    "cleanup": "PASS_OBSERVED",
+    "residual": 0,
+    "observedEtag": "\"0331a63126dc2b601dc6da30348c6793\"",
+    "overwriteStatus": 412,
+    "wrongGetStatus": 412,
+    "residualObservedAt": "2026-10-22T01:27:24.477Z"
+  },
+  "finishedAt": "2026-10-22T01:27:24.477Z"
+}

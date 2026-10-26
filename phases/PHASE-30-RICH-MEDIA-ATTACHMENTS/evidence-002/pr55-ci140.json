@@ -1,0 +1,25 @@
+{
+  "recordedDate": "2026-10-24",
+  "repository": "CongDongNgonNgu/CongDongNgonNgu-Back-End",
+  "pullRequest": 55,
+  "draft": true,
+  "revision": "bc1dee8a3b57265b59990499abf24d49d7ea5f8b",
+  "workflowRun": 40072664067,
+  "job": 120809265516,
+  "result": "FAILURE",
+  "linuxPinnedProcessorPackaging": "PASS",
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "unitSuites": {"passed": 200, "failed": 1, "total": 201},
+  "unitTests": {"passed": 1356, "failed": 2, "total": 1358},
+  "failures": [
+    {"test": "native pipeline metadata/SEI removal", "code": "PROCESSING_UNAVAILABLE", "source": "video-processor.ts Linux process memory monitor"},
+    {"test": "native pipeline optional AAC-LC", "code": "PROCESSING_INVALID", "source": "video-processor.ts close-time native observation requirement"}
+  ],
+  "diagnosis": "Linux native processes may become zombies with no VmHWM before close, or complete between 25ms samples. Neither case permits fabricated native RSS observation.",
+  "subsequentWorkflowSteps": "SKIPPED_AFTER_UNIT_FAILURE",
+  "remediation": "IN_PROGRESS",
+  "deployment": "NOT_RUN",
+  "featureFlags": "ALL_DISABLED",
+  "merge": "NOT_ALLOWED_UNTIL_VERIFIED_GATES"
+}
