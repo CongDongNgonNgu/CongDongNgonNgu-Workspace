@@ -1,0 +1,17 @@
+[
+  {
+    "name": "debian-binary",
+    "size": 4,
+    "sha256": "d526eb4e878a23ef26ae190031b4efd2d58ed66789ac049ea3dbaf74c9df7402"
+  },
+  {
+    "name": "control.tar.xz",
+    "size": 1124,
+    "sha256": "364147b3728c554798f5d4d04fff033b9abbfffa60dd610b557e772f5afbd885"
+  },
+  {
+    "name": "data.tar.xz",
+    "size": 49460,
+    "sha256": "45a6138da67dad86049eaad4f4e77cb33839e9a2f558b0704f0aaa694429a3cb"
+  }
+]

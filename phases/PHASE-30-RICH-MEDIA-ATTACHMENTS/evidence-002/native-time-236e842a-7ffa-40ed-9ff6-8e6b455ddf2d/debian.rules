@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then dh_auto_clean; fi
+
+override_dh_installdocs:
+	cd doc && makeinfo --no-split --html time.texi
+	dh_installdocs doc/time.html
+
+override_dh_installman:
+	dh_installman debian/time.1
+
+override_dh_installinfo:
+	dh_installinfo
+	rm -f debian/time/usr/share/info/dir

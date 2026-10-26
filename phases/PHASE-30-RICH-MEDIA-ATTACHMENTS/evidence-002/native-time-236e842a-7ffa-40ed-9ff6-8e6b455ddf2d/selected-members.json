@@ -1,0 +1,58 @@
+[
+  {
+    "archive": "data.tar.xz",
+    "member": "./usr/bin/time",
+    "file": "time.elf",
+    "bytes": 27384,
+    "sha256": "efc0d1112e36ec76c14bf7508e287935cf1631d9d0d91fb532802d07aef51cea"
+  },
+  {
+    "archive": "control.tar.xz",
+    "member": "./control",
+    "file": "control.txt",
+    "bytes": 888,
+    "sha256": "7335f377f481ffc1ce42619f942dda649be55e2ff7f3b4d034a35a649e505a30"
+  },
+  {
+    "archive": "data.tar.xz",
+    "member": "./usr/share/doc/time/copyright",
+    "file": "copyright",
+    "bytes": 2943,
+    "sha256": "9c5fb22ad687c290ca88f4064a2b5f89bb998a5caec2f5eada316d6caf889738"
+  },
+  {
+    "archive": "time_1.9.orig.tar.gz",
+    "member": "time-1.9/COPYING",
+    "file": "COPYING.GPL3",
+    "bytes": 35147,
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  {
+    "archive": "time_1.9.orig.tar.gz",
+    "member": "time-1.9/README",
+    "file": "README.upstream",
+    "bytes": 650,
+    "sha256": "d1665e188a9ceb040c9ae2de22080e098b0bf1b96a298fe0a9764409e7eb378f"
+  },
+  {
+    "archive": "time_1.9.orig.tar.gz",
+    "member": "time-1.9/INSTALL",
+    "file": "INSTALL.upstream",
+    "bytes": 15756,
+    "sha256": "54be5efe708bd5a7b433ab227130c5548221151698d17eb7eb142f640cf291ec"
+  },
+  {
+    "archive": "time_1.9-0.2.debian.tar.xz",
+    "member": "debian/rules",
+    "file": "debian.rules",
+    "bytes": 336,
+    "sha256": "e4b7db2f2f2669243a6ffb57204d61d33bb88683df1b1a5f8efd3a73ffc7e1fc"
+  },
+  {
+    "archive": "time_1.9-0.2.debian.tar.xz",
+    "member": "debian/patches/series",
+    "file": "debian.patch-series",
+    "bytes": 71,
+    "sha256": "6328b861c57f2ac11388d725ed1b4bf8f01d4125b7a3c4e03c1f7d2062ae53e9"
+  }
+]

@@ -1,5 +1,9 @@
 # LNG-30-002 implementation evidence (in progress)
 
+Latest exact TEST baseline is dep-dbfc8q5g1s2s73f8ce7g succeeded|Live on c209ce8 after the first missing-tool failure. Packaging VERIFIED and HTTP200/503/503/401 prove default-off/auth behavior only; all four flagsfalse. Shared TEST0039 applied/independently verified, no app acceptance fixtures. Native GNU time packaging design approved for implementation only, source/runtime gates pending. See latest CONTINUATION-002-20261026.md; earlier failed/pending snapshots below retain historical observation times.
+
+Current continuation: see CONTINUATION-002-20261026.md for PR57/mainc209ce8 with PR/main CI149/150 SUCCESS and merged-branch cleanup, actual independently verified shared TEST0039 migration, and failed exact Render deployment due to missing /usr/bin/time. No runtime acceptance or002 DONE; historical source checkpoints below are preserved with their original observation times.
+
 ## Latest verified checkpoint - 2026-10-26
 
 Backend PR55 MERGED as05a14631908e0c3a62bb31c196177d4e24ab6587; remote/reviewed tree872681cef57a58c47758eba5dc0b85beca52cfb6 equal. PR CI145 SUCCESS, but main CI146 FAILED in native repetition2/3; downstream checks skipped. PR56@925eda5e2a5cc3748e07496ee7092f2dbde39e48 contains closed ESRCH/EIO diagnostics only,21 focused tests PASS; CI147/run40259712439 IN_PROGRESS when observed. Actual CI errno and root-cause remediation remain unconfirmed; no repeated unchanged CI run. See LIFECYCLE-002.md and REVIEW-002-SOURCE.md.

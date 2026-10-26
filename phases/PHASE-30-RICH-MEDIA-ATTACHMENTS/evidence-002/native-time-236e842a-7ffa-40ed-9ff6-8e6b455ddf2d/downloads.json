@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Release",
+    "url": "https://deb.debian.org/debian/dists/bookworm/Release",
+    "bytes": 149266,
+    "sha256": "abcf5882746e0f68171f41adbb4ac01b74b49d62d203379befb9265804311a4f"
+  },
+  {
+    "name": "Release.gpg",
+    "url": "https://deb.debian.org/debian/dists/bookworm/Release.gpg",
+    "bytes": 1760,
+    "sha256": "a8365eb9127ca7d85dee26a74318f28fe609d9d3a5af1008329a61b753492b80"
+  },
+  {
+    "name": "archive-key-12.asc",
+    "url": "https://ftp-master.debian.org/keys/archive-key-12.asc",
+    "bytes": 11861,
+    "sha256": "c2a9a16fde95e037bafd0fa6b7e31f41b4ff1e85851de5558f19a2a2f0e955e2"
+  },
+  {
+    "name": "release-12.asc",
+    "url": "https://ftp-master.debian.org/keys/release-12.asc",
+    "bytes": 461,
+    "sha256": "521e9f6a9f9b92ee8d5ce74345e8cfd04028dae9db6f571259d584b293549824"
+  },
+  {
+    "name": "Packages.gz",
+    "url": "https://deb.debian.org/debian/dists/bookworm/main/binary-amd64/Packages.gz",
+    "bytes": 12084798,
+    "sha256": "6777ea16514725f9427f48c240d92e0a6b8496138e37a1491d8597e66774e309"
+  },
+  {
+    "name": "Sources.gz",
+    "url": "https://deb.debian.org/debian/dists/bookworm/main/source/Sources.gz",
+    "bytes": 12729667,
+    "sha256": "c5a2379970764ac50e167f75909655c552602c1a4d7018c0907b3e30d8dc9de4"
+  },
+  {
+    "name": "archive-key-12-security.asc",
+    "url": "https://ftp-master.debian.org/keys/archive-key-12-security.asc",
+    "bytes": 11873,
+    "sha256": "74f81645b4e3156d1e9a88c8dd9259271b89c7099d64af89a2a6996b592faa1f"
+  },
+  {
+    "name": "time_1.9-0.2_amd64.deb",
+    "url": "https://deb.debian.org/debian/pool/main/t/time/time_1.9-0.2_amd64.deb",
+    "bytes": 50776,
+    "sha256": "10257c6fe888e6578550b1f20705d282dd630b76f8df0c006aec3031fefe5e23"
+  },
+  {
+    "name": "time_1.9-0.2.dsc",
+    "url": "https://deb.debian.org/debian/pool/main/t/time/time_1.9-0.2.dsc",
+    "bytes": 1703,
+    "sha256": "32edee09df14a7e61fe0d02be477e7f2efd3df3f601dff6ecc51f18b99fd0f24"
+  },
+  {
+    "name": "time_1.9.orig.tar.gz",
+    "url": "https://deb.debian.org/debian/pool/main/t/time/time_1.9.orig.tar.gz",
+    "bytes": 596779,
+    "sha256": "fbacf0c81e62429df3e33bda4cee38756604f18e01d977338e23306a3e3b521e"
+  },
+  {
+    "name": "time_1.9-0.2.debian.tar.xz",
+    "url": "https://deb.debian.org/debian/pool/main/t/time/time_1.9-0.2.debian.tar.xz",
+    "bytes": 14748,
+    "sha256": "42a9d951055290c5186a1b83808744bd07bf8675f24e99998e46a31825781480"
+  }
+]

@@ -1,0 +1,5 @@
+# Preserve authenticated upstream bytes and signatures across Windows checkouts.
+* -text
+# Upstream records contain significant original formatting; never rewrite them.
+copyright -diff
+time.Sources -diff
