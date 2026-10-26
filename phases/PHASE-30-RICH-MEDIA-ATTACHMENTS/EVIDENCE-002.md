@@ -1,5 +1,9 @@
 # LNG-30-002 implementation evidence (in progress)
 
+Final native source checkpoint: PR58/main505750bed22d7f93defc896a3209bc435ac6cf5a tree1544630 equal, PR/main CI151/152 SUCCESS and merged branch cleanup verified. Actual main Linux tiny smoke observed x64/glibc2.43/46587904B; this is not Render/API headroom. No new deployment after c209/default-off. Source/notice video HOLD and secure TEST credential rotation confirmation block dependent private/provider acceptance;002 not DONE,003-006 not started. NATIVE-GATES-002-20261026.md and main-ci152 receipt supersede earlier partial statuses below.
+
+Current native continuation: NATIVE-GATES-002-20261026.md records PR58 local GNUtime/source bundle, independent review and new full local tests, running Linux CI151 with package/fullunit/repeatability steps passed, FFmpeg source/notice HOLD and pending owner secure TEST credential rotation confirmation. No new deployed media or cleanup PASS; current TEST baseline staysc209/default-off. Previous checkpoint observations below remain historical.
+
 Latest exact TEST baseline is dep-dbfc8q5g1s2s73f8ce7g succeeded|Live on c209ce8 after the first missing-tool failure. Packaging VERIFIED and HTTP200/503/503/401 prove default-off/auth behavior only; all four flagsfalse. Shared TEST0039 applied/independently verified, no app acceptance fixtures. Native GNU time packaging design approved for implementation only, source/runtime gates pending. See latest CONTINUATION-002-20261026.md; earlier failed/pending snapshots below retain historical observation times.
 
 Current continuation: see CONTINUATION-002-20261026.md for PR57/mainc209ce8 with PR/main CI149/150 SUCCESS and merged-branch cleanup, actual independently verified shared TEST0039 migration, and failed exact Render deployment due to missing /usr/bin/time. No runtime acceptance or002 DONE; historical source checkpoints below are preserved with their original observation times.

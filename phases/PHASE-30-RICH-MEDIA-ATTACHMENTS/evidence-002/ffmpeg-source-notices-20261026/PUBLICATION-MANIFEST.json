@@ -1,0 +1,156 @@
+{
+  "classification": "STATIC_AUDIT_VIDEO_SOURCE_NOTICE_GATE_HELD_NOT_FORMAT_ACTIVATION_CLEARANCE",
+  "fullAuditRetainedAt": "D:\\Work\\CongDongNgonNgu\\phase30-feasibility\\ffmpeg-license-audit-20261026-780788c2-07a0-41bb-9364-ebe598edabf0",
+  "fullAuditManifest": "FULL-AUDIT-MANIFEST.json",
+  "scope": "Selected evidence only. Full audit manifest intentionally references retained external audit files; archive and executable are not included. No source deletion or byte rewriting.",
+  "binaryExecuted": false,
+  "sourceBuilt": false,
+  "selectedBytes": 207710,
+  "files": [
+    {
+      "file": "REPORT.md",
+      "bytes": 8343,
+      "sha256": "8215ce9f27d74d0808f37f505bccbdacb563e2c92811bc924d32dbfc2b363501"
+    },
+    {
+      "file": "artifact-inventory.json",
+      "bytes": 2857,
+      "sha256": "0184365afcb552209455ff64a3d9c571a203db2fac4a712c0f35e259821fdde7"
+    },
+    {
+      "file": "dependency-inventory.json",
+      "bytes": 99505,
+      "sha256": "afaeea3b0a2486db9341f8b85e3aa427d113676d4261e6742dee35ac9cb6335c"
+    },
+    {
+      "file": "archive-members.txt",
+      "bytes": 8432,
+      "sha256": "dea93c0935182b8c31fafb095913b2fbe1b18ffc50975326fbe827cda5b65d80"
+    },
+    {
+      "file": "download-receipt.json",
+      "bytes": 217,
+      "sha256": "d3ad7634c3642f5e9e92740eb68849bc15f7a3ca1ce2ef30e7dabea892fcd9d9"
+    },
+    {
+      "file": "OWNERSHIP.json",
+      "bytes": 189,
+      "sha256": "271b90927b25cca901147102f71de27b6c657dd0305ac83899fdb5137b1caf27"
+    },
+    {
+      "file": "FFTW-COPYING.GPL2",
+      "bytes": 18003,
+      "sha256": "fd3cd02174ea64172c4a7294475611eac1271ca50336437c77a6cb351933cb77"
+    },
+    {
+      "file": "Chromaprint-LICENSE.md",
+      "bytes": 1802,
+      "sha256": "8639f54fe58fcf0c1d50bfacad192d6074945b81a0475dd150a476bf6802c668"
+    },
+    {
+      "file": "archive-LICENSE.txt",
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "file": "FULL-AUDIT-MANIFEST.json",
+      "bytes": 27683,
+      "sha256": "d6d4ce2db254442c98001bb90cdf7584996f8504fc9075d7f1e4f49a55f63e75"
+    },
+    {
+      "file": "recipe/build.sh",
+      "bytes": 3018,
+      "sha256": "76d3d01f72aba007d91b91be3d99acfbf23e0cadaa8d18e6bd2d9b306ab74a4d"
+    },
+    {
+      "file": "recipe/generate.sh",
+      "bytes": 6831,
+      "sha256": "a3c8d18841acbdae3ab958b20f051bca45a3d33e458311109d40484aa7573d70"
+    },
+    {
+      "file": "recipe/variants/linux64-lgpl.sh",
+      "bytes": 123,
+      "sha256": "ccdc1ef78245a346faa180e0b3ba0b939956b1497644e8c5646b54abfe36c007"
+    },
+    {
+      "file": "recipe/variants/linux-install-static.sh",
+      "bytes": 331,
+      "sha256": "0dce12079fb7098e274243e0de484d8443c230ff742a9fd605ce9149bc4941f4"
+    },
+    {
+      "file": "recipe/variants/defaults-lgpl.sh",
+      "bytes": 141,
+      "sha256": "34fddfb560691429eb86d44d60a4957b5193b64371c12bc454ee5284f68a2366"
+    },
+    {
+      "file": "recipe/addins/9.0.sh",
+      "bytes": 37,
+      "sha256": "087b0d3fee50e6d0a6723559028bcbd198e097492009c118ae3054c0a265b8e6"
+    },
+    {
+      "file": "recipe/util/vars.sh",
+      "bytes": 2281,
+      "sha256": "c59a32026e25822fcbf12ea8ff9815078c7fbe83622b704298c09517553447ad"
+    },
+    {
+      "file": "recipe/scripts.d/50-chromaprint.sh",
+      "bytes": 907,
+      "sha256": "18f0d650b2f6442f374dd8b1a2fa000a15ab88ecbf021a0a3f5a32750c0992b6"
+    },
+    {
+      "file": "recipe/scripts.d/25-fftw3.sh",
+      "bytes": 1058,
+      "sha256": "0807086b7235186b580d18eb644292af47d139e917c2a56bb71d2bba5d0ceaf0"
+    },
+    {
+      "file": "recipe/scripts.d/50-libmp3lame.sh",
+      "bytes": 984,
+      "sha256": "a524cd3b9a40444fb554164f5a5dd466ca616ad2cf6756c28164787e012d982f"
+    },
+    {
+      "file": "recipe/scripts.d/50-libopus.sh",
+      "bytes": 957,
+      "sha256": "098f4436197ad0502b13ffd211347b03ec575c1ab36a02cecff431d68cd6aeb4"
+    },
+    {
+      "file": "recipe/scripts.d/50-libjxl/50-libjxl.sh",
+      "bytes": 2428,
+      "sha256": "2b7436518fdf2ede885f69b166c9604dc53779c674f46111a7deea23f3138461"
+    },
+    {
+      "file": "recipe/scripts.d/50-rav1e.sh",
+      "bytes": 1469,
+      "sha256": "a3a92819459530d94e97423b94560d2ea58fb06b1a944c8124f4f0c46eaaa421"
+    },
+    {
+      "file": "recipe/scripts.d/50-librsvg/99-librsvg.sh",
+      "bytes": 1432,
+      "sha256": "520281a8fd738006adcb16ff3e0487653ab9c78862ac51000fc61dfb15d31aa2"
+    },
+    {
+      "file": "recipe/scripts.d/55-rustdedup.sh",
+      "bytes": 1889,
+      "sha256": "48d9367d97c79b176e3c176b69f69d65f1a665f0942b7372d74b39d8b9a3377c"
+    },
+    {
+      "file": "recipe/patches/aom/0001-Fall-back-to-built-in-vmaf-model-on-load-failure.patch",
+      "bytes": 714,
+      "sha256": "c3b757903be9b98b52b23ac40f7c49dd562cd999b5151890d19dfaf82f40ddb0"
+    },
+    {
+      "file": "recipe/patches/aribb24/12.patch",
+      "bytes": 1511,
+      "sha256": "9059639e9577b123ac4ab3b53771e947b791c42d07b0444cf90e82f563d6d261"
+    },
+    {
+      "file": "recipe/patches/aribb24/13.patch",
+      "bytes": 713,
+      "sha256": "4812661f1c77ec06a5a12548f166ac8646d4c7c1574848a005f0578f3d8cfc7c"
+    },
+    {
+      "file": "recipe/patches/aribb24/17.patch",
+      "bytes": 6204,
+      "sha256": "1a4fc77f677a6ff87d024e3a218186160b23620c84dbd791ec5c425de0a8e6c2"
+    }
+  ]
+}
