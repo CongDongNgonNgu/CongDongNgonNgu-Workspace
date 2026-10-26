@@ -1,0 +1,15 @@
+{
+  "status":"APPLIED_AND_INDEPENDENTLY_VERIFIED",
+  "target":"EXACT_APPROVED_TEST",
+  "revision":"c209ce81097a0fe385cfb9f9c367520c0f7c7618",
+  "tree":"48617164f7968bbf125ce84f922344f105fafac4",
+  "mainCiRun":"40261190199",
+  "migration":"0039_phase30_attachments.sql",
+  "checksum":"6c8540daa6255089d3706e8c6893795efe1d8f7dce2273eca432c71ea6c19b9c",
+  "history":39,
+  "counts":{"attachments":0,"attachment_upload_replay_leases":0,"attachment_bindings":0,"attachment_objects":0,"attachment_cleanup_jobs":0,"attachment_quota_counters":0,"attachment_processing_lease":1,"attachment_initiation_admissions":0},
+  "startupGate":"PASS",
+  "formatEnablement":false,
+  "fixturesCreated":false,
+  "scope":"Migration initialization, not application fixture cleanup or runtime acceptance."
+}

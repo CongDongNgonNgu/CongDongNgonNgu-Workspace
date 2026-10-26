@@ -1,0 +1,22 @@
+{
+  "target":"OWNER_CLASSIFIED_TEST",
+  "revision":"c209ce81097a0fe385cfb9f9c367520c0f7c7618",
+  "deployment":"dep-dbfc8q5g1s2s73f8ce7g",
+  "dashboardStatus":"Deploy succeeded|Live",
+  "duration":"2m05s",
+  "startedAt":"2026-10-26T10:09:28+07:00",
+  "build":"npm ci --include=dev && npm run build:attachments -- --download",
+  "packaging":"PINNED_PROCESSOR_BUILD=VERIFIED",
+  "capabilities":{"enabled":false,"image":false,"video":false,"text":false},
+  "scope":"DEFAULT_OFF_BASELINE_ONLY_NOT_MEDIA_ACCEPTANCE",
+  "probes":[
+    {"name":"health","status":200,"ms":218,"nosniff":"nosniff"},
+    {"name":"disabled_metadata","status":503,"ms":186,"cacheControl":"private, no-store","nosniff":"nosniff","code":"ATTACHMENTS_UNAVAILABLE"},
+    {"name":"disabled_head","status":503,"ms":252,"cacheControl":"private, no-store","nosniff":"nosniff"},
+    {"name":"unauth_initiate","status":401,"ms":469,"cacheControl":"private, no-store","nosniff":"nosniff","code":"AUTH_UNAUTHORIZED"}
+  ],
+  "fixturesCreated":false,
+  "mediaProcessingAcceptance":"NOT_RUN",
+  "completeNativeLifetimeRss":"GNU_TIME_MISSING_VIDEO_HELD",
+  "note":"NODE_ENV production and dashboard environment labels do not change the owner's TEST classification; no production-readiness claim."
+}

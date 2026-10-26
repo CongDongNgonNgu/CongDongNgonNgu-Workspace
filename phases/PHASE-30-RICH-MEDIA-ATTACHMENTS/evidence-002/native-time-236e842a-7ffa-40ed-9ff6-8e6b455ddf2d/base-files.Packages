@@ -1,0 +1,21 @@
+Package: base-files
+Version: 12.4+deb12u15
+Essential: yes
+Installed-Size: 341
+Maintainer: Santiago Vila <sanvila@debian.org>
+Architecture: amd64
+Replaces: base, dpkg (<= 1.15.0), miscutils
+Provides: base
+Pre-Depends: awk
+Breaks: debian-security-support (<< 2019.04.25), initscripts (<< 2.88dsf-13.3), sendfile (<< 2.1b.20080616-5.2~)
+Description: Debian base system miscellaneous files
+Multi-Arch: foreign
+Description-md5: 6d16337f57b84c4747f56438355b2395
+Tag: admin::configuring, admin::filesystem, admin::install, admin::login,
+ role::app-data, suite::debian
+Section: admin
+Priority: required
+Filename: pool/main/b/base-files/base-files_12.4+deb12u15_amd64.deb
+Size: 70936
+MD5sum: 0d863c1ee183c8e006bd085d63f4874f
+SHA256: 3eb1ea6d85488f488cc2a163b98ad640ef88cee4c79287cf14e361aaf6206f47

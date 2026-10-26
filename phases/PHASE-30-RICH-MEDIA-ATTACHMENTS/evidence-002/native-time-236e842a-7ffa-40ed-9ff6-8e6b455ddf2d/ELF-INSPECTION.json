@@ -1,0 +1,31 @@
+{
+  "bytes": 27384,
+  "sha256": "efc0d1112e36ec76c14bf7508e287935cf1631d9d0d91fb532802d07aef51cea",
+  "elfClass": "ELF64",
+  "endianness": "little",
+  "machine": "EM_X86_64",
+  "type": 3,
+  "interpreter": "/lib64/ld-linux-x86-64.so.2",
+  "needed": [
+    "libc.so.6"
+  ],
+  "versions": [
+    {
+      "file": "libc.so.6",
+      "version": "GLIBC_2.3.4"
+    },
+    {
+      "file": "libc.so.6",
+      "version": "GLIBC_2.4"
+    },
+    {
+      "file": "libc.so.6",
+      "version": "GLIBC_2.34"
+    },
+    {
+      "file": "libc.so.6",
+      "version": "GLIBC_2.2.5"
+    }
+  ],
+  "execution": "NOT_RUN_WINDOWS_HOST"
+}
