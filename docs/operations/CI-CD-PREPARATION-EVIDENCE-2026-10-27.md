@@ -2,7 +2,9 @@
 
 PROJECT=CongDongNgonNgu
 TASK=PREPARE_CI_CD
-STATUS=VERIFYING
+STATUS=BLOCKED
+BLOCKER=VPS_SSH_AUTH_AND_ACTUAL_PM2_INSPECTION
+PRODUCTION_DEPLOY_WORKFLOW=BLOCKED (artifacts prepared; runtime activation contract unverified)
 PRODUCTION_AUTO_DEPLOY=NOT_ACTIVATED
 PRODUCTION_DB_CHANGED=NO
 PRODUCTION_ENV_PRESERVED=YES (no VPS mutation; owner-reported file state not independently inspected)
@@ -55,8 +57,8 @@ BACKEND_DEV_SHA=a4df898a5c60305da2a65919e6fd7e34ade56f4e
 FRONTEND_DEV_SHA=e5f3b9cabe1246e7fd0e311d5e3c741949a8189b
 
 Frontend dev [post-merge CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/40444036677) SUCCESS. Frontend temporary feature branch deleted remotely and locally after ancestry/integration verification; stale refs pruned.
-Backend dev [post-merge CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40444316470) IN_PROGRESS at this receipt; final result/cleanup will be reconciled before closeout. Reviewed Backend feature tree equals merged dev tree ac6c975327820a32c1a6a203ea2463ee6ad24dea.
-Workspace [documentation PR #184](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/184). Initial documentation CI passed; final revision requires revalidation. Workspace changes are docs/07-DEPLOYMENT.md and the two new docs/operations/SECURE-CI-CD.md and CI-CD-PREPARATION-EVIDENCE-2026-10-27.md files. Workspace is never packaged/deployed to VPS.
+Backend dev [post-merge CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40444316470) SUCCESS, including all native/SQL/security gates. Backend temporary feature branch deleted remotely and locally after ancestry/integration verification; stale refs pruned. Production jobs in both dev runs were skipped by the hard activation gates. Reviewed Backend feature tree equals merged dev tree ac6c975327820a32c1a6a203ea2463ee6ad24dea.
+Workspace [documentation PR #184](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/184). Documentation checks run on each PR revision and main push; final merge SHA/check/cleanup receipt is provided in the task completion report. Workspace changes are docs/07-DEPLOYMENT.md and the two new docs/operations/SECURE-CI-CD.md and CI-CD-PREPARATION-EVIDENCE-2026-10-27.md files. Workspace is never packaged/deployed to VPS.
 
 ## Live configuration checks
 
@@ -69,6 +71,8 @@ Read-only endpoint snapshot before changes:
 - https://congdongngonngu.vn => HTTP 200.
 - https://www.congdongngonngu.vn => HTTP 301 Location:https://congdongngonngu.vn/.
 
+Repeated public endpoint verification at 2026-10-27T03:32:10.248Z (10:32 Asia/Saigon): API 200 with exact production identity; website 200; www 301 to https://congdongngonngu.vn/. No VPS action was executed between snapshots.
+
 Public health does not prove the deployed source SHA, database migration count or actual PM2 configuration. Those values are not invented.
 
 ## External blockers and operational limits
@@ -80,3 +84,5 @@ Targeted action: make the existing authorized deploy SSH identity available loca
 Remaining operational risks: actual VPS activation/rollback has NOT been tested; baseline dist symlink bootstrap and source-SHA markers are not established/verified; retained releases/assets require disk-capacity review. Existing historical Vercel SEO sitemap/default-origin references are outside this CI/CD change and should be reviewed before launch. TEST deployment/provider/feature-specific pending gates remain separate from source CI success.
 
 See [Secure CI/CD runbook](SECURE-CI-CD.md) for manual Render/Vercel branch changes and the full Production activation checklist. STOP at TEST checkpoint; no first VPS deployment or application main merge is authorized here.
+
+Final source preparation is integrated into dev with green exact-revision CI. Overall requested readiness remains BLOCKED by actual VPS SSH/runtime inspection. Render/Vercel changes and functional TEST verification are USER_ACTION_PENDING, not fabricated PASS. Production activation and first deployment remain unexecuted.

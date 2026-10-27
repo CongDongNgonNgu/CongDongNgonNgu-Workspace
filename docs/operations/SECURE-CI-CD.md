@@ -91,7 +91,7 @@ Render Backend:
 
 Vercel Frontend:
 
-1. Open the existing TEST project -> Settings -> Environments -> Production (or Git -> Production Branch in the current UI) -> branch tracking -> dev. Here Vercel's label Production is the TEST project's deployment tier; it is not the VPS Production environment.
+1. Open the existing TEST project -> Settings -> Environments -> Production -> Branch Tracking -> enter dev -> Save. Here Vercel's label Production is the TEST project's deployment tier; it is not the VPS Production environment.
 2. Confirm repository is CongDongNgonNgu-Front-End-Web and build/output remain npm run build / dist.
 3. Set VITE_API_BASE_URL to the Render TEST origin plus /api/v1 for the TEST project's Production and applicable Preview environment scopes. Environment changes require a new deployment.
 4. Review vercel.json: its relative /api/v1 rewrite currently targets congdongngonngu-back-end.onrender.com. If this is not the actual TEST service, review/update that TEST rewrite before validation. An explicit absolute VITE_API_BASE_URL is required so the frontend bundle uses the selected Render TEST backend.
@@ -119,5 +119,7 @@ These dashboard actions are instructions only; no branch setting was changed her
 See CI-CD-PREPARATION-EVIDENCE-2026-10-27.md for observed source SHAs, PRs, checks and endpoint results.
 Current external blocker: read-only SSH login as cdnn-deploy returned Permission denied (publickey,password). Production .env and PM2 were not inspected. Enable the existing authorized deploy identity in the local SSH agent/config and ensure its public key is authorized for cdnn-deploy, using trusted local known_hosts; never paste a private key or DATABASE_URL into chat. GitHub Environment secrets cannot be read back and are not a substitute for local SSH access.
 For sanitized PM2 inspection after access is available, use the repository's scripts/deploy/check-runtime.cjs --inspect with PM2_HOME fixed as above; it consumes jlist in memory and emits only cwd/script/interpreter/mode. Do not print raw pm2 jlist/describe/env output because it can contain credentials.
+
+Provider setting references: [Render auto-deploy and CI behavior](https://render.com/docs/deploys), [Vercel Production Branch Tracking](https://vercel.com/docs/git). Require the actual quality check to succeed; Render also accepts skipped/neutral checks, which is why the intentionally skipped Production job does not block TEST deploys.
 
 Design references: [GitHub secure use](https://docs.github.com/en/actions/reference/security/secure-use), [reusable workflows and Environment secrets](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows).
