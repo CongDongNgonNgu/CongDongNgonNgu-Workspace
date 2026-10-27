@@ -55,3 +55,7 @@ deployment, restart, rollback, secret/provider changes and monitoring activation
 remain separate human authorization boundaries. Internal provider IDs are
 optional when repository plus hostname identify the target unambiguously;
 actual account wiring and revisions must be verified before release execution.
+
+## CI/CD topology update - 2026-10-27
+
+The owner-approved TEST (Render/Vercel dev) and VPS Production (main) target topology and activation gate are defined in [Secure CI/CD](operations/SECURE-CI-CD.md). Earlier dated provider/revision snapshots above are historical evidence. Production activation and application dev-to-main merge remain prohibited until TEST verification and explicit owner approval.
