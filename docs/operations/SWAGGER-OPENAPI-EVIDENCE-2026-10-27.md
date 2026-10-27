@@ -2,7 +2,16 @@
 
 PROJECT=CongDongNgonNgu
 TASK=SWAGGER_OPENAPI_INTEGRATION
-STATUS=VERIFYING
+STATUS=PASS
+BACKEND_DEV_SHA=55f2f93cf4c98778d69b9e08e0a0f0dec02d6f8d
+BACKEND_CI=PASS
+SWAGGER_UI_TEST=PASS
+OPENAPI_JSON_TEST=PASS
+ROOT_REDIRECT_TEST=PASS
+PRODUCTION_AUTH_TEST=PASS_LOCAL_E2E
+SECURITY_TESTS=PASS
+REGRESSION_TESTS=PASS
+RENDER_DEPLOYMENT=PASS
 PRODUCTION_DEPLOYMENT=NOT_PERFORMED
 MAIN_MERGE=NOT_PERFORMED
 PRODUCTION_DB_CHANGED=NO
@@ -27,4 +36,18 @@ Render preflight: existing service srv-dahnerh594qs73fp3420 tracks dev and was L
 
 CI/deployment/cleanup receipts will be reconciled after actual verification. Workspace documentation is intentionally on a feature branch/PR because the user forbids main merges in this task.
 
-Final focused security/schema regression: 25 tests PASS. Credential reuse is rejected in either username or password, including decoded database passwords. Initial [PR CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40449120307) SUCCESS; final [head CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40449601710) pending when recorded. CI/CD workflows are unchanged; both existing Production activation gates remain false. Final changed-source secret-pattern scan PASS.
+Final focused security/schema regression: 25 tests PASS. Credential reuse is rejected in either username or password, including decoded database passwords. Initial [PR CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40449120307) SUCCESS; final [head CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40449601710) SUCCESS. CI/CD workflows are unchanged; both existing Production activation gates remain false. Final changed-source secret-pattern scan PASS.
+
+## Final integration and live TEST receipt
+
+Backend PR60 merged into dev at 55f2f93cf4c98778d69b9e08e0a0f0dec02d6f8d. Merged tree 5b45fec7e5ef05a4f98b8774c9aef149d420b966 equals reviewed feature tree. Exact [dev CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40450180455) SUCCESS including required Linux native/SQL/audit gates; Production job skipped by the unchanged hard gate. Temporary Backend feature branch deleted remotely/locally after ancestry verification; stale refs pruned.
+
+Render TEST: only SWAGGER_ENABLED=true was added through the existing environment editor. No other variable value, build/start command, branch, provider or feature flag was edited. Automatic deployment dep-dbg2kkk9v7es73dvl20g integrated the dev code; the subsequent environment-enabled manual deployment [dep-dbg2le5t17gc738asdlg](https://dashboard.render.com/web/srv-dahnerh594qs73fp3420/deploys/dep-dbg2le5t17gc738asdlg) completed Live, duration 1m56s. Dashboard Last successfully deployed commit points to the exact full dev SHA above; service branch remains dev.
+
+Live read-only verification at 2026-10-27T04:41:16.589Z (11:41 Asia/Saigon): root302 Location:/docs; UI200; JSON200 with standard OpenAPI validation PASS; 171paths/201operations/73schemas; health200 with exact TEST identity; /api/v1/profile401; unprefixed health/prefixed docs aliases/YAML404; all four CSS/JS UI assets200. API CSP has no unsafe-inline while docs-only CSP permits inline styles. The sanitized machine receipt is [SWAGGER-TEST-VERIFICATION-2026-10-27.json](SWAGGER-TEST-VERIFICATION-2026-10-27.json).
+
+A fresh Chrome page navigated from TEST root to /docs, rendered CongDongNgonNgu API 0.1.0 OAS3.0, showed populated operations and zero schema-rendering errors. Browser console had no warnings/errors/CSP failures; only same-origin document/CSS/JS requests were observed, all200, with no external validator/spec calls. Screenshot export was denied by the browser tool workspace restriction; DOM, console, network and independent HTTP/schema evidence were recorded instead. No screenshot artifact is claimed.
+
+Main branches remain unchanged: Backend9f1d6b50dd5d33d312feba0fa23fa4d1e2d46682; Workspace1f39822e69549f0f9b8b934e073e49619df78175. Workspace [draft PR185](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/185) intentionally stays unmerged to honor the user no-main-merge instruction. Its feature branch is retained for required owner review, not a merged-branch cleanup omission. The final Workspace SHA and exact-head CI receipt are in the task final report.
+
+No Production deployment, VPS login/restart, Production .env mutation, Production database access/migration or Production CD activation occurred. Production authentication evidence is LOCAL E2E ONLY. Future Production Swagger needs the independent env variables and verified HTTPS/proxy configuration in SWAGGER-OPENAPI.md; its activation remains outside this task. No remaining TEST verification blocker. STOP at TEST checkpoint.
