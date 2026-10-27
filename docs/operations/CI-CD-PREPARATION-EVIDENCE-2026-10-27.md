@@ -44,10 +44,19 @@ PRs targeting dev:
 - [Backend #59](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/pull/59)
 - [Frontend #58](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/pull/58)
 
-Current PR runs (completion status will be reconciled before closeout):
+Both PR runs completed SUCCESS, including ShellCheck, Linux failure-injection tests and all existing application gates. Both PRs are merged into dev; application main remains unchanged.
 
 - [Backend](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40443770894)
 - [Frontend](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/40443775391)
+
+## Integration receipts
+
+BACKEND_DEV_SHA=a4df898a5c60305da2a65919e6fd7e34ade56f4e
+FRONTEND_DEV_SHA=e5f3b9cabe1246e7fd0e311d5e3c741949a8189b
+
+Frontend dev [post-merge CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Front-End-Web/actions/runs/40444036677) SUCCESS. Frontend temporary feature branch deleted remotely and locally after ancestry/integration verification; stale refs pruned.
+Backend dev [post-merge CI](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/actions/runs/40444316470) IN_PROGRESS at this receipt; final result/cleanup will be reconciled before closeout. Reviewed Backend feature tree equals merged dev tree ac6c975327820a32c1a6a203ea2463ee6ad24dea.
+Workspace [documentation PR #184](https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/184). Initial documentation CI passed; final revision requires revalidation. Workspace changes are docs/07-DEPLOYMENT.md and the two new docs/operations/SECURE-CI-CD.md and CI-CD-PREPARATION-EVIDENCE-2026-10-27.md files. Workspace is never packaged/deployed to VPS.
 
 ## Live configuration checks
 

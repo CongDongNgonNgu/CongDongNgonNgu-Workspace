@@ -85,8 +85,8 @@ Render Backend:
 
 1. Open the existing TEST web service -> Settings -> Build & Deploy -> Branch -> select dev -> Save. Do not change a different service.
 2. Confirm repository is CongDongNgonNgu-Back-End. Preserve reviewed build/start commands and native processor build steps; do not substitute a historical command.
-3. Confirm DATABASE_URL identifies Neon TEST in Render's secret UI, without copying it into evidence. Set NODE_ENV=test; PUBLIC_APP_URL and CORS_ALLOWED_ORIGINS must allow only the intended TEST frontend origins. Preserve existing TEST-specific provider credentials and disabled feature flags.
-4. If enabling TEST auto-deploy, choose After CI Checks Pass where available; otherwise deploy the exact successful dev SHA manually after CI. Do not bypass red CI.
+3. Confirm DATABASE_URL identifies Neon TEST in Render's secret UI, without copying it into evidence. Set NODE_ENV=test and AUTH_PERSISTENCE=postgres explicitly (test defaults to memory otherwise); PUBLIC_APP_URL and CORS_ALLOWED_ORIGINS must allow only the intended TEST frontend origins. Preserve existing TEST-specific provider credentials and disabled feature flags.
+4. Verify Neon TEST schema compatibility with the exact dev revision; any TEST migration must use the reviewed TEST-only procedure after confirming database identity. If enabling TEST auto-deploy, choose After CI Checks Pass where available; otherwise deploy the exact successful dev SHA manually after CI. Do not bypass red CI.
 5. Verify the deployed Render revision equals BACKEND_DEV_SHA and /api/v1/health reports the expected service and environment:test. Record URL, revision, timestamp and sanitized result.
 
 Vercel Frontend:
