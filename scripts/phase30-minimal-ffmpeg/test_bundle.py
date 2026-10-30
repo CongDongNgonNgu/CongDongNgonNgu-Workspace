@@ -7,6 +7,7 @@ import pathlib
 import tarfile
 import tempfile
 import unittest
+from unittest import mock
 
 spec = importlib.util.spec_from_file_location('bundle', pathlib.Path(__file__).with_name('bundle.py'))
 bundle = importlib.util.module_from_spec(spec)
@@ -130,6 +131,29 @@ class CandidateTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(ValueError):
                 bundle.write_archive(pathlib.Path(directory) / 'out.tar.gz', {'a': b'x', 'a/file': b'y'})
+
+    def test_expansion_and_compressed_size_caps(self):
+        with mock.patch.object(bundle, 'MAX_TOTAL', 1024):
+            with self.assertRaises(ValueError):
+                self.verify(gzip.compress(b'\0' * 2048), self.expected())
+        data = self.fixture([('source/ffmpeg.tar.gz', b'abc', tarfile.REGTYPE)])
+        with mock.patch.object(bundle, 'MAX_TOTAL', 16):
+            with self.assertRaises(ValueError):
+                self.verify(data, self.expected())
+
+    def test_member_count_and_file_size_caps(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = pathlib.Path(directory) / 'candidate.tar.gz'
+            with mock.patch.object(bundle, 'MAX_MEMBERS', 1):
+                with self.assertRaises(ValueError):
+                    bundle.write_archive(target, {'a': b'x', 'b': b'y'})
+            with mock.patch.object(bundle, 'MAX_FILE', 2):
+                with self.assertRaises(ValueError):
+                    bundle.write_archive(target, {'a': b'abc'})
+                data = self.fixture([('source/ffmpeg.tar.gz', b'abc', tarfile.REGTYPE)])
+                with self.assertRaises(ValueError):
+                    self.verify(data, self.expected())
+            self.assertFalse(target.exists())
 
 if __name__ == '__main__':
     unittest.main()
