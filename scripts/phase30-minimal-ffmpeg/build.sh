@@ -9,12 +9,12 @@ export TMPDIR=/build/configure-tmp
 mkdir objects
 cd objects
 args=(
- --disable-all --disable-autodetect --disable-network --disable-doc --disable-debug
+ --disable-all --disable-autodetect --disable-iconv --disable-network --disable-doc --disable-debug
  --disable-shared --enable-static --disable-gpl --disable-nonfree --disable-version3
  --disable-x86asm --enable-ffmpeg --enable-ffprobe --enable-avcodec --enable-avformat
  --enable-avfilter --enable-swscale --enable-swresample --enable-pthreads
  "--enable-decoder=h264,aac,mjpeg" "--enable-parser=h264,aac,mjpeg"
- "--enable-demuxer=mov,image2,jpeg_pipe" "--enable-muxer=mp4,image2,null"
+ "--enable-demuxer=mov,image2,image_jpeg_pipe" "--enable-muxer=mp4,image2,null"
  "--enable-protocol=file,pipe" "--enable-bsf=filter_units,h264_metadata"
  "--enable-encoder=mjpeg,wrapped_avframe,pcm_s16le"
  "--enable-filter=scale,format,aformat,aresample"
@@ -31,9 +31,9 @@ printf 'CONFIGURATION_GUARDS\n' > /evidence/stage.txt
 cp config.h config_components.h /evidence/
 cp ffbuild/config.mak /evidence/config.mak
 # Reject the concrete external linkage previously observed in the broad binary.
-if grep -Eq '^#define CONFIG_(GPL|NONFREE|VERSION3|NETWORK|CHROMAPRINT|LIBOPENH264|LIBX264|LIBX265|LIBFFTW3|VAAPI|VDPAU|VULKAN) 1$' config.h config_components.h; then echo 'FORBIDDEN_CONFIG'; exit 1; fi
-for component in H264_DECODER AAC_DECODER MJPEG_DECODER MJPEG_ENCODER WRAPPED_AVFRAME_ENCODER PCM_S16LE_ENCODER MOV_DEMUXER JPEG_PIPE_DEMUXER MP4_MUXER IMAGE2_MUXER NULL_MUXER FILTER_UNITS_BSF H264_METADATA_BSF; do
- grep -qx "#define CONFIG_${component} 1" config_components.h
+if grep -Eq '^#define CONFIG_(GPL|NONFREE|VERSION3|NETWORK|CHROMAPRINT|LIBOPENH264|LIBX264|LIBX265|LIBFFTW3|ICONV|VAAPI|VDPAU|VULKAN) 1$' config.h config_components.h; then echo 'FORBIDDEN_CONFIG'; exit 1; fi
+for component in H264_DECODER AAC_DECODER MJPEG_DECODER MJPEG_ENCODER WRAPPED_AVFRAME_ENCODER PCM_S16LE_ENCODER MOV_DEMUXER IMAGE_JPEG_PIPE_DEMUXER MP4_MUXER IMAGE2_MUXER NULL_MUXER FILTER_UNITS_BSF H264_METADATA_BSF; do
+ grep -qx "#define CONFIG_${component} 1" config_components.h || { printf "Missing required component: %s\n" "$component" > /evidence/guard.log; exit 1; }
 done
 grep -qx '#define CONFIG_CBS_H264 1' config.h
 printf 'COMPILE\n' > /evidence/stage.txt

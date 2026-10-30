@@ -55,7 +55,9 @@ jobs:
           set -euo pipefail
           docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 1 --memory 192m --memory-swap 192m --pids-limit 32 --cap-drop ALL --security-opt no-new-privileges --tmpfs /scratch:rw,nosuid,noexec,size=16m,mode=1777 --tmpfs /tmp:rw,nosuid,noexec,size=16m \
             -v "$GITHUB_WORKSPACE/scripts/phase30-minimal-ffmpeg:/experiment:ro" -v "$RUNNER_TEMP/minimal-build:/build:ro" -v "$RUNNER_TEMP/minimal-evidence:/evidence:rw" \
-            node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d node /experiment/probe.cjs
+            node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d node /experiment/probe.cjs 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/pipeline.log"
+      - name: Report basic feasibility facts only
+        run: node scripts/phase30-minimal-ffmpeg/report-failure.cjs --success "$RUNNER_TEMP/minimal-evidence"
       - name: Report bounded experiment failure diagnostics
         if: failure()
         run: node scripts/phase30-minimal-ffmpeg/report-failure.cjs "$RUNNER_TEMP/minimal-evidence"
