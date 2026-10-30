@@ -1,7 +1,7 @@
 name: Phase30 minimal FFmpeg experiment
 on:
   push:
-    branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory]
+    branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory, research/phase30-native-bundle]
     paths:
       - 'scripts/phase30-minimal-ffmpeg/**'
       - '.github/workflows/phase30-minimal-ffmpeg.yml'
@@ -30,6 +30,7 @@ jobs:
       - name: Source archive boundary tests
         run: |
           set -euo pipefail
+          python3 scripts/phase30-minimal-ffmpeg/test_bundle.py
           python3 scripts/phase30-minimal-ffmpeg/test_source.py 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/archive-tests.txt"
       - name: Acquire exact public source and immutable existing builder
         shell: bash
