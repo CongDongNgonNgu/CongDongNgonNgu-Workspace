@@ -22,8 +22,10 @@ gcc --version > /evidence/compiler.txt
 ld --version > /evidence/binutils.txt
 getconf GNU_LIBC_VERSION > /evidence/builder-libc.txt
 cat /etc/os-release > /evidence/builder-os.txt
+printf 'CONFIGURE\n' > /evidence/stage.txt
 timeout 120 ../source/configure "${args[@]}" > /evidence/configure.log 2>&1
 if grep -q 'WARNING:' /evidence/configure.log; then echo 'CONFIGURE_WARNING_REJECTED'; exit 1; fi
+printf 'CONFIGURATION_GUARDS\n' > /evidence/stage.txt
 cp config.h config_components.h /evidence/
 cp ffbuild/config.mak /evidence/config.mak
 # Reject the concrete external linkage previously observed in the broad binary.
@@ -32,7 +34,9 @@ for component in H264_DECODER AAC_DECODER MJPEG_DECODER MJPEG_ENCODER WRAPPED_AV
  grep -qx "#define CONFIG_${component} 1" config_components.h
 done
 grep -qx '#define CONFIG_CBS_H264 1' config.h
+printf 'COMPILE\n' > /evidence/stage.txt
 timeout 900 make -j2 ffmpeg ffprobe > /evidence/build.log 2>&1
+printf 'INSPECT\n' > /evidence/stage.txt
 cp ffmpeg ffprobe /build/
 for tool in ffmpeg ffprobe; do
  sha256sum "/build/$tool" > "/evidence/$tool.sha256"
