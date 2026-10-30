@@ -19,6 +19,8 @@ BINARY_PINS = {
     'ffprobe': '64c3340d0325afa37fff5015bfacf162095103dc2cbd319d799d70cc9633d24e',
 }
 EVIDENCE = ('config_components.h', 'config.h', 'config.mak', 'ffmpeg.dynamic.txt', 'ffprobe.dynamic.txt', 'ffmpeg.versions.txt', 'ffprobe.versions.txt', 'configure-args.txt', 'compiler.txt', 'binutils.txt', 'builder-libc.txt', 'builder-os.txt')
+RUNTIME = ('ffmpeg.link-map.txt', 'ffmpeg.link-trace.txt', 'ffprobe.link-map.txt', 'ffprobe.link-trace.txt', 'relink-binaries.sha256', 'runtime-input-paths.txt', 'runtime-inputs.tsv', 'gcc-runtime-locations.txt', 'system-package-versions.txt', 'system-libc-copyright.txt')
+GCC_NOTICES = {'COPYING.RUNTIME': '9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74', 'COPYING3': '8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903'}
 NOTICES = ('LICENSE.md', 'COPYING.GPLv2', 'COPYING.GPLv3', 'COPYING.LGPLv2.1', 'COPYING.LGPLv3', 'CREDITS')
 
 
@@ -148,6 +150,12 @@ def assemble(build, source, evidence, output):
         if not safe_name(name) or '/' in name:
             raise ValueError('CANDIDATE_EVIDENCE_NAME')
         members['evidence/' + name] = read_material(pathlib.Path(evidence) / name, pin['sha256'], pin['bytes'])
+    for name in RUNTIME:
+        members['evidence/' + name] = read_material(pathlib.Path(evidence) / name)
+    for name, pin in GCC_NOTICES.items():
+        members['notices/gcc/' + name] = read_material(here / 'notices/gcc' / name, pin)
+    members['build/link-provenance.sh'] = read_material(here / 'link-provenance.sh')
+    members['build/gcc-notice-source.json'] = read_material(here / 'notices/gcc/manifest.json')
     members['build/build.sh'] = read_material(here / 'build.sh', 'ffbcec79112bc6f19a6e565feac98fa862cd6a19a6a7579d858585e4ecc00f08')
     members['build/workflow.yml'] = read_material(repo / '.github/workflows/phase30-minimal-ffmpeg.yml')
     members['build/check-source.py'] = read_material(here / 'check-source.py')
@@ -163,6 +171,11 @@ To reproduce compilation use those reviewed nonroot/no-network Docker constraint
 build/build.sh available as /experiment/build.sh, fresh writable /build and /evidence directories; run bash /experiment/build.sh.
 Generated configure arguments/configuration, compiler/binutils, OS/libc and ELF evidence accompany the source.
 CLI executables dynamically require system libc.so.6/libm.so.6 and observed GLIBC through2.35; no Render compatibility is claimed.
+GCC14.3.0 runtime exception and GPLv3 license texts are retained unchanged under notices/gcc; source identity is build/gcc-notice-source.json.
+Actual compiler runtime/startup input paths/hashes, package versions, original system-libc copyright and full relink traces/maps are in evidence/.
+Relink diagnostics must leave the preserved original pair byte-identical. Shared system libraries and object/archive inputs are identified, not separately copied here.
+To reproduce diagnostics, additionally mount the candidate GCC notices at /experiment/notices/gcc and use recorded read-only original pair/source plus writable objects/evidence mounts.
+These materials support engineering classification; no source/notice clearance is inferred without independent review of actual results.
 GNU time is a separately reviewed executable/distribution, not part of this candidate.
 No native publication, app adoption, security/resource acceptance or attachment activation is authorized by this archive.
 '''

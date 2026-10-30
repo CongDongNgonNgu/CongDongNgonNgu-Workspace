@@ -1,0 +1,18 @@
+{
+  "commit": "c9cd41fba9ebd288c4f101e4b99da934bcb96a11",
+  "officialAndMirrorTagsMatch": true,
+  "files": [
+    {
+      "file": "COPYING.RUNTIME",
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "source": "https://raw.githubusercontent.com/gcc-mirror/gcc/c9cd41fba9ebd288c4f101e4b99da934bcb96a11/COPYING.RUNTIME"
+    },
+    {
+      "file": "COPYING3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source": "https://raw.githubusercontent.com/gcc-mirror/gcc/c9cd41fba9ebd288c4f101e4b99da934bcb96a11/COPYING3"
+    }
+  ]
+}
