@@ -1,0 +1,71 @@
+name: Phase30 minimal FFmpeg experiment
+on:
+  push:
+    branches: [research/phase30-minimal-ffmpeg]
+    paths:
+      - 'scripts/phase30-minimal-ffmpeg/**'
+      - '.github/workflows/phase30-minimal-ffmpeg.yml'
+permissions:
+  contents: read
+concurrency:
+  group: phase30-minimal-ffmpeg-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Check experiment syntax
+        run: |
+          set -euo pipefail
+          mkdir "$RUNNER_TEMP/minimal-evidence"
+          printf 'EXPERIMENT_ONLY_NOT_ACCEPTANCE\n' > "$RUNNER_TEMP/minimal-evidence/stage.txt"
+          bash -n scripts/phase30-minimal-ffmpeg/build.sh
+          shellcheck scripts/phase30-minimal-ffmpeg/build.sh | tee "$RUNNER_TEMP/minimal-evidence/shellcheck.txt"
+          node --check scripts/phase30-minimal-ffmpeg/probe.cjs
+          node --test scripts/phase30-minimal-ffmpeg/report-failure.test.cjs scripts/phase30-minimal-ffmpeg/corrupt-fixture.test.cjs scripts/phase30-minimal-ffmpeg/prefix-sei-fixture.test.cjs
+      - name: Source archive boundary tests
+        run: |
+          set -euo pipefail
+          python3 scripts/phase30-minimal-ffmpeg/test_source.py 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/archive-tests.txt"
+      - name: Acquire exact public source and immutable existing builder
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir "$RUNNER_TEMP/minimal-build"
+          curl --fail --location --connect-timeout 15 --max-time 120 --max-filesize 20000000 --output "$RUNNER_TEMP/ffmpeg-source.tar.gz" 'https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/6dfaba896fddaea098abec8ac84ff67375a7c6f1'
+          printf '%s  %s\n' 'cd6175d64b7f152469d48ceffa0dcb3bf36bb3bcae42aece46570d48563cdb85' "$RUNNER_TEMP/ffmpeg-source.tar.gz" | sha256sum --check --strict
+          python3 scripts/phase30-minimal-ffmpeg/check-source.py "$RUNNER_TEMP/ffmpeg-source.tar.gz"
+          docker pull gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1
+          docker pull node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
+      - name: Build without network or application credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 2 --memory 4g --memory-swap 4g --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
+            -v "$RUNNER_TEMP/ffmpeg-source.tar.gz:/source.tar.gz:ro" -v "$GITHUB_WORKSPACE/scripts/phase30-minimal-ffmpeg:/experiment:ro" \
+            -v "$RUNNER_TEMP/minimal-build:/build:rw" -v "$RUNNER_TEMP/minimal-evidence:/evidence:rw" \
+            gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /experiment/build.sh 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/container.log"
+      - name: Run tiny synthetic command feasibility without network
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 1 --memory 192m --memory-swap 192m --pids-limit 32 --cap-drop ALL --security-opt no-new-privileges --tmpfs /scratch:rw,nosuid,noexec,size=16m,mode=1777 --tmpfs /tmp:rw,nosuid,noexec,size=16m \
+            -v "$GITHUB_WORKSPACE/scripts/phase30-minimal-ffmpeg:/experiment:ro" -v "$RUNNER_TEMP/minimal-build:/build:ro" -v "$RUNNER_TEMP/minimal-evidence:/evidence:rw" \
+            node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d node /experiment/probe.cjs 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/pipeline.log"
+      - name: Report basic feasibility facts only
+        run: node scripts/phase30-minimal-ffmpeg/report-failure.cjs --success "$RUNNER_TEMP/minimal-evidence"
+      - name: Report bounded experiment failure diagnostics
+        if: failure()
+        run: node scripts/phase30-minimal-ffmpeg/report-failure.cjs "$RUNNER_TEMP/minimal-evidence"
+      - name: Preserve bounded text evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: phase30-minimal-ffmpeg-evidence
+          path: ${{ runner.temp }}/minimal-evidence/
+          if-no-files-found: error
+          retention-days: 14

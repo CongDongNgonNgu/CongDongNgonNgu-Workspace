@@ -1,0 +1,6 @@
+* -text
+config.h -diff
+config_components.h -diff
+config.mak -diff
+compiler.txt -diff
+*.versions.txt -diff

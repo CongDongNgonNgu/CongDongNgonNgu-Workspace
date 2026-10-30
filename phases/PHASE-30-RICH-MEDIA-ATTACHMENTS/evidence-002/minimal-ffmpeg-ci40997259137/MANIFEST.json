@@ -1,0 +1,69 @@
+{
+    "scope":  "EXECUTED_CI_TEXT_INVENTORY_NOT_RENDER_OR_RELEASE_CLEARANCE",
+    "run":  40997259137,
+    "source":  "e108d3a08ebf26cc8a26e273b70db9082f511756",
+    "artifact":  12952290934,
+    "archiveSha256":  "e76eadf08c390d772cfba2b3e04142c3047835973646805404b91d06e1ac513c",
+    "files":  [
+                  {
+                      "file":  "config_components.h",
+                      "bytes":  75690,
+                      "sha256":  "2d148bc791cb57f17db86d5bcd8011956a10abd91cdfec3b8fbdca3f3f1ebfe5"
+                  },
+                  {
+                      "file":  "config.h",
+                      "bytes":  24609,
+                      "sha256":  "99970b0b636ab0ad787c8b5e3b2c86e303d0cffe8513ce80eaa80585e486397e"
+                  },
+                  {
+                      "file":  "config.mak",
+                      "bytes":  88982,
+                      "sha256":  "db47b38f95aae2526c65ab77587b95efdf997f54a831cd9a510c19239a6218c0"
+                  },
+                  {
+                      "file":  "ffmpeg.dynamic.txt",
+                      "bytes":  1444,
+                      "sha256":  "66c9e6effc4a7df26bfd3bb9d82a7039f5700db80ff275e2284c65f6b479ea51"
+                  },
+                  {
+                      "file":  "ffprobe.dynamic.txt",
+                      "bytes":  1444,
+                      "sha256":  "2e44a6b912c6555302c1ef7f370bbf570459456347ccf0712e7ecfcbaabea03a"
+                  },
+                  {
+                      "file":  "ffmpeg.versions.txt",
+                      "bytes":  4245,
+                      "sha256":  "8c9bce221ecb1a77bb8091c3749da5ee5e5800baf964f4309a8c812f56abd103"
+                  },
+                  {
+                      "file":  "ffprobe.versions.txt",
+                      "bytes":  3990,
+                      "sha256":  "a516f623183ddd9d6e189bf901bd3dbf9f34e0a80635402521958a5068883bf8"
+                  },
+                  {
+                      "file":  "configure-args.txt",
+                      "bytes":  643,
+                      "sha256":  "4e75f6af8f14055bc6e291e0712315c5a1db67e91a9220f7bafef297d206b07b"
+                  },
+                  {
+                      "file":  "compiler.txt",
+                      "bytes":  219,
+                      "sha256":  "23ffd2bf366750bda8699e8936206a483d3c4af464e09ea8990e212c44ae51c3"
+                  },
+                  {
+                      "file":  "binutils.txt",
+                      "bytes":  281,
+                      "sha256":  "c8a5239ca0e8268c178da2617843c3e92788711b1e1abafa232616bd487e729c"
+                  },
+                  {
+                      "file":  "builder-libc.txt",
+                      "bytes":  11,
+                      "sha256":  "d413ead7ce9065771e2e436981fabd86519efcf109a71c81ffa37dd397fa825b"
+                  },
+                  {
+                      "file":  "builder-os.txt",
+                      "bytes":  267,
+                      "sha256":  "59a77b5f2666d9c85c489bd1911a6eebbd91ef22fe48b90a3b75f1b21f3844d4"
+                  }
+              ]
+}
