@@ -11,11 +11,11 @@ args=(
  --disable-shared --enable-static --disable-gpl --disable-nonfree --disable-version3
  --disable-x86asm --enable-ffmpeg --enable-ffprobe --enable-avcodec --enable-avformat
  --enable-avfilter --enable-swscale --enable-swresample --enable-pthreads
- --enable-decoder=h264,aac,mjpeg --enable-parser=h264,aac,mjpeg
- --enable-demuxer=mov,image2,jpeg_pipe --enable-muxer=mp4,image2,null
- --enable-protocol=file,pipe --enable-bsf=filter_units,h264_metadata
- --enable-encoder=mjpeg,wrapped_avframe,pcm_s16le
- --enable-filter=scale,format,aformat,aresample
+ "--enable-decoder=h264,aac,mjpeg" "--enable-parser=h264,aac,mjpeg"
+ "--enable-demuxer=mov,image2,jpeg_pipe" "--enable-muxer=mp4,image2,null"
+ "--enable-protocol=file,pipe" "--enable-bsf=filter_units,h264_metadata"
+ "--enable-encoder=mjpeg,wrapped_avframe,pcm_s16le"
+ "--enable-filter=scale,format,aformat,aresample"
 )
 printf '%s\n' "${args[@]}" > /evidence/configure-args.txt
 gcc --version > /evidence/compiler.txt

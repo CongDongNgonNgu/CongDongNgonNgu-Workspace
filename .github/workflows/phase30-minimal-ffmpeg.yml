@@ -20,13 +20,16 @@ jobs:
           persist-credentials: false
       - name: Check experiment syntax
         run: |
+          set -euo pipefail
+          mkdir "$RUNNER_TEMP/minimal-evidence"
+          printf 'EXPERIMENT_ONLY_NOT_ACCEPTANCE\n' > "$RUNNER_TEMP/minimal-evidence/stage.txt"
           bash -n scripts/phase30-minimal-ffmpeg/build.sh
-          shellcheck scripts/phase30-minimal-ffmpeg/build.sh
+          shellcheck scripts/phase30-minimal-ffmpeg/build.sh | tee "$RUNNER_TEMP/minimal-evidence/shellcheck.txt"
           node --check scripts/phase30-minimal-ffmpeg/probe.cjs
       - name: Source archive boundary tests
         run: |
-          mkdir "$RUNNER_TEMP/minimal-evidence"
-          python3 scripts/phase30-minimal-ffmpeg/test_source.py
+          set -euo pipefail
+          python3 scripts/phase30-minimal-ffmpeg/test_source.py 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/archive-tests.txt"
       - name: Acquire exact public source and immutable existing builder
         shell: bash
         run: |
