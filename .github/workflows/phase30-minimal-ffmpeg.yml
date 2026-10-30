@@ -39,6 +39,7 @@ jobs:
           curl --fail --location --connect-timeout 15 --max-time 120 --max-filesize 20000000 --output "$RUNNER_TEMP/ffmpeg-source.tar.gz" 'https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/6dfaba896fddaea098abec8ac84ff67375a7c6f1'
           printf '%s  %s\n' 'cd6175d64b7f152469d48ceffa0dcb3bf36bb3bcae42aece46570d48563cdb85' "$RUNNER_TEMP/ffmpeg-source.tar.gz" | sha256sum --check --strict
           python3 scripts/phase30-minimal-ffmpeg/check-source.py "$RUNNER_TEMP/ffmpeg-source.tar.gz"
+          docker pull gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1
           docker pull node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
       - name: Build without network or application credentials
         shell: bash
@@ -47,7 +48,7 @@ jobs:
           docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 2 --memory 4g --memory-swap 4g --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
             -v "$RUNNER_TEMP/ffmpeg-source.tar.gz:/source.tar.gz:ro" -v "$GITHUB_WORKSPACE/scripts/phase30-minimal-ffmpeg:/experiment:ro" \
             -v "$RUNNER_TEMP/minimal-build:/build:rw" -v "$RUNNER_TEMP/minimal-evidence:/evidence:rw" \
-            node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d bash /experiment/build.sh 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/container.log"
+            gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /experiment/build.sh 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/container.log"
       - name: Run tiny synthetic command feasibility without network
         shell: bash
         run: |

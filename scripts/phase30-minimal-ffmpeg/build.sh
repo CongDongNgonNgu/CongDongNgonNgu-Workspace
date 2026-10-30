@@ -4,6 +4,8 @@ cd /build
 mkdir source
 # The host independently validates every archive member before this bounded extraction.
 tar --extract --gzip --file /source.tar.gz --directory source --strip-components=1 --no-same-owner --no-same-permissions
+mkdir configure-tmp
+export TMPDIR=/build/configure-tmp
 mkdir objects
 cd objects
 args=(

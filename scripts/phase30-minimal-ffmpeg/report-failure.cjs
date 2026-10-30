@@ -4,10 +4,10 @@ function annotation(name,text){return '::error title=FFmpeg experiment '+name+':
 function report(root){
  for(const name of ['stage.txt','configure.log','build.log','container.log']){
   const file=path.join(root,name);let descriptor;
-  try{descriptor=fs.openSync(file,'r');const info=fs.fstatSync(descriptor);if(!info.isFile())continue;const length=Math.min(info.size,2000),bytes=Buffer.alloc(length);fs.readSync(descriptor,bytes,0,length,Math.max(0,info.size-length));console.log(annotation(name,bytes.toString('utf8')));}
+  try{if(!fs.lstatSync(file).isFile())throw Error('REPORT_FILE_TYPE');descriptor=fs.openSync(file,fs.constants.O_RDONLY|(fs.constants.O_NOFOLLOW??0));const info=fs.fstatSync(descriptor);if(!info.isFile())continue;const length=Math.min(info.size,2000),bytes=Buffer.alloc(length);fs.readSync(descriptor,bytes,0,length,Math.max(0,info.size-length));console.log(annotation(name,bytes.toString('utf8')));}
   catch(error){if(error.code!=='ENOENT')throw error;}
   finally{if(descriptor!==undefined)fs.closeSync(descriptor);}
  }
 }
-module.exports={annotation};
+module.exports={annotation,report};
 if(require.main===module){if(process.argv.length!==3)throw Error('REPORT_ARGUMENTS');report(process.argv[2]);}
