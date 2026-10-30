@@ -1,7 +1,7 @@
 name: Phase30 minimal FFmpeg experiment
 on:
   push:
-    branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory, research/phase30-native-bundle]
+    branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory, research/phase30-native-bundle, research/phase30-link-provenance]
     paths:
       - 'scripts/phase30-minimal-ffmpeg/**'
       - '.github/workflows/phase30-minimal-ffmpeg.yml'
@@ -24,7 +24,8 @@ jobs:
           mkdir "$RUNNER_TEMP/minimal-evidence"
           printf 'EXPERIMENT_ONLY_NOT_ACCEPTANCE\n' > "$RUNNER_TEMP/minimal-evidence/stage.txt"
           bash -n scripts/phase30-minimal-ffmpeg/build.sh
-          shellcheck scripts/phase30-minimal-ffmpeg/build.sh | tee "$RUNNER_TEMP/minimal-evidence/shellcheck.txt"
+          bash -n scripts/phase30-minimal-ffmpeg/link-provenance.sh
+          shellcheck scripts/phase30-minimal-ffmpeg/build.sh scripts/phase30-minimal-ffmpeg/link-provenance.sh | tee "$RUNNER_TEMP/minimal-evidence/shellcheck.txt"
           node --check scripts/phase30-minimal-ffmpeg/probe.cjs
           node --test scripts/phase30-minimal-ffmpeg/inventory.test.cjs scripts/phase30-minimal-ffmpeg/report-failure.test.cjs scripts/phase30-minimal-ffmpeg/corrupt-fixture.test.cjs scripts/phase30-minimal-ffmpeg/prefix-sei-fixture.test.cjs
       - name: Source archive boundary tests
@@ -55,6 +56,15 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/phase30-minimal-ffmpeg/inventory.cjs "$RUNNER_TEMP/minimal-evidence" | tee "$RUNNER_TEMP/minimal-evidence/inventory.json"
+      - name: Observe bounded relink and compiler runtime provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 2 --memory 4g --memory-swap 4g --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
+            -v "$RUNNER_TEMP/minimal-build/objects:/build/objects:rw" -v "$RUNNER_TEMP/minimal-build/source:/build/source:ro" \
+            -v "$RUNNER_TEMP/minimal-build/ffmpeg:/original/ffmpeg:ro" -v "$RUNNER_TEMP/minimal-build/ffprobe:/original/ffprobe:ro" \
+            -v "$GITHUB_WORKSPACE/scripts/phase30-minimal-ffmpeg:/experiment:ro" -v "$RUNNER_TEMP/minimal-evidence:/evidence:rw" \
+            gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /experiment/link-provenance.sh
       - name: Run tiny synthetic command feasibility without network
         shell: bash
         run: |
@@ -121,5 +131,15 @@ jobs:
             ${{ runner.temp }}/minimal-evidence/shellcheck.txt
             ${{ runner.temp }}/minimal-evidence/stage.txt
             ${{ runner.temp }}/minimal-evidence/candidate-proof.json
+            ${{ runner.temp }}/minimal-evidence/ffmpeg.link-map.txt
+            ${{ runner.temp }}/minimal-evidence/ffmpeg.link-trace.txt
+            ${{ runner.temp }}/minimal-evidence/ffprobe.link-map.txt
+            ${{ runner.temp }}/minimal-evidence/ffprobe.link-trace.txt
+            ${{ runner.temp }}/minimal-evidence/relink-binaries.sha256
+            ${{ runner.temp }}/minimal-evidence/runtime-input-paths.txt
+            ${{ runner.temp }}/minimal-evidence/runtime-inputs.tsv
+            ${{ runner.temp }}/minimal-evidence/gcc-runtime-locations.txt
+            ${{ runner.temp }}/minimal-evidence/system-package-versions.txt
+            ${{ runner.temp }}/minimal-evidence/system-libc-copyright.txt
           if-no-files-found: error
           retention-days: 14
