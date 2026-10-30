@@ -3,7 +3,7 @@
 const {execFileSync}=require('node:child_process');
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root='/scratch',tools='/build',evidence='/evidence';
-const fixtures=require('./fixtures.json'),{corruptFixture}=require('./corrupt-fixture.cjs');
+const fixtures=require('./fixtures.json'),{corruptFixture}=require('./corrupt-fixture.cjs'),{prefixSyntheticSei}=require('./prefix-sei-fixture.cjs');
 const started=Date.now(),deadline=started+15000;
 function run(tool,args){const remaining=deadline-Date.now();if(remaining<1)throw Error('EXPERIMENT_DEADLINE');return execFileSync(path.join(tools,tool),args,{cwd:root,env:{OMP_NUM_THREADS:'1',TMPDIR:root},timeout:remaining,maxBuffer:131072,stdio:['ignore','pipe','pipe']}).toString('utf8');}
 const common=['-hide_banner','-nostdin','-y','-v','error','-threads','1','-filter_threads','1','-filter_complex_threads','1','-max_alloc','33554432','-xerror','-err_detect','explode'];
@@ -31,8 +31,9 @@ fs.writeFileSync(path.join(evidence,'pipeline.json'),JSON.stringify({status:'BAS
 console.log('MINIMAL_PIPELINE=BASIC_COMMANDS_PASS');
 // Positive controls precede absence assertions; all marker values are synthetic.
 const markers={title:'PHASE30_SYNTHETIC_TITLE',comment:'PHASE30_SYNTHETIC_COMMENT',sei:'PHASE30_SYNTHETIC_SEI_ONLY',stream:'PHASE30_SYNTHETIC_STREAM'};
-const decorated=path.join(root,'decorated.mp4'),sanitized=path.join(root,'sanitized.mp4');
-run('ffmpeg',[...common,...inputArgs(path.join(root,'videoOnly.mp4')),'-map','0:v:0','-c','copy','-metadata','title='+markers.title,'-metadata','comment='+markers.comment,'-metadata:s:v:0','handler_name='+markers.stream,'-bsf:v','h264_metadata=sei_user_data=11111111-2222-3333-4444-555555555555+'+markers.sei,'-movflags','+faststart',decorated]);
+const decorated=path.join(root,'decorated.mp4'),raw=path.join(root,'decorated-raw.mp4'),sanitized=path.join(root,'sanitized.mp4');
+run('ffmpeg',[...common,...inputArgs(path.join(root,'videoOnly.mp4')),'-map','0:v:0','-c','copy','-metadata','title='+markers.title,'-metadata','comment='+markers.comment,'-metadata:s:v:0','handler_name='+markers.stream,'-bsf:v','h264_metadata=sei_user_data=11111111-2222-3333-4444-555555555555+'+markers.sei,'-movflags','+faststart',raw]);
+const rawBytes=fs.readFileSync(raw),rawHash=crypto.createHash('sha256').update(rawBytes).digest('hex');fs.writeFileSync(path.join(evidence,'sei-source.json'),JSON.stringify({rawHash,bytes:rawBytes.length},null,2));fs.writeFileSync(decorated,prefixSyntheticSei(rawBytes),{flag:'wx',mode:0o600});
 const decoratedBytes=fs.readFileSync(decorated),decoratedHash=crypto.createHash('sha256').update(decoratedBytes).digest('hex');
 const sourceInfo=probe(decorated);decode(decorated);
 if(sourceInfo.format?.tags?.title!==markers.title||sourceInfo.format?.tags?.comment!==markers.comment||sourceInfo.streams[0]?.tags?.handler_name!==markers.stream||!decoratedBytes.includes(Buffer.from(markers.sei)))throw Error('METADATA_POSITIVE_CONTROL');
@@ -40,7 +41,7 @@ function seiCount(file){const frames=JSON.parse(run('ffprobe',['-v','error','-pr
 const sourceSei=seiCount(decorated);if(sourceSei<1)throw Error('SEI_POSITIVE_CONTROL');
 normalize(decorated,sanitized,false);decode(sanitized);const normalizedInfo=probe(sanitized),normalizedBytes=fs.readFileSync(sanitized),outputSei=seiCount(sanitized);
 if(outputSei!==0||normalizedInfo.format?.tags?.title!==undefined||normalizedInfo.format?.tags?.comment!==undefined||Object.values(markers).some(marker=>normalizedBytes.includes(Buffer.from(marker)))||normalizedInfo.streams[0]?.tags?.handler_name!=='VideoHandler')throw Error('SYNTHETIC_METADATA_SURVIVED');
-if(crypto.createHash('sha256').update(fs.readFileSync(decorated)).digest('hex')!==decoratedHash)throw Error('SOURCE_MUTATED');
+if(crypto.createHash('sha256').update(fs.readFileSync(decorated)).digest('hex')!==decoratedHash||crypto.createHash('sha256').update(fs.readFileSync(raw)).digest('hex')!==rawHash)throw Error('SOURCE_MUTATED');
 const corrupt=corruptFixture(Buffer.from(fixtures.videoOnly.base64,'base64')),corrupted=path.join(root,'corrupted.mp4');fs.writeFileSync(corrupted,corrupt.bytes,{flag:'wx',mode:0o600});
 if(probe(corrupted).streams[0]?.codec_name!=='h264')throw Error('CORRUPT_CONTAINER_NOT_PROBED');
 let corruptExit;

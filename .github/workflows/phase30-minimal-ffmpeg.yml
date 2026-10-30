@@ -26,7 +26,7 @@ jobs:
           bash -n scripts/phase30-minimal-ffmpeg/build.sh
           shellcheck scripts/phase30-minimal-ffmpeg/build.sh | tee "$RUNNER_TEMP/minimal-evidence/shellcheck.txt"
           node --check scripts/phase30-minimal-ffmpeg/probe.cjs
-          node --test scripts/phase30-minimal-ffmpeg/report-failure.test.cjs scripts/phase30-minimal-ffmpeg/corrupt-fixture.test.cjs
+          node --test scripts/phase30-minimal-ffmpeg/report-failure.test.cjs scripts/phase30-minimal-ffmpeg/corrupt-fixture.test.cjs scripts/phase30-minimal-ffmpeg/prefix-sei-fixture.test.cjs
       - name: Source archive boundary tests
         run: |
           set -euo pipefail

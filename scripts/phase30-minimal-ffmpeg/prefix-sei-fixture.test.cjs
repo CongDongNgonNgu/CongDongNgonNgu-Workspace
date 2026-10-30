@@ -1,0 +1,7 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),{createHash}=require('node:crypto');
+const {prefixSyntheticSei}=require('./prefix-sei-fixture.cjs'),fixture=require('./sei-fixture.json');
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+test('reorders only exact owned first-sample SEI bytes and preserves input',()=>{const original=Buffer.from(fixture.base64,'base64'),snapshot=Buffer.from(original);assert.equal(hash(original),fixture.sha256);const result=prefixSyntheticSei(original);assert.equal(hash(result),fixture.prefixedSha256);assert.equal(result.length,original.length);assert.deepEqual(original,snapshot);assert.deepEqual(result.subarray(0,958),original.subarray(0,958));assert.deepEqual(result.subarray(1082),original.subarray(1082));});
+test('places verified SEI before IDR while preserving each NAL payload',()=>{const original=Buffer.from(fixture.base64,'base64'),result=prefixSyntheticSei(original);assert.equal(result.readUInt32BE(958),47);assert.equal(result[962]&31,6);assert.equal(result.readUInt32BE(1009),69);assert.equal(result[1013]&31,5);assert.deepEqual(result.subarray(958,1009),original.subarray(1031,1082));assert.deepEqual(result.subarray(1009,1082),original.subarray(958,1031));});
+test('rejects unknown source and duplicate mutation',()=>{assert.throws(()=>prefixSyntheticSei(Buffer.alloc(1109)),/OWNED_SEI_FIXTURE_REQUIRED/);const corrected=prefixSyntheticSei(Buffer.from(fixture.base64,'base64'));assert.throws(()=>prefixSyntheticSei(corrected),/OWNED_SEI_FIXTURE_REQUIRED/);});
