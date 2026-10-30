@@ -15,4 +15,5 @@ jobs:
           persist-credentials: false
       - run: node --check scripts/production-availability-monitor.mjs
       - run: node --test scripts/production-availability-monitor.test.mjs
+      - run: node --test scripts/phase30-minimal-ffmpeg/inventory.test.cjs
       - run: git diff --check

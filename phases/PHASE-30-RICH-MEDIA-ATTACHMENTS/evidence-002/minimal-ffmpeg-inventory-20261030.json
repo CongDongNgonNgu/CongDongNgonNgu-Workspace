@@ -1,0 +1,48 @@
+{
+    "scope":  "EXECUTED_INVENTORY_EXPERIMENT_ONLY",
+    "phase":  30,
+    "subphase":  "LNG-30-002",
+    "source":  "6245df9e91f50c759fc779ec62bde2ae56546020",
+    "pr":  189,
+    "nativeCi":  {
+                     "run":  41005997634,
+                     "job":  123900922881,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "actualBuild":  "PASS",
+                     "completeInventory":  "PASS",
+                     "syntheticProbe":  "PASS"
+                 },
+    "monitorCi":  {
+                      "run":  41006057340,
+                      "conclusion":  "success"
+                  },
+    "localTests":  {
+                       "tests":  61,
+                       "pass":  60,
+                       "skip":  1,
+                       "failed":  0,
+                       "skipReason":  "Existing Windows symlink case; Linux CI required",
+                       "sandboxRetry":  "Read-only sandbox denied temporary mkdtemp; authorized filesystem-capable rerun passed"
+                   },
+    "inventory":  {
+                      "enabledConfiguration":  90,
+                      "enabledComponents":  36,
+                      "libraries":  [
+                                        "libc.so.6",
+                                        "libm.so.6"
+                                    ],
+                      "maximumObservedGlibc":  "2.35",
+                      "baselineRun":  40997259137
+                  },
+    "independentReview":  "APPROVE_NARROW_WORKSPACE_SOURCE_AND_EXECUTED_INVENTORY_EXPERIMENT",
+    "remediatedFinding":  "Explicit bash and set -euo pipefail prevent tee from masking guard failure",
+    "amendment":  "PROPOSED_NOT_ADOPTED",
+    "binaryPublication":  "NOT_RUN",
+    "backendAdoption":  "NOT_RUN",
+    "renderAcceptance":  "NOT_RUN",
+    "providerAuthorizationAcceptance":  "NOT_RUN",
+    "storageResidual":  "NOT_RUN",
+    "databaseResidual":  "NOT_RUN",
+    "phase31Implemented":  false
+}
