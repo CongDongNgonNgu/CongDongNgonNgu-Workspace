@@ -1,0 +1,57 @@
+{
+    "scope":  "EXECUTED_INTERNAL_CI_CANDIDATE_ASSEMBLY_ONLY",
+    "phase":  30,
+    "subphase":  "LNG-30-002",
+    "source":  "33230cd61c9e8199c821aa329b7c1bbecd20646e",
+    "pr":  190,
+    "nativeCi":  {
+                     "run":  41007414538,
+                     "job":  123905666013,
+                     "conclusion":  "success",
+                     "boundaryTests":  "PASS",
+                     "sourceBuild":  "PASS",
+                     "inventory":  "PASS",
+                     "syntheticProbe":  "PASS",
+                     "candidateAssemblyAndReadback":  "PASS"
+                 },
+    "monitorCi":  {
+                      "run":  41007418893,
+                      "conclusion":  "success"
+                  },
+    "preservedFailure":  {
+                             "run":  41006715517,
+                             "source":  "643c3ae8323a18c9fe830aaf56c5b97beecabf29",
+                             "cause":  "Expected boundary-test-first missing assembler",
+                             "nativeBuild":  "SKIPPED"
+                         },
+    "supersededRun":  {
+                          "run":  41007362281,
+                          "source":  "4abe3d43b1e03833cfe62003bef13235d2d9349d",
+                          "conclusion":  "cancelled"
+                      },
+    "artifact":  {
+                     "id":  12956052943,
+                     "bytes":  84139,
+                     "sha256":  "f8301ed99d3deccc6f1ce41f6bd30937e3f9f8155c6c1b51ec640163ea49e55f",
+                     "all40MembersInTextAllowlist":  true,
+                     "nativeFilesUploaded":  false
+                 },
+    "candidate":  {
+                      "bytes":  22309849,
+                      "sha256":  "d021d7c0dcecde4c50aee4f4e65cccc03a6b24e26deec0a9f55e3a9cae1cdc62",
+                      "members":  27,
+                      "readback":  "PASS",
+                      "sameInputTwoWrites":  "IDENTICAL",
+                      "independentFullBundleReproducibility":  "NOT_RUN",
+                      "publicAvailability":  "NONE_RUNNER_LOCAL_ONLY"
+                  },
+    "independentReview":  "APPROVE_NARROW_INTERNAL_SOURCE_AND_CI_ASSEMBLY",
+    "remainingSourceMaterial":  "Original GCC14.3.0 COPYING.RUNTIME/COPYING3 and actual compiler runtime/startup link provenance before public source-notice closure",
+    "nativePublication":  "NOT_RUN",
+    "licenseClearance":  "HOLD",
+    "backendAdoption":  "NOT_RUN",
+    "renderAcceptance":  "NOT_RUN",
+    "storageResidual":  "NOT_RUN",
+    "databaseResidual":  "NOT_RUN",
+    "phase31Implemented":  false
+}
