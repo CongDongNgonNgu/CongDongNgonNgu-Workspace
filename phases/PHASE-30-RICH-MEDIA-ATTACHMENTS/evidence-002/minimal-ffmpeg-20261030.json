@@ -1,0 +1,138 @@
+{
+    "project":  "CongDongNgonNgu",
+    "phase":  30,
+    "subphase":  "LNG-30-002",
+    "date":  "2026-10-30",
+    "scope":  "ISOLATED_CI_BASIC_COMMAND_FEASIBILITY_ONLY",
+    "workspaceSource":  "14ae1618b33d41ce75f36d087e48efb508b455c4",
+    "runId":  40994435701,
+    "runUrl":  "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/actions/runs/40994435701",
+    "conclusion":  "success",
+    "jobId":  123864150952,
+    "steps":  [
+                  {
+                      "name":  "Set up job",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Check experiment syntax",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Source archive boundary tests",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Acquire exact public source and immutable existing builder",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Build without network or application credentials",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Run tiny synthetic command feasibility without network",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Report basic feasibility facts only",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Report bounded experiment failure diagnostics",
+                      "conclusion":  "skipped"
+                  },
+                  {
+                      "name":  "Preserve bounded text evidence only",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Complete job",
+                      "conclusion":  "success"
+                  }
+              ],
+    "sourceCommit":  "6dfaba896fddaea098abec8ac84ff67375a7c6f1",
+    "sourceArchiveBytes":  17330151,
+    "sourceArchiveSHA256":  "cd6175d64b7f152469d48ceffa0dcb3bf36bb3bcae42aece46570d48563cdb85",
+    "builder":  "gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1",
+    "runtime":  "node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d",
+    "compiler":  "GCC14.3.0",
+    "builderLibc":  "glibc2.36",
+    "ffmpegSHA256":  "2af1963c499a3005ad4d6037794b9e4bc383c7a1c0f545267297195d68f9ccee",
+    "ffprobeSHA256":  "64c3340d0325afa37fff5015bfacf162095103dc2cbd319d799d70cc9633d24e",
+    "pipeline":  {
+                     "status":  "BASIC_COMMAND_FEASIBILITY_ONLY",
+                     "elapsedMs":  67,
+                     "results":  [
+                                     {
+                                         "name":  "videoOnly",
+                                         "sourceHash":  "3167ce28e695d52798ce715cd4969275b1828b4fc7d7ebbca3bdea6de70d9d24",
+                                         "sourceStreams":  1,
+                                         "outputStreams":  1,
+                                         "width":  128,
+                                         "height":  72,
+                                         "thumbnailWidth":  128,
+                                         "thumbnailHeight":  72
+                                     },
+                                     {
+                                         "name":  "withAudio",
+                                         "sourceHash":  "2ef27e95df445401f512f2e6f07674ae155f8f14b866001100889fbf0839019f",
+                                         "sourceStreams":  2,
+                                         "outputStreams":  2,
+                                         "width":  128,
+                                         "height":  72,
+                                         "thumbnailWidth":  128,
+                                         "thumbnailHeight":  72
+                                     }
+                                 ],
+                     "resourceAcceptance":  "NOT_RUN",
+                     "applicationAuthorization":  "NOT_RUN",
+                     "renderAcceptance":  "NOT_RUN"
+                 },
+    "artifacts":  [
+                      {
+                          "id":  12950159593,
+                          "name":  "phase30-minimal-ffmpeg-evidence",
+                          "size_in_bytes":  80934,
+                          "expired":  false
+                      }
+                  ],
+    "archiveGuardTests":  20,
+    "reporterTestsLinux":  4,
+    "fullWorker":  "NOT_RUN",
+    "mediaSecurity":  "NOT_RUN",
+    "completeSourceNoticeClosure":  "PENDING",
+    "render":  "NOT_RUN",
+    "providerProbes":  "NOT_RUN",
+    "applicationFixtures":  "NOT_CREATED_BY_EXPERIMENT",
+    "leakCounts":  "NOT_RUN",
+    "dbStorageResiduals":  "NOT_RUN",
+    "productionChanges":  "NONE",
+    "phase31":  "NOT_STARTED",
+    "priorRuns":  [
+                      40993108394,
+                      40993419402,
+                      40993620369,
+                      40993874243,
+                      40994139028
+                  ],
+    "sourceReview":  "APPROVE_ISOLATED_EXPERIMENT_ONLY",
+    "prMainLifecycle":  "PENDING_AUTHENTICATED_GITHUB_ACCESS",
+    "phase30Status":  "IN_PROGRESS",
+    "lng30002":  "IN_PROGRESS",
+    "lng30003Through006":  "PLANNED_NOT_STARTED",
+    "experimentSourceTree":  "be26617840ba890ad74feecee7d4bdd6a8c06708",
+    "experimentWorkflowBlob":  "2f15f6c41d3f0360d002b9aa01984bc910a79b69",
+    "ciTestedExperimentUnchanged":  true,
+    "workspaceMonitorTests":  "12_PASS",
+    "independentEvidenceReview":  "APPROVE_BASIC_COMMAND_FEASIBILITY_ONLY",
+    "independentPublicCIVerification":  "EXACT_SOURCE_JOB_AND_ANNOTATIONS_MATCH"
+}
