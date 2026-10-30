@@ -76,7 +76,7 @@ class CandidateTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 bundle.write_archive(target, {'safe/file': b'abc'})
             self.assertEqual(target.read_bytes(), b'owned')
-            for name in ('../escape', '/absolute', 'a\\b', 'a//b', 'a/./b'):
+            for name in ('../escape', '/absolute', 'a\\b', 'a//b', 'a/./b', 'a/new\nline', 'a/space name'):
                 with self.subTest(name=name):
                     with self.assertRaises(ValueError):
                         bundle.write_archive(pathlib.Path(directory) / 'new.tar.gz', {name: b'abc'})
@@ -85,6 +85,51 @@ class CandidateTests(unittest.TestCase):
         data = self.fixture([('source/ffmpeg.tar.gz', b'abc', tarfile.REGTYPE)])
         with self.assertRaises((ValueError, tarfile.TarError, EOFError)):
             self.verify(data[:20], self.expected())
+
+    def test_material_hash_size_and_regular_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = pathlib.Path(directory) / 'material'
+            target.write_bytes(b'abc')
+            self.assertEqual(bundle.read_material(target, hashlib.sha256(b'abc').hexdigest(), 3), b'abc')
+            for sha, size in [('0' * 64, 3), (None, 4)]:
+                with self.assertRaises(ValueError):
+                    bundle.read_material(target, sha, size)
+            target.write_bytes(b'')
+            with self.assertRaises(ValueError):
+                bundle.read_material(target)
+            with self.assertRaises(ValueError):
+                bundle.read_material(pathlib.Path(directory))
+
+    def test_material_symlink_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = pathlib.Path(directory) / 'material'
+            target.write_bytes(b'abc')
+            link = pathlib.Path(directory) / 'link'
+            link.symlink_to(target)
+            with self.assertRaises(ValueError):
+                bundle.read_material(link)
+
+    def test_complete_gzip_footer_crc_and_trailing_content(self):
+        data = self.fixture([('source/ffmpeg.tar.gz', b'abc', tarfile.REGTYPE)])
+        for changed in (data[:-8], data[:-8] + bytes([data[-8] ^ 1]) + data[-7:], data + b'garbage', data + data):
+            with self.subTest(length=len(changed)):
+                with self.assertRaises(ValueError):
+                    self.verify(changed, self.expected())
+        raw = gzip.decompress(data)
+        padded = bytearray(raw)
+        padded[515] = 1
+        with self.assertRaises(ValueError):
+            self.verify(gzip.compress(padded), self.expected())
+        # A second tar after the first archive's terminator is not zero padding.
+        with self.assertRaises(ValueError):
+            self.verify(gzip.compress(raw + raw), self.expected())
+        with self.assertRaises(ValueError):
+            self.verify(gzip.compress(raw + b'garbage'), self.expected())
+
+    def test_parent_file_collision_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(ValueError):
+                bundle.write_archive(pathlib.Path(directory) / 'out.tar.gz', {'a': b'x', 'a/file': b'y'})
 
 if __name__ == '__main__':
     unittest.main()
