@@ -4,6 +4,7 @@ import pathlib
 import tarfile
 import tempfile
 import unittest
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('source_check', pathlib.Path(__file__).with_name('check-source.py'))
 module = importlib.util.module_from_spec(spec)
@@ -49,7 +50,59 @@ class SourceArchiveTests(unittest.TestCase):
 
     def test_rejects_backslash_paths(self):
         with self.assertRaises(ValueError):
-            self.check_members([(ROOT + 'sub\\outside', tarfile.REGTYPE)])
+            self.check_members([(ROOT + 'sub' + chr(92) + 'outside', tarfile.REGTYPE)])
+
+    def test_rejects_hardlinks(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'link', tarfile.LNKTYPE)])
+
+    def test_rejects_fifo(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'pipe', tarfile.FIFOTYPE)])
+
+    def test_rejects_device(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'device', tarfile.CHRTYPE)])
+
+    def test_rejects_file_parent(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'parent', tarfile.REGTYPE), (ROOT + 'parent/child', tarfile.REGTYPE)])
+
+    def test_rejects_reverse_file_parent(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'parent/child', tarfile.REGTYPE), (ROOT + 'parent', tarfile.REGTYPE)])
+
+    def test_rejects_directory_file_alias(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'parent/', tarfile.DIRTYPE), (ROOT + 'parent', tarfile.REGTYPE)])
+
+    def test_rejects_member_limit(self):
+        with patch.object(module, 'MAX_MEMBERS', 1), self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'a', tarfile.REGTYPE), (ROOT + 'b', tarfile.REGTYPE)])
+
+    def test_rejects_expanded_limit(self):
+        with patch.object(module, 'MAX_EXPANDED', 0), self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'a', tarfile.REGTYPE)])
+
+    def test_rejects_file_limit(self):
+        with patch.object(module, 'MAX_FILE', 0), self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'a', tarfile.REGTYPE)])
+
+    def test_rejects_archive_limit(self):
+        with patch.object(module, 'MAX_ARCHIVE', 1), self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'a', tarfile.REGTYPE)])
+
+    def test_rejects_empty_tree(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT, tarfile.DIRTYPE)])
+
+    def test_rejects_contiguous_type(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'contiguous', tarfile.CONTTYPE)])
+
+    def test_rejects_block_device(self):
+        with self.assertRaises(ValueError):
+            self.check_members([(ROOT + 'block', tarfile.BLKTYPE)])
 
 if __name__ == '__main__':
     unittest.main()
