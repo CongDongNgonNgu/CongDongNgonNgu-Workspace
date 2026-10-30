@@ -1,0 +1,59 @@
+
+Version symbols section '.gnu.version' contains 143 entries:
+ Addr: 0x0000000000401a8e  Offset: 0x00001a8e  Link: 6 (.dynsym)
+  000:   0 (*local*)       2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   4 (GLIBC_2.34) 
+  004:   5 (GLIBC_2.3.2)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  008:   6 (GLIBC_2.27)    2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  00c:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  010:   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  014:   8 (GLIBC_2.17)    3 (GLIBC_2.2.5)   1 (*global*)      3 (GLIBC_2.2.5)
+  018:   5 (GLIBC_2.3.2)   9 (GLIBC_2.7)     3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  01c:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  020:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  024:   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   4 (GLIBC_2.34)    3 (GLIBC_2.2.5)
+  028:   2 (GLIBC_2.2.5)   a (GLIBC_2.35)    2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  02c:   4 (GLIBC_2.34)    3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  030:   b (GLIBC_2.33)    3 (GLIBC_2.2.5)   5 (GLIBC_2.3.2)   3 (GLIBC_2.2.5)
+  034:   6 (GLIBC_2.27)    3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  038:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  03c:   b (GLIBC_2.33)    3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   c (GLIBC_2.3.4)
+  040:   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   7 (GLIBC_2.29)    d (GLIBC_2.28) 
+  044:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  048:   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  04c:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  050:   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   e (GLIBC_2.27)    3 (GLIBC_2.2.5)
+  054:   3 (GLIBC_2.2.5)   b (GLIBC_2.33)    3 (GLIBC_2.2.5)   5 (GLIBC_2.3.2)
+  058:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   c (GLIBC_2.3.4)   3 (GLIBC_2.2.5)
+  05c:   f (GLIBC_2.6)     3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  060:   3 (GLIBC_2.2.5)   7 (GLIBC_2.29)    3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  064:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  068:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  06c:   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  070:   4 (GLIBC_2.34)    3 (GLIBC_2.2.5)   5 (GLIBC_2.3.2)   3 (GLIBC_2.2.5)
+  074:   7 (GLIBC_2.29)    2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  078:  10 (GLIBC_2.14)    3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  07c:   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  080:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  084:   7 (GLIBC_2.29)    2 (GLIBC_2.2.5)   7 (GLIBC_2.29)    2 (GLIBC_2.2.5)
+  088:   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   3 (GLIBC_2.2.5)
+  08c:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+
+Version needs section '.gnu.version_r' contains 2 entries:
+ Addr: 0x0000000000401bb0  Offset: 0x00001bb0  Link: 7 (.dynstr)
+  000000: Version: 1  File: libc.so.6  Cnt: 11
+  0x0010:   Name: GLIBC_2.14  Flags: none  Version: 16
+  0x0020:   Name: GLIBC_2.6  Flags: none  Version: 15
+  0x0030:   Name: GLIBC_2.27  Flags: none  Version: 14
+  0x0040:   Name: GLIBC_2.28  Flags: none  Version: 13
+  0x0050:   Name: GLIBC_2.3.4  Flags: none  Version: 12
+  0x0060:   Name: GLIBC_2.33  Flags: none  Version: 11
+  0x0070:   Name: GLIBC_2.7  Flags: none  Version: 9
+  0x0080:   Name: GLIBC_2.17  Flags: none  Version: 8
+  0x0090:   Name: GLIBC_2.3.2  Flags: none  Version: 5
+  0x00a0:   Name: GLIBC_2.34  Flags: none  Version: 4
+  0x00b0:   Name: GLIBC_2.2.5  Flags: none  Version: 3
+  0x00c0: Version: 1  File: libm.so.6  Cnt: 4
+  0x00d0:   Name: GLIBC_2.35  Flags: none  Version: 10
+  0x00e0:   Name: GLIBC_2.29  Flags: none  Version: 7
+  0x00f0:   Name: GLIBC_2.27  Flags: none  Version: 6
+  0x0100:   Name: GLIBC_2.2.5  Flags: none  Version: 2

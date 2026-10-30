@@ -1,0 +1,133 @@
+{
+    "project":  "CongDongNgonNgu",
+    "phase":  30,
+    "subphase":  "LNG-30-002",
+    "scope":  "SYNTHETIC_METADATA_AND_CORRUPT_SLICE_PROBES_ONLY",
+    "source":  "e108d3a08ebf26cc8a26e273b70db9082f511756",
+    "runId":  40997259137,
+    "url":  "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/actions/runs/40997259137",
+    "jobId":  123873157000,
+    "conclusion":  "success",
+    "steps":  [
+                  {
+                      "name":  "Set up job",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Check experiment syntax",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Source archive boundary tests",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Acquire exact public source and immutable existing builder",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Build without network or application credentials",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Run tiny synthetic command feasibility without network",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Report basic feasibility facts only",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Report bounded experiment failure diagnostics",
+                      "conclusion":  "skipped"
+                  },
+                  {
+                      "name":  "Preserve bounded text evidence only",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                      "conclusion":  "success"
+                  },
+                  {
+                      "name":  "Complete job",
+                      "conclusion":  "success"
+                  }
+              ],
+    "archiveTests":  20,
+    "linuxNodeTests":  11,
+    "security":  {
+                     "status":  "SYNTHETIC_METADATA_AND_CORRUPT_SLICE_PROBES_ONLY",
+                     "metadataPositiveControl":  true,
+                     "sourceSei":  1,
+                     "outputSei":  0,
+                     "syntheticMarkersRemoved":  true,
+                     "sourceUnchanged":  true,
+                     "corruptSliceCount":  2,
+                     "corruptDecodeExit":  183,
+                     "fullWorker":  "NOT_RUN",
+                     "resourceAcceptance":  "NOT_RUN",
+                     "renderAcceptance":  "NOT_RUN",
+                     "authorizationAcceptance":  "NOT_RUN"
+                 },
+    "basicPipeline":  {
+                          "status":  "BASIC_COMMAND_FEASIBILITY_ONLY",
+                          "elapsedMs":  61,
+                          "results":  [
+                                          {
+                                              "name":  "videoOnly",
+                                              "sourceHash":  "3167ce28e695d52798ce715cd4969275b1828b4fc7d7ebbca3bdea6de70d9d24",
+                                              "sourceStreams":  1,
+                                              "outputStreams":  1,
+                                              "width":  128,
+                                              "height":  72,
+                                              "thumbnailWidth":  128,
+                                              "thumbnailHeight":  72
+                                          },
+                                          {
+                                              "name":  "withAudio",
+                                              "sourceHash":  "2ef27e95df445401f512f2e6f07674ae155f8f14b866001100889fbf0839019f",
+                                              "sourceStreams":  2,
+                                              "outputStreams":  2,
+                                              "width":  128,
+                                              "height":  72,
+                                              "thumbnailWidth":  128,
+                                              "thumbnailHeight":  72
+                                          }
+                                      ],
+                          "resourceAcceptance":  "NOT_RUN",
+                          "applicationAuthorization":  "NOT_RUN",
+                          "renderAcceptance":  "NOT_RUN"
+                      },
+    "artifactId":  12952290934,
+    "artifactBytes":  82021,
+    "artifactSHA256":  "e76eadf08c390d772cfba2b3e04142c3047835973646805404b91d06e1ac513c",
+    "dynamicLibraries":  [
+                             "libm.so.6",
+                             "libc.so.6"
+                         ],
+    "maximumObservedRequiredGLIBC":  "2.35",
+    "renderABI":  "NOT_RUN",
+    "fullWorker":  "NOT_RUN",
+    "resourceAcceptance":  "NOT_RUN",
+    "providerAuthorizationCleanup":  "NOT_RUN",
+    "completeMediaSecurity":  "NOT_RUN",
+    "fullSourceNoticeDistribution":  "NOT_PREPARED",
+    "priorFailedRuns":  [
+                            40995996913,
+                            40996432941
+                        ],
+    "productionMutated":  false,
+    "phase31Implemented":  false,
+    "workspacePR":  188,
+    "prStatus":  "DRAFT_PENDING_FINAL_EVIDENCE_REVIEW",
+    "phase30Status":  "IN_PROGRESS",
+    "lng30002":  "IN_PROGRESS",
+    "independentReview":  "APPROVE_NARROW_EXECUTED_PROBES_AND_WORKSPACE_PUBLICATION",
+    "inventoryPayloadHashesVerified":  12,
+    "observedEnabledComponentFlags":  36
+}

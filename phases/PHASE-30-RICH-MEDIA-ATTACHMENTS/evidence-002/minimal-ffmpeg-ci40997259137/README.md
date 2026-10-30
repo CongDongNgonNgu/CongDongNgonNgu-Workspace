@@ -1,0 +1,5 @@
+# Exact CI text inventory
+
+These files are byte-preserving copies of selected text members from CI40997259137/artifact12952290934. MANIFEST.json records every copied file length/hash. No executable, private URL, credential or source archive is committed here. config.h/config_components.h/config.mak, GCC compiler output and readelf version tables use scoped binary diff presentation to retain original generated whitespace; file bytes remain directly readable and independently hash-verified. No global whitespace/test setting is changed.
+
+Observed ELF dependencies and component inventory are evidence for candidate review, not Render ABI, full vulnerability/license or Production clearance. The original zip and full pinned source archive remain in the exact owned research directory recorded in the parent recovery note.
