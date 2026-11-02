@@ -9,6 +9,14 @@ spec = importlib.util.spec_from_file_location('bundle', pathlib.Path(__file__).w
 bundle = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(bundle)
 class RuntimeSourceTests(unittest.TestCase):
+    def test_cross_set_collision_cannot_overwrite_existing_material(self):
+        existing={'source/ffmpeg.tar.gz':b'original'}
+        with self.assertRaises(ValueError):
+            bundle.merge_members(existing, {'source/ffmpeg.tar.gz':b'changed'})
+        self.assertEqual(existing, {'source/ffmpeg.tar.gz':b'original'})
+        bundle.merge_members(existing, {'source/gcc/x':b'added'})
+        self.assertEqual(existing['source/gcc/x'], b'added')
+
     def test_required_materials_are_checked_before_candidate_assembly(self):
         with tempfile.TemporaryDirectory() as directory:
             root=pathlib.Path(directory)
