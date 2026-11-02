@@ -1,0 +1,2 @@
+gcc-* -text -diff
+glibc-COPYING.LIB -text -diff

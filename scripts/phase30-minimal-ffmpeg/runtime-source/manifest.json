@@ -1,0 +1,54 @@
+{
+  "scope": "COMPILER_AND_STARTUP_SOURCE_MATERIALS",
+  "gccCommit": "c9cd41fba9ebd288c4f101e4b99da934bcb96a11",
+  "glibcDebian": "2.36-9+deb12u10",
+  "downloads": [
+    {
+      "file": "glibc_2.36.orig.tar.xz",
+      "member": "source/glibc/glibc_2.36.orig.tar.xz",
+      "url": "https://snapshot.debian.org/file/d034128a6116dcf9e76c92f898ec63f4f4e65786",
+      "bytes": 19363988,
+      "sha256": "a543c02070d46ccaf866957efd13f10c924daa74c86a90a0254db09a92a708ee"
+    },
+    {
+      "file": "glibc_2.36-9+deb12u10.debian.tar.xz",
+      "member": "source/glibc/glibc_2.36-9+deb12u10.debian.tar.xz",
+      "url": "https://snapshot.debian.org/file/820dff0e89f9a499ee1238764e2dce271dacfbb3",
+      "bytes": 902612,
+      "sha256": "6ad2f9dfc88bec54f0bacab04d14f71dbd3eea0cedd91a23a8911fd09847fbc9"
+    },
+    {
+      "file": "glibc_2.36-9+deb12u10.dsc",
+      "member": "source/glibc/glibc_2.36-9+deb12u10.dsc",
+      "url": "https://snapshot.debian.org/file/bcd6c3bbcb5f51422bbfc953e5f61cb0a4f5dd97",
+      "bytes": 9765,
+      "sha256": "ba6d00fde9d2f11af56861674dc87c5dc5a7c3f2c1c0a7dd4d63d76639e6ec98"
+    }
+  ],
+  "local": [
+    {
+      "file": "gcc-libgcc2.c",
+      "member": "source/gcc/libgcc2.c",
+      "bytes": 74797,
+      "sha256": "0bf1fa3e4b9be1fd45a47682cb119d4f8fda17f02398d157a189d49c6f2d2919"
+    },
+    {
+      "file": "gcc-crtstuff.c",
+      "member": "source/gcc/crtstuff.c",
+      "bytes": 26399,
+      "sha256": "5859380c2242ce108b323fe216847df6f2be052fa98ca56eb6284daacda3befd"
+    },
+    {
+      "file": "gcc-Makefile.in",
+      "member": "source/gcc/Makefile.in",
+      "bytes": 39964,
+      "sha256": "c215d843ba933a8e63f4ae4f9848a58382bf53b15371970b4ff6a9623dea520c"
+    },
+    {
+      "file": "glibc-COPYING.LIB",
+      "member": "notices/glibc/COPYING.LIB",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    }
+  ]
+}
