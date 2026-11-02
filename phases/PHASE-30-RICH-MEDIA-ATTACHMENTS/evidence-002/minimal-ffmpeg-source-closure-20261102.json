@@ -1,0 +1,98 @@
+{
+  "scope": "EXECUTED_SOURCE_MATERIAL_CLOSURE_AND_INTERNAL_DELIVERY_PREPARATION_ONLY",
+  "date": "2026-11-02",
+  "project": "CongDongNgonNgu",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "pr": 192,
+  "source": "6a75d25ca7e7a7580836cfe444863d2f98b91cc1",
+  "nativeCi": {
+    "run": 41377326090,
+    "conclusion": "success",
+    "sourceBoundaryTests": 3,
+    "bundleBoundaryTests": 12,
+    "sourceArchiveTests": 20,
+    "nodeTests": 49,
+    "buildInventoryRelinkProbeAssemblyReadback": "PASS"
+  },
+  "monitorCi": {
+    "run": 41377332150,
+    "conclusion": "success"
+  },
+  "artifact": {
+    "id": 13111264915,
+    "bytes": 249896,
+    "sha256": "27a62269b20584677e9b68a7d91cea3ebb0f978b2b1e0ec392b3c4719acb62dd",
+    "nativeFilesUploaded": false
+  },
+  "candidate": {
+    "bytes": 42802980,
+    "sha256": "55a940a8015848021aa5340171eba6cf6dcec1b86852bbe533f80eae47b195d1",
+    "members": 50,
+    "readback": "PASS",
+    "sameInputTwoWrites": "IDENTICAL",
+    "independentFullBundleReproducibility": "NOT_RUN"
+  },
+  "preservedFailures": [
+    {
+      "run": 41376659141,
+      "source": "ec16e13f9e6d1c9152612eb6d5b97cad34867774",
+      "boundaryTests": "FAIL_BEFORE_SOURCE_ACQUISITION_AND_BUILD",
+      "note": "test-first missing source-material implementation"
+    },
+    {
+      "run": 41376872303,
+      "source": "ee9ca1f960abcbd248c8a97a5ced946c06230692",
+      "buildInventoryRelinkProbe": "PASS",
+      "candidate": "FAIL",
+      "diagnostic": "ValueError: RUNTIME_SOURCE_NAME",
+      "cause": "Trusted Debian package filename includes +; old safe-name grammar rejected it",
+      "remediation": "Allow benign + in bounded relative names and use exact Debian filename in regression test"
+    }
+  ],
+  "sourceMaterials": {
+    "fullGlibcOriginalAndDebianPatchesAndDsc": "PINNED_AND_RETAINED",
+    "gccThreeExactSourceBuildFiles": "PINNED_AND_RETAINED",
+    "originalNotices": "RETAINED",
+    "dscOpenPgpVerification": "NOT_RUN",
+    "fullyAppliedDebianTreeOrRebuild": "NOT_RUN",
+    "review": "APPROVE_ENGINEERING_SOURCE_MATERIAL_CLOSURE_AND_INTERNAL_DELIVERY_PREPARATION",
+    "reviewer": "minimal_adoption_review",
+    "legalGuarantee": false
+  },
+  "delivery": {
+    "trigger": "workflow_dispatch",
+    "input": "retain_delivery",
+    "default": false,
+    "requiredRef": "refs/heads/main",
+    "requiredPriorSteps": "SUCCESS",
+    "exactSoftwareArchiveOnly": true,
+    "retentionDays": 2,
+    "writePermissionsAdded": false,
+    "manualDeliveryRun": "NOT_RUN",
+    "publicRelease": "NOT_RUN"
+  },
+  "priorLifecycle": {
+    "pr": 191,
+    "mergedMain": "2873e4a95b8c016462a19cef14f6cf3a03de682c",
+    "finalHead": "6adc2883f1c7f629030e52d532ad5b0d9f25b802",
+    "reviewedTree": "12741088f693a678c8e9c7fd68998321182b4b68",
+    "finalPrCi": 41376252949,
+    "mainCi": 41376353998,
+    "conclusion": "success",
+    "reviewedTreeEqual": true,
+    "remoteAndLocalBranchDeleted": true
+  },
+  "backendFullMinimalWorker": "NOT_RUN",
+  "renderMediaAcceptance": "NOT_RUN",
+  "storageFixtureResidual": "NOT_RUN",
+  "dbFixtureResidual": "NOT_RUN",
+  "attachmentLeakCounts": "NOT_RUN",
+  "lng30001": "DONE",
+  "lng30002": "IN_PROGRESS",
+  "lng30003Through006": "PLANNED_NOT_STARTED",
+  "productionDbMutated": false,
+  "productionStorageActivated": false,
+  "paymentActivated": false,
+  "phase31Implemented": false
+}
