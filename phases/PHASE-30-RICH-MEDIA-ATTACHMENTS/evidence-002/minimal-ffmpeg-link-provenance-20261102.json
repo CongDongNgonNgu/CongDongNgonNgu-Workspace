@@ -1,0 +1,144 @@
+{
+  "scope": "EXECUTED_INTERNAL_LINK_PROVENANCE_AND_CANDIDATE_ONLY",
+  "reviewedOn": "2026-11-02",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "pr": 191,
+  "source": "062eae720b3069bdbef30bf00f80f52594032d99",
+  "nativeCi": {
+    "run": 41010699901,
+    "job": 123915666888,
+    "conclusion": "success",
+    "nodeTests": 49,
+    "bundleTests": 12,
+    "sourceTests": 20,
+    "buildInventoryProbeRelinkAndCandidate": "PASS"
+  },
+  "monitorCi": {
+    "run": 41010790633,
+    "job": 123915956245,
+    "conclusion": "success"
+  },
+  "artifact": {
+    "id": 12956759020,
+    "bytes": 249407,
+    "sha256": "56fc205bf57afbad46ae1fe020b85430dd38665c38b32a48771db2f1f0e0bb57",
+    "all50MembersInExactTextAllowlist": true,
+    "nativeFilesUploaded": false
+  },
+  "candidate": {
+    "bytes": 22477500,
+    "sha256": "14ab80a935a6b2e47bb82d90cdc3730ac3e6672153d53c40dbf5698b0207c11f",
+    "members": 41,
+    "readback": "PASS",
+    "sameInputTwoWrites": "IDENTICAL",
+    "independentFullBundleReproducibility": "NOT_RUN"
+  },
+  "materials": [
+    {
+      "name": "ffmpeg.link-map.txt",
+      "bytes": 632653,
+      "sha256": "0f42b2e32b188b314655336565395de150b98ff53bc5b0af52e4bd96705919cd"
+    },
+    {
+      "name": "ffmpeg.link-trace.txt",
+      "bytes": 4143,
+      "sha256": "60b57f2be917f3a872da1189321146fd829528c9980fe0aa8b5546834dcefc6d"
+    },
+    {
+      "name": "ffprobe.link-map.txt",
+      "bytes": 601052,
+      "sha256": "71a0f8cea7256cad7882318673245deb735b7f71588ffff9154bc9f98a5791df"
+    },
+    {
+      "name": "ffprobe.link-trace.txt",
+      "bytes": 3428,
+      "sha256": "2d865ff5d9a2199cdd11db2629141cb19a773098bc8624ec25602e7d5e4302ad"
+    },
+    {
+      "name": "relink-binaries.sha256",
+      "bytes": 314,
+      "sha256": "69d6868b15a5a29d71952a8fb76ae949e70b012f95c6d0fdd4f27f0b8dba262e"
+    },
+    {
+      "name": "runtime-input-paths.txt",
+      "bytes": 732,
+      "sha256": "68b1c649d7a7b2302f5ef51bee46b58a6bb0e6c26b0fce28336e438da14fee45"
+    },
+    {
+      "name": "runtime-inputs.tsv",
+      "bytes": 2592,
+      "sha256": "72dfa434e550f9b0898de89d12fc402e76e17230e4286551a05a10160260b41c"
+    },
+    {
+      "name": "gcc-runtime-locations.txt",
+      "bytes": 165,
+      "sha256": "feea5a0cce1890e9429d29909f6a4ee8d81ca9b9a4a76831fb0f9dcb56d24008"
+    },
+    {
+      "name": "system-package-versions.txt",
+      "bytes": 104,
+      "sha256": "157f6dfac159ec5e9493f398b194679abb5d816fc88a8ecc4613519d8ebb688c"
+    },
+    {
+      "name": "system-libc-copyright.txt",
+      "bytes": 25467,
+      "sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987"
+    }
+  ],
+  "classification": {
+    "gccArchiveMembers": {
+      "ffmpeg": [
+        "_popcountsi2.o",
+        "_divdi3.o",
+        "_moddi3.o",
+        "_divmoddi4.o",
+        "_udivdi3.o"
+      ],
+      "ffprobe": [
+        "_divdi3.o",
+        "_moddi3.o",
+        "_divmoddi4.o",
+        "_udivdi3.o"
+      ]
+    },
+    "startupBoth": [
+      "glibc crt1.o",
+      "glibc crti.o",
+      "glibc crtn.o",
+      "GCC crtbegin.o",
+      "GCC crtend.o"
+    ],
+    "dynamicNeededBoth": [
+      "libm.so.6",
+      "libc.so.6"
+    ],
+    "maximumObservedGlibc": "2.35",
+    "builderLibcPackages": "2.36-9+deb12u10",
+    "loadInputsAreNotProofOfIncorporatedCode": true
+  },
+  "independentReview": {
+    "reviewer": "minimal_adoption_review",
+    "verdict": "APPROVE_NARROW_PR191_EVIDENCE_PUBLICATION_AND_INTERNAL_WORKER_PREPARATION",
+    "scope": "Actual text materials and maps rechecked; public native distribution remains gated"
+  },
+  "remaining": [
+    "Preserve exact compiler/startup source headers and glibc Debian source/patch mapping before public bundle publication",
+    "Minimal Backend worker adoption and full worker/resource CI",
+    "Exact TEST runtime/private-provider/access lifecycle and owned DB/object cleanup"
+  ],
+  "backendAdoption": "NOT_RUN",
+  "publicBinaryRelease": "NOT_RUN",
+  "mediaAcceptance": "NOT_RUN",
+  "attachmentLeakCounts": "NOT_RUN",
+  "storageFixtureResidual": "NOT_RUN",
+  "dbFixtureResidual": "NOT_RUN",
+  "architectureAmendment": "PROPOSED",
+  "phase30Status": "IN_PROGRESS",
+  "lng30002": "IN_PROGRESS",
+  "lng30003Through006": "PLANNED_NOT_STARTED",
+  "productionDbMutated": false,
+  "productionStorageActivated": false,
+  "paymentActivated": false,
+  "phase31Implemented": false
+}
