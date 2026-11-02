@@ -21,7 +21,7 @@ class RuntimeSourceTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root=pathlib.Path(directory)
             good=b'bounded synthetic source'
-            pin={'file':'fixture.tar.xz','member':'source/glibc/fixture.tar.xz','bytes':len(good),'sha256':hashlib.sha256(good).hexdigest()}
+            pin={'file':'glibc_2.36-9+deb12u10.dsc','member':'source/glibc/glibc_2.36-9+deb12u10.dsc','bytes':len(good),'sha256':hashlib.sha256(good).hexdigest()}
             with self.assertRaises(FileNotFoundError):
                 bundle.read_runtime_materials(root, [pin])
             (root/pin['file']).write_bytes(good)

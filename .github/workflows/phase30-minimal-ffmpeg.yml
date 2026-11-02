@@ -1,5 +1,12 @@
 name: Phase30 minimal FFmpeg experiment
 on:
+  workflow_dispatch:
+    inputs:
+      retain_delivery:
+        description: Retain complete software candidate for reviewed delivery preparation only
+        type: boolean
+        required: false
+        default: false
   push:
     branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory, research/phase30-native-bundle, research/phase30-link-provenance, research/phase30-source-closure]
     paths:
@@ -87,6 +94,14 @@ jobs:
           python3 scripts/phase30-minimal-ffmpeg/bundle.py "$RUNNER_TEMP/minimal-build" "$RUNNER_TEMP/ffmpeg-source.tar.gz" "$RUNNER_TEMP/minimal-evidence" "$RUNNER_TEMP/native-candidate.tar.gz" "$RUNNER_TEMP/runtime-source" > "$RUNNER_TEMP/minimal-evidence/candidate-proof.json"
           test -s "$RUNNER_TEMP/native-candidate.tar.gz"
           test -s "$RUNNER_TEMP/native-candidate.tar.gz.repeat.tar.gz"
+      - name: Retain verified complete software candidate for delivery preparation
+        if: github.event_name == 'workflow_dispatch' && inputs.retain_delivery && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: phase30-minimal-ffmpeg-source-candidate
+          path: ${{ runner.temp }}/native-candidate.tar.gz
+          if-no-files-found: error
+          retention-days: 2
       - name: Report basic feasibility facts only
         run: node scripts/phase30-minimal-ffmpeg/report-failure.cjs --success "$RUNNER_TEMP/minimal-evidence"
       - name: Report bounded experiment failure diagnostics

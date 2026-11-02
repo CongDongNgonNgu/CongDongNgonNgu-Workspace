@@ -30,7 +30,7 @@ def digest(data):
 
 def safe_name(name):
     return (isinstance(name, str) and bool(name) and len(name) < 100 and
-            bool(re.fullmatch(r'[A-Za-z0-9._/-]+', name)) and not name.startswith('/') and
+            bool(re.fullmatch(r'[A-Za-z0-9._+/-]+', name)) and not name.startswith('/') and
             all(part not in ('', '.', '..') for part in name.split('/')))
 
 
