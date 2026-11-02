@@ -17,3 +17,28 @@ jobs:
       - run: node --test scripts/production-availability-monitor.test.mjs
       - run: node --test scripts/phase30-minimal-ffmpeg/inventory.test.cjs
       - run: git diff --check
+
+  phase30-acceptance-tool:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          path: CongDongNgonNgu-Workspace
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: CongDongNgonNgu/CongDongNgonNgu-Back-End
+          ref: 872fad89ca4553574ddd406112e9e2d0677a4219
+          path: CongDongNgonNgu-Back-End
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/phase30-sql-target.cjs
+            database/migrations
+          sparse-checkout-cone-mode: false
+      - name: Inert acceptance guards only - no DB, provider or TEST requests
+        working-directory: CongDongNgonNgu-Workspace
+        run: |
+          node --check scripts/phase30-runtime-acceptance.cjs
+          node --test scripts/phase30-runtime-acceptance.test.cjs
+          node scripts/phase30-runtime-acceptance.cjs selftest
