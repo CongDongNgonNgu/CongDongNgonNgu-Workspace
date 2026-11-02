@@ -30,7 +30,7 @@ def digest(data):
 
 def safe_name(name):
     return (isinstance(name, str) and bool(name) and len(name) < 100 and
-            bool(re.fullmatch(r'[A-Za-z0-9._/-]+', name)) and not name.startswith('/') and
+            bool(re.fullmatch(r'[A-Za-z0-9._+/-]+', name)) and not name.startswith('/') and
             all(part not in ('', '.', '..') for part in name.split('/')))
 
 
@@ -127,10 +127,32 @@ def verify_archive(target, expected):
         raise ValueError('CANDIDATE_READBACK_MISSING')
 
 
-def assemble(build, source, evidence, output):
+def merge_members(existing, additional):
+    if set(existing) & set(additional):
+        raise ValueError('CANDIDATE_MEMBER_COLLISION')
+    existing.update(additional)
+
+
+def read_runtime_materials(directory, pins):
+    result = {}
+    for pin in pins:
+        name, member = pin['file'], pin['member']
+        if not safe_name(name) or '/' in name or not safe_name(member) or member in result:
+            raise ValueError('RUNTIME_SOURCE_NAME')
+        result[member] = read_material(pathlib.Path(directory) / name, pin['sha256'], pin['bytes'])
+    return result
+
+
+def assemble(build, source, evidence, output, runtime_source):
     here = pathlib.Path(__file__).resolve().parent
     repo = here.parents[1]
     members = {'source/ffmpeg.tar.gz': read_material(source, SOURCE_SHA, 17330151)}
+    runtime_manifest = read_material(here / 'runtime-source/manifest.json')
+    runtime_pins = json.loads(runtime_manifest)
+    runtime_members = read_runtime_materials(runtime_source, runtime_pins['downloads'])
+    merge_members(runtime_members, read_runtime_materials(here / 'runtime-source', runtime_pins['local']))
+    members['build/runtime-source-manifest.json'] = runtime_manifest
+    members['SOURCE-MATERIALS.md'] = read_material(here / 'runtime-source/SOURCE-MATERIALS.md')
     for name, pin in BINARY_PINS.items():
         members['bin/' + name] = read_material(pathlib.Path(build) / name, pin)
     # The intact source archive is hash-bound before any selected notice is read.
@@ -160,7 +182,7 @@ def assemble(build, source, evidence, output):
     members['build/workflow.yml'] = read_material(repo / '.github/workflows/phase30-minimal-ffmpeg.yml')
     members['build/check-source.py'] = read_material(here / 'check-source.py')
     members['build/bundle.py'] = read_material(here / 'bundle.py')
-    members['BUILDING.md'] = b'''INTERNAL CI CANDIDATE ONLY: NOT A RELEASE OR LICENSE CLEARANCE.
+    members['BUILDING.md'] = b'''ENGINEERING SOURCE CANDIDATE: publication requires independent delivery review.
 FFmpeg source is intact and unmodified; all original file-level notices remain in source/ffmpeg.tar.gz.
 Top-level upstream notices are repeated unmodified in notices/; retain every source notice on distribution.
 This software is based in part on the work of the Independent JPEG Group. No source changes were made.
@@ -174,11 +196,15 @@ CLI executables dynamically require system libc.so.6/libm.so.6 and observed GLIB
 GCC14.3.0 runtime exception and GPLv3 license texts are retained unchanged under notices/gcc; source identity is build/gcc-notice-source.json.
 Actual compiler runtime/startup input paths/hashes, package versions, original system-libc copyright and full relink traces/maps are in evidence/.
 Relink diagnostics must leave the preserved original pair byte-identical. Shared system libraries and object/archive inputs are identified, not separately copied here.
+Complete pinned glibc original/patches/DSC, original LGPL and exact GCC helper/build sources accompany this archive; see SOURCE-MATERIALS.md.
 To reproduce diagnostics, additionally mount the candidate GCC notices at /experiment/notices/gcc and use recorded read-only original pair/source plus writable objects/evidence mounts.
 These materials support engineering classification; no source/notice clearance is inferred without independent review of actual results.
 GNU time is a separately reviewed executable/distribution, not part of this candidate.
 No native publication, app adoption, security/resource acceptance or attachment activation is authorized by this archive.
 '''
+    if 'manifest.json' in runtime_members:
+        raise ValueError('CANDIDATE_MEMBER_COLLISION')
+    merge_members(members, runtime_members)
     items = {name: {'bytes': len(data), 'sha256': digest(data)} for name, data in sorted(members.items())}
     members['manifest.json'] = (json.dumps({'scope': 'INTERNAL_CI_CANDIDATE_ONLY_NOT_RUNTIME_AUTHORITY', 'members': items}, sort_keys=True, indent=2) + '\n').encode()
     expected = write_archive(output, members)
@@ -197,6 +223,6 @@ No native publication, app adoption, security/resource acceptance or attachment 
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 6:
         raise ValueError('CANDIDATE_ARGUMENTS')
     print(json.dumps(assemble(*sys.argv[1:]), sort_keys=True))

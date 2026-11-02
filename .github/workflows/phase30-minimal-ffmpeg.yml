@@ -1,7 +1,14 @@
 name: Phase30 minimal FFmpeg experiment
 on:
+  workflow_dispatch:
+    inputs:
+      retain_delivery:
+        description: Retain complete software candidate for reviewed delivery preparation only
+        type: boolean
+        required: false
+        default: false
   push:
-    branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory, research/phase30-native-bundle, research/phase30-link-provenance]
+    branches: [research/phase30-minimal-ffmpeg, research/phase30-native-inventory, research/phase30-native-bundle, research/phase30-link-provenance, research/phase30-source-closure]
     paths:
       - 'scripts/phase30-minimal-ffmpeg/**'
       - '.github/workflows/phase30-minimal-ffmpeg.yml'
@@ -31,6 +38,7 @@ jobs:
       - name: Source archive boundary tests
         run: |
           set -euo pipefail
+          python3 scripts/phase30-minimal-ffmpeg/test_runtime_source.py
           python3 scripts/phase30-minimal-ffmpeg/test_bundle.py
           python3 scripts/phase30-minimal-ffmpeg/test_source.py 2>&1 | tee "$RUNNER_TEMP/minimal-evidence/archive-tests.txt"
       - name: Acquire exact public source and immutable existing builder
@@ -41,6 +49,13 @@ jobs:
           curl --fail --location --connect-timeout 15 --max-time 120 --max-filesize 20000000 --output "$RUNNER_TEMP/ffmpeg-source.tar.gz" 'https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/6dfaba896fddaea098abec8ac84ff67375a7c6f1'
           printf '%s  %s\n' 'cd6175d64b7f152469d48ceffa0dcb3bf36bb3bcae42aece46570d48563cdb85' "$RUNNER_TEMP/ffmpeg-source.tar.gz" | sha256sum --check --strict
           python3 scripts/phase30-minimal-ffmpeg/check-source.py "$RUNNER_TEMP/ffmpeg-source.tar.gz"
+          mkdir "$RUNNER_TEMP/runtime-source"
+          curl --fail --proto '=https' --connect-timeout 15 --max-time 120 --max-filesize 19363988 --output "$RUNNER_TEMP/runtime-source/glibc_2.36.orig.tar.xz" 'https://snapshot.debian.org/file/d034128a6116dcf9e76c92f898ec63f4f4e65786'
+          printf '%s  %s\n' 'a543c02070d46ccaf866957efd13f10c924daa74c86a90a0254db09a92a708ee' "$RUNNER_TEMP/runtime-source/glibc_2.36.orig.tar.xz" | sha256sum --check --strict
+          curl --fail --proto '=https' --connect-timeout 15 --max-time 120 --max-filesize 902612 --output "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.debian.tar.xz" 'https://snapshot.debian.org/file/820dff0e89f9a499ee1238764e2dce271dacfbb3'
+          printf '%s  %s\n' '6ad2f9dfc88bec54f0bacab04d14f71dbd3eea0cedd91a23a8911fd09847fbc9' "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.debian.tar.xz" | sha256sum --check --strict
+          curl --fail --proto '=https' --connect-timeout 15 --max-time 120 --max-filesize 9765 --output "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.dsc" 'https://snapshot.debian.org/file/bcd6c3bbcb5f51422bbfc953e5f61cb0a4f5dd97'
+          printf '%s  %s\n' 'ba6d00fde9d2f11af56861674dc87c5dc5a7c3f2c1c0a7dd4d63d76639e6ec98' "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.dsc" | sha256sum --check --strict
           docker pull gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1
           docker pull node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
       - name: Build without network or application credentials
@@ -76,9 +91,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 scripts/phase30-minimal-ffmpeg/bundle.py "$RUNNER_TEMP/minimal-build" "$RUNNER_TEMP/ffmpeg-source.tar.gz" "$RUNNER_TEMP/minimal-evidence" "$RUNNER_TEMP/native-candidate.tar.gz" > "$RUNNER_TEMP/minimal-evidence/candidate-proof.json"
+          python3 scripts/phase30-minimal-ffmpeg/bundle.py "$RUNNER_TEMP/minimal-build" "$RUNNER_TEMP/ffmpeg-source.tar.gz" "$RUNNER_TEMP/minimal-evidence" "$RUNNER_TEMP/native-candidate.tar.gz" "$RUNNER_TEMP/runtime-source" > "$RUNNER_TEMP/minimal-evidence/candidate-proof.json"
           test -s "$RUNNER_TEMP/native-candidate.tar.gz"
           test -s "$RUNNER_TEMP/native-candidate.tar.gz.repeat.tar.gz"
+      - name: Retain verified complete software candidate for delivery preparation
+        if: github.event_name == 'workflow_dispatch' && inputs.retain_delivery && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: phase30-minimal-ffmpeg-source-candidate
+          path: ${{ runner.temp }}/native-candidate.tar.gz
+          if-no-files-found: error
+          retention-days: 2
       - name: Report basic feasibility facts only
         run: node scripts/phase30-minimal-ffmpeg/report-failure.cjs --success "$RUNNER_TEMP/minimal-evidence"
       - name: Report bounded experiment failure diagnostics

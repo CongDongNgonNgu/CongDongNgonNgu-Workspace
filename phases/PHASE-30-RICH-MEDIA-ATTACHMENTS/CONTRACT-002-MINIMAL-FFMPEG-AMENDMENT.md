@@ -1,6 +1,6 @@
 # Phase30-002 minimal FFmpeg adoption amendment
 
-Status: PROPOSED, not application/distribution/runtime approval. Independent read-only review approves drafting this bounded Linux-only amendment; implementation and release require the gates below. No frozen numeric media/access/lifecycle limit changes.
+Status: REVIEWED_FOR_IMPLEMENTATION_AND_INTERNAL_DELIVERY_PREPARATION on2026-11-02. Independent source/material review and actual candidate CI41377326090 approve bounded Linux-only implementation preparation. Public release and deployed runtime acceptance still require the ordered gates below. No frozen numeric media/access/lifecycle limit changes. See evidence-002/minimal-ffmpeg-source-closure-20261102.json.
 
 ## Reason and selected delivery design
 
