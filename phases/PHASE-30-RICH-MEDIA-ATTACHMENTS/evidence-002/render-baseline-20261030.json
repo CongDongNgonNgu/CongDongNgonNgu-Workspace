@@ -1,0 +1,68 @@
+{
+    "scope":  "READ_ONLY_EXACT_TEST_DEFAULT_OFF_BASELINE",
+    "service":  "srv-dahnerh594qs73fp3420",
+    "origin":  "https://congdongngonngu-back-end.onrender.com",
+    "branch":  "dev",
+    "liveDeployment":  "dep-dbgs5nijnfac739l7l60",
+    "liveRevision":  "95fe5c8b4d96026d8f05d02f23c0d75efaa99a9a",
+    "liveEvent":  "2026-10-28 16:41 Asia/Saigon",
+    "source":  "Authenticated Render Settings/Events/Compute plus bounded unauthenticated HTTP",
+    "savedBuildCommand":  "npm ci --include=dev \u0026\u0026 npm run build:attachments -- --download",
+    "savedStartCommand":  "ATTACHMENTS_ENABLED=false ATTACHMENTS_IMAGE_ENABLED=false ATTACHMENTS_VIDEO_ENABLED=false ATTACHMENTS_TEXT_ENABLED=false npm run start",
+    "autoDeploy":  "After CI Checks Pass",
+    "compute":  {
+                    "plan":  "Free",
+                    "ramMiB":  512,
+                    "cpu":  0.1,
+                    "persistentDiskSupported":  false,
+                    "sshSupported":  false
+                },
+    "health":  {
+                   "path":  "/api/v1/health",
+                   "status":  200,
+                   "latencyMs":  52437,
+                   "service":  "congdongngonngu-backend",
+                   "environment":  "test",
+                   "nosniff":  "nosniff",
+                   "classification":  "Observed cold-start request only; not media/API headroom acceptance"
+               },
+    "unauthenticatedProbes":  [
+                                  {
+                                      "method":  "GET",
+                                      "path":  "/api/v1/attachments/7ca4e66a-42ca-435f-b1d3-96a41926787a",
+                                      "status":  503,
+                                      "latencyMs":  80
+                                  },
+                                  {
+                                      "method":  "GET",
+                                      "path":  "/api/v1/attachments/7ca4e66a-42ca-435f-b1d3-96a41926787a/content",
+                                      "status":  503,
+                                      "latencyMs":  198
+                                  },
+                                  {
+                                      "method":  "POST",
+                                      "path":  "/api/v1/attachments",
+                                      "status":  401,
+                                      "latencyMs":  216,
+                                      "body":  "{}"
+                                  }
+                              ],
+    "attachmentResponseHeaders":  {
+                                      "cacheControl":  "private, no-store",
+                                      "nosniff":  "nosniff"
+                                  },
+    "probeId":  "Client-generated unbound UUID; no attachment creation",
+    "dashboardEnvironmentLabel":  "Production is a dashboard grouping; owner explicitly classifies this Render service TEST and health reports test",
+    "mutations":  "NONE",
+    "renderSecretRevealActions":  "NONE",
+    "storageConfiguration":  "NOT_REVERIFIED",
+    "minimalFfmpegRuntime":  "NOT_RUN",
+    "authenticatedMedia":  "NOT_RUN",
+    "authorizationLeakCounts":  "NOT_RUN",
+    "storageFixtureResidual":  "NOT_RUN",
+    "databaseFixtureResidual":  "NOT_RUN",
+    "productionDbMutated":  false,
+    "productionStorageActivated":  false,
+    "paymentActivated":  false,
+    "phase31Implemented":  false
+}
