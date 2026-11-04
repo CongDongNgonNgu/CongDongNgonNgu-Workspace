@@ -1,0 +1,184 @@
+{
+  "scope": "ACTUAL_RENDER_BOUNDARY_DIAGNOSTIC_ONLY",
+  "observedAt": {
+    "current_time": "2026-11-04 05:57:10 UTC"
+  },
+  "service": "srv-dahnerh594qs73fp3420",
+  "deployment": "dep-dblchb8n74is739o9gjg",
+  "source": "9c2353496c2352978946930d3282a949d35642ee",
+  "sourcePublication": {
+    "pr": 75,
+    "head": "f1359b6cc3c595afcda3f661876892f2f9ae0dc6",
+    "dev": "9c2353496c2352978946930d3282a949d35642ee",
+    "tree": "d88bd4923efd9cdf357c1842ded3d1a66f629e62",
+    "prCI": 41780297319,
+    "reproduction": 41780297308,
+    "devCI": 41781158363,
+    "devReproduction": 41781158347
+  },
+  "events": [
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "baseline",
+      "baselineHealthMs": [
+        101.31268100000125,
+        3.144484000000375,
+        1.963741999999911
+      ],
+      "cgroupBytes": 107880448,
+      "cgroupLimitBytes": 536870912,
+      "appRssBytes": 121307136,
+      "oom": 0,
+      "oomKill": 0
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "fixture-start",
+      "name": "jpeg"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "stage",
+      "name": "jpeg",
+      "result": {
+        "workerRssBytes": 129966080,
+        "normalizedBytes": 3681342,
+        "thumbnailBytes": 16714
+      },
+      "elapsedMs": 9000.310304,
+      "healthMs": [
+        97.38045600000078,
+        117.57064700000046,
+        3.608306000000084,
+        92.04565299999922,
+        2.4608360000001994,
+        93.19546400000036,
+        2.464986000000863,
+        1.734506999999212
+      ],
+      "cgroupPeakBytes": 195244032,
+      "appPeakRssBytes": 137465856
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "fixture-start",
+      "name": "png"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "stage",
+      "name": "png",
+      "result": {
+        "workerRssBytes": 123408384,
+        "normalizedBytes": 1454924,
+        "thumbnailBytes": 9920
+      },
+      "elapsedMs": 7475.615904999999,
+      "healthMs": [
+        2.8621670000029553,
+        1.9055410000000848,
+        1.8717799999976705,
+        1.8565999999991618,
+        1.8712200000009034,
+        1.8162479999991774,
+        1.6108629999980622,
+        1.487120000001596
+      ],
+      "cgroupPeakBytes": 195244032,
+      "appPeakRssBytes": 137596928
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "fixture-start",
+      "name": "webp"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "stage",
+      "name": "webp",
+      "result": {
+        "workerRssBytes": 145006592,
+        "normalizedBytes": 1986842,
+        "thumbnailBytes": 17794
+      },
+      "elapsedMs": 12722.248075000003,
+      "healthMs": [
+        3.616027000000031,
+        3.9126849999993283,
+        2.9813799999974435,
+        1.625104000002466,
+        91.61151099999915,
+        98.50750600000174,
+        84.15976199999932,
+        95.87361500000043
+      ],
+      "cgroupPeakBytes": 221106176,
+      "appPeakRssBytes": 142876672
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "event": "fixture-start",
+      "name": "video"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "9c2353496c2352978946930d3282a949d35642ee",
+      "status": "FAIL",
+      "code": "PROCESSING_TIMEOUT",
+      "fixture": "video",
+      "scratchCleanup": "UNVERIFIED",
+      "completeEnablement": "NOT_RUN",
+      "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+    }
+  ],
+  "raw": {
+    "url": "https://dashboard.render.com/web/srv-dahnerh594qs73fp3420/deploys/dep-dblchb8n74is739o9gjg?r=2026-11-04%4005%3A53%3A53%7E2026-11-04%4005%3A56%3A36",
+    "lines": [
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"baseline\",\"baselineHealthMs\":[101.31268100000125,3.144484000000375,1.963741999999911],\"cgroupBytes\":107880448,\"cgroupLimitBytes\":536870912,\"appRssBytes\":121307136,\"oom\":0,\"oomKill\":0}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"fixture-start\",\"name\":\"jpeg\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"stage\",\"name\":\"jpeg\",\"result\":{\"workerRssBytes\":129966080,\"normalizedBytes\":3681342,\"thumbnailBytes\":16714},\"elapsedMs\":9000.310304,\"healthMs\":[97.38045600000078,117.57064700000046,3.608306000000084,92.04565299999922,2.4608360000001994,93.19546400000036,2.464986000000863,1.734506999999212],\"cgroupPeakBytes\":195244032,\"appPeakRssBytes\":137465856}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"fixture-start\",\"name\":\"png\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"stage\",\"name\":\"png\",\"result\":{\"workerRssBytes\":123408384,\"normalizedBytes\":1454924,\"thumbnailBytes\":9920},\"elapsedMs\":7475.615904999999,\"healthMs\":[2.8621670000029553,1.9055410000000848,1.8717799999976705,1.8565999999991618,1.8712200000009034,1.8162479999991774,1.6108629999980622,1.487120000001596],\"cgroupPeakBytes\":195244032,\"appPeakRssBytes\":137596928}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"fixture-start\",\"name\":\"webp\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"stage\",\"name\":\"webp\",\"result\":{\"workerRssBytes\":145006592,\"normalizedBytes\":1986842,\"thumbnailBytes\":17794},\"elapsedMs\":12722.248075000003,\"healthMs\":[3.616027000000031,3.9126849999993283,2.9813799999974435,1.625104000002466,91.61151099999915,98.50750600000174,84.15976199999932,95.87361500000043],\"cgroupPeakBytes\":221106176,\"appPeakRssBytes\":142876672}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"event\":\"fixture-start\",\"name\":\"video\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"9c2353496c2352978946930d3282a949d35642ee\",\"status\":\"FAIL\",\"code\":\"PROCESSING_TIMEOUT\",\"fixture\":\"video\",\"scratchCleanup\":\"UNVERIFIED\",\"completeEnablement\":\"NOT_RUN\",\"deploymentHeadroom\":\"UNVERIFIED_HIDDEN_ANCESTORS\"}"
+    ],
+    "deploymentStatus": "SUCCEEDED_LIVE",
+    "sourceLinks": [
+      "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/commit/9c2353496c2352978946930d3282a949d35642ee"
+    ]
+  },
+  "videoStatus": "HELD_RUNTIME_VALIDATION_FAILED",
+  "overall": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+  "publicUploadEnabled": false,
+  "dbFixturesCreated": false,
+  "storageFixturesCreated": false,
+  "finalOomObservation": "NOT_CAPTURED",
+  "scratchCleanup": "UNVERIFIED",
+  "restoration": {
+    "deployment": "dep-dblciq59el5s73cl7veg",
+    "status": "SUCCEEDED_LIVE",
+    "source": "9c2353496c2352978946930d3282a949d35642ee",
+    "freshSettingsReadback": {
+      "url": "https://dashboard.render.com/web/srv-dahnerh594qs73fp3420/settings",
+      "start": [
+        "ATTACHMENTS_ENABLED=false ATTACHMENTS_IMAGE_ENABLED=false ATTACHMENTS_VIDEO_ENABLED=false ATTACHMENTS_TEXT_ENABLED=false npm run start"
+      ],
+      "source": [
+        "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/commit/9c2353496c2352978946930d3282a949d35642ee"
+      ],
+      "live": [
+        "/web/srv-dahnerh594qs73fp3420/deploys/dep-dblciq59el5s73cl7veg"
+      ]
+    }
+  }
+}
