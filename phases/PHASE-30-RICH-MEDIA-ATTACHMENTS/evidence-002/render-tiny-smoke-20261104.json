@@ -1,0 +1,337 @@
+{
+  "scope": "ACTUAL_RENDER_TINY_SMOKE_ONLY",
+  "observedAt": "2026-11-04 04:45:29 UTC",
+  "service": "srv-dahnerh594qs73fp3420",
+  "deployment": "dep-dblbfu6417fc7382nspg",
+  "source": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+  "profile": "OWNER_SPECIFIED_PROFILE_1_WORK_TARGETED_LAUNCH",
+  "events": [
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+      "event": "baseline",
+      "baselineHealthMs": [
+        101.4491909999997,
+        2.942730999999185,
+        1.5404440000002069
+      ],
+      "cgroupBytes": 107696128,
+      "cgroupLimitBytes": 536870912,
+      "appRssBytes": 121393152,
+      "oom": 0,
+      "oomKill": 0
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+      "event": "stage",
+      "name": "jpeg",
+      "result": {
+        "workerRssBytes": 70840320,
+        "normalizedBytes": 78,
+        "thumbnailBytes": 78
+      },
+      "elapsedMs": 1301.6226629999983,
+      "healthMs": [
+        97.99219600000106,
+        2.6327459999993152,
+        2.418195000000196,
+        92.62336900000082,
+        2.642305999999735,
+        2.252147999999579,
+        2.146412000000055,
+        1.5714250000000902
+      ],
+      "cgroupPeakBytes": 128012288,
+      "appPeakRssBytes": 123158528
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+      "event": "stage",
+      "name": "png",
+      "result": {
+        "workerRssBytes": 70307840,
+        "normalizedBytes": 80,
+        "thumbnailBytes": 80
+      },
+      "elapsedMs": 1096.6140689999993,
+      "healthMs": [
+        4.303866000000198,
+        1.8443889999998646,
+        1.7379330000003392,
+        1.5482240000001184,
+        93.30744199999936,
+        1.7904360000011366,
+        1.5924660000000586,
+        93.70631099999991
+      ],
+      "cgroupPeakBytes": 128012288,
+      "appPeakRssBytes": 123473920
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+      "event": "stage",
+      "name": "webp",
+      "result": {
+        "workerRssBytes": 70590464,
+        "normalizedBytes": 80,
+        "thumbnailBytes": 80
+      },
+      "elapsedMs": 1103.991202000001,
+      "healthMs": [
+        4.247312999999849,
+        1.436628000001292,
+        1.6898900000014692,
+        23.224379999999655,
+        1.6972110000024259,
+        1.818065999999817,
+        94.65553599999839,
+        1.2190979999977571
+      ],
+      "cgroupPeakBytes": 129073152,
+      "appPeakRssBytes": 123965440
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+      "event": "stage",
+      "name": "video",
+      "result": {
+        "workerRssBytes": 97542144,
+        "normalizedBytes": 950,
+        "thumbnailBytes": 254
+      },
+      "elapsedMs": 3110.6268170000003,
+      "healthMs": [
+        4.072664999999688,
+        1.449678999997559,
+        1.9897350000028382,
+        96.00071100000059,
+        1.3191740000002028,
+        1.6715000000003783,
+        2.409625000000233,
+        2.027367000002414
+      ],
+      "cgroupPeakBytes": 155136000,
+      "appPeakRssBytes": 124882944
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+      "status": "PASS_TINY_FIXTURES_ONLY",
+      "baselineHealthMs": [
+        101.4491909999997,
+        2.942730999999185,
+        1.5404440000002069
+      ],
+      "stages": [
+        {
+          "name": "jpeg",
+          "result": {
+            "workerRssBytes": 70840320,
+            "normalizedBytes": 78,
+            "thumbnailBytes": 78
+          },
+          "elapsedMs": 1301.6226629999983,
+          "healthMs": [
+            97.99219600000106,
+            2.6327459999993152,
+            2.418195000000196,
+            92.62336900000082,
+            2.642305999999735,
+            2.252147999999579,
+            2.146412000000055,
+            1.5714250000000902
+          ]
+        },
+        {
+          "name": "png",
+          "result": {
+            "workerRssBytes": 70307840,
+            "normalizedBytes": 80,
+            "thumbnailBytes": 80
+          },
+          "elapsedMs": 1096.6140689999993,
+          "healthMs": [
+            4.303866000000198,
+            1.8443889999998646,
+            1.7379330000003392,
+            1.5482240000001184,
+            93.30744199999936,
+            1.7904360000011366,
+            1.5924660000000586,
+            93.70631099999991
+          ]
+        },
+        {
+          "name": "webp",
+          "result": {
+            "workerRssBytes": 70590464,
+            "normalizedBytes": 80,
+            "thumbnailBytes": 80
+          },
+          "elapsedMs": 1103.991202000001,
+          "healthMs": [
+            4.247312999999849,
+            1.436628000001292,
+            1.6898900000014692,
+            23.224379999999655,
+            1.6972110000024259,
+            1.818065999999817,
+            94.65553599999839,
+            1.2190979999977571
+          ]
+        },
+        {
+          "name": "video",
+          "result": {
+            "workerRssBytes": 97542144,
+            "normalizedBytes": 950,
+            "thumbnailBytes": 254
+          },
+          "elapsedMs": 3110.6268170000003,
+          "healthMs": [
+            4.072664999999688,
+            1.449678999997559,
+            1.9897350000028382,
+            96.00071100000059,
+            1.3191740000002028,
+            1.6715000000003783,
+            2.409625000000233,
+            2.027367000002414
+          ]
+        }
+      ],
+      "cgroupPeakBytes": 155136000,
+      "appPeakRssBytes": 124882944,
+      "cgroupLimitBytes": 536870912,
+      "oomDelta": 0,
+      "oomKillDelta": 0,
+      "scratchResidual": 0,
+      "completeEnablement": "NOT_RUN",
+      "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+    }
+  ],
+  "summary": {
+    "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+    "sha": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+    "status": "PASS_TINY_FIXTURES_ONLY",
+    "baselineHealthMs": [
+      101.4491909999997,
+      2.942730999999185,
+      1.5404440000002069
+    ],
+    "stages": [
+      {
+        "name": "jpeg",
+        "result": {
+          "workerRssBytes": 70840320,
+          "normalizedBytes": 78,
+          "thumbnailBytes": 78
+        },
+        "elapsedMs": 1301.6226629999983,
+        "healthMs": [
+          97.99219600000106,
+          2.6327459999993152,
+          2.418195000000196,
+          92.62336900000082,
+          2.642305999999735,
+          2.252147999999579,
+          2.146412000000055,
+          1.5714250000000902
+        ]
+      },
+      {
+        "name": "png",
+        "result": {
+          "workerRssBytes": 70307840,
+          "normalizedBytes": 80,
+          "thumbnailBytes": 80
+        },
+        "elapsedMs": 1096.6140689999993,
+        "healthMs": [
+          4.303866000000198,
+          1.8443889999998646,
+          1.7379330000003392,
+          1.5482240000001184,
+          93.30744199999936,
+          1.7904360000011366,
+          1.5924660000000586,
+          93.70631099999991
+        ]
+      },
+      {
+        "name": "webp",
+        "result": {
+          "workerRssBytes": 70590464,
+          "normalizedBytes": 80,
+          "thumbnailBytes": 80
+        },
+        "elapsedMs": 1103.991202000001,
+        "healthMs": [
+          4.247312999999849,
+          1.436628000001292,
+          1.6898900000014692,
+          23.224379999999655,
+          1.6972110000024259,
+          1.818065999999817,
+          94.65553599999839,
+          1.2190979999977571
+        ]
+      },
+      {
+        "name": "video",
+        "result": {
+          "workerRssBytes": 97542144,
+          "normalizedBytes": 950,
+          "thumbnailBytes": 254
+        },
+        "elapsedMs": 3110.6268170000003,
+        "healthMs": [
+          4.072664999999688,
+          1.449678999997559,
+          1.9897350000028382,
+          96.00071100000059,
+          1.3191740000002028,
+          1.6715000000003783,
+          2.409625000000233,
+          2.027367000002414
+        ]
+      }
+    ],
+    "cgroupPeakBytes": 155136000,
+    "appPeakRssBytes": 124882944,
+    "cgroupLimitBytes": 536870912,
+    "oomDelta": 0,
+    "oomKillDelta": 0,
+    "scratchResidual": 0,
+    "completeEnablement": "NOT_RUN",
+    "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+  },
+  "publicUploadEnabled": false,
+  "storageFixturesCreated": false,
+  "dbFixturesCreated": false,
+  "sourceRaw": {
+    "url": "https://dashboard.render.com/web/srv-dahnerh594qs73fp3420/deploys/dep-dblbfu6417fc7382nspg?r=2026-11-04%4004%3A42%3A36%7E2026-11-04%4004%3A45%3A19",
+    "lines": [
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY\",\"sha\":\"110aeed44e46ff80c9cfcae3e0c033ce502d7665\",\"event\":\"baseline\",\"baselineHealthMs\":[101.4491909999997,2.942730999999185,1.5404440000002069],\"cgroupBytes\":107696128,\"cgroupLimitBytes\":536870912,\"appRssBytes\":121393152,\"oom\":0,\"oomKill\":0}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY\",\"sha\":\"110aeed44e46ff80c9cfcae3e0c033ce502d7665\",\"event\":\"stage\",\"name\":\"jpeg\",\"result\":{\"workerRssBytes\":70840320,\"normalizedBytes\":78,\"thumbnailBytes\":78},\"elapsedMs\":1301.6226629999983,\"healthMs\":[97.99219600000106,2.6327459999993152,2.418195000000196,92.62336900000082,2.642305999999735,2.252147999999579,2.146412000000055,1.5714250000000902],\"cgroupPeakBytes\":128012288,\"appPeakRssBytes\":123158528}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY\",\"sha\":\"110aeed44e46ff80c9cfcae3e0c033ce502d7665\",\"event\":\"stage\",\"name\":\"png\",\"result\":{\"workerRssBytes\":70307840,\"normalizedBytes\":80,\"thumbnailBytes\":80},\"elapsedMs\":1096.6140689999993,\"healthMs\":[4.303866000000198,1.8443889999998646,1.7379330000003392,1.5482240000001184,93.30744199999936,1.7904360000011366,1.5924660000000586,93.70631099999991],\"cgroupPeakBytes\":128012288,\"appPeakRssBytes\":123473920}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY\",\"sha\":\"110aeed44e46ff80c9cfcae3e0c033ce502d7665\",\"event\":\"stage\",\"name\":\"webp\",\"result\":{\"workerRssBytes\":70590464,\"normalizedBytes\":80,\"thumbnailBytes\":80},\"elapsedMs\":1103.991202000001,\"healthMs\":[4.247312999999849,1.436628000001292,1.6898900000014692,23.224379999999655,1.6972110000024259,1.818065999999817,94.65553599999839,1.2190979999977571],\"cgroupPeakBytes\":129073152,\"appPeakRssBytes\":123965440}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY\",\"sha\":\"110aeed44e46ff80c9cfcae3e0c033ce502d7665\",\"event\":\"stage\",\"name\":\"video\",\"result\":{\"workerRssBytes\":97542144,\"normalizedBytes\":950,\"thumbnailBytes\":254},\"elapsedMs\":3110.6268170000003,\"healthMs\":[4.072664999999688,1.449678999997559,1.9897350000028382,96.00071100000059,1.3191740000002028,1.6715000000003783,2.409625000000233,2.027367000002414],\"cgroupPeakBytes\":155136000,\"appPeakRssBytes\":124882944}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY\",\"sha\":\"110aeed44e46ff80c9cfcae3e0c033ce502d7665\",\"status\":\"PASS_TINY_FIXTURES_ONLY\",\"baselineHealthMs\":[101.4491909999997,2.942730999999185,1.5404440000002069],\"stages\":[{\"name\":\"jpeg\",\"result\":{\"workerRssBytes\":70840320,\"normalizedBytes\":78,\"thumbnailBytes\":78},\"elapsedMs\":1301.6226629999983,\"healthMs\":[97.99219600000106,2.6327459999993152,2.418195000000196,92.62336900000082,2.642305999999735,2.252147999999579,2.146412000000055,1.5714250000000902]},{\"name\":\"png\",\"result\":{\"workerRssBytes\":70307840,\"normalizedBytes\":80,\"thumbnailBytes\":80},\"elapsedMs\":1096.6140689999993,\"healthMs\":[4.303866000000198,1.8443889999998646,1.7379330000003392,1.5482240000001184,93.30744199999936,1.7904360000011366,1.5924660000000586,93.70631099999991]},{\"name\":\"webp\",\"result\":{\"workerRssBytes\":70590464,\"normalizedBytes\":80,\"thumbnailBytes\":80},\"elapsedMs\":1103.991202000001,\"healthMs\":[4.247312999999849,1.436628000001292,1.6898900000014692,23.224379999999655,1.6972110000024259,1.818065999999817,94.65553599999839,1.2190979999977571]},{\"name\":\"video\",\"result\":{\"workerRssBytes\":97542144,\"normalizedBytes\":950,\"thumbnailBytes\":254},\"elapsedMs\":3110.6268170000003,\"healthMs\":[4.072664999999688,1.449678999997559,1.9897350000028382,96.00071100000059,1.3191740000002028,1.6715000000003783,2.409625000000233,2.027367000002414]}],\"cgroupPeakBytes\":155136000,\"appPeakRssBytes\":124882944,\"cgroupLimitBytes\":536870912,\"oomDelta\":0,\"oomKillDelta\":0,\"scratchResidual\":0,\"completeEnablement\":\"NOT_RUN\",\"deploymentHeadroom\":\"UNVERIFIED_HIDDEN_ANCESTORS\"}"
+    ]
+  },
+  "restoration": {
+    "deployment": "dep-dblbh7egekts73ftqo0g",
+    "source": "110aeed44e46ff80c9cfcae3e0c033ce502d7665",
+    "observedStatus": "SUCCEEDED_LIVE",
+    "displayedStartedAt": "2026-11-04 11:46:21 GMT+7",
+    "displayedDurationSeconds": 30.6,
+    "startCommandReadback": "ATTACHMENTS_ENABLED=false ATTACHMENTS_IMAGE_ENABLED=false ATTACHMENTS_VIDEO_ENABLED=false ATTACHMENTS_TEXT_ENABLED=false npm run start",
+    "probeOverridePresent": false,
+    "observationsBy": "COORDINATOR_BROWSER_DOM_NOT_INDEPENDENT_RUNTIME_REVIEW"
+  }
+}
