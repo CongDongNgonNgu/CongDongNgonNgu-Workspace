@@ -2,7 +2,7 @@ name: Phase30 same-source SIMD research
 on:
   workflow_dispatch:
   push:
-    branches: [research/phase30-native-simd-build]
+    branches: [research/phase30-native-simd-build, research/phase30-simd-link-closure]
     paths:
       - 'scripts/phase30-native-simd/**'
       - '.github/workflows/phase30-native-simd.yml'
@@ -36,7 +36,9 @@ jobs:
           printf '%s  %s\n' 'cd6175d64b7f152469d48ceffa0dcb3bf36bb3bcae42aece46570d48563cdb85' "$RUNNER_TEMP/ffmpeg-source.tar.gz" | sha256sum --check --strict
           python3 scripts/phase30-minimal-ffmpeg/check-source.py "$RUNNER_TEMP/ffmpeg-source.tar.gz"
           node scripts/phase30-native-simd/prepare-recipe.cjs "$RUNNER_TEMP/simd-host/candidate-recipe.sh" > "$RUNNER_TEMP/simd-host/recipe-proof.json"
+          node scripts/phase30-native-simd/prepare-relink.cjs "$RUNNER_TEMP/simd-host/candidate-relink.sh" > "$RUNNER_TEMP/simd-host/relink-proof.json"
           docker pull gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1
+          docker pull node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
       - name: Build offline with existing bounded resources
         run: |
           set -euo pipefail
@@ -45,6 +47,18 @@ jobs:
             -v "$RUNNER_TEMP/simd-host/candidate-recipe.sh:/candidate-recipe.sh:ro" -v "$GITHUB_WORKSPACE/scripts/phase30-native-simd/build.sh:/research-build.sh:ro" \
             -v "$RUNNER_TEMP/simd-build:/build:rw" -v "$RUNNER_TEMP/simd-evidence:/evidence:rw" \
             gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /research-build.sh 2>&1 | tee "$RUNNER_TEMP/simd-host/container.log"
+      - name: Require fixed candidate identity and byte-identical bounded relink
+        run: |
+          set -euo pipefail
+          docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 2 --memory 4g --memory-swap 4g --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
+            -v "$RUNNER_TEMP/simd-build/objects:/build/objects:rw" -v "$RUNNER_TEMP/simd-build/source:/build/source:ro" \
+            -v "$RUNNER_TEMP/simd-build/nasm-source/nasm:/build/nasm-source/nasm:ro" \
+            -v "$RUNNER_TEMP/simd-build/ffmpeg:/original/ffmpeg:ro" -v "$RUNNER_TEMP/simd-build/ffprobe:/original/ffprobe:ro" \
+            -v "$RUNNER_TEMP/simd-host/candidate-relink.sh:/candidate-relink.sh:ro" -v "$GITHUB_WORKSPACE/scripts/phase30-minimal-ffmpeg:/experiment:ro" \
+            -v "$RUNNER_TEMP/simd-evidence:/evidence:rw" \
+            gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /candidate-relink.sh 2>&1 | tee "$RUNNER_TEMP/simd-host/relink-container.log"
+      - name: Collect closed dependencies with exact-owned verified container cleanup
+        run: node scripts/phase30-native-simd/run-collector.cjs
       - name: Sanitize container evidence before any host processing
         id: sanitize
         if: always()
