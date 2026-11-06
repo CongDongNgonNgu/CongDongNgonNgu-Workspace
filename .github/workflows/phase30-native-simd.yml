@@ -1,0 +1,73 @@
+name: Phase30 same-source SIMD research
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/phase30-native-simd-build]
+    paths:
+      - 'scripts/phase30-native-simd/**'
+      - '.github/workflows/phase30-native-simd.yml'
+permissions:
+  contents: read
+concurrency:
+  group: phase30-native-simd-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Check research guards and syntax before acquisition
+        run: |
+          set -euo pipefail
+          node --test scripts/phase30-native-simd/*.test.cjs
+          bash -n scripts/phase30-native-simd/build.sh
+          shellcheck scripts/phase30-native-simd/build.sh
+          mkdir "$RUNNER_TEMP/simd-evidence" "$RUNNER_TEMP/simd-build" "$RUNNER_TEMP/simd-host"
+          printf 'RESEARCH_SOURCE_ACQUISITION\n' > "$RUNNER_TEMP/simd-evidence/stage.txt"
+      - name: Acquire and inspect exact public source only
+        run: |
+          set -euo pipefail
+          curl --fail --location --proto '=https' --proto-redir '=https' --connect-timeout 15 --max-time 120 --max-filesize 1688160 --output "$RUNNER_TEMP/nasm-source.tar.gz" 'https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/nasm-2.16.03.tar.gz'
+          node scripts/phase30-native-simd/check-nasm-source.cjs "$RUNNER_TEMP/nasm-source.tar.gz" > "$RUNNER_TEMP/simd-host/source-proof.json"
+          curl --fail --location --proto '=https' --proto-redir '=https' --connect-timeout 15 --max-time 120 --max-filesize 17330151 --output "$RUNNER_TEMP/ffmpeg-source.tar.gz" 'https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/6dfaba896fddaea098abec8ac84ff67375a7c6f1'
+          printf '%s  %s\n' 'cd6175d64b7f152469d48ceffa0dcb3bf36bb3bcae42aece46570d48563cdb85' "$RUNNER_TEMP/ffmpeg-source.tar.gz" | sha256sum --check --strict
+          python3 scripts/phase30-minimal-ffmpeg/check-source.py "$RUNNER_TEMP/ffmpeg-source.tar.gz"
+          node scripts/phase30-native-simd/prepare-recipe.cjs "$RUNNER_TEMP/simd-host/candidate-recipe.sh" > "$RUNNER_TEMP/simd-host/recipe-proof.json"
+          docker pull gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1
+      - name: Build offline with existing bounded resources
+        run: |
+          set -euo pipefail
+          docker run --rm --user "$(id -u):$(id -g)" --network none --read-only --cpus 2 --memory 4g --memory-swap 4g --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,noexec,size=64m \
+            -v "$RUNNER_TEMP/nasm-source.tar.gz:/nasm-source.tar.gz:ro" -v "$RUNNER_TEMP/ffmpeg-source.tar.gz:/source.tar.gz:ro" \
+            -v "$RUNNER_TEMP/simd-host/candidate-recipe.sh:/candidate-recipe.sh:ro" -v "$GITHUB_WORKSPACE/scripts/phase30-native-simd/build.sh:/research-build.sh:ro" \
+            -v "$RUNNER_TEMP/simd-build:/build:rw" -v "$RUNNER_TEMP/simd-evidence:/evidence:rw" \
+            gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /research-build.sh 2>&1 | tee "$RUNNER_TEMP/simd-host/container.log"
+      - name: Sanitize container evidence before any host processing
+        id: sanitize
+        if: always()
+        run: node scripts/phase30-native-simd/retain-evidence.cjs "$RUNNER_TEMP/simd-evidence" "$RUNNER_TEMP/simd-sanitized"
+      - name: Require unchanged component and ELF inventory and retain full config delta
+        run: |
+          set -euo pipefail
+          node scripts/phase30-minimal-ffmpeg/inventory.cjs "$RUNNER_TEMP/simd-sanitized" > "$RUNNER_TEMP/simd-host/inventory.json"
+          baseline=phases/PHASE-30-RICH-MEDIA-ATTACHMENTS/evidence-002/minimal-ffmpeg-ci40997259137/config.h
+          diff -u "$baseline" "$RUNNER_TEMP/simd-sanitized/config.h" > "$RUNNER_TEMP/simd-host/config-delta.txt" && difference=0 || difference=$?
+          test "$difference" -le 1
+          grep -qx '#define HAVE_X86ASM 1' "$RUNNER_TEMP/simd-sanitized/config.h"
+      - name: Prepare closed bounded text evidence, including failed attempts
+        id: prepare
+        if: always() && steps.sanitize.outcome == 'success'
+        run: |
+          set -euo pipefail
+          node scripts/phase30-native-simd/retain-evidence.cjs "$RUNNER_TEMP/simd-sanitized" "$RUNNER_TEMP/simd-upload" "$RUNNER_TEMP/simd-host"
+      - name: Retain research text only, no binaries or source delivery
+        if: always() && steps.prepare.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: phase30-native-simd-text-evidence
+          path: ${{ runner.temp }}/simd-upload/
+          if-no-files-found: error
+          retention-days: 2
