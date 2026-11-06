@@ -1,0 +1,448 @@
+{
+  "scope": "ACTUAL_RENDER_BOUNDARY_FAILURE_DIAGNOSTICS",
+  "observedAt": {
+    "current_time": "2026-11-04 06:43:28 UTC"
+  },
+  "service": "srv-dahnerh594qs73fp3420",
+  "deployment": "dep-dbld6l6417fc7387hf6g",
+  "source": "eb9caba128ada184950cb6412049afc123400dfb",
+  "sourcePublication": {
+    "pr": 76,
+    "head": "49810766693def424bb03e558f95ae5e600c3d90",
+    "tree": "b591185e77ee1c1c3307356f08d533c2780b56a7",
+    "prCI": 41785198646,
+    "prReproduction": 41785198642,
+    "baseDev": "9c2353496c2352978946930d3282a949d35642ee",
+    "localUnit": {
+      "suites": 236,
+      "passed": 1685,
+      "skipped": 1
+    },
+    "localE2E": {
+      "suites": 28,
+      "passed": 218
+    },
+    "independentReviewers": [
+      "runtime_probe_design",
+      "diagnostic_security_review"
+    ],
+    "freshReviewScope": "READ_ONLY_IMMUTABLE_9c23534_TO_4981076_NO_BLOCKERS_DIFF_CHECK_PASS_NO_RUNTIME_TEST_CLAIM",
+    "dev": "eb9caba128ada184950cb6412049afc123400dfb",
+    "reviewedTreeEqual": true,
+    "devCI": 41786061413,
+    "devReproduction": 41786061412,
+    "prCIStatus": "SUCCESS",
+    "devCIStatus": "SUCCESS",
+    "prReproductionStatus": "SUCCESS",
+    "devReproductionStatus": "SUCCESS",
+    "branchCleanup": "VERIFIED_REMOTE_LOCAL_PRUNED"
+  },
+  "raw": {
+    "url": "https://dashboard.render.com/web/srv-dahnerh594qs73fp3420/deploys/dep-dbld6l6417fc7387hf6g?r=2026-11-04%4006%3A39%3A20%7E2026-11-04%4006%3A42%3A06",
+    "lines": [
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"baseline\",\"baselineHealthMs\":[94.27752099999998,2.9099200000000565,90.3159050000013],\"cgroupBytes\":121745408,\"cgroupLimitBytes\":536870912,\"appRssBytes\":114049024,\"oom\":0,\"oomKill\":0}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"fixture-start\",\"name\":\"jpeg\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"stage\",\"name\":\"jpeg\",\"result\":{\"workerRssBytes\":121552896,\"normalizedBytes\":3681342,\"thumbnailBytes\":16714},\"elapsedMs\":8798.792112000001,\"healthMs\":[2.6227539999999863,3.9645459999992454,96.24006799999916,7.3727990000006685,10.844553999999334,90.48229800000081,2.2939860000005865,1.3380529999994906],\"cgroupPeakBytes\":208076800,\"appPeakRssBytes\":127418368}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"fixture-start\",\"name\":\"png\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"stage\",\"name\":\"png\",\"result\":{\"workerRssBytes\":116674560,\"normalizedBytes\":1454924,\"thumbnailBytes\":9920},\"elapsedMs\":7397.365633999998,\"healthMs\":[2.0130890000000363,500.52045999999973,78.56389800000034,1.717250999998214,1.558377000001201,1.7573129999982484,11.373176000000967,1.8629949999995006],\"cgroupPeakBytes\":208076800,\"appPeakRssBytes\":131219456}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"fixture-start\",\"name\":\"webp\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"stage\",\"name\":\"webp\",\"result\":{\"workerRssBytes\":145747968,\"normalizedBytes\":1986842,\"thumbnailBytes\":17794},\"elapsedMs\":12597.805431999997,\"healthMs\":[5.519073999999819,95.14071100000001,1.8699460000025283,3.2576589999989665,1.820823999998538,89.55253600000287,81.4882800000014,94.28304100000241],\"cgroupPeakBytes\":238891008,\"appPeakRssBytes\":131219456}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"fixture-start\",\"name\":\"video\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"partial-observations\",\"resourceSampleStatus\":\"LAST_OBSERVATION_ONLY\",\"failedStage\":\"video\",\"failedStageElapsedMs\":15198.606099999997,\"completedStages\":[{\"name\":\"jpeg\",\"result\":{\"workerRssBytes\":121552896,\"normalizedBytes\":3681342,\"thumbnailBytes\":16714},\"elapsedMs\":8798.792112000001,\"healthMs\":[2.6227539999999863,3.9645459999992454,96.24006799999916,7.3727990000006685,10.844553999999334,90.48229800000081,2.2939860000005865,1.3380529999994906]},{\"name\":\"png\",\"result\":{\"workerRssBytes\":116674560,\"normalizedBytes\":1454924,\"thumbnailBytes\":9920},\"elapsedMs\":7397.365633999998,\"healthMs\":[2.0130890000000363,500.52045999999973,78.56389800000034,1.717250999998214,1.558377000001201,1.7573129999982484,11.373176000000967,1.8629949999995006]},{\"name\":\"webp\",\"result\":{\"workerRssBytes\":145747968,\"normalizedBytes\":1986842,\"thumbnailBytes\":17794},\"elapsedMs\":12597.805431999997,\"healthMs\":[5.519073999999819,95.14071100000001,1.8699460000025283,3.2576589999989665,1.820823999998538,89.55253600000287,81.4882800000014,94.28304100000241]}],\"baselineHealthMs\":[94.27752099999998,2.9099200000000565,90.3159050000013],\"cgroupPeakBytes\":238891008,\"appPeakRssBytes\":133373952,\"lastSampleAgeMs\":99.86129600000277,\"lastObservedLeafOomDelta\":0,\"lastObservedLeafOomKillDelta\":0}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"status\":\"FAIL\",\"code\":\"PROCESSING_TIMEOUT\",\"originalFailureCode\":\"PROCESSING_TIMEOUT\",\"fixture\":\"video\",\"scratchCleanup\":\"UNVERIFIED\",\"processorObservation\":{\"progress\":{\"stage\":\"OUTPUT_DECODE\",\"elapsedMs\":13208.425297,\"completed\":[{\"stage\":\"BOOT\",\"elapsedMs\":17.524125000000026},{\"stage\":\"VERIFY_TIME\",\"elapsedMs\":94.03871500000002},{\"stage\":\"VERIFY_DISTRIBUTION\",\"elapsedMs\":1193.6587410000002},{\"stage\":\"VERIFY_FFMPEG\",\"elapsedMs\":202.57251099999985},{\"stage\":\"VERIFY_FFPROBE\",\"elapsedMs\":697.8041639999999},{\"stage\":\"INPUT_VALIDATE\",\"elapsedMs\":794.1072429999999},{\"stage\":\"SOURCE_PROBE\",\"elapsedMs\":199.16622900000038},{\"stage\":\"SOURCE_DECODE\",\"elapsedMs\":9011.938051},{\"stage\":\"NORMALIZE\",\"elapsedMs\":492.93609599999945},{\"stage\":\"OUTPUT_VALIDATE\",\"elapsedMs\":307.2612050000007},{\"stage\":\"OUTPUT_PROBE\",\"elapsedMs\":197.30169399999977}]},\"lastProgressAgeMs\":96.21191800000088,\"peakRssBytes\":106409984,\"nativeRssObserved\":true},\"completeEnablement\":\"NOT_RUN\",\"deploymentHeadroom\":\"UNVERIFIED_HIDDEN_ANCESTORS\"}",
+      "PHASE30_RUNTIME_SMOKE={\"scope\":\"NEAR_LIMIT_SYNTHETIC_ONLY\",\"sha\":\"eb9caba128ada184950cb6412049afc123400dfb\",\"event\":\"post-shutdown-observations\",\"producerQuiesced\":true,\"resourceStatus\":\"OBSERVED\",\"resource\":{\"current\":141848576,\"limit\":536870912,\"oom\":0,\"oomKill\":0,\"ancestors\":[]},\"appRssBytes\":131145728,\"scratchStatus\":\"VERIFIED_ABSENT\",\"scratchResidual\":0,\"completeEnablement\":\"NOT_RUN\"}"
+    ],
+    "sourceLinks": [
+      "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/commit/eb9caba128ada184950cb6412049afc123400dfb"
+    ],
+    "deploymentStatus": "SUCCEEDED_LIVE"
+  },
+  "events": [
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "baseline",
+      "baselineHealthMs": [
+        94.27752099999998,
+        2.9099200000000565,
+        90.3159050000013
+      ],
+      "cgroupBytes": 121745408,
+      "cgroupLimitBytes": 536870912,
+      "appRssBytes": 114049024,
+      "oom": 0,
+      "oomKill": 0
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "fixture-start",
+      "name": "jpeg"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "stage",
+      "name": "jpeg",
+      "result": {
+        "workerRssBytes": 121552896,
+        "normalizedBytes": 3681342,
+        "thumbnailBytes": 16714
+      },
+      "elapsedMs": 8798.792112000001,
+      "healthMs": [
+        2.6227539999999863,
+        3.9645459999992454,
+        96.24006799999916,
+        7.3727990000006685,
+        10.844553999999334,
+        90.48229800000081,
+        2.2939860000005865,
+        1.3380529999994906
+      ],
+      "cgroupPeakBytes": 208076800,
+      "appPeakRssBytes": 127418368
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "fixture-start",
+      "name": "png"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "stage",
+      "name": "png",
+      "result": {
+        "workerRssBytes": 116674560,
+        "normalizedBytes": 1454924,
+        "thumbnailBytes": 9920
+      },
+      "elapsedMs": 7397.365633999998,
+      "healthMs": [
+        2.0130890000000363,
+        500.52045999999973,
+        78.56389800000034,
+        1.717250999998214,
+        1.558377000001201,
+        1.7573129999982484,
+        11.373176000000967,
+        1.8629949999995006
+      ],
+      "cgroupPeakBytes": 208076800,
+      "appPeakRssBytes": 131219456
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "fixture-start",
+      "name": "webp"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "stage",
+      "name": "webp",
+      "result": {
+        "workerRssBytes": 145747968,
+        "normalizedBytes": 1986842,
+        "thumbnailBytes": 17794
+      },
+      "elapsedMs": 12597.805431999997,
+      "healthMs": [
+        5.519073999999819,
+        95.14071100000001,
+        1.8699460000025283,
+        3.2576589999989665,
+        1.820823999998538,
+        89.55253600000287,
+        81.4882800000014,
+        94.28304100000241
+      ],
+      "cgroupPeakBytes": 238891008,
+      "appPeakRssBytes": 131219456
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "fixture-start",
+      "name": "video"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "partial-observations",
+      "resourceSampleStatus": "LAST_OBSERVATION_ONLY",
+      "failedStage": "video",
+      "failedStageElapsedMs": 15198.606099999997,
+      "completedStages": [
+        {
+          "name": "jpeg",
+          "result": {
+            "workerRssBytes": 121552896,
+            "normalizedBytes": 3681342,
+            "thumbnailBytes": 16714
+          },
+          "elapsedMs": 8798.792112000001,
+          "healthMs": [
+            2.6227539999999863,
+            3.9645459999992454,
+            96.24006799999916,
+            7.3727990000006685,
+            10.844553999999334,
+            90.48229800000081,
+            2.2939860000005865,
+            1.3380529999994906
+          ]
+        },
+        {
+          "name": "png",
+          "result": {
+            "workerRssBytes": 116674560,
+            "normalizedBytes": 1454924,
+            "thumbnailBytes": 9920
+          },
+          "elapsedMs": 7397.365633999998,
+          "healthMs": [
+            2.0130890000000363,
+            500.52045999999973,
+            78.56389800000034,
+            1.717250999998214,
+            1.558377000001201,
+            1.7573129999982484,
+            11.373176000000967,
+            1.8629949999995006
+          ]
+        },
+        {
+          "name": "webp",
+          "result": {
+            "workerRssBytes": 145747968,
+            "normalizedBytes": 1986842,
+            "thumbnailBytes": 17794
+          },
+          "elapsedMs": 12597.805431999997,
+          "healthMs": [
+            5.519073999999819,
+            95.14071100000001,
+            1.8699460000025283,
+            3.2576589999989665,
+            1.820823999998538,
+            89.55253600000287,
+            81.4882800000014,
+            94.28304100000241
+          ]
+        }
+      ],
+      "baselineHealthMs": [
+        94.27752099999998,
+        2.9099200000000565,
+        90.3159050000013
+      ],
+      "cgroupPeakBytes": 238891008,
+      "appPeakRssBytes": 133373952,
+      "lastSampleAgeMs": 99.86129600000277,
+      "lastObservedLeafOomDelta": 0,
+      "lastObservedLeafOomKillDelta": 0
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "status": "FAIL",
+      "code": "PROCESSING_TIMEOUT",
+      "originalFailureCode": "PROCESSING_TIMEOUT",
+      "fixture": "video",
+      "scratchCleanup": "UNVERIFIED",
+      "processorObservation": {
+        "progress": {
+          "stage": "OUTPUT_DECODE",
+          "elapsedMs": 13208.425297,
+          "completed": [
+            {
+              "stage": "BOOT",
+              "elapsedMs": 17.524125000000026
+            },
+            {
+              "stage": "VERIFY_TIME",
+              "elapsedMs": 94.03871500000002
+            },
+            {
+              "stage": "VERIFY_DISTRIBUTION",
+              "elapsedMs": 1193.6587410000002
+            },
+            {
+              "stage": "VERIFY_FFMPEG",
+              "elapsedMs": 202.57251099999985
+            },
+            {
+              "stage": "VERIFY_FFPROBE",
+              "elapsedMs": 697.8041639999999
+            },
+            {
+              "stage": "INPUT_VALIDATE",
+              "elapsedMs": 794.1072429999999
+            },
+            {
+              "stage": "SOURCE_PROBE",
+              "elapsedMs": 199.16622900000038
+            },
+            {
+              "stage": "SOURCE_DECODE",
+              "elapsedMs": 9011.938051
+            },
+            {
+              "stage": "NORMALIZE",
+              "elapsedMs": 492.93609599999945
+            },
+            {
+              "stage": "OUTPUT_VALIDATE",
+              "elapsedMs": 307.2612050000007
+            },
+            {
+              "stage": "OUTPUT_PROBE",
+              "elapsedMs": 197.30169399999977
+            }
+          ]
+        },
+        "lastProgressAgeMs": 96.21191800000088,
+        "peakRssBytes": 106409984,
+        "nativeRssObserved": true
+      },
+      "completeEnablement": "NOT_RUN",
+      "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+      "event": "post-shutdown-observations",
+      "producerQuiesced": true,
+      "resourceStatus": "OBSERVED",
+      "resource": {
+        "current": 141848576,
+        "limit": 536870912,
+        "oom": 0,
+        "oomKill": 0,
+        "ancestors": []
+      },
+      "appRssBytes": 131145728,
+      "scratchStatus": "VERIFIED_ABSENT",
+      "scratchResidual": 0,
+      "completeEnablement": "NOT_RUN"
+    }
+  ],
+  "failure": {
+    "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+    "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+    "status": "FAIL",
+    "code": "PROCESSING_TIMEOUT",
+    "originalFailureCode": "PROCESSING_TIMEOUT",
+    "fixture": "video",
+    "scratchCleanup": "UNVERIFIED",
+    "processorObservation": {
+      "progress": {
+        "stage": "OUTPUT_DECODE",
+        "elapsedMs": 13208.425297,
+        "completed": [
+          {
+            "stage": "BOOT",
+            "elapsedMs": 17.524125000000026
+          },
+          {
+            "stage": "VERIFY_TIME",
+            "elapsedMs": 94.03871500000002
+          },
+          {
+            "stage": "VERIFY_DISTRIBUTION",
+            "elapsedMs": 1193.6587410000002
+          },
+          {
+            "stage": "VERIFY_FFMPEG",
+            "elapsedMs": 202.57251099999985
+          },
+          {
+            "stage": "VERIFY_FFPROBE",
+            "elapsedMs": 697.8041639999999
+          },
+          {
+            "stage": "INPUT_VALIDATE",
+            "elapsedMs": 794.1072429999999
+          },
+          {
+            "stage": "SOURCE_PROBE",
+            "elapsedMs": 199.16622900000038
+          },
+          {
+            "stage": "SOURCE_DECODE",
+            "elapsedMs": 9011.938051
+          },
+          {
+            "stage": "NORMALIZE",
+            "elapsedMs": 492.93609599999945
+          },
+          {
+            "stage": "OUTPUT_VALIDATE",
+            "elapsedMs": 307.2612050000007
+          },
+          {
+            "stage": "OUTPUT_PROBE",
+            "elapsedMs": 197.30169399999977
+          }
+        ]
+      },
+      "lastProgressAgeMs": 96.21191800000088,
+      "peakRssBytes": 106409984,
+      "nativeRssObserved": true
+    },
+    "completeEnablement": "NOT_RUN",
+    "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+  },
+  "postShutdown": {
+    "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+    "sha": "eb9caba128ada184950cb6412049afc123400dfb",
+    "event": "post-shutdown-observations",
+    "producerQuiesced": true,
+    "resourceStatus": "OBSERVED",
+    "resource": {
+      "current": 141848576,
+      "limit": 536870912,
+      "oom": 0,
+      "oomKill": 0,
+      "ancestors": []
+    },
+    "appRssBytes": 131145728,
+    "scratchStatus": "VERIFIED_ABSENT",
+    "scratchResidual": 0,
+    "completeEnablement": "NOT_RUN"
+  },
+  "videoStatus": "HELD_RUNTIME_VALIDATION_FAILED",
+  "publicUploadEnabled": false,
+  "dbFixturesCreated": false,
+  "storageFixturesCreated": false,
+  "externalHealthBeforeRetry": {
+    "scope": "EXTERNAL_TEST_HEALTH_ONLY",
+    "observedAt": "2026-11-04T06:25:02.328Z",
+    "httpStatus": 200,
+    "elapsedMs": 42460.3129,
+    "bytes": 111,
+    "exactServiceTestVerified": true,
+    "wakeupState": "NOT_INDEPENDENTLY_OBSERVED"
+  },
+  "restoration": {
+    "deployment": "dep-dbld8lm417fc7387mv70",
+    "status": "SUCCEEDED_LIVE",
+    "source": "eb9caba128ada184950cb6412049afc123400dfb",
+    "freshSettingsReadback": {
+      "url": "https://dashboard.render.com/web/srv-dahnerh594qs73fp3420/settings",
+      "start": [
+        "ATTACHMENTS_ENABLED=false ATTACHMENTS_IMAGE_ENABLED=false ATTACHMENTS_VIDEO_ENABLED=false ATTACHMENTS_TEXT_ENABLED=false npm run start"
+      ],
+      "source": [
+        "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Back-End/commit/eb9caba128ada184950cb6412049afc123400dfb"
+      ],
+      "live": [
+        "/web/srv-dahnerh594qs73fp3420/deploys/dep-dbld8lm417fc7387mv70"
+      ]
+    }
+  }
+}
