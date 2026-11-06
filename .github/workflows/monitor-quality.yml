@@ -16,6 +16,8 @@ jobs:
       - run: node --check scripts/production-availability-monitor.mjs
       - run: node --test scripts/production-availability-monitor.test.mjs
       - run: node --test scripts/phase30-minimal-ffmpeg/inventory.test.cjs
+      - run: node --check scripts/phase30-native-simd/check-nasm-source.cjs
+      - run: node --test scripts/phase30-native-simd/check-nasm-source.test.cjs
       - run: git diff --check
 
   phase30-acceptance-tool:
