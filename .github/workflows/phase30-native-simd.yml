@@ -2,7 +2,7 @@ name: Phase30 same-source SIMD research
 on:
   workflow_dispatch:
   push:
-    branches: [research/phase30-native-simd-build, research/phase30-simd-link-closure]
+    branches: [research/phase30-native-simd-build, research/phase30-simd-link-closure, research/phase30-aac-negative-fixtures]
     paths:
       - 'scripts/phase30-native-simd/**'
       - '.github/workflows/phase30-native-simd.yml'
@@ -59,6 +59,8 @@ jobs:
             gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1 bash /candidate-relink.sh 2>&1 | tee "$RUNNER_TEMP/simd-host/relink-container.log"
       - name: Collect closed dependencies with exact-owned verified container cleanup
         run: node scripts/phase30-native-simd/run-collector.cjs
+      - name: Observe owned AAC commands with verified cleanup - no acceptance claim
+        run: node scripts/phase30-native-simd/run-aac-probe.cjs
       - name: Sanitize container evidence before any host processing
         id: sanitize
         if: always()
