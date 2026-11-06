@@ -109,7 +109,7 @@ function inspectFile(path) {
  // Reject symlink/nonregular inputs before open; enforce the same on the opened fd.
  const initial=fs.lstatSync(path);
  if(!initial.isFile() || initial.size!==SOURCE_BYTES) fail('SOURCE_INPUT_FILE');
- const fd=fs.openSync(path,fs.constants.O_RDONLY | (fs.constants.O_NOFOLLOW || 0));
+ const fd=fs.openSync(path,fs.constants.O_RDONLY | (fs.constants.O_NOFOLLOW || 0) | (fs.constants.O_NONBLOCK || 0));
  try {
   const opened=fs.fstatSync(fd);
   if(!opened.isFile() || opened.size!==SOURCE_BYTES || opened.dev!==initial.dev || opened.ino!==initial.ino) fail('SOURCE_INPUT_FILE');
