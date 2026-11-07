@@ -5,9 +5,9 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 export const targets = [
-  ['BACKEND_DIRECT_HEALTH', 'https://congdongngonngu-back-end.onrender.com/api/v1/health', 'health'],
-  ['FRONTEND_HOME', 'https://cong-dong-ngon-ngu-sigma.vercel.app/', 'html'],
-  ['FRONTEND_BACKEND_HEALTH', 'https://cong-dong-ngon-ngu-sigma.vercel.app/api/v1/health', 'health'],
+  ['BACKEND_DIRECT_HEALTH', 'https://api.congdongngonngu.vn/api/v1/health', 'health'],
+  ['FRONTEND_HOME', 'https://congdongngonngu.vn/', 'html'],
+  ['FRONTEND_BACKEND_HEALTH', 'https://congdongngonngu.vn/api/v1/health', 'health'],
 ];
 export const markers = {
   live: '<!-- congdongngonngu-production-availability-monitor -->',
