@@ -1,0 +1,105 @@
+{
+  "observedAt": "2026-10-27T04:41:16.589Z",
+  "origin": "https://congdongngonngu-back-end.onrender.com",
+  "expectedDevSha": "55f2f93cf4c98778d69b9e08e0a0f0dec02d6f8d",
+  "result": "PASS",
+  "paths": 171,
+  "operations": 201,
+  "schemas": 73,
+  "version": "0.1.0",
+  "openapi": "3.0.0",
+  "documentSha256": "f049b5c45f1e5615c15e4ec83aff53fc350a8e26c2c287ccc771949ebaee4c8e",
+  "records": [
+    {
+      "route": "/",
+      "status": 302,
+      "location": "/docs",
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'",
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "route": "/docs",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/docs-json",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "route": "/api/v1/health",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "route": "/health",
+      "status": 404,
+      "location": null,
+      "csp": "default-src 'none'",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/api/v1/docs",
+      "status": 404,
+      "location": null,
+      "csp": "default-src 'none'",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/api/v1/docs-json",
+      "status": 404,
+      "location": null,
+      "csp": "default-src 'none'",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/docs-yaml",
+      "status": 404,
+      "location": null,
+      "csp": "default-src 'none'",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "route": "/api/v1/profile",
+      "status": 401,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "route": "/docs/swagger-ui.css",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'",
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "route": "/docs/swagger-ui-bundle.js",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'",
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "route": "/docs/swagger-ui-standalone-preset.js",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'",
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "route": "/docs/swagger-ui-init.js",
+      "status": 200,
+      "location": null,
+      "csp": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'",
+      "type": "application/javascript; charset=utf-8"
+    }
+  ]
+}
