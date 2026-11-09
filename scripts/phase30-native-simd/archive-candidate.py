@@ -113,15 +113,15 @@ def _closed_names(files, names):
     for name, data in files.items():
         if not helper.safe_name(name) or not isinstance(data, bytes) or not data:
             raise ValueError('CAPSULE_ITEM')
+        total += len(data)
+        if total > CAPSULE_LIMIT:
+            raise ValueError('CAPSULE_LIMIT')
         try:
             text = data.decode('utf-8', errors='strict')
         except UnicodeError as error:
             raise ValueError('CAPSULE_UTF8') from error
         if re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]', text):
             raise ValueError('CAPSULE_CONTROL')
-        total += len(data)
-        if total > CAPSULE_LIMIT:
-            raise ValueError('CAPSULE_LIMIT')
         if any('/'.join(name.split('/')[:i]) in names
                for i in range(1, len(name.split('/')))):
             raise ValueError('CAPSULE_PARENT')
