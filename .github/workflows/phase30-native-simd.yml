@@ -1,6 +1,12 @@
 name: Phase30 same-source SIMD research
 on:
   workflow_dispatch:
+    inputs:
+      retain_candidate:
+        description: Retain the exact software candidate for controlled inspection only
+        type: boolean
+        default: false
+        required: false
   push:
     branches: [research/phase30-native-simd-build, research/phase30-simd-link-closure, research/phase30-aac-negative-fixtures]
     paths:
@@ -90,6 +96,7 @@ jobs:
           set -euo pipefail
           node scripts/phase30-native-simd/retain-evidence.cjs "$RUNNER_TEMP/simd-sanitized" "$RUNNER_TEMP/simd-upload" "$RUNNER_TEMP/simd-host"
       - name: Assemble complete runner-local material candidate and independently read back
+        id: candidate_assembly
         if: success() && steps.prepare.outcome == 'success'
         run: |
           set -euo pipefail
@@ -107,5 +114,19 @@ jobs:
         with:
           name: phase30-native-simd-text-evidence
           path: ${{ runner.temp }}/simd-final-upload/
+          if-no-files-found: error
+          retention-days: 2
+      - name: Verify explicitly requested candidate transfer identity
+        id: candidate_transfer_guard
+        if: success() && github.event_name == 'workflow_dispatch' && inputs.retain_candidate == true && steps.candidate_assembly.outcome == 'success'
+        env:
+          PHASE30_RETAIN_CANDIDATE: ${{ inputs.retain_candidate }}
+        run: node scripts/phase30-native-simd/verify-candidate-transfer.cjs
+      - name: Retain one exact software candidate for independent inspection - no adoption
+        if: success() && github.event_name == 'workflow_dispatch' && inputs.retain_candidate == true && steps.candidate_transfer_guard.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: phase30-native-simd-material-candidate
+          path: ${{ runner.temp }}/simd-candidate.tar.gz
           if-no-files-found: error
           retention-days: 2
