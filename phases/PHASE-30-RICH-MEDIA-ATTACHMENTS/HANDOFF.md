@@ -1,3 +1,11 @@
+# Phase30 current full material candidate - 2026-11-09
+
+Actual source65777668/CI42547901625PASS:27candidate/12baselinebundle/3runtime Python, bounded nativebuild/relink, full28-member candidate assembly andtwo actual readbacks. Candidate45084041bytes/SHA5d8783796cf8c4ed1b1827af88aa3e32c15429f12a2b57daeb5534d890a9b3de remains internal/HOLD for independent actualarchive/binarydeliveryreview. Textartifact13644018527/all64hashes/82innerrecords verified; factualpublicationreviewapproved only. Noadoption/Render/formatenablement;002stillblocked/remediate, videoheld/all4off,003-006/Phase31unstarted. PR204finalevidencepublicationpending. See SIMD-MATERIAL-CANDIDATE-002-20261109.md; historicalcheckpointspreserved.
+
+# Phase30 current guard publication - 2026-11-09
+
+WorkspacePR202 mergedmain425d454649f8c94e65d6dd851942f9335a57f81a/reviewedtreecbd1d7a2d303f33db54edc614345d775c7db247a equal, PRCI42546335061/mainCI42546452032PASS; mergedbranchdeletedremote/local/pruned/cleansyncedmain verified. Exact receipt evidence-002/archive-guard-publication-20261109.json. Newresearch/phase30-simd-source-assembly isolates fullrunner-localbundle work; nofullbundle/adoptionPASS. TESTrestoreddep-dbohvcijnfac73ev9c0g@937db14/all4false/noprobe.002stillblocked/remediate, videoheld;003-006/Phase31unstarted. Historical checkpoints below unchanged.
+
 # Phase30 current archive guard and TEST recovery - 2026-11-09
 
 002 remains BLOCKED_OR_REMEDIATE_AND_RETEST; video HELD_RUNTIME_VALIDATION_FAILED; all4flagsfalse;003-006/Phase31 unstarted. Exact TEST restored to no-probe command, dep-dbohvcijnfac73ev9c0g Live937db14/health200test. Delayed Nov6 tiny regression onlyPASS, hidden headroom/other boots unverified. PR202 final sourcea904ee68c339282677e51f7ad232664994fec775 independently reviewed/CI42546023655GREEN; guard/core4inputs only, no full bundle/adoption. Newer mainb6a6d31 monitor work preserved. PR202 final evidence/publication pending. See ARCHIVE-GUARD-002-20261109.md and evidence-002/tiny-regression-20261109.json. Historical checkpoints below unchanged.

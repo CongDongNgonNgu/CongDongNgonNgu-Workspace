@@ -23,6 +23,9 @@ jobs:
         run: |
           set -euo pipefail
           node --test scripts/phase30-native-simd/*.test.cjs
+          python3 -m unittest discover -s scripts/phase30-native-simd -p "test_*candidate*.py" -v
+          python3 scripts/phase30-minimal-ffmpeg/test_bundle.py
+          python3 scripts/phase30-minimal-ffmpeg/test_runtime_source.py
           bash -n scripts/phase30-native-simd/build.sh
           shellcheck scripts/phase30-native-simd/build.sh
           mkdir "$RUNNER_TEMP/simd-evidence" "$RUNNER_TEMP/simd-build" "$RUNNER_TEMP/simd-host"
@@ -37,6 +40,13 @@ jobs:
           python3 scripts/phase30-minimal-ffmpeg/check-source.py "$RUNNER_TEMP/ffmpeg-source.tar.gz"
           node scripts/phase30-native-simd/prepare-recipe.cjs "$RUNNER_TEMP/simd-host/candidate-recipe.sh" > "$RUNNER_TEMP/simd-host/recipe-proof.json"
           node scripts/phase30-native-simd/prepare-relink.cjs "$RUNNER_TEMP/simd-host/candidate-relink.sh" > "$RUNNER_TEMP/simd-host/relink-proof.json"
+          mkdir "$RUNNER_TEMP/runtime-source"
+          curl --fail --proto '=https' --connect-timeout 15 --max-time 120 --max-filesize 19363988 --output "$RUNNER_TEMP/runtime-source/glibc_2.36.orig.tar.xz" 'https://snapshot.debian.org/file/d034128a6116dcf9e76c92f898ec63f4f4e65786'
+          printf '%s  %s\n' 'a543c02070d46ccaf866957efd13f10c924daa74c86a90a0254db09a92a708ee' "$RUNNER_TEMP/runtime-source/glibc_2.36.orig.tar.xz" | sha256sum --check --strict
+          curl --fail --proto '=https' --connect-timeout 15 --max-time 120 --max-filesize 902612 --output "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.debian.tar.xz" 'https://snapshot.debian.org/file/820dff0e89f9a499ee1238764e2dce271dacfbb3'
+          printf '%s  %s\n' '6ad2f9dfc88bec54f0bacab04d14f71dbd3eea0cedd91a23a8911fd09847fbc9' "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.debian.tar.xz" | sha256sum --check --strict
+          curl --fail --proto '=https' --connect-timeout 15 --max-time 120 --max-filesize 9765 --output "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.dsc" 'https://snapshot.debian.org/file/bcd6c3bbcb5f51422bbfc953e5f61cb0a4f5dd97'
+          printf '%s  %s\n' 'ba6d00fde9d2f11af56861674dc87c5dc5a7c3f2c1c0a7dd4d63d76639e6ec98' "$RUNNER_TEMP/runtime-source/glibc_2.36-9+deb12u10.dsc" | sha256sum --check --strict
           docker pull gcc@sha256:a689e29bc3adf4663ef9a141d23081252764d1319c63f591a027bd6fd676f4c1
           docker pull node@sha256:6f7b03f7c2c8e2e784dcf9295400527b9b1270fd37b7e9a7285cf83b6951452d
       - name: Build offline with existing bounded resources
@@ -79,11 +89,23 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/phase30-native-simd/retain-evidence.cjs "$RUNNER_TEMP/simd-sanitized" "$RUNNER_TEMP/simd-upload" "$RUNNER_TEMP/simd-host"
-      - name: Retain research text only, no binaries or source delivery
+      - name: Assemble complete runner-local material candidate and independently read back
+        if: success() && steps.prepare.outcome == 'success'
+        run: |
+          set -euo pipefail
+          python3 scripts/phase30-native-simd/assemble-candidate.py \
+            "$RUNNER_TEMP/simd-build" "$RUNNER_TEMP/ffmpeg-source.tar.gz" "$RUNNER_TEMP/nasm-source.tar.gz" \
+            "$RUNNER_TEMP/simd-upload" "$GITHUB_WORKSPACE" "$RUNNER_TEMP/runtime-source" \
+            "$RUNNER_TEMP/simd-candidate.tar.gz" "$RUNNER_TEMP/simd-host/candidate-archive-proof.json"
+      - name: Retain closed text including candidate proof or failed-attempt observations
+        id: final_prepare
         if: always() && steps.prepare.outcome == 'success'
+        run: node scripts/phase30-native-simd/retain-evidence.cjs "$RUNNER_TEMP/simd-sanitized" "$RUNNER_TEMP/simd-final-upload" "$RUNNER_TEMP/simd-host"
+      - name: Retain research text only, no binaries or source delivery
+        if: always() && steps.final_prepare.outcome == 'success'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: phase30-native-simd-text-evidence
-          path: ${{ runner.temp }}/simd-upload/
+          path: ${{ runner.temp }}/simd-final-upload/
           if-no-files-found: error
           retention-days: 2

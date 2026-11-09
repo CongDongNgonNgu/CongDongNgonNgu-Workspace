@@ -19,7 +19,7 @@ jobs:
       - run: node --check scripts/phase30-native-simd/check-nasm-source.cjs
       - run: node --test scripts/phase30-native-simd/*.test.cjs
       - name: Source-only candidate archive guards - no native execution or delivery
-        run: python3 -m unittest discover -s scripts/phase30-native-simd -p "test_archive_candidate*.py" -v
+        run: python3 -m unittest discover -s scripts/phase30-native-simd -p "test_*candidate*.py" -v
       - run: git diff --check
 
   phase30-acceptance-tool:
