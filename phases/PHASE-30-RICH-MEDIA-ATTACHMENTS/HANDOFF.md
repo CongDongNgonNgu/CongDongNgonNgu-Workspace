@@ -1,3 +1,11 @@
+# Phase30 current actual transfer and material inspection - 2026-11-09
+
+Explicitownerapprovalresolvedtheearlierexportblocker. Actualrun42555671199@92cb97cPASS retainedone2daysoftwareartifact13646879359; actualarchive45088234/SHA0ef73781d602d1a91f6d774604d401e7602174f17f06c0610d6af8b6a848eebb downloadedandstrictlystaged28members/all83capsulerecordsPASS. IndependentACTUALdelivered-byte/scopedmaterial-noticeinventoryreviewapproved; no localnativeexec/publicrelease/Backendadoption/formatapproval. Exactevidence CONTROLLED-TRANSFER-RESULT-002-20261109.md +evidence-002/simd-ci42555671199/. Historicalpending/rejectedcheckpointsbelowsupersededforthisspecifictransferonly.002stillblocked/remediate/videoheld/all4off;003-006/Phase31unstarted.
+
+# Phase30 current explicit transfer authorization - 2026-11-09
+
+Owner explicitly approved oneapproximately45MBFFmpeg/ffprobe/source/notices artifact for2days in WorkspaceGitHubActions fordirectinspection. Exactreceipt evidence-002/controlled-transfer-owner-approval-20261109.json. Reviewedsource92cb97c(codeequalfae61af/CI42552419722PASS) manuallydispatchedretain_candidate=true HTTP204; actualartifact/identity/retentionverificationpending. Historical rejection/pending checkpoints below are preserved and superseded for this exact transfer only. No publicrelease/adoption/formatapproval follows;002stillblocked/remediate/videoheld/all4off/003-006andPhase31unstarted.
+
 # Phase30 current transfer authorization checkpoint - 2026-11-09
 
 PR204 lifecyclecomplete9b902d7/equaltree123f108e/mainCI42549279820PASS/branchescleaned. PR205sourcefae61af independentlyreviewed/CI42550333181PASS228Node+27Python; actualsoftwareartifacttransferREJECTED_BEFORE_EXECUTION byautomaticapprovalreview forlackofspecificpayload-exportauthorization. Ownerapprovalquestionpending; noexportworkaround/publicrelease/adoption. Defaultretain_candidatefalse; source/testpreparationonly. See CONTROLLED-TRANSFER-002-20261109.md.002stillblocked/remediate/videoheld/all4off;003-006/Phase31unstarted. Historicalcheckpointspreserved.

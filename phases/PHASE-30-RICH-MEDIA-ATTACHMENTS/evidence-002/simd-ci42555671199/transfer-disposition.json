@@ -1,0 +1,33 @@
+{
+  "scope": "OWNER_APPROVED_CONTROLLED_CANDIDATE_TRANSFER_AND_ACTUAL_INSPECTION",
+  "source": "92cb97c9aa41254cc67532f0fa4f191c6a5db726",
+  "run": 42555671199,
+  "job": 128960692923,
+  "ci": "SUCCESS",
+  "explicitOwnerApproval": "ONE_CANDIDATE_ACTIONS_ARTIFACT_TWO_DAYS_FOR_DIRECT_INSPECTION",
+  "softwareArtifact": {
+    "id": 13646879359,
+    "zipBytes": 45088854,
+    "zipSha256": "c54bf3f8124b7bbf537ed46d201e9041379f0cea4fdb95f4a8234eab0b67ce1d",
+    "expiresAt": "2026-11-11T03:20:42Z"
+  },
+  "archive": {
+    "bytes": 45088234,
+    "sha256": "0ef73781d602d1a91f6d774604d401e7602174f17f06c0610d6af8b6a848eebb",
+    "members": 28,
+    "payloadBytes": 57164335
+  },
+  "actualOuterReadback": "PASS",
+  "actualInnerRecords": 83,
+  "actualOriginalManifest": "EXTRACTED_BYTES_VERIFIED",
+  "engineeringMaterialAndNoticeInventory": "PASS_SCOPED_INDEPENDENT_REVIEW",
+  "blanketLicenseSecurityClearance": "NOT_CLAIMED",
+  "publicRelease": "NOT_AUTHORIZED_BY_THIS_TRANSFER_APPROVAL",
+  "backendAdoption": "NOT_RUN",
+  "renderAcceptance": "NOT_RUN",
+  "formats": "ALL_DISABLED",
+  "phase30_002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+  "phase31Implemented": false,
+  "localNativeExecution": "NOT_RUN_DURING_STATIC_INSPECTION",
+  "researchNativeCommands": "EXECUTED_CI_NOT_FULL_WORKER_OR_RENDER_ACCEPTANCE"
+}
