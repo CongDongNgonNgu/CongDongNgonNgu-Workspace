@@ -64,12 +64,12 @@ class SimdArchiveTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 candidate.write_verified_candidate(output, {'build/fixture.txt': b'changed'})
 
-    def test_full_assembly_requires_every_real_pinned_material(self):
+    def test_core_collection_requires_real_pinned_material(self):
         with tempfile.TemporaryDirectory(prefix='phase30-simd-archive-') as directory:
             root = pathlib.Path(directory)
             output = root / 'candidate.tar.gz'
             with self.assertRaises((ValueError, FileNotFoundError)):
-                candidate.assemble(root, root / 'ffmpeg.tar.gz', root / 'nasm.tar.gz', root, root, root, output)
+                candidate.collect_core_materials(root / 'ffmpeg.tar.gz', root / 'nasm.tar.gz', root)
             self.assertFalse(output.exists())
 
 
