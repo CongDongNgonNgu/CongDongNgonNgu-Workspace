@@ -28,8 +28,11 @@ test('frontend requires successful HTML', () => {
   assert.equal(classifyBody(200, '{}', 'html'), false);
 });
 test('targets are exact public HTTPS availability routes', () => {
-  assert.equal(targets.length, 3);
-  assert(targets.every(([, url]) => url.startsWith('https://') && !/payment|localhost/.test(url)));
+  assert.deepEqual(targets, [
+    ['BACKEND_DIRECT_HEALTH', 'https://api.congdongngonngu.vn/api/v1/health', 'health'],
+    ['FRONTEND_HOME', 'https://congdongngonngu.vn/', 'html'],
+  ]);
+  assert(targets.every(([, url]) => url.startsWith('https://') && !/payment|localhost|onrender|vercel/.test(url)));
 });
 test('new failure creates one marked incident', async () => {
   const f = fixture(); await reconcileIncident({ ...args, api: f.api });
