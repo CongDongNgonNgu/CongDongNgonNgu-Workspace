@@ -100,6 +100,13 @@ OBSERVATIONS = frozenset([
     "filters.txt",
     "bsfs.txt"
 ])
+# Exact host-origin names in published CI42184703828 retention manifest.
+HOST_OBSERVATIONS = frozenset((
+    'aac-cleanup.json', 'aac-observations.json', 'collector-cleanup.json',
+    'candidate-relink.sh', 'relink-proof.json', 'relink-container.log',
+    'assembly-dependencies.json', 'source-proof.json', 'recipe-proof.json',
+    'candidate-recipe.sh', 'container.log', 'inventory.json', 'config-delta.txt',
+))
 DERIVED_PINS = {
     'candidate-recipe.sh': '790cd23802bcb831306f602a2104d2696c4a5b7e0008bc007a70674013a92cd7',
     'candidate-relink.sh': '4d5e1de5abbff85b2ff48354fd733dc39900f0ab6891c2678425e4d27100df4d',
@@ -190,7 +197,8 @@ def observations(directory, guard):
     for name in sorted(OBSERVATIONS):
         record = manifest['files'][name]
         if (type(record) is not dict or set(record) != {'sourceIndex', 'bytes', 'sha256'}
-                or type(record['sourceIndex']) is not int or record['sourceIndex'] not in (0, 1)):
+                or type(record['sourceIndex']) is not int
+                or record['sourceIndex'] != (1 if name in HOST_OBSERVATIONS else 0)):
             raise ValueError('OBSERVATION_RECORD')
         data = guard.read_material(directory / name, record['sha256'], record['bytes'], maximum=1048576)
         if name in DERIVED_PINS and guard.digest(data) != DERIVED_PINS[name]:
@@ -198,6 +206,8 @@ def observations(directory, guard):
         files[name] = data
     if sum(map(len, files.values())) != manifest['bytes']:
         raise ValueError('OBSERVATION_TOTAL')
+    # Preserve provenance bytes after checking the original 63-file accounting.
+    files['manifest.json'] = raw
     return files
 
 
