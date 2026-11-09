@@ -1,0 +1,18 @@
+{
+  "scope": "EXPLICIT_OWNER_AUTHORIZATION_CONTROLLED_SOFTWARE_INSPECTION",
+  "ownerResponse": "Cho phép lưu artifact 2 ngày để kiểm tra",
+  "authorizedPayload": "ONE_APPROXIMATELY_45MB_FFMPEG_FFPROBE_SOURCE_NOTICES_CANDIDATE",
+  "destination": "CongDongNgonNgu/CongDongNgonNgu-Workspace GitHub Actions artifact",
+  "retentionDays": 2,
+  "purpose": "DOWNLOAD_AND_INDEPENDENT_DIRECT_INSPECTION",
+  "repositoryArtifactAccessPolicyAcknowledged": true,
+  "publicReleaseAuthorizedByThisResponse": false,
+  "backendAdoptionAuthorizedByThisResponse": false,
+  "formatActivationAuthorizedByThisResponse": false,
+  "reviewedCode": "fae61af55a8c9e35c388fbf3c3366e4a344cd6dd",
+  "dispatchedSource": "92cb97c9aa41254cc67532f0fa4f191c6a5db726",
+  "sourceCodeEqualityVerified": true,
+  "dispatchHttpStatus": 204,
+  "actualTransfer": "AWAIT_ACTUAL_WORKFLOW_AND_ARTIFACT_VERIFICATION",
+  "historicalRejection": "PRESERVED_PREVIOUSLY_REJECTED_BEFORE_EXECUTION"
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "EXPLICIT_OWNER_APPROVED_SINGLE_SOFTWARE_CANDIDATE_DOWNLOAD",
+  "run": 42555671199,
+  "source": "92cb97c9aa41254cc67532f0fa4f191c6a5db726",
+  "artifacts": [
+    {
+      "id": 13647113454,
+      "file": "text.zip",
+      "bytes": 379908,
+      "sha256": "758bf1b105046b86af897b676eba6338d94a7607cf4d097c8a4fe229b62cf42f",
+      "createdAt": "2026-11-09T03:20:41Z",
+      "expiresAt": "2026-11-11T03:20:40Z"
+    },
+    {
+      "id": 13646879359,
+      "file": "software.zip",
+      "bytes": 45088854,
+      "sha256": "c54bf3f8124b7bbf537ed46d201e9041379f0cea4fdb95f4a8234eab0b67ce1d",
+      "createdAt": "2026-11-09T03:20:44Z",
+      "expiresAt": "2026-11-11T03:20:42Z"
+    }
+  ]
+}

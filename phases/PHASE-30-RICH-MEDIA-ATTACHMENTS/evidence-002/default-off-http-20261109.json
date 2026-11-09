@@ -1,0 +1,59 @@
+{
+  "scope": "DEFAULT_OFF_NONEXISTENT_ID_DENIAL_OBSERVATIONS_ONLY",
+  "origin": "https://congdongngonngu-back-end.onrender.com",
+  "observedAt": "2026-11-09T02:33:07.793Z",
+  "syntheticNonexistentId": "38f6b154-3f61-42e2-9fcb-3917873d2913",
+  "dbRowCreated": false,
+  "credentials": "NONE_ONLY_LITERAL_INVALID_TOKEN",
+  "results": [
+    {
+      "name": "metadata-anonymous",
+      "status": 503,
+      "elapsedMs": 237,
+      "responseBytes": 112,
+      "success": false,
+      "errorCode": "ATTACHMENTS_UNAVAILABLE",
+      "cacheControl": "private, no-store",
+      "nosniff": true,
+      "contentDispositionPresent": false
+    },
+    {
+      "name": "metadata-invalid-synthetic-token",
+      "status": 401,
+      "elapsedMs": 80,
+      "responseBytes": 90,
+      "success": false,
+      "errorCode": "AUTH_SESSION_EXPIRED",
+      "cacheControl": "private, no-store",
+      "nosniff": true,
+      "contentDispositionPresent": false
+    },
+    {
+      "name": "content-head-anonymous",
+      "status": 503,
+      "elapsedMs": 93,
+      "responseBytes": 0,
+      "success": null,
+      "errorCode": null,
+      "cacheControl": "private, no-store",
+      "nosniff": true,
+      "contentDispositionPresent": false
+    },
+    {
+      "name": "preview-range-anonymous",
+      "status": 503,
+      "elapsedMs": 210,
+      "responseBytes": 112,
+      "success": false,
+      "errorCode": "ATTACHMENTS_UNAVAILABLE",
+      "cacheControl": "private, no-store",
+      "nosniff": true,
+      "contentDispositionPresent": false
+    }
+  ],
+  "positiveUploadAcceptance": "NOT_RUN",
+  "privateParentIsolation": "NOT_RUN",
+  "attachmentLeakCount": "NOT_RUN_NO_EXISTING_FIXTURE_TARGETS",
+  "sqlCleanup": "NOT_RUN_NO_ROWS_CREATED",
+  "storageCleanup": "NOT_RUN_NO_OBJECT_OPERATIONS"
+}

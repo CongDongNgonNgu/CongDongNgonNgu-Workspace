@@ -12,7 +12,7 @@ import types
 HERE = pathlib.Path(__file__).resolve().parent
 GUARD_SHA = 'bc23fb66fdb8df3deddc15dfe8f7557506c33e11a909b2be734059513b06d96c'
 STATIC_PINS = {
-    ".github/workflows/phase30-native-simd.yml": "a31b13798f85a5349f33d6e2ee53c40bd6bd7b72669e7088dcfca43b40fca417",
+    ".github/workflows/phase30-native-simd.yml": "df4eeff322ec77c0a78f38f5c61549cdbcfd8358a1a34ba10ec97c7e125e1da3",
     "scripts/phase30-minimal-ffmpeg/build.sh": "ffbcec79112bc6f19a6e565feac98fa862cd6a19a6a7579d858585e4ecc00f08",
     "scripts/phase30-minimal-ffmpeg/bundle.py": "4375e9cfab5a4228a575c1b80802f2d4f0716fef3f2bbab81204a63392c4ecc5",
     "scripts/phase30-minimal-ffmpeg/check-source.py": "ac599e837a725cee402ddbe7117b57b64d8e97e4fba162f0959337591d25016a",
@@ -28,7 +28,8 @@ STATIC_PINS = {
     "scripts/phase30-native-simd/retain-evidence.cjs": "16cf337b89ecc6a02ba33d068e53798b7c3fcbc2d9038c2ba5d540da710dc7c3",
     "scripts/phase30-native-simd/run-aac-probe.cjs": "aa7835aca52aec5fba8a1715e0415218594c9bf7105cb7fc3260eead3e16ae73",
     "scripts/phase30-native-simd/run-collector.cjs": "fe6d40caf7e79240271c5124b7ee4eb5717aa691d50be7886e0a68f589a769a9",
-    "scripts/phase30-minimal-ffmpeg/fixtures.json": "e37ea5708551a6ac868550a398beb1f54b338d38bca075b22d7bc85369cd2516"
+    "scripts/phase30-minimal-ffmpeg/fixtures.json": "e37ea5708551a6ac868550a398beb1f54b338d38bca075b22d7bc85369cd2516",
+    "scripts/phase30-native-simd/verify-candidate-transfer.cjs": "13cfecb661d5ac86a08ff105bdbe9c23581157539e4044d7ed3b8d552e284adc"
 }
 MATERIAL_PINS = {
     "runtime-source/manifest.json": "f9ecb6c0c97375ab4e424d052f2211ef3c4dba2cb7e9d983e3ee8fd4fa4ac454",

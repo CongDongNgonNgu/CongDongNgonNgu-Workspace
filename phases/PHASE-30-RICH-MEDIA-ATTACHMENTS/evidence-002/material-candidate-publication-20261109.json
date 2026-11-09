@@ -1,0 +1,29 @@
+{
+  "scope": "INTERNAL_MATERIAL_CANDIDATE_PUBLICATION_ONLY",
+  "pr": 204,
+  "reviewedSource": "65777668bc2242600567fabcf686430554be80e6",
+  "unitCI": 42547806138,
+  "actualResearchCI": 42547901625,
+  "finalHead": "5e41d46261e178f598cb6b93f6394ae3315cccd1",
+  "reviewedTree": "123f108e07e5dee688d8378c70ae877c34377293",
+  "prCI": 42549162516,
+  "mergedMain": "9b902d7fd0705233552f130043a880ff1bffd907",
+  "mergedTree": "123f108e07e5dee688d8378c70ae877c34377293",
+  "mainCI": 42549279820,
+  "ciResult": "PASS",
+  "reviewedTreeEqual": true,
+  "branch": "research/phase30-simd-source-assembly",
+  "cleanup": {
+    "ancestryVerified": true,
+    "remoteDeleted": true,
+    "localDeleted": true,
+    "pruned": true,
+    "cleanSyncedMainBeforeNextSlice": true
+  },
+  "actualArchiveLocalInspection": "NOT_RUN",
+  "licenseClearance": "HOLD",
+  "backendAdoption": "NOT_RUN",
+  "renderAcceptance": "NOT_RUN",
+  "phase30_002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+  "phase31Implemented": false
+}
