@@ -15,6 +15,14 @@ spec = importlib.util.spec_from_file_location('simd_assembly', HERE / 'assemble-
 assembly = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(assembly)
 
+# Independent literal origin set from published CI42184703828 manifestText.
+HOST_OBSERVATIONS = frozenset((
+    'aac-cleanup.json', 'aac-observations.json', 'collector-cleanup.json',
+    'candidate-relink.sh', 'relink-proof.json', 'relink-container.log',
+    'assembly-dependencies.json', 'source-proof.json', 'recipe-proof.json',
+    'candidate-recipe.sh', 'container.log', 'inventory.json', 'config-delta.txt',
+))
+
 
 class SimdAssemblyTests(unittest.TestCase):
     def test_missing_required_material_prevents_both_archive_writes(self):
@@ -66,11 +74,12 @@ class SimdAssemblyTests(unittest.TestCase):
         records = {}
         for name in assembly.OBSERVATIONS:
             (directory / name).write_bytes(data)
-            records[name] = {'sourceIndex': 0, 'bytes': len(data), 'sha256': guard.digest(data)}
+            records[name] = {'sourceIndex': 1 if name in HOST_OBSERVATIONS else 0,
+                             'bytes': len(data), 'sha256': guard.digest(data)}
         manifest = {'scope': 'RESEARCH_TEXT_ONLY_NOT_BINARY_OR_SOURCE_CLOSURE',
                     'files': records, 'missing': ['candidate-archive-proof.json'],
                     'bytes': len(data) * len(records)}
-        (directory / 'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
+        (directory / 'manifest.json').write_bytes(('  ' + json.dumps(manifest, indent=2) + '\n').encode('utf-8'))
         return data
 
     def test_observations_closed_hash_checked_and_dynamic_not_historical_pinned(self):
@@ -78,7 +87,9 @@ class SimdAssemblyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, mock.patch.object(assembly, 'DERIVED_PINS', {}):
             root = pathlib.Path(directory) / 'observations'
             original = self.make_observations(root, guard)
-            self.assertEqual(set(assembly.observations(root, guard)), set(assembly.OBSERVATIONS))
+            collected = assembly.observations(root, guard)
+            self.assertEqual(set(collected), set(assembly.OBSERVATIONS) | {'manifest.json'})
+            self.assertEqual(collected['manifest.json'], (root / 'manifest.json').read_bytes())
             changed = root / 'build.log'
             changed.write_bytes(b'altered')
             with self.assertRaises(ValueError):
@@ -92,6 +103,26 @@ class SimdAssemblyTests(unittest.TestCase):
             changed.unlink()
             with self.assertRaises(ValueError):
                 assembly.observations(root, guard)
+
+    def test_published_origin_set_and_wrong_origin_rejection(self):
+        receipt = HERE.parent.parent / 'phases/PHASE-30-RICH-MEDIA-ATTACHMENTS/evidence-002/simd-ci42184703828/raw-text.json'
+        published = json.loads(receipt.read_bytes())
+        manifest = json.loads(published['manifestText'])
+        self.assertEqual({name for name, record in manifest['files'].items()
+                          if record['sourceIndex'] == 1}, set(HOST_OBSERVATIONS))
+        self.assertEqual(set(manifest['files']), set(assembly.OBSERVATIONS))
+        guard = assembly.load_guard()
+        for name in ('build.log', 'container.log'):
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as directory:
+                with mock.patch.object(assembly, 'DERIVED_PINS', {}):
+                    root = pathlib.Path(directory) / 'observations'
+                    self.make_observations(root, guard)
+                    file = root / 'manifest.json'
+                    body = json.loads(file.read_bytes())
+                    body['files'][name]['sourceIndex'] = 0 if name in HOST_OBSERVATIONS else 1
+                    file.write_text(json.dumps(body), encoding='utf-8')
+                    with self.assertRaises(ValueError):
+                        assembly.observations(root, guard)
 
     @contextlib.contextmanager
     def synthetic_assembly(self, root):
@@ -146,7 +177,7 @@ class SimdAssemblyTests(unittest.TestCase):
                 self.assertEqual(proof['materialClearance'], 'HOLD_INDEPENDENT_REVIEW')
                 self.assertEqual(proof['archiveSha256'], proof['repeatArchiveSha256'])
                 self.assertEqual(proof['archiveSha256'], hashlib.sha256(args[-1].read_bytes()).hexdigest())
-                self.assertEqual(len(proof['capsuleInventories']['evidence/observations.json']), 63)
+                self.assertEqual(len(proof['capsuleInventories']['evidence/observations.json']), 64)
                 self.assertEqual(len([name for name in proof['members'] if name.startswith('source/runtime/')]), 7)
                 self.assertEqual(proof['backendAdoption'], 'NOT_RUN')
                 with tarfile.open(args[-1], 'r:gz') as archive:
