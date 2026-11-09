@@ -1,0 +1,33 @@
+{
+  "scope": "ARCHIVE_GUARD_PUBLICATION_ONLY_NOT_PHASE30_ACCEPTANCE",
+  "pr": 202,
+  "sourceReviewed": "a904ee68c339282677e51f7ad232664994fec775",
+  "sourceCI": {
+    "run": 42546023655,
+    "job": 128931107680,
+    "pythonTests": 19,
+    "result": "PASS"
+  },
+  "finalHead": "278f59a9177d83bdf2f2e316461358fa1400e566",
+  "reviewedTree": "cbd1d7a2d303f33db54edc614345d775c7db247a",
+  "prCI": 42546335061,
+  "mergedMain": "425d454649f8c94e65d6dd851942f9335a57f81a",
+  "mergedTree": "cbd1d7a2d303f33db54edc614345d775c7db247a",
+  "mainCI": 42546452032,
+  "ciResult": "PASS",
+  "treeEqual": true,
+  "branch": "research/phase30-simd-archive-guard",
+  "branchCleanup": {
+    "remoteDeleted": true,
+    "localDeleted": true,
+    "ancestryVerified": true,
+    "refsPruned": true,
+    "cleanSyncedMainBeforeNextSlice": true
+  },
+  "preservedNewerMain": "b6a6d31e66111a176dbbc16c5349b850e6ee795e",
+  "lifecycle": "COMPLETE_FOR_SOURCE_GUARD_SLICE_ONLY",
+  "phase30_002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+  "completeMaterialBundle": "NOT_RUN",
+  "processorAdoption": "NOT_RUN",
+  "phase31Implemented": false
+}
