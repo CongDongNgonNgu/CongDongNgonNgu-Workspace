@@ -1,3 +1,11 @@
+# Phase30 current archive guard and TEST recovery - 2026-11-09
+
+002 remains BLOCKED_OR_REMEDIATE_AND_RETEST; video HELD_RUNTIME_VALIDATION_FAILED; all4flagsfalse;003-006/Phase31 unstarted. Exact TEST restored to no-probe command, dep-dbohvcijnfac73ev9c0g Live937db14/health200test. Delayed Nov6 tiny regression onlyPASS, hidden headroom/other boots unverified. PR202 final sourcea904ee68c339282677e51f7ad232664994fec775 independently reviewed/CI42546023655GREEN; guard/core4inputs only, no full bundle/adoption. Newer mainb6a6d31 monitor work preserved. PR202 final evidence/publication pending. See ARCHIVE-GUARD-002-20261109.md and evidence-002/tiny-regression-20261109.json. Historical checkpoints below unchanged.
+
+# Phase30 current Backend corrective lifecycle - 2026-11-06
+
+Backend77 reviewed tree equals TEST dev937db14; PR/dev CI+reproduction PASS; merged branch deleted/pruned/clean dev. RenderTEST latest dep-dbmperl494ic73a9s4kg Live exact937db14, all4flagsfalse/no probe prefix freshly reloadedNov6. Workspace201 mergedmainb74c65c9/equal reviewed tree/mainCI42191376572PASS, branch cleaned. See NATIVE-ERROR-LIFECYCLE-002-20261106.md and AAC-OBSERVATIONS-002-20261106.md.002 remains blocked/remediate, video held, no003/Phase31; actual private-provider/media/resource/cleanup gates open. Historical checkpoints below unchanged.
+
 # Phase30 current AAC research - 2026-11-06
 
 002 remains BLOCKED_OR_REMEDIATE_AND_RETEST; all formats off; video HELD_RUNTIME_VALIDATION_FAILED;003-006/Phase31 unstarted. Research source a2bbf1e/CI42184703828 SUCCESS218Linux tests and Monitor42184752374 SUCCESS. Eight AAC cases show exit0 with decoder error stderr; independent commands do not prove old full-worker acceptance. Exact research container absent; SQL/R2 cleanup and Render acceptance NOT_RUN. Backend PR77 merged TEST dev937db141d14d2cb69954af0c5c19e08f08eb4a5f/equal reviewed tree after PR CI/reproduction SUCCESS; post-merge CI/TEST/branch cleanup pending. Nov6 read-only Render settings confirmed old Live dep-dbld8lm417fc7387mv70@eb9caba/all4flagsfalse. WorkspacePR201 publication pending. See AAC-OBSERVATIONS-002-20261106.md; historical checkpoints below remain unchanged.
