@@ -1,0 +1,255 @@
+{
+  "scope": "TINY_PROCESSOR_REGRESSION_ONLY_NOT_ENABLEMENT",
+  "observedAt": "2026-11-09",
+  "executedDeployment": "dep-dbmpl3rbc2fs73akf6i0",
+  "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+  "events": [
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "baseline",
+      "baselineHealthMs": [
+        193.47124299999996,
+        3.843580999999176,
+        2.377066000000923
+      ],
+      "cgroupBytes": 175919104,
+      "cgroupLimitBytes": 536870912,
+      "appRssBytes": 123269120,
+      "oom": 0,
+      "oomKill": 0
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "fixture-start",
+      "name": "jpeg"
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "stage",
+      "name": "jpeg",
+      "result": {
+        "workerRssBytes": 71643136,
+        "normalizedBytes": 78,
+        "thumbnailBytes": 78
+      },
+      "elapsedMs": 1301.5856860000004,
+      "healthMs": [
+        93.31606500000089,
+        2.3166550000005373,
+        1.9391560000003665,
+        2.586642000000211,
+        1.8879550000001473,
+        95.557229,
+        2.154560999999376,
+        1.8102939999989758
+      ],
+      "cgroupPeakBytes": 195842048,
+      "appPeakRssBytes": 124370944
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "fixture-start",
+      "name": "png"
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "stage",
+      "name": "png",
+      "result": {
+        "workerRssBytes": 70778880,
+        "normalizedBytes": 80,
+        "thumbnailBytes": 80
+      },
+      "elapsedMs": 1199.4808200000007,
+      "healthMs": [
+        4.417864000000918,
+        2.0289279999997234,
+        1.6783900000009453,
+        94.92750399999932,
+        1.680000000000291,
+        98.98577999999907,
+        2.443937999998525,
+        1.9340659999998024
+      ],
+      "cgroupPeakBytes": 195842048,
+      "appPeakRssBytes": 124764160
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "fixture-start",
+      "name": "webp"
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "stage",
+      "name": "webp",
+      "result": {
+        "workerRssBytes": 70389760,
+        "normalizedBytes": 80,
+        "thumbnailBytes": 80
+      },
+      "elapsedMs": 1089.8669780000018,
+      "healthMs": [
+        4.767512999998871,
+        1.9418960000002699,
+        1.5799479999986943,
+        95.62687000000005,
+        1.558247000000847,
+        2.0628989999968326,
+        94.95028500000262,
+        1.5190959999999905
+      ],
+      "cgroupPeakBytes": 196239360,
+      "appPeakRssBytes": 124764160
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "fixture-start",
+      "name": "video"
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "event": "stage",
+      "name": "video",
+      "result": {
+        "workerRssBytes": 95637504,
+        "normalizedBytes": 950,
+        "thumbnailBytes": 254
+      },
+      "elapsedMs": 3397.407898999998,
+      "healthMs": [
+        1.837453000000096,
+        2.3638759999994363,
+        1.6878800000013143,
+        1.6678590000010445,
+        1.5443259999992733,
+        1.9126649999998335,
+        1.5908779999990657,
+        2.0175080000008165
+      ],
+      "cgroupPeakBytes": 220585984,
+      "appPeakRssBytes": 125288448
+    },
+    {
+      "scope": "BASIC_PROCESSOR_RUNTIME_SMOKE_ONLY",
+      "sha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+      "status": "PASS_TINY_FIXTURES_ONLY",
+      "baselineHealthMs": [
+        193.47124299999996,
+        3.843580999999176,
+        2.377066000000923
+      ],
+      "stages": [
+        {
+          "name": "jpeg",
+          "result": {
+            "workerRssBytes": 71643136,
+            "normalizedBytes": 78,
+            "thumbnailBytes": 78
+          },
+          "elapsedMs": 1301.5856860000004,
+          "healthMs": [
+            93.31606500000089,
+            2.3166550000005373,
+            1.9391560000003665,
+            2.586642000000211,
+            1.8879550000001473,
+            95.557229,
+            2.154560999999376,
+            1.8102939999989758
+          ]
+        },
+        {
+          "name": "png",
+          "result": {
+            "workerRssBytes": 70778880,
+            "normalizedBytes": 80,
+            "thumbnailBytes": 80
+          },
+          "elapsedMs": 1199.4808200000007,
+          "healthMs": [
+            4.417864000000918,
+            2.0289279999997234,
+            1.6783900000009453,
+            94.92750399999932,
+            1.680000000000291,
+            98.98577999999907,
+            2.443937999998525,
+            1.9340659999998024
+          ]
+        },
+        {
+          "name": "webp",
+          "result": {
+            "workerRssBytes": 70389760,
+            "normalizedBytes": 80,
+            "thumbnailBytes": 80
+          },
+          "elapsedMs": 1089.8669780000018,
+          "healthMs": [
+            4.767512999998871,
+            1.9418960000002699,
+            1.5799479999986943,
+            95.62687000000005,
+            1.558247000000847,
+            2.0628989999968326,
+            94.95028500000262,
+            1.5190959999999905
+          ]
+        },
+        {
+          "name": "video",
+          "result": {
+            "workerRssBytes": 95637504,
+            "normalizedBytes": 950,
+            "thumbnailBytes": 254
+          },
+          "elapsedMs": 3397.407898999998,
+          "healthMs": [
+            1.837453000000096,
+            2.3638759999994363,
+            1.6878800000013143,
+            1.6678590000010445,
+            1.5443259999992733,
+            1.9126649999998335,
+            1.5908779999990657,
+            2.0175080000008165
+          ]
+        }
+      ],
+      "cgroupPeakBytes": 220585984,
+      "appPeakRssBytes": 125288448,
+      "cgroupLimitBytes": 536870912,
+      "oomDelta": 0,
+      "oomKillDelta": 0,
+      "scratchResidual": 0,
+      "completeEnablement": "NOT_RUN",
+      "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+    }
+  ],
+  "restoration": {
+    "deployment": "dep-dbohvcijnfac73ev9c0g",
+    "freshSettingsVerified": true,
+    "allFourFlagsFalse": true,
+    "probePrefixAbsent": true,
+    "healthStatus": 200,
+    "healthEnvironment": "test",
+    "singleHealthMs": 218
+  },
+  "providerFixtures": "NOT_RUN",
+  "sqlFixtures": "NOT_RUN",
+  "formatEnablement": "NOT_RUN",
+  "videoBoundary": "HELD_RUNTIME_VALIDATION_FAILED",
+  "dashboardLogWindow": "2026-11-06@09:13:56~2026-11-06@09:17:16",
+  "dashboardLogTimezone": "NOT_INDEPENDENTLY_VERIFIED",
+  "continuationObservation": "Probe prefix remained configured when work resumed 2026-11-09; other process boots were not audited. Original no-probe command restored and freshly verified."
+}
