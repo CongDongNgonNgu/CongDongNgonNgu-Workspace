@@ -1,0 +1,126 @@
+{
+  "scope": "TEST_ADMISSION_INERT_SOURCE_CONTINUATION_AND_ACTIVATION_DESIGN_ONLY",
+  "authoredOn": "2026-11-10",
+  "priorWorkspacePublication": {
+    "pr": 208,
+    "main": "8ab00018303983f25ab8667c3637d7967578f413",
+    "reviewedAndMergedTree": "c699e4f5b8e015de67c7a97986671630e43c343c",
+    "treeEqual": true,
+    "prCI": {
+      "run": 42777859651,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 42778086385,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_REFS_PRUNED_VERIFIED"
+  },
+  "pureComposition": {
+    "pr": 82,
+    "reviewedHead": "1dd0c21248e13c116d3f99bf6f77f8f30daa22ef",
+    "mergedDev": "eae05e80f202b465208a8fa10a8b9884e800d4f2",
+    "reviewedAndMergedTree": "e7788e0d0458b5c2cd502a915f036ae5ae5cdcd5",
+    "treeEqual": true,
+    "prCI": {
+      "run": 42776941284,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 42776941390,
+      "conclusion": "SUCCESS"
+    },
+    "devCI": {
+      "run": 42777903126,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 42777902815,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_REFS_PRUNED_VERIFIED",
+    "temporaryBranch": "refactor/phase30-test-manifest-envelope",
+    "runtimeAdmissionAuthority": "NONE_PURE_SOURCE_ONLY"
+  },
+  "inventory": {
+    "pr": 83,
+    "reviewedHead": "3c8f10a29aa695c9bb30a0f8e3c1b3e839845fa8",
+    "reviewedTree": "fa0b14710685f172ce0d03701765ee72d8f84d08",
+    "review": "APPROVED_NARROW_INERT_SOURCE_ONLY",
+    "prCI": {
+      "run": 42777955892,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 42777955809,
+      "conclusion": "SUCCESS"
+    },
+    "localInventoryTestsPassed": 19,
+    "localCombinedTests": {
+      "passed": 40,
+      "elapsedSeconds": 4.35
+    },
+    "typecheck": "PASS",
+    "generationRegression": "ACTUAL_RED_THEN_REMEDIATED_GREEN",
+    "mergedDev": "f72a6d733ea1ca5bcdf396128d7eecdfe2d85693",
+    "mergedTreeVerification": "INDEPENDENT_LOCAL_FETCH_TREE_EQUAL",
+    "devCI": {
+      "run": 42778972916,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 42778972643,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_REFS_PRUNED_VERIFIED",
+    "deployment": "NOT_CLAIMED",
+    "mergedTree": "fa0b14710685f172ce0d03701765ee72d8f84d08",
+    "treeEqual": true
+  },
+  "operationIncrement": {
+    "pr": 84,
+    "reviewedHead": "fea71bd0814caa358ff02bc3b8fbfd137b6663fa",
+    "reviewedTree": "095889f3bec42229f8bb5f939d18b2ec1f860846",
+    "review": "APPROVED_NARROW_PURE_DECLARATIONS_ONLY",
+    "prCI": {
+      "run": 42779748435,
+      "conclusion": "PENDING_AT_AUTHORED_CHECKPOINT"
+    },
+    "reproduction": {
+      "run": 42779748299,
+      "conclusion": "SUCCESS"
+    },
+    "combinedTests": {
+      "passed": 56,
+      "elapsedSeconds": 5.343
+    },
+    "typecheck": "PASS",
+    "remediation": "FOUR_ACTUAL_RED_REGRESSIONS_FIXED",
+    "rawBodyNegatives": "NOT_IMPLEMENTED",
+    "allocationGraph": "NOT_IMPLEMENTED",
+    "durableAttemptPhases": "NOT_IMPLEMENTED",
+    "runtimeAuthority": "NONE"
+  },
+  "allocationCatalogue": {
+    "document": "ALLOCATION-CATALOGUE-002-20261110.md",
+    "scope": "READ_ONLY_ACTUAL_SOURCE_DESIGN_NOT_IMPLEMENTED"
+  },
+  "activationControl": {
+    "document": "TEST-ACTIVATION-CONTROL-DESIGN-002-20261110.md",
+    "status": "REVIEWED_CANDIDATE_NOT_IMPLEMENTED",
+    "independentTraceReview": "APPROVED_IN_PRINCIPLE_WITHIN_EXISTING_OWNER_EXCEPTION",
+    "approvalExpansion": false,
+    "newRoutineOwnerPermissionRequired": false,
+    "receiptChannel": "PROPOSED_EXISTING_APPROVED_TEST_DATABASE_CONTROL_RECORD",
+    "trust": "SHARED_ROLE_OPERATIONAL_ATTESTATION_NOT_CRYPTOGRAPHIC_PROOF",
+    "sourceImplementation": "NOT_IMPLEMENTED",
+    "ddlInstallation": "NOT_RUN",
+    "activation": "NOT_RUN"
+  },
+  "publicRolloutFlags": "REMAIN_FALSE",
+  "httpProviderAcceptance": "NOT_RUN",
+  "applicationAndStorageFixtureCleanup": "NOT_RUN",
+  "subphase002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "currentWorkspaceIncrement": "UNCOMMITTED_UNPUBLISHED_PENDING_REVIEW_PR_MAIN_CI_TREE_AND_CLEANUP"
+}
