@@ -1,0 +1,40 @@
+{
+  "scope": "EXPLICIT_OWNER_FINITE_TEST_HTTP_POLICY_EXCEPTION",
+  "recordedDate": "2026-11-10",
+  "clientTimezone": "Asia/Saigon",
+  "ownerReply": "Duyệt ngoại lệ hữu hạn để triển khai và kiểm thử sau đủ gates",
+  "proposal": "TEST-HTTP-ADMISSION-CHANGE-PROPOSAL-002-20261110.md",
+  "approvedProposalCommit": "6656b0b40f375113b8cfc80c8ef5b416f483933f",
+  "publishedProposalMain": "d5a2ee1b6612dbef4ad737d141d6d30d82cd4221",
+  "authorizes": [
+    "Implement finite synthetic HTTP admission after actual source/security review and affected CI",
+    "Execute exact-owned TEST HTTP/R2 verification only after implementation and ownership gates",
+    "Anonymous access only to manifest-listed normally PUBLIC-eligible synthetic derivatives"
+  ],
+  "bounds": {
+    "durationMs": 600000,
+    "attachments": 4,
+    "videos": 1,
+    "declaredSourceBytes": 16777216,
+    "authenticatedRequests": 120,
+    "anonymousRequests": 20,
+    "ingressBytes": 33554432,
+    "authenticatedEgressBytes": 67108864,
+    "anonymousEgressBytes": 16777216,
+    "processingAttempts": 4,
+    "processingConcurrency": 1
+  },
+  "invariants": [
+    "Four public rollout flags false; nonfixture traffic unavailable",
+    "All lower frozen limits and normal authentication/CSRF/exact-parent eligibility preserved",
+    "Immutable exact-owned manifest and durable budget/identity reservations precede fixture writes/provider I/O",
+    "No provider bearer GET URL, new provider/token/billing or Production mutation",
+    "Expiry and restart cannot reset budget or reopen completed run",
+    "Natural retention and independently verified SQL/storage cleanup remain required"
+  ],
+  "implementationAtApproval": "NOT_STARTED",
+  "activationAtApproval": "NOT_RUN",
+  "runtimeAcceptance": "NOT_GRANTED",
+  "LNG_30_002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+  "PHASE_31_IMPLEMENTED": false
+}
