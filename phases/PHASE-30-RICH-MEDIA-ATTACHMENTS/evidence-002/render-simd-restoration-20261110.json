@@ -1,0 +1,32 @@
+{
+  "scope": "ACTUAL_RENDER_NORMAL_COMMAND_RESTORATION_ONLY",
+  "date": "2026-11-10",
+  "service": "srv-dahnerh594qs73fp3420",
+  "deployment": "dep-dbp86oon74is73d5t0c0",
+  "sourceSha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+  "status": "LIVE_EXACT_SOURCE_AND_FRESH_SETTINGS_VERIFIED",
+  "deploymentSucceeded": true,
+  "freshSettings": {
+    "liveDeploymentMatches": true,
+    "fullSourceShaMatches": true,
+    "normalStartCommandFourFalse": true,
+    "npmRunStart": true,
+    "phase30ProbeVariablesPresent": false
+  },
+  "build": {
+    "packaging": "VERIFIED",
+    "glibc": "2.36",
+    "gnuTimePeakRssBytes": 44482560,
+    "scope": "PACKAGING_GLIBC_AND_GNU_TIME_MEASUREMENT_NOT_DEPLOYMENT_MEMORY_HEADROOM"
+  },
+  "health": {
+    "method": "GET",
+    "path": "/api/v1/health",
+    "status": 200,
+    "elapsedMs": 231,
+    "bytes": 111,
+    "scope": "HEALTH_ONLY_NOT_DEPLOYMENT_IDENTITY"
+  },
+  "boundaryEnablement": "NOT_GRANTED",
+  "allFourAttachmentFlags": false
+}

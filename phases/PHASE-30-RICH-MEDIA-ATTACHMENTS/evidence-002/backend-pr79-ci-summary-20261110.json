@@ -1,0 +1,31 @@
+{
+  "run": 42739215349,
+  "job": 129575842679,
+  "head": "496fefccc0f685bc76d4eef6beb679cb7c25faa5",
+  "logBytes": 264291,
+  "logSha256": "bd08ee995f00bee1502bb199cb821c6d0934470e9066cddc8f908e3e36a42f74",
+  "sanitizedSummary": [
+    "2026-11-10T01:56:58.6759621Z PINNED_TIME_RUNTIME={\"platform\":\"linux\",\"arch\":\"x64\",\"glibcVersion\":\"2.43\",\"peakRssBytes\":45764608}",
+    "2026-11-10T01:56:58.6760578Z PINNED_PROCESSOR_BUILD=VERIFIED",
+    "2026-11-10T01:58:21.2209134Z Test Suites: 237 passed, 237 total",
+    "2026-11-10T01:58:21.2209781Z Tests:       1714 passed, 1714 total",
+    "2026-11-10T01:58:36.1877411Z Test Suites: 1 passed, 1 total",
+    "2026-11-10T01:58:36.1877936Z Tests:       28 passed, 28 total",
+    "2026-11-10T01:58:50.7831248Z Test Suites: 1 passed, 1 total",
+    "2026-11-10T01:58:50.7831753Z Tests:       28 passed, 28 total",
+    "2026-11-10T01:59:05.4938339Z Test Suites: 1 passed, 1 total",
+    "2026-11-10T01:59:05.4938805Z Tests:       28 passed, 28 total",
+    "2026-11-10T01:59:41.0637161Z Test Suites: 28 passed, 28 total",
+    "2026-11-10T01:59:41.0638077Z Tests:       218 passed, 218 total",
+    "2026-11-10T02:00:53.5754417Z Test Suites: 2 passed, 2 total",
+    "2026-11-10T02:00:53.5754924Z Tests:       26 passed, 26 total",
+    "2026-11-10T02:01:01.4667215Z Test Suites: 1 passed, 1 total",
+    "2026-11-10T02:01:01.4667797Z Tests:       6 passed, 6 total",
+    "2026-11-10T02:01:36.5934384Z Test Suites: 10 passed, 10 total",
+    "2026-11-10T02:01:36.5935141Z Tests:       162 passed, 162 total",
+    "2026-11-10T02:01:54.0115951Z Test Suites: 3 passed, 3 total",
+    "2026-11-10T02:01:54.0116586Z Tests:       44 passed, 44 total",
+    "2026-11-10T02:02:38.9086358Z Test Suites: 17 passed, 17 total",
+    "2026-11-10T02:02:38.9087019Z Tests:       200 passed, 200 total"
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "scope": "PHASE30_BUILD_ONLY_DIAGNOSTICS_CONTINUATION_NOT_RUNTIME_ACCEPTANCE",
+  "recordedDate": "2026-11-10",
+  "clientTimezone": "Asia/Saigon",
+  "priorDevFailures": {
+    "run": 42580042143,
+    "head": "1fa8a12958e119ecc5f8f70f853ed47f2b3296d9",
+    "attempts": [
+      {
+        "attempt": 1,
+        "job": 129036344880,
+        "status": "FAILED",
+        "productionJob": 129036776524,
+        "productionStatus": "SKIPPED"
+      },
+      {
+        "run": 42580042143,
+        "attempt": 2,
+        "head": "1fa8a12958e119ecc5f8f70f853ed47f2b3296d9",
+        "qualityJob": 129037547500,
+        "conclusion": "failure",
+        "failedStep": "Package checksum-pinned TEST native processors",
+        "underlyingCause": "NOT_CONFIRMED_GENERIC_CLI_ERROR",
+        "productionJob": 129038001783,
+        "productionConclusion": "skipped",
+        "nextAction": "SAFE_BUILD_ONLY_DIAGNOSTICS_TDD_NO_MORE_BLIND_RERUNS",
+        "branchCleanup": "RETAINED_POST_MERGE_CI_BLOCKER",
+        "renderVerification": "NOT_RUN_MCP_CONNECTION_TIMEOUT"
+      }
+    ],
+    "sharedFailedStep": "Package checksum-pinned TEST native processors",
+    "visibleError": "PINNED_PROCESSOR_BUILD=REJECTED",
+    "underlyingCause": "NOT_CONFIRMED",
+    "noThirdBlindRerun": true,
+    "attempt2Evidence": "evidence-002/backend-dev-retry-outcome-20261110.json"
+  },
+  "diagnostics": {
+    "branch": "fix/phase30-build-diagnostics",
+    "commit": "496fefccc0f685bc76d4eef6beb679cb7c25faa5",
+    "tree": "5f92cd9070f17c353cfce8f80409d28128dd68a3",
+    "pr": 79,
+    "draft": false,
+    "target": "dev_ONLY_NOT_PRODUCTION_MAIN",
+    "scope": "SAFE_BUILD_ONLY_DIAGNOSTICS",
+    "files": 4,
+    "independentReview": "NO_FINDINGS_WITHIN_DIAGNOSTICS_SCOPE",
+    "tddRed": {
+      "tests": 16,
+      "passed": 11,
+      "failed": 5
+    },
+    "authorGreen": {
+      "passed": 46,
+      "failed": 0,
+      "skipped": 0
+    },
+    "coordinatorGreen": {
+      "passed": 51,
+      "failed": 0,
+      "durationMs": 393.535,
+      "includesSqlTargetGuards": 5
+    },
+    "reviewerChecks": {
+      "passed": 28,
+      "files": 3
+    },
+    "actualCliInvalidArgumentsSafeExit": "PASS",
+    "processorPinsCommandsLimitsAllowlistAppFlags": "UNCHANGED",
+    "commitPushed": true,
+    "merged": true,
+    "ciSummaryEvidence": "evidence-002/backend-pr79-ci-summary-20261110.json"
+  },
+  "currentCi": {
+    "prQuality": {
+      "run": 42739215349,
+      "status": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 42739215080,
+      "status": "SUCCESS"
+    },
+    "merge": {
+      "target": "dev_ONLY_NOT_PRODUCTION_MAIN",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "reviewedTree": "5f92cd9070f17c353cfce8f80409d28128dd68a3",
+      "reviewedTreeEqual": true
+    },
+    "postMergeQuality": {
+      "run": 42740100234,
+      "status": "SUCCESS"
+    },
+    "postMergeReproduction": {
+      "run": 42740100021,
+      "status": "SUCCESS"
+    },
+    "branchCleanup": {
+      "status": "VERIFIED_DELETED_REMOTE_LOCAL_PRUNED",
+      "branches": [
+        "fix/phase30-simd-test-processors",
+        "fix/phase30-build-diagnostics"
+      ],
+      "cleanSynchronizedDev": true
+    },
+    "candidateDeployment": "NORMAL_TEST_LIVE_BOUNDARY_PROBE_PENDING"
+  },
+  "freshRenderSettings": {
+    "observationDate": "2026-11-10",
+    "browser": "Chrome Tan Work Profile1",
+    "page": 18,
+    "connection": "RECONNECTED",
+    "service": "srv-dahnerh594qs73fp3420",
+    "configuredBranch": "dev",
+    "observedStatus": "Live",
+    "deployment": "dep-dbohvcijnfac73ev9c0g",
+    "sourceSha": "937db141d14d2cb69954af0c5c19e08f08eb4a5f",
+    "allFourAttachmentFlags": false,
+    "probeOverride": false,
+    "buildCommand": "npm ci --include=dev && npm run build:attachments -- --download",
+    "autoDeploy": "DISABLED",
+    "deploymentSelection": "SPECIFIC_COMMIT",
+    "mutationThisContinuation": false,
+    "candidateDeployment": "NOT_RUN",
+    "newRuntimeAcceptance": "NOT_RUN",
+    "priorReadOnlyBaseline": true
+  },
+  "disposition": {
+    "LNG_30_001": "DONE",
+    "LNG_30_002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+    "PHASE_30_STATUS": "IN_PROGRESS",
+    "PHASE_30_VERDICT": "REMEDIATE_AND_RETEST",
+    "ARCHITECTURE_FROZEN": true,
+    "video": "HELD_RUNTIME_VALIDATION_FAILED",
+    "allFourAttachmentFlags": false,
+    "ATTACHMENTS_ENABLED_DEFAULT": false,
+    "LNG_30_003_006": "PLANNED_NOT_STARTED",
+    "PHASE_31_IMPLEMENTED": false,
+    "productionChanged": false
+  },
+  "remainingGates": [
+    "Public provider/HTTP/security/lifecycle and independently verified SQL/storage cleanup",
+    "Deep decoder and unresolved warning-path gates",
+    "Owner policy decision before any HTTP admission exception implementation"
+  ],
+  "historicalCheckpoints": "NOV9_UNCHANGED_SUPERSEDED_ONLY_BY_THIS_DATED_PROGRESS",
+  "earlierCiCheckpoint": {
+    "quality": {
+      "run": 42739215349,
+      "job": 129575842679,
+      "status": "RUNNING",
+      "stageAtCheckpoint": "Bounded native video repeatability"
+    },
+    "reproduction": {
+      "run": 42739215080,
+      "status": "SUCCESS"
+    },
+    "fullAffectedResult": "PENDING"
+  },
+  "postMergeRunningCheckpoint": {
+    "prQuality": {
+      "run": 42739215349,
+      "status": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 42739215080,
+      "status": "SUCCESS"
+    },
+    "merge": {
+      "target": "dev_ONLY_NOT_PRODUCTION_MAIN",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "reviewedTree": "5f92cd9070f17c353cfce8f80409d28128dd68a3",
+      "reviewedTreeEqual": true
+    },
+    "postMergeQuality": {
+      "run": 42740100234,
+      "status": "RUNNING"
+    },
+    "postMergeReproduction": {
+      "run": 42740100021,
+      "status": "RUNNING"
+    },
+    "branchCleanup": {
+      "status": "RETAINED_PENDING_DEV_CI_SUCCESS",
+      "branches": [
+        "fix/phase30-simd-test-processors",
+        "fix/phase30-build-diagnostics"
+      ]
+    },
+    "candidateDeployment": "NOT_RUN_AWAITING_POSTMERGE_CI"
+  },
+  "currentRenderProgress": {
+    "service": "srv-dahnerh594qs73fp3420",
+    "sourceSha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+    "normalDeployment": {
+      "id": "dep-dbp7qmvf3r2c73fbgv40",
+      "status": "Live",
+      "packaging": "VERIFIED",
+      "glibc": "2.36",
+      "gnuTimePeakRssBytes": 44417024,
+      "allFourAttachmentFlags": false,
+      "probeOverride": false,
+      "boundaryAcceptance": "NOT_GRANTED",
+      "packagingMeasurementScope": "NOT_DEPLOYMENT_MEMORY_HEADROOM"
+    },
+    "authorizedBoundaryProbe": {
+      "commandSaved": true,
+      "probeSha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "suite": "boundary",
+      "allFourAttachmentFlags": false,
+      "restartClick": "NO_OBSERVABLE_NEW_DEPLOYMENT_NO_SUCCESS_CLAIM",
+      "manualSameCommitDeployment": "dep-dbp84hgn74is73d5mqc0",
+      "status": "Live",
+      "buildPackaging": "VERIFIED",
+      "glibc": "2.36",
+      "gnuTimePeakRssBytes": 44326912,
+      "probeOutcome": "PASS_BOUNDARY_FIXTURES_ONLY",
+      "normalCommandRestoration": "FINAL_PASS_SEPARATE_RESTORATION_RECEIPT",
+      "baseline": {
+        "cgroupCurrentBytes": 201166848,
+        "cgroupLimitBytes": 536870912,
+        "appRssBytes": 120524800,
+        "oomEvents": 0,
+        "oomKills": 0,
+        "healthLatencyMs": [
+          101.369612,
+          3.068354,
+          1.649659
+        ]
+      },
+      "currentFixture": "FOUR_BOUNDARY_FIXTURES_COMPLETE",
+      "evidence": "evidence-002/render-simd-boundary-20261110.json"
+    },
+    "httpPolicyException": {
+      "proposalReview": "OWNER_READY",
+      "ownerQuestion": "PENDING_NO_APPROVAL",
+      "implemented": false
+    },
+    "effectiveBuildCommand": "npm ci --include=dev && npm run build:attachments -- --download",
+    "currentRestoration": {
+      "scope": "ACTUAL_RENDER_NORMAL_COMMAND_RESTORATION_ONLY",
+      "date": "2026-11-10",
+      "service": "srv-dahnerh594qs73fp3420",
+      "deployment": "dep-dbp86oon74is73d5t0c0",
+      "sourceSha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "status": "LIVE_EXACT_SOURCE_AND_FRESH_SETTINGS_VERIFIED",
+      "deploymentSucceeded": true,
+      "freshSettings": {
+        "liveDeploymentMatches": true,
+        "fullSourceShaMatches": true,
+        "normalStartCommandFourFalse": true,
+        "npmRunStart": true,
+        "phase30ProbeVariablesPresent": false
+      },
+      "build": {
+        "packaging": "VERIFIED",
+        "glibc": "2.36",
+        "gnuTimePeakRssBytes": 44482560,
+        "scope": "PACKAGING_GLIBC_AND_GNU_TIME_MEASUREMENT_NOT_DEPLOYMENT_MEMORY_HEADROOM"
+      },
+      "health": {
+        "method": "GET",
+        "path": "/api/v1/health",
+        "status": 200,
+        "elapsedMs": 231,
+        "bytes": 111,
+        "scope": "HEALTH_ONLY_NOT_DEPLOYMENT_IDENTITY"
+      },
+      "boundaryEnablement": "NOT_GRANTED",
+      "allFourAttachmentFlags": false,
+      "evidence": "evidence-002/render-simd-restoration-20261110.json",
+      "finalLiveVerification": "PASS"
+    },
+    "boundaryScope": {
+      "completeEnablement": "NOT_RUN",
+      "providerAndSqlCleanup": "NOT_RUN_PROCESSOR_ONLY",
+      "hiddenAncestorHeadroom": "UNVERIFIED",
+      "cgroupPeakBytes": 312750080,
+      "appPeakRssBytes": 147251200,
+      "cgroupLimitBytes": 536870912,
+      "oomDelta": 0,
+      "oomKillDelta": 0,
+      "scratchResidual": 0,
+      "videoConcurrentHealthMaxMs": 1297.758928,
+      "performanceAcceptance": "NOT_GRANTED_MATERIAL_HEALTH_LATENCY_SPIKE",
+      "videoEnablement": false,
+      "peakMeasurement": "SAMPLED_CGROUP_AND_APP_NOT_KERNEL_LIFETIME_MAX",
+      "oomScope": "CHECKED_VISIBLE_COUNTER_DELTAS_ONLY",
+      "healthScope": "EIGHT_EARLY_SEQUENTIAL_LOOPBACK_PROBES_PER_STAGE_NOT_REPRESENTATIVE_PUBLIC_API_TRAFFIC",
+      "elapsedScope": "INCLUDES_FIXTURE_READ_AND_PROBE_OVERHEAD_NO_EXACT_PIPELINE_HEADROOM_OR_REPEATABILITY_CLAIM",
+      "workerMaxRssBytes": 143593472,
+      "workerLimitBytes": 201326592,
+      "producerShutdown": "OBSERVED_BEFORE_BOUNDARY_PASS",
+      "scratchAbsence": "EXACT_OWNED_PROCESSOR_SCRATCH_ONLY_NOT_SQL_R2_OR_LEAK_COUNT",
+      "independentReview": "APPROVED_RAW_BOUNDARY_EVIDENCE_ONLY_WITH_THESE_LIMITS"
+    }
+  },
+  "restorationBuildingCheckpoint": {
+    "sourceSha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+    "normalCommandSaved": true,
+    "freshReadOnlyCommandVerified": true,
+    "phase30ProbeVariablesPresent": false,
+    "allFourAttachmentFlags": false,
+    "deployment": "dep-dbp86oon74is73d5t0c0",
+    "status": "BUILDING",
+    "finalLiveVerification": "PENDING"
+  },
+  "currentEvidencePublication": {
+    "workspaceBranch": "docs/phase30-simd-test-publication",
+    "status": "PENDING_NOT_COMMITTED_OR_MERGED",
+    "workspaceMainSha": "14751741d61f34f98b8b9369033a0d7d35aa1cb8",
+    "localChecks": {
+      "scope": "WINDOWS_LOCAL_SOURCE_GUARDS_NOT_LINUX_GATE_WAIVER",
+      "node": {
+        "tests": 266,
+        "passed": 257,
+        "skipped": 9,
+        "failed": 0,
+        "durationMs": 2100.7003
+      },
+      "inertAcceptance": {
+        "passed": 18,
+        "failed": 0,
+        "durationMs": 174.9249
+      },
+      "linuxCi": "REQUIRED_PENDING"
+    }
+  }
+}

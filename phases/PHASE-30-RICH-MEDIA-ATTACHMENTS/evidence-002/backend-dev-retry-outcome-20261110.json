@@ -1,0 +1,14 @@
+{
+  "run": 42580042143,
+  "attempt": 2,
+  "head": "1fa8a12958e119ecc5f8f70f853ed47f2b3296d9",
+  "qualityJob": 129037547500,
+  "conclusion": "failure",
+  "failedStep": "Package checksum-pinned TEST native processors",
+  "underlyingCause": "NOT_CONFIRMED_GENERIC_CLI_ERROR",
+  "productionJob": 129038001783,
+  "productionConclusion": "skipped",
+  "nextAction": "SAFE_BUILD_ONLY_DIAGNOSTICS_TDD_NO_MORE_BLIND_RERUNS",
+  "branchCleanup": "RETAINED_POST_MERGE_CI_BLOCKER",
+  "renderVerification": "NOT_RUN_MCP_CONNECTION_TIMEOUT"
+}

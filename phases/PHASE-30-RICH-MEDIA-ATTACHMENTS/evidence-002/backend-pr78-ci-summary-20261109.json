@@ -1,0 +1,32 @@
+{
+  "run": 42579120779,
+  "job": 129033433397,
+  "rawLogBytes": 263498,
+  "rawLogSha256": "069b7705f256cdb565b78741aeee21b33b63803e31c93256d8975e2c7b690b24",
+  "sanitizedSummary": [
+    "2026-11-09T07:27:07.2593425Z Test Suites: 237 passed, 237 total",
+    "2026-11-09T07:27:07.2594081Z Tests:       1714 passed, 1714 total",
+    "2026-11-09T07:27:07.6996152Z   printf 'Synthetic native pipeline run %s/3\\n' \"$attempt\"",
+    "2026-11-09T07:27:07.7119393Z Synthetic native pipeline run 1/3",
+    "2026-11-09T07:27:22.5812434Z Test Suites: 1 passed, 1 total",
+    "2026-11-09T07:27:22.5812776Z Tests:       28 passed, 28 total",
+    "2026-11-09T07:27:22.7469979Z Synthetic native pipeline run 2/3",
+    "2026-11-09T07:27:37.4882235Z Test Suites: 1 passed, 1 total",
+    "2026-11-09T07:27:37.4882548Z Tests:       28 passed, 28 total",
+    "2026-11-09T07:27:37.6759676Z Synthetic native pipeline run 3/3",
+    "2026-11-09T07:27:52.4357021Z Test Suites: 1 passed, 1 total",
+    "2026-11-09T07:27:52.4357579Z Tests:       28 passed, 28 total",
+    "2026-11-09T07:28:30.6187840Z Test Suites: 28 passed, 28 total",
+    "2026-11-09T07:28:30.6188481Z Tests:       218 passed, 218 total",
+    "2026-11-09T07:29:48.3368962Z Test Suites: 2 passed, 2 total",
+    "2026-11-09T07:29:48.3369529Z Tests:       26 passed, 26 total",
+    "2026-11-09T07:29:56.7107311Z Test Suites: 1 passed, 1 total",
+    "2026-11-09T07:29:56.7107851Z Tests:       6 passed, 6 total",
+    "2026-11-09T07:30:36.9011271Z Test Suites: 10 passed, 10 total",
+    "2026-11-09T07:30:36.9011774Z Tests:       162 passed, 162 total",
+    "2026-11-09T07:30:56.3730438Z Test Suites: 3 passed, 3 total",
+    "2026-11-09T07:30:56.3730976Z Tests:       44 passed, 44 total",
+    "2026-11-09T07:31:50.3020977Z Test Suites: 17 passed, 17 total",
+    "2026-11-09T07:31:50.3021370Z Tests:       200 passed, 200 total"
+  ]
+}

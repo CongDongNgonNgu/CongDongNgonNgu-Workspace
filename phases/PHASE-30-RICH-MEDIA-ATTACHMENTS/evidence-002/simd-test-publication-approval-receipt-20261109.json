@@ -1,0 +1,204 @@
+{
+  "scope": "PHASE30_EXACT_PUBLIC_SOURCE_EVIDENCE_AND_TEST_PRERELEASE_PUBLICATION_ONLY",
+  "recordedDate": "2026-11-09",
+  "ownerAuthorization": {
+    "reply": "Cho phép cả bằng chứng/source và TEST prerelease public",
+    "status": "EXPLICIT_APPROVAL_RESOLVES_EXACT_EARLIER_PUBLICATION_BLOCKER",
+    "covers": [
+      "Permanent public Workspace PR205 technical source/evidence",
+      "Backend c6d6e132a59a46d52505bc026260d9a1773c204e preparation toward dev only, subject to remaining gates",
+      "Exact persistent public TEST prerelease and asset below"
+    ],
+    "doesNotGrant": [
+      "Production changes",
+      "Format enablement",
+      "Blanket license or security clearance",
+      "Phase31 implementation"
+    ]
+  },
+  "historicalAutomaticRejection": {
+    "action": "MERGE_WORKSPACE_PR205_PUBLIC_TECHNICAL_EVIDENCE",
+    "executed": false,
+    "reason": "Artifact-derived inspection evidence into verified public repository exceeds narrowly scoped two-day artifact approval",
+    "preserved": true,
+    "resolution": "Later explicit scoped owner approval; historical rejection remains factual"
+  },
+  "workspacePublication": {
+    "pr": 205,
+    "mergeSha": "14751741d61f34f98b8b9369033a0d7d35aa1cb8",
+    "reviewedTree": "2ff0ad9321315d5c9ed834ff74dd9495efb5400f",
+    "reviewedTreeEqual": true,
+    "mainCi": 42578861481,
+    "mainCiStatus": "SUCCESS",
+    "temporaryBranch": "research/phase30-simd-controlled-transfer",
+    "remoteBranchDeleted": true,
+    "localBranchDeleted": true,
+    "refsPruned": true
+  },
+  "publicRelease": {
+    "releaseId": 438835461,
+    "tag": "phase30-processors-simd-20261109",
+    "assetName": "phase30-minimal-simd-linux-x64.tar.gz",
+    "assetBytes": 45088234,
+    "assetSha256": "0ef73781d602d1a91f6d774604d401e7602174f17f06c0610d6af8b6a848eebb",
+    "status": "PUBLISHED_TEST_PRERELEASE",
+    "ownerApproval": "EXPLICIT_PUBLIC_SOURCE_EVIDENCE_AND_TEST_PRERELEASE_APPROVED",
+    "assetId": 726601368,
+    "assetDigest": "sha256:0ef73781d602d1a91f6d774604d401e7602174f17f06c0610d6af8b6a848eebb",
+    "releaseUrl": "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/releases/tag/phase30-processors-simd-20261109",
+    "publishedAt": "2026-11-09T07:22:41Z",
+    "prerelease": true,
+    "latest": false,
+    "visibility": "PUBLIC_PERSISTENT",
+    "publicDownloadVerification": {
+      "status": "NOT_VERIFIED",
+      "attempts": [
+        {
+          "attempt": 1,
+          "httpStatus": 504
+        },
+        {
+          "attempt": 2,
+          "httpStatus": 504
+        },
+        {
+          "attempt": 3,
+          "purpose": "READ_ONLY_DIAGNOSTIC",
+          "httpStatus": 504
+        }
+      ],
+      "githubAssetDigest": "MATCH_EXACT_APPROVED_SHA256",
+      "noPublicDownloadPassClaim": true,
+      "scope": "LOCAL_WINDOWS_PUBLIC_URL_ROUTE_ONLY"
+    },
+    "ciPublicDownloadAndStaging": {
+      "status": "PASS",
+      "run": 42579120779,
+      "job": 129033433397,
+      "step": "Package checksum-pinned TEST native processors",
+      "localWindowsRoute": "504_REMAINS_DISTINCT",
+      "nativeWorkerAcceptance": "PASS_LINUX_CI_3X28_NOT_RENDER_ACCEPTANCE"
+    }
+  },
+  "backend": {
+    "pr": 78,
+    "target": "dev",
+    "head": "c6d6e132a59a46d52505bc026260d9a1773c204e",
+    "reviewedTree": "2f57b5d630e518bf7f7acde8989e763c1f8315c7",
+    "ci": 42579120779,
+    "reproductionCi": 42579120770,
+    "renderVerification": "NOT_RUN_FOR_THIS_CANDIDATE",
+    "localPrepublicationChecks": {
+      "unitSuites": 237,
+      "unitPassed": 1713,
+      "unitLinuxOnlySkip": 1,
+      "e2eSuites": 28,
+      "e2ePassed": 218,
+      "packagingGuardTests": 44,
+      "targetedIdentityJest": 15,
+      "targetedPackageNode": 2,
+      "typecheck": "PASS",
+      "lint": "PASS",
+      "build": "PASS",
+      "runtimeAudit": {
+        "total": 0
+      },
+      "fullAudit": {
+        "low": 4,
+        "moderate": 17,
+        "high": 0,
+        "critical": 0
+      },
+      "actualLinuxCandidateWorker": "NOT_RUN_UNPUBLISHED_ASSET",
+      "actualRemotePostgresCI": "NOT_RERUN_PREPUBLICATION_UNCHANGED_SCHEMA",
+      "nativeCommandsDeadlinesLimitsFlags": "UNCHANGED",
+      "independentLocalSourceReview": "PASS_CONDITIONAL_ON_FULL_AFFECTED_AND_TEST_LIFECYCLE"
+    },
+    "preMergeCheckpoint": {
+      "draft": true,
+      "statusAtThisCheckpoint": "RUNNING",
+      "merged": false,
+      "ciStep": "Unit tests"
+    },
+    "currentProgress": {
+      "pr": 78,
+      "merged": true,
+      "target": "dev_ONLY_NOT_PRODUCTION_MAIN",
+      "mergeSha": "1fa8a12958e119ecc5f8f70f853ed47f2b3296d9",
+      "reviewedTree": "2f57b5d630e518bf7f7acde8989e763c1f8315c7",
+      "reviewedTreeEqual": true,
+      "prCi": {
+        "run": 42579120779,
+        "status": "SUCCESS"
+      },
+      "reproductionCi": {
+        "run": 42579120770,
+        "status": "SUCCESS"
+      },
+      "linuxTests": {
+        "unitSuites": 237,
+        "unitPassed": 1714,
+        "unitSkipped": 0,
+        "nativeRepeatability": {
+          "runs": 3,
+          "passedPerRun": 28
+        },
+        "e2eSuites": 28,
+        "e2ePassed": 218,
+        "postgres": {
+          "studyGroups": 26,
+          "library": 6,
+          "connections": 162,
+          "community": 44,
+          "attachments": {
+            "suites": 17,
+            "passed": 200
+          }
+        },
+        "build": "PASS",
+        "pm2Rehearsal": "PASS"
+      },
+      "devCi": {
+        "run": 42580042143,
+        "job": 129036344880,
+        "status": "FAILED_FIRST_ATTEMPT",
+        "failedStep": "Package checksum-pinned TEST native processors",
+        "visibleMessage": "PINNED_PROCESSOR_BUILD=REJECTED",
+        "stepSecondsApprox": 18.8,
+        "cause": "NOT_CONFIRMED_NO_UNDERLYING_CAUSE_VISIBLE",
+        "retry": {
+          "status": "PENDING_ONE_BOUNDED_FAILED_JOB_RERUN",
+          "sourceOrPolicyChanged": false
+        },
+        "sanitizedEvidence": "evidence-002/backend-dev-first-failure-20261109.json"
+      },
+      "branchCleanup": "NOT_DONE_MERGED_BRANCH_RETAINED_POSTMERGE_DEV_CI_BLOCKER",
+      "renderVerification": "NOT_RUN_MCP_TIMEOUT_TWICE",
+      "sanitizedCiEvidence": "evidence-002/backend-pr78-ci-summary-20261109.json",
+      "devReproductionCi": {
+        "run": 42580042147,
+        "status": "SUCCESS"
+      },
+      "productionJob": {
+        "job": 129036776524,
+        "status": "SKIPPED"
+      }
+    }
+  },
+  "remainingGates": [
+    "Resolve and verify failed post-merge dev CI, then temporary branch cleanup",
+    "49 compiler warning assessment and deep decoder negatives",
+    "Exact Render TEST resource, privacy, provider and cleanup gates"
+  ],
+  "disposition": {
+    "LNG_30_001": "DONE",
+    "LNG_30_002": "BLOCKED_OR_REMEDIATE_AND_RETEST",
+    "phase30": "IN_PROGRESS",
+    "video": "HELD_RUNTIME_VALIDATION_FAILED",
+    "allFourAttachmentFlags": false,
+    "ATTACHMENTS_ENABLED_DEFAULT": false,
+    "LNG_30_003_006": "PLANNED_NOT_STARTED",
+    "PHASE_31_IMPLEMENTED": false,
+    "productionChanged": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run": 42580042143,
+  "job": 129036344880,
+  "logBytes": 62309,
+  "logSha256": "12c7f83fda45a983f1c550d7aff54a45e96af2275e73ce791bca188d05fe6cad",
+  "packagingExcerpt": [
+    "2026-11-09T07:34:00.1689041Z ##[group]Run npm run build:attachments -- --download",
+    "2026-11-09T07:34:00.1689736Z npm run build:attachments -- --download",
+    "2026-11-09T07:34:00.1751317Z shell: /usr/bin/bash -e {0}",
+    "2026-11-09T07:34:00.1751705Z ##[endgroup]",
+    "2026-11-09T07:34:00.2761496Z ",
+    "2026-11-09T07:34:00.2762316Z > congdongngonngu-backend@0.1.0 build:attachments",
+    "2026-11-09T07:34:00.2762888Z > node scripts/build-phase30-processors.cjs --download",
+    "2026-11-09T07:34:00.2763116Z ",
+    "2026-11-09T07:34:19.1397033Z PINNED_PROCESSOR_BUILD=REJECTED",
+    "2026-11-09T07:34:19.1509530Z ##[error]Process completed with exit code 1.",
+    "2026-11-09T07:34:19.1609616Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02"
+  ]
+}

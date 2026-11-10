@@ -1,0 +1,244 @@
+{
+  "scope": "ACTUAL_RENDER_BOUNDARY_PROCESSORS_ONLY",
+  "service": "srv-dahnerh594qs73fp3420",
+  "deployment": "dep-dbp84hgn74is73d5mqc0",
+  "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+  "observedDate": "2026-11-10",
+  "source": "RENDER_APP_LOGS_VISIBLE_DOM",
+  "events": [
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "baseline",
+      "baselineHealthMs": [
+        101.36961200000042,
+        3.068354000000909,
+        1.6496590000006108
+      ],
+      "cgroupBytes": 201166848,
+      "cgroupLimitBytes": 536870912,
+      "appRssBytes": 120524800,
+      "oom": 0,
+      "oomKill": 0
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "fixture-start",
+      "name": "jpeg"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "stage",
+      "name": "jpeg",
+      "result": {
+        "workerRssBytes": 128557056,
+        "normalizedBytes": 3681342,
+        "thumbnailBytes": 16714
+      },
+      "elapsedMs": 9090.397352999998,
+      "healthMs": [
+        2.6723540000002686,
+        94.19393799999852,
+        98.47851199999968,
+        1.8441540000003442,
+        1.9650670000009995,
+        3.163817000000563,
+        2.05724999999984,
+        2.379117000000406
+      ],
+      "cgroupPeakBytes": 282705920,
+      "appPeakRssBytes": 134471680
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "fixture-start",
+      "name": "png"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "stage",
+      "name": "png",
+      "result": {
+        "workerRssBytes": 122388480,
+        "normalizedBytes": 1454924,
+        "thumbnailBytes": 9920
+      },
+      "elapsedMs": 6993.240421000002,
+      "healthMs": [
+        6.641180999999051,
+        1.608448999999382,
+        93.89241100000072,
+        1.7635229999978037,
+        95.87846899999931,
+        1.4480550000007497,
+        1.5787180000006629,
+        92.6584010000006
+      ],
+      "cgroupPeakBytes": 283947008,
+      "appPeakRssBytes": 134471680
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "fixture-start",
+      "name": "webp"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "stage",
+      "name": "webp",
+      "result": {
+        "workerRssBytes": 143593472,
+        "normalizedBytes": 1986842,
+        "thumbnailBytes": 17794
+      },
+      "elapsedMs": 12194.269143000001,
+      "healthMs": [
+        96.08526400000119,
+        113.41126300000178,
+        1.989077999998699,
+        2.0730100000000675,
+        1.6593199999988428,
+        3.5258759999996983,
+        90.14424100000178,
+        1.8971259999998438
+      ],
+      "cgroupPeakBytes": 312750080,
+      "appPeakRssBytes": 141107200
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "fixture-start",
+      "name": "video"
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "event": "stage",
+      "name": "video",
+      "result": {
+        "workerRssBytes": 109453312,
+        "normalizedBytes": 2917853,
+        "thumbnailBytes": 6198
+      },
+      "elapsedMs": 14601.030611000002,
+      "healthMs": [
+        1297.758928000003,
+        97.5149390000006,
+        1.7156519999989541,
+        1.5986179999963497,
+        92.21254000000044,
+        1.6492989999969723,
+        3.4758740000033868,
+        87.1028970000043
+      ],
+      "cgroupPeakBytes": 312750080,
+      "appPeakRssBytes": 147251200
+    },
+    {
+      "scope": "NEAR_LIMIT_SYNTHETIC_ONLY",
+      "sha": "86c332e053b1e3a17312f13425df9c45076ffabe",
+      "status": "PASS_BOUNDARY_FIXTURES_ONLY",
+      "baselineHealthMs": [
+        101.36961200000042,
+        3.068354000000909,
+        1.6496590000006108
+      ],
+      "stages": [
+        {
+          "name": "jpeg",
+          "result": {
+            "workerRssBytes": 128557056,
+            "normalizedBytes": 3681342,
+            "thumbnailBytes": 16714
+          },
+          "elapsedMs": 9090.397352999998,
+          "healthMs": [
+            2.6723540000002686,
+            94.19393799999852,
+            98.47851199999968,
+            1.8441540000003442,
+            1.9650670000009995,
+            3.163817000000563,
+            2.05724999999984,
+            2.379117000000406
+          ]
+        },
+        {
+          "name": "png",
+          "result": {
+            "workerRssBytes": 122388480,
+            "normalizedBytes": 1454924,
+            "thumbnailBytes": 9920
+          },
+          "elapsedMs": 6993.240421000002,
+          "healthMs": [
+            6.641180999999051,
+            1.608448999999382,
+            93.89241100000072,
+            1.7635229999978037,
+            95.87846899999931,
+            1.4480550000007497,
+            1.5787180000006629,
+            92.6584010000006
+          ]
+        },
+        {
+          "name": "webp",
+          "result": {
+            "workerRssBytes": 143593472,
+            "normalizedBytes": 1986842,
+            "thumbnailBytes": 17794
+          },
+          "elapsedMs": 12194.269143000001,
+          "healthMs": [
+            96.08526400000119,
+            113.41126300000178,
+            1.989077999998699,
+            2.0730100000000675,
+            1.6593199999988428,
+            3.5258759999996983,
+            90.14424100000178,
+            1.8971259999998438
+          ]
+        },
+        {
+          "name": "video",
+          "result": {
+            "workerRssBytes": 109453312,
+            "normalizedBytes": 2917853,
+            "thumbnailBytes": 6198
+          },
+          "elapsedMs": 14601.030611000002,
+          "healthMs": [
+            1297.758928000003,
+            97.5149390000006,
+            1.7156519999989541,
+            1.5986179999963497,
+            92.21254000000044,
+            1.6492989999969723,
+            3.4758740000033868,
+            87.1028970000043
+          ]
+        }
+      ],
+      "cgroupPeakBytes": 312750080,
+      "appPeakRssBytes": 147251200,
+      "cgroupLimitBytes": 536870912,
+      "oomDelta": 0,
+      "oomKillDelta": 0,
+      "scratchResidual": 0,
+      "completeEnablement": "NOT_RUN",
+      "deploymentHeadroom": "UNVERIFIED_HIDDEN_ANCESTORS"
+    }
+  ],
+  "completeEnablement": "NOT_RUN",
+  "providerAndSqlCleanup": "NOT_RUN_NO_FIXTURE_ROWS_OR_OBJECTS_CREATED_BY_PROCESSOR_PROBE",
+  "normalCommandRestoration": "PENDING"
+}
