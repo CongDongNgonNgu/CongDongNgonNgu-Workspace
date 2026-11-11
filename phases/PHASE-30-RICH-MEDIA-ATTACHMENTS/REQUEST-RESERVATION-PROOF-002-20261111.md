@@ -1,0 +1,23 @@
+# Inert request reservation source/proof checkpoint - 2026-11-11
+
+001 remains DONE/frozen;002 BLOCKED_OR_REMEDIATE_AND_RETEST;003-006 and Phase31 remain unstarted. This increment records a narrow Backend draft-PR source slice and its isolated proofs, not executable HTTP admission. CONTRACT-003's approved exception remains the boundary. Earlier PR210 documents/checkpoints remain historical and unchanged below new pointers.
+
+## Published source baseline
+
+Workspace PR210 reviewed head1552ddf3800b61baca84c8449e3cd41162db481f merged main7b0771f59807eef324d3028fe754f431ac4098ff with equal reviewed treef54dfb9d3179411e5e2d0371fe94c6663eda9275. PR CI42977146915 and main CI42977365263 SUCCESS; temporary branch deleted remotely/locally, refs pruned and root fetched/fast-forwarded clean Workspace main. This is Workspace publication verification, not a claim that every application main is synchronized.
+
+Backend current-PUBLIC constraint PR89 merged dev94480160ce9d6b809f44c682d989c1f074606f89 with equal reviewed treeefa578ad63482a4db8a3ec8a6831627c38afe699. PR CI42976148886/reproduction42976148783 and postmerge dev CI42977352378/reproduction42977352348 SUCCESS. After exact ancestry verification, feature/phase30-current-public-read-constraint was deleted remotely/locally and refs pruned. No deployment of PR89 is claimed.
+
+## Narrow request-reservation increment
+
+The four-file source slice on feature/phase30-request-reservation adds inert reserveRequest support for sealed candidate declarations, explicit request attempts and immutable conservative coarse byte ceilings. Source commit57fb97a839c82b3fef646077ced770aca465fbec is included in synchronized reviewed head7bec66b8942c5d945ab9acf6812e366e819f9a52/tree1d0c04ff3ae1464c47301bc2358689e070a6575b, now open draft Backend PR90 targeting dev. PR CI42978792290/reproduction42978792281 IN_PROGRESS on that head. No merge or deployment is claimed. An owned short database transaction reserves aggregate charges without refund, without product identity-slot burns, and without issuing a process-local handle before confirmed commit. Existing reserve behavior remains unchanged; SQL blocks legacy product-slot burns in the new request mode. This is not a completed candidate compiler, route-policy provenance proof, normal-auth match or allocation capability.
+
+The full candidate compiler, route/operation maximum-ceiling provenance, bindOperation, pre-parser middleware, proof-backed cleanup authority, post-deployment receipt/boot control and runtime activation remain NOT_IMPLEMENTED. No fixed tooling schema was installed. No HTTP route, provider, credential or product quota semantics are changed by this inert source slice. Future work outside this evidence cutoff must not be inferred from the proposed API or exported tooling DDL.
+
+Independent actual-source review initially approved the four-file slice for guarded PostgreSQL proof; final review after the actual13-test PostgreSQL PASS approved narrow inert source commit/PR publication. This does not approve runtime admission. Author targeted88 tests PASS8.389s; root independently ran7 suites/88 tests PASS4.926s; root typecheck/lint/build PASS. Author RED was missing-API TS2339 with zero executed tests in6.776s, not a behavioral runtime rejection. A transient schema-edit TypeScript error was corrected before GREEN. The SQL expiry case uses database clock and a natural ten-second wait; no product-history backdating is used.
+
+The coordinator's actual guarded PostgreSQL proof passed13/13,53.691s total (suite53.417s), without afterAll errors. SqlHarness dropped its exact generated owned schema and independently asserted pg_namespace absence0. This is an executed isolated tooling proof and proof-schema cleanup, not fixed runtime-schema installation, application attachment SQL cleanup, R2-object residual or leak acceptance. The implementation agent did not execute or repeat that database command.
+
+Actual matcher/dispatcher and finite HTTP exception activation remain unimplemented/not run. Last independently recorded Render TEST baseline is Live dep-dbpt6krrjlhs73b1ap0g on76a384528e39017e24f48ec179aa7b2d05854f7e with saved original four-false/no-probe command; this checkpoint performs no browser, deploy, fixture or provider operation. No format rollout or002 completion follows; no003 entry.
+
+Machine receipt: evidence-002/request-reservation-proof-20261111.json. Independent actual-receipt review approved the narrow source/proof evidence scope. Backend draft PR90 still requires CI and subsequent publication/merge/dev verification/cleanup gates. This Workspace increment remains uncommitted/unpublished pending its own PR/main CI/tree equality/branch cleanup; review approval is not runtime acceptance.
