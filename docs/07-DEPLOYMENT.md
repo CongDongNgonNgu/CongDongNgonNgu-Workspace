@@ -59,3 +59,7 @@ actual account wiring and revisions must be verified before release execution.
 ## CI/CD topology update - 2026-10-27
 
 The owner-approved TEST (Render/Vercel dev) and VPS Production (main) target topology and activation gate are defined in [Secure CI/CD](operations/SECURE-CI-CD.md). Earlier dated provider/revision snapshots above are historical evidence. Production activation and application dev-to-main merge remain prohibited until TEST verification and explicit owner approval.
+
+## Swagger preparation - 2026-10-27
+
+See [Swagger operations](operations/SWAGGER-OPENAPI.md) and its [verification evidence](operations/SWAGGER-OPENAPI-EVIDENCE-2026-10-27.md). Scope is dev/Render TEST; Production documentation requires separate credentials and trusted HTTPS before a future authorized main deployment. No main merge or VPS/Production environment change is authorized in this task.
