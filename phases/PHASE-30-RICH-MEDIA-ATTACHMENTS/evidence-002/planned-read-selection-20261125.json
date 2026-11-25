@@ -1,0 +1,106 @@
+{
+  "scope": "PURE_PLANNED_SUCCESSFUL_DERIVATIVE_SELECTION_ONLY",
+  "authoredOn": "2026-11-25",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 214,
+    "main": "44e3ed227167d740bfb8a177ce04ee5134ed4393",
+    "reviewedAndMergedTree": "afcea46973da9bc64aa0878d9710b00dfe2a1040",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45578624964,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45578799173,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 98,
+    "commit": "47d96282b27af5c1a0e064a4719de45148da85f4",
+    "reviewedTree": "da3dc7a0e2c8935b55db56cca68454bc3b401c5a",
+    "independentReview": "APPROVED_NARROW_PURE_SELECTION_SCOPE_AFTER_SNAPSHOT_FIX",
+    "prCI": {
+      "run": 45613317852,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45613316913,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "MERGED_TEST_DEV_REQUIRED_CI_TREE_AND_CLEANUP_VERIFIED",
+    "mergedDev": "362f3e417425058e410d30febb20ba37e3b72595",
+    "mergedTree": "da3dc7a0e2c8935b55db56cca68454bc3b401c5a",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45614466719,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45614466537,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "verification": {
+    "initialBehavioralRed": {
+      "failed": 8,
+      "passed": 22,
+      "total": 30,
+      "elapsedSeconds": 4.644
+    },
+    "reviewRegressionRed": {
+      "failed": 2,
+      "passed": 34,
+      "total": 36,
+      "elapsedSeconds": 4.216,
+      "demonstrated": "REOBSERVED_FORMAT_AND_LOCATOR_SIZE_SPLICING_4194304_EXPECTED_1_ACTUAL"
+    },
+    "finalCombinedGreen": {
+      "suites": 15,
+      "passed": 213,
+      "elapsedSeconds": 5.834
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "audit": {
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "dependencyChanges": false
+    },
+    "localSqlProof": "NOT_RUN_PURE_SELECTION_CHANGE"
+  },
+  "comparedFacts": [
+    "READ_NORMAL_AUTHORIZATION_POLICY_METHOD",
+    "PINNED_FIXTURE_FORMAT",
+    "EXACT_ATTACHMENT_ATTEMPT_OBJECT_DERIVATIVE_KIND",
+    "FULL_SAFE_INTEGER_SIZE_1_TO_FROZEN_CAP",
+    "INTERNALLY_DERIVED_METHOD_PATH_AUTH_GROUP_AND_POLICY_MEMBERSHIP",
+    "FROZEN_CAP_WITHIN_PLANNED_GROUP_EGRESS",
+    "ONE_SELECTED_SNAPSHOT_DETACHED_FROZEN_OUTPUT"
+  ],
+  "limits": [
+    "TRUSTED_SAME_PINNED_VALIDATOR_OUTPUT_REQUIRED_NOT_REESTABLISHED",
+    "FRESH_NORMAL_ACL_ADMITTED_SELECTION_REQUIRED_NOT_PROVED",
+    "PLANNED_GROUP_NOT_COMMITTED_RESERVATION",
+    "NO_HASH_VERSION_OR_PROVIDER_INTEGRITY_PROOF",
+    "EXPECTED_DENIAL_NOT_SUCCESSFUL_SELECTION_ACCEPTANCE_NORMAL_ERROR_PRECEDENCE_REMAINS",
+    "NO_SERVICE_OR_BOOTSTRAP_WIRING"
+  ],
+  "runtimeActivation": "NOT_RUN",
+  "fixedSchemaInstalled": false,
+  "processorExecution": "NOT_RUN",
+  "httpProviderAcceptance": "NOT_RUN",
+  "formatRollout": "NOT_ENABLED",
+  "productionMutation": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": {
+    "pr": 215,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  }
+}
