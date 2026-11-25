@@ -1,5 +1,5 @@
 {
-  "scope": "INERT_BINDING_AND_DECLARATION_CATALOGUE_SOURCE_WITH_ISOLATED_PROOFS_ONLY",
+  "scope": "INERT_BINDING_CATALOGUE_AND_PINNED_DECLARATION_SOURCE_WITH_ISOLATED_PROOFS_ONLY",
   "authoredOn": "2026-11-25",
   "phase": 30,
   "subphase": "LNG-30-002",
@@ -38,19 +38,20 @@
       "run": 45529651252,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "MERGED_DEV_CI_AND_BRANCH_CLEANUP_PENDING",
+    "lifecycle": "MERGED_DEV_CI_TREE_AND_BRANCH_CLEANUP_VERIFIED",
     "mergedDev": "6c25a88bd5cee9d54eee00e3c0ad554ed80872f3",
     "mergedTree": "49da0cf4e3b6c97ce2cccf9f144555b212bd7bc0",
     "treeEqual": true,
     "devCI": {
       "run": 45530673909,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "devReproduction": {
       "run": 45530673859,
       "conclusion": "SUCCESS"
     },
-    "productionJob": "SKIPPED_ON_PR"
+    "productionJob": "SKIPPED_ON_PR_AND_DEV",
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_AND_REVIEWED_TREE_VERIFIED"
   },
   "verification": {
     "unit": {
@@ -111,7 +112,7 @@
     "defaultOff": true
   },
   "remaining": [
-    "PINNED_FULL_DECLARATION_COMPOSITION_AND_ACTUAL_OBJECT_CEILING_PROVENANCE",
+    "ACTUAL_OBJECT_CEILING_AND_SOURCE_PROCESSOR_PROVIDER_PROVENANCE",
     "COARSE_ATTEMPT_OPERATION_ALLOCATION_COMPATIBILITY",
     "PREPARSER_MATCHER_AND_NORMAL_AUTH_INTEGRATION",
     "PROOF_BACKED_CLEANUP",
@@ -122,7 +123,7 @@
   "runtimeActivation": "NOT_RUN",
   "httpProviderAcceptance": "NOT_RUN",
   "applicationSqlR2CleanupAcceptance": "NOT_RUN",
-  "formatEnablement": "OFF_AT_LAST_RECORDED_OBSERVATION_NO_NEW_PROVIDER_OBSERVATION",
+  "formatEnablement": "OFF_AT_LAST_RECORDED_SETTINGS_OBSERVATION_NO_FRESH_CONFIG_READ",
   "productionMutations": false,
   "subphases003To006AndPhase31": "NOT_STARTED",
   "workspacePublication": "PENDING",
@@ -150,18 +151,76 @@
     "typecheckBuild": "PASS",
     "prCI": {
       "run": 45530745870,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45530745953,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
-    "lifecycle": "OPEN_PR_CI_MERGE_DEV_AND_CLEANUP_PENDING",
+    "lifecycle": "MERGED_DEV_CI_AND_CLEANUP_PENDING",
     "limits": [
       "TRUSTED_VALIDATED_ENVELOPE_INVENTORY",
       "DECLARED_CHARGE_MAXIMA_NOT_ACTUAL_OBJECT_SIZE_PROOF",
       "POLICY_ATTEMPT_PROVENANCE_NOT_COARSE_ALLOCATION_EDGES",
       "NO_PREPARED_RUN_OR_RUNTIME_AUTHORITY"
+    ],
+    "mergedDev": "d022080d3b4cffb41a00e01db28e6f47b75f13fd",
+    "mergedTree": "88f92aa64cab21590f823f85c7bc79ff13fe4407",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45531861649,
+      "conclusion": "PENDING"
+    },
+    "devReproduction": {
+      "run": 45531861633,
+      "conclusion": "SUCCESS"
+    }
+  },
+  "pinned93": {
+    "pr": 93,
+    "sourceCommit": "f83c2fb50900d844758e44e7871c171eed5d27dd",
+    "reviewedTree": "3077f0bd6b9c65aff13bd50f2e9b6d0b20ef5803",
+    "branch": "feature/phase30-pinned-declarations",
+    "sourceReview": "INDEPENDENT_APPROVAL_SAME_LITERAL_DECLARATION_COMPOSITION_ONLY",
+    "behavioralRed": {
+      "failed": 3,
+      "passed": 10,
+      "total": 13,
+      "elapsedSeconds": 3.962
+    },
+    "focusedGreen": {
+      "passed": 13,
+      "total": 13,
+      "elapsedSeconds": 4.729
+    },
+    "combinedUnits": {
+      "suites": 10,
+      "passed": 131,
+      "elapsedSeconds": 7.522
+    },
+    "typecheckBuild": "PASS",
+    "prCI": {
+      "run": 45531932061,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45531932445,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "OPEN_PR_CI_MERGE_DEV_AND_CLEANUP_PENDING",
+    "limits": [
+      "NOT_EXECUTABLE_RUN_MANIFEST",
+      "NO_ACTUAL_OBJECT_BYTE_PROOF_OR_SOURCE_PROVIDER_PROVENANCE",
+      "NO_COMPLETE_ROLE_OR_ATTEMPT_ALLOCATION_COMPATIBILITY",
+      "NO_CLEANUP_OR_BOOT_ACTIVATION_AUTHORITY"
     ]
+  },
+  "runtimeAccessObservation": {
+    "date": "2026-11-25",
+    "scope": "AVAILABLE_CHROME_DEVTOOLS_CONTEXT_ONLY",
+    "target": "srv-dahnerh594qs73fp3420",
+    "result": "EXACT_TEST_SERVICE_URL_REDIRECTED_TO_RENDER_LOGIN",
+    "currentSettingsOrDeploymentVerified": false,
+    "providerMutation": false
   }
 }
