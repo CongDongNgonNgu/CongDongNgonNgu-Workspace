@@ -1,0 +1,99 @@
+{
+  "scope": "INERT_ATOMIC_LEDGER_CORRELATION_ONLY",
+  "authoredOn": "2026-11-25",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "prior": {
+    "backendDev": "aac529f99700fe735226439d8ff59aec4ac1d1c5",
+    "workspaceMain": "7ab8601f04bddfbc46843e4afc17e35c0318ea0a",
+    "workspacePR": 212,
+    "workspacePRCI": 45540863418,
+    "workspaceMainCI": 45540993247,
+    "workspaceTree": "152bddd3e0b17dd769bb0f104fc664913c705efc",
+    "workspaceTreeEqual": true,
+    "workspaceBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 96,
+    "branch": "feature/phase30-atomic-control-consumption",
+    "commit": "1c8db0afe6392683fdfe8d690c601c9394846d1a",
+    "reviewedTree": "521320808c8305a9e26e1f12ee6732c364e9eb15",
+    "independentReview": "APPROVED_INERT_CORRELATION_ONLY_AFTER_POSTGRES_PROOF",
+    "prCI": {
+      "run": 45546743719,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45546743780,
+      "conclusion": "PENDING"
+    },
+    "lifecycle": "OPEN_PR_REQUIRED_CI_AND_MERGE_DEV_CLEANUP_PENDING"
+  },
+  "verification": {
+    "behavioralRed": {
+      "failed": 5,
+      "passed": 1,
+      "total": 6,
+      "elapsedSeconds": 3.889
+    },
+    "focusedGreen": {
+      "passed": 6,
+      "total": 6,
+      "elapsedSeconds": 3.935
+    },
+    "unit": {
+      "suites": 13,
+      "passed": 156,
+      "elapsedSeconds": 10.226
+    },
+    "postgres": {
+      "passed": 31,
+      "total": 31,
+      "elapsedSeconds": 118.234,
+      "suiteSeconds": 118.03,
+      "afterAllErrors": false,
+      "cleanup": "EXACT_OWNED_SCHEMA_DROP_AND_INDEPENDENT_NAMESPACE_ABSENCE_0",
+      "scope": "CONTROLLED_LEDGER_ACTIVATION_ONLY_IN_DISPOSABLE_TEST_SCHEMA"
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "audit": {
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "thresholdExit": 0,
+      "dependencyChanges": false
+    },
+    "transientTestTyping": "EXCESS_PROPERTY_TYPE_ERROR_CORRECTED_BEFORE_SQL_EXECUTION"
+  },
+  "invariants": {
+    "oneTransactionConsumeAndActivate": true,
+    "runThenControlLocks": true,
+    "databaseTimeAfterBothLocks": true,
+    "deferredPartialCommitRejection": true,
+    "originalTupleWindowAndFreshReceipt": true,
+    "consumedTimestampImmutable": true,
+    "legitimateTerminalClosurePreservesEvidence": true,
+    "handleOnlyAfterConfirmedCommit": true,
+    "legacyCopiedForeignHandlesRejected": true,
+    "uncertainActualCommit": "DURABLE_CONSUMED_AND_ACTIVE_NO_HANDLE_NO_RETRY_NO_RECONSTRUCTION"
+  },
+  "controlledLedgerActivation": "EXECUTED_ONLY_IN_ISOLATED_SQL_PROOFS",
+  "runtimeActivation": "NOT_IMPLEMENTED_NOT_RUN",
+  "fixedToolingSchemaInstalled": false,
+  "httpProviderAcceptance": "NOT_RUN",
+  "applicationSqlR2CleanupAcceptance": "NOT_RUN",
+  "actualProcessBootSourceAttestation": "NOT_IMPLEMENTED_NOT_PROVED",
+  "formatRollout": "NOT_ENABLED",
+  "productionMutation": false,
+  "remaining": [
+    "ACTUAL_LOCAL_COLD_IDENTITY_AND_PROCESS_BOOT_BOOTSTRAP",
+    "COMPLETE_MANIFEST_ALLOCATION_COMPATIBILITY_AND_INTERNAL_CLEANUP",
+    "ACTUAL_OBJECT_HEAD_CEILING_AND_SOURCE_PROCESSOR_PROVIDER_PROVENANCE",
+    "PREPARSER_MATCHER_NORMAL_AUTH_INTEGRATION",
+    "FULL_DEPLOYED_HTTP_PROVIDER_RESOURCE_SECURITY_ACCEPTANCE"
+  ],
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PR_MAIN_CI_TREE_AND_BRANCH_CLEANUP_PENDING"
+}
