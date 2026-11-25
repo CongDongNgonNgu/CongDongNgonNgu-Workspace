@@ -1,6 +1,6 @@
 # Planned derivative read selection - 2026-11-25
 
-STATUS=SOURCE_MERGED_TEST_DEV_POSTMERGE_CI_CLEANUP_PENDING. Phase30-002 remains IN_PROGRESS/REMEDIATE_AND_RETEST;003+ unstarted. Evidence: evidence-002/planned-read-selection-20261125.json.
+STATUS=SOURCE_MERGED_TEST_DEV_CI_TREE_CLEANUP_VERIFIED. Phase30-002 remains IN_PROGRESS/REMEDIATE_AND_RETEST;003+ unstarted. Evidence: evidence-002/planned-read-selection-20261125.json.
 
 validatePlannedReadSelection compares a successful READ policy from trusted same-pinned validator output with a normal freshly ACL-admitted selection. It checks method, fixture format, exact attachment/attempt/object/derivative-kind locator, safe full size1..frozen output cap, and cap<=planned catalogue group egress. The group is derived internally by method/path/auth class and policy membership. Neither a caller-selected group nor a Range length supplies the ceiling; HEAD also uses the full object. The identity tuple's operationKey belongs to its FINALIZE creator and is intentionally distinct from the READ key.
 
@@ -10,4 +10,4 @@ This pure checker performs no DB/provider I/O, creates no reservation/authority,
 
 Initial typed-stub behavioral RED8failed/22passed/30. Independent review identified repeated observations of selected.format and selected.object. Two focused getter regressions on old source RED2failed/34passed/36 showed changed format and a checked locator combined with size1 instead of4194304. Single-snapshot fix GREEN15suites/213units5.834s; TypeScript/lint/build/diff PASS. Audit19moderate/0high/0critical with no dependency changes. Final independent review approved the narrow pure consistency scope. No local SQL proof was rerun for this pure selection change; CI/publication results follow only after observation.
 
-Backend PR98 merged TEST dev362f3e417425058e410d30febb20ba37e3b72595; reviewed/merged treeda3dc7a0e2c8935b55db56cca68454bc3b401c5a matches. PR CI45613317852 and reproduction45613316913 SUCCESS. Dev CI45614466719/reproduction45614466537 and source branch cleanup pending.
+Backend PR98 merged TEST dev362f3e417425058e410d30febb20ba37e3b72595; reviewed/merged treeda3dc7a0e2c8935b55db56cca68454bc3b401c5a matches. PR CI45613317852 and reproduction45613316913 SUCCESS. Dev CI45614466719/reproduction45614466537 SUCCESS. Temporary source branch deleted remote/local and refs pruned. Local dev clean/synchronized; Production main feae4e2c186795f1b1a4034e84f3fccd86330906 unchanged. Workspace evidence publication PR215 final-head PR CI, merged main tree/main CI and branch cleanup are verified externally after publication.
