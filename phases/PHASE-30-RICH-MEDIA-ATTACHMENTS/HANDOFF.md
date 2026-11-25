@@ -1,3 +1,7 @@
+# Control storage source checkpoint - 2026-11-25
+
+Phase30-002 IN_PROGRESS / REMEDIATE_AND_RETEST;003+ NOT_STARTED. PR90-93 completed dev CI/tree/branch cleanup. Cold identity PR94 merged dev658d57c, equal reviewed tree, PR CI/reproduction PASS; dev CI/cleanup pending. Inert control-storage PR95@0a2f180 has independent source approval,150 units and25 actual PostgreSQL proofs PASS, TypeScript/lint/build PASS; PR/dev lifecycle pending. Controlled activation always rejects in API and SQL even after receipt storage. Receipt storage is procedural evidence only, not an activation or upstream attestation. No fixed schema installation or runtime/provider/Production action. See OPERATION-BINDING-002-20261125.md and machine receipt. Historical checkpoints below preserved.
+
 # Current source continuation - 2026-11-25
 
 Phase30-002 remains IN_PROGRESS / REMEDIATE_AND_RETEST;003+ unstarted. Backend PR90/91/92/93 have merged to TEST dev, passed required PR/dev CI and reproduction checks, verified reviewed-tree equality and temporary branch cleanup. Latest accepted dev53a2dca. Cold local identity PR94/head507c8ce has unchanged reviewedtree0a320206, independent review and141 combined units/typecheck/build PASS; PR/dev lifecycle pending. Control-storage contract has independent design approval and implementation is in progress, not activation. Fixed-schema installation, HTTP/provider and full runtime acceptance remain unexecuted. See OPERATION-BINDING-002-20261125.md and evidence-002/operation-binding-20261125.json. Earlier checkpoints below are historical.

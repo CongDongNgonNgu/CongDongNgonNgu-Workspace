@@ -263,24 +263,92 @@
     "typecheckBuild": "PASS",
     "prCI": {
       "run": 45537660850,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45537660841,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "OPEN_PR_CI_MERGE_DEV_AND_CLEANUP_PENDING",
+    "lifecycle": "MERGED_DEV_CI_AND_CLEANUP_PENDING",
     "limits": [
       "NO_DEPLOYMENT_RECEIPT_OR_ENVELOPE_ACCEPTANCE",
       "NO_DB_CLOCK_OR_LIFETIME_AUTHORITY",
       "NO_ADMISSION_OR_RUNTIME_WIRING"
-    ]
+    ],
+    "mergedDev": "658d57ccf6a9812a8189ce94dbe56eac96e039ee",
+    "mergedTree": "0a320206ca361d0b8b5b0c8ae42d4ee1009c5035",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45538563191,
+      "conclusion": "PENDING"
+    },
+    "devReproduction": {
+      "run": 45538563217,
+      "conclusion": "SUCCESS"
+    }
   },
   "activationControlStorage": {
-    "status": "REVIEWED_CONTRACT_IMPLEMENTATION_IN_PROGRESS",
+    "status": "INERT_SOURCE_OPEN_PR95_CI_PENDING",
     "contract": "ACTIVATION-CONTROL-STORAGE-DESIGN-002-20261125.md",
     "activation": "FORBIDDEN_IN_FIRST_STORAGE_SLICE",
-    "fixedSchemaInstalled": false
+    "fixedSchemaInstalled": false,
+    "pr": 95,
+    "sourceCommit": "0a2f180aa90669f74a4b96da9041f198267d1002",
+    "reviewedTree": "86b429ff1d0347bf554d5f4c850251e14788f650",
+    "branch": "feature/phase30-activation-control-storage",
+    "sourceReview": "INDEPENDENT_APPROVED_AFTER_DIRECT_SQL_BYPASS_FIX",
+    "prCI": {
+      "run": 45538803499,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45538803510,
+      "conclusion": "PENDING"
+    },
+    "verification": {
+      "unit": {
+        "suites": 12,
+        "passed": 150,
+        "elapsedSeconds": 8.863
+      },
+      "postgres": {
+        "passed": 25,
+        "total": 25,
+        "elapsedSeconds": 97.209,
+        "suiteSeconds": 95.791,
+        "afterAllErrors": false,
+        "cleanup": "EXACT_OWNED_SCHEMA_DROP_AND_INDEPENDENT_NAMESPACE_ABSENCE_0"
+      },
+      "typecheckLintBuild": "PASS",
+      "red": [
+        {
+          "kind": "CONTROL_FLAG_NOT_IMPLEMENTED",
+          "passed": 19,
+          "failed": 1,
+          "total": 20,
+          "elapsedSeconds": 92.612
+        },
+        {
+          "kind": "DIRECT_SQL_ACTIVATION_BYPASS",
+          "passed": 23,
+          "failed": 2,
+          "total": 25,
+          "elapsedSeconds": 94.31
+        }
+      ],
+      "expiryLockProof": "NATURAL_WAIT_UNTIL_1_2S_REMAINING_THEN_RELEASE_AFTER_EXPIRY_BEFORE_2S_LOCK_TIMEOUT"
+    },
+    "invariants": {
+      "originalControlFlagImmutable": true,
+      "controlledLegacyApiActivation": "ALWAYS_REJECTED",
+      "controlledDirectSqlActivation": "ALWAYS_REJECTED",
+      "receiptDoesNotActivate": true,
+      "receiptAttestation": "PROCEDURAL_SHARED_ROLE_NOT_CRYPTOGRAPHIC",
+      "tupleReceiptImmutable": true,
+      "clock": "DATABASE_AFTER_LOCK",
+      "inspection": "EXACT_READ_ONLY_FACTS_NO_AUTHORITY"
+    },
+    "runtimeActivation": "NOT_IMPLEMENTED_NOT_RUN"
   },
   "resumeInterruption": {
     "action": "FETCH_MERGE_PUSH_BASE_AND_CREATE_STORAGE_BRANCH",
