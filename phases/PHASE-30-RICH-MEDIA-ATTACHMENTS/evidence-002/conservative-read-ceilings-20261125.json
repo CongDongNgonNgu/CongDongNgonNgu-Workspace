@@ -1,0 +1,143 @@
+{
+  "scope": "CONSERVATIVE_PLANNED_DERIVATIVE_READ_CEILINGS_ONLY",
+  "authoredOn": "2026-11-25",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 213,
+    "reviewedHead": "3b8bc641476b90d9d2f18907d737477c8b6981fb",
+    "main": "9e32624f53a2eb72de652c6795b9b1d0707bbfe9",
+    "reviewedAndMergedTree": "47e6b848b142fa9d2727f9f788045fb58e6cc8a1",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45572872602,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45573031862,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 97,
+    "commit": "6863dbf6831893cebe60fb31d7419e8fb8be9970",
+    "reviewedTree": "82f1aa52e9d693dc7cdecb6ba5b068045a3adf41",
+    "branch": "feature/phase30-conservative-read-ceilings",
+    "independentReview": "APPROVED_NARROW_PLANNED_CEILING_SCOPE",
+    "prCI": {
+      "run": 45575439033,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45575439077,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "MERGED_TEST_DEV_REQUIRED_CI_TREE_AND_CLEANUP_VERIFIED",
+    "mergedDev": "ecd3d5f43f051c840d295d1db1f017aecf18bdc5",
+    "mergedTree": "82f1aa52e9d693dc7cdecb6ba5b068045a3adf41",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45576728716,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45576728878,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "frozenOutputCaps": {
+    "normalized": {
+      "IMAGE": 4194304,
+      "VIDEO": 3145728,
+      "TEXT": 65536
+    },
+    "thumbnail": {
+      "IMAGE": 262144,
+      "VIDEO": 262144,
+      "TEXT": "UNSUPPORTED_REJECTED"
+    },
+    "authority": [
+      "src/attachments/attachment-policy.ts",
+      "src/attachments/finalization/processor-proof.ts"
+    ],
+    "meaning": "PROCESSOR_OUTPUT_POLICY_CAPS_NOT_MEASURED_ARTIFACT_OR_SOURCE_SIZES"
+  },
+  "verification": {
+    "initialBehavioralRed": {
+      "failed": 15,
+      "passed": 3,
+      "total": 18,
+      "elapsedSeconds": 5.98
+    },
+    "proxyRegression": {
+      "failed": 1,
+      "passed": 18,
+      "total": 19,
+      "elapsedSeconds": 6.168,
+      "expectedCatalogueBytes": 4194304,
+      "actualBeforeFix": 1,
+      "fixtureCorrection": "EXISTING_DECODER_BROAD_AND_CLOSED_TWO_OBSERVATIONS_PER_VALIDATION_RETAINED"
+    },
+    "focusedGreen": {
+      "suites": 2,
+      "passed": 41,
+      "elapsedSeconds": 7.2
+    },
+    "pinnedIntegrationRed": {
+      "failed": 2,
+      "passed": 13,
+      "total": 15,
+      "elapsedSeconds": 5.861
+    },
+    "pinnedIntegrationGreen": {
+      "passed": 15,
+      "total": 15,
+      "elapsedSeconds": 5.951
+    },
+    "combinedUnit": {
+      "suites": 14,
+      "passed": 177,
+      "elapsedSeconds": 10.136
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "audit": {
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "thresholdExit": 0,
+      "dependencyChanges": false
+    },
+    "localSqlProof": "NOT_RUN_PURE_DECLARATION_CHANGE"
+  },
+  "invariants": {
+    "allReadClassesAndRangesCoverFullCap": true,
+    "headFullObjectCap": true,
+    "textThumbnailRejected": true,
+    "chargesNeverRewritten": true,
+    "sameImmutableValidatedSnapshotForCheckingAndAggregation": true,
+    "genericCatalogueRawApiPreserved": true,
+    "pinnedCompositionOutputShapePreserved": true,
+    "groupMaxTimesAttemptCountAndLowerBudgetsEnforced": true
+  },
+  "limits": [
+    "TRUSTED_VALIDATED_INVENTORY_ENVELOPE",
+    "PLANNED_OUTPUT_CAPS_ONLY_NOT_ACTUAL_SELECTED_OBJECT_PROOF",
+    "FRESH_LOCATOR_FULL_SIZE_ACL_PROVIDER_INTEGRITY_BEFORE_HEADERS_OUTPUT_REQUIRED",
+    "NO_ALLOCATION_COMPATIBILITY_OR_RUNTIME_AUTHORITY"
+  ],
+  "runtimeActivation": "NOT_RUN",
+  "fixedSchemaInstalled": false,
+  "processorExecution": "NOT_RUN",
+  "httpProviderAcceptance": "NOT_RUN",
+  "formatRollout": "NOT_ENABLED",
+  "productionMutation": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": {
+    "pr": 214,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  }
+}
