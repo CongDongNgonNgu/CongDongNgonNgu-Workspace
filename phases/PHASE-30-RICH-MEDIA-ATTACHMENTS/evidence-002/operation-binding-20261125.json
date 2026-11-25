@@ -1,0 +1,167 @@
+{
+  "scope": "INERT_BINDING_AND_DECLARATION_CATALOGUE_SOURCE_WITH_ISOLATED_PROOFS_ONLY",
+  "authoredOn": "2026-11-25",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "status": "IN_PROGRESS",
+  "subphaseAcceptance": "REMEDIATE_AND_RETEST",
+  "requestReservation90": {
+    "pr": 90,
+    "reviewedHead": "7bec66b8942c5d945ab9acf6812e366e819f9a52",
+    "mergedDev": "b69149269a29bf17ae42403d1f80e83bab6f1f43",
+    "reviewedAndMergedTree": "1d0c04ff3ae1464c47301bc2358689e070a6575b",
+    "treeEqual": true,
+    "prCI": 42978792290,
+    "prReproduction": 42978792281,
+    "devCI": 45528618987,
+    "devReproduction": 45528618799,
+    "allConclusions": "SUCCESS",
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_VERIFIED",
+    "productionJob": "SKIPPED"
+  },
+  "priorWorkspace211": {
+    "mergedMain": "4340714169363de853428ac5acfd47460baf0793",
+    "branch": "docs/phase30-request-reservation-proof",
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_VERIFIED"
+  },
+  "binding91": {
+    "pr": 91,
+    "sourceCommit": "59acd6ac5034c3899e17a39d2c68d848f5da7a16",
+    "reviewedTree": "49da0cf4e3b6c97ce2cccf9f144555b212bd7bc0",
+    "branch": "feature/phase30-operation-binding",
+    "sourceReview": "INDEPENDENT_APPROVAL_INERT_SCOPE",
+    "prCI": {
+      "run": 45529651398,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45529651252,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "MERGED_DEV_CI_AND_BRANCH_CLEANUP_PENDING",
+    "mergedDev": "6c25a88bd5cee9d54eee00e3c0ad554ed80872f3",
+    "mergedTree": "49da0cf4e3b6c97ce2cccf9f144555b212bd7bc0",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45530673909,
+      "conclusion": "PENDING"
+    },
+    "devReproduction": {
+      "run": 45530673859,
+      "conclusion": "SUCCESS"
+    },
+    "productionJob": "SKIPPED_ON_PR"
+  },
+  "verification": {
+    "unit": {
+      "suites": 8,
+      "passed": 96,
+      "elapsedSeconds": 6.667
+    },
+    "postgres": {
+      "passed": 19,
+      "total": 19,
+      "elapsedSeconds": 72.186,
+      "suiteSeconds": 71.985,
+      "afterAllErrors": false,
+      "cleanup": "EXACT_OWNED_SCHEMA_DROP_AND_INDEPENDENT_NAMESPACE_ABSENCE_0"
+    },
+    "typecheckLint": "PASS",
+    "build": "PASS",
+    "audit": {
+      "high": 0,
+      "critical": 0,
+      "moderate": 19,
+      "thresholdExit": 0,
+      "scope": "EXISTING_DEVELOPMENT_TOOLS_NO_DEPENDENCY_CHANGE",
+      "productionVulnerabilities": 0
+    },
+    "redEvidence": [
+      {
+        "kind": "MISSING_WIP_DDL",
+        "passed": 1,
+        "failed": 12,
+        "total": 13
+      },
+      {
+        "kind": "MISSING_SLOT_COUNT_CHECK",
+        "passed": 7,
+        "failed": 1,
+        "total": 8
+      },
+      {
+        "kind": "HOST_CLOCK_FIXTURE_SKEW",
+        "passed": 8,
+        "failed": 11,
+        "total": 19,
+        "observedHostAheadMs": 2129,
+        "roundTripMs": 353,
+        "remediation": "FIXTURE_INITIAL_TIMES_FROM_DATABASE_CLOCK_RUNTIME_EXPIRY_GUARDS_UNCHANGED"
+      }
+    ],
+    "transientEditingFailure": "SCHEMA_STRING_REPLACEMENT_CORRECTED_BEFORE_GREEN_BUILD"
+  },
+  "invariants": {
+    "oneUseBinding": true,
+    "requestAndByteChargesNotRefunded": true,
+    "processingChargedOnce": true,
+    "exactSealedInventory": true,
+    "deferredPartialCommitRejection": true,
+    "confirmedCommitBeforeHandle": true,
+    "defaultOff": true
+  },
+  "remaining": [
+    "PINNED_FULL_DECLARATION_COMPOSITION_AND_ACTUAL_OBJECT_CEILING_PROVENANCE",
+    "COARSE_ATTEMPT_OPERATION_ALLOCATION_COMPATIBILITY",
+    "PREPARSER_MATCHER_AND_NORMAL_AUTH_INTEGRATION",
+    "PROOF_BACKED_CLEANUP",
+    "POSTDEPLOYMENT_RECEIPT_BOOT_CONTROL",
+    "FULL_DEPLOYED_HTTP_PROVIDER_RESOURCE_SECURITY_ACCEPTANCE"
+  ],
+  "fixedToolingSchemaInstalled": false,
+  "runtimeActivation": "NOT_RUN",
+  "httpProviderAcceptance": "NOT_RUN",
+  "applicationSqlR2CleanupAcceptance": "NOT_RUN",
+  "formatEnablement": "OFF_AT_LAST_RECORDED_OBSERVATION_NO_NEW_PROVIDER_OBSERVATION",
+  "productionMutations": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PENDING",
+  "catalogue92": {
+    "pr": 92,
+    "sourceCommit": "a43608cd66c03644b0c8b73938a16f04516e64ec",
+    "reviewedTree": "88f92aa64cab21590f823f85c7bc79ff13fe4407",
+    "branch": "feature/phase30-request-catalogue",
+    "sourceReview": "INDEPENDENT_APPROVAL_PURE_DECLARATION_CATALOGUE_ONLY",
+    "behavioralRed": {
+      "failed": 22,
+      "total": 22,
+      "elapsedSeconds": 4.951
+    },
+    "focusedGreen": {
+      "passed": 22,
+      "total": 22,
+      "elapsedSeconds": 6.186
+    },
+    "combinedUnits": {
+      "suites": 9,
+      "passed": 118,
+      "elapsedSeconds": 6.651
+    },
+    "typecheckBuild": "PASS",
+    "prCI": {
+      "run": 45530745870,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45530745953,
+      "conclusion": "PENDING"
+    },
+    "lifecycle": "OPEN_PR_CI_MERGE_DEV_AND_CLEANUP_PENDING",
+    "limits": [
+      "TRUSTED_VALIDATED_ENVELOPE_INVENTORY",
+      "DECLARED_CHARGE_MAXIMA_NOT_ACTUAL_OBJECT_SIZE_PROOF",
+      "POLICY_ATTEMPT_PROVENANCE_NOT_COARSE_ALLOCATION_EDGES",
+      "NO_PREPARED_RUN_OR_RUNTIME_AUTHORITY"
+    ]
+  }
+}
