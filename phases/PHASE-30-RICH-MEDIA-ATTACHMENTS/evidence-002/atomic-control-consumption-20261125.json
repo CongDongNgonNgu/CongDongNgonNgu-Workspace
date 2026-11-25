@@ -23,13 +23,25 @@
     "independentReview": "APPROVED_INERT_CORRELATION_ONLY_AFTER_POSTGRES_PROOF",
     "prCI": {
       "run": 45546743719,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45546743780,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
-    "lifecycle": "OPEN_PR_REQUIRED_CI_AND_MERGE_DEV_CLEANUP_PENDING"
+    "lifecycle": "MERGED_DEV_CI_TREE_AND_BRANCH_CLEANUP_VERIFIED",
+    "mergedDev": "4fb18fb4c018aa15581ea7ce2820efbcbc9592ed",
+    "mergedTree": "521320808c8305a9e26e1f12ee6732c364e9eb15",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45547752890,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45547752834,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_TREE_AND_CI_VERIFICATION_REFS_PRUNED"
   },
   "verification": {
     "behavioralRed": {
@@ -65,7 +77,8 @@
       "thresholdExit": 0,
       "dependencyChanges": false
     },
-    "transientTestTyping": "EXCESS_PROPERTY_TYPE_ERROR_CORRECTED_BEFORE_SQL_EXECUTION"
+    "transientTestTyping": "EXCESS_PROPERTY_TYPE_ERROR_CORRECTED_BEFORE_SQL_EXECUTION",
+    "sourceApplicationImports": "SEARCH_FOUND_ONLY_LEDGER_CLASS_AND_METHOD_DEFINITIONS_NO_APPLICATION_CONSUMERS"
   },
   "invariants": {
     "oneTransactionConsumeAndActivate": true,
@@ -95,5 +108,16 @@
     "FULL_DEPLOYED_HTTP_PROVIDER_RESOURCE_SECURITY_ACCEPTANCE"
   ],
   "subphases003To006AndPhase31": "NOT_STARTED",
-  "workspacePublication": "PR_MAIN_CI_TREE_AND_BRANCH_CLEANUP_PENDING"
+  "workspacePublication": {
+    "pr": 213,
+    "url": "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/213",
+    "resultVerification": "RESULTING_MERGE_SHA_MAIN_CI_TREE_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  },
+  "localBackend": {
+    "branch": "dev",
+    "head": "4fb18fb4c018aa15581ea7ce2820efbcbc9592ed",
+    "clean": true,
+    "remoteHeadEqual": true
+  },
+  "productionMain": "feae4e2c186795f1b1a4034e84f3fccd86330906_UNCHANGED"
 }
