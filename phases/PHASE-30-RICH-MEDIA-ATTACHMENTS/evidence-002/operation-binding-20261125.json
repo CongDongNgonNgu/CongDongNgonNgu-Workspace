@@ -157,7 +157,7 @@
       "run": 45530745953,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "MERGED_DEV_CI_AND_CLEANUP_PENDING",
+    "lifecycle": "MERGED_DEV_CI_TREE_AND_BRANCH_CLEANUP_VERIFIED",
     "limits": [
       "TRUSTED_VALIDATED_ENVELOPE_INVENTORY",
       "DECLARED_CHARGE_MAXIMA_NOT_ACTUAL_OBJECT_SIZE_PROOF",
@@ -169,12 +169,13 @@
     "treeEqual": true,
     "devCI": {
       "run": 45531861649,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "devReproduction": {
       "run": 45531861633,
       "conclusion": "SUCCESS"
-    }
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_AND_TREE_VERIFIED"
   },
   "pinned93": {
     "pr": 93,
@@ -201,19 +202,31 @@
     "typecheckBuild": "PASS",
     "prCI": {
       "run": 45531932061,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45531932445,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "OPEN_PR_CI_MERGE_DEV_AND_CLEANUP_PENDING",
+    "lifecycle": "MERGED_DEV_CI_TREE_AND_BRANCH_CLEANUP_VERIFIED",
     "limits": [
       "NOT_EXECUTABLE_RUN_MANIFEST",
       "NO_ACTUAL_OBJECT_BYTE_PROOF_OR_SOURCE_PROVIDER_PROVENANCE",
       "NO_COMPLETE_ROLE_OR_ATTEMPT_ALLOCATION_COMPATIBILITY",
       "NO_CLEANUP_OR_BOOT_ACTIVATION_AUTHORITY"
-    ]
+    ],
+    "mergedDev": "53a2dca297df33659e4feef6fadc49f49a041935",
+    "mergedTree": "3077f0bd6b9c65aff13bd50f2e9b6d0b20ef5803",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45533077902,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45533077900,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_AND_TREE_VERIFIED"
   },
   "runtimeAccessObservation": {
     "date": "2026-11-25",
@@ -222,5 +235,56 @@
     "result": "EXACT_TEST_SERVICE_URL_REDIRECTED_TO_RENDER_LOGIN",
     "currentSettingsOrDeploymentVerified": false,
     "providerMutation": false
+  },
+  "cold94": {
+    "pr": 94,
+    "sourceCommit": "5f6c2a2844839b9c0e3fee77aaf1a25b93d34921",
+    "reviewedHead": "507c8ce8568f99f0b9816faf2ca7d9415b86f9ca",
+    "reviewedTree": "0a320206ca361d0b8b5b0c8ae42d4ee1009c5035",
+    "branch": "feature/phase30-cold-identity",
+    "treeEqualAfterBaseMerge": true,
+    "sourceReview": "INDEPENDENT_APPROVAL_COLD_LOCAL_IDENTITY_ONLY",
+    "behavioralRed": {
+      "failed": 9,
+      "passed": 1,
+      "total": 10,
+      "elapsedSeconds": 3.949
+    },
+    "legacyColdGreen": {
+      "suites": 2,
+      "passed": 26,
+      "elapsedSeconds": 3.976
+    },
+    "combinedUnits": {
+      "suites": 11,
+      "passed": 141,
+      "elapsedSeconds": 7.96
+    },
+    "typecheckBuild": "PASS",
+    "prCI": {
+      "run": 45537660850,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45537660841,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "OPEN_PR_CI_MERGE_DEV_AND_CLEANUP_PENDING",
+    "limits": [
+      "NO_DEPLOYMENT_RECEIPT_OR_ENVELOPE_ACCEPTANCE",
+      "NO_DB_CLOCK_OR_LIFETIME_AUTHORITY",
+      "NO_ADMISSION_OR_RUNTIME_WIRING"
+    ]
+  },
+  "activationControlStorage": {
+    "status": "REVIEWED_CONTRACT_IMPLEMENTATION_IN_PROGRESS",
+    "contract": "ACTIVATION-CONTROL-STORAGE-DESIGN-002-20261125.md",
+    "activation": "FORBIDDEN_IN_FIRST_STORAGE_SLICE",
+    "fixedSchemaInstalled": false
+  },
+  "resumeInterruption": {
+    "action": "FETCH_MERGE_PUSH_BASE_AND_CREATE_STORAGE_BRANCH",
+    "outcome": "NOT_EXECUTED_AT_PREVIOUS_REVIEW_USAGE_LIMIT",
+    "resumed": "AUTHORIZED_EXECUTION_RESTORED_GIT_FETCH_AND_BASE_MERGE_COMPLETED"
   }
 }
