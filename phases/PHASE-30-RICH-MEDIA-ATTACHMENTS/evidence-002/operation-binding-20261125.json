@@ -126,7 +126,11 @@
   "formatEnablement": "OFF_AT_LAST_RECORDED_SETTINGS_OBSERVATION_NO_FRESH_CONFIG_READ",
   "productionMutations": false,
   "subphases003To006AndPhase31": "NOT_STARTED",
-  "workspacePublication": "PENDING",
+  "workspacePublication": {
+    "pr": 212,
+    "url": "https://github.com/CongDongNgonNgu/CongDongNgonNgu-Workspace/pull/212",
+    "resultVerification": "MERGE_SHA_MAIN_CI_TREE_AND_BRANCH_CLEANUP_TO_BE_VERIFIED_EXTERNALLY_AFTER_THIS_COMMIT"
+  },
   "catalogue92": {
     "pr": 92,
     "sourceCommit": "a43608cd66c03644b0c8b73938a16f04516e64ec",
@@ -269,7 +273,7 @@
       "run": 45537660841,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "MERGED_DEV_CI_AND_CLEANUP_PENDING",
+    "lifecycle": "MERGED_DEV_CI_TREE_AND_BRANCH_CLEANUP_VERIFIED",
     "limits": [
       "NO_DEPLOYMENT_RECEIPT_OR_ENVELOPE_ACCEPTANCE",
       "NO_DB_CLOCK_OR_LIFETIME_AUTHORITY",
@@ -280,15 +284,16 @@
     "treeEqual": true,
     "devCI": {
       "run": 45538563191,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "devReproduction": {
       "run": 45538563217,
       "conclusion": "SUCCESS"
-    }
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_TREE_AND_CI_VERIFIED"
   },
   "activationControlStorage": {
-    "status": "INERT_SOURCE_OPEN_PR95_CI_PENDING",
+    "status": "INERT_SOURCE_MERGED_TEST_DEV_GATES_VERIFIED",
     "contract": "ACTIVATION-CONTROL-STORAGE-DESIGN-002-20261125.md",
     "activation": "FORBIDDEN_IN_FIRST_STORAGE_SLICE",
     "fixedSchemaInstalled": false,
@@ -299,11 +304,11 @@
     "sourceReview": "INDEPENDENT_APPROVED_AFTER_DIRECT_SQL_BYPASS_FIX",
     "prCI": {
       "run": 45538803499,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45538803510,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "verification": {
       "unit": {
@@ -348,11 +353,31 @@
       "clock": "DATABASE_AFTER_LOCK",
       "inspection": "EXACT_READ_ONLY_FACTS_NO_AUTHORITY"
     },
-    "runtimeActivation": "NOT_IMPLEMENTED_NOT_RUN"
+    "runtimeActivation": "NOT_IMPLEMENTED_NOT_RUN",
+    "mergedDev": "aac529f99700fe735226439d8ff59aec4ac1d1c5",
+    "mergedTree": "86b429ff1d0347bf554d5f4c850251e14788f650",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45539883078,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45539883173,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_AFTER_ANCESTRY_TREE_AND_CI_VERIFIED"
   },
   "resumeInterruption": {
     "action": "FETCH_MERGE_PUSH_BASE_AND_CREATE_STORAGE_BRANCH",
     "outcome": "NOT_EXECUTED_AT_PREVIOUS_REVIEW_USAGE_LIMIT",
     "resumed": "AUTHORIZED_EXECUTION_RESTORED_GIT_FETCH_AND_BASE_MERGE_COMPLETED"
-  }
+  },
+  "verifiedLocalBackend": {
+    "branch": "dev",
+    "head": "aac529f99700fe735226439d8ff59aec4ac1d1c5",
+    "clean": true,
+    "remoteHeadEqual": true
+  },
+  "productionMain": "feae4e2c186795f1b1a4034e84f3fccd86330906_UNCHANGED",
+  "nextSourceAction": "SEPARATELY_REVIEWED_ATOMIC_RECEIPT_CONSUMPTION_AND_CONTROLLED_RUN_ACTIVATION_WITH_NO_RUNTIME_WIRING"
 }
