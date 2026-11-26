@@ -1,3 +1,7 @@
+# Current Phase30 completion dependencies - 2026-11-26
+
+001 DONE ->002 IN_PROGRESS/REMEDIATE_AND_RETEST (accounting integration, policy binding, exact allocation, bootstrap and actual TEST/provider/retention acceptance) ->003 shared frontend ->004 Community ->005 private groups/direct pairs ->006 full acceptance/cleanup ->Phase30 verified closeout ->STOP before31.003+ remain NOT_STARTED. Source-only/isolated proofs never satisfy deployed gates. Current completion path: phases/PHASE-30-RICH-MEDIA-ATTACHMENTS/COMPLETION-PLAN-20261126.md. Earlier checkpoints below are historical.
+
 # Phase30 authorized dependency graph - 2026-10-21
 
 Closed29 -> authorized30-001 design/provider/measurement/independentreview complete;001 DONE architecture lifecycle PR179 ->receipt/CI/main/tree/cleanup+terminalrelay ->002 disabledbackend+exactTEST enablement ->003 Stitch/sharedUI ->004 Community ->005 privategroups/directpairs ->006 security/runtime+ownedDB/storagecleanup ->Phase30closeout ->STOP.002 READY_NOT_STARTED;003-006 PLANNED_NOT_STARTED; Phase31+unimplemented. OriginalTASKS/roadmapunchanged. See CONTRACT-001.md and REVIEW-001-FREEZE.md inPhase30; no downstreamimplementation bypasses001 lifecycle. ActualRender enablement remains002gate despite conditionaldesignfreeze.
