@@ -27,13 +27,24 @@
     "independentReview": "APPROVED_NARROW_INJECTED_PARSER_SCOPE",
     "prCI": {
       "run": 45771681454,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45771681521,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
-    "lifecycle": "PR_MERGE_DEV_CI_TREE_BRANCH_WORKTREE_CLEANUP_PENDING"
+    "lifecycle": "MERGED_TEST_DEV_PR_DEV_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_DELETED_PRUNED_CLEAN_WORKTREE_REMOVED_DEPENDENCY_TARGET_PRESERVED",
+    "mergedDev": "b7613a59214cd14dd893e4a56c864d658500e5cb",
+    "mergedTree": "6426ee2a38cbf3a0db2faa82fb48f9d845d1ebb0",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45772752635,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45772752608,
+      "conclusion": "SUCCESS"
+    }
   },
   "verification": {
     "focusedRed": {
