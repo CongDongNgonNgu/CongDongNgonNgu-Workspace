@@ -16,6 +16,8 @@ In one short owned diagnostic transaction, lock run then a prelisted request-att
 
 ## Phase2: bindOperation
 
+2026-11-26 source-only amendment: the ownership binding COMMIT below remains separate. Later explicitly injected controlled INITIATE continuation may reacquire ledger locks through each SQL RATE/DOMAIN transaction under [DEC-040](../../state/DECISIONS.md) and its exact lock/lifetime decision. Other operations retain this historical separation rule; no runtime acceptance or activation is granted.
+
 After normal authentication, CSRF where applicable, exact policy/actor/body/header matching and current validity checks, atomically bind that existing attempt to one prelisted operation and burn its fixed role identities. Charge any planned processing attempt here without a second request charge. Binding may not exceed the committed ingress/egress ceilings; conservative excess reservation is not refunded. A policy may declare finite distinct attempts; concurrent claims of the same one-use attempt key have one winner, and neither that attempt key nor a BURNED slot may be reused. Existing product idempotency IDs/semantics remain unchanged.
 
 Keep the run/attempt/sorted-slot lock transaction separate from ordinary domain/product transactions. Commit ownership before those mutations and release diagnostic locks before account/domain locks. Existing product quota/singleton constraints remain independent; this does not replace them. Only confirmed commit may issue a process-local handle. Uncertain commit retains durable evidence/ownership and issues no admission handle; no blind retry, counter reset or synthesized authority from stored strings. Restart and expiry cannot resume or renew the run.
