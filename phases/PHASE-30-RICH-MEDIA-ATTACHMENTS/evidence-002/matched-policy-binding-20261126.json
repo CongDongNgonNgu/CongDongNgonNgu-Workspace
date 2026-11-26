@@ -25,7 +25,28 @@
     "commit": "cacb4231e8d304329fb5f7f88d8bd43d99d6ed65",
     "reviewedTree": "d3b1aa5798520a5ff980cc33647fc78bf3bcda98",
     "independentReview": "APPROVED_NARROW_LEDGER_CORRELATION_SCOPE",
-    "lifecycle": "PR_CI_MERGE_DEV_TREE_CLEANUP_PENDING"
+    "lifecycle": "MERGED_TEST_DEV_CI_TREE_BRANCH_WORKTREE_CLEANUP_VERIFIED",
+    "prCI": {
+      "run": 45742050966,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45742050907,
+      "conclusion": "SUCCESS"
+    },
+    "mergedDev": "a2a30e7a8be75fcf5b40e6b76acb1c1b3ef78517",
+    "mergedTree": "d3b1aa5798520a5ff980cc33647fc78bf3bcda98",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45743078250,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45743078137,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED",
+    "worktreeCleanup": "CLEAN_MERGED_WORKTREE_AND_DEPENDENCY_JUNCTION_REMOVED_TARGET_PRESERVED"
   },
   "verification": {
     "behavioralRed": {
@@ -79,5 +100,8 @@
   "productionMutation": false,
   "formatRollout": "NOT_ENABLED",
   "subphases003To006AndPhase31": "NOT_STARTED",
-  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING"
+  "workspacePublication": {
+    "pr": 217,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  }
 }
