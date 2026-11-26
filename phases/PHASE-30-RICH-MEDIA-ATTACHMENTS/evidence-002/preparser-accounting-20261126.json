@@ -29,13 +29,25 @@
     "independentReview": "APPROVED_FINAL_D13AADF_SOURCE_AND_BOUNDS_SAFE_TESTS",
     "prCI": {
       "run": 45737461255,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45737461217,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "PR_FINAL_CI_MERGE_DEV_TREE_CLEANUP_PENDING"
+    "lifecycle": "MERGED_TEST_DEV_REQUIRED_CI_TREE_AND_CLEANUP_VERIFIED",
+    "mergedDev": "2ef663205a859c869ffd65e885fb21d6399079c7",
+    "mergedTree": "e13b1f4283d2200c8e9e50fcc1f2969aa2aaf289",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45738475013,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45738475019,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
   },
   "verification": {
     "coreBehavioralRed": {
@@ -125,5 +137,8 @@
   "formatRollout": "NOT_ENABLED",
   "productionMutation": false,
   "subphases003To006AndPhase31": "NOT_STARTED",
-  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING"
+  "workspacePublication": {
+    "pr": 216,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  }
 }
