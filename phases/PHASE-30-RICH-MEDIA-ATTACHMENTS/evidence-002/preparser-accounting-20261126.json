@@ -1,0 +1,144 @@
+{
+  "scope": "INJECTED_CONTROLLED_PREPARSER_ACCOUNTING_ONLY",
+  "authoredOn": "2026-11-26",
+  "goal": "COMPLETE_ALL_AUTHORIZED_PHASE30_THEN_STOP_BEFORE31",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 215,
+    "main": "bbb9bc9d7bb8ebbc9841db9d44c9b1429fd2836c",
+    "reviewedAndMergedTree": "2cc87063998c14e7462f95fff4ec9f306b097d26",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45615957844,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45616176009,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 99,
+    "commit": "d13aadf9a896e654e17c3b23a3f7068b61b6f9e9",
+    "reviewedFunctionalHead": "5319320787ef81e8a96aa0ba3a413883083b9718",
+    "finalTree": "e13b1f4283d2200c8e9e50fcc1f2969aa2aaf289",
+    "independentReview": "APPROVED_FINAL_D13AADF_SOURCE_AND_BOUNDS_SAFE_TESTS",
+    "prCI": {
+      "run": 45737461255,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45737461217,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "MERGED_TEST_DEV_REQUIRED_CI_TREE_AND_CLEANUP_VERIFIED",
+    "mergedDev": "2ef663205a859c869ffd65e885fb21d6399079c7",
+    "mergedTree": "e13b1f4283d2200c8e9e50fcc1f2969aa2aaf289",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45738475013,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45738475019,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "verification": {
+    "coreBehavioralRed": {
+      "failed": 22,
+      "passed": 1,
+      "total": 23,
+      "elapsedSeconds": 3.858
+    },
+    "closedResponseRegressionRed": {
+      "failed": 1,
+      "passed": 17,
+      "total": 18,
+      "elapsedSeconds": 3.802
+    },
+    "coreGreen": {
+      "passed": 26,
+      "total": 26,
+      "elapsedSeconds": 10.844
+    },
+    "sqlScaffoldCorrections": [
+      "TYPED_COMPILER_CALLBACK_AFTER_ARRAY_NARROWING",
+      "FRESH_DB_RECEIPT_OBSERVATION_AFTER_ARM",
+      "UNIQUE_PER_RUN_MANIFEST_HASH_PRESERVES_REPLAY_PROTECTION"
+    ],
+    "firstSqlRed": {
+      "failed": 2,
+      "passed": 1,
+      "total": 3,
+      "elapsedSeconds": 21.335,
+      "meaning": "ONE_MISSING_CHARGE_RED_AND_ONE_DUPLICATE_MANIFEST_FIXTURE_FAILURE"
+    },
+    "correctedSqlBehavioralRed": {
+      "failed": 2,
+      "passed": 1,
+      "total": 3,
+      "elapsedSeconds": 36.097,
+      "meaning": "MALFORMED_JSON_AND_AUTH_READS_EXPECTED_POSITIVE_COUNTERS_ACTUAL_ZERO_WITH_NOOP_SEAM"
+    },
+    "sqlGreen": {
+      "passed": 5,
+      "total": 5,
+      "elapsedSeconds": 26.198,
+      "concurrencyAssertion": "BOUNDED_DURABLE_CHARGES_ALLOW_LOCK_TIMEOUT_AND_UNCERTAIN_COMMIT_NOT_FULL_CAPACITY_TIMING"
+    },
+    "admissionUnits": {
+      "suites": 17,
+      "passed": 239,
+      "elapsedSeconds": 6.079
+    },
+    "existingAttachmentHttp": {
+      "passed": 17,
+      "elapsedSeconds": 11.569
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "audit": {
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "dependencyChanges": false
+    },
+    "proofCleanup": "SQL_HARNESS_EXACT_RANDOM_SCHEMA_DROP_AND_INDEPENDENT_PG_NAMESPACE_ABSENCE_VERIFIED"
+  },
+  "invariants": [
+    "DETERMINISTIC_NEW_COARSE_KEYS_NOT_POLICY_ATTEMPT_BINDINGS",
+    "GROUP_MAXIMUM_BYTES_TIMES_COUNTS_WITHIN_LOWER_BUDGETS",
+    "ONLY_LITERAL_METHOD_PATH_OBSERVABLE_AUTH_CLASS_SELECTS_CANDIDATE",
+    "CONTROLLED_LOCAL_HANDLE_AND_COMMITTED_RESERVATION_BEFORE_NEXT_PARSER",
+    "KNOWN_QUERY_AND_INVALID_CREDENTIAL_REQUESTS_RETAIN_CHARGES",
+    "PRIVATE_ORIGINAL_ONE_USE_RECEIPTS_CLOSED_CANCELLED_RESPONSES_DENY",
+    "UNKNOWN_ALIASED_ATTACHMENT_ROUTES_FAIL_CLOSED",
+    "NORMAL_NATIVE_AUTH_CSRF_AND_UNRELATED_ROUTES_PRESERVED",
+    "APP_SETUP_OPT_IN_BEFORE_NEST_INIT_DEFAULT_STARTUP_UNCHANGED"
+  ],
+  "limits": [
+    "CATALOGUE_AND_CONTROL_RECEIPTS_IN_SQL_TEST_ARE_SYNTHETIC_FIXTURES",
+    "SUBCAP_HEAD_4096_IS_ACCOUNTING_ONLY_NOT_FULL_PINNED_READ_SELECTION_ACCEPTANCE",
+    "TRUSTED_BOOTSTRAP_PLAN_TO_COMMITTED_CANDIDATE_CORRESPONDENCE_NOT_PROVED",
+    "NO_POLICY_BINDING_ALLOCATOR_PRODUCT_OR_PROVIDER_GRANT",
+    "NO_MAIN_TS_RUNTIME_INJECTION_OR_ACTUAL_BOOT_DEPLOYMENT_PROOF"
+  ],
+  "runtimeActivation": "NOT_RUN",
+  "fixedSchemaInstalled": false,
+  "processorExecution": "NOT_RUN",
+  "httpProviderAcceptance": "NOT_RUN",
+  "applicationSqlR2Cleanup": "NOT_RUN",
+  "naturalSevenDayRetention": "NOT_ESTABLISHED_BY_THIS_PROOF",
+  "formatRollout": "NOT_ENABLED",
+  "productionMutation": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": {
+    "pr": 216,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  }
+}
