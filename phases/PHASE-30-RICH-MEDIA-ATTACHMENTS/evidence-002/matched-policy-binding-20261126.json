@@ -1,0 +1,107 @@
+{
+  "scope": "CONTROLLED_MATCHED_POLICY_LEDGER_CORRELATION_ONLY",
+  "authoredOn": "2026-11-26",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 216,
+    "main": "421ad6cd3535bd28ebdbd0622179e8c344a529f5",
+    "reviewedAndMergedTree": "9c0a7bcb88c3995e058c2aaa344437d99be826c8",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45739611143,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45739774594,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 100,
+    "commit": "cacb4231e8d304329fb5f7f88d8bd43d99d6ed65",
+    "reviewedTree": "d3b1aa5798520a5ff980cc33647fc78bf3bcda98",
+    "independentReview": "APPROVED_NARROW_LEDGER_CORRELATION_SCOPE",
+    "lifecycle": "MERGED_TEST_DEV_CI_TREE_BRANCH_WORKTREE_CLEANUP_VERIFIED",
+    "prCI": {
+      "run": 45742050966,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45742050907,
+      "conclusion": "SUCCESS"
+    },
+    "mergedDev": "a2a30e7a8be75fcf5b40e6b76acb1c1b3ef78517",
+    "mergedTree": "d3b1aa5798520a5ff980cc33647fc78bf3bcda98",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45743078250,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45743078137,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED",
+    "worktreeCleanup": "CLEAN_MERGED_WORKTREE_AND_DEPENDENCY_JUNCTION_REMOVED_TARGET_PRESERVED"
+  },
+  "verification": {
+    "behavioralRed": {
+      "failed": 5,
+      "passed": 3,
+      "total": 8,
+      "elapsedSeconds": 5.426
+    },
+    "focusedGreen": {
+      "suites": 3,
+      "passed": 28,
+      "elapsedSeconds": 4.374
+    },
+    "allAdmissionUnits": {
+      "suites": 18,
+      "passed": 250,
+      "elapsedSeconds": 7.295
+    },
+    "newActualPostgres": {
+      "passed": 7,
+      "total": 7,
+      "elapsedSeconds": 40.278
+    },
+    "combinedActualPostgres": {
+      "suites": 3,
+      "passed": 43,
+      "elapsedSeconds": 180.462
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "proofCleanup": "EXACT_OWNED_RANDOM_SCHEMA_DROP_AND_INDEPENDENT_PG_NAMESPACE_ABSENCE"
+  },
+  "invariants": [
+    "ORIGINAL_CONTROLLED_REQUEST_RECEIPT_CONSUMED_SYNCHRONOUSLY",
+    "ENTIRE_INPUT_SET_MATCHES_POLICY_COARSE_EDGES_AND_CEILINGS",
+    "FIRST_AVAILABLE_INSTANCE_CHOSEN_UNDER_RUN_LOCK",
+    "ORIGINAL_POLICY_ATTEMPT_AND_SQL_CANDIDATE_PROVENANCE_IMMUTABLE",
+    "RECIPROCAL_BOUND_TRANSITIONS_SLOT_BURNS_PROCESSING_CHARGE_ATOMIC",
+    "POSTCOMMIT_PRIVATE_MATCHED_OWNERSHIP_ONLY",
+    "COPIED_RESTARTED_GENERIC_HANDLES_REJECTED",
+    "COMMITTED_LOST_ACK_RETAINS_DURABLE_BINDING_WITHOUT_LOCAL_HANDLE",
+    "EXPIRY_AND_EXHAUSTION_RETAIN_REQUEST_CHARGES"
+  ],
+  "limits": [
+    "SYNTHETIC_CONTROL_AND_200_BYTE_HEAD_CANDIDATES_NOT_FULL_MANIFEST_CAP_AUTH_PROVIDER_PROOF",
+    "LOCAL_OWNERSHIP_NOT_FRESH_EXPIRY_ACL_OR_PROVIDER_AUTHORITY",
+    "NO_ACTUAL_POSTAUTH_MATCHER_OR_FULL_ALLOCATION_COMPILER",
+    "LEGACY_BIND_OPERATION_COMPATIBLE_BUT_NOT_MATCHED_AUTHORITY",
+    "EDGE_BOUND_140_UNCHANGED_OVERSIZED_COMPATIBILITY_GRAPHS_MUST_REJECT",
+    "FIXED_SCHEMA_NOT_INSTALLED_NO_PROVIDER_OR_RUNTIME_ACTIVATION"
+  ],
+  "productionMutation": false,
+  "formatRollout": "NOT_ENABLED",
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": {
+    "pr": 217,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  }
+}
