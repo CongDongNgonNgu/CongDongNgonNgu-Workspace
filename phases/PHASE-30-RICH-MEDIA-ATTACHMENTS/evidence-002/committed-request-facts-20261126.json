@@ -1,0 +1,91 @@
+{
+  "scope": "LOCAL_COMMITTED_REQUEST_CANDIDATE_PROVENANCE_ONLY",
+  "authoredOn": "2026-11-26",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 218,
+    "main": "59dada2eebffa82a864ce02f77ccd84afffcafa2",
+    "reviewedAndMergedTree": "c8fd43c0d587a4b127280d80369e1a0d5d37dce2",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45745729761,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45745814972,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 102,
+    "commit": "5fd19e678c0921a83b8064324b4de05bb72dc2a6",
+    "reviewedTree": "6c76657a5493db416b9f039d975bf4d50caebce4",
+    "independentReview": "APPROVED_NARROW_COMMITTED_FACTS_SCOPE",
+    "prCI": {
+      "run": 45745768663,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45745768589,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "PR_MERGE_DEV_CI_TREE_BRANCH_WORKTREE_CLEANUP_PENDING"
+  },
+  "verification": {
+    "focusedBehavioralRed": {
+      "failed": 3,
+      "passed": 24,
+      "total": 27,
+      "elapsedSeconds": 4.648
+    },
+    "focusedGreen": {
+      "passed": 27,
+      "elapsedSeconds": 4.005
+    },
+    "legacyMockCorrection": "VALID_COMMITTED_SQL_CANDIDATE_ROW_ADDED_AFTER_FULL_SUITE6_MOCK_FAILURES_NO_PLAN_FALLBACK",
+    "allAdmissionUnits": {
+      "suites": 21,
+      "passed": 280,
+      "elapsedSeconds": 7.215
+    },
+    "actualSqlRed": {
+      "failed": 1,
+      "passed": 32,
+      "total": 33,
+      "elapsedSeconds": 122.364,
+      "meaning": "STUB_CANNOT_EXPOSE_COMMITTED_CANDIDATE"
+    },
+    "actualCombinedSqlGreen": {
+      "suites": 4,
+      "passed": 46,
+      "elapsedSeconds": 192.923
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "proofCleanup": "EXACT_RANDOM_SCHEMA_DROP_AND_INDEPENDENT_PG_NAMESPACE_ABSENCE"
+  },
+  "invariants": [
+    "CANDIDATE_READ_THROUGH_ORIGINAL_RESERVED_ATTEMPT_AND_BOOT_IN_SAME_TRANSACTION",
+    "SAFE_BYTE_METADATA_VALIDATION_DETACHED_FROZEN_SNAPSHOT",
+    "PRIVATE_REGISTRATION_ONLY_AFTER_CONFIRMED_COMMIT",
+    "PUBLIC_HANDLE_EXACT_RUN_CANDIDATE_ATTEMPT_THREE_FIELDS_UNCHANGED",
+    "COPIED_FOREIGN_CONSUMED_UNCERTAIN_RECEIPTS_REJECTED",
+    "BOTH_BINDING_PATHS_SYNCHRONOUSLY_REVOKE_REQUEST_FACTS",
+    "ACCOUNTING_PEEK_NONCONSUMING_ORIGINAL_PRIVATE_RECEIPT_OPEN_RESPONSE_ONLY",
+    "MUTABLE_PLAN_NEVER_SUPPLIES_COMMITTED_FACTS"
+  ],
+  "limits": [
+    "LOCAL_PROVENANCE_NOT_FRESH_EXPIRY_OR_CONTROLLED_MODE_AUTHORIZATION_BY_ITSELF",
+    "NO_PARSER_JSON_INGRESS_ENFORCEMENT_SCHEMA_OR_BUDGET_CHANGE",
+    "SYNTHETIC_CONTROL_AND_CANDIDATE_FIXTURES_NOT_ACTUAL_DEPLOYMENT_PROVIDER_ACL_PROOF",
+    "NO_RUNTIME_ACTIVATION_PRODUCT_WRITES_FORMAT_ROLLOUT_OR_PRODUCTION_MUTATION",
+    "PROOF_SCHEMA_ABSENCE_NOT_APPLICATION_SQL_R2_CLEANUP_OR_RETENTION_ACCEPTANCE"
+  ],
+  "nextIntegration": "BOUNDED_DIAGNOSTIC_PARSER_USING_COMMITTED_FACTS_AND_CONSERVATIVE_JSON_INGRESS_WITH_EXACT_FRAMING_THEN_EXACT_PRODUCER_INTERNAL_ALLOCATIONS",
+  "productionMutation": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PR_MAIN_CI_TREE_BRANCH_CLEANUP_PENDING"
+}
