@@ -27,13 +27,26 @@
     "independentReview": "APPROVED_AFTER_PRIVATE_SNAPSHOT_FIX_AND_FOCUSED_COVERAGE",
     "prCI": {
       "run": 45743646460,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45743646550,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "PR_CI_MERGE_DEV_TREE_BRANCH_WORKTREE_CLEANUP_PENDING"
+    "lifecycle": "MERGED_TEST_DEV_CI_TREE_BRANCH_WORKTREE_CLEANUP_VERIFIED",
+    "mergedDev": "b673c83d5c518229e34ff937335486312a98bc44",
+    "mergedTree": "398f7f7b72dce42254444fd953d5de3510ca3fff",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45744694627,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45744694778,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED",
+    "worktreeCleanup": "CLEAN_MERGED_WORKTREE_AND_JUNCTION_REMOVED_DEPENDENCY_TARGET_PRESERVED"
   },
   "verification": {
     "loweringBehavioralRed": {
@@ -126,6 +139,9 @@
   "productionMutation": false,
   "formatRollout": "NOT_ENABLED",
   "subphases003To006AndPhase31": "NOT_STARTED",
-  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING",
+  "workspacePublication": {
+    "pr": 218,
+    "resultVerification": "FINAL_HEAD_PR_CI_MERGED_MAIN_TREE_MAIN_CI_AND_BRANCH_CLEANUP_CHECKED_EXTERNALLY_AFTER_PUBLICATION"
+  },
   "evidenceReview": "APPROVED_NARROW_TRUTHFUL_SCOPE"
 }
