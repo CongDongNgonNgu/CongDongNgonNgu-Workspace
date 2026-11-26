@@ -1,0 +1,111 @@
+{
+  "scope": "COLD_EXPLICIT_DIAGNOSTIC_FINITE_DECLARED_BODY_ONLY",
+  "authoredOn": "2026-11-26",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 219,
+    "main": "65e535dc2b74c8fbad5a643932a2940ce0838e2b",
+    "reviewedAndMergedTree": "cad688fe6ba10fa9ca5b30fdc0351b5d2463806f",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45771273840,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45771346259,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 103,
+    "commit": "0a9db872c9707e748b24554a1c253c0e86b78a50",
+    "reviewedTree": "6426ee2a38cbf3a0db2faa82fb48f9d845d1ebb0",
+    "independentReview": "APPROVED_NARROW_INJECTED_PARSER_SCOPE",
+    "prCI": {
+      "run": 45771681454,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45771681521,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "MERGED_TEST_DEV_PR_DEV_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_DELETED_PRUNED_CLEAN_WORKTREE_REMOVED_DEPENDENCY_TARGET_PRESERVED",
+    "mergedDev": "b7613a59214cd14dd893e4a56c864d658500e5cb",
+    "mergedTree": "6426ee2a38cbf3a0db2faa82fb48f9d845d1ebb0",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45772752635,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45772752608,
+      "conclusion": "SUCCESS"
+    }
+  },
+  "verification": {
+    "focusedRed": {
+      "failed": 20,
+      "passed": 9,
+      "total": 29,
+      "elapsedSeconds": 5.748
+    },
+    "focusedGreen": {
+      "passed": 72,
+      "elapsedSeconds": 6.291
+    },
+    "compatibilityFixtureCorrection": "TWO_BODYLESS_READ_METADATA_FIXTURES_EXPLICIT_INGRESS_ZERO_NO_VALIDATION_RELAXATION",
+    "admissionUnits": {
+      "suites": 22,
+      "passed": 307,
+      "elapsedSeconds": 6.18
+    },
+    "defaultHttp": {
+      "passed": 20,
+      "elapsedSeconds": 11.077
+    },
+    "actualCombinedSqlHttp": {
+      "suites": 5,
+      "passed": 50,
+      "elapsedSeconds": 206.194
+    },
+    "newHttpSqlOnly": {
+      "passed": 4,
+      "elapsedSeconds": 14.61
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "audit": {
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "dependencyChanges": false
+    },
+    "proofCleanup": "EXACT_RANDOM_OWNED_SCHEMA_DROP_INDEPENDENT_NAMESPACE_ABSENCE"
+  },
+  "invariants": [
+    "EXPLICIT_NEST_BODY_PARSER_FALSE_AND_ACCOUNTING_FIRST_ONLY",
+    "MAIN_BOOTSTRAP_UNCHANGED_NO_RUNTIME_ACTIVATION",
+    "JSON_CAP102400_CHARGED_IN_ORIGINAL_CATALOGUE_STRICT_LOWERING_NEVER_RAISES_BUDGET",
+    "EXACT_COMMITTED_CANDIDATE_METHOD_PATH_INGRESS_ONLY",
+    "FINITE_SAFE_CONTENT_LENGTH_NO_TRANSFER_ENCODING_NO_COMPRESSION",
+    "JSON_MIME_CHARSET_ALLOWLIST_AND_BOUNDED_ERROR_RESPONSES",
+    "RAW_PUT_NO_CUSTOM_BODY_PARSER_OR_DATA_LISTENER",
+    "BODYLESS_ROUTES_REJECT_POSITIVE_CONTENT_LENGTH",
+    "UNRELATED_JSON_EXTENDED_FORMS_PRESERVED"
+  ],
+  "limits": [
+    "FINITE_DECLARED_APPLICATION_INPUT_NOT_WIRE_BYTES",
+    "NODE_MAY_AUTO_DUMP_UNREAD_INPUT_AFTER_RESPONSE_FINISH",
+    "BODY_READ_TOTAL_DEADLINE_AND_ORIGINAL_RUN_EXPIRY_REQUIRED_BEFORE_LIVE_CONTROLLED_EXECUTION",
+    "SYNTHETIC_RECEIPTS_NOT_DEPLOYMENT_PROVIDER_ACL_PROOF",
+    "NO_PROVIDER_PRODUCT_WRITE_FORMAT_ROLLOUT_PRODUCTION_MUTATION",
+    "RANDOM_PROOF_SCHEMA_ABSENCE_NOT_APPLICATION_SQL_R2_RESIDUAL_OR_RETENTION_ACCEPTANCE"
+  ],
+  "nextIntegration": "PRIVATE_COMMITTED_MONOTONIC_BODY_DEADLINE_THEN_EXACT_PRODUCER_INTERNAL_ALLOCATIONS",
+  "productionMutation": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PR_MAIN_CI_TREE_BRANCH_CLEANUP_PENDING"
+}
