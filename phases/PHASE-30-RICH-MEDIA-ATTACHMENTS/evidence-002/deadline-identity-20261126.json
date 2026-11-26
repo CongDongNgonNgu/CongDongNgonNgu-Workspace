@@ -1,0 +1,83 @@
+{
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "authoredOn": "2026-11-26",
+  "priorWorkspace": {
+    "pr": 220,
+    "main": "e5a859fd9b2b0fc8fc9c2a816621cd5dc871b377",
+    "reviewedMergedTree": "82bb27ed3f37bf63715abb817a0ab21189a625ae",
+    "prCI": 45773792207,
+    "mainCI": 45773928243,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_DELETED_PRUNED"
+  },
+  "deadline": {
+    "pr": 104,
+    "sourceCommit": "e19776b8036ad737626434ca17d26858e2be7e6c",
+    "finalHead": "5a6a7c0b19c1f15c45a59eef953b459c8b74fbc2",
+    "mergedDev": "5369e39075a8800c0fc7dc8828a75d2a32d79049",
+    "reviewedMergedTree": "b5bf1fdb65e2f452fa0da80d114e0a265eb08633",
+    "prCI": 45772846546,
+    "prReproduction": 45772846559,
+    "devCI": 45773984110,
+    "devReproduction": 45773984194,
+    "conclusion": "SUCCESS",
+    "admissionUnits": 319,
+    "combinedActualSqlHttp": {
+      "suites": 2,
+      "passed": 40,
+      "elapsedSeconds": 157.585
+    },
+    "finalHttp": {
+      "passed": 6,
+      "elapsedSeconds": 35.378
+    },
+    "review": "APPROVED_AFTER_PRELOOKUP_ANCHOR_SYNCHRONOUS_EXPIRY_AND_TIMESTAMP_ROUNDING_FIXES",
+    "meaning": "ORIGINAL_PRIVATE_RECEIPT_MONOTONIC_BODY_INTAKE_MIN30SECONDS_OR_RUN_EXPIRY_NO_RENEWAL"
+  },
+  "identity": {
+    "pr": 105,
+    "sourceCommit": "0a3caee2bf24d4513f0f02e4c8811ffa935b62bc",
+    "finalHead": "969bdfc610a63b28b3a33f7b56afc6d3af59e065",
+    "mergedDev": "40da34616f95d1cb52e1fc77a6564afec3f0b228",
+    "reviewedMergedTree": "d0529e520a4511839a6708b167e5f6be909b12bf",
+    "prCI": 45774130250,
+    "prReproduction": 45774130356,
+    "devCI": 45775280092,
+    "devReproduction": 45775280033,
+    "conclusion": "SUCCESS",
+    "admissionUnits": 324,
+    "actualSqlRed": {
+      "failed": 1,
+      "passed": 8,
+      "total": 9,
+      "elapsedSeconds": 48.228
+    },
+    "actualSqlLoweredHttpGreen": {
+      "suites": 2,
+      "passed": 10,
+      "elapsedSeconds": 60.06
+    },
+    "review": "APPROVED_NARROW_LOCAL_IDENTITY_ONLY",
+    "meaning": "STRICT_INITIATE_EXACT_SOLE_ATTACHMENT_SLOT_AND_ORIGINAL_MATCHED_HANDLE_ONE_LOCAL_UUID_CLAIM"
+  },
+  "verification": {
+    "typecheckLintBuildDiff": "PASS_BOTH_SLICES",
+    "reviewedMergedTreeEqual": true,
+    "cleanup": "BOTH_REMOTE_LOCAL_BRANCHES_DELETED_PRUNED_CLEAN_MERGED_WORKTREES_REMOVED_DEPENDENCY_TARGET_PRESERVED",
+    "proofSchemas": "OWNED_RANDOM_SCHEMAS_DROPPED_INDEPENDENT_NAMESPACE_ABSENCE"
+  },
+  "limits": [
+    "MAIN_BOOTSTRAP_UNCHANGED_NO_RUNTIME_OR_PROVIDER_ACTIVATION",
+    "BODY_LIFETIME_NOT_FRESH_AUTHORIZATION_OR_PROVIDER_QUIESCENCE",
+    "LOCAL_ID_CLAIM_NOT_POLICY_KIND_PRODUCER_OR_FRESH_SQL_EXPIRY_AUTHORITY",
+    "EXACT_CONTROLLED_INITIATION_CONTINUATION_AND_RETRY_ALLOCATION_CONTRACT_STILL_IN_PROGRESS",
+    "NO_PRODUCT_TEST_DEPLOYMENT_ACCEPTANCE_OR_PRODUCTION_MUTATION",
+    "PROOF_SCHEMA_CLEANUP_NOT_APPLICATION_SQL_R2_RESIDUAL_OR_NATURAL_SEVEN_DAY_RETENTION"
+  ],
+  "productionSha": "feae4e2c186795f1b1a4034e84f3fccd86330906",
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "FINAL_HEAD_PR_MAIN_CI_TREE_CLEANUP_PENDING"
+}
