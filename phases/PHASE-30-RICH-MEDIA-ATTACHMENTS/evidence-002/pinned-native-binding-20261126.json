@@ -1,0 +1,131 @@
+{
+  "scope": "PINNED_LOWERING_NATIVE_GUARD_READ_METADATA_BINDING_ONLY",
+  "authoredOn": "2026-11-26",
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "priorWorkspace": {
+    "pr": 217,
+    "main": "90ce89035e7c4380560b9b17c214d7aafebee333",
+    "reviewedAndMergedTree": "7bf280953fc39c8011acddd2311c7ad4f501de21",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45744179730,
+      "conclusion": "SUCCESS"
+    },
+    "mainCI": {
+      "run": 45744252274,
+      "conclusion": "SUCCESS"
+    },
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED_VERIFIED"
+  },
+  "source": {
+    "pr": 101,
+    "commit": "bdc07b492e863440b745dccacd8f065d844d7f7f",
+    "reviewedTree": "398f7f7b72dce42254444fd953d5de3510ca3fff",
+    "independentReview": "APPROVED_AFTER_PRIVATE_SNAPSHOT_FIX_AND_FOCUSED_COVERAGE",
+    "prCI": {
+      "run": 45743646460,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45743646550,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "PR_CI_MERGE_DEV_TREE_BRANCH_WORKTREE_CLEANUP_PENDING"
+  },
+  "verification": {
+    "loweringBehavioralRed": {
+      "failed": 6,
+      "passed": 1,
+      "total": 7,
+      "elapsedSeconds": 4.802
+    },
+    "loweringGreen": {
+      "passed": 7,
+      "elapsedSeconds": 4.869
+    },
+    "binderBehavioralRed": {
+      "failed": 9,
+      "passed": 2,
+      "total": 11,
+      "elapsedSeconds": 4.4
+    },
+    "mutablePlanRegressionRed": {
+      "failed": 1,
+      "passed": 11,
+      "total": 12,
+      "elapsedSeconds": 3.922,
+      "meaning": "MUTATED_EXPECTED_PLAN_ACCEPTED_BAD_COMMITTED_CANDIDATE"
+    },
+    "binderFinalGreen": {
+      "passed": 16
+    },
+    "allAdmissionUnits": {
+      "suites": 20,
+      "passed": 273,
+      "elapsedSeconds": 6.286
+    },
+    "httpE2e": {
+      "passed": 20,
+      "elapsedSeconds": 5.025
+    },
+    "actualPinnedHttpSqlRed": {
+      "failed": 1,
+      "elapsedSeconds": 12.067,
+      "meaning": "MISSING_CONTROLLER_HOOK_EXPECTED_BOUND_ACTUAL_AVAILABLE"
+    },
+    "actualPinnedHttpSqlGreen": {
+      "passed": 1,
+      "elapsedSeconds": 11.731
+    },
+    "combinedActualHttpSql": {
+      "suites": 3,
+      "passed": 13,
+      "elapsedSeconds": 69.662
+    },
+    "typecheckLintBuildDiffFormat": "PASS",
+    "audit": {
+      "moderate": 19,
+      "high": 0,
+      "critical": 0,
+      "dependencyChanges": false
+    },
+    "proofCleanup": "EXACT_OWNED_SCHEMA_DROP_AND_INDEPENDENT_PG_NAMESPACE_ABSENCE"
+  },
+  "invariants": [
+    "SAME_PINNED_SOURCE_HASH_WINDOW_IDS_LOWERED_WITHOUT_UUID_GENERATION",
+    "SLOT_FREE_ATTEMPTS_EXPAND_WITH_ORIGINAL_POLICY_PROVENANCE",
+    "ALLOCATING_MULTIATTEMPT_REJECTED_WITHOUT_DISTINCT_OWNERSHIP",
+    "FULL_CARTESIAN_COMPATIBILITY_140_EDGE_BOUND_NO_TRUNCATION",
+    "OPTIONAL_CONTROLLER_BINDING_AFTER_NATIVE_GUARDS_QUERY_BEFORE_NORMAL_APPLICATION",
+    "EXACT_ACTOR_SESSION_METHOD_VARIANT_LITERAL_RANGE_MATCHING",
+    "ANON_REQUIRES_ABSENT_AUTHORIZATION_AND_PRINCIPAL",
+    "PUBLIC_AUTHENTICATED_FORWARDS_CURRENT_PUBLIC_SERVICE_CONSTRAINT",
+    "EXPECTED_DENIAL_NEVER_SKIPS_NORMAL_APPLICATION_AUTHORIZATION",
+    "PRIVATE_FROZEN_ROUTING_AND_INSTANCE_SNAPSHOTS_ACROSS_ASYNC_BIND",
+    "COMMITTED_CANDIDATE_AND_INSTANCE_PROVENANCE_CHECKED_BEFORE_LOCAL_HANDLE"
+  ],
+  "limits": [
+    "NO_MAIN_BOOTSTRAP_INJECTION_OR_RUNTIME_ACTIVATION",
+    "SYNTHETIC_PINNED_OPTIONS_CONTROL_RECEIPTS_NOT_ACTUAL_DEPLOYMENT_PROOF",
+    "HTTP_APPLICATION_404_STUB_PROVES_ORDERING_NOT_REAL_ACL_VERDICT",
+    "SQL_PROOF_SHOWS_TWO_READ_INSTANCES_EXHAUSTION_ONLY_ALL_ALLOCATION_SLOTS_AVAILABLE",
+    "NO_SELECTED_ARTIFACT_PROVIDER_INTEGRITY_OR_PRODUCT_WRITE_AUTHORITY",
+    "JSON_INGRESS_ACCOUNTING_ENFORCEMENT_AND_EXACT_INTERNAL_ALLOCATIONS_REMAIN",
+    "FIXED_SCHEMA_NOT_INSTALLED_NO_APPLICATION_SQL_R2_CLEANUP_OR_NATURAL_RETENTION_PROOF"
+  ],
+  "runtimeAccessObservation": {
+    "date": "2026-11-26",
+    "chromeDevtools": "CONNECTION_403",
+    "cua": "BROWSER_ACCESS_HOST_UNAVAILABLE_NO_BROWSER_INVENTORY",
+    "renderState": "NOT_OBSERVED",
+    "mutation": false
+  },
+  "productionMutation": false,
+  "formatRollout": "NOT_ENABLED",
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING",
+  "evidenceReview": "APPROVED_NARROW_TRUTHFUL_SCOPE"
+}
