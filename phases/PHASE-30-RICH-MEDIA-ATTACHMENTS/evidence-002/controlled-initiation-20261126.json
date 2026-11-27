@@ -1,0 +1,107 @@
+{
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "authoredOn": "2026-11-26",
+  "priorWorkspace": {
+    "pr": 222,
+    "main": "0d775d03d6b4caf4bc1b4be53b532adf1045e244",
+    "reviewedMergedTree": "2500a98d1cdf3104394b8278d47a669d7070fc62",
+    "prCI": 45782023292,
+    "mainCI": 45782173113,
+    "conclusion": "SUCCESS",
+    "temporaryBranchCleanup": "REMOTE_LOCAL_DELETED_PRUNED"
+  },
+  "source": {
+    "pr": 106,
+    "commit": "32cb056c3136a8ee4fdd4407d751e0f67e3bb489",
+    "reviewedTree": "d8e52013a828eec9f0ccd83162fa561694ba478d",
+    "prCI": {
+      "run": 45782199830,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45782199878,
+      "conclusion": "SUCCESS"
+    },
+    "lifecycle": "MERGED_TEST_DEV_PR_DEV_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_DELETED_PRUNED_CLEAN_WORKTREE_REMOVED_DEPENDENCY_TARGET_PRESERVED",
+    "mergedDev": "0485882e4bf3ee95f61f586035978413f72f5086",
+    "mergedTree": "d8e52013a828eec9f0ccd83162fa561694ba478d",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45783548219,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45783548209,
+      "conclusion": "SUCCESS"
+    }
+  },
+  "architectureDecision": "DEC040_SOURCE_ONLY_LOCK_EXCEPTION_MERGED_BEFORE_BACKEND_PUBLICATION",
+  "verification": {
+    "independentSourceAndFixtureReview": "APPROVED_CORRECTED_RATE_GATE_AND_NATIVE_LIFETIME",
+    "admissionUnits": {
+      "suites": 24,
+      "passed": 343,
+      "elapsedSeconds": 9.379
+    },
+    "finalFocused": {
+      "suites": 5,
+      "passed": 27,
+      "elapsedSeconds": 8.922
+    },
+    "defaultHttp": {
+      "passed": 20,
+      "elapsedSeconds": 13.822
+    },
+    "actualControlledDomainSql": {
+      "passed": 9,
+      "elapsedSeconds": 81.147
+    },
+    "legacyInitiationSql": {
+      "passed": 15,
+      "elapsedSeconds": 40.438
+    },
+    "nativeHttpFixtureFailure": "NINE_ERRORS_NONEXISTENT_REQUEST_TOTALS_COLUMN_CORRECTED_TO_ACTUAL_COUNTERS_NOT_BEHAVIOR_RED",
+    "nativeHttpBehaviorRed": {
+      "failed": 1,
+      "passed": 8,
+      "total": 9,
+      "elapsedSeconds": 45.32,
+      "meaning": "ORDINARY_DISABLED_RUNTIME_CANNOT_SUBSTITUTE_FOR_CONTROLLED_PRODUCER"
+    },
+    "nativeHttpGreen": {
+      "passed": 9,
+      "elapsedSeconds": 50.45
+    },
+    "typecheckLintBuildDiff": "PASS",
+    "proofCleanup": "OWNED_RANDOM_SCHEMA_DROP_AND_INDEPENDENT_NAMESPACE_ABSENCE"
+  },
+  "invariants": [
+    "NORMAL_NATIVE_AUTH_QUERY_CSRF_THEN_EXACT_ACTOR_SESSION_NORMALIZED_BODY_CORRELATION",
+    "PRIVATE_ORIGINAL_CONTEXT_ONE_ISSUE_ONE_SYNCHRONOUS_CONSUMPTION",
+    "REQUEST_ABORT_OR_RESPONSE_FINISH_CLOSE_REVOKES_UNUSED_CONTEXT",
+    "EXACT_LEDGER_RUN_ATTEMPT_OPERATION_LOCKS_AND_FRESH_CONTROL_IN_BOTH_RATE_DOMAIN_TRANSACTIONS",
+    "RATE_ADMISSION_SEPARATE_COMMIT_NO_ACCOUNT_SCOPE_ATTACHMENT_LOCKS",
+    "DOMAIN_REUSES_CURRENT_ACL_QUOTA_IMMUTABLE_ADMISSION_LOGIC_SAME_CLIENT",
+    "DECLARED_UUID_ONLY_NEW_BRANCH_NO_RANDOM_FALLBACK_CONTROLLED",
+    "EXACT_PREEXISTING_ID_REPLAY_WITHOUT_LOCAL_CLAIM",
+    "ORDINARY_REPOSITORY_RUNTIME_REJECT_CONTROLLED_CONTEXT",
+    "UNCERTAIN_COMMIT_RETAINS_DURABLE_STATE_WITHOUT_SUCCESS"
+  ],
+  "limits": [
+    "POSITIVE_TEST_REPOSITORY_IMAGE_ENABLED_ORDINARY_RUNTIME_CONFIG_FOUR_FALSE",
+    "SYNTHETIC_CONTROL_RECEIPTS_NOT_ACTUAL_DEPLOYMENT_BOOT_PROOF",
+    "NATIVE_HTTP_ACTUAL_SESSION_AND_CURRENT_SQL_ACL_NOT_PROVIDER_EXECUTION",
+    "PRECOMMIT_FRESHNESS_NOT_COMMIT_ACK_BEFORE_EXPIRY",
+    "EXISTING_ID_REPLAY_PROOF_USES_ORDINARY_DRAFT_NOT_CONTROLLED_CREATED_RETRY",
+    "SAME_RUN_CREATOR_REPLAY_ALLOCATION_CONTRACT_NEXT_SLICE",
+    "NO_PROVIDER_WORKER_BOOTSTRAP_RUNTIME_PRODUCTION_ACTIVATION",
+    "OWNED_PROOF_SCHEMA_ABSENCE_NOT_APPLICATION_SQL_R2_RESIDUAL_OR_NATURAL_RETENTION",
+    "SERVICE_POST_INITIATE_METADATA_RATE_AND_PROJECTION_STILL_USE_ORDINARY_SQL_NO_ORIGINAL_RUN_FENCE_MUST_INTEGRATE_BEFORE_RUNTIME"
+  ],
+  "productionMutation": false,
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING"
+}
