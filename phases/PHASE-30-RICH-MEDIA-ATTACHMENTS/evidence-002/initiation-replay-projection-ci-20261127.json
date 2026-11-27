@@ -37,7 +37,14 @@
       "run": 45921430029,
       "conclusion": "SUCCESS"
     },
-    "cleanup": "WAIT_REPAIRED_DESCENDANT_DEV_CI"
+    "cleanup": "REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED_AFTER_REPAIRED_DESCENDANT_CI",
+    "repairedDescendant": {
+      "sha": "a720d236a1933cd53aa3256230e9e21dc5e2c3f3",
+      "ci": 45923750337,
+      "reproduction": 45923750348,
+      "conclusion": "SUCCESS",
+      "ancestryVerified": true
+    }
   },
   "replayVerification": {
     "admission": 350,
@@ -63,20 +70,29 @@
   },
   "projection": {
     "pr": 109,
-    "draft": true,
+    "draft": false,
     "sourceCommit": "efa173cb79e83216b5465963e4a8de1e9b7ba075",
     "sourceTree": "5c3a79b8b3e8c9dc9d138fa802e899fa9a7b33cb",
-    "integratedHead": "4889c956dfe60360127fcccb22b9102894395300",
+    "integratedHead": "d2a2af359f2ff50dc6646d99537ab1acd3985b35",
     "integratedTree": "2410661ea83561c232e36be442b9c2a6aab9a7bd",
     "prCI": {
+      "run": 45926797771,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45926797749,
+      "conclusion": "SUCCESS"
+    },
+    "dependency": "PR108_VERIFIED_RECORDED_DEC040_EXTENSION_FINAL_HEAD_CI_INTEGRATION_PENDING",
+    "initialIntegratedHead": "4889c956dfe60360127fcccb22b9102894395300",
+    "initialPrCI": {
       "run": 45922685223,
       "conclusion": "SUCCESS"
     },
-    "prReproduction": {
+    "initialPrReproduction": {
       "run": 45922685398,
       "conclusion": "SUCCESS"
-    },
-    "dependency": "WAIT_PR108_POSTMERGE_VERIFICATION_AND_RECORDED_DEC040_EXTENSION"
+    }
   },
   "projectionVerification": {
     "admission": 356,
@@ -134,10 +150,10 @@
     "mergedDev": "a720d236a1933cd53aa3256230e9e21dc5e2c3f3",
     "mergedTree": "3846ba78e16f91e94752eb97418ddde36d59a49b",
     "treeEqual": true,
-    "lifecycle": "MERGED_TEST_DEV_POSTMERGE_CI_REPRODUCTION_BRANCH_WORKTREE_CLEANUP_PENDING",
+    "lifecycle": "MERGED_TEST_DEV_PR_POSTMERGE_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED",
     "devCI": {
       "run": 45923750337,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "devReproduction": {
       "run": 45923750348,
@@ -150,7 +166,7 @@
     "PRECOMMIT_CHECKS_NOT_ACK_BEFORE_EXPIRY",
     "SAME_RUN_REPLAY_ONLY_NO_CROSS_RUN_EXISTING_RESOURCE_GRANT",
     "NO_PROVIDER_WORKER_MAIN_BOOTSTRAP_OR_PRODUCTION_ACTIVATION",
-    "ORIGINAL_FAILED_CI_NOT_RELABELLED_SUCCESSFUL_PENDING_REPAIRED_DESCENDANT"
+    "ORIGINAL_FAILED_CI_REMAINS_FAILURE_REPAIRED_DESCENDANT_VERIFIED_SEPARATELY"
   ],
   "proofSchemaCleanup": "EXACT_OWNED_RANDOM_SCHEMAS_DROPPED_INDEPENDENT_NAMESPACE_ABSENCE",
   "productionSha": "feae4e2c186795f1b1a4034e84f3fccd86330906",
