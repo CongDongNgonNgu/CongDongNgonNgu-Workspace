@@ -1,0 +1,137 @@
+{
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "authoredOn": "2026-11-27",
+  "backend": {
+    "pr": 110,
+    "head": "f3f8d6a789c24d158551ef5142c9b2211a6083ee",
+    "tree": "684852d2312380652fdee7478eb403344b0bdb0c",
+    "baseDev": "7ff92abda9f452f4ecda36e0f7aa2285e8bb4bcc",
+    "prCI": {
+      "run": 45964369873,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45964369857,
+      "conclusion": "SUCCESS"
+    },
+    "mergePostCIAndCleanup": "MERGED_TEST_DEV_PR_POSTMERGE_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED",
+    "mergedDev": "e85202c26365b7c0ed2d32c166464286a29f7e90",
+    "mergedTree": "684852d2312380652fdee7478eb403344b0bdb0c",
+    "treeEqual": true,
+    "postmergeCI": {
+      "run": 45966012158,
+      "conclusion": "SUCCESS"
+    },
+    "postmergeReproduction": {
+      "run": 45966012228,
+      "conclusion": "SUCCESS"
+    }
+  },
+  "priorWorkspace": {
+    "pr": 226,
+    "main": "5ac4e8810ec52dc9a762c4fd7230724002d9521f",
+    "tree": "a5ea4ba26259fafe3653a26999c2087b769549b5",
+    "prCI": 45929255606,
+    "mainCI": 45964032645,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_DELETED_PRUNED"
+  },
+  "decision": {
+    "number": 41,
+    "pr": 225,
+    "sourceOnly": true
+  },
+  "verification": {
+    "admission": {
+      "passed": 374,
+      "seconds": 12.35
+    },
+    "focusedOrdinaryAndSupervision": {
+      "passed": 72,
+      "seconds": 10.125
+    },
+    "typecheck": "PASS",
+    "lint": "PASS_TSC_ALIAS",
+    "build": "PASS_NEST",
+    "diff": "PASS",
+    "independentProductionReview": "APPROVED_NARROW_DEC041_SOURCE_SCOPE",
+    "parentNativeProofReview": "APPROVED",
+    "actualPostgreSQL": {
+      "passed": 47,
+      "suites": 5,
+      "seconds": 325.384,
+      "controlledSource": {
+        "passed": 12,
+        "seconds": 148.085
+      },
+      "internalCleanup": {
+        "passed": 5,
+        "seconds": 10.686
+      },
+      "matchedPolicy": {
+        "passed": 9,
+        "seconds": 44.977
+      },
+      "existingUploadServiceSeconds": 90.186,
+      "existingPutRecoverySeconds": 31.198
+    },
+    "nativeHttpSql": {
+      "red": {
+        "failed": 1,
+        "passed": 5,
+        "total": 6,
+        "seconds": 46.439,
+        "cause": "ORDINARY_DISABLED_RUNTIME_REPLACES_POSITIVE_CONTROLLED_PRODUCER_503_INSTEAD200"
+      },
+      "finalGreen": {
+        "passed": 6,
+        "total": 6,
+        "seconds": 51.759
+      },
+      "intermediatePreFingerprintGreenSeconds": 51.542
+    },
+    "failureRegression": {
+      "red": {
+        "failed": 2,
+        "passed": 3,
+        "total": 5,
+        "seconds": 55.809
+      },
+      "green": {
+        "passed": 10,
+        "suites": 2,
+        "seconds": 73.309
+      },
+      "meaning": "CLAIM_ABORT_AND_LOST_ACK_CLEANUP_REGRESSION_DO_NOT_ATTRIBUTE_SEPARATELY_TO_EACH_CONCURRENT_FIX"
+    }
+  },
+  "semantics": [
+    "SINGLE_COMPLETE_CREATE_SOURCE_ATTEMPT_ONLY_EXACT_FIVE_HTTP_IDENTITIES",
+    "SEPARATE_SEALED_INTERNAL_JOB_NO_SYNTHETIC_HTTP_REQUEST",
+    "PINNED_INITIATION_FINGERPRINT_AND_CURRENT_ACL_BEFORE_RATE_ADMISSION",
+    "ACTUAL_SPOOL_HASH_SIZE_BEFORE_CLAIM",
+    "OPAQUE_PLANNED_ORIGINAL_SUPERVISOR_ONE_USE_ACROSS_FACTORIES",
+    "MAYBE_COMMITTED_SET_BEFORE_ACTUAL_CLAIM_COMMIT_UNKNOWN_ACK_NO_PUT",
+    "FRESH_SQL_DISPATCH_GATE_PLUS_ORIGINAL_MONOTONIC_SIGNAL_NO_ATOMIC_IO_PROMISE",
+    "CLEANUP_ONLY_AFTER_EXPIRY_OR_CLOSED_NO_PENDING_OR_REFUNDED_BURNS",
+    "ORIGINAL_LOCAL_CLOSURE_PLUS_CERTIFIED_UNSENT_OR_ACTUAL_SETTLED_NOT_TIMEOUT_OR_HEAD",
+    "AUTHENTIC_LATE_POSITIVE_RECORDED_UNKNOWN_SETTLED_OBJECT_DEBT_RETAINED",
+    "SAME_ACTIVE_PLANNED_JOB_REUSED_COMPLETED_FOREIGN_JOB_REJECTED",
+    "MANUAL_INTERNAL_RETRY_RETAINS_ORIGINAL_PROOF_ACROSS_CLEANUP_ACK_LOSS"
+  ],
+  "proofScope": "OWNED_RANDOM_SQL_SCHEMAS_REAL_NATIVE_HTTP_AUTH_SUPERVISED_FAKE_TRANSPORT_ONLY",
+  "proofSchemaCleanup": "OWNED_SCHEMAS_DROPPED_AND_NAMESPACE_ABSENCE_VERIFIED",
+  "limits": [
+    "NO_REAL_PROVIDER_RUNTIME_BOOT_RESOURCE_OR_SEVEN_DAY_RETENTION_ACCEPTANCE",
+    "SHARED_DB_ROLE_PROOF_FIELDS_ARE_PROCEDURAL_ATTESTATIONS",
+    "POSITIVE_TEXT_FIXTURE_SERVICE_ONLY_ORDINARY_RUNTIME_CONFIG_FOUR_FALSE",
+    "NO_MAIN_BOOTSTRAP_DEPENDENCY_WORKFLOW_OR_PRODUCT_MIGRATION_CHANGE",
+    "COMPLETED_UPLOAD_REPLAY_CONTROLLED_FINALIZE_PROCESSOR_DERIVATIVE_STATUS_CLEANUP_HANDOFF_STILL_REQUIRED",
+    "SUBPHASE003_TO006_NOT_STARTED_STOP_BEFORE31"
+  ],
+  "productionSha": "feae4e2c186795f1b1a4034e84f3fccd86330906",
+  "workspacePublication": "PENDING"
+}
