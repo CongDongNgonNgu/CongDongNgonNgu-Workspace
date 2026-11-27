@@ -77,13 +77,13 @@
     "integratedTree": "2410661ea83561c232e36be442b9c2a6aab9a7bd",
     "prCI": {
       "run": 45926797771,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45926797749,
       "conclusion": "SUCCESS"
     },
-    "dependency": "PR108_VERIFIED_RECORDED_DEC040_EXTENSION_FINAL_HEAD_CI_INTEGRATION_PENDING",
+    "dependency": "RESOLVED_REPAIRED_CI_AND_DEC040_EXTENSION_PUBLISHED",
     "initialIntegratedHead": "4889c956dfe60360127fcccb22b9102894395300",
     "initialPrCI": {
       "run": 45922685223,
@@ -92,7 +92,19 @@
     "initialPrReproduction": {
       "run": 45922685398,
       "conclusion": "SUCCESS"
-    }
+    },
+    "mergedDev": "7ff92abda9f452f4ecda36e0f7aa2285e8bb4bcc",
+    "mergedTree": "2410661ea83561c232e36be442b9c2a6aab9a7bd",
+    "treeEqual": true,
+    "postmergeCI": {
+      "run": 45927804779,
+      "conclusion": "SUCCESS"
+    },
+    "postmergeReproduction": {
+      "run": 45927805564,
+      "conclusion": "SUCCESS"
+    },
+    "cleanup": "REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED"
   },
   "projectionVerification": {
     "admission": 356,
@@ -171,7 +183,15 @@
   "proofSchemaCleanup": "EXACT_OWNED_RANDOM_SCHEMAS_DROPPED_INDEPENDENT_NAMESPACE_ABSENCE",
   "productionSha": "feae4e2c186795f1b1a4034e84f3fccd86330906",
   "subphases003To006AndPhase31": "NOT_STARTED",
-  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING",
+  "workspacePublication": {
+    "pr": 224,
+    "main": "65a544266f0fdf88a97c20bc25e3af5e8f961203",
+    "tree": "e0f411c12805aa49f8d607d226a15f6cd4e95831",
+    "prCI": 45927685382,
+    "mainCI": 45927757122,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_DELETED_PRUNED"
+  },
   "readOnlyTestDashboardObservation": {
     "observedAt": "2026-11-27T01:33:49Z",
     "browser": "EXISTING_CHROME_RENDER_SESSION",
@@ -184,5 +204,15 @@
     "startCommand": "ATTACHMENTS_ENABLED=false ATTACHMENTS_IMAGE_ENABLED=false ATTACHMENTS_VIDEO_ENABLED=false ATTACHMENTS_TEXT_ENABLED=false npm run start",
     "mutation": false,
     "scope": "CURRENT_DASHBOARD_ONLY_NOT_CURRENT_SOURCE_DEPLOYMENT_OR_PROVIDER_ACCEPTANCE"
+  },
+  "sourceCleanupDecision": {
+    "pr": 225,
+    "main": "56bda3a542ab3ead45efe57da6b8342f4647bd31",
+    "tree": "8cf4e9bfe41d5491996901f15790022e6fe816eb",
+    "prCI": 45928172381,
+    "mainCI": 45928275181,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_DELETED_PRUNED",
+    "meaning": "SOURCE_CONTRACT_ONLY_IMPLEMENTATION_ACCEPTANCE_PENDING"
   }
 }
