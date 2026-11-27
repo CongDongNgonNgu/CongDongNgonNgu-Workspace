@@ -19,13 +19,24 @@
     "reviewedTree": "d8e52013a828eec9f0ccd83162fa561694ba478d",
     "prCI": {
       "run": 45782199830,
-      "conclusion": "PENDING"
+      "conclusion": "SUCCESS"
     },
     "prReproduction": {
       "run": 45782199878,
       "conclusion": "SUCCESS"
     },
-    "lifecycle": "MERGE_DEV_CI_TREE_BRANCH_WORKTREE_CLEANUP_PENDING"
+    "lifecycle": "MERGED_TEST_DEV_PR_DEV_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_DELETED_PRUNED_CLEAN_WORKTREE_REMOVED_DEPENDENCY_TARGET_PRESERVED",
+    "mergedDev": "0485882e4bf3ee95f61f586035978413f72f5086",
+    "mergedTree": "d8e52013a828eec9f0ccd83162fa561694ba478d",
+    "treeEqual": true,
+    "devCI": {
+      "run": 45783548219,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45783548209,
+      "conclusion": "SUCCESS"
+    }
   },
   "architectureDecision": "DEC040_SOURCE_ONLY_LOCK_EXCEPTION_MERGED_BEFORE_BACKEND_PUBLICATION",
   "verification": {
