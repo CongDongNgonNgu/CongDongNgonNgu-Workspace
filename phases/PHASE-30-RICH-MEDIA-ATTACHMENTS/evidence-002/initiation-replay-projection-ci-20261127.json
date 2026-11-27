@@ -1,0 +1,188 @@
+{
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "authoredOn": "2026-11-27",
+  "priorWorkspace": {
+    "pr": 223,
+    "main": "2c9c2cabb881dfbcae8eba020fde37ac6325e1a9",
+    "reviewedMergedTree": "8d74599796b34593822f6f31949d9e9fc06c8fca",
+    "prCI": 45921490038,
+    "mainCI": 45921570186,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_DELETED_PRUNED"
+  },
+  "replay": {
+    "pr": 107,
+    "sourceCommit": "88e9a4ca7d059986414e13fa7d7632d3ed4e6f7c",
+    "mergedDev": "121509cd19345e18b99f87fd1d91f40f29a3678a",
+    "reviewedMergedTree": "5410a1242fac8a6781deb5efedd9dd16e2484d97",
+    "treeEqual": true,
+    "prCI": {
+      "run": 45783754858,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45783755212,
+      "conclusion": "SUCCESS"
+    },
+    "postmergeCI": {
+      "run": 45921430064,
+      "conclusion": "FAILURE",
+      "step": "Stage already-reviewed pinned application for PM2 rehearsal",
+      "rootCause": "EXPIRED_ORIGINAL_BASELINE_ARTIFACT_12735767418_RETURNS404"
+    },
+    "postmergeReproduction": {
+      "run": 45921430029,
+      "conclusion": "SUCCESS"
+    },
+    "cleanup": "REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED_AFTER_REPAIRED_DESCENDANT_CI",
+    "repairedDescendant": {
+      "sha": "a720d236a1933cd53aa3256230e9e21dc5e2c3f3",
+      "ci": 45923750337,
+      "reproduction": 45923750348,
+      "conclusion": "SUCCESS",
+      "ancestryVerified": true
+    }
+  },
+  "replayVerification": {
+    "admission": 350,
+    "repository": 6,
+    "actualSql": {
+      "passed": 12,
+      "elapsedSeconds": 103.576
+    },
+    "nativeHttp": {
+      "passed": 10,
+      "elapsedSeconds": 60.108
+    },
+    "review": "APPROVED_NARROW_SAME_RUN_SCOPE",
+    "typeLintBuildDiff": "PASS",
+    "semantics": [
+      "EXPLICIT_CREATOR_ATTEMPT_FIRST_ONLY_ONE_ATTACHMENT_SLOT",
+      "SLOT_FREE_REPLAY_MODE_CORRELATED_TO_ORIGINAL_POLICY_ATTEMPT_CREATOR",
+      "EXISTING_EXACT_CREATED_ADMISSION_ONLY_NO_ATTACHMENT_OR_INITIATION_ADMISSION_INSERT_IDENTITY_CLAIM_OR_CAPACITY_RESERVATION",
+      "UNCERTAIN_CREATOR_COMMIT_SAME_RUN_REPLAY_RETURNS_SAME_ID",
+      "ROLLED_BACK_CREATOR_CANNOT_RECREATE_BURNED_UUID",
+      "NORMAL_METADATA_READ_RATE_STILL_CHARGED"
+    ]
+  },
+  "projection": {
+    "pr": 109,
+    "draft": false,
+    "sourceCommit": "efa173cb79e83216b5465963e4a8de1e9b7ba075",
+    "sourceTree": "5c3a79b8b3e8c9dc9d138fa802e899fa9a7b33cb",
+    "integratedHead": "d2a2af359f2ff50dc6646d99537ab1acd3985b35",
+    "integratedTree": "2410661ea83561c232e36be442b9c2a6aab9a7bd",
+    "prCI": {
+      "run": 45926797771,
+      "conclusion": "PENDING"
+    },
+    "prReproduction": {
+      "run": 45926797749,
+      "conclusion": "SUCCESS"
+    },
+    "dependency": "PR108_VERIFIED_RECORDED_DEC040_EXTENSION_FINAL_HEAD_CI_INTEGRATION_PENDING",
+    "initialIntegratedHead": "4889c956dfe60360127fcccb22b9102894395300",
+    "initialPrCI": {
+      "run": 45922685223,
+      "conclusion": "SUCCESS"
+    },
+    "initialPrReproduction": {
+      "run": 45922685398,
+      "conclusion": "SUCCESS"
+    }
+  },
+  "projectionVerification": {
+    "admission": 356,
+    "repositoryService": 19,
+    "actualSqlRed": {
+      "failed": 6,
+      "passed": 12,
+      "total": 18,
+      "elapsedSeconds": 118.793
+    },
+    "finalActualSqlNativeHttp": {
+      "suites": 2,
+      "passed": 30,
+      "elapsedSeconds": 271.091,
+      "domainSeconds": 171.469,
+      "nativeHttpSeconds": 98.073
+    },
+    "nativeFixtureCorrection": "HTTP_RESERVE_AND_BIND_COMMITS1_2_PRECEDE_INITRATE3_DOMAIN4_READRATE5_METADATA6_EXACT_STAGE_ASSERTIONS",
+    "recipeMutationRegression": "RED1FAILED7PASSED_THEN_GREEN_CLOSED_OWN_DATA_FUNCTION_SNAPSHOTS",
+    "typeLintBuild": "PASS",
+    "semantics": [
+      "ORIGINAL_CONTEXT_PRIVATE_FACTS_RETAINED_IN_ONE_ASYNC_STACK",
+      "FOUR_INDEPENDENT_FRESH_GATED_SQL_TRANSACTIONS",
+      "REQUIRED_PROJECTED_SERVICE_NO_ORDINARY_METADATA_FALLBACK",
+      "NATIVE_SESSION_FAILURE401_AND_CURRENT_ACL_READRATE_PRESERVED",
+      "EXPIRY_CANCEL_BETWEEN_COMMITS_NO_NEXT_PRODUCT_STAGE_OR_SUCCESS",
+      "LOST_PROJECTION_COMMIT_ACK_NO_RETURNED_DTO"
+    ]
+  },
+  "ciRetentionRepair": {
+    "pr": 108,
+    "sourceCommit": "8d10af9af03784733a384ec820a080cf10cfe5f9",
+    "reviewedTree": "3846ba78e16f91e94752eb97418ddde36d59a49b",
+    "prCI": {
+      "run": 45922630559,
+      "conclusion": "SUCCESS"
+    },
+    "prReproduction": {
+      "run": 45922630631,
+      "conclusion": "SUCCESS"
+    },
+    "originalArtifact": 12735767418,
+    "originalExpiresAt": "2026-11-26T12:59:00Z",
+    "retainedZipBytes": 1550281,
+    "originalUnchangedSha256": "7dc2bce0d6fa3891dbede35e6928c4ef66ec14a8baf99325ade51fe3f57b7f7f",
+    "archiveEntryReview": {
+      "entries": 1113,
+      "unsafePathsOrSymlinkEntries": 0,
+      "credentialOrPrivateKeyFileNames": 0
+    },
+    "unitGreen": 8,
+    "partialWriteRegression": "RED1FAILED7PASSED_THEN_GREEN8",
+    "workflowComparison": "YAML_PARSE_ALL_NONSTAGING_STEPS_AND_PRODUCTION_DEEPEQUAL_UNZIP_NPMCI_UNCHANGED",
+    "meaning": "EXACT_ORIGINAL_ARCHIVE_RETENTION_REPAIR_NO_REBUILD_OR_GATE_BYPASS",
+    "mergedDev": "a720d236a1933cd53aa3256230e9e21dc5e2c3f3",
+    "mergedTree": "3846ba78e16f91e94752eb97418ddde36d59a49b",
+    "treeEqual": true,
+    "lifecycle": "MERGED_TEST_DEV_PR_POSTMERGE_CI_REPRODUCTION_TREE_VERIFIED_REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED",
+    "devCI": {
+      "run": 45923750337,
+      "conclusion": "SUCCESS"
+    },
+    "devReproduction": {
+      "run": 45923750348,
+      "conclusion": "SUCCESS"
+    }
+  },
+  "limits": [
+    "SOURCE_AND_OWNED_RANDOM_SCHEMA_PROOFS_NOT_ACTUAL_RUNTIME_BOOT_PROVIDER_RESOURCE_OR_RETENTION_ACCEPTANCE",
+    "POSITIVE_FIXTURE_REPOSITORY_CAPABILITIES_EXPLICIT_ORDINARY_RUNTIME_CONFIG_FOUR_FALSE",
+    "PRECOMMIT_CHECKS_NOT_ACK_BEFORE_EXPIRY",
+    "SAME_RUN_REPLAY_ONLY_NO_CROSS_RUN_EXISTING_RESOURCE_GRANT",
+    "NO_PROVIDER_WORKER_MAIN_BOOTSTRAP_OR_PRODUCTION_ACTIVATION",
+    "ORIGINAL_FAILED_CI_REMAINS_FAILURE_REPAIRED_DESCENDANT_VERIFIED_SEPARATELY"
+  ],
+  "proofSchemaCleanup": "EXACT_OWNED_RANDOM_SCHEMAS_DROPPED_INDEPENDENT_NAMESPACE_ABSENCE",
+  "productionSha": "feae4e2c186795f1b1a4034e84f3fccd86330906",
+  "subphases003To006AndPhase31": "NOT_STARTED",
+  "workspacePublication": "PR_MAIN_CI_TREE_CLEANUP_PENDING",
+  "readOnlyTestDashboardObservation": {
+    "observedAt": "2026-11-27T01:33:49Z",
+    "browser": "EXISTING_CHROME_RENDER_SESSION",
+    "service": "srv-dahnerh594qs73fp3420",
+    "branch": "dev",
+    "liveSource": "76a384528e39017e24f48ec179aa7b2d05854f7e",
+    "liveDeployment": "dep-dbpt6krrjlhs73b1ap0g",
+    "autoDeploy": "DISABLED_SPECIFIC_COMMIT_DEPLOYMENT",
+    "buildCommand": "npm ci --include=dev && npm run build:attachments -- --download",
+    "startCommand": "ATTACHMENTS_ENABLED=false ATTACHMENTS_IMAGE_ENABLED=false ATTACHMENTS_VIDEO_ENABLED=false ATTACHMENTS_TEXT_ENABLED=false npm run start",
+    "mutation": false,
+    "scope": "CURRENT_DASHBOARD_ONLY_NOT_CURRENT_SOURCE_DEPLOYMENT_OR_PROVIDER_ACCEPTANCE"
+  }
+}
