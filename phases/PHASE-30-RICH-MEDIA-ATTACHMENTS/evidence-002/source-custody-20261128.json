@@ -1,0 +1,99 @@
+{
+  "phase": 30,
+  "subphase": "LNG-30-002",
+  "state": "IN_PROGRESS",
+  "acceptance": "REMEDIATE_AND_RETEST",
+  "authoredOn": "2026-11-28",
+  "backend": {
+    "pr": 111,
+    "head": "7ed1365c90a09a7695d102a86e3da3ec5e1eb4ba",
+    "tree": "1e0c2d2b532eaa3750c360de6ea31d9ff01a8268",
+    "mergedDev": "91224e317f54f839fbc83742a278f231e5efde1c",
+    "treeEqual": true,
+    "prCI": 46096698507,
+    "prReproduction": 46096698540,
+    "postmergeCI": 46097572249,
+    "postmergeReproduction": 46097572183,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_WORKTREE_DELETED_PRUNED"
+  },
+  "priorWorkspace": {
+    "pr": 227,
+    "main": "8dac9a72cced89006bd0ea8e667859118abceac6",
+    "tree": "c1e242e8163ce31124e751a6c19e7a4ecbb50f09",
+    "prCI": 45967807420,
+    "mainCI": 46094293546,
+    "conclusion": "SUCCESS",
+    "cleanup": "REMOTE_LOCAL_BRANCH_DELETED_PRUNED"
+  },
+  "verification": {
+    "admission": 394,
+    "typecheck": "PASS_FINAL_STATE",
+    "lint": "PASS_TSC_ALIAS",
+    "build": "PASS_FINAL_STATE",
+    "diff": "PASS",
+    "sourceAndIndependentFixtureReview": "APPROVED",
+    "actualSql": {
+      "passed": 40,
+      "suites": 3,
+      "seconds": 399.407,
+      "sourceCustody": {
+        "passed": 19,
+        "seconds": 276.721
+      },
+      "legacyUploadServiceSeconds": 90.126,
+      "putRecoverySeconds": 32.281
+    },
+    "nativeHttpSql": {
+      "passed": 9,
+      "seconds": 142.205,
+      "exit": 0
+    },
+    "meaningfulRed": {
+      "domain": {
+        "failed": 5,
+        "passed": 13,
+        "total": 18,
+        "seconds": 231.515
+      },
+      "native": {
+        "failed": 2,
+        "passed": 6,
+        "total": 8,
+        "seconds": 96.042
+      }
+    },
+    "intermediate": {
+      "nativeOpaqueErrorRegression": {
+        "failed": 1,
+        "passed": 7,
+        "total": 8,
+        "seconds": 80.534
+      },
+      "domainFixtureError": "IMMUTABLE_INIT_FINGERPRINT_MUTATION_REJECTED_BY_EXISTING_GUARD_CORRECTED_TO_VALID_OBJECT_VERSION_BUMP",
+      "batchFixtureError": "OWNED_SCHEMA_PHASE30_QUOTA_COUNTERS_PERSISTED_ACROSS_CASES_PENDING8_PRODUCT_GUARD_CORRECT_RESET_ONLY_BEFOREEACH"
+    }
+  },
+  "semantics": [
+    "ORIGINAL_SETTLED_POSITIVE_SOURCE_AND_ACTUAL_LOCAL_CLOSURE_OPAQUE_HISTORICAL_FACT",
+    "ACKNOWLEDGED_SETTLED_SQL_VERSION_SEPARATE_FROM_PRE_RECEIPT_CLAIM_VERSION",
+    "SPECIALIZED_PUBLISH_SAME_CLIENT_EXACT_PENDING_PREDICATE_BEFORE_COMMIT",
+    "KNOWN_ACK_CUSTODY_BEFORE_POSTCOMMIT_EXPIRY_CANCEL_CHECK",
+    "UNKNOWN_ACK_RETAINS_LAST_ORIGINAL_OBSERVER_UNTIL_ACKNOWLEDGED_INSPECTION",
+    "CLEANUP_ONLY_INSPECTION_CLOSED_EXPIRED_NO_RENEWAL_OR_FORWARD_GRANT",
+    "EXACT_SOURCE_SNAPSHOT_MISMATCH_RETAINS_DEBT_NO_PENDING_TOMBSTONE",
+    "FOUR_SOURCE_SHARED_SEALED_RUN_EXECUTOR_SERVICE_RETRY_RELEASES_ALL_NO_EXTRA_JOB_OR_IN_CASE_QUOTA_RESET",
+    "FIFTH_UNDECLARED_CANDIDATE_DENIED_NO_FIFTH_IDENTITY",
+    "PER_ORIGINAL_ACTIVE_RUN_WEAK_REGISTRY_AT_MOST_FOUR"
+  ],
+  "limits": [
+    "NO_DDL_RUNTIME_PROVIDER_WORKER_OR_PRODUCTION_CHANGE",
+    "NO_FINALIZE_STATUS_REPLAY_OR_RESTART_REHYDRATION_GRANT",
+    "OWNED_RANDOM_SCHEMA_SQL_REAL_NATIVE_HTTP_SUPERVISED_FAKE_TRANSPORT_ONLY",
+    "NO_RESOURCE_OR_NATURAL_SEVEN_DAY_RETENTION_ACCEPTANCE",
+    "PHASE30_003_TO006_NOT_STARTED_STOP_BEFORE31"
+  ],
+  "proofSchemaCleanup": "OWNED_RANDOM_SCHEMAS_DROPPED_INDEPENDENT_NAMESPACE_ABSENCE",
+  "productionSha": "feae4e2c186795f1b1a4034e84f3fccd86330906",
+  "workspacePublication": "PENDING"
+}
